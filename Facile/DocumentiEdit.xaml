@@ -6,8 +6,10 @@
     x:Class="Facile.DocumentiEdit">
 
     <TabbedPage.ToolbarItems>
-        <ToolbarItem Icon="ic_cached.png" Text="Salva"/>
-        <ToolbarItem Icon="ic_group.png" Text="Stampa"/>
+        <ToolbarItem Icon="ic_cached.png" Text="Salva" Activated="OnActivatedSalva"/>
+<!--
+        <ToolbarItem Icon="ic_group.png" Text="Stampa" Order = "Secondary" Activated="OnActivatedStampa"/>
+-->
     </TabbedPage.ToolbarItems>
 
 

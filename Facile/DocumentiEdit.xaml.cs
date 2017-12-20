@@ -10,23 +10,19 @@ namespace Facile
 {
 	public partial class DocumentiEdit : TabbedPage
 	{
-		//protected readonly TipoDocumento tipoDoc_;
-		//protected int numDoc_;
-		//protected readonly string registro_;
 		protected Fatture doc_;
+		protected bool nuova_;
+		protected bool editable_;
 		private readonly SQLiteAsyncConnection dbcon_;
-
 		private NavigationPage headerPage_;
 		private NavigationPage bodyPage_;
 		private NavigationPage footerPage_;
 
-
-		public DocumentiEdit(ref Fatture f)
+		public DocumentiEdit(ref Fatture f, ref bool nuova, ref bool editable)
 		{
-			//tipoDoc_ = t_doc;
-			//registro_ = reg;
-			//numDoc_ = n_doc;
 			doc_ = f;
+			nuova_ = nuova;
+			editable_ = editable;
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 
 			InitializeComponent();
@@ -53,7 +49,7 @@ namespace Facile
 					break;
 			}
 
-			headerPage_ = new NavigationPage(new DocumentiHeader(ref doc_));
+			headerPage_ = new NavigationPage(new DocumentiHeader(ref doc_, ref nuova_, ref editable_));
 			headerPage_.Title = "Testata";
 			headerPage_.Icon = "ic_alarm.png";
 
@@ -118,5 +114,16 @@ namespace Facile
 
 		//	// Completare l'inizializzazione
 		//}
+
+		void OnActivatedSalva(object sender, System.EventArgs e)
+		{
+			DisplayAlert("Clicked", "Salva","OK");
+		}
+
+		void OnActivatedStampa(object sender, System.EventArgs e)
+		{
+			DisplayAlert("Clicked", "Stampa", "OK");
+		}
+
 	}
 }

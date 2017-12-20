@@ -1,32 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage NavigationPage.HasNavigationBar="False"
-    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Facile.DocumentiHeader">
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:syncfusion="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+    x:Class="Facile.DocumentiHeader">
 
-<!--    <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="ic_cached.png" Text="Salva"/>
-        <ToolbarItem Icon="ic_group.png" Text="Stampa"/>
+<!--
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="ic_cached.png" Text="Scappa" Order="Secondary"/>
+        <ToolbarItem Icon="ic_group.png" Text="Curri" Order="Secondary"/>
     </ContentPage.ToolbarItems>
 -->
-    <StackLayout Padding="7,7,7,7">
+    <TableView x:Name="tableView" Intent="Form" HasUnevenRows="true" BackgroundColor="White">
+        <TableRoot>
+            <TableSection Title="Cliente" >
+                <ViewCell Tapped="OnClienteTapped">
+                    <StackLayout Padding="7,0,7,0" HeightRequest="90">
+                        <Label x:Name="cli_desc" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" FontAttributes="Bold" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+                        <Label x:Name="cli_indirizzo" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+                        <Label x:Name="cli_citta" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
 
-        <StackLayout Orientation="Horizontal">
-            <Label Text="Cliente" WidthRequest="100" VerticalOptions="Center"/>
-            <Label x:Name="cli_desc" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" FontAttributes="Bold"/>
-        </StackLayout>
-        
-        <StackLayout Orientation="Horizontal">
-            <Label Text="Destinazione" WidthRequest="100" VerticalOptions="Center"/>
-            <Label x:Name="dst_desc" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" FontAttributes="Bold"/>
-        </StackLayout>
+            <TableSection Title ="Destinazione"> 
+                <ViewCell Tapped="OnDestinazioneTapped">
+                    <StackLayout Padding="7,0,7,0" HeightRequest="90">
+                        <Label x:Name="dst_desc" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                        <Label x:Name="dst_indirizzo" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+                        <Label x:Name="dst_citta" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
 
-        <StackLayout Orientation="Horizontal">
-            <Label Text="Data" WidthRequest="100" VerticalOptions="Center"/>
-            <DatePicker x:Name="fat_d_doc" Format="dd/MM/yyyy" />
-            <Label Text="Numero" VerticalOptions="Center"/>
-            <DatePicker x:Name="fat_n_doc"  />
-            <Label Text="Registro" VerticalOptions="Center"/>
-            <Label x:Name="fat_registro" VerticalOptions="Center" FontSize = "14" FontAttributes="Bold"/>
-        </StackLayout>
-        
-    </StackLayout>
+            <TableSection Title="Estremi Documento"> 
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="7,0,7,0" HeightRequest="30">
+                        <Label Text="Numero" WidthRequest="80" VerticalTextAlignment="Center"/>
+                        <syncfusion:SfNumericTextBox  x:Name="fat_n_doc" WidthRequest="105" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold"/>
+                        <Label Text="Registro" VerticalOptions = "Center"/>
+                        <Label x:Name="fat_registro" WidthRequest="30"  VerticalTextAlignment="Center"  FontAttributes="Bold"/>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="7,0,7,0">
+                        <Label Text="Data" WidthRequest="80" VerticalTextAlignment="Center"/>
+                        <DatePicker x:Name="fat_d_doc" Format="dd/MM/yyyy" WidthRequest="105" />
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+            
+        </TableRoot>
+    </TableView>
 </ContentPage>

@@ -10,18 +10,24 @@ namespace Facile
 	public partial class DocumentiHeader : ContentPage
 	{
 		private Fatture doc_;
+		private bool nuova_;
+		private bool editable_;
 		private bool first;
 		private readonly SQLiteAsyncConnection dbcon_;
 		private Clienti cli_ = null;
 		private Destinazioni dst_ = null;
 
-		public DocumentiHeader(ref Fatture f)
+		public DocumentiHeader(ref Fatture f, ref bool nuova, ref bool editable)
 		{
 			doc_ = f;
+			nuova_ = nuova;
+
 			first = true;
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 
-			InitializeComponent();		
+			InitializeComponent();
+			if (nuova == false && editable == false)
+				tableView.IsEnabled = false;
 		}
 		protected override async void OnAppearing()
 		{
@@ -57,14 +63,27 @@ namespace Facile
 			if (cli_ != null)
 			{
 				cli_desc.Text = cli_.cli_desc;
+				cli_indirizzo.Text = cli_.cli_indirizzo;
+				cli_citta.Text = cli_.cli_citta;
 			}
 			if (dst_ != null)
 			{
 				dst_desc.Text = dst_.dst_desc;	
 			}
+			fat_n_doc.Value = doc_.fat_n_doc % 700000000;
 			fat_d_doc.Date = doc_.fat_d_doc;
 			fat_registro.Text = doc_.fat_registro;
 
+		}
+
+		void OnClienteTapped(object sender, System.EventArgs e)
+		{
+			DisplayAlert("Tapped", "Cliente","ok");
+		}
+
+		void OnDestinazioneTapped(object sender, System.EventArgs e)
+		{
+			DisplayAlert("Tapped", "Destinazione", "ok");
 		}
 
 	}

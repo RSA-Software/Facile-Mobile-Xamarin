@@ -6,6 +6,7 @@ using Foundation;
 using UIKit;
 using Syncfusion.SfDataGrid.XForms.iOS;
 using Syncfusion.ListView.XForms.iOS;
+using Syncfusion.SfNumericTextBox.XForms.iOS;
 
 namespace Facile.iOS
 {
@@ -17,6 +18,7 @@ namespace Facile.iOS
             global::Xamarin.Forms.Forms.Init();
 			SfDataGridRenderer.Init();
 			SfListViewRenderer.Init();
+			new SfNumericTextBoxRenderer();
 
             LoadApplication(new App());
             return base.FinishedLaunching(app, options);
