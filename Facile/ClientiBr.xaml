@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Cerca Cliente"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Facile.ClientiBr">
+
+    <StackLayout>
+        <SearchBar Placeholder="Cerca" TextChanged="OnTextChanged"/>
+        <ListView x:Name="ListView" HasUnevenRows="true" ItemAppearing="OnItemAppearing">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+                        <StackLayout>
+                            <Label Text="{Binding cli_desc}" Margin="7,0,7,0" />
+                            <Label Text="{Binding cli_indirizzo}" TextColor="Gray"  Margin="7,0,7,0" FontSize="13"/>
+                            <Label Text="{Binding cli_citta}" TextColor ="Gray"  Margin="7,0,7,0" FontSize="13"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

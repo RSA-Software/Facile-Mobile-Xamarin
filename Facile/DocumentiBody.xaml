@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage  Title="Corpo" NavigationPage.HasNavigationBar="False"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Facile.Converters;assembly=Facile"
+    xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+    x:Class="Facile.DocumentiBody">
+
+        <syncfusion:SfDataGrid x:Name="dataGrid" AllowResizingColumn="true" HorizontalOptions="FillAndExpand"  AutoGenerateColumns="False">
+            <syncfusion:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
+
+                <syncfusion:GridTextColumn HeaderText="Codice" MappingName="rig_art" Width="90" TextAlignment="Start">
+<!--                    <syncfusion:GridTextColumn.CellStyle>
+                        <Style TargetType="syncfusion:GridCell">
+                            <Setter Property="Foreground" Value="{Binding fat_tot_fattura, Converter={local:DocumentsValueConverter}}" />
+                        </Style>
+                    </syncfusion:GridTextColumn.CellStyle>
+-->                </syncfusion:GridTextColumn>
+
+                <syncfusion:GridTextColumn HeaderText="Quantità" MappingName="rig_qta" Width="80" Format="N3" TextAlignment="End">
+<!--                    <syncfusion:GridTextColumn.CellStyle>
+                        <Style TargetType="syncfusion:GridCell">
+                            <Setter Property="Foreground" Value="{Binding fat_tot_fattura, Converter={local:DocumentsValueConverter}}" />
+                        </Style>
+                    </syncfusion:GridTextColumn.CellStyle>
+-->                </syncfusion:GridTextColumn>
+
+                <syncfusion:GridTextColumn HeaderText="Prezzo" MappingName="rig_prezzo" Width="90" Format="N4" TextAlignment="End">
+<!--                    <syncfusion:GridTextColumn.CellStyle>
+                        <Style TargetType="syncfusion:GridCell">
+                            <Setter Property="Foreground" Value="{Binding fat_tot_fattura, Converter={local:DocumentsValueConverter}}" />
+                        </Style>
+                    </syncfusion:GridTextColumn.CellStyle>
+-->                </syncfusion:GridTextColumn>
+
+                <syncfusion:GridTextColumn HeaderText="%Sco 1" MappingName="rig_sconto1" Width="65" Format="N2" TextAlignment="End">
+<!--                    <syncfusion:GridTextColumn.CellStyle>
+                        <Style TargetType="syncfusion:GridCell">
+                            <Setter Property="Foreground" Value="{Binding fat_tot_fattura, Converter={local:DocumentsValueConverter}}" />
+                        </Style>
+                    </syncfusion:GridTextColumn.CellStyle>
+-->                </syncfusion:GridTextColumn>
+
+                <syncfusion:GridTextColumn HeaderText="%Sco 2" MappingName="rig_sconto2" Width="65" Format="N2" TextAlignment="End">
+<!--                    <syncfusion:GridTextColumn.CellStyle>
+                        <Style TargetType="syncfusion:GridCell">
+                            <Setter Property="Foreground" Value="{Binding fat_tot_fattura, Converter={local:DocumentsValueConverter}}" />
+                        </Style>
+                    </syncfusion:GridTextColumn.CellStyle>
+-->                </syncfusion:GridTextColumn>
+
+                <syncfusion:GridTextColumn HeaderText="%Sco 3" MappingName="rig_sconto3" Width="65" Format="N2" TextAlignment="End">
+<!--                    <syncfusion:GridTextColumn.CellStyle>
+                        <Style TargetType="syncfusion:GridCell">
+                            <Setter Property="Foreground" Value="{Binding fat_tot_fattura, Converter={local:DocumentsValueConverter}}" />
+                        </Style>
+                    </syncfusion:GridTextColumn.CellStyle>
+-->                </syncfusion:GridTextColumn>
+            
+            
+                <syncfusion:GridTextColumn HeaderText="Totale" MappingName="rig_importo" Width="100" Format="N2" TextAlignment="End">
+                    <syncfusion:GridTextColumn.CellStyle>
+                        <Style TargetType="syncfusion:GridCell">
+                            <Setter Property="Foreground" Value="Red" />
+                        </Style>
+                    </syncfusion:GridTextColumn.CellStyle>
+                </syncfusion:GridTextColumn>
+
+                <syncfusion:GridTextColumn HeaderText="Descrizione" MappingName="rig_newdes" TextAlignment="Start">
+   <!--                 <syncfusion:GridTextColumn.CellStyle>
+                        <Style TargetType="syncfusion:GridCell">
+                            <Setter Property="Foreground" Value="{Binding fat_tot_fattura, Converter={local:DocumentsValueConverter}}" />
+                        </Style>
+                    </syncfusion:GridTextColumn.CellStyle>
+   -->             </syncfusion:GridTextColumn>
+
+
+            
+            </syncfusion:SfDataGrid.Columns>
+            
+        </syncfusion:SfDataGrid>
+
+    
+</ContentPage>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Facile.Converters;assembly=Facile"
+    xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+    x:Class="Facile.DocumentiGrid">
+
+<!--    <ContentPage.BindingContext>-->
+<!--        <local:OrderInfoRepository x:Name="viewModel" />-->
+<!--    </ContentPage.BindingContext>-->
+
+    <ContentPage.Content>
+        <StackLayout Padding = "7">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row = "0" Grid.Column = "0" Text="Cliente" VerticalOptions="Center" />
+                <Label Grid.Row = "0" Grid.Column = "1" Grid.ColumnSpan = "2" Text="TUTTI" VerticalOptions="Center" TextColor="Black"/>
+                <Label Grid.Row = "1" Grid.Column = "0" Text="Periodo" VerticalOptions="Center" />
+                <DatePicker Grid.Row = "1" Grid.Column = "1" x:Name="dStart" Format="dd MMM yyyy" DateSelected="OnDateSelected" />
+                <DatePicker Grid.Row = "1" Grid.Column = "2" x:Name="dStop" Format="dd MMM yyyy" DateSelected="OnDateSelected" WidthRequest="150"/>
+            </Grid>            
+
+            <syncfusion:SfDataGrid x:Name="dataGrid" AllowResizingColumn="true" AllowSwiping="true"  AllowSorting="true" HorizontalOptions="FillAndExpand"  AutoGenerateColumns="False">
+
+                <syncfusion:SfDataGrid.RightSwipeTemplate>
+                    <DataTemplate>
+                        <Grid  BackgroundColor="#009EDA">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                        
+                                <Image Grid.Column="0"  
+                                    BackgroundColor="Transparent" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    Source="ic_alarm.png" />
+                        
+                                <Label Grid.Column="1" 
+                                    Text ="EDIT" 
+                                    HorizontalTextAlignment="Start" 
+                                    VerticalTextAlignment="Center"  
+                                    LineBreakMode ="NoWrap" 
+                                    BackgroundColor="Transparent" 
+                                    TextColor ="White" />
+                            </Grid>
+                    </DataTemplate>
+                </syncfusion:SfDataGrid.RightSwipeTemplate>
+
+                <syncfusion:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
+
+                    <syncfusion:GridTextColumn HeaderText="Tipo" MappingName="fat_tipo" Width="40" DisplayBinding="{Binding ., Converter={local:DocumentsTypeConverter}}">
+                        <syncfusion:GridTextColumn.CellStyle>
+                            <Style TargetType="syncfusion:GridCell">
+                                <Setter Property="Foreground" Value="{Binding fat_tot_fattura, Converter={local:DocumentsValueConverter}}" />
+                            </Style>
+                        </syncfusion:GridTextColumn.CellStyle>
+                    </syncfusion:GridTextColumn>
+
+                    <syncfusion:GridTextColumn HeaderText="Numero" MappingName="fat_n_doc" Width="70" TextAlignment="End" DisplayBinding="{Binding ., Converter={local:DocumentsNumberConverter}}">
+                        <syncfusion:GridTextColumn.CellStyle>
+                            <Style TargetType="syncfusion:GridCell">
+                                <Setter Property="Foreground" Value="{Binding fat_tot_fattura, Converter={local:DocumentsValueConverter}}" />
+                            </Style>
+                        </syncfusion:GridTextColumn.CellStyle>
+                    </syncfusion:GridTextColumn>
+
+                    <syncfusion:GridTextColumn HeaderText="Data" MappingName="fat_d_doc" Width="80" Format="dd/MM/yy" TextAlignment="Center">
+                        <syncfusion:GridTextColumn.CellStyle>
+                            <Style TargetType="syncfusion:GridCell">
+                                <Setter Property="Foreground" Value="{Binding fat_tot_fattura, Converter={local:DocumentsValueConverter}}" />
+                            </Style>
+                        </syncfusion:GridTextColumn.CellStyle>
+                    </syncfusion:GridTextColumn>
+
+                    <syncfusion:GridTextColumn HeaderText="Totale" MappingName="fat_tot_fattura" Width="80" FontAttribute="Bold" TextAlignment="End" Format="N2">
+                        <syncfusion:GridTextColumn.CellStyle>
+                            <Style TargetType="syncfusion:GridCell">
+                                <Setter Property="Foreground" Value="{Binding fat_tot_fattura, Converter={local:DocumentsValueConverter}}"/>
+                            </Style>
+                        </syncfusion:GridTextColumn.CellStyle>
+                    </syncfusion:GridTextColumn>
+                    
+                    <syncfusion:GridTextColumn HeaderText="Cliente" MappingName="cli_desc" TextAlignment="Start">
+                        <syncfusion:GridTextColumn.CellStyle>
+                            <Style TargetType="syncfusion:GridCell">
+                                <Setter Property="Foreground" Value="{Binding fat_tot_fattura, Converter={local:DocumentsValueConverter}}" />
+                            </Style>
+                        </syncfusion:GridTextColumn.CellStyle>
+                    </syncfusion:GridTextColumn>
+
+                </syncfusion:SfDataGrid.Columns>
+                
+            </syncfusion:SfDataGrid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

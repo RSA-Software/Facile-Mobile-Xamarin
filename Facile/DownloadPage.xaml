@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Facile.DownloadPage">
+    <StackLayout>
+        <Label Text="A simple Label" x:Name="Desc" Font="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Button Text="Click Me!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="Download_Clicked" />
+        <Button Text="Esci" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="Close_Clicked" />
+    </StackLayout>
+</ContentPage>
