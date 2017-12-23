@@ -66,6 +66,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClientiSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -137,6 +141,9 @@
     <Compile Include="DocumentiFooter.xaml.cs">
       <DependentUpon>DocumentiFooter.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ClientiSearch.xaml.cs">
+      <DependentUpon>ClientiSearch.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MarkupExtensions\" />
@@ -200,6 +207,9 @@
     </Reference>
     <Reference Include="Syncfusion.SfDataGrid.XForms">
       <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.15.4.0.17\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfDataGrid.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBusyIndicator.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.15.4.0.17\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfBusyIndicator.XForms.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

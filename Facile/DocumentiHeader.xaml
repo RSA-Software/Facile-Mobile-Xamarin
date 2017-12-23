@@ -11,11 +11,11 @@
         <ToolbarItem Icon="ic_group.png" Text="Curri" Order="Secondary"/>
     </ContentPage.ToolbarItems>
 -->
-    <TableView x:Name="tableView" Intent="Form" HasUnevenRows="true" BackgroundColor="White">
+    <TableView Intent="Form" HasUnevenRows="true" BackgroundColor="White">
         <TableRoot>
             <TableSection Title="Cliente" >
-                <ViewCell Tapped="OnClienteTapped">
-                    <StackLayout Padding="7,0,7,0" HeightRequest="90">
+                <ViewCell x:Name="section_cli" Tapped="OnClienteTapped">
+                    <StackLayout Padding="7,0,7,0" HeightRequest="80">
                         <Label x:Name="cli_desc" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" FontAttributes="Bold" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
                         <Label x:Name="cli_indirizzo" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
                         <Label x:Name="cli_citta" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
@@ -24,8 +24,8 @@
             </TableSection>
 
             <TableSection Title ="Destinazione"> 
-                <ViewCell Tapped="OnDestinazioneTapped">
-                    <StackLayout Padding="7,0,7,0" HeightRequest="90">
+                <ViewCell x:Name= "section_dst" Tapped="OnDestinazioneTapped">
+                    <StackLayout Padding="7,0,7,0" HeightRequest="80">
                         <Label x:Name="dst_desc" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" FontAttributes="Bold" VerticalTextAlignment="Center"/>
                         <Label x:Name="dst_indirizzo" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
                         <Label x:Name="dst_citta" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
@@ -34,18 +34,18 @@
             </TableSection>
 
             <TableSection Title="Estremi Documento"> 
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal" Padding="7,0,7,0" HeightRequest="30">
+                <ViewCell x:Name= "section_num">
+                    <StackLayout Orientation="Horizontal" Padding="7,0,7,0" >
                         <Label Text="Numero" WidthRequest="80" VerticalTextAlignment="Center"/>
-                        <syncfusion:SfNumericTextBox  x:Name="fat_n_doc" WidthRequest="105" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold"/>
+                        <syncfusion:SfNumericTextBox  x:Name="fat_n_doc" WidthRequest="130" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold" />
                         <Label Text="Registro" VerticalOptions = "Center"/>
                         <Label x:Name="fat_registro" WidthRequest="30"  VerticalTextAlignment="Center"  FontAttributes="Bold"/>
                     </StackLayout>
                 </ViewCell>
-                <ViewCell>
+                <ViewCell x:Name= "section_data">
                     <StackLayout Orientation="Horizontal" Padding="7,0,7,0">
                         <Label Text="Data" WidthRequest="80" VerticalTextAlignment="Center"/>
-                        <DatePicker x:Name="fat_d_doc" Format="dd/MM/yyyy" WidthRequest="105" />
+                        <DatePicker x:Name="fat_d_doc" Format="dd/MM/yyyy" WidthRequest="130" />
                     </StackLayout>
                 </ViewCell>
             </TableSection>

@@ -162,6 +162,15 @@
     <Reference Include="Syncfusion.SfDataGrid.XForms.iOS">
       <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.15.4.0.17\lib\Xamarin.iOS10\Syncfusion.SfDataGrid.XForms.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.SfBusyIndicator.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.15.4.0.17\lib\Xamarin.iOS10\Syncfusion.SfBusyIndicator.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBusyIndicator.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.15.4.0.17\lib\Xamarin.iOS10\Syncfusion.SfBusyIndicator.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBusyIndicator.XForms.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.15.4.0.17\lib\Xamarin.iOS10\Syncfusion.SfBusyIndicator.XForms.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Facile\Facile.csproj">

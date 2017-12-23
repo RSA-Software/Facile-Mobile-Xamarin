@@ -139,7 +139,6 @@ namespace Facile
 
 			listView.SelectionBackgroundColor = Color.Blue;
 			listView.RefreshView();
-			//App.Current.MainPage.DisplayAlert("GridData", "The name of the pizza is " + pizzaInfo.pag_desc, "Ok"); 
 		}
 	}
 }

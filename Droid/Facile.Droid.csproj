@@ -181,6 +181,15 @@
     <Reference Include="Syncfusion.SfDataGrid.XForms">
       <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfDataGrid.XForms.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.SfBusyIndicator.Android">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfBusyIndicator.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBusyIndicator.XForms.Android">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfBusyIndicator.XForms.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBusyIndicator.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfBusyIndicator.XForms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Facile\Facile.csproj">

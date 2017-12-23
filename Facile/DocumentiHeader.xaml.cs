@@ -21,13 +21,29 @@ namespace Facile
 		{
 			doc_ = f;
 			nuova_ = nuova;
+			editable_ = editable;
 
 			first = true;
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 
 			InitializeComponent();
-			if (nuova == false && editable == false)
-				tableView.IsEnabled = false;
+			MessagingCenter.Subscribe<ClientiSearch, Clienti>(this, "ClienteChanged", OnClienteChanged);
+
+			if (nuova == false)
+			{
+				if (editable == true)
+				{
+					section_num.IsEnabled = false;
+				}
+				else
+				{
+					//section_cli.IsEnabled = false;
+					//section_dst.IsEnabled = false;
+					//section_num.IsEnabled = false;
+					//section_data.IsEnabled = false;
+				}
+			}
+
 		}
 		protected override async void OnAppearing()
 		{
@@ -58,6 +74,12 @@ namespace Facile
 			base.OnAppearing();
 		}
 
+		protected override void OnDisappearing()
+		{
+			MessagingCenter.Unsubscribe<ClientiSearch>(this,"ClienteChanged");
+			base.OnDisappearing();
+		}
+
 		public void SetField()
 		{
 			if (cli_ != null)
@@ -76,10 +98,21 @@ namespace Facile
 
 		}
 
-		void OnClienteTapped(object sender, System.EventArgs e)
+		async void OnClienteTapped(object sender, System.EventArgs e)
 		{
-			DisplayAlert("Tapped", "Cliente","ok");
+			await Navigation.PushAsync(new ClientiSearch());
 		}
+
+		void OnClienteChanged(ClientiSearch source, Clienti cli)
+		{
+			cli_ = cli;
+			if (cli_ != null)
+			{
+				
+			}
+			SetField();
+		}
+
 
 		void OnDestinazioneTapped(object sender, System.EventArgs e)
 		{

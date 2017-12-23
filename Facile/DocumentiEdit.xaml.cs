@@ -14,7 +14,7 @@ namespace Facile
 		protected bool nuova_;
 		protected bool editable_;
 		private readonly SQLiteAsyncConnection dbcon_;
-		private NavigationPage headerPage_;
+		private ContentPage headerPage_;
 		private NavigationPage bodyPage_;
 		private NavigationPage footerPage_;
 
@@ -49,7 +49,8 @@ namespace Facile
 					break;
 			}
 
-			headerPage_ = new NavigationPage(new DocumentiHeader(ref doc_, ref nuova_, ref editable_));
+			//headerPage_ = new NavigationPage(new DocumentiHeader(ref doc_, ref nuova_, ref editable_));
+			headerPage_ = new DocumentiHeader(ref doc_, ref nuova_, ref editable_);
 			headerPage_.Title = "Testata";
 			headerPage_.Icon = "ic_alarm.png";
 

@@ -6,7 +6,7 @@
     x:Class="Facile.PagamentiBr">
 
     <StackLayout>
-        <SearchBar Placeholder="Cerca" SearchButtonPressed="OnSearchButtonPressed" TextChanged="Handle_TextChanged"  />
+        <SearchBar Placeholder="Cerca" SearchButtonPressed="OnSearchButtonPressed" TextChanged="Handle_TextChanged" />
         <syncfusion:SfListView x:Name="listView" ItemSize="70" SelectionMode="Single" >
             <syncfusion:SfListView.ItemTemplate>
                 <DataTemplate>

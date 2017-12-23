@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using Facile.Interfaces;
+using Facile.Models;
 using Facile.ViewModels;
 using SQLite;
 using Syncfusion.Data;
+using Syncfusion.SfBusyIndicator.XForms;
 using Syncfusion.SfDataGrid.XForms;
 using Xamarin.Forms;
 
@@ -34,6 +37,9 @@ namespace Facile
 		private readonly SQLiteAsyncConnection dbcon_;
 		private string query_;
 		private string filter_;
+		private int swipeIndex;
+		private Image leftImage;
+		private int cliCodice_;
 
 		ObservableCollection<Documents> docCollection = null;
 
@@ -41,8 +47,14 @@ namespace Facile
 		{
 			InitializeComponent();
 			tipo_ = t_doc;
+			cliCodice_ = 0;
+			//cli_desc.Text = "TUTTI";
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
+			//MessagingCenter.Subscribe<ClientiSearch, Clienti>(this, "ClienteChanged", OnClienteChanged);
 
+			busyIndicator.IsBusy = true;
+			leftImage = null;
+			swipeIndex = 0;
 			switch(tipo_)
 			{
 				case TipoDocumento.TIPO_DDT :
@@ -113,15 +125,26 @@ namespace Facile
 			docCollection =  new ObservableCollection<Documents>(docList);
 			dataGrid.ItemsSource = docCollection;
 
+			busyIndicator.IsBusy = false;
 			base.OnAppearing();
+		}
+
+		protected override void OnDisappearing()
+		{
+			//MessagingCenter.Unsubscribe<ClientiSearch>(this, "ClienteChanged");
+			base.OnDisappearing();
 		}
 
 		async void OnDateSelected(object sender, Xamarin.Forms.DateChangedEventArgs e)
 		{
 			if (!String.IsNullOrEmpty(query_))
 			{
-				string where = String.Format(" AND fat_d_doc BETWEEN {0} AND {1}", dStart.Date.Ticks,dStop.Date.Ticks);
-
+				busyIndicator.IsBusy = true;
+				string where;
+				if (cliCodice_ != 0)
+					where = String.Format(" AND fat_d_doc BETWEEN {0} AND {1} AND fat_inte = {2}", dStart.Date.Ticks,dStop.Date.Ticks, cliCodice_);
+				else 
+					where = String.Format(" AND fat_d_doc BETWEEN {0} AND {1}", dStart.Date.Ticks, dStop.Date.Ticks);
 				string sql = query_ + filter_ + where;
 				var docList = await dbcon_.QueryAsync<Documents>(sql);
 				foreach (Documents doc in docList)
@@ -131,6 +154,7 @@ namespace Facile
 				}
 				docCollection = new ObservableCollection<Documents>(docList);
 				dataGrid.ItemsSource = docCollection;
+				busyIndicator.IsBusy = false;
 			}
 		}
 
@@ -138,24 +162,130 @@ namespace Facile
 		{
 			base.OnSizeAllocated(width, height);
 					    
-			if (Device.Idiom != TargetIdiom.Phone) return;
-			var cols = dataGrid.Columns;
-			if (width > height)
+			if (Device.Idiom != TargetIdiom.Phone)
 			{
-				foreach (var col in cols)
+				if (width > height)
 				{
-					if (col.HeaderText == "Tipo")
-						col.IsHidden = false;
+					if (Device.RuntimePlatform == Device.iOS)
+					{
+						AbsoluteLayout.SetLayoutBounds(table, new Rectangle(0, 0, 1, .1));
+						AbsoluteLayout.SetLayoutBounds(dataGrid, new Rectangle(0, 1, 1, 0.9));
+					}
+					if (Device.RuntimePlatform == Device.Android)
+					{
+						AbsoluteLayout.SetLayoutBounds(table, new Rectangle(0, 0, 1, .09));
+						AbsoluteLayout.SetLayoutBounds(dataGrid, new Rectangle(0, 1, 1, 0.91));
+					}
+				}
+				else
+				{
+					if (Device.RuntimePlatform == Device.iOS)
+					{
+						AbsoluteLayout.SetLayoutBounds(table, new Rectangle(0, 0, 1, .08));
+						AbsoluteLayout.SetLayoutBounds(dataGrid, new Rectangle(0, 1, 1, 0.92));
+					}
+					if (Device.RuntimePlatform == Device.Android)
+					{ 
+						AbsoluteLayout.SetLayoutBounds(table, new Rectangle(0, 0, 1, .05));
+						AbsoluteLayout.SetLayoutBounds(dataGrid, new Rectangle(0, 1, 1, 0.95));
+					}
 				}
 			}
 			else
 			{
-				foreach (var col in cols)
+				var cols = dataGrid.Columns;
+				if (width > height)
 				{
-					if (col.HeaderText == "Tipo")
-						col.IsHidden = true;
+					foreach (var col in cols)
+					{
+						if (col.HeaderText == "Tipo")
+							col.IsHidden = false;
+					}
+
+					if (Device.RuntimePlatform == Device.iOS)
+					{
+						AbsoluteLayout.SetLayoutBounds(table, new Rectangle(0, 0, 1, .16));
+						AbsoluteLayout.SetLayoutBounds(dataGrid, new Rectangle(0, 1, 1, 0.86));
+					}
+				}
+				else
+				{
+					foreach (var col in cols)
+					{
+						if (col.HeaderText == "Tipo")
+							col.IsHidden = true;
+					}
+					if (Device.RuntimePlatform == Device.iOS)
+					{
+						AbsoluteLayout.SetLayoutBounds(table, new Rectangle(0, 0, 1, .09));
+						AbsoluteLayout.SetLayoutBounds(dataGrid, new Rectangle(0, 1, 1, 0.91));
+					}
+
+			
+
 				}
 			}
 		}
+
+		void OnSwipeStarted(object sender, Syncfusion.SfDataGrid.XForms.SwipeStartedEventArgs e)
+		{
+			swipeIndex = e.RowIndex;
+		}
+
+
+		void OnLeftBindingContextChanged(object sender, System.EventArgs e)
+		{
+			if (leftImage == null)
+			{
+				leftImage = sender as Image;
+				(leftImage.Parent as View).GestureRecognizers.Add(new TapGestureRecognizer() { Command = new Command(Edit) });
+				//leftImage.Source = ImageSource.FromResource("SampleBrowser.Icons.DataGrid.Edit.png");
+			}
+		}
+
+		private async void Edit ()
+		{
+			dataGrid.ResetSwipeOffset();
+			if (swipeIndex == 0)
+			{
+				return;
+			}
+
+			var doc = docCollection[swipeIndex-1];
+
+			Fatture fat = null;
+			bool nuova = false;
+			bool editable = false;
+
+			swipeIndex = 0;
+			try
+			{
+				string sql = String.Format("SELECT * from FATTURE2 WHERE fat_tipo = {0} AND fat_n_doc = {1} LIMIT 1", doc.fat_tipo, doc.fat_n_doc);
+				var docList = await dbcon_.QueryAsync<Fatture>(sql);
+				if (docList.Count > 0)
+					fat = docList[0];
+			}
+			catch (Exception ex)
+			{
+				await DisplayAlert("Attenzione!", ex.Message, "OK");
+				return;
+			}
+			if (fat == null) return;
+			var page = new DocumentiEdit(ref fat, ref nuova, ref editable);
+			await Navigation.PushAsync(page);
+		}
+
+		async void OnTappedClienti(object sender, System.EventArgs e)
+		{
+			await Navigation.PushAsync(new ClientiSearch());
+		}
+
+		void OnClienteChanged(ClientiSearch source, Clienti cli)
+		{
+			if (cli.cli_codice == cliCodice_) return;
+			cliCodice_ = cli.cli_codice;
+			//cli_desc.Text = cli.cli_desc;
+		}
+
 	}
 }

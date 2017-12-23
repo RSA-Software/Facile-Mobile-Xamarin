@@ -7,6 +7,7 @@ using UIKit;
 using Syncfusion.SfDataGrid.XForms.iOS;
 using Syncfusion.ListView.XForms.iOS;
 using Syncfusion.SfNumericTextBox.XForms.iOS;
+using Syncfusion.SfBusyIndicator.XForms.iOS;
 
 namespace Facile.iOS
 {
@@ -19,6 +20,7 @@ namespace Facile.iOS
 			SfDataGridRenderer.Init();
 			SfListViewRenderer.Init();
 			new SfNumericTextBoxRenderer();
+			new SfBusyIndicatorRenderer();
 
             LoadApplication(new App());
             return base.FinishedLaunching(app, options);
