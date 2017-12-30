@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using Facile.Extension;
 using Facile.Interfaces;
 using Facile.Models;
 using SQLite;
@@ -37,6 +38,12 @@ namespace Facile
 		{
 			string sql = String.Format("SELECT * FROM fatrow2 WHERE rig_tipo = {0} AND rig_n_doc = {1}", doc_.fat_tipo, doc_.fat_n_doc); 
 			var rigList = await dbcon_.QueryAsync<FatRow>(sql);
+
+			//foreach (FatRow row in rigList)
+			//{
+			//	await row.RecalcAsync();
+			//}
+
 			rigCollection = new ObservableCollection<FatRow>(rigList);
 			dataGrid.ItemsSource = rigCollection;
 

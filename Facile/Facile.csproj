@@ -152,6 +152,8 @@
       <DependentUpon>DestinazioniSearch.xaml</DependentUpon>
     </Compile>
     <Compile Include="Extension\StringExtensions.cs" />
+    <Compile Include="Extension\FatRowExtensions.cs" />
+    <Compile Include="Extension\NumericExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MarkupExtensions\" />
