@@ -8,7 +8,8 @@
     <StackLayout>
         <SearchBar x:Name="searchBar" Placeholder="Cerca" TextChanged="OnTextChanged" IsVisible="true" />
         
-        <syncfusion:SfListView x:Name="listView" AutoFitMode="Height" SelectionMode="Single" Padding="7,0,7,0" ItemDoubleTapped="OnItemDoubleTapped" >
+        <!--<syncfusion:SfListView x:Name="listView" AutoFitMode="Height" SelectionMode="Single" Padding="7,0,7,0" ItemDoubleTapped="OnItemDoubleTapped" >-->
+        <syncfusion:SfListView x:Name="listView" AutoFitMode="Height" SelectionMode="Single" Padding="7,0,7,0" >
             <syncfusion:SfListView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>

@@ -6,6 +6,7 @@ using Facile.Models;
 using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Syncfusion.ListView.XForms;
 
 namespace Facile
 {
@@ -110,13 +111,15 @@ namespace Facile
 			listView.IsBusy = false;
 		}
 
-		async void OnItemDoubleTapped(object sender, Syncfusion.ListView.XForms.ItemDoubleTappedEventArgs e)
-		{
-			if (!e.Handled)
-			{
-				MessagingCenter.Send(this,"ClienteChanged",(Clienti)e.ItemData);
-				await Navigation.PopAsync();
-			}
-		}
+		//async void OnItemDoubleTapped(object sender, Syncfusion.ListView.XForms.ItemDoubleTappedEventArgs e)
+		//{
+		//	if (!e.Handled)
+		//	{
+		//		MessagingCenter.Send(this,"ClienteChanged",(Clienti)e.ItemData);
+		//		await Navigation.PopAsync();
+		//	}
+		//}
+
+		public SfListView CliList { get { return listView; }}
 	}
 }

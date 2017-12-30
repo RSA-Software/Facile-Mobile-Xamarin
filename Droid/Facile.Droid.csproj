@@ -133,21 +133,6 @@
     <Reference Include="ICSharpCode.SharpZipLib.Portable">
       <HintPath>..\packages\SharpZipLib.Portable.0.86.0.0003\lib\portable-net45+netcore45+wp8+win8+wpa81+MonoTouch+MonoAndroid+Xamarin.iOS10\ICSharpCode.SharpZipLib.Portable.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Core.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.Core.15.4.0.17\lib\MonoAndroid10\Syncfusion.Core.XForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.DataSource.Portable">
-      <HintPath>..\packages\Syncfusion.Xamarin.DataSource.15.4.0.17\lib\MonoAndroid10\Syncfusion.DataSource.Portable.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.GridCommon.Portable">
-      <HintPath>..\packages\Syncfusion.Xamarin.GridCommon.15.4.0.17\lib\MonoAndroid10\Syncfusion.GridCommon.Portable.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfListView.XForms.Android">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfListView.XForms.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfListView.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfListView.XForms.dll</HintPath>
-    </Reference>
     <Reference Include="FormsViewGroup">
       <HintPath>..\packages\Xamarin.Forms.2.5.0.121934\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
     </Reference>
@@ -163,14 +148,14 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.5.0.121934\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.SfNumericTextBox.Android">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.Android.dll</HintPath>
+    <Reference Include="Syncfusion.Core.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.Core.15.4.0.17\lib\MonoAndroid10\Syncfusion.Core.XForms.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.SfNumericTextBox.XForms.Android">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.XForms.Android.dll</HintPath>
+    <Reference Include="Syncfusion.SfListView.XForms.Android">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfListView.XForms.Android.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.SfNumericTextBox.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
+    <Reference Include="Syncfusion.SfListView.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfListView.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Data.Portable">
       <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.15.4.0.17\lib\MonoAndroid10\Syncfusion.Data.Portable.dll</HintPath>
@@ -181,6 +166,12 @@
     <Reference Include="Syncfusion.SfDataGrid.XForms">
       <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfDataGrid.XForms.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.DataSource.Portable">
+      <HintPath>..\packages\Syncfusion.Xamarin.DataSource.15.4.0.17\lib\MonoAndroid10\Syncfusion.DataSource.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.GridCommon.Portable">
+      <HintPath>..\packages\Syncfusion.Xamarin.GridCommon.15.4.0.17\lib\MonoAndroid10\Syncfusion.GridCommon.Portable.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.SfBusyIndicator.Android">
       <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfBusyIndicator.Android.dll</HintPath>
     </Reference>
@@ -189,6 +180,15 @@
     </Reference>
     <Reference Include="Syncfusion.SfBusyIndicator.XForms">
       <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfBusyIndicator.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.Android">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.XForms.Android">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.XForms.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

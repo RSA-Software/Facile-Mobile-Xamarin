@@ -122,9 +122,16 @@ namespace Facile
 				if (doc.fat_tipo == (int)TipoDocumento.TIPO_FAT && doc.fat_credito != 0)
 					doc.fat_tot_fattura = -doc.fat_tot_fattura;
 			}
-			docCollection =  new ObservableCollection<Documents>(docList);
-			dataGrid.ItemsSource = docCollection;
-
+			if (docList.Count == 0)
+			{
+				await DisplayAlert("Attenzione!", "Dati non trovati", "OK");
+				await Navigation.PopAsync();
+			}
+			else
+			{
+				docCollection = new ObservableCollection<Documents>(docList);
+				dataGrid.ItemsSource = docCollection;
+			}
 			busyIndicator.IsBusy = false;
 			base.OnAppearing();
 		}
@@ -275,9 +282,16 @@ namespace Facile
 			await Navigation.PushAsync(page);
 		}
 
-		async void OnTappedClienti(object sender, System.EventArgs e)
+		void OnTappedClienti(object sender, System.EventArgs e)
 		{
-			await Navigation.PushAsync(new ClientiSearch());
+			var page = new ClientiSearch();
+			page.CliList.ItemDoubleTapped += (source, args) =>
+			{
+				var cli = (Clienti)args.ItemData;
+				cliCodice_ = cli.cli_codice;
+
+			};
+			Navigation.PushAsync(page);
 		}
 
 		void OnClienteChanged(ClientiSearch source, Clienti cli)

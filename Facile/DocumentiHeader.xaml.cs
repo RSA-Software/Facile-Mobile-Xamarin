@@ -27,8 +27,7 @@ namespace Facile
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 
 			InitializeComponent();
-			MessagingCenter.Subscribe<ClientiSearch, Clienti>(this, "ClienteChanged", OnClienteChanged);
-
+	
 			if (nuova == false)
 			{
 				if (editable == true)
@@ -74,12 +73,6 @@ namespace Facile
 			base.OnAppearing();
 		}
 
-		protected override void OnDisappearing()
-		{
-			MessagingCenter.Unsubscribe<ClientiSearch>(this,"ClienteChanged");
-			base.OnDisappearing();
-		}
-
 		public void SetField()
 		{
 			if (cli_ != null)
@@ -98,21 +91,17 @@ namespace Facile
 
 		}
 
-		async void OnClienteTapped(object sender, System.EventArgs e)
+		void OnClienteTapped(object sender, System.EventArgs e)
 		{
-			await Navigation.PushAsync(new ClientiSearch());
-		}
-
-		void OnClienteChanged(ClientiSearch source, Clienti cli)
-		{
-			cli_ = cli;
-			if (cli_ != null)
+			var page = new ClientiSearch();
+			page.CliList.ItemDoubleTapped += (source, args) =>
 			{
-				
-			}
-			SetField();
+				cli_ = (Clienti)args.ItemData;
+				SetField();
+				Navigation.PopAsync();
+			};
+			Navigation.PushAsync(page);
 		}
-
 
 		void OnDestinazioneTapped(object sender, System.EventArgs e)
 		{
