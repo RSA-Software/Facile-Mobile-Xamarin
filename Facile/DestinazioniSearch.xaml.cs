@@ -27,7 +27,7 @@ namespace Facile
 
 			recTotal_ = 0;
 			recLoaded_ = 0;
-			recToLoad_ = 20;
+			recToLoad_ = 50;
 			cod_cli_ = cod_cli;
 			query_ = "SELECT * FROM destina1 WHERE dst_rel = 0 AND dst_cli_for = " + cod_cli_ + " ORDER BY dst_desc";
 

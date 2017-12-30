@@ -27,7 +27,7 @@ namespace Facile
 
 			recTotal_ = 0;
 			recLoaded_ = 0;
-			recToLoad_ = 20;
+			recToLoad_ = 50;
 			query_ = "SELECT * FROM clienti1 ORDER BY cli_desc";
 
 			listView.LoadMoreOption = Syncfusion.ListView.XForms.LoadMoreOption.Auto;
