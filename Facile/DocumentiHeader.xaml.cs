@@ -84,6 +84,10 @@ namespace Facile
 			if (dst_ != null)
 			{
 				dst_desc.Text = dst_.dst_desc;	
+
+				dst_desc.Text = dst_.dst_desc;
+				dst_indirizzo.Text = dst_.dst_indirizzo;
+				dst_citta.Text = dst_.dst_citta;
 			}
 			fat_n_doc.Value = doc_.fat_n_doc % 700000000;
 			fat_d_doc.Date = doc_.fat_d_doc;
@@ -105,7 +109,14 @@ namespace Facile
 
 		void OnDestinazioneTapped(object sender, System.EventArgs e)
 		{
-			DisplayAlert("Tapped", "Destinazione", "ok");
+			var page = new DestinazioniSearch(cli_ != null ? cli_.cli_codice : 0);
+			page.DstList.ItemDoubleTapped += (source, args) =>
+			{
+				dst_ = (Destinazioni)args.ItemData;
+				SetField();
+				Navigation.PopAsync();
+			};
+			Navigation.PushAsync(page);
 		}
 
 	}

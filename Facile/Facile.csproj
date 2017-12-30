@@ -70,6 +70,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="DestinazioniSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -144,6 +148,10 @@
     <Compile Include="ClientiSearch.xaml.cs">
       <DependentUpon>ClientiSearch.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DestinazioniSearch.xaml.cs">
+      <DependentUpon>DestinazioniSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Extension\StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MarkupExtensions\" />
@@ -152,6 +160,7 @@
     <Folder Include="Imports\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Converters\" />
+    <Folder Include="Extension\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="PCLStorage.Abstractions">
