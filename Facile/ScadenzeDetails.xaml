@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+    x:Class="Facile.ScadenzeDetails">
+
+        <syncfusion:SfDataGrid x:Name="dataGrid" AllowResizingColumn="true" HorizontalOptions="FillAndExpand"  AutoGenerateColumns="False" ColumnSizer="LastColumnFill">
+            <syncfusion:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
+
+                <syncfusion:GridTextColumn HeaderText="Data" MappingName="sca_data" Width="90" TextAlignment="Center" Format="dd/MM/yy">
+                </syncfusion:GridTextColumn>
+
+                <syncfusion:GridTextColumn HeaderText="Importo" MappingName="sca_importo" Width="100" Format="N2" TextAlignment="End">
+                    <syncfusion:GridTextColumn.CellStyle>
+                        <Style TargetType="syncfusion:GridCell">
+                            <Setter Property="Foreground" Value="Red" />
+                        </Style>
+                    </syncfusion:GridTextColumn.CellStyle>
+                </syncfusion:GridTextColumn>
+
+                <syncfusion:GridTextColumn HeaderText="Num. Fattura" MappingName="sca_fattura" Width="90" TextAlignment="End">
+                </syncfusion:GridTextColumn>
+
+                <syncfusion:GridTextColumn HeaderText="Tot. Fattura" MappingName="sca_tot_fat" Width="90" TextAlignment="End" Format="N2">
+                </syncfusion:GridTextColumn>
+            
+                <syncfusion:GridTextColumn HeaderText="Descrizione" MappingName="sca_desc" TextAlignment="Start" MinimumWidth="120">
+                </syncfusion:GridTextColumn>
+            
+            </syncfusion:SfDataGrid.Columns>
+            
+        </syncfusion:SfDataGrid>
+
+
+</ContentPage>

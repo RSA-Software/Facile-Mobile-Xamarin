@@ -250,6 +250,10 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_style.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_style.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_style.png" />
+    <AndroidResource Include="Resources\drawable\ic_details.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_details.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_details.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_details.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />

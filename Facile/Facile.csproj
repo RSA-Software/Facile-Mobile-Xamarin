@@ -78,6 +78,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ScadenzeDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -162,6 +166,9 @@
       <DependentUpon>ScadenzeElenco.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\ScadenzeInfo.cs" />
+    <Compile Include="ScadenzeDetails.xaml.cs">
+      <DependentUpon>ScadenzeDetails.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MarkupExtensions\" />
