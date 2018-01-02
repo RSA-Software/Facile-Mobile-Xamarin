@@ -7,7 +7,7 @@
     xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
     x:Class="Facile.ScadenzeElenco">
 
-    <RelativeLayout>
+    <RelativeLayout Padding="7,0,7,0">
 
         <StackLayout  
             RelativeLayout.WidthConstraint = "{ConstraintExpression
