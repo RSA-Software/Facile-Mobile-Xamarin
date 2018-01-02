@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title = "Elenco Scadenze"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Facile.Converters;assembly=Facile"
+    xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+    xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+    x:Class="Facile.ScadenzeElenco">
+
+    <RelativeLayout>
+
+        <StackLayout  
+            RelativeLayout.WidthConstraint = "{ConstraintExpression
+            Type = RelativeToParent,
+            Property = Width,
+            Factor = 1}"
+
+            RelativeLayout.HeightConstraint = "{ConstraintExpression
+            Type = RelativeToParent,
+            Property = Height,
+            Factor = 1}"
+            >
+            
+            <SearchBar x:Name="searchBar" Placeholder="Cerca" TextChanged="OnTextChanged" />
+
+            <syncfusion:SfDataGrid x:Name="dataGrid"  AllowResizingColumn="true"
+                                AllowSwiping="true"  
+                                AllowSorting="true"     
+                                HorizontalOptions="FillAndExpand"  
+                                AutoGenerateColumns="False" 
+                                SwipeStarted="OnSwipeStarted"
+                                >
+
+                <syncfusion:SfDataGrid.RightSwipeTemplate>
+                    <DataTemplate>
+                        <Grid  BackgroundColor="#009EDA" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                        
+                                <Image Grid.Column="0"   
+                                    BackgroundColor="Transparent" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    BindingContextChanged="OnLeftBindingContextChanged"
+                                    Source="ic_alarm.png"  />
+                        
+                                <Label Grid.Column="1" 
+                                    Text ="EDIT" 
+                                    HorizontalTextAlignment="Start" 
+                                    VerticalTextAlignment="Center"  
+                                    LineBreakMode ="NoWrap" 
+                                    BackgroundColor="Transparent" 
+                                    TextColor ="White" />
+                            </Grid>
+                    </DataTemplate>
+                </syncfusion:SfDataGrid.RightSwipeTemplate>
+
+                        <syncfusion:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
+
+                            <syncfusion:GridTextColumn HeaderText="Importo" MappingName="CliTotale" Width="90" TextAlignment="End" Format="N2">
+                                <syncfusion:GridTextColumn.CellStyle>
+                                    <Style TargetType="syncfusion:GridCell">
+                                        <Setter Property="Foreground" Value="{Binding CliTotale, Converter={local:DocumentsValueConverter}}" />
+                                    </Style>
+                                </syncfusion:GridTextColumn.CellStyle>
+                            </syncfusion:GridTextColumn>
+
+                            <syncfusion:GridTextColumn HeaderText="Telefono" MappingName="CliTel" Width="120" TextAlignment="End">
+                            </syncfusion:GridTextColumn>
+
+                            <syncfusion:GridTextColumn HeaderText="Cliente" MappingName="CliDesc" TextAlignment="Start">
+                            </syncfusion:GridTextColumn>
+
+                        </syncfusion:SfDataGrid.Columns>
+                        
+                    </syncfusion:SfDataGrid>        
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand"
+            RelativeLayout.WidthConstraint= "{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width}"  
+
+            RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width, 
+            Factor=0, 
+            Constant=0}" 
+
+            RelativeLayout.YConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Height, 
+            Factor=0.5, 
+            Constant=0}" >
+
+            <busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="SlicedCircle" Title="Attendere..." IsBusy="false"  />
+        </StackLayout>
+
+    </RelativeLayout>
+    
+</ContentPage>

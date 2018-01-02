@@ -53,9 +53,10 @@ namespace Facile
 			await Navigation.PushAsync(page);
 		}
 
-		void OnClickedScadenze(object sender, System.EventArgs e)
+		async void OnClickedScadenze(object sender, System.EventArgs e)
 		{
-			DisplayAlert("Scadenze", "Clicked", "ok");
+			var page = new ScadenzeElenco();
+			await Navigation.PushAsync(page);
 		}
 
 		void OnClickedIncassi(object sender, System.EventArgs e)

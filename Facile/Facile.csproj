@@ -74,6 +74,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="ScadenzeElenco.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -154,6 +158,10 @@
     <Compile Include="Extension\StringExtensions.cs" />
     <Compile Include="Extension\FatRowExtensions.cs" />
     <Compile Include="Extension\NumericExtensions.cs" />
+    <Compile Include="ScadenzeElenco.xaml.cs">
+      <DependentUpon>ScadenzeElenco.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ScadenzeInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MarkupExtensions\" />

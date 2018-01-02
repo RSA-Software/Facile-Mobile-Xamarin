@@ -73,7 +73,6 @@ namespace Facile
 
 		async void OnTextChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
 		{
-
 			if (e.OldTextValue == e.NewTextValue) return;
 			listView.IsBusy = true;
 			if (String.IsNullOrWhiteSpace(e.NewTextValue))
