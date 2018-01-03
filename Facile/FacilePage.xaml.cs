@@ -3,6 +3,7 @@ using Facile.Interfaces;
 using Facile.Models;
 using SQLite;
 using System;
+using static Facile.Extension.FattureExtensions;
 
 namespace Facile
 {
@@ -83,7 +84,7 @@ namespace Facile
 			//DependencyService.Get<ISQLiteDb>().RemoveDB();
 			var dbcon = DependencyService.Get<ISQLiteDb>().GetConnection();
 
-
+			await dbcon.CreateTableAsync<Ditte>();
 			await dbcon.CreateTableAsync<Zone>();
 			await dbcon.CreateTableAsync<Cateco>();
 			await dbcon.CreateTableAsync<Pagamenti>();

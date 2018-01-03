@@ -2,6 +2,7 @@
 using System.Globalization;
 using Facile.ViewModels;
 using Xamarin.Forms;
+using static Facile.Extension.FattureExtensions;
 
 namespace Facile.Converters
 {

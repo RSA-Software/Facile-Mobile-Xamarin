@@ -111,7 +111,7 @@ namespace Facile.Models
 		public int fat_tipo_iva_1 { get; set; }
 		public int fat_tipo_iva_2 { get; set; }
 		public int fat_tipo_iva_3 { get; set; }
-		public double fat_imponibile { get; set; }
+		public double fat_tot_imponibile { get; set; }
 		public double fat_tot_esente { get; set; }
 		public double fat_tot_esclusa { get; set; }
 		public double fat_tot_non_imp { get; set; }

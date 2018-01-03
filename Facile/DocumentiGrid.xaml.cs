@@ -9,27 +9,10 @@ using Syncfusion.Data;
 using Syncfusion.SfBusyIndicator.XForms;
 using Syncfusion.SfDataGrid.XForms;
 using Xamarin.Forms;
+using static Facile.Extension.FattureExtensions;
 
 namespace Facile
 {
-	public enum TipoDocumento
-	{
-		TIPO_FAT = 0,
-		TIPO_BOL = 1,
-		TIPO_DDT = 2,
-		TIPO_BUO = 3,
-		TIPO_ACC = 4,
-		TIPO_RIC = 5,
-		TIPO_PRE = 6,
-		TIPO_ORD = 7,
-		TIPO_FAR = 8,
-		TIPO_OFO = 9,
-		TIPO_AUF = 10,
-		TIPO_RIO = 11,
-		TIPO_DRI = 12,
-		TIPO_FPF = 13,
-	}
-
 	//[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DocumentiGrid : ContentPage
 	{

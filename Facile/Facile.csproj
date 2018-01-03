@@ -169,6 +169,8 @@
     <Compile Include="ScadenzeDetails.xaml.cs">
       <DependentUpon>ScadenzeDetails.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Extension\FattureExtensions.cs" />
+    <Compile Include="Models\Ditte.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MarkupExtensions\" />

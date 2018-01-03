@@ -24,7 +24,8 @@ namespace Facile
 
 		private async void Download_Clicked(object sender, System.EventArgs e)
 		{
-			var test = await ImportTableAsync<Zone>("zone");
+			var test = await ImportTableAsync<Ditte>("impostazioni");
+			test = await ImportTableAsync<Zone>("zone");
 			test = await ImportTableAsync<Cateco>("cateco");
 			test = await ImportTableAsync<Pagamenti>("pagament");
 			test = await ImportTableAsync<Tabelle>("tabelle");

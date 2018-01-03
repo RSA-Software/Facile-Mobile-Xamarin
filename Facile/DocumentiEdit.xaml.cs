@@ -5,6 +5,7 @@ using Facile.Interfaces;
 using Facile.Models;
 using SQLite;
 using Xamarin.Forms;
+using static Facile.Extension.FattureExtensions;
 
 namespace Facile
 {
