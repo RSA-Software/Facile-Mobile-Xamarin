@@ -95,10 +95,10 @@ namespace Facile.Models
 		public double fat_importo_1 { get; set; }
 		public double fat_importo_2 { get; set; }
 		public double fat_importo_3 { get; set; }
-		public double fat_aliquota_0 { get; set; }
-		public double fat_aliquota_1 { get; set; }
-		public double fat_aliquota_2 { get; set; }
-		public double fat_aliquota_3 { get; set; }
+		public double fat_aliquota_iva_0 { get; set; }
+		public double fat_aliquota_iva_1 { get; set; }
+		public double fat_aliquota_iva_2 { get; set; }
+		public double fat_aliquota_iva_3 { get; set; }
 		public double fat_importo_iva_0 { get; set; }
 		public double fat_importo_iva_1 { get; set; }
 		public double fat_importo_iva_2 { get; set; }

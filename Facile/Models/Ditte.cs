@@ -26,7 +26,7 @@ namespace Facile.Models
 		public double impo_spetra_per_4 { get; set; }
 		public double impo_spetra { get; set; }
 		public double impo_fat_spese { get; set; }
-		public double impo_iva_spese { get; set; }
+		public int impo_iva_spese { get; set; }
 		public double impo_bolli { get; set; }
 		public double impo_trat_perc_bolli { get; set; }
 		public int impo_iva_age { get; set; }

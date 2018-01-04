@@ -3,6 +3,35 @@ namespace Facile.Extension
 {
 	public static class NumericExtensions
 	{
+
+		public static double MyFloor(this double num, short dec)
+		{
+			for (int idx = 1; idx <= dec; idx++)
+			{
+				num = num * 10;
+			}
+			num = Math.Floor(num);
+			for (int idx = 1; idx <= dec; idx++)
+			{
+				num = num / 10;
+			}
+			return (num);
+		}
+
+		public static double MyCeil(this double num, short dec)
+		{
+			for (int idx = 1; idx <= dec; idx++)
+			{
+				num = num * 10;
+			}
+			num = Math.Ceiling(num);
+			for (int idx = 1; idx <= dec; idx++)
+			{
+				num = num / 10;
+			}
+			return (num);
+		}
+
 		public static bool TestIfZero(this double val, int dec)
 		{
 			double absval;
@@ -12,6 +41,14 @@ namespace Facile.Extension
 			if (absval > 1) return(false);
 			switch (dec)
 			{
+				case 0:
+					if (absval < 0.9999999999999999999)
+					{
+						val = 0.0;
+						return (true);
+					}
+					break;
+
 				case 1:
 					if (absval < 0.0999999999999999999)
 					{
