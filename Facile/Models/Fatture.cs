@@ -352,5 +352,15 @@ namespace Facile.Models
 		public bool fat_escludi_730 { get; set; }
 		public int fat_invio_730 { get; set; }
 		public double fat_tot_tara { get; set; }
+
+
+		[Ignore]
+		public double des_imponibile_ivato_0 { get; set; }
+		[Ignore]
+		public double des_imponibile_ivato_1 { get; set; }
+		[Ignore]
+		public double des_imponibile_ivato_2 { get; set; }
+		[Ignore]
+		public double des_imponibile_ivato_3 { get; set; }
 	}
 }

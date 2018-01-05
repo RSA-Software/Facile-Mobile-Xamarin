@@ -58,7 +58,7 @@ namespace Facile.Extension
 				return (ErroreDocumento.DittaNotFound);
 			}
 
-			var dec = 2;
+			short dec = 2;
 			fat.fat_tot_merce = 0.0;
 			fat.fat_tot_netto = 0.0;
 			fat.fat_tot_imponibile = 0.0;
@@ -421,49 +421,40 @@ namespace Facile.Extension
 					} while (false);
 				}
 			}
-			/*
-			
-			// Calcoliamo i totali dell' iva 
-			for (i = 0; i < 4; i++)
+
+			//
+			// calcoliamo i totali dell'IVA
+			//
+
+			// Prima Aliquota IVA
+			do
 			{
-				fat->rec.importo[i] = 0.0;
-				if (fat->rec.cod_iva[i] == 0L) continue;
+				fat.fat_importo_0 = 0.0;
+				if (fat.fat_cod_iva_0 == 0L) break;
 
-				fat->rec.ripartizione[i] += rip_cassa[i];
+				fat.fat_ripartizione_0 += rip_cassa[0];
 
-				if (facile_db_impo.anno < 2002)
-					fat->rec.tot_merce += floor(fat->rec.imponibile[i]);
-				else
-					fat->rec.tot_merce += MyFloor(fat->rec.imponibile[i], dec);
-				//	fat->rec.tot_merce     += fat->rec.imponibile[i]; 
+				fat.fat_tot_merce += fat.fat_imponibile_0.MyFloor(dec);
 
-				if (fat->rec.scorporo == TRUE)
+				if (fat.fat_scorporo != 0)
 				{
-					fat->rec.importo[i] = Round(fat->des.imponibile_ivato[i] - fat->des.imponibile_ivato[i] * fat->rec.sconto / 100.0, dec);
-
-					if (facile_db_impo.anno < 2002)
-						fat->rec.importo[i] = MyFloor(fat->rec.importo[i] / (1 + (fat->rec.aliquota_iva[i] / 100.0)), dec);
-					else
+					fat.fat_importo_0 = Math.Round(fat.des_imponibile_ivato_0 - fat.des_imponibile_ivato_0 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					double xxxtot = fat.fat_importo_0;
+					fat.fat_importo_0 = Math.Round(fat.fat_importo_0 / (1 + (fat.fat_aliquota_iva_0 / 100.0)), dec, MidpointRounding.AwayFromZero);
+					double xxxiva = Math.Round(fat.fat_importo_0 * (1 + (fat.fat_aliquota_iva_0 / 100.0)), dec, MidpointRounding.AwayFromZero);
+					xxxiva -= xxxtot;
+					xxxiva = Math.Round(xxxiva, dec, MidpointRounding.AwayFromZero);
+					if (xxxiva.TestIfZero(dec) != true)
 					{
-						double xxxiva;
-
-						const auto xxxtot = fat->rec.importo[i];
-						fat->rec.importo[i] = Round(fat->rec.importo[i] / (1 + (fat->rec.aliquota_iva[i] / 100.0)), dec);
-						xxxiva = Round(fat->rec.importo[i] * (1 + (fat->rec.aliquota_iva[i] / 100.0)), dec);
-						xxxiva -= xxxtot;
-						xxxiva = Round(xxxiva, dec);
-						if (TestIfZero(&xxxiva, dec) == FALSE)
-						{
-							fat->rec.dec_iva[i] = static_cast<float>(xxxiva);
-						}
+						fat.fat_dec_iva_0 = xxxiva;
 					}
 				}
 				else
 				{
-					fat->rec.importo[i] = fat->rec.imponibile[i] - fat->rec.imponibile[i] * fat->rec.sconto / 100.0;
+					fat.fat_importo_0 = fat.fat_imponibile_0 - fat.fat_imponibile_0 * fat.fat_sconto / 100.0;
 				}
-
-	# ifdef BOLLICINE
+/*
+	#ifdef BOLLICINE
 				if ((TestIfZero(&fat->rec.vuo_cauzione, dec) == FALSE) && (fat->rec.cod_iva[i] == facile_db_impo.cod_iva_ese))
 				{
 					fat->rec.imponibile[i] += fat->rec.vuo_cauzione;
@@ -471,26 +462,23 @@ namespace Facile.Extension
 					fat->rec.importo[i] += fat->rec.vuo_cauzione;
 				}
 	#endif
-
-				if (facile_db_impo.anno < 2002)
-					fat->rec.importo_iva[i] = MyCeil((fat->rec.importo[i] + fat->rec.ripartizione[i]) * fat->rec.aliquota_iva[i] / 100.0, dec);
-				else
-					fat->rec.importo_iva[i] = Round((fat->rec.importo[i] + fat->rec.ripartizione[i]) * fat->rec.aliquota_iva[i] / 100.0, dec);
+*/
+				fat.fat_importo_iva_0 = Math.Round((fat.fat_importo_0 + fat.fat_ripartizione_0) * fat.fat_aliquota_iva_0 / 100.0, dec, MidpointRounding.AwayFromZero);
 
 				//
 				// Codice aggiunto per adeguamento imponibile ed iva con terza cifra decimale = 5 (Es. 11.61/1.20) 
 				//
-				if ((facile_db_impo.anno >= 2002) && (fat->rec.scorporo == TRUE))
+				if (fat.fat_scorporo != 0)
 				{
-					fat->rec.importo_iva[i] -= fat->rec.dec_iva[i];
+					fat.fat_importo_iva_0 -= fat.fat_dec_iva_0;
 
-					auto val = fat->rec.importo_iva[i] + fat->rec.importo[i];
-					const auto target = Round(fat->des.imponibile_ivato[i] - fat->des.imponibile_ivato[i] * fat->rec.sconto / 100.0, dec);
-					val = Round(val - target, 2);
+					double val = fat.fat_importo_iva_0 + fat.fat_importo_0;
+					double target = Math.Round(fat.des_imponibile_ivato_0 - fat.des_imponibile_ivato_0 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					val = Math.Round(val - target, 2, MidpointRounding.AwayFromZero);
 					if (val <= 0.0100000000000000000)
 					{
-						fat->rec.importo_iva[i] -= val;
-						fat->rec.dec_iva[i] -= static_cast<float>(val);
+						fat.fat_importo_iva_0 -= val;
+						fat.fat_dec_iva_0 -= val;
 					}
 				}
 				// Fine Codice Aggiunto
@@ -498,60 +486,377 @@ namespace Facile.Extension
 				//******************************************************************
 				// Modificato Arrotondamento il 27/03/2001                        
 				//fat->rec.importo[i]     = MyFloor(fat->rec.importo[i],impo.dec);
-				fat->rec.importo[i] = Round(fat->rec.importo[i], dec);
+				fat.fat_importo_0 = Math.Round(fat.fat_importo_0, dec, MidpointRounding.AwayFromZero);
 
-				switch (fat->rec.tipo_iva[i])
+				switch (fat.fat_tipo_iva_0)
 				{
 					case 3:
 					case 6:
-						fat->rec.tot_non_imp += fat->rec.importo[i] + fat->rec.ripartizione[i];
-						fat->rec.totale_imponibile += fat->rec.importo[i] + fat->rec.ripartizione[i];
+						fat.fat_tot_non_imp += fat.fat_importo_0 + fat.fat_ripartizione_0;
+						fat.fat_totale_imponibile += fat.fat_importo_0 + fat.fat_ripartizione_0;
 						break;
 
 					case 4:
-						fat->rec.tot_esclusa += fat->rec.importo[i] + fat->rec.ripartizione[i];
-						fat->rec.totale_imponibile += fat->rec.importo[i] + fat->rec.ripartizione[i];
+						fat.fat_tot_esclusa += fat.fat_importo_0 + fat.fat_ripartizione_0;
+						fat.fat_totale_imponibile += fat.fat_importo_0 + fat.fat_ripartizione_0;
 						break;
 
 					case 2:
-						fat->rec.tot_esente += fat->rec.importo[i] + fat->rec.ripartizione[i];
-						fat->rec.totale_imponibile += fat->rec.importo[i] + fat->rec.ripartizione[i];
+						fat.fat_tot_esente += fat.fat_importo_0 + fat.fat_ripartizione_0;
+						fat.fat_totale_imponibile += fat.fat_importo_0 + fat.fat_ripartizione_0;
 						break;
 
 					default:
-						fat->rec.tot_imponibile += fat->rec.importo[i] + fat->rec.ripartizione[i];
-						fat->rec.totale_imponibile += fat->rec.importo[i] + fat->rec.ripartizione[i];
+						fat.fat_tot_imponibile += fat.fat_importo_0 + fat.fat_ripartizione_0;
+						fat.fat_totale_imponibile += fat.fat_importo_0 + fat.fat_ripartizione_0;
 						break;
 				}
-				fat->rec.tot_netto += fat->rec.importo[i];
-				fat->rec.tot_iva += fat->rec.importo_iva[i];
+				fat.fat_tot_netto += fat.fat_importo_0;
+				fat.fat_tot_iva += fat.fat_importo_iva_0;
 
 				// Aggiunto il 27/03/2001 
-				fat->rec.tot_fattura += fat->rec.importo[i];
-				if (fat->rec.scorporo == TRUE)
+				fat.fat_tot_fattura += fat.fat_importo_0;
+				if (fat.fat_scorporo != 0)
 				{
-					if (facile_db_impo.anno < 2002)
-					{
-						fat->rec.tot_merce += MyCeil(fat->rec.imponibile[i] * fat->rec.aliquota_iva[i] / 100.0, dec);
-						fat->rec.tot_netto += MyCeil(fat->rec.importo[i] * fat->rec.aliquota_iva[i] / 100.0, dec);
-					}
-					else
-					{
-						double diff;
+					double diff;
 
-						fat->rec.tot_merce += Round(fat->rec.imponibile[i] * fat->rec.aliquota_iva[i] / 100.0, dec);
-						fat->rec.tot_netto += Round(fat->rec.importo[i] * fat->rec.aliquota_iva[i] / 100.0, dec);
+					fat.fat_tot_merce += Math.Round(fat.fat_imponibile_0 * fat.fat_aliquota_iva_0 / 100.0, dec, MidpointRounding.AwayFromZero);
+					fat.fat_tot_netto += Math.Round(fat.fat_importo_0 * fat.fat_aliquota_iva_0 / 100.0, dec, MidpointRounding.AwayFromZero);
 
-						// Codice Aggiunto il 31/03/2004 Gestione importi a scorporo con terzo dec. = 5
-						diff = fat->rec.tot_merce - fat->rec.tot_netto;
-						fat->rec.tot_merce -= fat->rec.dec_iva[i];
-						if (TestIfZero(&diff, 2) == TRUE) fat->rec.tot_netto -= fat->rec.dec_iva[i];
-						// Fine 
-					}
+					// Codice Aggiunto il 31/03/2004 Gestione importi a scorporo con terzo dec. = 5
+					diff = fat.fat_tot_merce - fat.fat_tot_netto;
+					fat.fat_tot_merce -= fat.fat_dec_iva_0;
+					if (diff.TestIfZero(2) == true) fat.fat_tot_netto -= fat.fat_dec_iva_0;
+					// Fine 
 				}
 				// Fine Codice Aggiunto   
-			}
-			*/
+			} while (false);
+	
+
+			// Seconda Aliquota IVA
+			do
+			{
+				fat.fat_importo_1 = 0.0;
+				if (fat.fat_cod_iva_1 == 0L) break;
+
+				fat.fat_ripartizione_1 += rip_cassa[1];
+
+				fat.fat_tot_merce += fat.fat_imponibile_1.MyFloor(dec);
+
+				if (fat.fat_scorporo != 0)
+				{
+					fat.fat_importo_1 = Math.Round(fat.des_imponibile_ivato_1 - fat.des_imponibile_ivato_1 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					double xxxtot = fat.fat_importo_1;
+					fat.fat_importo_1 = Math.Round(fat.fat_importo_1 / (1 + (fat.fat_aliquota_iva_1 / 100.0)), dec, MidpointRounding.AwayFromZero);
+					double xxxiva = Math.Round(fat.fat_importo_1 * (1 + (fat.fat_aliquota_iva_1 / 100.0)), dec, MidpointRounding.AwayFromZero);
+					xxxiva -= xxxtot;
+					xxxiva = Math.Round(xxxiva, dec, MidpointRounding.AwayFromZero);
+					if (xxxiva.TestIfZero(dec) != true)
+					{
+						fat.fat_dec_iva_1 = xxxiva;
+					}
+				}
+				else
+				{
+					fat.fat_importo_1 = fat.fat_imponibile_1 - fat.fat_imponibile_1 * fat.fat_sconto / 100.0;
+				}
+/*
+	#ifdef BOLLICINE
+				if ((TestIfZero(&fat->rec.vuo_cauzione, dec) == FALSE) && (fat->rec.cod_iva[i] == facile_db_impo.cod_iva_ese))
+				{
+					fat->rec.imponibile[i] += fat->rec.vuo_cauzione;
+					fat->des.imponibile_ivato[i] += fat->rec.vuo_cauzione;
+					fat->rec.importo[i] += fat->rec.vuo_cauzione;
+				}
+	#endif
+*/
+				fat.fat_importo_iva_1 = Math.Round((fat.fat_importo_1 + fat.fat_ripartizione_1) * fat.fat_aliquota_iva_1 / 100.0, dec, MidpointRounding.AwayFromZero);
+
+				//
+				// Codice aggiunto per adeguamento imponibile ed iva con terza cifra decimale = 5 (Es. 11.61/1.20) 
+				//
+				if (fat.fat_scorporo != 0)
+				{
+					fat.fat_importo_iva_1 -= fat.fat_dec_iva_1;
+
+					double val = fat.fat_importo_iva_1 + fat.fat_importo_1;
+					double target = Math.Round(fat.des_imponibile_ivato_1 - fat.des_imponibile_ivato_1 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					val = Math.Round(val - target, 2, MidpointRounding.AwayFromZero);
+					if (val <= 0.0100000000000000000)
+					{
+						fat.fat_importo_iva_1 -= val;
+						fat.fat_dec_iva_1 -= val;
+					}
+				}
+				// Fine Codice Aggiunto
+
+				//******************************************************************
+				// Modificato Arrotondamento il 27/03/2001                        
+				//fat->rec.importo[i]     = MyFloor(fat->rec.importo[i],impo.dec);
+				fat.fat_importo_1 = Math.Round(fat.fat_importo_1, dec, MidpointRounding.AwayFromZero);
+
+				switch (fat.fat_tipo_iva_1)
+				{
+					case 3:
+					case 6:
+						fat.fat_tot_non_imp += fat.fat_importo_1 + fat.fat_ripartizione_1;
+						fat.fat_totale_imponibile += fat.fat_importo_1 + fat.fat_ripartizione_1;
+						break;
+
+					case 4:
+						fat.fat_tot_esclusa += fat.fat_importo_1 + fat.fat_ripartizione_1;
+						fat.fat_totale_imponibile += fat.fat_importo_1 + fat.fat_ripartizione_1;
+						break;
+
+					case 2:
+						fat.fat_tot_esente += fat.fat_importo_1 + fat.fat_ripartizione_1;
+						fat.fat_totale_imponibile += fat.fat_importo_1 + fat.fat_ripartizione_1;
+						break;
+
+					default:
+						fat.fat_tot_imponibile += fat.fat_importo_1 + fat.fat_ripartizione_1;
+						fat.fat_totale_imponibile += fat.fat_importo_1 + fat.fat_ripartizione_1;
+						break;
+				}
+				fat.fat_tot_netto += fat.fat_importo_1;
+				fat.fat_tot_iva += fat.fat_importo_iva_1;
+
+				// Aggiunto il 27/03/2001 
+				fat.fat_tot_fattura += fat.fat_importo_1;
+				if (fat.fat_scorporo != 0)
+				{
+					double diff;
+
+					fat.fat_tot_merce += Math.Round(fat.fat_imponibile_1 * fat.fat_aliquota_iva_1 / 100.0, dec, MidpointRounding.AwayFromZero);
+					fat.fat_tot_netto += Math.Round(fat.fat_importo_1 * fat.fat_aliquota_iva_1 / 100.0, dec, MidpointRounding.AwayFromZero);
+
+					// Codice Aggiunto il 31/03/2004 Gestione importi a scorporo con terzo dec. = 5
+					diff = fat.fat_tot_merce - fat.fat_tot_netto;
+					fat.fat_tot_merce -= fat.fat_dec_iva_1;
+					if (diff.TestIfZero(2) == true) fat.fat_tot_netto -= fat.fat_dec_iva_1;
+					// Fine 
+				}
+				// Fine Codice Aggiunto   
+
+			} while (false);
+
+			// Terza Aliquota IVA
+			do
+			{
+				fat.fat_importo_2 = 0.0;
+				if (fat.fat_cod_iva_2 == 0L) break;
+
+				fat.fat_ripartizione_2 += rip_cassa[2];
+
+				fat.fat_tot_merce += fat.fat_imponibile_2.MyFloor(dec);
+
+				if (fat.fat_scorporo != 0)
+				{
+					fat.fat_importo_2 = Math.Round(fat.des_imponibile_ivato_2 - fat.des_imponibile_ivato_2 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					double xxxtot = fat.fat_importo_2;
+					fat.fat_importo_2 = Math.Round(fat.fat_importo_2 / (1 + (fat.fat_aliquota_iva_2 / 100.0)), dec, MidpointRounding.AwayFromZero);
+					double xxxiva = Math.Round(fat.fat_importo_2 * (1 + (fat.fat_aliquota_iva_2 / 100.0)), dec, MidpointRounding.AwayFromZero);
+					xxxiva -= xxxtot;
+					xxxiva = Math.Round(xxxiva, dec, MidpointRounding.AwayFromZero);
+					if (xxxiva.TestIfZero(dec) != true)
+					{
+						fat.fat_dec_iva_2 = xxxiva;
+					}
+				}
+				else
+				{
+					fat.fat_importo_2 = fat.fat_imponibile_2 - fat.fat_imponibile_2 * fat.fat_sconto / 100.0;
+				}
+/*
+	#ifdef BOLLICINE
+				if ((TestIfZero(&fat->rec.vuo_cauzione, dec) == FALSE) && (fat->rec.cod_iva[i] == facile_db_impo.cod_iva_ese))
+				{
+					fat->rec.imponibile[i] += fat->rec.vuo_cauzione;
+					fat->des.imponibile_ivato[i] += fat->rec.vuo_cauzione;
+					fat->rec.importo[i] += fat->rec.vuo_cauzione;
+				}
+	#endif
+*/
+				fat.fat_importo_iva_2 = Math.Round((fat.fat_importo_2 + fat.fat_ripartizione_2) * fat.fat_aliquota_iva_2 / 100.0, dec, MidpointRounding.AwayFromZero);
+
+				//
+				// Codice aggiunto per adeguamento imponibile ed iva con terza cifra decimale = 5 (Es. 11.61/1.20) 
+				//
+				if (fat.fat_scorporo != 0)
+				{
+					fat.fat_importo_iva_2 -= fat.fat_dec_iva_2;
+
+					double val = fat.fat_importo_iva_2 + fat.fat_importo_2;
+					double target = Math.Round(fat.des_imponibile_ivato_2 - fat.des_imponibile_ivato_2 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					val = Math.Round(val - target, 2, MidpointRounding.AwayFromZero);
+					if (val <= 0.0100000000000000000)
+					{
+						fat.fat_importo_iva_2 -= val;
+						fat.fat_dec_iva_2 -= val;
+					}
+				}
+				// Fine Codice Aggiunto
+
+				//******************************************************************
+				// Modificato Arrotondamento il 27/03/2001                        
+				//fat->rec.importo[i]     = MyFloor(fat->rec.importo[i],impo.dec);
+				fat.fat_importo_2 = Math.Round(fat.fat_importo_2, dec, MidpointRounding.AwayFromZero);
+
+				switch (fat.fat_tipo_iva_2)
+				{
+					case 3:
+					case 6:
+						fat.fat_tot_non_imp += fat.fat_importo_2 + fat.fat_ripartizione_2;
+						fat.fat_totale_imponibile += fat.fat_importo_2 + fat.fat_ripartizione_2;
+						break;
+
+					case 4:
+						fat.fat_tot_esclusa += fat.fat_importo_2 + fat.fat_ripartizione_2;
+						fat.fat_totale_imponibile += fat.fat_importo_2 + fat.fat_ripartizione_2;
+						break;
+
+					case 2:
+						fat.fat_tot_esente += fat.fat_importo_2 + fat.fat_ripartizione_2;
+						fat.fat_totale_imponibile += fat.fat_importo_2 + fat.fat_ripartizione_2;
+						break;
+
+					default:
+						fat.fat_tot_imponibile += fat.fat_importo_2 + fat.fat_ripartizione_2;
+						fat.fat_totale_imponibile += fat.fat_importo_2 + fat.fat_ripartizione_2;
+						break;
+				}
+				fat.fat_tot_netto += fat.fat_importo_2;
+				fat.fat_tot_iva += fat.fat_importo_iva_2;
+
+				// Aggiunto il 27/03/2001 
+				fat.fat_tot_fattura += fat.fat_importo_2;
+				if (fat.fat_scorporo != 0)
+				{
+					double diff;
+
+					fat.fat_tot_merce += Math.Round(fat.fat_imponibile_2 * fat.fat_aliquota_iva_2 / 100.0, dec, MidpointRounding.AwayFromZero);
+					fat.fat_tot_netto += Math.Round(fat.fat_importo_2 * fat.fat_aliquota_iva_2 / 100.0, dec, MidpointRounding.AwayFromZero);
+
+					// Codice Aggiunto il 31/03/2004 Gestione importi a scorporo con terzo dec. = 5
+					diff = fat.fat_tot_merce - fat.fat_tot_netto;
+					fat.fat_tot_merce -= fat.fat_dec_iva_2;
+					if (diff.TestIfZero(2) == true) fat.fat_tot_netto -= fat.fat_dec_iva_2;
+					// Fine 
+				}
+				// Fine Codice Aggiunto   
+
+			} while (false);
+
+			// Quarta Aliquota IVA
+			do
+			{
+				fat.fat_importo_3 = 0.0;
+				if (fat.fat_cod_iva_3 == 0L) break;
+
+				fat.fat_ripartizione_3 += rip_cassa[3];
+
+				fat.fat_tot_merce += fat.fat_imponibile_3.MyFloor(dec);
+
+				if (fat.fat_scorporo != 0)
+				{
+					fat.fat_importo_3 = Math.Round(fat.des_imponibile_ivato_3 - fat.des_imponibile_ivato_3 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					double xxxtot = fat.fat_importo_3;
+					fat.fat_importo_3 = Math.Round(fat.fat_importo_3 / (1 + (fat.fat_aliquota_iva_3 / 100.0)), dec, MidpointRounding.AwayFromZero);
+					double xxxiva = Math.Round(fat.fat_importo_3 * (1 + (fat.fat_aliquota_iva_3 / 100.0)), dec, MidpointRounding.AwayFromZero);
+					xxxiva -= xxxtot;
+					xxxiva = Math.Round(xxxiva, dec, MidpointRounding.AwayFromZero);
+					if (xxxiva.TestIfZero(dec) != true)
+					{
+						fat.fat_dec_iva_3 = xxxiva;
+					}
+				}
+				else
+				{
+					fat.fat_importo_3 = fat.fat_imponibile_3 - fat.fat_imponibile_3 * fat.fat_sconto / 100.0;
+				}
+/*
+	#ifdef BOLLICINE
+				if ((TestIfZero(&fat->rec.vuo_cauzione, dec) == FALSE) && (fat->rec.cod_iva[i] == facile_db_impo.cod_iva_ese))
+				{
+					fat->rec.imponibile[i] += fat->rec.vuo_cauzione;
+					fat->des.imponibile_ivato[i] += fat->rec.vuo_cauzione;
+					fat->rec.importo[i] += fat->rec.vuo_cauzione;
+				}
+	#endif
+*/
+				fat.fat_importo_iva_3 = Math.Round((fat.fat_importo_3 + fat.fat_ripartizione_3) * fat.fat_aliquota_iva_3 / 100.0, dec, MidpointRounding.AwayFromZero);
+
+				//
+				// Codice aggiunto per adeguamento imponibile ed iva con terza cifra decimale = 5 (Es. 11.61/1.20) 
+				//
+				if (fat.fat_scorporo != 0)
+				{
+					fat.fat_importo_iva_3 -= fat.fat_dec_iva_3;
+
+					double val = fat.fat_importo_iva_3 + fat.fat_importo_3;
+					double target = Math.Round(fat.des_imponibile_ivato_3 - fat.des_imponibile_ivato_3 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					val = Math.Round(val - target, 2, MidpointRounding.AwayFromZero);
+					if (val <= 0.0100000000000000000)
+					{
+						fat.fat_importo_iva_3 -= val;
+						fat.fat_dec_iva_3 -= val;
+					}
+				}
+				// Fine Codice Aggiunto
+
+				//******************************************************************
+				// Modificato Arrotondamento il 27/03/2001                        
+				//fat->rec.importo[i]     = MyFloor(fat->rec.importo[i],impo.dec);
+				fat.fat_importo_3 = Math.Round(fat.fat_importo_3, dec, MidpointRounding.AwayFromZero);
+
+				switch (fat.fat_tipo_iva_3)
+				{
+					case 3:
+					case 6:
+						fat.fat_tot_non_imp += fat.fat_importo_3 + fat.fat_ripartizione_3;
+						fat.fat_totale_imponibile += fat.fat_importo_3 + fat.fat_ripartizione_3;
+						break;
+
+					case 4:
+						fat.fat_tot_esclusa += fat.fat_importo_3 + fat.fat_ripartizione_3;
+						fat.fat_totale_imponibile += fat.fat_importo_3 + fat.fat_ripartizione_3;
+						break;
+
+					case 2:
+						fat.fat_tot_esente += fat.fat_importo_3 + fat.fat_ripartizione_3;
+						fat.fat_totale_imponibile += fat.fat_importo_3 + fat.fat_ripartizione_3;
+						break;
+
+					default:
+						fat.fat_tot_imponibile += fat.fat_importo_3 + fat.fat_ripartizione_3;
+						fat.fat_totale_imponibile += fat.fat_importo_3 + fat.fat_ripartizione_3;
+						break;
+				}
+				fat.fat_tot_netto += fat.fat_importo_3;
+				fat.fat_tot_iva += fat.fat_importo_iva_3;
+
+				// Aggiunto il 27/03/2001 
+				fat.fat_tot_fattura += fat.fat_importo_3;
+				if (fat.fat_scorporo != 0)
+				{
+					double diff;
+
+					fat.fat_tot_merce += Math.Round(fat.fat_imponibile_3 * fat.fat_aliquota_iva_3 / 100.0, dec, MidpointRounding.AwayFromZero);
+					fat.fat_tot_netto += Math.Round(fat.fat_importo_3 * fat.fat_aliquota_iva_3 / 100.0, dec, MidpointRounding.AwayFromZero);
+
+					// Codice Aggiunto il 31/03/2004 Gestione importi a scorporo con terzo dec. = 5
+					diff = fat.fat_tot_merce - fat.fat_tot_netto;
+					fat.fat_tot_merce -= fat.fat_dec_iva_3;
+					if (diff.TestIfZero(2) == true) fat.fat_tot_netto -= fat.fat_dec_iva_3;
+					// Fine 
+				}
+				// Fine Codice Aggiunto   
+
+			} while (false);
+			//
+			// Fine Calcolo Totali Iva
+			//
+
 
 			// Codice Aggiunto il 25/05/2006 per evitare che il totale merci sia inferiore al totale netto
 			if ((fat.fat_tot_merce > 0.0) && (fat.fat_tot_merce < fat.fat_tot_netto)) fat.fat_tot_merce = fat.fat_tot_netto;
