@@ -354,6 +354,9 @@ namespace Facile.Models
 		public double fat_tot_tara { get; set; }
 
 
+		// Viene impostata a true per i nuovi documenti che sono editabili fino all'invio
+		public bool fat_editable { get; set; }
+
 		[Ignore]
 		public double des_imponibile_ivato_0 { get; set; }
 		[Ignore]

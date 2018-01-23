@@ -11,7 +11,7 @@ namespace Facile
 	{
 		void OnClickedClienti(object sender, System.EventArgs e)
 		{
-			Navigation.PushAsync(new ClientiBr());
+			Navigation.PushAsync(new ArticoliSearch());
 		}
 
 		async void OnClickedDocumenti(object sender, System.EventArgs e)
