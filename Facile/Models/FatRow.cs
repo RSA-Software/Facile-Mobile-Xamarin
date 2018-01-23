@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using SQLite;
 
 namespace Facile.Models
@@ -21,6 +23,7 @@ namespace Facile.Models
 		public int rig_colli { get; set; }
 		public int rig_iva_inclusa { get; set; }
 		public double rig_coef_mol { get; set; }
+
 		public double rig_qta { get; set; }
 		public double rig_prezzo { get; set; }
 		public double rig_sconto1 { get; set; }

@@ -254,6 +254,18 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_details.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_details.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_details.png" />
+    <AndroidResource Include="Resources\drawable\ic_add_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_add_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_add_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_add_white.png" />
+    <AndroidResource Include="Resources\drawable\ic_delete_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_delete_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_delete_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_delete_white.png" />
+    <AndroidResource Include="Resources\drawable\ic_mode_edit_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_mode_edit_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_mode_edit_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_mode_edit_white.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />

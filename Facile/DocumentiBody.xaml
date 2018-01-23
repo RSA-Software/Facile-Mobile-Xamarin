@@ -6,13 +6,11 @@
     xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
     x:Class="Facile.DocumentiBody">
 
-    <StackLayout>
+    <StackLayout Padding="0,0,0,5">
         <syncfusion:SfDataGrid x:Name="dataGrid" AllowResizingColumn="true" HorizontalOptions="FillAndExpand"  
             AutoGenerateColumns="False"
             AllowSwiping="true"
-            SwipeStarted="OnSwipeStarted"
-            >
-
+            SwipeStarted="OnSwipeStarted">
 
             <syncfusion:SfDataGrid.RightSwipeTemplate>
                 <DataTemplate>
@@ -25,7 +23,7 @@
                         <Image Grid.Column="0" WidthRequest="100" StyleId="0" 
                             BackgroundColor="#009EDA"
                             HorizontalOptions="CenterAndExpand"
-                            Source="ic_alarm.png" >
+                            Source="ic_mode_edit_white.png" >
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnTapEdit" NumberOfTapsRequired="1" />
                             </Image.GestureRecognizers>
@@ -34,7 +32,7 @@
                         <Image Grid.Column="1" WidthRequest="100" StyleId="1"
                             BackgroundColor="#DC595F"
                             HorizontalOptions="CenterAndExpand"
-                            Source="ic_details.png" >
+                            Source="ic_delete_white.png" >
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnTapDelete" NumberOfTapsRequired="1" />
                             </Image.GestureRecognizers>
@@ -42,6 +40,26 @@
                     </Grid>
                 </DataTemplate>
             </syncfusion:SfDataGrid.RightSwipeTemplate>
+            
+            <syncfusion:SfDataGrid.LeftSwipeTemplate>
+                <DataTemplate>
+                    <Grid ColumnSpacing="0" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.Column="0" WidthRequest="100" StyleId="0" 
+                            BackgroundColor="#009EDA"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="ic_add_white.png" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTapAdd" NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                            
+                        </Image>
+                    </Grid>
+                </DataTemplate>
+            </syncfusion:SfDataGrid.LeftSwipeTemplate>
             
             <syncfusion:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
 
@@ -113,6 +131,6 @@
             </syncfusion:SfDataGrid.Columns>
         </syncfusion:SfDataGrid>
 
-        <Button Text=" Aggiungi " HorizontalOptions="Center" Image="ic_alarm.png" Clicked="OnAddClicked" />
+        <Button Text=" Aggiungi " HorizontalOptions="Center" Image="ic_add_white.png" TextColor="White" BackgroundColor="#009EDA" Clicked="OnAddClicked" />
     </StackLayout>
 </ContentPage>

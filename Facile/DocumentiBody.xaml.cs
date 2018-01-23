@@ -104,5 +104,24 @@ namespace Facile
 			dataGrid.ResetSwipeOffset();
 		}
 
+		private async void OnTapAdd(object sender, EventArgs args)
+		{
+			if (swipeIndex > 0 && rigCollection != null)
+			{
+				var rig = rigCollection[swipeIndex - 1];
+				rig.rig_qta += 1;
+				await rig.RecalcAsync();
+				if (await dbcon_.UpdateAsync(rig) == 1)
+				{
+					rigCollection.Insert(swipeIndex - 1, rig);
+					rigCollection.RemoveAt(swipeIndex);
+				}
+				else
+				{
+					rig.rig_qta -= 1;
+					await rig.RecalcAsync();
+				}
+			}
+		}
 	}
 }

@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace Facile.Extension
 {
-	public static class FatRowExtensions
+	public static class FatRowExtensions 
 	{
 		public async static Task<double> RecalcAsync(this FatRow rig)
 		{
