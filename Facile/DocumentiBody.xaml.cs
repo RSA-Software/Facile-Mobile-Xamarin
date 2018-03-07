@@ -54,9 +54,11 @@ namespace Facile
 			base.OnAppearing();
 		}
 
-		void DataGrid_GridLongPressed(object sender, Syncfusion.SfDataGrid.XForms.GridLongPressedEventArgs e)
+		async void DataGrid_GridLongPressed(object sender, Syncfusion.SfDataGrid.XForms.GridLongPressedEventArgs e)
 		{
-			DisplayAlert("Click", "Long pressed", "ok");
+			var rig = e.RowData as FatRow;
+			var page = new DocumentRow(ref rig);
+			await Navigation.PushAsync(page);
 		}
 
 		void OnAddClicked(object sender, System.EventArgs e)

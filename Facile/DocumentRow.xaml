@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:syncfusion="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+    xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+    x:Class="Facile.DocumentRow">
+
+    <ScrollView>
+    <StackLayout>
+        <StackLayout Padding="7,0,7,0" >
+            <Label Text="Articolo" HorizontalOptions="FillAndExpand" FontAttributes="Bold" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" TextColor="Navy">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer   Tapped="OnArticoloTapped" NumberOfTapsRequired="2" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label x:Name="m_art" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" FontAttributes="Bold" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer   Tapped="OnArticoloTapped" NumberOfTapsRequired="2" />
+                </Label.GestureRecognizers>
+            </Label>
+                
+            <Label x:Name="m_desc" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer   Tapped="OnArticoloTapped" NumberOfTapsRequired="2" />
+                </Label.GestureRecognizers>
+            </Label>
+
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Padding="7,0,7,0" >
+            <Label Text="Quantità" WidthRequest="100" VerticalTextAlignment="Center"/>
+            <numeric:SfNumericUpDown x:Name="m_quantita" WidthRequest="200" TextAlignment="End" FormatString="N" TextColor="Black" SpinButtonAlignment="Both" ValueChanged="OnaChangedQta"/>
+         </StackLayout>
+        
+        <StackLayout Orientation="Horizontal" Padding="7,0,7,0" >
+            <Label Text="Prezzo" WidthRequest="100" VerticalTextAlignment="Center"/>
+            <numeric:SfNumericUpDown x:Name="m_prezzo" WidthRequest="200" TextAlignment="End" FormatString="N" MaximumDecimalDigits="4" TextColor="Black"  SpinButtonAlignment="Both" ValueChanged="OnValueChanged"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Padding="7,0,7,0">
+            <Label Text="1° Sconto" WidthRequest="100" VerticalTextAlignment="Center"/>
+            <numeric:SfNumericUpDown x:Name="m_sco1" WidthRequest="200" TextAlignment="End" FormatString="N" TextColor="Black" SpinButtonAlignment="Both" ValueChanged="OnValueChanged" />
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal" Padding="7,0,7,0">
+            <Label Text="2° Sconto" WidthRequest="100" VerticalTextAlignment="Center"/>
+            <numeric:SfNumericUpDown x:Name="m_sco2" WidthRequest="200" TextAlignment="End" FormatString="N" TextColor="Black" SpinButtonAlignment="Both" ValueChanged="OnValueChanged"/>
+        </StackLayout>
+            
+        <StackLayout Orientation="Horizontal" Padding="7,0,7,0">                
+            <Label Text="3° Sconto" WidthRequest="100" VerticalTextAlignment="Center"/>
+            <numeric:SfNumericUpDown x:Name="m_sco3" WidthRequest="200" TextAlignment="End" FormatString="N" TextColor="Black" SpinButtonAlignment="Both" ValueChanged="OnValueChanged"/>
+         </StackLayout>
+        
+        <StackLayout Orientation="Horizontal" Padding="7,0,7,0" >
+            <Label Text="Totale" WidthRequest="100" VerticalTextAlignment="Center" HeightRequest="50"/>
+            <syncfusion:SfNumericTextBox  x:Name="m_totale" WidthRequest="200" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Red" FontAttributes="Bold" IsEnabled="false" HeightRequest="50"/>
+         </StackLayout>
+                    
+         <StackLayout Orientation="Horizontal" Padding="7,0,7,0" >
+            <Label Text="Sostituzione" VerticalTextAlignment="Center" WidthRequest="100" HeightRequest="40"/>
+            <Switch IsToggled="false" x:Name="m_sostituzione" WidthRequest="100" HeightRequest="40" Toggled="OnSwitchToggled"/>
+            <Label Text="Reso" VerticalTextAlignment="Center" HeightRequest="40"/>
+            <Switch IsToggled="false" x:Name="m_reso" HeightRequest="40" Toggled="OnSwitchToggled"/>
+        </StackLayout>
+                    
+
+        <Button Text="Salva" WidthRequest="150" HeightRequest="80" HorizontalOptions="Center"/>
+    </StackLayout>
+    </ScrollView>
+    
+</ContentPage>
