@@ -50,7 +50,7 @@ namespace Facile.Extension
 				}
 				catch (System.Exception)
 				{
-					
+					// 
 				}
 			}
 			totale = Math.Round((rig.rig_qta - rig.rig_tara - rig.rig_scomerce) * rig.rig_coef_mol * rig.rig_coef_mol2 * (rig.rig_prezzo + rig.rig_spese) - rig.rig_scovalore, dec, MidpointRounding.AwayFromZero);

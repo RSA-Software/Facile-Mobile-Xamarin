@@ -57,14 +57,22 @@ namespace Facile
 		async void DataGrid_GridLongPressed(object sender, Syncfusion.SfDataGrid.XForms.GridLongPressedEventArgs e)
 		{
 			var rig = e.RowData as FatRow;
-			var page = new DocumentRow(ref rig);
-			await Navigation.PushAsync(page);
+			var page = new DocumentRow(ref rig, false);
+			await this.Navigation.PushModalAsync(page);
 		}
 
-		void OnAddClicked(object sender, System.EventArgs e)
+		async void OnAddClicked(object sender, System.EventArgs e)
 		{
-			DisplayAlert("Click","Aggiungi cliccato","ok");
+			var ditta = await dbcon_.QueryAsync<Ditte>("SELECT * FROM impostazioni LIMIT 1");
 
+			var rig = new FatRow();
+			rig.rig_tipo = doc_.fat_tipo;
+			rig.rig_n_doc = doc_.fat_n_doc;
+			if (ditta.Count > 0) rig.rig_iva_inclusa = ditta[0].impo_iva_inc;
+			rig.rig_coef_mol = 1;
+			rig.rig_coef_mol2 = 1;
+			var page = new DocumentRow(ref rig, true);
+			await this.Navigation.PushModalAsync(page);
 		}
 
 		//

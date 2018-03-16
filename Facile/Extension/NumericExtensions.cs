@@ -3,6 +3,7 @@ namespace Facile.Extension
 {
 	public static class NumericExtensions
 	{
+		public const double EPSILON = 0.0000000000000000001;
 
 		public static double MyFloor(this double num, short dec)
 		{
@@ -118,23 +119,13 @@ namespace Facile.Extension
 			string str = String.Format("{0:0.00000000}", val);
 			string buf = str.Substring(0, str.Length - (8 - dec));
 
-			if (buf.Substring(0, dec + 2) != "0.0000000000" && buf.Substring(0, dec + 3) != "-0.0000000000")
+			var str1 = "0.0000000000";
+			var str2 = "-0.0000000000";
+			if (buf != str1.Substring(0, dec + 2) && buf != str2.Substring(0, dec + 3))
 			{
 				val = Convert.ToDouble(buf);
 				return (false);
 			}
-			//sprintf_s(buffer, sizeof(buffer), "%.8f", *val);
-			//buffer[strlen(buffer) - (8 - dec)] = '\x0';
-			//if ((strncmp(buffer, "0.0000000000", dec + 2) != 0) && (strncmp(buffer, "-0.0000000000", dec + 3) != 0))
-			//{
-			//	*val = atof(buffer);
-			//	return (FALSE);
-			//}
-			//*val = 0.0;
-
-
-
-
 			return (true);
 		}
 	}
