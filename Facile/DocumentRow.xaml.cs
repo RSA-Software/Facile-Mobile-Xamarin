@@ -16,19 +16,43 @@ namespace Facile
 	{
 		protected FatRow rig_;
 		private bool change_;
-		private bool nuovo_;
+		private readonly bool nuovo_;
+		private bool editable_;
 		private bool first_;
 		private readonly SQLiteAsyncConnection dbcon_;
 
-		public DocumentRow(ref FatRow rig, bool nuovo = true)
+		public DocumentRow(ref FatRow rig, bool nuovo = true, bool editable = true)
 		{
 			rig_ = rig;
 			change_ = false;
 			nuovo_ = nuovo;
 			first_ = nuovo;
+			editable_ = editable;
 			InitializeComponent();
 			NavigationPage.SetHasNavigationBar(this, false);
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
+
+			if (nuovo_)
+			{ 
+				m_elimina.IsEnabled = false;
+				m_elimina.IsVisible = false;
+			}
+
+			//
+			// Attenzione : da rimuovere
+			//
+			editable_ = true;
+			// fine
+
+
+			if (!editable_)
+			{
+				m_salva.IsEnabled = false;
+				m_elimina.IsEnabled = false;
+
+				m_salva.IsVisible = false;
+				m_elimina.IsVisible = false;
+			}
 
 			m_quantita.Culture = new CultureInfo("it-IT");
 			m_prezzo.Culture = new CultureInfo("it-IT");
@@ -168,9 +192,123 @@ namespace Facile
 			await Navigation.PopModalAsync();
 		}
 
+		async void OnClickedElimina(object sender, System.EventArgs e)
+		{
+			if (editable_ && !nuovo_ && await DisplayAlert("Attenzione!", "Confermi la cancellazione della riga?", "Si", "No"))
+			{
+
+				if (await dbcon_.DeleteAsync(rig_) != 0)
+					await Navigation.PopModalAsync();
+				else
+					await DisplayAlert("Attenzione!", "Non è stato possibile eliminare la riga", "Ok");
+			}
+		}
+
 		void OnClickedEsci(object sender, System.EventArgs e)
 		{
 			Navigation.PopModalAsync();
 		}
+
+
+		async void OnQtaDownClicked(object sender, System.EventArgs e)
+		{
+			change_ = true;
+			GetField();
+			rig_.rig_qta -= 1;
+			await rig_.RecalcAsync();
+			SetField();
+			change_ = false;
+		}
+
+		async void OnQtaUpClicked(object sender, System.EventArgs e)
+		{
+			change_ = true;
+			GetField();
+			rig_.rig_qta += 1;
+			await rig_.RecalcAsync();
+			SetField();
+			change_ = false;
+		}
+
+		async void OnPriceDownClicked(object sender, System.EventArgs e)
+		{
+			change_ = true;
+			GetField();
+			if ((rig_.rig_prezzo - 0.10) >= 0.0) rig_.rig_prezzo -= 0.10;
+			await rig_.RecalcAsync();
+			SetField();
+			change_ = false;
+		}
+
+		async void OnPriceUpClicked(object sender, System.EventArgs e)
+		{
+			change_ = true;
+			GetField();
+			rig_.rig_prezzo += 0.10;
+			await rig_.RecalcAsync();
+			SetField();
+			change_ = false;
+		}
+
+		async void OnSco1DownClicked(object sender, System.EventArgs e)
+		{
+			change_ = true;
+			GetField();
+			if ((rig_.rig_sconto1 - 1) >= 0.0) rig_.rig_sconto1 -= 1;
+			await rig_.RecalcAsync();
+			SetField();
+			change_ = false;
+		}
+
+		async void OnSco1UpClicked(object sender, System.EventArgs e)
+		{
+			change_ = true;
+			GetField();
+			rig_.rig_sconto1 += 1;
+			await rig_.RecalcAsync();
+			SetField();
+			change_ = false;
+		}
+
+		async void OnSco2DownClicked(object sender, System.EventArgs e)
+		{
+			change_ = true;
+			GetField();
+			if ((rig_.rig_sconto2 - 1) >= 0.0) rig_.rig_sconto2 -= 1;
+			await rig_.RecalcAsync();
+			SetField();
+			change_ = false;
+		}
+
+		async void OnSco2UpClicked(object sender, System.EventArgs e)
+		{
+			change_ = true;
+			GetField();
+			rig_.rig_sconto2 += 1;
+			await rig_.RecalcAsync();
+			SetField();
+			change_ = false;
+		}
+
+		async void OnSco3DownClicked(object sender, System.EventArgs e)
+		{
+			change_ = true;
+			GetField();
+			if ((rig_.rig_sconto3 - 1) >= 0.0) rig_.rig_sconto3 -= 1;
+			await rig_.RecalcAsync();
+			SetField();
+			change_ = false;
+		}
+
+		async void OnSco3UpClicked(object sender, System.EventArgs e)
+		{
+			change_ = true;
+			GetField();
+			rig_.rig_sconto3 += 1;
+			await rig_.RecalcAsync();
+			SetField();
+			change_ = false;
+		}
+
 	}
 }

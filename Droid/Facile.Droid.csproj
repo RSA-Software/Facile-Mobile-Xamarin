@@ -275,6 +275,22 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_mode_edit_white.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_mode_edit_white.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_mode_edit_white.png" />
+    <AndroidResource Include="Resources\drawable\ic_done_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_done_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_done_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_done_white.png" />
+    <AndroidResource Include="Resources\drawable\ic_navigate_before_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_navigate_before_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_navigate_before_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_navigate_before_white.png" />
+    <AndroidResource Include="Resources\drawable\ic_arrow_drop_up_black.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_drop_up_black.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_drop_up_black.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_drop_up_black.png" />
+    <AndroidResource Include="Resources\drawable\ic_arrow_drop_down_black.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_drop_down_black.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_drop_down_black.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_drop_down_black.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />

@@ -31,32 +31,42 @@
 
         <StackLayout Orientation="Horizontal" Padding="7,0,7,0" >
             <Label Text="Quantità" WidthRequest="100" VerticalTextAlignment="Center"/>
-            <syncfusion:SfNumericTextBox x:Name="m_quantita" WidthRequest="200" TextAlignment="End" MaximumNumberDecimalDigits="3" TextColor="Black" FormatString="N" ValueChanged="OnValueChanged" ValueChangeMode="OnLostFocus"/>
+            <Button Image="ic_arrow_drop_down_black.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnQtaDownClicked"/>
+            <syncfusion:SfNumericTextBox x:Name="m_quantita" WidthRequest="150" TextAlignment="End" MaximumNumberDecimalDigits="3" TextColor="Black" FormatString="N" ValueChanged="OnValueChanged" ValueChangeMode="OnLostFocus"/>
+            <Button Image="ic_arrow_drop_up_black.png" WidthRequest="30"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnQtaUpClicked"/>
          </StackLayout>
         
         <StackLayout Orientation="Horizontal" Padding="7,0,7,0" >
             <Label Text="Prezzo" WidthRequest="100" VerticalTextAlignment="Center"/>
-            <syncfusion:SfNumericTextBox x:Name="m_prezzo" WidthRequest="200" TextAlignment="End"  TextColor="Black" MaximumNumberDecimalDigits="4" FormatString="N" ValueChanged="OnValueChanged" ValueChangeMode="OnLostFocus"/>
+            <Button Image="ic_arrow_drop_down_black.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnPriceDownClicked"/>
+            <syncfusion:SfNumericTextBox x:Name="m_prezzo" WidthRequest="150" TextAlignment="End"  TextColor="Black" MaximumNumberDecimalDigits="4" FormatString="N" ValueChanged="OnValueChanged" ValueChangeMode="OnLostFocus"/>
+            <Button Image="ic_arrow_drop_up_black.png" WidthRequest="30"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnPriceUpClicked"/>
         </StackLayout>
 
         <StackLayout Orientation="Horizontal" Padding="7,0,7,0">
             <Label Text="1° Sconto" WidthRequest="100" VerticalTextAlignment="Center"/>
-            <syncfusion:SfNumericTextBox x:Name="m_sco1" WidthRequest="200" TextAlignment="End" TextColor="Black" MaximumNumberDecimalDigits="2" FormatString="N" ValueChanged="OnValueChanged" ValueChangeMode="OnLostFocus"/>
+            <Button Image="ic_arrow_drop_down_black.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnSco1DownClicked"/>
+            <syncfusion:SfNumericTextBox x:Name="m_sco1" WidthRequest="150" TextAlignment="End" TextColor="Black" MaximumNumberDecimalDigits="2" FormatString="N" ValueChanged="OnValueChanged" ValueChangeMode="OnLostFocus"/>
+            <Button Image="ic_arrow_drop_up_black.png" WidthRequest="30"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnSco1UpClicked"/>
         </StackLayout>
         
         <StackLayout Orientation="Horizontal" Padding="7,0,7,0">
             <Label Text="2° Sconto" WidthRequest="100" VerticalTextAlignment="Center"/>
-            <syncfusion:SfNumericTextBox x:Name="m_sco2" WidthRequest="200" TextAlignment="End" TextColor="Black" MaximumNumberDecimalDigits="2" FormatString="N" ValueChanged="OnValueChanged" ValueChangeMode="OnLostFocus"/>
+            <Button Image="ic_arrow_drop_down_black.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnSco2DownClicked"/>
+            <syncfusion:SfNumericTextBox x:Name="m_sco2" WidthRequest="150" TextAlignment="End" TextColor="Black" MaximumNumberDecimalDigits="2" FormatString="N" ValueChanged="OnValueChanged" ValueChangeMode="OnLostFocus"/>
+            <Button Image="ic_arrow_drop_up_black.png" WidthRequest="30"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnSco2UpClicked"/>
         </StackLayout>
             
         <StackLayout Orientation="Horizontal" Padding="7,0,7,0">                
             <Label Text="3° Sconto" WidthRequest="100" VerticalTextAlignment="Center"/>
-            <syncfusion:SfNumericTextBox x:Name="m_sco3" WidthRequest="200" TextAlignment="End" TextColor="Black" MaximumNumberDecimalDigits="2" FormatString="N" ValueChanged="OnValueChanged" ValueChangeMode="OnLostFocus"/>
+            <Button Image="ic_arrow_drop_down_black.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnSco3DownClicked"/>
+            <syncfusion:SfNumericTextBox x:Name="m_sco3" WidthRequest="150" TextAlignment="End" TextColor="Black" MaximumNumberDecimalDigits="2" FormatString="N" ValueChanged="OnValueChanged" ValueChangeMode="OnLostFocus"/>
+            <Button Image="ic_arrow_drop_up_black.png" WidthRequest="30"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnSco3UpClicked"/>
          </StackLayout>
         
         <StackLayout Orientation="Horizontal" Padding="7,0,7,0" >
             <Label Text="Totale" WidthRequest="100" VerticalTextAlignment="Center" HeightRequest="50"/>
-            <syncfusion:SfNumericTextBox  x:Name="m_totale" WidthRequest="200" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Red" FontAttributes="Bold" IsEnabled="false" HeightRequest="50"/>
+            <syncfusion:SfNumericTextBox  x:Name="m_totale" WidthRequest="180" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Red" FontAttributes="Bold" IsEnabled="false" HeightRequest="50"/>
          </StackLayout>
                     
          <StackLayout Orientation="Horizontal" Padding="7,0,7,0" >
@@ -64,19 +74,11 @@
             <Switch IsToggled="false" x:Name="m_sostituzione" WidthRequest="100" HeightRequest="40" Toggled="OnSwitchToggled"/>
         </StackLayout>
 
-        <Grid>  
-            <Grid.RowDefinitions>  
-                <RowDefinition Height="Auto" />  
-            </Grid.RowDefinitions>  
-  
-            <Grid.ColumnDefinitions>  
-                <ColumnDefinition Width="*" />  
-                <ColumnDefinition Width="*" />  
-            </Grid.ColumnDefinitions>  
-
-            <Button Text="Salva" Grid.Row="0" Grid.Column="0" WidthRequest="150" HeightRequest="80" HorizontalOptions="Center" Clicked="OnClickedSalva"/>
-            <Button Text="Esci"  Grid.Row="0" Grid.Column="1" WidthRequest="150" HeightRequest="80" HorizontalOptions="Center" Clicked="OnClickedEsci"/>
-       </Grid>  
+        <StackLayout Orientation="Horizontal" Padding="7,0,7,0">  
+            <Button x:Name="m_salva" Image="ic_done_white.png"  WidthRequest="100" HeightRequest="65" HorizontalOptions="CenterAndExpand"  TextColor="White" BackgroundColor="#009EDA" Clicked="OnClickedSalva"/>
+            <Button x:Name="m_elimina" Image="ic_delete_white.png" WidthRequest="100" HeightRequest="65" HorizontalOptions="CenterAndExpand" TextColor="White" BackgroundColor="Red" Clicked="OnClickedElimina"/>
+            <Button x:Name="m_esci" Image="ic_navigate_before_white.png" WidthRequest="100" HeightRequest="65" HorizontalOptions="CenterAndExpand" TextColor="White" BackgroundColor="#009EDA" Clicked="OnClickedEsci"/>
+       </StackLayout>  
 
     </StackLayout>
     </ScrollView>
