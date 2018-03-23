@@ -94,6 +94,6 @@ namespace Facile
 			listView.IsBusy = false;
 		}
 
-		public SfListView CliList { get { return listView; } }
+		public SfListView AnaList { get { return listView; } }
 	}
 }

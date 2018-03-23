@@ -291,6 +291,10 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_drop_down_black.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_drop_down_black.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_drop_down_black.png" />
+    <AndroidResource Include="Resources\drawable\ic_search_black.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_search_black.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_search_black.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_search_black.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />

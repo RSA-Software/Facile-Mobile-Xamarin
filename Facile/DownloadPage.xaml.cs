@@ -146,6 +146,37 @@ namespace Facile
 
 			return (true);
 		}
+
+		async void DownLoadImagesClicked(object sender, System.EventArgs e)
+		{
+			String remoteServer = "ftp://www.facile2013.it/images/";
+			IFolder rootFolder = FileSystem.Current.LocalStorage;
+			IFolder imagesFolder = await rootFolder.CreateFolderAsync("images", CreationCollisionOption.OpenIfExists);
+
+			Desc.Text = "Otteniamo la lista dei files... ";
+			var ftp = DependencyService.Get<IFtpWebRequest>();
+			var files = await ftp.ListDirectory("demo2017", "demo2017", remoteServer);
+
+			if (files != null && files.Count > 0)
+			{
+				int idx = 0;
+				foreach (var file in files)
+				{
+					String remoteFile = remoteServer + file;
+					String localFile = imagesFolder.Path + "/" + file;
+
+					idx++;
+					Desc.Text = string.Format("Downloading file {0} di {1} - {2}", idx ,files.Count, file);
+					var result = await ftp.DownloadFile("demo2017", "demo2017", remoteFile, localFile);
+					if (!result.StartsWith("221", StringComparison.CurrentCulture))
+					{
+						break;
+					}
+				}
+			}
+			Desc.Text = "";
+		}
+
 		/*
 		public async Task<bool> ImportTableAsync<T>(string tblName)
 		{

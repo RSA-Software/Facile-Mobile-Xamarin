@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Threading.Tasks;
 using Facile.Extension;
 using Facile.Interfaces;
 using Facile.Models;
+using PCLStorage;
 using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -17,20 +19,23 @@ namespace Facile
 		protected FatRow rig_;
 		private bool change_;
 		private readonly bool nuovo_;
-		private bool editable_;
 		private bool first_;
+		private bool editable_;
 		private readonly SQLiteAsyncConnection dbcon_;
 
 		public DocumentRow(ref FatRow rig, bool nuovo = true, bool editable = true)
 		{
 			rig_ = rig;
 			change_ = false;
+			first_ = true;
 			nuovo_ = nuovo;
-			first_ = nuovo;
 			editable_ = editable;
 			InitializeComponent();
 			NavigationPage.SetHasNavigationBar(this, false);
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
+
+			m_image.Source = null;
+			if (Device.RuntimePlatform == Device.iOS) Padding = new Thickness(0, 30, 0, 0);
 
 			if (nuovo_)
 			{ 
@@ -44,14 +49,22 @@ namespace Facile
 			editable_ = true;
 			// fine
 
-
 			if (!editable_)
 			{
+				m_art.IsEnabled = false;
+				m_search.IsEnabled = false;
+
 				m_salva.IsEnabled = false;
 				m_elimina.IsEnabled = false;
 
 				m_salva.IsVisible = false;
 				m_elimina.IsVisible = false;
+			}
+
+			if (Device.RuntimePlatform == Device.Android)
+			{
+				m_esci.IsEnabled = false;
+				m_esci.IsVisible = false;
 			}
 
 			m_quantita.Culture = new CultureInfo("it-IT");
@@ -63,15 +76,39 @@ namespace Facile
 			SetField();
 		}
 
-		protected override async void OnAppearing()
+		protected async override void OnAppearing()
 		{
-			if (nuovo_ && first_)
-			{
-				await OnArticoloTapped(this, new EventArgs());
+			if (first_)
+			{ 
+				await LoadImage();
 				first_ = false;
-			}	
+			}
 		}
 
+		protected async Task LoadImage ()
+		{
+			if (!string.IsNullOrWhiteSpace(rig_.rig_art))
+			{
+				IFolder rootFolder = FileSystem.Current.LocalStorage;
+				IFolder folder = (PCLStorage.IFolder)(await FileSystem.Current.GetFolderFromPathAsync(rootFolder.Path + "/images/"));
+				String fileName = rig_.rig_art.Trim() + "_0.PNG";
+
+				ExistenceCheckResult status = await folder.CheckExistsAsync(fileName);
+				if (status == ExistenceCheckResult.FileExists)
+				{
+					m_image.Source = rootFolder.Path + "/images/" + fileName;
+					return;
+				}
+				fileName = rig_.rig_art.Trim() + "_0.JPG";
+				status = await folder.CheckExistsAsync(fileName);
+				if (status == ExistenceCheckResult.FileExists)
+				{
+					m_image.Source = rootFolder.Path + "/images/" + fileName;
+					return;
+				}
+			}
+			m_image.Source = null;
+		}
 
 		public void SetField()
 		{
@@ -131,10 +168,11 @@ namespace Facile
 			}
 		}
 
-		private async Task OnArticoloTapped(object sender, System.EventArgs e)
+		async void OnSearchClicked(object sender, System.EventArgs e)
 		{
+			string old_art = rig_.rig_art;
 			var page = new ArticoliSearch();
-			page.CliList.ItemDoubleTapped += async (source, args) =>
+			page.AnaList.ItemDoubleTapped += async (source, args) =>
 			{
 				change_ = true;
 				Artanag ana = (Artanag)args.ItemData;
@@ -158,7 +196,12 @@ namespace Facile
 					await rig_.RecalcAsync();
 				}
 				await Navigation.PopModalAsync();
+				if (string.Compare(rig_.rig_art,old_art) != 0)
+				{
+					await LoadImage();
+				}
 				SetField();
+				m_quantita.Focus();
 				change_ = false;
 			};
 			await Navigation.PushModalAsync(page);
@@ -209,6 +252,72 @@ namespace Facile
 			Navigation.PopModalAsync();
 		}
 
+		async void OnArtUnfocused(object sender, Xamarin.Forms.FocusEventArgs e)
+		{
+			var codice = ((Entry)sender).Text.Trim().ToUpper();
+			if (string.Compare(codice, rig_.rig_art) == 0) return;
+
+			var sql = string.Format("SELECT * FROM artanag WHERE ana_codice = {0} LIMIT 1", codice.SqlQuote(false));
+			var anaList = await dbcon_.QueryAsync<Artanag>(sql);
+
+			if (anaList.Count == 0)  // Cerchiamo tra i codici a Barre
+			{
+				//sql = string.Format("SELECT * FROM artanag WHERE ana_codice = {0} LIMIT 1", input.Text.SqlQuote(false));
+
+
+			}
+			if (anaList.Count > 0)
+			{
+				change_ = true;
+				rig_.rig_art = anaList[0].ana_codice;
+				rig_.rig_newdes = (anaList[0].ana_desc1 + " " + anaList[0].ana_desc2).Trim();
+				rig_.rig_iva = anaList[0].ana_iva;
+				rig_.rig_mis = anaList[0].ana_mis;
+				rig_.rig_peso = anaList[0].ana_peso;
+				rig_.rig_peso_mis = anaList[0].ana_peso_mis;
+				if (Math.Abs(rig_.rig_qta) < NumericExtensions.EPSILON) rig_.rig_qta = 1;
+				sql = string.Format("SELECT * FROM listini1 WHERE lis_codice = {0} AND lis_art = {1} LIMIT 1", 1, anaList[0].ana_codice.SqlQuote(false));
+				var listini = await dbcon_.QueryAsync<Listini>(sql);
+
+				if (listini.Count > 0)
+				{
+					rig_.rig_prezzo = listini[0].lis_prezzo;
+					rig_.rig_sconto1 = listini[0].lis_sco1;
+					rig_.rig_sconto2 = listini[0].lis_sco2;
+					rig_.rig_sconto3 = listini[0].lis_sco3;
+				}
+				else
+				{
+					rig_.rig_prezzo = 0;
+					rig_.rig_sconto1 = 0;
+					rig_.rig_sconto2 = 0;
+					rig_.rig_sconto3 = 0;
+				}
+				await rig_.RecalcAsync();
+				await LoadImage();
+				SetField();
+				change_ = false;
+			}
+			else
+			{
+				change_ = true;
+				rig_.rig_art = string.Empty;
+				rig_.rig_newdes = string.Empty;
+				rig_.rig_iva = 0;
+				rig_.rig_mis = 0;
+				rig_.rig_peso = 0;
+				rig_.rig_peso_mis = string.Empty;
+				rig_.rig_qta = 1;
+				rig_.rig_prezzo = 0;
+				rig_.rig_sconto1 = 0;
+				rig_.rig_sconto2 = 0;
+				rig_.rig_sconto3 = 0;
+				await rig_.RecalcAsync();
+				await LoadImage();
+				SetField();
+				change_ = false;
+			}
+		}
 
 		async void OnQtaDownClicked(object sender, System.EventArgs e)
 		{

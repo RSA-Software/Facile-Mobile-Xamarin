@@ -252,12 +252,15 @@
     <BundleResource Include="Resources\ic_navigate_before_white.png" />
     <BundleResource Include="Resources\ic_navigate_before_white%402x.png" />
     <BundleResource Include="Resources\ic_navigate_before_white%403x.png" />
-    <BundleResource Include="Resources\ic_arrow_drop_up.png" />
-    <BundleResource Include="Resources\ic_arrow_drop_up%402x.png" />
-    <BundleResource Include="Resources\ic_arrow_drop_up%403x.png" />
-    <BundleResource Include="Resources\ic_arrow_drop_down.png" />
-    <BundleResource Include="Resources\ic_arrow_drop_down%402x.png" />
-    <BundleResource Include="Resources\ic_arrow_drop_down%403x.png" />
+    <BundleResource Include="Resources\ic_arrow_drop_up_black.png" />
+    <BundleResource Include="Resources\ic_arrow_drop_up_black%402x.png" />
+    <BundleResource Include="Resources\ic_arrow_drop_up_black%403x.png" />
+    <BundleResource Include="Resources\ic_arrow_drop_down_black.png" />
+    <BundleResource Include="Resources\ic_arrow_drop_down_black%402x.png" />
+    <BundleResource Include="Resources\ic_arrow_drop_down_black%403x.png" />
+    <BundleResource Include="Resources\ic_search_black.png" />
+    <BundleResource Include="Resources\ic_search_black%402x.png" />
+    <BundleResource Include="Resources\ic_search_black%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />

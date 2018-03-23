@@ -14,10 +14,13 @@ namespace Facile
 			Navigation.PushAsync(new ArticoliSearch());
 		}
 
-		async void OnClickedDocumenti(object sender, System.EventArgs e)
+
+		async void OnClickedOrdini(object sender, System.EventArgs e)
 		{
-			await Navigation.PushAsync(new PagamentiBr());
+			await Navigation.PushAsync(new FatturePage(TipoDocumento.TIPO_ORD));
 		}
+
+
 
 		async void OnClickedCarrello(object sender, System.EventArgs e)
 		{

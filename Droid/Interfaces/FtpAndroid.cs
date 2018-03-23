@@ -4,6 +4,7 @@ using System.Net;
 using Facile.Interfaces;
 using Facile.Droid.Interfaces;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 [assembly: Xamarin.Forms.Dependency(typeof(FTP))] //You need to put this on iOS/droid class or uwp/etc if you wrote
 namespace Facile.Droid.Interfaces
@@ -64,7 +65,6 @@ namespace Facile.Droid.Interfaces
 					FtpWebRequest req = (FtpWebRequest)WebRequest.Create(ftpSourceFilePath);
 					req.Method = WebRequestMethods.Ftp.DownloadFile;
 					req.Proxy = null;
-					req.Method = WebRequestMethods.Ftp.DownloadFile;
 					req.Credentials = new NetworkCredential(userName, password);
 					req.UseBinary = true;
 					req.UsePassive = true;
@@ -91,5 +91,46 @@ namespace Facile.Droid.Interfaces
 				}
 			});
 		}
+
+		public async Task<List<string>> ListDirectory(string userName, string password, string ftpServer)
+		{
+			return await Task.Run(() =>
+			{
+				List<string> files = new List<string>();
+
+				try
+				{
+					//Create FTP request
+					FtpWebRequest req = (FtpWebRequest)WebRequest.Create(ftpServer);
+					req.Method = WebRequestMethods.Ftp.ListDirectory;
+					req.Credentials = new NetworkCredential(userName, password);
+					req.UsePassive = true;
+					req.UseBinary = true;
+					req.KeepAlive = false;
+
+					FtpWebResponse response = (FtpWebResponse)req.GetResponse();
+					Stream responseStream = response.GetResponseStream();
+					StreamReader reader = new StreamReader(responseStream);
+
+					while (!reader.EndOfStream)
+					{
+						//Application.DoEvents();
+						files.Add(reader.ReadLine());
+					}
+
+					//Clean-up
+					reader.Close();
+					responseStream.Close(); //redundant
+					response.Close();
+
+					return files;
+				}
+				catch (Exception)
+				{
+					return null;
+				}
+			});
+		}
+
 	}
 }

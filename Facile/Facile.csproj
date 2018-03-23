@@ -90,6 +90,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FatturePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -184,6 +188,9 @@
     </Compile>
     <Compile Include="DocumentRow.xaml.cs">
       <DependentUpon>DocumentRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FatturePage.xaml.cs">
+      <DependentUpon>FatturePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

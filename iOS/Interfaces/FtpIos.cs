@@ -6,6 +6,7 @@ using UIKit;
 using Facile.iOS.Interfaces;
 using Facile.Interfaces;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 [assembly: Xamarin.Forms.Dependency(typeof(FTP))]
 namespace Facile.iOS.Interfaces
@@ -90,6 +91,46 @@ namespace Facile.iOS.Interfaces
 				catch (Exception err)
 				{
 					return err.ToString();
+				}
+			});
+		}
+
+		public async Task<List<string>> ListDirectory(string userName, string password, string ftpFilePath)
+		{
+			return await Task.Run(() =>
+			{
+				List<string> files = new List<string>();
+
+				try
+				{
+					//Create FTP request
+					FtpWebRequest req = (FtpWebRequest)WebRequest.Create(ftpFilePath);
+
+					req.Method = WebRequestMethods.Ftp.ListDirectory;
+					req.Credentials = new NetworkCredential(userName, password);
+					req.UsePassive = true;
+					req.UseBinary = true;
+					req.KeepAlive = false;
+
+					FtpWebResponse response = (FtpWebResponse)req.GetResponse();
+					Stream responseStream = response.GetResponseStream();
+					StreamReader reader = new StreamReader(responseStream);
+
+					while (!reader.EndOfStream)
+					{
+						files.Add(reader.ReadLine());
+					}
+
+					//Clean-up
+					reader.Close();
+					responseStream.Close(); //redundant
+					response.Close();
+
+					return files;
+				}
+				catch (Exception)
+				{
+					return null;
 				}
 			});
 		}

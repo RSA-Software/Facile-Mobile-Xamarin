@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage Title="Facile"
+<ContentPage Title="F a c i l e"
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:Facile.MarkupExtensions; assemby=Facile" 
@@ -11,10 +11,10 @@
     </ContentPage.Padding>
     <StackLayout>
         <Label Text="Dashboard" HorizontalOptions="Center"/>
-        <Grid ColumnSpacing="3" RowSpacing="3" BackgroundColor="Silver" VerticalOptions="FillAndExpand">
+        <Grid ColumnSpacing="3" RowSpacing="1" BackgroundColor="Silver" VerticalOptions="FillAndExpand">
             <Button Grid.Row="0" Grid.Column="0" ContentLayout="Top,0" Image="ic_group.png" Text="Clienti" BorderRadius="0" BorderWidth="0" BackgroundColor="#768FFF" TextColor="White"  Clicked="OnClickedClienti"/>
-            <Button Grid.Row="0" Grid.Column="1" ContentLayout="Top,0" Image="ic_style.png" Text="Documenti" BorderRadius="0" BorderWidth="0" BackgroundColor="#00C853" TextColor="White"  Clicked="OnClickedDocumenti"/>
-            <Button Grid.Row="0" Grid.Column="2" ContentLayout="Top,0" Image="ic_shopping_cart.png" Text="Carrello" BorderRadius="0" BorderWidth="0" BackgroundColor="#FFC400" TextColor="White" Clicked="OnClickedCarrello"/>
+            <Button Grid.Row="0" Grid.Column="1" ContentLayout="Top,0" Image="ic_shopping_cart.png" Text="Ordini" BorderRadius="0" BorderWidth="0" BackgroundColor="#00C853" TextColor="White"  Clicked="OnClickedOrdini"/>
+            <Button Grid.Row="0" Grid.Column="2" ContentLayout="Top,0" Image="ic_style.png" Text="Carrello" BorderRadius="0" BorderWidth="0" BackgroundColor="#FFC400" TextColor="White" Clicked="OnClickedCarrello"/>
        
             <Button Grid.Row="1" Grid.Column="0" ContentLayout="Top,0" Image="ic_perm_media.png" Text="Catalogo" BorderRadius="0" BorderWidth="0" BackgroundColor="#673AB7" TextColor="White" Clicked="OnClickedCatalogo"/>
             <Button Grid.Row="1" Grid.Column="1" ContentLayout="Top,0" Image="ic_alarm.png" Text="Scadenze" BorderRadius="0" BorderWidth="0" BackgroundColor="#BF360C" TextColor="White" Clicked="OnClickedScadenze"/>
