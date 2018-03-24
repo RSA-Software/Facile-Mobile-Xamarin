@@ -46,17 +46,27 @@
                     <Grid ColumnSpacing="0" >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
 
                         <Image Grid.Column="0" WidthRequest="100" StyleId="0" 
                             BackgroundColor="#009EDA"
                             HorizontalOptions="CenterAndExpand"
-                            Source="ic_add_white.png" >
+                            Source="ic_arrow_drop_up_black.png" >
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnTapAdd" NumberOfTapsRequired="1" />
                             </Image.GestureRecognizers>
-                            
                         </Image>
+
+                        <Image Grid.Column="1" WidthRequest="100" StyleId="1"
+                            BackgroundColor="#009EDA"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="ic_arrow_drop_down_black" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTapMin" NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+
                     </Grid>
                 </DataTemplate>
             </syncfusion:SfDataGrid.LeftSwipeTemplate>

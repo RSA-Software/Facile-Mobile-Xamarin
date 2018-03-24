@@ -57,5 +57,18 @@ Global
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
 		$0.VersionControlPolicy = $1
+		$0.DotNetNamingPolicy = $2
+		$2.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.TextStylePolicy = $3
+		$3.FileWidth = 200
+		$3.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $4
+		$4.scope = text/x-csharp
+		$0.TextStylePolicy = $5
+		$5.inheritsSet = null
+		$5.scope = application/config+xml
+		$0.XmlFormattingPolicy = $6
+		$6.inheritsSet = null
+		$6.scope = application/config+xml
 	EndGlobalSection
 EndGlobal

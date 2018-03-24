@@ -34,6 +34,8 @@ namespace Facile
 			//cli_desc.Text = "TUTTI";
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 			//MessagingCenter.Subscribe<ClientiSearch, Clienti>(this, "ClienteChanged", OnClienteChanged);
+			//NavigationPage.SetHasNavigationBar(this, false);
+
 
 			busyIndicator.IsBusy = true;
 			leftImage = null;

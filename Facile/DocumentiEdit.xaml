@@ -1,34 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TabbedPage 
+<TabbedPage CurrentPageChanged="OnCurrentPageChanged"
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:Facile"
     x:Class="Facile.DocumentiEdit">
-
-    <TabbedPage.ToolbarItems>
-        <ToolbarItem Icon="ic_cached.png" Text="Salva" Activated="OnActivatedSalva"/>
-<!--
-        <ToolbarItem Icon="ic_group.png" Text="Stampa" Order = "Secondary" Activated="OnActivatedStampa"/>
--->
-    </TabbedPage.ToolbarItems>
-
-
-<!--    <NavigationPage Title="Testata" Icon="ic_alarm.png">
-        <x:Arguments>
-            <local:DocumentiHeader/>
-        </x:Arguments>
-    </NavigationPage>
-
-    <NavigationPage Title="Corpo" Icon="ic_cached.png">
-        <x:Arguments>
-            <local:DocumentiBody/>
-        </x:Arguments>
-    </NavigationPage>
-
-    <NavigationPage Title="Piede" Icon="ic_group.png">
-        <x:Arguments>
-            <local:DocumentiFooter/>
-        </x:Arguments>
-    </NavigationPage>
--->
+    
 </TabbedPage>

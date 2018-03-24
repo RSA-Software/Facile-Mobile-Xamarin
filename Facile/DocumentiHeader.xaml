@@ -4,52 +4,90 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:syncfusion="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
     x:Class="Facile.DocumentiHeader">
-
 <!--
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="ic_cached.png" Text="Scappa" Order="Secondary"/>
-        <ToolbarItem Icon="ic_group.png" Text="Curri" Order="Secondary"/>
+        <ToolbarItem x:Name="m_salva" Icon="ic_done_white.png" Text="Salva"/>
+        <ToolbarItem x:Name="m_prec" Icon="ic_done_white.png" Order = "Secondary" Text="Prec"/>
+        <ToolbarItem x:Name="m_succ" Icon="ic_done_white.png" Order = "Secondary" Text="Succ"/>
+        <ToolbarItem x:Name="m_stampa" Icon="ic_group.png" Text="Stampa" Order = "Secondary"/>
+        <ToolbarItem x:Name="m_canc" Icon="ic_done_white.png" Order = "Secondary" Text="Elimiva"/>
     </ContentPage.ToolbarItems>
 -->
-    <TableView Intent="Form" HasUnevenRows="true" BackgroundColor="White">
-        <TableRoot>
-            <TableSection Title="Cliente" >
-                <ViewCell x:Name="section_cli" Tapped="OnClienteTapped">
-                    <StackLayout Padding="7,0,7,0" HeightRequest="80">
-                        <Label x:Name="cli_desc" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" FontAttributes="Bold" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
-                        <Label x:Name="cli_indirizzo" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
-                        <Label x:Name="cli_citta" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
-                    </StackLayout>
-                </ViewCell>
-            </TableSection>
+    <ScrollView>
+        <StackLayout Padding="7,7,7,0">
+            <Grid HorizontalOptions="FillAndExpand" x:Name="section_num">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>  
 
-            <TableSection Title ="Destinazione"> 
-                <ViewCell x:Name= "section_dst" Tapped="OnDestinazioneTapped">
-                    <StackLayout Padding="7,0,7,0" HeightRequest="80">
-                        <Label x:Name="dst_desc" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" FontAttributes="Bold" VerticalTextAlignment="Center"/>
-                        <Label x:Name="dst_indirizzo" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
-                        <Label x:Name="dst_citta" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
-                    </StackLayout>
-                </ViewCell>
-            </TableSection>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                
+                <Label Text="Cliente" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Red"/>
+                <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="1" HorizontalOptions="StartAndExpand" >
+                    <Entry x:Name="m_cli_cod" WidthRequest="130" HorizontalOptions="Start" Unfocused="OnCliCodUnfocused" Keyboard="Numeric" HorizontalTextAlignment="End"/>
+                    <Button x:Name="m_search_cli" Image="ic_search_black.png" WidthRequest="60"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnClienteTapped"/>
+                </StackLayout>
 
-            <TableSection Title="Estremi Documento"> 
-                <ViewCell x:Name= "section_num">
-                    <StackLayout Orientation="Horizontal" Padding="7,0,7,0" >
-                        <Label Text="Numero" WidthRequest="80" VerticalTextAlignment="Center"/>
-                        <syncfusion:SfNumericTextBox  x:Name="fat_n_doc" WidthRequest="130" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold" />
-                        <Label Text="Registro" VerticalOptions = "Center"/>
-                        <Label x:Name="fat_registro" WidthRequest="30"  VerticalTextAlignment="Center"  FontAttributes="Bold"/>
-                    </StackLayout>
-                </ViewCell>
-                <ViewCell x:Name= "section_data">
-                    <StackLayout Orientation="Horizontal" Padding="7,0,7,0">
-                        <Label Text="Data" WidthRequest="80" VerticalTextAlignment="Center"/>
-                        <DatePicker x:Name="fat_d_doc" Format="dd/MM/yyyy" WidthRequest="130" />
-                    </StackLayout>
-                </ViewCell>
-            </TableSection>
-            
-        </TableRoot>
-    </TableView>
+                <StackLayout HeightRequest="80" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="StartAndExpand">
+                    <Label x:Name="cli_desc" LineBreakMode="TailTruncation" HorizontalOptions="StartAndExpand" FontAttributes="Bold" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+                    <Label x:Name="cli_indirizzo" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+                    <Label x:Name="cli_citta" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+                </StackLayout>
+
+                <Label Text="Destinazione" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Red"/>
+                <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="1" HorizontalOptions="StartAndExpand" >
+                    <Entry x:Name="m_dst_cod" WidthRequest="130" HorizontalOptions="Start" Unfocused="OnDstCodUnfocused" Keyboard="Numeric" HorizontalTextAlignment="End"/>
+                    <Button x:Name="m_search_dst" Image="ic_search_black.png" WidthRequest="60"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnDestinazioneTapped"/>
+                </StackLayout>
+
+                <StackLayout HeightRequest="80" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="StartAndExpand">
+                    <Label x:Name="dst_desc" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                    <Label x:Name="dst_indirizzo" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+                    <Label x:Name="dst_citta" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+                </StackLayout>
+
+
+
+                <Label Text="Numero" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Red"/>
+
+                <StackLayout Orientation="Horizontal" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="StartAndExpand">
+                    <syncfusion:SfNumericTextBox  x:Name="fat_n_doc" WidthRequest="130" ParserMode="Decimal" HeightRequest="30" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold" />
+                    <Label Text="Registro" VerticalOptions = "Center" FontAttributes="Bold" TextColor="Red"/>
+                    <Label x:Name="fat_registro" WidthRequest="30"  VerticalTextAlignment="Center"  FontAttributes="Bold"/>
+                </StackLayout>
+
+
+                <Label Text="Data" Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Red"/>
+                <StackLayout Orientation="Horizontal" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1" HorizontalOptions="StartAndExpand">
+                    <DatePicker x:Name="fat_d_doc" Format="dd/MM/yyyy" WidthRequest="130" HeightRequest="30" />
+                </StackLayout>
+                
+            </Grid>
+
+<!--            <StackLayout Orientation="Horizontal" VerticalOptions="End" Padding="0,0,0,7">
+                <Button x:Name="m_prec" Image="ic_navigate_before_white.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand"  TextColor="White" BackgroundColor="#009EDA" />
+                <Button x:Name="m_succ" Image="ic_navigate_next_white.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand"  TextColor="White" BackgroundColor="#009EDA" />
+                <Button x:Name="m_salva" Image="ic_done_white.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand"  TextColor="White" BackgroundColor="#009EDA" />
+                <Button x:Name="m_elimina" Image="ic_delete_white.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" TextColor="White" BackgroundColor="Red" />
+                <Button x:Name="m_stampa" Image="ic_print_white.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand"  TextColor="White" BackgroundColor="#009EDA" />
+                <Button x:Name="m_email" Image="ic_mail_white.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand"  TextColor="White" BackgroundColor="#009EDA" />
+            </StackLayout>
+-->
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" Padding="0,0,0,7">
+                <Button x:Name="m_prec" Image="ic_navigate_before_black.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" Clicked="OnClickPrec"/>
+                <Button x:Name="m_succ" Image="ic_navigate_next_black.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent"/>
+                <Button x:Name="m_salva" Image="ic_done_black.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent"/>
+                <Button x:Name="m_elimina" Image="ic_delete_black.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent"/>
+                <Button x:Name="m_stampa" Image="ic_print_black.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent"/>
+                <Button x:Name="m_email" Image="ic_mail_black.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent"/>
+            </StackLayout>
+                
+        </StackLayout>
+
+    </ScrollView>
 </ContentPage>

@@ -30,9 +30,9 @@ namespace Facile
 	
 			if (nuova == false)
 			{
-				if (editable == true)
+				if (!editable == true)
 				{
-					section_num.IsEnabled = false;
+					//section_num.IsEnabled = false;
 				}
 				else
 				{
@@ -49,23 +49,26 @@ namespace Facile
 			if (first)
 			{
 				first = false;
-				try
-				{
-					cli_ = await dbcon_.GetAsync<Clienti>(doc_.fat_inte);	
-				}
-				catch (System.Exception)
-				{
-					await DisplayAlert("Attenzione","Cliente non trovato","OK");
-				}
-				if (doc_.fat_dest != 0)
+				if (doc_.fat_inte != 0)
 				{
 					try
 					{
-						dst_ = await dbcon_.GetAsync<Destinazioni>(doc_.fat_dest);
+						cli_ = await dbcon_.GetAsync<Clienti>(doc_.fat_inte);
 					}
 					catch (System.Exception)
 					{
-						await DisplayAlert("Attenzione", "Destinazione non trovata", "OK");
+						await DisplayAlert("Attenzione", "Cliente non trovato", "OK");
+					}
+					if (doc_.fat_dest != 0)
+					{
+						try
+						{
+							dst_ = await dbcon_.GetAsync<Destinazioni>(doc_.fat_dest);
+						}
+						catch (System.Exception)
+						{
+							await DisplayAlert("Attenzione", "Destinazione non trovata", "OK");
+						}
 					}
 				}
 				SetField();
@@ -75,16 +78,19 @@ namespace Facile
 
 		public void SetField()
 		{
+			m_cli_cod.Text = "0";
+			m_dst_cod.Text = "0";
 			if (cli_ != null)
 			{
+				m_cli_cod.Text = cli_.cli_codice.ToString();
 				cli_desc.Text = cli_.cli_desc;
 				cli_indirizzo.Text = cli_.cli_indirizzo;
 				cli_citta.Text = cli_.cli_citta;
 			}
 			if (dst_ != null)
 			{
+				m_dst_cod.Text = dst_.dst_codice.ToString();
 				dst_desc.Text = dst_.dst_desc;	
-
 				dst_desc.Text = dst_.dst_desc;
 				dst_indirizzo.Text = dst_.dst_indirizzo;
 				dst_citta.Text = dst_.dst_citta;
@@ -93,6 +99,15 @@ namespace Facile
 			fat_d_doc.Date = doc_.fat_d_doc;
 			fat_registro.Text = doc_.fat_registro;
 
+		}
+
+		public void GetField()
+		{
+			doc_.fat_inte = Int32.Parse(m_cli_cod.Text);
+			doc_.fat_dest = Int32.Parse(m_dst_cod.Text);
+			//doc_.fat_n_doc = fat_n_doc.Value + () % 700000000 +;
+			doc_.fat_registro = fat_registro.Text;
+			doc_.fat_d_doc = fat_d_doc.Date;
 		}
 
 		void OnClienteTapped(object sender, System.EventArgs e)
@@ -119,5 +134,48 @@ namespace Facile
 			Navigation.PushAsync(page);
 		}
 
+		async void OnCliCodUnfocused(object sender, Xamarin.Forms.FocusEventArgs e)
+		{
+			GetField();
+			cli_ = null;
+			dst_ = null;
+			if (doc_.fat_inte != 0)
+			{
+				try
+				{
+					cli_ = await dbcon_.GetAsync<Clienti>(doc_.fat_inte);
+				}
+				catch (System.Exception)
+				{
+					
+				}
+				if (doc_.fat_dest != 0)
+				{
+					try
+					{
+						dst_ = await dbcon_.GetAsync<Destinazioni>(doc_.fat_dest);
+						if (dst_.dst_cli_for != cli_.cli_codice || dst_.dst_rel != 0) dst_ = null;
+					}
+					catch (System.Exception)
+					{
+						//
+					}
+				}
+			}
+			SetField();
+		}
+
+		void OnDstCodUnfocused(object sender, Xamarin.Forms.FocusEventArgs e)
+		{
+			DisplayAlert("Attenzione!", "Da Implementare", "OK");
+		}
+
+		void OnClickPrec(object sender, System.EventArgs e)
+		{
+			if (nuova_) return;
+
+			DisplayAlert("Attenzione!", "Da Implementare", "OK");
+
+		}
 	}
 }

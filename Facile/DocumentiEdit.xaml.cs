@@ -50,82 +50,32 @@ namespace Facile
 					break;
 			}
 
-			//headerPage_ = new NavigationPage(new DocumentiHeader(ref doc_, ref nuova_, ref editable_));
 			headerPage_ = new DocumentiHeader(ref doc_, ref nuova_, ref editable_);
 			headerPage_.Title = "Testata";
-			headerPage_.Icon = "ic_alarm.png";
+			headerPage_.Icon = "ic_perm_identity_white.png";
 
 			bodyPage_ = new NavigationPage(new DocumentiBody(ref doc_));
 			bodyPage_.Title = "Corpo";
-			bodyPage_.Icon = "ic_cached.png";
+			bodyPage_.Icon = "ic_view_headline_white.png";
 
 			footerPage_ = new NavigationPage(new DocumentiFooter(ref doc_));
 			footerPage_.Title = "Piede";
-			footerPage_.Icon = "ic_group.png";
+			footerPage_.Icon = "ic_euro_symbol_white.png";
 
 			Children.Add(headerPage_);
 			Children.Add(bodyPage_);
 			Children.Add(footerPage_);
+
 		}
 
-		//protected async override void OnAppearing()
-		//{
-		//	if (numDoc_ == 0)
-		//	{
-		//		await Blank();
-		//	}
-		//	else
-		//	{
-		//		try
-		//		{
-		//			fat = await dbcon_.GetAsync<Fatture>(numDoc_);
-		//			Children.Add(bodyPage_);
-		//			Children.Add(footerPage_);
-		//		}
-		//		catch (SQLiteException ex)
-		//		{
-		//			await DisplayAlert("Attenzione!", ex.Message, "OK");
-		//			await Navigation.PopAsync();
-		//		}
-		//		catch (Exception ex)
-		//		{
-		//			await DisplayAlert("Attenzione!", ex.Message, "OK");
-		//			await Navigation.PopAsync();
-		//		}
-		//	}
-		//	//foreach(var child in Children)
-		//	//{
-		//	//}
-		//	base.OnAppearing();
-		//}
-
-		//public async Task Blank()
-		//{
-		//	string sql = String.Format("SELECT * FROM fatture2 WHERE fat_registro = '{0}' ORDER BY fat_n_doc DESC LIMIT 1", registro_);
-
-		//	numDoc_ = 1;
-		//	var docList = await dbcon_.QueryAsync<Fatture>(sql);
-		//	foreach (var doc in docList)
-		//	{
-		//		numDoc_ += doc.fat_n_doc;
-		//		break;
-		//	}
-		//	fat = new Fatture();
-		//	fat.fat_tipo = (int)tipoDoc_;
-		//	fat.fat_registro = registro_;		
-
-		//	// Completare l'inizializzazione
-		//}
-
-		void OnActivatedSalva(object sender, System.EventArgs e)
+void OnCurrentPageChanged(object sender, System.EventArgs e)
 		{
-			DisplayAlert("Clicked", "Salva","OK");
+			if (nuova_ && (CurrentPage == bodyPage_ || CurrentPage == footerPage_))
+			{
+				Device.BeginInvokeOnMainThread(() => {
+					CurrentPage = Children[0];
+				});
+			}
 		}
-
-		void OnActivatedStampa(object sender, System.EventArgs e)
-		{
-			DisplayAlert("Clicked", "Stampa", "OK");
-		}
-
 	}
 }
