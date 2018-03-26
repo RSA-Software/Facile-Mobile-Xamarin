@@ -11,18 +11,20 @@ namespace Facile
 {
 	public partial class DocumentiBody : ContentPage
 	{
-		private Fatture doc_;
+		private DocumentiEdit _parent;
 		private readonly SQLiteAsyncConnection dbcon_;
 		ObservableCollection <FatRow> rigCollection = null;
 		private int swipeIndex;
 		private bool forceload_;
+		private int last_num_;
 
-		public DocumentiBody(ref Fatture f)
+		public DocumentiBody(DocumentiEdit par)
 		{
-			doc_ = f;
 			swipeIndex = 0;
 			forceload_ = true;
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
+
+			_parent = par;
 			InitializeComponent();
 			dataGrid.ColumnSizer = Syncfusion.SfDataGrid.XForms.ColumnSizer.LastColumnFill;
 			dataGrid.GridLongPressed += DataGrid_GridLongPressed; 
@@ -30,22 +32,27 @@ namespace Facile
 
 		protected override async void OnAppearing()
 		{
-			if (forceload_)
+			if (forceload_ || last_num_ != _parent.doc.fat_n_doc)
 			{
-				string sql = String.Format("SELECT * FROM fatrow2 WHERE rig_tipo = {0} AND rig_n_doc = {1}", doc_.fat_tipo, doc_.fat_n_doc);
+				dataGrid.ItemsSource = null;
+				last_num_ = _parent.doc.fat_n_doc;				
+				string sql = String.Format("SELECT * FROM fatrow2 WHERE rig_tipo = {0} AND rig_n_doc = {1}", _parent.doc.fat_tipo, _parent.doc.fat_n_doc);
 				var rigList = await dbcon_.QueryAsync<FatRow>(sql);
 				rigCollection = new ObservableCollection<FatRow>(rigList);
 				dataGrid.ItemsSource = rigCollection;
 				forceload_ = false;
 			}
+			m_add.IsEnabled = _parent.doc.fat_editable;
+			m_add.IsVisible = _parent.doc.fat_editable;
 			base.OnAppearing();
 		}
+
 
 		async void DataGrid_GridLongPressed(object sender, Syncfusion.SfDataGrid.XForms.GridLongPressedEventArgs e)
 		{
 			forceload_ = true;
 			var rig = e.RowData as FatRow;
-			var page = new DocumentRow(ref rig, false, doc_.fat_editable);
+			var page = new DocumentRow(ref rig, false, _parent.doc.fat_editable);
 			await this.Navigation.PushModalAsync(page);
 		}
 
@@ -54,12 +61,12 @@ namespace Facile
 			var ditta = await dbcon_.QueryAsync<Ditte>("SELECT * FROM impostazioni LIMIT 1");
 			forceload_ = true;
 			var rig = new FatRow();
-			rig.rig_tipo = doc_.fat_tipo;
-			rig.rig_n_doc = doc_.fat_n_doc;
+			rig.rig_tipo = _parent.doc.fat_tipo;
+			rig.rig_n_doc = _parent.doc.fat_n_doc;
 			if (ditta.Count > 0) rig.rig_iva_inclusa = ditta[0].impo_iva_inc;
 			rig.rig_coef_mol = 1;
 			rig.rig_coef_mol2 = 1;
-			var page = new DocumentRow(ref rig, true, doc_.fat_editable);
+			var page = new DocumentRow(ref rig, true, _parent.doc.fat_editable);
 			await this.Navigation.PushModalAsync(page);
 		}
 
@@ -71,13 +78,11 @@ namespace Facile
 		//
 		void OnSwipeStarted(object sender, Syncfusion.SfDataGrid.XForms.SwipeStartedEventArgs e)
 		{
-			/*
-			if (!doc_.fat_editable)
+			if (!_parent.doc.fat_editable)
 			{
 				e.Cancel = true;
 				return;
 			}
-			*/
 			swipeIndex = e.RowIndex;
 		}
 
@@ -88,7 +93,7 @@ namespace Facile
 			{
 				forceload_ = true;
 				var rig = rigCollection[swipeIndex - 1];
-				var page = new DocumentRow(ref rig, false, doc_.fat_editable);
+				var page = new DocumentRow(ref rig, false, _parent.doc.fat_editable);
 				await this.Navigation.PushModalAsync(page);
 			}
 		}

@@ -46,7 +46,7 @@ namespace Facile
 			//
 			// Attenzione : da rimuovere
 			//
-			editable_ = true;
+			//editable_ = true;
 			// fine
 
 			if (!editable_)

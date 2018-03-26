@@ -45,7 +45,6 @@ namespace Facile
 			SQLiteAsyncConnection dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 
 			bool nuova = true;
-			bool editable = true;
 
 			//
 			// Inizializziamo il documento
@@ -72,8 +71,7 @@ namespace Facile
 				await DisplayAlert("Attenzione!", ex.Message, "OK");
 				return;
 			}
-			editable = fat.fat_editable;
-			var page = new DocumentiEdit(ref fat, ref nuova, ref editable);
+			var page = new DocumentiEdit(ref fat, ref nuova);
 			await Navigation.PushAsync(page);
 		}
 
@@ -87,7 +85,7 @@ namespace Facile
 
 			try
 			{
-				var sql = string.Format("SELECT * from FATTURE2 WHERE fat_tipo = {0} ORDER BY fat_n_doc DESC LIMIT 1",(short)tipo_);
+				var sql = string.Format("SELECT * from FATTURE2 WHERE fat_tipo = {0} ORDER BY fat_tipo, fat_n_doc DESC LIMIT 1",(short)tipo_);
 				var docList = await dbcon_.QueryAsync<Fatture>(sql);
 				foreach (var doc in docList)
 				{
@@ -106,7 +104,7 @@ namespace Facile
 				return;
 			}
 			editable = fat.fat_editable;
-			var page = new DocumentiEdit(ref fat, ref nuova, ref editable);
+			var page = new DocumentiEdit(ref fat, ref nuova);
 			await Navigation.PushAsync(page);
 		}
 

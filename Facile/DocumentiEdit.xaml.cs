@@ -11,23 +11,21 @@ namespace Facile
 {
 	public partial class DocumentiEdit : TabbedPage
 	{
-		protected Fatture doc_;
-		protected bool nuova_;
-		protected bool editable_;
+		public Fatture doc;
+		public bool nuova;
 		private readonly SQLiteAsyncConnection dbcon_;
 		private ContentPage headerPage_;
 		private NavigationPage bodyPage_;
 		private NavigationPage footerPage_;
 
-		public DocumentiEdit(ref Fatture f, ref bool nuova, ref bool editable)
+		public DocumentiEdit(ref Fatture f, ref bool nuova)
 		{
-			doc_ = f;
-			nuova_ = nuova;
-			editable_ = editable;
+			this.doc = f;
+			this.nuova = nuova;
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 
 			InitializeComponent();
-			switch (doc_.fat_tipo)
+			switch (this.doc.fat_tipo)
 			{
 				case (int)TipoDocumento.TIPO_DDT:
 					Title = "Documento di Trasporto";
@@ -49,16 +47,18 @@ namespace Facile
 					Title = "*** Documento Sconosciuto ***";
 					break;
 			}
+			ChildAdded += OnChildAdded;
 
-			headerPage_ = new DocumentiHeader(ref doc_, ref nuova_, ref editable_);
+
+			headerPage_ = new DocumentiHeader(this);
 			headerPage_.Title = "Testata";
 			headerPage_.Icon = "ic_perm_identity_white.png";
 
-			bodyPage_ = new NavigationPage(new DocumentiBody(ref doc_));
+			bodyPage_ = new NavigationPage(new DocumentiBody(this));
 			bodyPage_.Title = "Corpo";
 			bodyPage_.Icon = "ic_view_headline_white.png";
 
-			footerPage_ = new NavigationPage(new DocumentiFooter(ref doc_));
+			footerPage_ = new NavigationPage(new DocumentiFooter(ref doc));
 			footerPage_.Title = "Piede";
 			footerPage_.Icon = "ic_euro_symbol_white.png";
 
@@ -66,11 +66,17 @@ namespace Facile
 			Children.Add(bodyPage_);
 			Children.Add(footerPage_);
 
+
 		}
 
-void OnCurrentPageChanged(object sender, System.EventArgs e)
+		void OnChildAdded (object sender, ElementEventArgs e)
 		{
-			if (nuova_ && (CurrentPage == bodyPage_ || CurrentPage == footerPage_))
+			e.Element.Parent = this;
+		}
+
+		void OnCurrentPageChanged(object sender, System.EventArgs e)
+		{
+			if (nuova && (CurrentPage == bodyPage_ || CurrentPage == footerPage_))
 			{
 				Device.BeginInvokeOnMainThread(() => {
 					CurrentPage = Children[0];

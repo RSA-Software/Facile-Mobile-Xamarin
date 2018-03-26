@@ -247,7 +247,6 @@ namespace Facile
 
 			Fatture fat = null;
 			bool nuova = false;
-			bool editable = false;
 
 			swipeIndex = 0;
 			try
@@ -263,7 +262,7 @@ namespace Facile
 				return;
 			}
 			if (fat == null) return;
-			var page = new DocumentiEdit(ref fat, ref nuova, ref editable);
+			var page = new DocumentiEdit(ref fat, ref nuova);
 			await Navigation.PushAsync(page);
 		}
 

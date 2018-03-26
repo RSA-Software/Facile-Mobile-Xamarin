@@ -34,8 +34,6 @@ namespace Facile
 			SQLiteAsyncConnection dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 
 			bool nuova = false;
-			bool editable = false;
-
 			try
 			{
 				var docList = await dbcon_.QueryAsync<Fatture>("SELECT * from FATTURE2 WHERE fat_tipo = 0 AND fat_n_doc = 5228 LIMIT 1");
@@ -53,7 +51,7 @@ namespace Facile
 			}
 			if (fat == null) return;
 
-			var page = new DocumentiEdit(ref fat, ref nuova, ref editable);
+			var page = new DocumentiEdit(ref fat, ref nuova);
 			await Navigation.PushAsync(page);
 		}
 

@@ -12,7 +12,7 @@ namespace Facile.Extension
 	{
 		public const double LIMITE_BOLLO = 77.47;
 
-		public enum TipoDocumento
+		public enum TipoDocumento : short
 		{
 			TIPO_FAT = 0,
 			TIPO_BOL = 1,
@@ -30,7 +30,7 @@ namespace Facile.Extension
 			TIPO_FPF = 13,
 		}
 
-		public enum ErroreDocumento
+		public enum ErroreDocumento : int
 		{
 			NoError = 0,
 			IvaNotFound = 1,

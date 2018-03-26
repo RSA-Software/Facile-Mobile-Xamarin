@@ -141,6 +141,6 @@
             </syncfusion:SfDataGrid.Columns>
         </syncfusion:SfDataGrid>
 
-        <Button Text=" Aggiungi " HorizontalOptions="Center" Image="ic_add_white.png" TextColor="White" BackgroundColor="#009EDA" Clicked="OnAddClicked" />
+        <Button x:Name="m_add" Text=" Aggiungi " HorizontalOptions="Center" Image="ic_add_white.png" TextColor="White" BackgroundColor="#009EDA" Clicked="OnAddClicked" />
     </StackLayout>
 </ContentPage>

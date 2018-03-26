@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Facile.Interfaces;
 using Facile.Models;
 using SQLite;
@@ -9,71 +10,134 @@ namespace Facile
 {
 	public partial class DocumentiHeader : ContentPage
 	{
-		private Fatture doc_;
-		private bool nuova_;
-		private bool editable_;
+		private DocumentiEdit _parent;
 		private bool first;
 		private readonly SQLiteAsyncConnection dbcon_;
 		private Clienti cli_ = null;
 		private Destinazioni dst_ = null;
 
-		public DocumentiHeader(ref Fatture f, ref bool nuova, ref bool editable)
+		public DocumentiHeader(DocumentiEdit par)
 		{
-			doc_ = f;
-			nuova_ = nuova;
-			editable_ = editable;
-
+			_parent = par;
 			first = true;
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 
 			InitializeComponent();
-	
-			if (nuova == false)
-			{
-				if (!editable == true)
-				{
-					//section_num.IsEnabled = false;
-				}
-				else
-				{
-					//section_cli.IsEnabled = false;
-					//section_dst.IsEnabled = false;
-					//section_num.IsEnabled = false;
-					//section_data.IsEnabled = false;
-				}
-			}
-
+			SetProtection();
 		}
 		protected override async void OnAppearing()
 		{
 			if (first)
 			{
 				first = false;
-				if (doc_.fat_inte != 0)
-				{
-					try
-					{
-						cli_ = await dbcon_.GetAsync<Clienti>(doc_.fat_inte);
-					}
-					catch (System.Exception)
-					{
-						await DisplayAlert("Attenzione", "Cliente non trovato", "OK");
-					}
-					if (doc_.fat_dest != 0)
-					{
-						try
-						{
-							dst_ = await dbcon_.GetAsync<Destinazioni>(doc_.fat_dest);
-						}
-						catch (System.Exception)
-						{
-							await DisplayAlert("Attenzione", "Destinazione non trovata", "OK");
-						}
-					}
-				}
+				await LoadRel();
 				SetField();
 			}
 			base.OnAppearing();
+		}
+
+		protected void SetProtection()
+		{
+			if (_parent.nuova)
+			{
+				m_prec.IsEnabled = false;
+				m_succ.IsEnabled = false;
+				m_salva.IsEnabled = true;
+				m_elimina.IsEnabled = false;
+				m_stampa.IsEnabled = false;
+				m_email.IsEnabled = false;
+
+				m_prec.IsVisible = false;
+				m_succ.IsVisible = false;
+				m_salva.IsVisible = true;
+				m_elimina.IsVisible = false;
+				m_stampa.IsVisible = false;
+				m_email.IsVisible = false;
+
+				m_cli_cod.IsEnabled = true;
+				m_search_cli.IsEnabled = true;  
+				m_dst_cod.IsEnabled = true;
+				m_search_dst.IsEnabled = true;
+
+				m_n_doc.IsEnabled = true;
+				m_d_doc.IsEnabled = true;
+			}
+			else
+			{
+				m_n_doc.IsEnabled = false;
+
+				if (_parent.doc.fat_editable)
+				{
+					m_prec.IsVisible = true;
+					m_succ.IsVisible = true;
+					m_salva.IsVisible = true;
+					m_elimina.IsVisible = true;
+					m_stampa.IsVisible = true;
+					m_email.IsVisible = true;
+
+					m_prec.IsEnabled = true;
+					m_succ.IsEnabled = true;
+					m_salva.IsEnabled = true;
+					m_elimina.IsEnabled = true;
+					m_stampa.IsEnabled = true;
+					m_email.IsEnabled = true;
+
+					m_cli_cod.IsEnabled = true;
+					m_search_cli.IsEnabled = true;
+					m_dst_cod.IsEnabled = true;
+					m_search_dst.IsEnabled = true;
+					m_d_doc.IsEnabled = true;
+				}
+				else
+				{
+					m_prec.IsVisible = true;
+					m_succ.IsVisible = true;
+					m_salva.IsVisible = false;
+					m_elimina.IsVisible = false;
+					m_stampa.IsVisible = true;
+					m_email.IsVisible = true;
+
+					m_prec.IsEnabled = true;
+					m_succ.IsEnabled = true;
+					m_salva.IsEnabled = false;
+					m_elimina.IsEnabled = false;
+					m_stampa.IsEnabled = true;
+					m_email.IsEnabled = true;
+
+					m_cli_cod.IsEnabled = false;
+					m_search_cli.IsEnabled = false;
+					m_dst_cod.IsEnabled = false;
+					m_search_dst.IsEnabled = false;
+					m_d_doc.IsEnabled = false;
+				}
+			}
+		}
+
+
+		protected async Task LoadRel()
+		{
+			if (_parent.doc.fat_inte != 0)
+			{
+				try
+				{
+					cli_ = await dbcon_.GetAsync<Clienti>(_parent.doc.fat_inte);
+				}
+				catch (System.Exception)
+				{
+					await DisplayAlert("Attenzione", "Cliente non trovato", "OK");
+				}
+				if (_parent.doc.fat_dest != 0)
+				{
+					try
+					{
+						dst_ = await dbcon_.GetAsync<Destinazioni>(_parent.doc.fat_dest);
+					}
+					catch (System.Exception)
+					{
+						await DisplayAlert("Attenzione", "Destinazione non trovata", "OK");
+					}
+				}
+			}
 		}
 
 		public void SetField()
@@ -95,19 +159,19 @@ namespace Facile
 				dst_indirizzo.Text = dst_.dst_indirizzo;
 				dst_citta.Text = dst_.dst_citta;
 			}
-			fat_n_doc.Value = doc_.fat_n_doc % 700000000;
-			fat_d_doc.Date = doc_.fat_d_doc;
-			fat_registro.Text = doc_.fat_registro;
+			m_n_doc.Value = _parent.doc.fat_n_doc % 700000000;
+			m_d_doc.Date = _parent.doc.fat_d_doc;
+			fat_registro.Text = _parent.doc.fat_registro;
 
 		}
 
 		public void GetField()
 		{
-			doc_.fat_inte = Int32.Parse(m_cli_cod.Text);
-			doc_.fat_dest = Int32.Parse(m_dst_cod.Text);
+			_parent.doc.fat_inte = Int32.Parse(m_cli_cod.Text);
+			_parent.doc.fat_dest = Int32.Parse(m_dst_cod.Text);
 			//doc_.fat_n_doc = fat_n_doc.Value + () % 700000000 +;
-			doc_.fat_registro = fat_registro.Text;
-			doc_.fat_d_doc = fat_d_doc.Date;
+			_parent.doc.fat_registro = fat_registro.Text;
+			_parent.doc.fat_d_doc = m_d_doc.Date;
 		}
 
 		void OnClienteTapped(object sender, System.EventArgs e)
@@ -139,21 +203,21 @@ namespace Facile
 			GetField();
 			cli_ = null;
 			dst_ = null;
-			if (doc_.fat_inte != 0)
+			if (_parent.doc.fat_inte != 0)
 			{
 				try
 				{
-					cli_ = await dbcon_.GetAsync<Clienti>(doc_.fat_inte);
+					cli_ = await dbcon_.GetAsync<Clienti>(_parent.doc.fat_inte);
 				}
 				catch (System.Exception)
 				{
 					
 				}
-				if (doc_.fat_dest != 0)
+				if (_parent.doc.fat_dest != 0)
 				{
 					try
 					{
-						dst_ = await dbcon_.GetAsync<Destinazioni>(doc_.fat_dest);
+						dst_ = await dbcon_.GetAsync<Destinazioni>(_parent.doc.fat_dest);
 						if (dst_.dst_cli_for != cli_.cli_codice || dst_.dst_rel != 0) dst_ = null;
 					}
 					catch (System.Exception)
@@ -162,6 +226,8 @@ namespace Facile
 					}
 				}
 			}
+			if (cli_ == null) _parent.doc.fat_inte = 0;
+			if (dst_ == null) _parent.doc.fat_inte = 0;
 			SetField();
 		}
 
@@ -170,12 +236,122 @@ namespace Facile
 			DisplayAlert("Attenzione!", "Da Implementare", "OK");
 		}
 
-		void OnClickPrec(object sender, System.EventArgs e)
+		async void OnClickPrec(object sender, System.EventArgs e)
 		{
-			if (nuova_) return;
+			if (_parent.nuova) return;
 
-			DisplayAlert("Attenzione!", "Da Implementare", "OK");
+			var sql = string.Format("SELECT * FROM fatture2 WHERE fat_tipo = {0} AND fat_n_doc < {1} ORDER BY  fat_tipo, fat_n_doc  DESC LIMIT 1", _parent.doc.fat_tipo, _parent.doc.fat_n_doc); 
 
+			try
+			{
+				var docList = await dbcon_.QueryAsync<Fatture>(sql);
+
+				if (docList.Count > 0)
+				{
+					foreach (var doc in docList)
+					{
+						_parent.doc = doc;
+						SetProtection();
+						await LoadRel();
+						SetField();
+						break;
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				await DisplayAlert("Attenzione!", ex.Message, "OK");
+				return;
+			}
+		}
+
+		async void OnClickSucc(object sender, System.EventArgs e)
+		{
+			if (_parent.nuova) return;
+
+			var sql = string.Format("SELECT * FROM fatture2 WHERE fat_tipo = {0} AND fat_n_doc > {1} ORDER BY fat_tipo, fat_n_doc LIMIT 1", _parent.doc.fat_tipo, _parent.doc.fat_n_doc);
+
+			try
+			{
+				var docList = await dbcon_.QueryAsync<Fatture>(sql);
+				if (docList.Count > 0)
+				{
+					foreach (var doc in docList)
+					{
+						_parent.doc = doc;
+						SetProtection();
+						await LoadRel();
+						SetField();
+						break;
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				await DisplayAlert("Attenzione!", ex.Message, "OK");
+				return;
+			}
+		}
+
+		async void OnRecordSalva(object sender, System.EventArgs e)
+		{
+			if (!m_salva.IsEnabled) return;
+			GetField();
+			if (_parent.doc.fat_inte == 0L)
+			{
+				m_cli_cod.Focus();
+				return;
+			}
+
+			//
+			// Controlliamo che l'anno sia coincidente con le impostazioni
+			//
+			//if (_parent.doc.fat_d_doc.Year != ) 
+
+			//
+			// Inseriamo l'agente 
+			//
+
+			if (_parent.nuova)
+			{
+				do
+				{
+					try
+					{
+						await dbcon_.InsertAsync(_parent.doc);
+						_parent.nuova = false;
+						SetProtection();
+						SetField();
+						return;
+					}
+					catch (SQLiteException ex)
+					{
+						if (string.Compare(ex.Message.ToUpper(),"CONSTRAINT") == 0)
+						{
+							_parent.doc.fat_n_doc++;
+							continue;
+						}
+						else
+						{
+							await DisplayAlert("Attenzione!", ex.Message, "OK");
+							return;
+						}
+					}
+				} while (true);
+			}
+			else
+			{
+				try
+				{
+					await dbcon_.UpdateAsync(_parent.doc);
+					return;
+				}
+				catch (SQLiteException ex)
+				{
+					await DisplayAlert("Attenzione!", ex.Message, "OK");
+					return;
+				}
+			}
 		}
 	}
 }
