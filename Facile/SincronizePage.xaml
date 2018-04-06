@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title = "Sincronizza Dati"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Facile.SincronizePage">
+
+  <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+            iOS="0,5,0,0">
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout>
+        <Label x:Name="m_title" Text="Fatture" HorizontalOptions="Center"/>
+        <Grid ColumnSpacing="3" RowSpacing="1" BackgroundColor="Silver" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" ContentLayout="Top,0" Image="ic_group.png" Text="Ricezione Dati" BorderRadius="0" BorderWidth="0" BackgroundColor="#768FFF" TextColor="White" Clicked="OnDownloadDati"/>
+            <Button Grid.Row="0" Grid.Column="1" ContentLayout="Top,0" Image="ic_shopping_cart.png" Text="Ricezione Immagini" BorderRadius="0" BorderWidth="0" BackgroundColor="#00C853" TextColor="White" Clicked="OnDownloadImages" />
+            <Button Grid.Row="0" Grid.Column="2" ContentLayout="Top,0" Image="ic_style.png" Text="Invio Documenti" BorderRadius="0" BorderWidth="0" BackgroundColor="#FFC400" TextColor="White" Clicked="OnUploadDocuments"/>
+       
+        </Grid>    
+    </StackLayout>
+</ContentPage>

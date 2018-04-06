@@ -17,7 +17,7 @@
                 <ColumnDefinition Width="3*" />
             </Grid.ColumnDefinitions>  
 
-            <Label Text="Articolo" Grid.Row="0" Grid.Column="0" WidthRequest="100" VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+            <Label Text="Articolo" Grid.Row="0" Grid.Column="0" WidthRequest="100" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" TextColor="Navy"/>
             <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand" >
                 <Entry x:Name="m_art" WidthRequest="175" HorizontalOptions="Start" Unfocused="OnArtUnfocused"/>
                 <Button x:Name="m_search" Image="ic_search_black.png" WidthRequest="35"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnSearchClicked"/>
@@ -25,49 +25,49 @@
 
             <Label x:Name="m_desc" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Black" Font="Bold,20"/>
 
-            <Label Text="Quantità" Grid.Row="2" Grid.Column="0" WidthRequest="100" VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+            <Label Text="Quantità" Grid.Row="2" Grid.Column="0" WidthRequest="100" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" TextColor="Navy"/>
             <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="1" HorizontalOptions="CenterAndExpand">
                 <Button Image="ic_arrow_drop_down_black.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnQtaDownClicked"/>
                 <syncfusion:SfNumericTextBox x:Name="m_quantita" WidthRequest="150" TextAlignment="End" MaximumNumberDecimalDigits="3" TextColor="Black" FormatString="N" ValueChanged="OnValueChanged" ValueChangeMode="OnLostFocus"/>
                 <Button Image="ic_arrow_drop_up_black.png" WidthRequest="30"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnQtaUpClicked"/>
             </StackLayout> 
 
-            <Label Text="Prezzo" Grid.Row="3" Grid.Column="0" WidthRequest="100" VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+            <Label Text="Prezzo" Grid.Row="3" Grid.Column="0" WidthRequest="100" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" TextColor="Navy"/>
             <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.Column="1" HorizontalOptions="CenterAndExpand">
                 <Button Image="ic_arrow_drop_down_black.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnPriceDownClicked"/>
                 <syncfusion:SfNumericTextBox x:Name="m_prezzo" WidthRequest="150" TextAlignment="End"  TextColor="Black" MaximumNumberDecimalDigits="4" FormatString="N" ValueChanged="OnValueChanged" ValueChangeMode="OnLostFocus"/>
                 <Button Image="ic_arrow_drop_up_black.png" WidthRequest="30"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnPriceUpClicked"/>
             </StackLayout>
 
-            <Label Text="1° Sconto" Grid.Row="4" Grid.Column="0" WidthRequest="100" VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+            <Label Text="1° Sconto" Grid.Row="4" Grid.Column="0" WidthRequest="100" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" TextColor="Navy"/>
             <StackLayout Orientation="Horizontal" Grid.Row="4" Grid.Column="1" HorizontalOptions="CenterAndExpand">
                 <Button Image="ic_arrow_drop_down_black.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnSco1DownClicked"/>
                 <syncfusion:SfNumericTextBox x:Name="m_sco1" WidthRequest="150" TextAlignment="End" TextColor="Black" MaximumNumberDecimalDigits="2" FormatString="N" ValueChanged="OnValueChanged" ValueChangeMode="OnLostFocus"/>
                 <Button Image="ic_arrow_drop_up_black.png" WidthRequest="30"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnSco1UpClicked"/>
             </StackLayout>
 
-            <Label Text="2° Sconto" Grid.Row="5" Grid.Column="0" WidthRequest="100" VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+            <Label Text="2° Sconto" Grid.Row="5" Grid.Column="0" WidthRequest="100" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" TextColor="Navy"/>
             <StackLayout Orientation="Horizontal" Grid.Row="5" Grid.Column="1" HorizontalOptions="CenterAndExpand">
                 <Button Image="ic_arrow_drop_down_black.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnSco2DownClicked"/>
                 <syncfusion:SfNumericTextBox x:Name="m_sco2" WidthRequest="150" TextAlignment="End" TextColor="Black" MaximumNumberDecimalDigits="2" FormatString="N" ValueChanged="OnValueChanged" ValueChangeMode="OnLostFocus"/>
                 <Button Image="ic_arrow_drop_up_black.png" WidthRequest="30"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnSco2UpClicked"/>
             </StackLayout>
 
-            <Label Text="3° Sconto" Grid.Row="6" Grid.Column="0" WidthRequest="100" VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+            <Label Text="3° Sconto" Grid.Row="6" Grid.Column="0" WidthRequest="100" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" TextColor="Navy"/>
             <StackLayout Orientation="Horizontal" Grid.Row="6" Grid.Column="1" HorizontalOptions="CenterAndExpand">
                 <Button Image="ic_arrow_drop_down_black.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnSco3DownClicked"/>
                 <syncfusion:SfNumericTextBox x:Name="m_sco3" WidthRequest="150" TextAlignment="End" TextColor="Black" MaximumNumberDecimalDigits="2" FormatString="N" ValueChanged="OnValueChanged" ValueChangeMode="OnLostFocus"/>
                 <Button Image="ic_arrow_drop_up_black.png" WidthRequest="30"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnSco3UpClicked"/>
              </StackLayout>
 
-            <Label Text="Totale" Grid.Row="7" Grid.Column="0" WidthRequest="100" VerticalTextAlignment="Center" HeightRequest="50" HorizontalTextAlignment="End"/>
+            <Label Text="Totale" Grid.Row="7" Grid.Column="0" WidthRequest="100" VerticalTextAlignment="Center" HeightRequest="50" HorizontalTextAlignment="End" FontAttributes="Bold" TextColor="Navy"/>
             <StackLayout Orientation="Horizontal" Grid.Row="7" Grid.Column="1" HorizontalOptions="CenterAndExpand">
                     <Button WidthRequest="30" HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" IsEnabled="false"/> 
                     <syncfusion:SfNumericTextBox  x:Name="m_totale" WidthRequest="150" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Red" FontAttributes="Bold" IsEnabled="false" HeightRequest="50"/>
                     <Button  WidthRequest="30"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" IsEnabled="false"/>
              </StackLayout>
 
-            <Label Text="Sostituz." Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" WidthRequest="100" HeightRequest="40" HorizontalTextAlignment="End"/>
+            <Label Text="Sostituz." Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" WidthRequest="100" HeightRequest="40" HorizontalTextAlignment="End" FontAttributes="Bold" TextColor="Navy"/>
             <StackLayout Orientation="Horizontal" Grid.Row="8" Grid.Column="1" HorizontalOptions="CenterAndExpand">
                 <Switch IsToggled="false" x:Name="m_sostituzione" WidthRequest="100" HeightRequest="40" Toggled="OnSwitchToggled"/>
             </StackLayout>

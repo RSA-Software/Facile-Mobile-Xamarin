@@ -1,35 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using Facile.Interfaces;
 using Facile.Models;
+//using LinkOS.Plugin;
+//using LinkOS.Plugin.Abstractions;
 using SQLite;
 using Xamarin.Forms;
 
 namespace Facile
 {
+	public enum ConnectionType
+	{
+		Bluetooth,
+		USB,
+		Network
+	}
+
 	public partial class DocumentiHeader : ContentPage
 	{
 		private DocumentiEdit _parent;
-		private bool first;
-		private readonly SQLiteAsyncConnection dbcon_;
-		private Clienti cli_ = null;
-		private Destinazioni dst_ = null;
+		private bool _first;
+		private readonly SQLiteAsyncConnection _dbcon;
+		private Clienti _cli;
+		private Destinazioni _dst;
+
+		//ObservableCollection<IDiscoveredPrinter> printerList;
+		//ListView printerLv;
+		//ConnectionType connetionType;
 
 		public DocumentiHeader(DocumentiEdit par)
 		{
 			_parent = par;
-			first = true;
-			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
+			_first = true;
+			_dbcon = DependencyService.Get<ISQLiteDb>().GetConnection();
+
+			//printerList = new ObservableCollection<IDiscoveredPrinter>();
+			//printerLv = new ListView();
 
 			InitializeComponent();
 			SetProtection();
 		}
 		protected override async void OnAppearing()
 		{
-			if (first)
+			if (_first)
 			{
-				first = false;
+				_first = false;
 				await LoadRel();
 				SetField();
 			}
@@ -120,7 +137,7 @@ namespace Facile
 			{
 				try
 				{
-					cli_ = await dbcon_.GetAsync<Clienti>(_parent.doc.fat_inte);
+					_cli = await _dbcon.GetAsync<Clienti>(_parent.doc.fat_inte);
 				}
 				catch (System.Exception)
 				{
@@ -130,7 +147,7 @@ namespace Facile
 				{
 					try
 					{
-						dst_ = await dbcon_.GetAsync<Destinazioni>(_parent.doc.fat_dest);
+						_dst = await _dbcon.GetAsync<Destinazioni>(_parent.doc.fat_dest);
 					}
 					catch (System.Exception)
 					{
@@ -144,20 +161,20 @@ namespace Facile
 		{
 			m_cli_cod.Text = "0";
 			m_dst_cod.Text = "0";
-			if (cli_ != null)
+			if (_cli != null)
 			{
-				m_cli_cod.Text = cli_.cli_codice.ToString();
-				cli_desc.Text = cli_.cli_desc;
-				cli_indirizzo.Text = cli_.cli_indirizzo;
-				cli_citta.Text = cli_.cli_citta;
+				m_cli_cod.Text = _cli.cli_codice.ToString();
+				cli_desc.Text = _cli.cli_desc;
+				cli_indirizzo.Text = _cli.cli_indirizzo;
+				cli_citta.Text = _cli.cli_citta;
 			}
-			if (dst_ != null)
+			if (_dst != null)
 			{
-				m_dst_cod.Text = dst_.dst_codice.ToString();
-				dst_desc.Text = dst_.dst_desc;	
-				dst_desc.Text = dst_.dst_desc;
-				dst_indirizzo.Text = dst_.dst_indirizzo;
-				dst_citta.Text = dst_.dst_citta;
+				m_dst_cod.Text = _dst.dst_codice.ToString();
+				dst_desc.Text = _dst.dst_desc;	
+				dst_desc.Text = _dst.dst_desc;
+				dst_indirizzo.Text = _dst.dst_indirizzo;
+				dst_citta.Text = _dst.dst_citta;
 			}
 			m_n_doc.Value = _parent.doc.fat_n_doc % 700000000;
 			m_d_doc.Date = _parent.doc.fat_d_doc;
@@ -179,7 +196,7 @@ namespace Facile
 			var page = new ClientiSearch();
 			page.CliList.ItemDoubleTapped += (source, args) =>
 			{
-				cli_ = (Clienti)args.ItemData;
+				_cli = (Clienti)args.ItemData;
 				SetField();
 				Navigation.PopAsync();
 			};
@@ -188,10 +205,10 @@ namespace Facile
 
 		void OnDestinazioneTapped(object sender, System.EventArgs e)
 		{
-			var page = new DestinazioniSearch(cli_ != null ? cli_.cli_codice : 0);
+			var page = new DestinazioniSearch(_cli != null ? _cli.cli_codice : 0);
 			page.DstList.ItemDoubleTapped += (source, args) =>
 			{
-				dst_ = (Destinazioni)args.ItemData;
+				_dst = (Destinazioni)args.ItemData;
 				SetField();
 				Navigation.PopAsync();
 			};
@@ -201,33 +218,33 @@ namespace Facile
 		async void OnCliCodUnfocused(object sender, Xamarin.Forms.FocusEventArgs e)
 		{
 			GetField();
-			cli_ = null;
-			dst_ = null;
+			_cli = null;
+			_dst = null;
 			if (_parent.doc.fat_inte != 0)
 			{
 				try
 				{
-					cli_ = await dbcon_.GetAsync<Clienti>(_parent.doc.fat_inte);
+					_cli = await _dbcon.GetAsync<Clienti>(_parent.doc.fat_inte);
 				}
-				catch (System.Exception)
+				catch (System.Exception ex)
 				{
-					
+					System.Diagnostics.Debug.WriteLine(ex.Message);
 				}
 				if (_parent.doc.fat_dest != 0)
 				{
 					try
 					{
-						dst_ = await dbcon_.GetAsync<Destinazioni>(_parent.doc.fat_dest);
-						if (dst_.dst_cli_for != cli_.cli_codice || dst_.dst_rel != 0) dst_ = null;
+						_dst = await _dbcon.GetAsync<Destinazioni>(_parent.doc.fat_dest);
+						if (_dst.dst_cli_for != _cli.cli_codice || _dst.dst_rel != 0) _dst = null;
 					}
-					catch (System.Exception)
+					catch (System.Exception ex)
 					{
-						//
+						System.Diagnostics.Debug.WriteLine(ex.Message);
 					}
 				}
 			}
-			if (cli_ == null) _parent.doc.fat_inte = 0;
-			if (dst_ == null) _parent.doc.fat_inte = 0;
+			if (_cli == null) _parent.doc.fat_inte = 0;
+			if (_dst == null) _parent.doc.fat_inte = 0;
 			SetField();
 		}
 
@@ -244,7 +261,7 @@ namespace Facile
 
 			try
 			{
-				var docList = await dbcon_.QueryAsync<Fatture>(sql);
+				var docList = await _dbcon.QueryAsync<Fatture>(sql);
 
 				if (docList.Count > 0)
 				{
@@ -273,7 +290,7 @@ namespace Facile
 
 			try
 			{
-				var docList = await dbcon_.QueryAsync<Fatture>(sql);
+				var docList = await _dbcon.QueryAsync<Fatture>(sql);
 				if (docList.Count > 0)
 				{
 					foreach (var doc in docList)
@@ -318,7 +335,7 @@ namespace Facile
 				{
 					try
 					{
-						await dbcon_.InsertAsync(_parent.doc);
+						await _dbcon.InsertAsync(_parent.doc);
 						_parent.nuova = false;
 						SetProtection();
 						SetField();
@@ -343,7 +360,7 @@ namespace Facile
 			{
 				try
 				{
-					await dbcon_.UpdateAsync(_parent.doc);
+					await _dbcon.UpdateAsync(_parent.doc);
 					return;
 				}
 				catch (SQLiteException ex)
@@ -353,5 +370,132 @@ namespace Facile
 				}
 			}
 		}
+
+		void Handle_Clicked(object sender, System.EventArgs e)
+		{
+			/*
+			new Task(new Action(() => {
+				StartUSBDiscovery();
+			})).Start();
+		*/		
+		}
+		/*
+		private void StartUSBDiscovery()
+		{
+			OnStatusMessage("Discovering USB Printers");
+			try
+			{
+				IDiscoveryEventHandler usbhandler = DiscoveryHandlerFactory.Current.GetInstance();
+				usbhandler.OnDiscoveryError += DiscoveryHandler_OnDiscoveryError;
+				usbhandler.OnDiscoveryFinished += DiscoveryHandler_OnDiscoveryFinished;
+				usbhandler.OnFoundPrinter += DiscoveryHandler_OnFoundPrinter;
+				connetionType = ConnectionType.USB;
+				System.Diagnostics.Debug.WriteLine("Starting USB Discovery");
+				DependencyService.Get<IPrinterDiscovery>().FindUSBPrinters(usbhandler);
+			}
+			catch (NotImplementedException)
+			{
+				//  USB not availible on iOS, so handle the exeption and move on to Bluetooth discovery
+				StartBluetoothDiscovery();
+			}
+		}
+
+		private void StartNetworkDiscovery()
+		{
+			OnStatusMessage("Discovering Network Printers");
+			try
+			{
+				IDiscoveryEventHandler nwhandler = DiscoveryHandlerFactory.Current.GetInstance();
+				nwhandler.OnDiscoveryError += DiscoveryHandler_OnDiscoveryError;
+				nwhandler.OnDiscoveryFinished += DiscoveryHandler_OnDiscoveryFinished;
+				nwhandler.OnFoundPrinter += DiscoveryHandler_OnFoundPrinter;
+				connetionType = ConnectionType.Network;
+				System.Diagnostics.Debug.WriteLine("Starting Network Discovery");
+				NetworkDiscoverer.Current.LocalBroadcast(nwhandler);
+			}
+			catch (Exception e)
+			{
+				System.Diagnostics.Debug.WriteLine("Network Exception: " + e.Message);
+			}
+		}
+
+		private void StartBluetoothDiscovery()
+		{
+			OnStatusMessage("Discovering Bluetooth Printers");
+			IDiscoveryEventHandler bthandler = DiscoveryHandlerFactory.Current.GetInstance();
+			bthandler.OnDiscoveryError += DiscoveryHandler_OnDiscoveryError;
+			bthandler.OnDiscoveryFinished += DiscoveryHandler_OnDiscoveryFinished;
+			bthandler.OnFoundPrinter += DiscoveryHandler_OnFoundPrinter;
+			connetionType = ConnectionType.Bluetooth;
+			System.Diagnostics.Debug.WriteLine("Starting Bluetooth Discovery");
+			DependencyService.Get<IPrinterDiscovery>().FindBluetoothPrinters(bthandler);
+		}
+
+
+		private void DiscoveryHandler_OnFoundPrinter(object sender, IDiscoveredPrinter discoveredPrinter)
+		{
+
+			System.Diagnostics.Debug.WriteLine("Found Printer:" + discoveredPrinter.ToString());
+			Device.BeginInvokeOnMainThread(() => {
+				printerLv.BatchBegin();
+
+				if (!printerList.Contains(discoveredPrinter))
+				{
+					printerList.Add(discoveredPrinter);
+				}
+				printerLv.BatchCommit();
+			});
+		}
+
+		private void DiscoveryHandler_OnDiscoveryFinished(object sender)
+		{
+			System.Diagnostics.Debug.WriteLine("On Discovery Finished:" + connetionType.ToString());
+
+			if (connetionType == ConnectionType.USB)
+			{
+				StartBluetoothDiscovery();
+			}
+			else if (connetionType == ConnectionType.Bluetooth)
+			{
+				StartNetworkDiscovery();
+			}
+			else
+				OnStatusMessage("Discovery Finished");
+		}
+
+		private void DiscoveryHandler_OnDiscoveryError(object sender, string message)
+		{
+			System.Diagnostics.Debug.WriteLine("On Discovery Error: " + connetionType.ToString());
+			OnError(message);
+
+			if (connetionType == ConnectionType.USB)
+			{
+				StartBluetoothDiscovery();
+			}
+			else if (connetionType == ConnectionType.Bluetooth)
+			{
+				StartNetworkDiscovery();
+			}
+			else
+				OnStatusMessage("Discovery Finished");
+		}
+
+		private void OnError(string message)
+		{
+			Device.BeginInvokeOnMainThread(() =>
+			{
+				DisplayAlert("Error", message, "OK");
+			});
+		}
+
+		private void OnStatusMessage(string message)
+		{
+			Device.BeginInvokeOnMainThread(() =>
+			{
+				System.Diagnostics.Debug.WriteLine("On Discovery : " + message);
+				//statusLbl.Text = message;
+			});
+		}
+		*/
 	}
 }

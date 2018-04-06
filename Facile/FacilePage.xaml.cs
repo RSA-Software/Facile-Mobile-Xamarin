@@ -11,7 +11,7 @@ namespace Facile
 	{
 		void OnClickedClienti(object sender, System.EventArgs e)
 		{
-			Navigation.PushAsync(new ArticoliSearch());
+			Navigation.PushAsync(new ClientiSearch());
 		}
 
 
@@ -22,37 +22,42 @@ namespace Facile
 
 
 
-		async void OnClickedCarrello(object sender, System.EventArgs e)
+		async void OnClickedFatture(object sender, System.EventArgs e)
 		{
-			var page = new DocumentiGrid(TipoDocumento.TIPO_FAT);
-			await Navigation.PushAsync(page);
+
+			await Navigation.PushAsync(new FatturePage(TipoDocumento.TIPO_FAT));
+
+//			var page = new DocumentiGrid(TipoDocumento.TIPO_FAT);
+//			await Navigation.PushAsync(page);
 		}
 
-		async void OnClickedCatalogo(object sender, System.EventArgs e)
+		async void OnClickedDdt(object sender, System.EventArgs e)
 		{
-			Fatture fat = null;
-			SQLiteAsyncConnection dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
+			await Navigation.PushAsync(new FatturePage(TipoDocumento.TIPO_DDT));
 
-			bool nuova = false;
-			try
-			{
-				var docList = await dbcon_.QueryAsync<Fatture>("SELECT * from FATTURE2 WHERE fat_tipo = 0 AND fat_n_doc = 5228 LIMIT 1");
+			//Fatture fat = null;
+			//SQLiteAsyncConnection dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 
-				foreach (var doc in docList)
-				{
-					fat = doc;
-					break;
-				}
-			}
-			catch (Exception ex)
-			{
-				await DisplayAlert("Attenzione!", ex.Message, "OK");
-				return;
-			}
-			if (fat == null) return;
+			//bool nuova = false;
+			//try
+			//{
+			//	var docList = await dbcon_.QueryAsync<Fatture>("SELECT * from FATTURE2 WHERE fat_tipo = 0 AND fat_n_doc = 5228 LIMIT 1");
 
-			var page = new DocumentiEdit(ref fat, ref nuova);
-			await Navigation.PushAsync(page);
+			//	foreach (var doc in docList)
+			//	{
+			//		fat = doc;
+			//		break;
+			//	}
+			//}
+			//catch (Exception ex)
+			//{
+			//	await DisplayAlert("Attenzione!", ex.Message, "OK");
+			//	return;
+			//}
+			//if (fat == null) return;
+
+			//var page = new DocumentiEdit(ref fat, ref nuova);
+			//await Navigation.PushAsync(page);
 		}
 
 		async void OnClickedScadenze(object sender, System.EventArgs e)
@@ -68,8 +73,9 @@ namespace Facile
 
 		async void OnClickedSincronizza(object sender, System.EventArgs e)
 		{
-			//await Navigation.PushAsync(new DownloadPage());
-			await Navigation.PushModalAsync(new DownloadPage());
+
+			//await Navigation.PushModalAsync(new DownloadPage());
+			await Navigation.PushAsync(new SincronizePage());
 		}
 
 		async void OnClickedImpostazioni(object sender, System.EventArgs e) => await Navigation.PushAsync(new SetupPage());
@@ -111,6 +117,7 @@ namespace Facile
 			await dbcon.CreateTableAsync<Stagioni>();
 			await dbcon.CreateTableAsync<Marchi>();
 			await dbcon.CreateTableAsync<Associazioni>();
+			await dbcon.CreateTableAsync<Barcode>();
 
 			base.OnAppearing();
 		}
