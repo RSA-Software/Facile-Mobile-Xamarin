@@ -1,217 +1,268 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Facile.DownloadPage">
+<ContentPage Title="Ricezione Dati"
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Facile.DownloadPage">
+
+	<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+            iOS="0,20,0,0">
+        </OnPlatform>
+    </ContentPage.Padding>
+
+	
     <ScrollView>
-    <StackLayout>
-        <Label Text="A simple Label" x:Name="Desc" Font="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-        <Button Text="Download Data" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="Download_Clicked" />
-
-        <Grid ColumnSpacing="3" RowSpacing="1" BackgroundColor="#00C853" VerticalOptions="FillAndExpand">
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-           </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-
-            
-            <Label Grid.Row="0" Grid.Column="0"  Text="Ditte" FontAttributes="Bold" x:Name="m_dit"/>
-            <Image Grid.Row="0" Grid.Column="1" Source="ic_add_white.png" x:Name="m_dit_download"/>
-            <Image Grid.Row="0" Grid.Column="2" Source="ic_add_white.png" x:Name="m_dit_unzip"/>
-            <Image Grid.Row="0" Grid.Column="3" Source="ic_add_white.png" x:Name="m_dit_json"/>
-            <Image Grid.Row="0" Grid.Column="4" Source="ic_add_white.png" x:Name="m_dit_load"/>
-
-            <Label Grid.Row="1" Grid.Column="0"  Text="Zone" FontAttributes="Bold" x:Name="m_zon"/>
-            <Image Grid.Row="1" Grid.Column="1" Source="ic_add_white.png" x:Name="m_zon_download"/>
-            <Image Grid.Row="1" Grid.Column="2" Source="ic_add_white.png" x:Name="m_zon_unzip"/>
-            <Image Grid.Row="1" Grid.Column="3" Source="ic_add_white.png" x:Name="m_zon_json"/>
-            <Image Grid.Row="1" Grid.Column="4" Source="ic_add_white.png" x:Name="m_zon_load"/>
-            
-            <Label Grid.Row="2" Grid.Column="0"  Text="Cat. Economiche" FontAttributes="Bold" x:Name="m_eco"/>
-            <Image Grid.Row="2" Grid.Column="1" Source="ic_add_white.png" x:Name="m_eco_download"/>
-            <Image Grid.Row="2" Grid.Column="2" Source="ic_add_white.png" x:Name="m_eco_unzip"/>
-            <Image Grid.Row="2" Grid.Column="3" Source="ic_add_white.png" x:Name="m_eco_json"/>
-            <Image Grid.Row="2" Grid.Column="4" Source="ic_add_white.png" x:Name="m_eco_load"/>
-
-            <Label Grid.Row="3" Grid.Column="0"  Text="Pagamenti" FontAttributes="Bold" x:Name="m_pag"/>
-            <Image Grid.Row="3" Grid.Column="1" Source="ic_add_white.png" x:Name="m_pag_download"/>
-            <Image Grid.Row="3" Grid.Column="2" Source="ic_add_white.png" x:Name="m_pag_unzip"/>
-            <Image Grid.Row="3" Grid.Column="3" Source="ic_add_white.png" x:Name="m_pag_json"/>
-            <Image Grid.Row="3" Grid.Column="4" Source="ic_add_white.png" x:Name="m_pag_load"/>
-
-            <Label Grid.Row="4" Grid.Column="0"  Text="Tabelle" FontAttributes="Bold" x:Name="m_tab"/>
-            <Image Grid.Row="4" Grid.Column="1" Source="ic_add_white.png" x:Name="m_tab_download"/>
-            <Image Grid.Row="4" Grid.Column="2" Source="ic_add_white.png" x:Name="m_tab_unzip"/>
-            <Image Grid.Row="4" Grid.Column="3" Source="ic_add_white.png" x:Name="m_tab_json"/>
-            <Image Grid.Row="4" Grid.Column="4" Source="ic_add_white.png" x:Name="m_tab_load"/>
-            
-            <Label Grid.Row="5" Grid.Column="0"  Text="Agenti" FontAttributes="Bold" x:Name="m_age"/>
-            <Image Grid.Row="5" Grid.Column="1" Source="ic_add_white.png" x:Name="m_age_download"/>
-            <Image Grid.Row="5" Grid.Column="2" Source="ic_add_white.png" x:Name="m_age_unzip"/>
-            <Image Grid.Row="5" Grid.Column="3" Source="ic_add_white.png" x:Name="m_age_json"/>
-            <Image Grid.Row="5" Grid.Column="4" Source="ic_add_white.png" x:Name="m_age_load"/>
-
-            <Label Grid.Row="6" Grid.Column="0"  Text="Misure" FontAttributes="Bold" x:Name="m_mis"/>
-            <Image Grid.Row="6" Grid.Column="1" Source="ic_add_white.png" x:Name="m_mis_download"/>
-            <Image Grid.Row="6" Grid.Column="2" Source="ic_add_white.png" x:Name="m_mis_unzip"/>
-            <Image Grid.Row="6" Grid.Column="3" Source="ic_add_white.png" x:Name="m_mis_json"/>
-            <Image Grid.Row="6" Grid.Column="4" Source="ic_add_white.png" x:Name="m_mis_load"/>
-
-            <Label Grid.Row="7" Grid.Column="0"  Text="Clienti" FontAttributes="Bold" x:Name="m_cli"/>
-            <Image Grid.Row="7" Grid.Column="1" Source="ic_add_white.png" x:Name="m_cli_download"/>
-            <Image Grid.Row="7" Grid.Column="2" Source="ic_add_white.png" x:Name="m_cli_unzip"/>
-            <Image Grid.Row="7" Grid.Column="3" Source="ic_add_white.png" x:Name="m_cli_json"/>
-            <Image Grid.Row="7" Grid.Column="4" Source="ic_add_white.png" x:Name="m_cli_load"/>
-
-            <Label Grid.Row="8" Grid.Column="0"  Text="Destinazioni" FontAttributes="Bold" x:Name="m_dst"/>
-            <Image Grid.Row="8" Grid.Column="1" Source="ic_add_white.png" x:Name="m_dst_download"/>
-            <Image Grid.Row="8" Grid.Column="2" Source="ic_add_white.png" x:Name="m_dst_unzip"/>
-            <Image Grid.Row="8" Grid.Column="3" Source="ic_add_white.png" x:Name="m_dst_json"/>
-            <Image Grid.Row="8" Grid.Column="4" Source="ic_add_white.png" x:Name="m_dst_load"/>
-            
-            <Label Grid.Row="9" Grid.Column="0"  Text="Scadenze" FontAttributes="Bold" x:Name="m_sca"/>
-            <Image Grid.Row="9" Grid.Column="1" Source="ic_add_white.png" x:Name="m_sca_download"/>
-            <Image Grid.Row="9" Grid.Column="2" Source="ic_add_white.png" x:Name="m_sca_unzip"/>
-            <Image Grid.Row="9" Grid.Column="3" Source="ic_add_white.png" x:Name="m_sca_json"/>
-            <Image Grid.Row="9" Grid.Column="4" Source="ic_add_white.png" x:Name="m_sca_load"/>
-
-            <Label Grid.Row="10" Grid.Column="0"  Text="Codici IVA" FontAttributes="Bold" x:Name="m_iva"/>
-            <Image Grid.Row="10" Grid.Column="1" Source="ic_add_white.png" x:Name="m_iva_download"/>
-            <Image Grid.Row="10" Grid.Column="2" Source="ic_add_white.png" x:Name="m_iva_unzip"/>
-            <Image Grid.Row="10" Grid.Column="3" Source="ic_add_white.png" x:Name="m_iva_json"/>
-            <Image Grid.Row="10" Grid.Column="4" Source="ic_add_white.png" x:Name="m_iva_load"/>
-
-            <Label Grid.Row="11" Grid.Column="0"  Text="Reparti" FontAttributes="Bold" x:Name="m_rep"/>
-            <Image Grid.Row="11" Grid.Column="1" Source="ic_add_white.png" x:Name="m_rep_download"/>
-            <Image Grid.Row="11" Grid.Column="2" Source="ic_add_white.png" x:Name="m_rep_unzip"/>
-            <Image Grid.Row="11" Grid.Column="3" Source="ic_add_white.png" x:Name="m_rep_json"/>
-            <Image Grid.Row="11" Grid.Column="4" Source="ic_add_white.png" x:Name="m_rep_load"/>
-
-            <Label Grid.Row="12" Grid.Column="0"  Text="Cat. Merceologiche" FontAttributes="Bold" x:Name="m_mer"/>
-            <Image Grid.Row="12" Grid.Column="1" Source="ic_add_white.png" x:Name="m_mer_download"/>
-            <Image Grid.Row="12" Grid.Column="2" Source="ic_add_white.png" x:Name="m_mer_unzip"/>
-            <Image Grid.Row="12" Grid.Column="3" Source="ic_add_white.png" x:Name="m_mer_json"/>
-            <Image Grid.Row="12" Grid.Column="4" Source="ic_add_white.png" x:Name="m_mer_load"/>
-
-            <Label Grid.Row="13" Grid.Column="0"  Text="Fornitori" FontAttributes="Bold" x:Name="m_for"/>
-            <Image Grid.Row="13" Grid.Column="1" Source="ic_add_white.png" x:Name="m_for_download"/>
-            <Image Grid.Row="13" Grid.Column="2" Source="ic_add_white.png" x:Name="m_for_unzip"/>
-            <Image Grid.Row="13" Grid.Column="3" Source="ic_add_white.png" x:Name="m_for_json"/>
-            <Image Grid.Row="13" Grid.Column="4" Source="ic_add_white.png" x:Name="m_for_load"/>
-            
-            <Label Grid.Row="14" Grid.Column="0"  Text="Depositi" FontAttributes="Bold" x:Name="m_dep"/>
-            <Image Grid.Row="14" Grid.Column="1" Source="ic_add_white.png" x:Name="m_dep_download"/>
-            <Image Grid.Row="14" Grid.Column="2" Source="ic_add_white.png" x:Name="m_dep_unzip"/>
-            <Image Grid.Row="14" Grid.Column="3" Source="ic_add_white.png" x:Name="m_dep_json"/>
-            <Image Grid.Row="14" Grid.Column="4" Source="ic_add_white.png" x:Name="m_dep_load"/>
-
-            <Label Grid.Row="15" Grid.Column="0"  Text="Lotti" FontAttributes="Bold" x:Name="m_lot"/>
-            <Image Grid.Row="15" Grid.Column="1" Source="ic_add_white.png" x:Name="m_lot_download"/>
-            <Image Grid.Row="15" Grid.Column="2" Source="ic_add_white.png" x:Name="m_lot_unzip"/>
-            <Image Grid.Row="15" Grid.Column="3" Source="ic_add_white.png" x:Name="m_lot_json"/>
-            <Image Grid.Row="15" Grid.Column="4" Source="ic_add_white.png" x:Name="m_lot_load"/>
-
-            <Label Grid.Row="16" Grid.Column="0"  Text="Articoli" FontAttributes="Bold" x:Name="m_ana"/>
-            <Image Grid.Row="16" Grid.Column="1" Source="ic_add_white.png" x:Name="m_ana_download"/>
-            <Image Grid.Row="16" Grid.Column="2" Source="ic_add_white.png" x:Name="m_ana_unzip"/>
-            <Image Grid.Row="16" Grid.Column="3" Source="ic_add_white.png" x:Name="m_ana_json"/>
-            <Image Grid.Row="16" Grid.Column="4" Source="ic_add_white.png" x:Name="m_ana_load"/>
-
-            <Label Grid.Row="17" Grid.Column="0"  Text="Listini" FontAttributes="Bold" x:Name="m_lis"/>
-            <Image Grid.Row="17" Grid.Column="1" Source="ic_add_white.png" x:Name="m_lis_download"/>
-            <Image Grid.Row="17" Grid.Column="2" Source="ic_add_white.png" x:Name="m_lis_unzip"/>
-            <Image Grid.Row="17" Grid.Column="3" Source="ic_add_white.png" x:Name="m_lis_json"/>
-            <Image Grid.Row="17" Grid.Column="4" Source="ic_add_white.png" x:Name="m_lis_load"/>
-                
-            <Label Grid.Row="18" Grid.Column="0"  Text="Documenti" FontAttributes="Bold" x:Name="m_fat"/>
-            <Image Grid.Row="18" Grid.Column="1" Source="ic_add_white.png" x:Name="m_fat_download"/>
-            <Image Grid.Row="18" Grid.Column="2" Source="ic_add_white.png" x:Name="m_fat_unzip"/>
-            <Image Grid.Row="18" Grid.Column="3" Source="ic_add_white.png" x:Name="m_fat_json"/>
-            <Image Grid.Row="18" Grid.Column="4" Source="ic_add_white.png" x:Name="m_fat_load"/>
-
-            <Label Grid.Row="19" Grid.Column="0"  Text="Righe Documenti" FontAttributes="Bold" x:Name="m_row"/>
-            <Image Grid.Row="19" Grid.Column="1" Source="ic_add_white.png" x:Name="m_row_download"/>
-            <Image Grid.Row="19" Grid.Column="2" Source="ic_add_white.png" x:Name="m_row_unzip"/>
-            <Image Grid.Row="19" Grid.Column="3" Source="ic_add_white.png" x:Name="m_row_json"/>
-            <Image Grid.Row="19" Grid.Column="4" Source="ic_add_white.png" x:Name="m_row_load"/>
-
-            <Label Grid.Row="20" Grid.Column="0"  Text="Vettori" FontAttributes="Bold" x:Name="m_vet"/>
-            <Image Grid.Row="20" Grid.Column="1" Source="ic_add_white.png" x:Name="m_vet_download"/>
-            <Image Grid.Row="20" Grid.Column="2" Source="ic_add_white.png" x:Name="m_vet_unzip"/>
-            <Image Grid.Row="20" Grid.Column="3" Source="ic_add_white.png" x:Name="m_vet_json"/>
-            <Image Grid.Row="20" Grid.Column="4" Source="ic_add_white.png" x:Name="m_vet_load"/>
-
-            <Label Grid.Row="21" Grid.Column="0"  Text="Banche" FontAttributes="Bold" x:Name="m_ban"/>
-            <Image Grid.Row="21" Grid.Column="1" Source="ic_add_white.png" x:Name="m_ban_download"/>
-            <Image Grid.Row="21" Grid.Column="2" Source="ic_add_white.png" x:Name="m_ban_unzip"/>
-            <Image Grid.Row="21" Grid.Column="3" Source="ic_add_white.png" x:Name="m_ban_json"/>
-            <Image Grid.Row="21" Grid.Column="4" Source="ic_add_white.png" x:Name="m_ban_load"/>
-
-            <Label Grid.Row="22" Grid.Column="0"  Text="Canali" FontAttributes="Bold" x:Name="m_can"/>
-            <Image Grid.Row="22" Grid.Column="1" Source="ic_add_white.png" x:Name="m_can_download"/>
-            <Image Grid.Row="22" Grid.Column="2" Source="ic_add_white.png" x:Name="m_can_unzip"/>
-            <Image Grid.Row="22" Grid.Column="3" Source="ic_add_white.png" x:Name="m_can_json"/>
-            <Image Grid.Row="22" Grid.Column="4" Source="ic_add_white.png" x:Name="m_can_load"/>
-
-            <Label Grid.Row="23" Grid.Column="0"  Text="Stagioni" FontAttributes="Bold" x:Name="m_sta"/>
-            <Image Grid.Row="23" Grid.Column="1" Source="ic_add_white.png" x:Name="m_sta_download"/>
-            <Image Grid.Row="23" Grid.Column="2" Source="ic_add_white.png" x:Name="m_sta_unzip"/>
-            <Image Grid.Row="23" Grid.Column="3" Source="ic_add_white.png" x:Name="m_sta_json"/>
-            <Image Grid.Row="23" Grid.Column="4" Source="ic_add_white.png" x:Name="m_sta_load"/>
-
-            <Label Grid.Row="24" Grid.Column="0"  Text="Marchi" FontAttributes="Bold" x:Name="m_mar"/>
-            <Image Grid.Row="24" Grid.Column="1" Source="ic_add_white.png" x:Name="m_mar_download"/>
-            <Image Grid.Row="24" Grid.Column="2" Source="ic_add_white.png" x:Name="m_mar_unzip"/>
-            <Image Grid.Row="24" Grid.Column="3" Source="ic_add_white.png" x:Name="m_mar_json"/>
-            <Image Grid.Row="24" Grid.Column="4" Source="ic_add_white.png" x:Name="m_mar_load"/>
-
-            <Label Grid.Row="25" Grid.Column="0"  Text="Associazioni Gruppi" FontAttributes="Bold" x:Name="m_asg"/>
-            <Image Grid.Row="25" Grid.Column="1" Source="ic_add_white.png" x:Name="m_asg_download"/>
-            <Image Grid.Row="25" Grid.Column="2" Source="ic_add_white.png" x:Name="m_asg_unzip"/>
-            <Image Grid.Row="25" Grid.Column="3" Source="ic_add_white.png" x:Name="m_asg_json"/>
-            <Image Grid.Row="25" Grid.Column="4" Source="ic_add_white.png" x:Name="m_asg_load"/>
-
-            <Label Grid.Row="26" Grid.Column="0"  Text="Barcode" FontAttributes="Bold" x:Name="m_bar"/>
-            <Image Grid.Row="26" Grid.Column="1" Source="ic_add_white.png" x:Name="m_bar_download"/>
-            <Image Grid.Row="26" Grid.Column="2" Source="ic_add_white.png" x:Name="m_bar_unzip"/>
-            <Image Grid.Row="26" Grid.Column="3" Source="ic_add_white.png" x:Name="m_bar_json"/>
-            <Image Grid.Row="26" Grid.Column="4" Source="ic_add_white.png" x:Name="m_bar_load"/>
-                
-        </Grid>
+	    <StackLayout BackgroundColor="#00C853">
+			
+	        <StackLayout BackgroundColor="#FFC400" Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+            	<StackLayout.HeightRequest>
+              		<OnPlatform x:TypeArguments="x:Double" iOS="40" Android="40" />
+            	</StackLayout.HeightRequest>
+            	<StackLayout.MinimumHeightRequest>
+              		<OnPlatform x:TypeArguments="x:Double" iOS="40" Android="40" />
+            	</StackLayout.MinimumHeightRequest>
+            	<StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" Padding="3,0,0,0">
+                	<Label Text="Ricezione Dati" FontAttributes="None"
+                       TextColor=" Gray"
+                       HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center" FontSize="18"  x:Name="m_desc"/>
+            	</StackLayout>
+        	</StackLayout>
 
 
-        <Button Text="Download Images" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="DownLoadImagesClicked" />
-        <Button Text="Esci" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="Close_Clicked" />
-    </StackLayout>
+			
+<!--			<Label Text="A simple Label" x:Name="m_desc" Font="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />-->
+			<Grid ColumnSpacing="3" RowSpacing="1" BackgroundColor="Transparent" VerticalOptions="FillAndExpand" Padding="7,0,7,0">
+
+	            <Grid.RowDefinitions>
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	                <RowDefinition Height="35" />
+	            </Grid.RowDefinitions>
+
+	            <Grid.ColumnDefinitions>
+	                <ColumnDefinition Width="3*"/>
+					<ColumnDefinition Width="1*"/>
+	                <ColumnDefinition Width="1*"/>
+	                <ColumnDefinition Width="1*"/>
+	                <ColumnDefinition Width="1*"/>
+	            </Grid.ColumnDefinitions>
+
+	            
+	            <Label Grid.Row="0" Grid.Column="0"  Text="Ditte" FontAttributes="Bold" TextColor="White" x:Name="m_dit"/>
+	            <Image Grid.Row="0" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_dit_download"/>
+	            <Image Grid.Row="0" Grid.Column="2" Source="" x:Name="m_dit_unzip"/>
+	            <Image Grid.Row="0" Grid.Column="3" Source="" x:Name="m_dit_json"/>
+	            <Image Grid.Row="0" Grid.Column="4" Source="" x:Name="m_dit_load"/>
+				<Label Grid.Row="0" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_dit_rec"/>
+
+	            <Label Grid.Row="1" Grid.Column="0"  Text="Zone" FontAttributes="Bold" TextColor="White" x:Name="m_zon"/>
+	            <Image Grid.Row="1" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_zon_download"/>
+	            <Image Grid.Row="1" Grid.Column="2" Source="" x:Name="m_zon_unzip"/>
+	            <Image Grid.Row="1" Grid.Column="3" Source="" x:Name="m_zon_json"/>
+	            <Image Grid.Row="1" Grid.Column="4" Source="" x:Name="m_zon_load"/>
+	            <Label Grid.Row="1" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_zon_rec"/>
+					
+	            <Label Grid.Row="2" Grid.Column="0"  Text="Cat. Economiche" FontAttributes="Bold" TextColor="White" x:Name="m_eco"/>
+	            <Image Grid.Row="2" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_eco_download"/>
+	            <Image Grid.Row="2" Grid.Column="2" Source="" x:Name="m_eco_unzip"/>
+	            <Image Grid.Row="2" Grid.Column="3" Source="" x:Name="m_eco_json"/>
+	            <Image Grid.Row="2" Grid.Column="4" Source="" x:Name="m_eco_load"/>
+	            <Label Grid.Row="2" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_eco_rec"/>
+					
+	            <Label Grid.Row="3" Grid.Column="0"  Text="Pagamenti" FontAttributes="Bold" TextColor="White" x:Name="m_pag"/>
+	            <Image Grid.Row="3" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_pag_download"/>
+	            <Image Grid.Row="3" Grid.Column="2" Source="" x:Name="m_pag_unzip"/>
+	            <Image Grid.Row="3" Grid.Column="3" Source="" x:Name="m_pag_json"/>
+	            <Image Grid.Row="3" Grid.Column="4" Source="" x:Name="m_pag_load"/>
+				<Label Grid.Row="3" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_pag_rec"/>
+
+	            <Label Grid.Row="4" Grid.Column="0"  Text="Tabelle" FontAttributes="Bold" TextColor="White" x:Name="m_tab"/>
+	            <Image Grid.Row="4" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_tab_download"/>
+	            <Image Grid.Row="4" Grid.Column="2" Source="" x:Name="m_tab_unzip"/>
+	            <Image Grid.Row="4" Grid.Column="3" Source="" x:Name="m_tab_json"/>
+	            <Image Grid.Row="4" Grid.Column="4" Source="" x:Name="m_tab_load"/>
+	            <Label Grid.Row="4" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_tab_rec"/>
+					
+	            <Label Grid.Row="5" Grid.Column="0"  Text="Agenti" FontAttributes="Bold" TextColor="White" x:Name="m_age"/>
+	            <Image Grid.Row="5" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_age_download"/>
+	            <Image Grid.Row="5" Grid.Column="2" Source="" x:Name="m_age_unzip"/>
+	            <Image Grid.Row="5" Grid.Column="3" Source="" x:Name="m_age_json"/>
+	            <Image Grid.Row="5" Grid.Column="4" Source="" x:Name="m_age_load"/>
+				<Label Grid.Row="5" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_age_rec"/>
+
+	            <Label Grid.Row="6" Grid.Column="0"  Text="Misure" FontAttributes="Bold" TextColor="White" x:Name="m_mis"/>
+	            <Image Grid.Row="6" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_mis_download"/>
+	            <Image Grid.Row="6" Grid.Column="2" Source="" x:Name="m_mis_unzip"/>
+	            <Image Grid.Row="6" Grid.Column="3" Source="" x:Name="m_mis_json"/>
+	            <Image Grid.Row="6" Grid.Column="4" Source="" x:Name="m_mis_load"/>
+				<Label Grid.Row="6" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_mis_rec"/>
+
+	            <Label Grid.Row="7" Grid.Column="0"  Text="Clienti" FontAttributes="Bold" TextColor="White" x:Name="m_cli"/>
+	            <Image Grid.Row="7" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_cli_download"/>
+	            <Image Grid.Row="7" Grid.Column="2" Source="" x:Name="m_cli_unzip"/>
+	            <Image Grid.Row="7" Grid.Column="3" Source="" x:Name="m_cli_json"/>
+	            <Image Grid.Row="7" Grid.Column="4" Source="" x:Name="m_cli_load"/>
+				<Label Grid.Row="7" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_cli_rec"/>
+
+	            <Label Grid.Row="8" Grid.Column="0"  Text="Destinazioni" FontAttributes="Bold" TextColor="White" x:Name="m_dst"/>
+	            <Image Grid.Row="8" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_dst_download"/>
+	            <Image Grid.Row="8" Grid.Column="2" Source="" x:Name="m_dst_unzip"/>
+	            <Image Grid.Row="8" Grid.Column="3" Source="" x:Name="m_dst_json"/>
+	            <Image Grid.Row="8" Grid.Column="4" Source="" x:Name="m_dst_load"/>
+				<Label Grid.Row="8" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_dst_rec"/>
+	            
+	            <Label Grid.Row="9" Grid.Column="0"  Text="Scadenze" FontAttributes="Bold" TextColor="White" x:Name="m_sca"/>
+	            <Image Grid.Row="9" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_sca_download"/>
+	            <Image Grid.Row="9" Grid.Column="2" Source="" x:Name="m_sca_unzip"/>
+	            <Image Grid.Row="9" Grid.Column="3" Source="" x:Name="m_sca_json"/>
+	            <Image Grid.Row="9" Grid.Column="4" Source="" x:Name="m_sca_load"/>
+				<Label Grid.Row="9" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_sca_rec"/>
+
+	            <Label Grid.Row="10" Grid.Column="0"  Text="Codici IVA" FontAttributes="Bold" TextColor="White" x:Name="m_iva"/>
+	            <Image Grid.Row="10" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_iva_download"/>
+	            <Image Grid.Row="10" Grid.Column="2" Source="" x:Name="m_iva_unzip"/>
+	            <Image Grid.Row="10" Grid.Column="3" Source="" x:Name="m_iva_json"/>
+	            <Image Grid.Row="10" Grid.Column="4" Source="" x:Name="m_iva_load"/>
+				<Label Grid.Row="10" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_iva_rec"/>
+
+	            <Label Grid.Row="11" Grid.Column="0"  Text="Reparti" FontAttributes="Bold" TextColor="White" x:Name="m_rep"/>
+	            <Image Grid.Row="11" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_rep_download"/>
+	            <Image Grid.Row="11" Grid.Column="2" Source="" x:Name="m_rep_unzip"/>
+	            <Image Grid.Row="11" Grid.Column="3" Source="" x:Name="m_rep_json"/>
+	            <Image Grid.Row="11" Grid.Column="4" Source="" x:Name="m_rep_load"/>
+				<Label Grid.Row="11" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_rep_rec"/>
+
+	            <Label Grid.Row="12" Grid.Column="0"  Text="Cat. Merceologiche" FontAttributes="Bold" TextColor="White" x:Name="m_mer"/>
+	            <Image Grid.Row="12" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_mer_download"/>
+	            <Image Grid.Row="12" Grid.Column="2" Source="" x:Name="m_mer_unzip"/>
+	            <Image Grid.Row="12" Grid.Column="3" Source="" x:Name="m_mer_json"/>
+	            <Image Grid.Row="12" Grid.Column="4" Source="" x:Name="m_mer_load"/>
+				<Label Grid.Row="12" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_mer_rec"/>
+
+	            <Label Grid.Row="13" Grid.Column="0"  Text="Fornitori" FontAttributes="Bold" TextColor="White" x:Name="m_for"/>
+	            <Image Grid.Row="13" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_for_download"/>
+	            <Image Grid.Row="13" Grid.Column="2" Source="" x:Name="m_for_unzip"/>
+	            <Image Grid.Row="13" Grid.Column="3" Source="" x:Name="m_for_json"/>
+	            <Image Grid.Row="13" Grid.Column="4" Source="" x:Name="m_for_load"/>
+				<Label Grid.Row="13" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_for_rec"/>
+	            
+	            <Label Grid.Row="14" Grid.Column="0"  Text="Depositi" FontAttributes="Bold" TextColor="White" x:Name="m_dep"/>
+	            <Image Grid.Row="14" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_dep_download"/>
+	            <Image Grid.Row="14" Grid.Column="2" Source="" x:Name="m_dep_unzip"/>
+	            <Image Grid.Row="14" Grid.Column="3" Source="" x:Name="m_dep_json"/>
+	            <Image Grid.Row="14" Grid.Column="4" Source="" x:Name="m_dep_load"/>
+				<Label Grid.Row="14" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_dep_rec"/>
+
+	            <Label Grid.Row="15" Grid.Column="0"  Text="Lotti" FontAttributes="Bold" TextColor="White" x:Name="m_lot"/>
+	            <Image Grid.Row="15" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_lot_download"/>
+	            <Image Grid.Row="15" Grid.Column="2" Source="" x:Name="m_lot_unzip"/>
+	            <Image Grid.Row="15" Grid.Column="3" Source="" x:Name="m_lot_json"/>
+	            <Image Grid.Row="15" Grid.Column="4" Source="" x:Name="m_lot_load"/>
+				<Label Grid.Row="15" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_lot_rec"/>
+
+	            <Label Grid.Row="16" Grid.Column="0"  Text="Articoli" FontAttributes="Bold" TextColor="White" x:Name="m_ana"/>
+	            <Image Grid.Row="16" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_ana_download"/>
+	            <Image Grid.Row="16" Grid.Column="2" Source="" x:Name="m_ana_unzip"/>
+	            <Image Grid.Row="16" Grid.Column="3" Source="" x:Name="m_ana_json"/>
+	            <Image Grid.Row="16" Grid.Column="4" Source="" x:Name="m_ana_load"/>
+				<Label Grid.Row="16" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_ana_rec"/>
+
+	            <Label Grid.Row="17" Grid.Column="0"  Text="Listini" FontAttributes="Bold" TextColor="White" x:Name="m_lis"/>
+	            <Image Grid.Row="17" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_lis_download"/>
+	            <Image Grid.Row="17" Grid.Column="2" Source="" x:Name="m_lis_unzip"/>
+	            <Image Grid.Row="17" Grid.Column="3" Source="" x:Name="m_lis_json"/>
+	            <Image Grid.Row="17" Grid.Column="4" Source="" x:Name="m_lis_load"/>
+				<Label Grid.Row="17" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_lis_rec"/>
+	                
+	            <Label Grid.Row="18" Grid.Column="0"  Text="Documenti" FontAttributes="Bold" TextColor="White" x:Name="m_fat"/>
+	            <Image Grid.Row="18" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_fat_download"/>
+	            <Image Grid.Row="18" Grid.Column="2" Source="" x:Name="m_fat_unzip"/>
+	            <Image Grid.Row="18" Grid.Column="3" Source="" x:Name="m_fat_json"/>
+	            <Image Grid.Row="18" Grid.Column="4" Source="" x:Name="m_fat_load"/>
+				<Label Grid.Row="18" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_fat_rec"/>
+
+	            <Label Grid.Row="19" Grid.Column="0"  Text="Righe Documenti" FontAttributes="Bold" TextColor="White" x:Name="m_row"/>
+	            <Image Grid.Row="19" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_row_download"/>
+	            <Image Grid.Row="19" Grid.Column="2" Source="" x:Name="m_row_unzip"/>
+	            <Image Grid.Row="19" Grid.Column="3" Source="" x:Name="m_row_json"/>
+	            <Image Grid.Row="19" Grid.Column="4" Source="" x:Name="m_row_load"/>
+				<Label Grid.Row="19" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_row_rec"/>
+
+	            <Label Grid.Row="20" Grid.Column="0"  Text="Vettori" FontAttributes="Bold" TextColor="White" x:Name="m_vet"/>
+	            <Image Grid.Row="20" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_vet_download"/>
+	            <Image Grid.Row="20" Grid.Column="2" Source="" x:Name="m_vet_unzip"/>
+	            <Image Grid.Row="20" Grid.Column="3" Source="" x:Name="m_vet_json"/>
+	            <Image Grid.Row="20" Grid.Column="4" Source="" x:Name="m_vet_load"/>
+				<Label Grid.Row="20" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_vet_rec"/>
+
+	            <Label Grid.Row="21" Grid.Column="0"  Text="Banche" FontAttributes="Bold" TextColor="White" x:Name="m_ban"/>
+	            <Image Grid.Row="21" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_ban_download"/>
+	            <Image Grid.Row="21" Grid.Column="2" Source="" x:Name="m_ban_unzip"/>
+	            <Image Grid.Row="21" Grid.Column="3" Source="" x:Name="m_ban_json"/>
+	            <Image Grid.Row="21" Grid.Column="4" Source="" x:Name="m_ban_load"/>
+				<Label Grid.Row="21" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_ban_rec"/>
+
+	            <Label Grid.Row="22" Grid.Column="0"  Text="Canali" FontAttributes="Bold" TextColor="White" x:Name="m_can"/>
+	            <Image Grid.Row="22" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_can_download"/>
+	            <Image Grid.Row="22" Grid.Column="2" Source="" x:Name="m_can_unzip"/>
+	            <Image Grid.Row="22" Grid.Column="3" Source="" x:Name="m_can_json"/>
+	            <Image Grid.Row="22" Grid.Column="4" Source="" x:Name="m_can_load"/>
+				<Label Grid.Row="22" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_can_rec"/>
+
+	            <Label Grid.Row="23" Grid.Column="0"  Text="Stagioni" FontAttributes="Bold" TextColor="White" x:Name="m_sta"/>
+	            <Image Grid.Row="23" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_sta_download"/>
+	            <Image Grid.Row="23" Grid.Column="2" Source="" x:Name="m_sta_unzip"/>
+	            <Image Grid.Row="23" Grid.Column="3" Source="" x:Name="m_sta_json"/>
+	            <Image Grid.Row="23" Grid.Column="4" Source="" x:Name="m_sta_load"/>
+				<Label Grid.Row="23" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_sta_rec"/>
+
+	            <Label Grid.Row="24" Grid.Column="0"  Text="Marchi" FontAttributes="Bold" TextColor="White" x:Name="m_mar"/>
+	            <Image Grid.Row="24" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_mar_download"/>
+	            <Image Grid.Row="24" Grid.Column="2" Source="" x:Name="m_mar_unzip"/>
+	            <Image Grid.Row="24" Grid.Column="3" Source="" x:Name="m_mar_json"/>
+	            <Image Grid.Row="24" Grid.Column="4" Source="" x:Name="m_mar_load"/>
+				<Label Grid.Row="24" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_mar_rec"/>
+
+	            <Label Grid.Row="25" Grid.Column="0"  Text="Associazioni Gruppi" FontAttributes="Bold" TextColor="White" x:Name="m_asg"/>
+	            <Image Grid.Row="25" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_asg_download"/>
+	            <Image Grid.Row="25" Grid.Column="2" Source="" x:Name="m_asg_unzip"/>
+	            <Image Grid.Row="25" Grid.Column="3" Source="" x:Name="m_asg_json"/>
+	            <Image Grid.Row="25" Grid.Column="4" Source="" x:Name="m_asg_load"/>
+				<Label Grid.Row="25" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_asg_rec"/>
+
+	            <Label Grid.Row="26" Grid.Column="0"  Text="Barcode" FontAttributes="Bold" TextColor="White" x:Name="m_bar"/>
+	            <Image Grid.Row="26" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_bar_download"/>
+	            <Image Grid.Row="26" Grid.Column="2" Source="" x:Name="m_bar_unzip"/>
+	            <Image Grid.Row="26" Grid.Column="3" Source="" x:Name="m_bar_json"/>
+	            <Image Grid.Row="26" Grid.Column="4" Source="" x:Name="m_bar_load"/>
+				<Label Grid.Row="26" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_bar_rec"/>
+	                
+	        </Grid>
+	    </StackLayout>
     </ScrollView>
 </ContentPage>

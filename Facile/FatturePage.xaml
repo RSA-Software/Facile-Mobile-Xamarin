@@ -17,7 +17,7 @@
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Grid.Column="0" ContentLayout="Top,0" Image="ic_group.png" Text="Aggiungi" BorderRadius="0" BorderWidth="0" BackgroundColor="#768FFF" TextColor="White" Clicked="OnAggiungiClicked"/>
+            <Button Grid.Row="0" Grid.Column="0" ContentLayout="Top,0" Image="ic_download_white.png" Text="Aggiungi" BorderRadius="0" BorderWidth="0" BackgroundColor="#768FFF" TextColor="White" Clicked="OnAggiungiClicked"/>
             <Button Grid.Row="0" Grid.Column="1" ContentLayout="Top,0" Image="ic_shopping_cart.png" Text="Modifica" BorderRadius="0" BorderWidth="0" BackgroundColor="#00C853" TextColor="White" Clicked="OnModificaClicked" />
             <Button Grid.Row="0" Grid.Column="2" ContentLayout="Top,0" Image="ic_style.png" Text="Elenco" BorderRadius="0" BorderWidth="0" BackgroundColor="#FFC400" TextColor="White" Clicked="OnElencoClicked"/>
        

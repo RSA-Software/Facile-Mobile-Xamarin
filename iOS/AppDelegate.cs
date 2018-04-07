@@ -9,6 +9,7 @@ using Syncfusion.ListView.XForms.iOS;
 using Syncfusion.SfNumericTextBox.XForms.iOS;
 using Syncfusion.SfBusyIndicator.XForms.iOS;
 using Syncfusion.SfNumericUpDown.XForms.iOS;
+using Syncfusion.XForms.iOS.PopupLayout;
 
 namespace Facile.iOS
 {
@@ -23,6 +24,7 @@ namespace Facile.iOS
 			new SfNumericTextBoxRenderer();
 			new SfBusyIndicatorRenderer();
 			new SfNumericUpDownRenderer();
+			new SfPopupLayoutRenderer();
 
             LoadApplication(new App());
             return base.FinishedLaunching(app, options);

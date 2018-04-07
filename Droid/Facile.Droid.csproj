@@ -200,6 +200,12 @@
     <Reference Include="Syncfusion.SfNumericUpDown.XForms">
       <HintPath>..\packages\Syncfusion.Xamarin.SfNumericUpDown.16.1.0.32\lib\MonoAndroid10\Syncfusion.SfNumericUpDown.XForms.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.SfPopupLayout.XForms.Android">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfPopupLayout.16.1.0.32\lib\MonoAndroid10\Syncfusion.SfPopupLayout.XForms.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPopupLayout.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfPopupLayout.16.1.0.32\lib\MonoAndroid10\Syncfusion.SfPopupLayout.XForms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Facile\Facile.csproj">
@@ -345,6 +351,38 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_euro_symbol_white.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_euro_symbol_white.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_euro_symbol_white.png" />
+    <AndroidResource Include="Resources\drawable\ic_file_download_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_file_download_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_file_download_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_file_download_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_file_download_black.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_file_download_black.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_file_download_black.png" />
+    <AndroidResource Include="Resources\drawable\ic_file_download_black.png" />
+    <AndroidResource Include="Resources\drawable\ic_cloud_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_cloud_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_cloud_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_cloud_white.png" />
+    <AndroidResource Include="Resources\drawable\ic_cloud_black.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_cloud_black.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_cloud_black.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_cloud_black.png" />
+    <AndroidResource Include="Resources\drawable\ic_storage_black.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_storage_black.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_storage_black.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_storage_black.png" />
+    <AndroidResource Include="Resources\drawable\ic_build_black.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_build_black.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_build_black.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_build_black.png" />
+    <AndroidResource Include="Resources\drawable\ic_code_black.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_code_black.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_code_black.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_code_black.png" />
+    <AndroidResource Include="Resources\drawable\ic_hourglass_full_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_hourglass_full_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_hourglass_full_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_hourglass_full_white.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />

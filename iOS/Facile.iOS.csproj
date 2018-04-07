@@ -80,7 +80,7 @@
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>anycpu</PlatformTarget>
     <CodesignProvision>VS: com.rsaweb.Facile Development</CodesignProvision>
-    <IOSDebugOverWiFi>false</IOSDebugOverWiFi>
+    <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -179,6 +179,12 @@
     </Reference>
     <Reference Include="Syncfusion.SfNumericUpDown.XForms.iOS">
       <HintPath>..\packages\Syncfusion.Xamarin.SfNumericUpDown.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfNumericUpDown.XForms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPopupLayout.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfPopupLayout.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfPopupLayout.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPopupLayout.XForms.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfPopupLayout.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfPopupLayout.XForms.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -298,6 +304,30 @@
     <BundleResource Include="Resources\ic_euro_symbol_white%40.png" />
     <BundleResource Include="Resources\ic_euro_symbol_white%402x.png" />
     <BundleResource Include="Resources\ic_euro_symbol_white%403x.png" />
+    <BundleResource Include="Resources\ic_file_download_white%402x.png" />
+    <BundleResource Include="Resources\ic_file_download_white%403x.png" />
+    <BundleResource Include="Resources\ic_file_download_white.png" />
+    <BundleResource Include="Resources\ic_file_download_black.png" />
+    <BundleResource Include="Resources\ic_file_download_black%402x.png" />
+    <BundleResource Include="Resources\ic_file_download_black%403x.png" />
+    <BundleResource Include="Resources\ic_cloud_white%40.png" />
+    <BundleResource Include="Resources\ic_cloud_white%402x.png" />
+    <BundleResource Include="Resources\ic_cloud_white%403x.png" />
+    <BundleResource Include="Resources\ic_cloud_black.png" />
+    <BundleResource Include="Resources\ic_cloud_black%402x.png" />
+    <BundleResource Include="Resources\ic_cloud_black%403x.png" />
+    <BundleResource Include="Resources\ic_storage_black.png" />
+    <BundleResource Include="Resources\ic_storage_black%402x.png" />
+    <BundleResource Include="Resources\ic_storage_black%403x.png" />
+    <BundleResource Include="Resources\ic_build_black.png" />
+    <BundleResource Include="Resources\ic_build_black%402x.png" />
+    <BundleResource Include="Resources\ic_build_black%403x.png" />
+    <BundleResource Include="Resources\ic_code_black.png" />
+    <BundleResource Include="Resources\ic_code_black%402x.png" />
+    <BundleResource Include="Resources\ic_code_black%403x.png" />
+    <BundleResource Include="Resources\ic_hourglass_full_white.png" />
+    <BundleResource Include="Resources\ic_hourglass_full_white%402x.png" />
+    <BundleResource Include="Resources\ic_hourglass_full_white%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />

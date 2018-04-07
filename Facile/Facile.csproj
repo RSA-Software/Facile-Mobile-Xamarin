@@ -272,6 +272,9 @@
     <Reference Include="Syncfusion.SfNumericUpDown.XForms">
       <HintPath>..\packages\Syncfusion.Xamarin.SfNumericUpDown.16.1.0.32\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfNumericUpDown.XForms.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.SfPopupLayout.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfPopupLayout.16.1.0.32\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfPopupLayout.XForms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
