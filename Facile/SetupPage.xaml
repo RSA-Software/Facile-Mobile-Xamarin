@@ -17,9 +17,16 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
+            <Grid.RowDefinitions>
+				<RowDefinition Height="40"/>
+				<RowDefinition Height="40"/>
+				<RowDefinition Height="40"/>
+				<RowDefinition Height="40"/>
+			</Grid.RowDefinitions>
+			
             <!-- Prima Riga -->
             <Label Grid.Row="0" Grid.Column="0" Text="FTP Server"/>
-            <Entry Grid.Row="0" Grid.Column="1" Keyboard="Url" Placeholder="FTP Server" Text="{Binding FtpServer}"/> 
+            <Entry Grid.Row="0" Grid.Column="1" Keyboard="Url" Placeholder="FTP Server" Text="{Binding FtpServer}" TextColor="Black"/> 
 
             <!-- Seconda Riga -->
             <Label Grid.Row="1" Grid.Column="0" Text="User"/>
@@ -32,6 +39,28 @@
             <!-- Quarta Riga -->
             <Label Grid.Row="3" Grid.Column="0" Text="SSL"/>
             <Switch Grid.Row="3" Grid.Column="1" HorizontalOptions="Start" IsToggled="{Binding FtpSsl}"/>
-        </Grid>
-</StackLayout>
+		</Grid>
+
+
+		<StackLayout
+        	HorizontalOptions="FillAndExpand"
+        	VerticalOptions="FillAndExpand"
+        	Margin ="50">
+        	<Button x:Name="btnScan" Text="Scan"/>
+        	<Button x:Name="btnPrint" Text="Print"/>
+        	<ListView x:Name="lstDevices" >
+				<ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+                        <StackLayout Orientation="Horizontal" Margin="7,0,7,0">
+							<Label Text="{Binding FriendlyName}" TextColor="Gray" FontSize="13"/>
+                            <Label Text="{Binding Address}"  TextColor="Navy"/>
+                       	</StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+			</ListView>
+    	</StackLayout>
+		
+	</StackLayout>
 </ContentPage>

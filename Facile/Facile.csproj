@@ -98,6 +98,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="DownloadImages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -201,6 +205,15 @@
       <DependentUpon>SincronizePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Barcode.cs" />
+    <Compile Include="DownloadImages.xaml.cs">
+      <DependentUpon>DownloadImages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZebraPrn.cs" />
+    <Compile Include="ZebraExceptions.cs" />
+    <Compile Include="Utils\RsaUtils.cs" />
+    <Compile Include="Models\Trasporti.cs" />
+    <Compile Include="Models\Agganci.cs" />
+    <Compile Include="Models\Descrizioni.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MarkupExtensions\" />
@@ -210,6 +223,7 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Converters\" />
     <Folder Include="Extension\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="PCLStorage.Abstractions">
@@ -274,6 +288,12 @@
     </Reference>
     <Reference Include="Syncfusion.SfPopupLayout.XForms">
       <HintPath>..\packages\Syncfusion.Xamarin.SfPopupLayout.16.1.0.32\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfPopupLayout.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LinkOS.Plugin.Abstractions">
+      <HintPath>..\packages\LinkOS_Xamarin_SDK.1.1.75\lib\LinkOS.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="LinkOS.Plugin">
+      <HintPath>..\packages\LinkOS_Xamarin_SDK.1.1.75\lib\LinkOS.Plugin.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using LinkOS.Plugin.Abstractions;
+using Xamarin.Forms;
 
 namespace Facile
 {
@@ -8,6 +9,8 @@ namespace Facile
         private const string FtpUserKey = "FtpUser";
         private const string FtpPasswordKey = "FtpPassword";
         private const string FtpSslKey = "FtpSsl";
+		private const string PrinterKey  = "Printer";
+
 
         public App()
         {
@@ -21,9 +24,11 @@ namespace Facile
             // Handle when your app starts
         }
 
-        protected override void OnSleep()
+        protected async override void OnSleep()
         {
-            SavePropertiesAsync();
+			IDiscoveredPrinter printer = Printer;
+
+			await SavePropertiesAsync();
         }
 
         protected override void OnResume()
@@ -31,6 +36,24 @@ namespace Facile
             // Handle when your app resumes
         }
 
+		public IDiscoveredPrinter Printer
+		{
+			get
+			{
+				if (Properties.ContainsKey(PrinterKey))
+					return ((IDiscoveredPrinter)Properties[PrinterKey]);
+				return (null);
+			}
+
+			set
+			{
+				if (Properties.ContainsKey(PrinterKey))
+					Properties[PrinterKey] = value;
+				else
+					Properties.Add(PrinterKey, value);
+			}
+
+		}
 
 
         public string FtpServer 
@@ -44,7 +67,10 @@ namespace Facile
 
             set
             {
-                Properties[FtpServerKey] = value;
+				if (Properties.ContainsKey(FtpServerKey))
+					Properties[FtpServerKey] = value;
+				else
+	                Properties[FtpServerKey] = value;
             }
         }
 

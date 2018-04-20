@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Facile.DownloadImages">
+
+	<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+            iOS="0,20,0,0">
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <StackLayout BackgroundColor="#00C853">
+	
+	    <StackLayout BackgroundColor="#FFC400" Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+	    	<StackLayout.HeightRequest>
+	      		<OnPlatform x:TypeArguments="x:Double" iOS="40" Android="40" />
+	    	</StackLayout.HeightRequest>
+	    	<StackLayout.MinimumHeightRequest>
+	      		<OnPlatform x:TypeArguments="x:Double" iOS="40" Android="40" />
+	    	</StackLayout.MinimumHeightRequest>
+	    	<StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" Padding="3,0,0,0">
+	        	<Label Text="Ricezione Dati" FontAttributes="None"
+	               TextColor=" Gray"
+	               HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"
+	               HorizontalTextAlignment="Center" FontSize="18"  x:Name="m_desc"/>
+	    	</StackLayout>
+		</StackLayout>
+
+		<Image HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" x:Name="m_image" Aspect="AspectFit"/>
+
+	</StackLayout>
+	
+</ContentPage>

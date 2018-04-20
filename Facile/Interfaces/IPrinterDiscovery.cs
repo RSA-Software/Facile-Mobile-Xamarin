@@ -1,9 +1,8 @@
 ﻿using System;
-//using LinkOS.Plugin.Abstractions;
+using LinkOS.Plugin.Abstractions;
 
 namespace Facile.Interfaces
 {
-	/*
 	public interface IPrinterDiscovery
 	{
 		void FindBluetoothPrinters(IDiscoveryHandler handler);
@@ -11,5 +10,4 @@ namespace Facile.Interfaces
 		void RequestUSBPermission(IDiscoveredPrinterUsb printer);
 		void CancelDiscovery();
 	}
-	*/
 }

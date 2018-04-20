@@ -18,7 +18,7 @@
                         <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
             <Button Grid.Row="0" Grid.Column="0" ContentLayout="Top,0" Image="ic_file_download_white.png" Text="Ricezione Dati" BorderRadius="0" BorderWidth="0" BackgroundColor="#768FFF" TextColor="White" Clicked="OnDownloadDati"/>
-            <Button Grid.Row="0" Grid.Column="1" ContentLayout="Top,0" Image="ic_shopping_cart.png" Text="Ricezione Immagini" BorderRadius="0" BorderWidth="0" BackgroundColor="#00C853" TextColor="White" Clicked="OnDownloadImages" />
+            <Button Grid.Row="0" Grid.Column="1" ContentLayout="Top,0" Image="ic_camera_alt_white.png" Text="Ricezione Immagini" BorderRadius="0" BorderWidth="0" BackgroundColor="#00C853" TextColor="White" Clicked="OnDownloadImages" />
             <Button Grid.Row="0" Grid.Column="2" ContentLayout="Top,0" Image="ic_style.png" Text="Invio Documenti" BorderRadius="0" BorderWidth="0" BackgroundColor="#FFC400" TextColor="White" Clicked="OnUploadDocuments"/>
        
         </Grid>    

@@ -371,13 +371,15 @@ namespace Facile
 			}
 		}
 
-		void Handle_Clicked(object sender, System.EventArgs e)
+		async void OnRecordStampa(object sender, System.EventArgs e)
 		{
-			/*
-			new Task(new Action(() => {
-				StartUSBDiscovery();
-			})).Start();
-		*/		
+
+			// Controllare lo stato del documento
+
+			// Effettuare il ricalcolo
+
+			var prn = new ZebraPrn(this);
+			await prn.PrintDoc(_parent.doc);
 		}
 		/*
 		private void StartUSBDiscovery()

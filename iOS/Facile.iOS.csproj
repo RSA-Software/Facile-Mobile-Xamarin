@@ -186,6 +186,15 @@
     <Reference Include="Syncfusion.SfPopupLayout.XForms.iOS">
       <HintPath>..\packages\Syncfusion.Xamarin.SfPopupLayout.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfPopupLayout.XForms.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="LinkOS.Plugin.Abstractions">
+      <HintPath>..\packages\LinkOS_Xamarin_SDK.1.1.75\lib\Xamarin.iOS10\LinkOS.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="LinkOS.Plugin">
+      <HintPath>..\packages\LinkOS_Xamarin_SDK.1.1.75\lib\Xamarin.iOS10\LinkOS.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="zsdk_iosx">
+      <HintPath>..\packages\LinkOS_Xamarin_SDK.1.1.75\lib\Xamarin.iOS10\zsdk_iosx.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Facile\Facile.csproj">
@@ -328,9 +337,11 @@
     <BundleResource Include="Resources\ic_hourglass_full_white.png" />
     <BundleResource Include="Resources\ic_hourglass_full_white%402x.png" />
     <BundleResource Include="Resources\ic_hourglass_full_white%403x.png" />
+    <BundleResource Include="Resources\ic_camera_alt_white%40.png" />
+    <BundleResource Include="Resources\ic_camera_alt_white%402x.png" />
+    <BundleResource Include="Resources\ic_camera_alt_white%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <Import Project="..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />
   <ProjectExtensions>
     <MonoDevelop>
       <Properties>
@@ -342,4 +353,5 @@
     </MonoDevelop>
   </ProjectExtensions>
   <Import Project="..\packages\Xamarin.Forms.2.5.1.444934\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.1.444934\build\netstandard1.0\Xamarin.Forms.targets')" />
+  <Import Project="..\packages\NETStandard.Library.2.0.2\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.2\build\netstandard2.0\NETStandard.Library.targets')" />
 </Project>

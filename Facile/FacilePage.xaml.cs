@@ -118,6 +118,9 @@ namespace Facile
 			await dbcon.CreateTableAsync<Marchi>();
 			await dbcon.CreateTableAsync<Associazioni>();
 			await dbcon.CreateTableAsync<Barcode>();
+			await dbcon.CreateTableAsync<Trasporti>();
+			await dbcon.CreateTableAsync<Agganci>();
+			await dbcon.CreateTableAsync<Descrizioni>();
 
 			base.OnAppearing();
 		}

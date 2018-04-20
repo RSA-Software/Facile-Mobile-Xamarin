@@ -30,6 +30,15 @@ namespace Facile.Extension
 			TIPO_FPF = 13,
 		}
 
+		public enum TipoVendita 
+		{
+			VEN_NORMALE  = 0,
+			VEN_TRASFERT = 1,
+			VEN_CSERVIZI = 2,
+			VEN_DELIVERY = 3,
+		}
+
+
 		public enum ErroreDocumento : int
 		{
 			NoError = 0,
@@ -40,7 +49,6 @@ namespace Facile.Extension
 			PagamentoNotFound = 5,
 			IvaAgenteNotFound = 6,
 		}
-
 
 		public async static Task<ErroreDocumento> GetTotali(this Fatture fat)
 		{

@@ -1,7 +1,7 @@
 ﻿using System;
 using Facile.Interfaces;
-//using LinkOS.Plugin;
-//using LinkOS.Plugin.Abstractions;
+using LinkOS.Plugin;
+using LinkOS.Plugin.Abstractions;
 using Android;
 using Android.Bluetooth;
 using Android.Content.PM;
@@ -10,10 +10,10 @@ using Android.Support.V4.Content;
 using Android.Support.Design.Widget;
 using Facile.Droid.Interfaces;
 
-//[assembly: Xamarin.Forms.Dependency(typeof(PrinterDiscovery))] 
+[assembly: Xamarin.Forms.Dependency(typeof(PrinterDiscovery))] 
 namespace Facile.Droid.Interfaces
 {
-	/*
+	
 	public class PrinterDiscovery : IPrinterDiscovery
 	{
 		public PrinterDiscovery() { }
@@ -64,5 +64,4 @@ namespace Facile.Droid.Interfaces
 			}
 		}
 	}
-*/
 }

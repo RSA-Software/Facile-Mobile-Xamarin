@@ -72,7 +72,9 @@ namespace Facile
 				test = await ImportTableAsync<Marchi>("marchi", m_mar_download, m_mar_unzip, m_mar_json, m_mar_load, m_mar, m_mar_rec);
 				test = await ImportTableAsync<Associazioni>("associaz", m_asg_download, m_asg_unzip, m_asg_json, m_asg_load, m_asg, m_asg_rec);
 				test = await ImportTableAsync<Barcode>("barcode", m_bar_download, m_bar_unzip, m_bar_json, m_bar_load, m_bar, m_bar_rec);
-
+				test = await ImportTableAsync<Trasporti>("trasport", m_tra_download, m_tra_unzip, m_tra_json, m_tra_load, m_tra, m_tra_rec);
+				test = await ImportTableAsync<Agganci>("agganci1", m_agg_download, m_agg_unzip, m_agg_json, m_agg_load, m_agg, m_agg_rec);
+				test = await ImportTableAsync<Descrizioni>("descriz1", m_des_download, m_des_unzip, m_des_json, m_des_load, m_des, m_des_rec);
 
 				await DisplayAlert("Facile", "Importazione dati conclusa regolarmente!", "Ok");
 			}

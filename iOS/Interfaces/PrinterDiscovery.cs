@@ -1,13 +1,12 @@
 ﻿using System;
 using Facile.Interfaces;
 using Facile.iOS.Interfaces;
-//using LinkOS.Plugin;
-//using LinkOS.Plugin.Abstractions;
+using LinkOS.Plugin;
+using LinkOS.Plugin.Abstractions;
 
-//[assembly: Xamarin.Forms.Dependency(typeof(PrinterDiscovery))]
+[assembly: Xamarin.Forms.Dependency(typeof(PrinterDiscovery))]
 namespace Facile.iOS.Interfaces
 {
-	/*
 	public class PrinterDiscovery : IPrinterDiscovery
 	{
 		public PrinterDiscovery() { }
@@ -31,5 +30,4 @@ namespace Facile.iOS.Interfaces
 			throw new NotImplementedException();
 		}
 	}
-	*/
 }

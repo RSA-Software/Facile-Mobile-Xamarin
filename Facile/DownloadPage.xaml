@@ -62,6 +62,9 @@
 	                <RowDefinition Height="35" />
 	                <RowDefinition Height="35" />
 	                <RowDefinition Height="35" />
+					<RowDefinition Height="35" />
+					<RowDefinition Height="35" />
+					<RowDefinition Height="35" />
 	            </Grid.RowDefinitions>
 
 	            <Grid.ColumnDefinitions>
@@ -261,7 +264,28 @@
 	            <Image Grid.Row="26" Grid.Column="3" Source="" x:Name="m_bar_json"/>
 	            <Image Grid.Row="26" Grid.Column="4" Source="" x:Name="m_bar_load"/>
 				<Label Grid.Row="26" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_bar_rec"/>
-	                
+
+	            <Label Grid.Row="27" Grid.Column="0"  Text="Cau. Trasporto" FontAttributes="Bold" TextColor="White" x:Name="m_tra"/>
+	            <Image Grid.Row="27" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_tra_download"/>
+	            <Image Grid.Row="27" Grid.Column="2" Source="" x:Name="m_tra_unzip"/>
+	            <Image Grid.Row="27" Grid.Column="3" Source="" x:Name="m_tra_json"/>
+	            <Image Grid.Row="27" Grid.Column="4" Source="" x:Name="m_tra_load"/>
+				<Label Grid.Row="27" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_tra_rec"/>
+
+	            <Label Grid.Row="28" Grid.Column="0"  Text="Agganci Doc." FontAttributes="Bold" TextColor="White" x:Name="m_agg"/>
+	            <Image Grid.Row="28" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_agg_download"/>
+	            <Image Grid.Row="28" Grid.Column="2" Source="" x:Name="m_agg_unzip"/>
+	            <Image Grid.Row="28" Grid.Column="3" Source="" x:Name="m_agg_json"/>
+	            <Image Grid.Row="28" Grid.Column="4" Source="" x:Name="m_agg_load"/>
+				<Label Grid.Row="28" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_agg_rec"/>
+
+	            <Label Grid.Row="29" Grid.Column="0"  Text="Note Doc." FontAttributes="Bold" TextColor="White" x:Name="m_des"/>
+	            <Image Grid.Row="29" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_des_download"/>
+	            <Image Grid.Row="29" Grid.Column="2" Source="" x:Name="m_des_unzip"/>
+	            <Image Grid.Row="29" Grid.Column="3" Source="" x:Name="m_des_json"/>
+	            <Image Grid.Row="29" Grid.Column="4" Source="" x:Name="m_des_load"/>
+				<Label Grid.Row="29" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_des_rec"/>
+
 	        </Grid>
 	    </StackLayout>
     </ScrollView>

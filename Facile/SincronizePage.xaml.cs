@@ -20,9 +20,9 @@ namespace Facile
 		}
 
 
-		void OnDownloadImages(object sender, System.EventArgs e)
+		async void OnDownloadImages(object sender, System.EventArgs e)
 		{
-			throw new NotImplementedException();
+			await Navigation.PushModalAsync(new DownloadImages());
 		}
 
 
