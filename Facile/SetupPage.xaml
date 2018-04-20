@@ -2,6 +2,8 @@
 <ContentPage Title="Impostazioni"
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+	xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
     x:Class="Facile.SetupPage">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness"
@@ -10,7 +12,9 @@
         </OnPlatform>
     </ContentPage.Padding>
 
-    <StackLayout>
+	 <ScrollView>
+	<AbsoluteLayout>
+    <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Lime">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
@@ -42,25 +46,23 @@
 		</Grid>
 
 
-		<StackLayout
-        	HorizontalOptions="FillAndExpand"
-        	VerticalOptions="FillAndExpand"
-        	Margin ="50">
-        	<Button x:Name="btnScan" Text="Scan"/>
-        	<Button x:Name="btnPrint" Text="Print"/>
-        	<ListView x:Name="lstDevices" >
-				<ListView.ItemTemplate>
+			
+        	<Button x:Name="btnScan" Text="Cerca Stampanti" HorizontalOptions="Center" WidthRequest="200"/>
+        	<Button x:Name="btnPrint" Text="Prova Stampa" HorizontalOptions="Center" WidthRequest="200"/>
+        	<syncfusion:SfListView x:Name="lstDevices" AutoFitMode="Height" SelectionMode="Single" ItemTapped="Handle_ItemTapped">
+				<syncfusion:SfListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell >
-                        <StackLayout Orientation="Horizontal" Margin="7,0,7,0">
-							<Label Text="{Binding FriendlyName}" TextColor="Gray" FontSize="13"/>
-                            <Label Text="{Binding Address}"  TextColor="Navy"/>
+                        <StackLayout Margin="7,0,7,0">
+							<Label Text="{Binding FriendlyName,StringFormat='Stampante : {0}' }" TextColor="Navy" FontAttributes="Bold" FontSize="16" />
+                            <Label Text="{Binding Address}"  TextColor=" Black" VerticalTextAlignment="Start"/>
                        	</StackLayout>
-                    </ViewCell>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-			</ListView>
-    	</StackLayout>
+            </syncfusion:SfListView.ItemTemplate>
+			</syncfusion:SfListView>
+			
 		
 	</StackLayout>
+		<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="SlicedCircle" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+	</AbsoluteLayout>
+	</ScrollView>
 </ContentPage>

@@ -13,31 +13,32 @@ namespace Facile
 {
     public partial class SetupPage : ContentPage
     {
-		public delegate void PrinterSelectedHandler(IDiscoveredPrinter printer);
-		//public static event PrinterSelectedHandler OnPrinterSelected;
-		ObservableCollection<IDiscoveredPrinter> printers = new ObservableCollection<IDiscoveredPrinter>();
-		protected IDiscoveredPrinter ChoosenPrinter;
+		ObservableCollection<IDiscoveredPrinter> printers;
+
 
         public SetupPage()
         {
+			printers = new ObservableCollection<IDiscoveredPrinter>();
+
             InitializeComponent();
             BindingContext = Application.Current;
 
 			var app = (App)Application.Current;
-			if (app.Printer != null) printers.Add(app.Printer);
-
+			if (app.printer != null) printers.Add(app.printer);
 
 			lstDevices.ItemsSource = printers;
 			if (printers.Count > 0)
 			{
-				lstDevices.SelectedItem = 0;
-
+				lstDevices.SelectedItem = app.printer;
 			}
-			lstDevices.ItemSelected += LstDevices_ItemSelected;
+
+			btnPrint.IsEnabled = false;
 			btnScan.Clicked += (sender, e) =>
 			{
+				busyIndicator.IsBusy = true;
+				btnScan.Text = "Ricerca in Corso";
+				btnScan.IsEnabled = false;
 				IsBusy = true;
-				//loading.IsRunning = true;
 				Task.Run(() => 
 				{
 					StartBluetoothDiscovery();
@@ -46,29 +47,12 @@ namespace Facile
 			btnPrint.Clicked += BtnPrint_Clicked; ;
         }
 
-        async protected override void OnDisappearing()
-        {
-            base.OnDisappearing();
-            await Application.Current.SavePropertiesAsync();
-        }
-
-		void LstDevices_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+		void Handle_ItemTapped(object sender, Syncfusion.ListView.XForms.ItemTappedEventArgs e)
 		{
-			//Stop searching for bluetooth devices/printers
 			DependencyService.Get<IPrinterDiscovery>().CancelDiscovery();
-
-			//Object type for printers returned are DiscoveredPrinters, theres an additional type that says USB but is not the target of this project
-			//We assign now the printer selected from the list.
-
-
-			ChoosenPrinter = e.SelectedItem as IDiscoveredPrinter;
-
 			var app = (App)Application.Current;
-			app.Printer = e.SelectedItem as IDiscoveredPrinter;
-
-
-			int x = 1;
-			x++;
+			app.printer = e.ItemData as IDiscoveredPrinter;
+			btnPrint.IsEnabled = true;
 		}
 
 		async void BtnPrint_Clicked(object sender, System.EventArgs e)
@@ -76,14 +60,14 @@ namespace Facile
 			IConnection connection = null;
 
 			var app = (App)Application.Current;
-			if (app.Printer == null)
+			if (app.printer == null)
 			{
 				await DisplayAlert("Attenzione...", "Non è stata selezionata alcuna stampante!", "OK");
 				return;
 			}
 			try
 			{
-				connection = app.Printer.Connection;
+				connection = app.printer.Connection;
 				connection.Open();
 				IZebraPrinter printer = ZebraPrinterFactory.Current.GetInstance(connection);
 				if ((!CheckPrinterLanguage(connection)) || (!PreCheckPrinterStatus(printer)))
@@ -123,11 +107,10 @@ namespace Facile
 
 		private void DiscoveryHandler_OnFoundPrinter(object sender, IDiscoveredPrinter discoveredPrinter)
 		{
-
 			Debug.WriteLine("Found Printer:" + discoveredPrinter.ToString());
-			Device.BeginInvokeOnMainThread(() => {
+			Device.BeginInvokeOnMainThread(() => 
+			{
 				lstDevices.BatchBegin();
-
 				if (!printers.Contains(discoveredPrinter))
 				{
 					printers.Add(discoveredPrinter);
@@ -139,23 +122,31 @@ namespace Facile
 		private void DiscoveryHandler_OnDiscoveryFinished(object sender)
 		{
 			Debug.WriteLine("Discovery Finished");
-			Device.BeginInvokeOnMainThread(() => {
-				//loading.IsRunning = false;
+			Device.BeginInvokeOnMainThread(() => 
+			{
 				IsBusy = false;
 			});
+			btnScan.Text = "Cerca Stampanti";
+			btnScan.TextColor = Color.Black;
+			btnScan.IsEnabled = true;
+			busyIndicator.IsBusy = false;
 		}
 
 		private void DiscoveryHandler_OnDiscoveryError(object sender, string message)
 		{
 			Debug.WriteLine("On Discovery Error");
 			Debug.WriteLine(message);
+			btnScan.Text = "Cerca Stampanti";
+			btnScan.TextColor = Color.Black;
+			btnScan.IsEnabled = true;
+			busyIndicator.IsBusy = false;
 		}
 
 		//Connect and send to print
 		private async void PrintLineMode()
 		{
 			var app = (App)Application.Current;
-			if (app.Printer == null)
+			if (app.printer == null)
 			{
 				await DisplayAlert("Attenzione...", "Non è stata slezionata alcuna stampante!", "OK");
 				return;
@@ -166,7 +157,7 @@ namespace Facile
 			{
 
 				//connection = ChoosenPrinter.Connection;
-				connection = app.Printer.Connection;
+				connection = app.printer.Connection;
 				connection.Open();
 				IZebraPrinter printer = ZebraPrinterFactory.Current.GetInstance(connection);
 				if ((!CheckPrinterLanguage(connection)) || (!PreCheckPrinterStatus(printer)))
@@ -271,7 +262,7 @@ namespace Facile
 			var app = (App)Application.Current;
 
 			//if (ChoosenPrinter == null)
-			if (app.Printer == null)
+			if (app.printer == null)
 			{
 				Debug.WriteLine("Please Select a printer");
 				//SelectPrinter();

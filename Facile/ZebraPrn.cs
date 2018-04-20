@@ -877,10 +877,11 @@ namespace Facile
 			bool rewrite = false;
 
 		
-			if (app.Printer == null)
+			if (app.printer == null)
 			{
 				await _parent.DisplayAlert("Attenzione...", "Non è stata selezionata alcuna stampante!", "OK");
-				return(false);
+				await _parent.Navigation.PushAsync(new SetupPage());
+				return (false);
 			}
 
 			//
@@ -895,7 +896,7 @@ namespace Facile
 
 			try
 			{
-				_con = app.Printer.Connection;
+				_con = app.printer.Connection;
 				_con.Open();
 				_prn = ZebraPrinterFactory.Current.GetInstance(_con);
 

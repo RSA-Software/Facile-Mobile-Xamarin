@@ -1,4 +1,11 @@
-﻿using LinkOS.Plugin.Abstractions;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.IO;
+using LinkOS.Plugin;
+using LinkOS.Plugin.Abstractions;
+using Newtonsoft.Json;
+using PCLStorage;
 using Xamarin.Forms;
 
 namespace Facile
@@ -11,22 +18,51 @@ namespace Facile
         private const string FtpSslKey = "FtpSsl";
 		private const string PrinterKey  = "Printer";
 
+		public IDiscoveredPrinter printer;
 
         public App()
         {
-            InitializeComponent();
-
-            MainPage = new NavigationPage(new FacilePage());
+			printer = null;
+			InitializeComponent();
+			MainPage = new NavigationPage(new FacilePage());
         }
 
-        protected override void OnStart()
+        async protected override void OnStart()
         {
-            // Handle when your app starts
+			
+			//IFolder rootFolder = FileSystem.Current.LocalStorage;
+			//string path = rootFolder.Path + "/" + "PRINTER.JSON";
+
+			//IFile file = await rootFolder.CreateFileAsync(path, CreationCollisionOption.OpenIfExists);
+			//if (file != null)
+			//{
+			//	var settings = new JsonSerializerSettings();
+			//	settings.DateFormatString = "dd/MM/yyyy HH:mm:ss";
+			//	settings.NullValueHandling = NullValueHandling.Ignore;
+
+			//	string str = await file.ReadAllTextAsync();
+			//	printer = JsonConvert.DeserializeObject<IDiscoveredPrinter>(str, settings);
+
+			//	int x = 1;
+			//}
         }
 
         protected async override void OnSleep()
         {
-			IDiscoveredPrinter printer = Printer;
+			//if (printer != null)
+			//{
+			//	IFolder rootFolder = FileSystem.Current.LocalStorage;
+			//	string path = rootFolder.Path + "/" + "PRINTER.JSON";
+
+			//	var settings = new JsonSerializerSettings();
+			//	settings.DateFormatString = "dd/MM/yyyy HH:mm:ss";
+			//	settings.NullValueHandling = NullValueHandling.Ignore;
+
+
+			//	string output = JsonConvert.SerializeObject(printer, settings);
+			//	IFile json_file = await rootFolder.CreateFileAsync(path,CreationCollisionOption.ReplaceExisting);
+			//	await json_file.WriteAllTextAsync(output); 
+			//}
 
 			await SavePropertiesAsync();
         }
@@ -36,6 +72,7 @@ namespace Facile
             // Handle when your app resumes
         }
 
+		/*
 		public IDiscoveredPrinter Printer
 		{
 			get
@@ -54,7 +91,7 @@ namespace Facile
 			}
 
 		}
-
+*/
 
         public string FtpServer 
         {
