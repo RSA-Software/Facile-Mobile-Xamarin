@@ -11,6 +11,7 @@ using Facile.Models;
 using Facile.Utils;
 using LinkOS.Plugin;
 using LinkOS.Plugin.Abstractions;
+using PCLStorage;
 using SQLite;
 using Xamarin.Forms;
 using static Facile.Extension.FattureExtensions;
@@ -58,18 +59,34 @@ namespace Facile
 
 			int col = 0;
 			int last_hor = 0;
+			string logo = "";
+
+
+			IFolder rootFolder = FileSystem.Current.LocalStorage;
+			string path = rootFolder.Path + "/images/" + "logo.prn";
+
+			IFile file = await rootFolder.CreateFileAsync(path, CreationCollisionOption.OpenIfExists);
+			if (file != null)
+			{
+				
+				logo = await file.ReadAllTextAsync();
+			}
+
 
 			string str = "^XA" +      // Inizializziamo la stampa
 				"^PW800" +            // Settiamo la Larghezza
 				"^MN" +               // Settiamo la stampa in continuos mode
+				"^POI" +
 				"^LH0,0";             // Settiamo la posizione Iniziale
+			
 
 			// Settiamo la lunghezza iniziale del modulo
 			str = str + $"^LL{_mod_len}";
 
+			if (logo != "") str = str + logo;
 
 			col = 0;
-			row= 38 * 8;
+			row= 30 * 8;
 
 			// Scriviamo il Tipo di Documento
 			string num = "";
@@ -279,7 +296,7 @@ namespace Facile
 
 			PostPrintCheckStatus();
 			row += 3;
-			return (90 * 8);
+			return (82 * 8);
 		}
 
 		public async Task<int> PrintDocBodyAsync(Fatture doc, int row, bool stprice)
@@ -327,7 +344,7 @@ namespace Facile
 						if (rig.rig_scadenza.Year > 1900)
 							dati = string.Format("Lotto {0} Scadenza {1:dd/MM/yyyy}", rig.rig_lotto.Trim(), rig.rig_scadenza);
 						else
-							dati = string.Format("Lotto {0}}", rig.rig_lotto.Trim());
+							dati = string.Format("Lotto {0}", rig.rig_lotto.Trim());
 
 						str = str + $"^FO{col},{row}" + "^A0,N,23,23" + $"^FD{dati}^FS";
 						row += 3 * 8;
@@ -760,7 +777,7 @@ namespace Facile
 
 				col = 66 * 8;
 				num = string.Format("{0:#,##0.00}", doc.fat_tot_fattura);
-				str = str + $"^FO{col},{row + 16 * 8}" + "^A0,N,25,25" + $"^FB{34 * 8},1,0,C,0^FD{num}^FS";
+				str = str + $"^FO{col},{row + 16 * 8}" + "^A0,N,35,35" + $"^FB{34 * 8},1,0,C,0^FD{num}^FS";
 			}
 			else  // DDT
 			{
@@ -844,7 +861,7 @@ namespace Facile
 
 		int CalcLength(bool stprice)
 		{
-			int len = 90;	// Dimensione Header
+			int len = 82;	// Dimensione Header
 			len += 55;      // Dimensione Footer
 
 			len += 1; // Millimetro lasciato prima della prima riga del body

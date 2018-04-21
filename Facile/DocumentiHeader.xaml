@@ -3,6 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:syncfusion="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+	xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
     x:Class="Facile.DocumentiHeader">
 <!--
     <ContentPage.ToolbarItems>
@@ -14,7 +15,8 @@
     </ContentPage.ToolbarItems>
 -->
     <ScrollView>
-        <StackLayout Padding="7,7,7,0">
+		<AbsoluteLayout>
+        <StackLayout Padding="7,7,7,0" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
             <Grid HorizontalOptions="FillAndExpand" x:Name="section_num">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="110" />
@@ -78,7 +80,8 @@
             </StackLayout>
                 
         </StackLayout>
-
+			<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="SlicedCircle" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        </AbsoluteLayout>
     </ScrollView>
 
 </ContentPage>

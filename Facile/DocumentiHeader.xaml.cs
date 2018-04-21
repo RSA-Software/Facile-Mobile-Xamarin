@@ -26,18 +26,11 @@ namespace Facile
 		private Clienti _cli;
 		private Destinazioni _dst;
 
-		//ObservableCollection<IDiscoveredPrinter> printerList;
-		//ListView printerLv;
-		//ConnectionType connetionType;
-
 		public DocumentiHeader(DocumentiEdit par)
 		{
 			_parent = par;
 			_first = true;
 			_dbcon = DependencyService.Get<ISQLiteDb>().GetConnection();
-
-			//printerList = new ObservableCollection<IDiscoveredPrinter>();
-			//printerLv = new ListView();
 
 			InitializeComponent();
 			SetProtection();
@@ -257,6 +250,7 @@ namespace Facile
 		{
 			if (_parent.nuova) return;
 
+			busyIndicator.IsBusy = true;
 			var sql = string.Format("SELECT * FROM fatture2 WHERE fat_tipo = {0} AND fat_n_doc < {1} ORDER BY  fat_tipo, fat_n_doc  DESC LIMIT 1", _parent.doc.fat_tipo, _parent.doc.fat_n_doc); 
 
 			try
@@ -280,14 +274,18 @@ namespace Facile
 				await DisplayAlert("Attenzione!", ex.Message, "OK");
 				return;
 			}
+			finally
+			{
+				busyIndicator.IsBusy = false;
+			}
 		}
 
 		async void OnClickSucc(object sender, System.EventArgs e)
 		{
 			if (_parent.nuova) return;
 
+			busyIndicator.IsBusy = true;
 			var sql = string.Format("SELECT * FROM fatture2 WHERE fat_tipo = {0} AND fat_n_doc > {1} ORDER BY fat_tipo, fat_n_doc LIMIT 1", _parent.doc.fat_tipo, _parent.doc.fat_n_doc);
-
 			try
 			{
 				var docList = await _dbcon.QueryAsync<Fatture>(sql);
@@ -307,6 +305,10 @@ namespace Facile
 			{
 				await DisplayAlert("Attenzione!", ex.Message, "OK");
 				return;
+			}
+			finally
+			{
+				busyIndicator.IsBusy = false; 
 			}
 		}
 
@@ -378,8 +380,10 @@ namespace Facile
 
 			// Effettuare il ricalcolo
 
+			busyIndicator.IsBusy = true;
 			var prn = new ZebraPrn(this);
 			await prn.PrintDoc(_parent.doc);
+			busyIndicator.IsBusy = false;
 		}
 		/*
 		private void StartUSBDiscovery()
