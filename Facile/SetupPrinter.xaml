@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Impostazione Stampante"
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+	xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+	x:Class="Facile.SetupPrinter">
+
+	<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+            iOS="10,10,10,0"
+            Android="10,10,10,0">
+        </OnPlatform>
+    </ContentPage.Padding>
+
+	 <ScrollView>
+		<AbsoluteLayout>
+    		<StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" >
+        		<Button x:Name="btnScan" Text="Cerca Stampanti" HorizontalOptions="Center" WidthRequest="200" BackgroundColor="#009EDA" />
+        		<Button x:Name="btnPrint" Text="Prova Stampa" HorizontalOptions="Center" WidthRequest="200" BackgroundColor="#009EDA" Margin="0,10"/>
+        		<Label x:Name="elenco" Text="Elenco Stampanti" HorizontalTextAlignment="Center" TextColor="Red" Margin="0,10" FontAttributes="Bold"/>
+				
+        		<syncfusion:SfListView x:Name="lstDevices" AutoFitMode="Height" SelectionMode="Single" ItemTapped="Handle_ItemTapped">
+					<syncfusion:SfListView.ItemTemplate>
+                		<DataTemplate>
+                        	<StackLayout Margin="7,0,7,0">
+								<Label Text="{Binding FriendlyName,StringFormat='Stampante : {0}' }" TextColor="Navy" FontAttributes="Bold"/>
+                            	<Label Text="{Binding Address}"  TextColor=" Black" VerticalTextAlignment="Start"/>
+                       		</StackLayout>
+                		</DataTemplate>
+            		</syncfusion:SfListView.ItemTemplate>
+				</syncfusion:SfListView>
+				
+			</StackLayout>
+			<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="SlicedCircle" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+		</AbsoluteLayout>
+	</ScrollView>
+</ContentPage>

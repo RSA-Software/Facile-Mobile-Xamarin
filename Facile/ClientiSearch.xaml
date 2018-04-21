@@ -10,12 +10,19 @@
         <syncfusion:SfListView x:Name="listView" AutoFitMode="Height" SelectionMode="Single" Padding="7,0,7,0" >
             <syncfusion:SfListView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout>
-                        <Label Text="{Binding cli_desc}" FontAttributes="Bold" HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap"/>
-                        <Label Text="{Binding cli_indirizzo}" TextColor="Gray" FontSize="13"/>
-                        <Label Text="{Binding cli_citta}" TextColor="Gray" FontSize="13"/>
-                        <BoxView HeightRequest="1" WidthRequest="1" Color="Silver"/>
-                    </StackLayout>
+					<StackLayout Orientation="Horizontal"> 
+						<StackLayout>
+							<Image Source="ic_cloud_black.png" VerticalOptions="Center"/>
+						</StackLayout>
+	                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+	                        <Label Text="{Binding cli_desc}" FontAttributes="Bold" HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap"/>
+    	                    <Label Text="{Binding cli_indirizzo}" TextColor="Gray" FontSize="13"/>
+        	                <Label Text="{Binding cli_citta}" TextColor="Gray" FontSize="13"/>
+            	        	<BoxView HeightRequest="1" WidthRequest="1" Color="Silver"/>    
+                	    </StackLayout>
+						
+					</StackLayout>
+
                 </DataTemplate>
             </syncfusion:SfListView.ItemTemplate>    
         </syncfusion:SfListView>

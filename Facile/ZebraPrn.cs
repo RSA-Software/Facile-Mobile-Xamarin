@@ -852,7 +852,6 @@ namespace Facile
 				"^LL80" +           // Settiamo la posizione Iniziale
 				"^XZ";
 
-			str = str + "^XZ";
 			t = new UTF8Encoding().GetBytes(str);
 			_con.Write(t);
 
@@ -896,8 +895,8 @@ namespace Facile
 		
 			if (app.printer == null)
 			{
-				await _parent.DisplayAlert("Attenzione...", "Non è stata selezionata alcuna stampante!", "OK");
-				await _parent.Navigation.PushAsync(new SetupPage());
+				await _parent.DisplayAlert("Attenzione...", "Selezionare una stampante e riprovare!", "OK");
+				await _parent.Navigation.PushAsync(new SetupPrinter());
 				return (false);
 			}
 
@@ -1049,6 +1048,84 @@ namespace Facile
 
 			return(result);
 		}
+
+
+		public async Task<bool> PrintTest()
+		{
+			bool result = false;
+			var app = (App)Application.Current;
+
+			if (app.printer == null)
+			{
+				await _parent.DisplayAlert("Attenzione...", "Non è stata selezionata alcuna stampante!", "OK");
+				return(result);
+			}
+			try
+			{
+				_con = app.printer.Connection;
+				_con.Open();
+				_prn = ZebraPrinterFactory.Current.GetInstance(_con);
+
+				var rec =  await dbcon_.QueryAsync<int>("SELECT COUNT(*) FROM canali");
+
+				Initialize();
+
+				String tmpHeader =
+					"^XA" +
+
+					"^POI^PW800^MNN^LL325^LH0,0" + "\r\n" +
+
+					"^FO0,50" + "\r\n" + "^A0,N,80,80" + "\r\n" + "^FB800,1,0,C,0^FDRSA Software^FS" + "\r\n" +
+
+					"^FO0,170" + "\r\n" + "^A0,N,45,45" + "\r\n" + "^FB800,1,0,C,0^FDFacile Mobile Edition^FS" + "\r\n" +
+						
+					"^FO0,220" + "\r\n" + "^A0,N,30,30" + "\r\n" + "^FB800,1,0,C,0^FD{0}^FS" + "\r\n" +
+	
+					"^FO0,300" + "\r\n\n\n\n\n\n\n\n\n" + "^GB800,5,5,B,0^FS" + "^XZ";
+
+				DateTime date = DateTime.Now;
+				string dateString = date.ToString("dd MMMM yyyy");
+					
+				string header = string.Format(tmpHeader, dateString);
+				var t = new UTF8Encoding().GetBytes(header);
+				_con.Write(t);
+
+
+				//
+				// Settiamo la lunghezza del modulo ad 1 cm
+				//
+				header = "^XA" +        // Inizializziamo la stampa
+					"^PW800" +          // Settiamo la Larghezza
+					"^MNN" +            // Settiamo la stampa in continuos mode
+					"^LH0,0" +          // Settiamo la posizione Iniziale
+					"^LL80" +           // Settiamo la posizione Iniziale
+					"^XZ";
+
+				t = new UTF8Encoding().GetBytes(header);
+				_con.Write(t);
+
+				result = true;
+			}
+			catch (ZebraExceptions ex)
+			{
+				await _parent.DisplayAlert("Errore!", ex.Message, "OK");
+			}
+			catch (Exception ex)
+			{
+				// Connection Exceptions and issues are caught here
+				Debug.WriteLine(ex.Message);
+				await _parent.DisplayAlert("Errore!", ex.Message, "OK");
+			}
+			finally
+			{
+				_con.Open();
+				if ((_con != null) && (_con.IsConnected)) _con.Close();
+				_con = null;
+				_prn = null;
+			}
+			return (result);
+		}
+
 
 
 		protected void SetZplPrinterLanguage()

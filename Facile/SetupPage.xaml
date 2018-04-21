@@ -2,8 +2,6 @@
 <ContentPage Title="Impostazioni"
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-	xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
-	xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
     x:Class="Facile.SetupPage">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness"
@@ -13,56 +11,38 @@
     </ContentPage.Padding>
 
 	 <ScrollView>
-	<AbsoluteLayout>
-    <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Lime">
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+		<AbsoluteLayout>
+		    <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+	    	    <Grid>
+	        	    <Grid.ColumnDefinitions>
+	            	    <ColumnDefinition Width="Auto" />
+	                	<ColumnDefinition Width="*" />
+	            	</Grid.ColumnDefinitions>
 
-            <Grid.RowDefinitions>
-				<RowDefinition Height="40"/>
-				<RowDefinition Height="40"/>
-				<RowDefinition Height="40"/>
-				<RowDefinition Height="40"/>
-			</Grid.RowDefinitions>
-			
-            <!-- Prima Riga -->
-            <Label Grid.Row="0" Grid.Column="0" Text="FTP Server"/>
-            <Entry Grid.Row="0" Grid.Column="1" Keyboard="Url" Placeholder="FTP Server" Text="{Binding FtpServer}" TextColor="Black"/> 
+	            	<Grid.RowDefinitions>
+						<RowDefinition Height="40"/>
+						<RowDefinition Height="40"/>
+						<RowDefinition Height="40"/>
+						<RowDefinition Height="40"/>
+					</Grid.RowDefinitions>
+				
+	            	<!-- Prima Riga -->
+	            	<Label Grid.Row="0" Grid.Column="0" Text="FTP Server"/>
+	            	<Entry Grid.Row="0" Grid.Column="1" Keyboard="Url" Placeholder="FTP Server" Text="{Binding FtpServer}" TextColor="Black"/> 
 
-            <!-- Seconda Riga -->
-            <Label Grid.Row="1" Grid.Column="0" Text="User"/>
-            <Entry Grid.Row="1" Grid.Column="1" Keyboard="Default" Placeholder="FTP User" Text="{Binding FtpUser}"/> 
+	            	<!-- Seconda Riga -->
+	            	<Label Grid.Row="1" Grid.Column="0" Text="User"/>
+	            	<Entry Grid.Row="1" Grid.Column="1" Keyboard="Default" Placeholder="FTP User" Text="{Binding FtpUser}"/> 
 
-            <!-- Terza Riga -->
-            <Label Grid.Row="2" Grid.Column="0" Text="Password"/>
-            <Entry Grid.Row="2" Grid.Column="1" Keyboard="Default" IsPassword="true" Placeholder="FTP Password" Text="{Binding FtpPassword}"/> 
-            
-            <!-- Quarta Riga -->
-            <Label Grid.Row="3" Grid.Column="0" Text="SSL"/>
-            <Switch Grid.Row="3" Grid.Column="1" HorizontalOptions="Start" IsToggled="{Binding FtpSsl}"/>
-		</Grid>
-
-
-			
-        	<Button x:Name="btnScan" Text="Cerca Stampanti" HorizontalOptions="Center" WidthRequest="200"/>
-        	<Button x:Name="btnPrint" Text="Prova Stampa" HorizontalOptions="Center" WidthRequest="200"/>
-        	<syncfusion:SfListView x:Name="lstDevices" AutoFitMode="Height" SelectionMode="Single" ItemTapped="Handle_ItemTapped">
-				<syncfusion:SfListView.ItemTemplate>
-                <DataTemplate>
-                        <StackLayout Margin="7,0,7,0">
-							<Label Text="{Binding FriendlyName,StringFormat='Stampante : {0}' }" TextColor="Navy" FontAttributes="Bold" FontSize="16" />
-                            <Label Text="{Binding Address}"  TextColor=" Black" VerticalTextAlignment="Start"/>
-                       	</StackLayout>
-                </DataTemplate>
-            </syncfusion:SfListView.ItemTemplate>
-			</syncfusion:SfListView>
-			
-		
-	</StackLayout>
-		<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="SlicedCircle" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional"/>
-	</AbsoluteLayout>
+	            	<!-- Terza Riga -->
+	            	<Label Grid.Row="2" Grid.Column="0" Text="Password"/>
+	            	<Entry Grid.Row="2" Grid.Column="1" Keyboard="Default" IsPassword="true" Placeholder="FTP Password" Text="{Binding FtpPassword}"/> 
+	            
+	            	<!-- Quarta Riga -->
+	            	<Label Grid.Row="3" Grid.Column="0" Text="SSL"/>
+	            	<Switch Grid.Row="3" Grid.Column="1" HorizontalOptions="Start" IsToggled="{Binding FtpSsl}"/>
+				</Grid>
+			</StackLayout>
+		</AbsoluteLayout>
 	</ScrollView>
 </ContentPage>

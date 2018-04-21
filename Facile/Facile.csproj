@@ -102,6 +102,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="SetupPrinter.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -214,6 +218,9 @@
     <Compile Include="Models\Trasporti.cs" />
     <Compile Include="Models\Agganci.cs" />
     <Compile Include="Models\Descrizioni.cs" />
+    <Compile Include="SetupPrinter.xaml.cs">
+      <DependentUpon>SetupPrinter.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MarkupExtensions\" />

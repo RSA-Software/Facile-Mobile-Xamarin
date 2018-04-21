@@ -27,11 +27,14 @@
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
+					<RowDefinition Height="auto" />
+					<RowDefinition Height="40" />
+					<RowDefinition Height="40" />
                 </Grid.RowDefinitions>
                 
                 <Label Text="Cliente" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy"/>
                 <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="1" HorizontalOptions="StartAndExpand" >
-                    <Entry x:Name="m_cli_cod" WidthRequest="130" HorizontalOptions="Start" Unfocused="OnCliCodUnfocused" Keyboard="Numeric" HorizontalTextAlignment="End"/>
+                    <Entry x:Name="m_cli_cod" WidthRequest="90" HorizontalOptions="Start" Unfocused="OnCliCodUnfocused" Keyboard="Numeric" HorizontalTextAlignment="End"/>
                     <Button x:Name="m_search_cli" Image="ic_search_black.png" WidthRequest="60"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnClienteTapped"/>
                 </StackLayout>
 
@@ -43,7 +46,7 @@
 
                 <Label Text="Destinazione" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy"/>
                 <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="1" HorizontalOptions="StartAndExpand" >
-                    <Entry x:Name="m_dst_cod" WidthRequest="130" HorizontalOptions="Start" Unfocused="OnDstCodUnfocused" Keyboard="Numeric" HorizontalTextAlignment="End"/>
+                    <Entry x:Name="m_dst_cod" WidthRequest="90" HorizontalOptions="Start" Unfocused="OnDstCodUnfocused" Keyboard="Numeric" HorizontalTextAlignment="End"/>
                     <Button x:Name="m_search_dst" Image="ic_search_black.png" WidthRequest="60"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnDestinazioneTapped"/>
                 </StackLayout>
 
@@ -54,10 +57,11 @@
                 </StackLayout>
 
 
+					
                 <Label Text="Numero" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy"/>
 
                 <StackLayout Orientation="Horizontal" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="StartAndExpand">
-                    <syncfusion:SfNumericTextBox  x:Name="m_n_doc" WidthRequest="130" ParserMode="Decimal" HeightRequest="30" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold" />
+                    <syncfusion:SfNumericTextBox  x:Name="m_n_doc" WidthRequest="90" ParserMode="Decimal" HeightRequest="30" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold" />
                     <Label Text="Registro" VerticalOptions = "Center" FontAttributes="Bold" TextColor="Navy"/>
                     <Label x:Name="fat_registro" WidthRequest="30"  VerticalTextAlignment="Center"  FontAttributes="Bold"/>
                 </StackLayout>
@@ -65,8 +69,10 @@
 
                 <Label Text="Data" Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy"/>
                 <StackLayout Orientation="Horizontal" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1" HorizontalOptions="StartAndExpand">
-                    <DatePicker x:Name="m_d_doc" Format="dd/MM/yyyy" WidthRequest="130" HeightRequest="30"  TextColor="Black"/>
+                    <DatePicker x:Name="m_d_doc" Format="dd/MM/yyyy" WidthRequest="110" HeightRequest="30"  TextColor="Black"/>
                 </StackLayout>
+
+					
                 
             </Grid>
 
