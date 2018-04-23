@@ -17,65 +17,49 @@
     <ScrollView>
 		<AbsoluteLayout>
         <StackLayout Padding="7,7,7,0" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
-            <Grid HorizontalOptions="FillAndExpand" x:Name="section_num">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="110" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>  
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-					<RowDefinition Height="auto" />
-					<RowDefinition Height="40" />
-					<RowDefinition Height="40" />
-                </Grid.RowDefinitions>
-                
-                <Label Text="Cliente" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy"/>
-                <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="1" HorizontalOptions="StartAndExpand" >
-                    <Entry x:Name="m_cli_cod" WidthRequest="90" HorizontalOptions="Start" Unfocused="OnCliCodUnfocused" Keyboard="Numeric" HorizontalTextAlignment="End"/>
-                    <Button x:Name="m_search_cli" Image="ic_search_black.png" WidthRequest="60"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnClienteTapped"/>
-                </StackLayout>
+			<!--  Cliente  -->
+			<StackLayout Orientation="Horizontal"  HorizontalOptions="StartAndExpand" >
+               	<Label Text="Cliente" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy" WidthRequest="110"/>
+				<Entry x:Name="m_cli_cod" WidthRequest="90" HorizontalOptions="Start" Unfocused="OnCliCodUnfocused" Keyboard="Numeric" HorizontalTextAlignment="End"/>
+                <Button x:Name="m_search_cli" Image="ic_search_black.png" WidthRequest="90"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnClienteTapped"/>
+            </StackLayout>
 
-                <StackLayout HeightRequest="80" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand">
-                    <Label x:Name="cli_desc" LineBreakMode="TailTruncation" HorizontalOptions="StartAndExpand" FontAttributes="Bold" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
-                    <Label x:Name="cli_indirizzo" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
-                    <Label x:Name="cli_citta" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
-                </StackLayout>
+            <StackLayout HorizontalOptions="Fill">
+                <Label x:Name="cli_desc" LineBreakMode="TailTruncation" HorizontalOptions="Fill" FontAttributes="Bold" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+                <Label x:Name="cli_indirizzo" LineBreakMode="TailTruncation" HorizontalOptions="Fill" VerticalTextAlignment="Center"/>
+                <Label x:Name="cli_citta" LineBreakMode="TailTruncation" HorizontalOptions="Fill" VerticalTextAlignment="Center"/>
+            </StackLayout>
 
-                <Label Text="Destinazione" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy"/>
-                <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="1" HorizontalOptions="StartAndExpand" >
-                    <Entry x:Name="m_dst_cod" WidthRequest="90" HorizontalOptions="Start" Unfocused="OnDstCodUnfocused" Keyboard="Numeric" HorizontalTextAlignment="End"/>
-                    <Button x:Name="m_search_dst" Image="ic_search_black.png" WidthRequest="60"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnDestinazioneTapped"/>
-                </StackLayout>
+			<!--  Destinazione 	-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" >
+                <Label Text="Destinazione"  VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy" WidthRequest="110"/>
+				<Entry x:Name="m_dst_cod" WidthRequest="90" HorizontalOptions="Start" Unfocused="OnDstCodUnfocused" Keyboard="Numeric" HorizontalTextAlignment="End"/>
+                <Button x:Name="m_search_dst" Image="ic_search_black.png" WidthRequest="60"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnDestinazioneTapped"/>
+            </StackLayout>
 
-                <StackLayout HeightRequest="80" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand">
-                    <Label x:Name="dst_desc" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" FontAttributes="Bold" VerticalTextAlignment="Center"/>
-                    <Label x:Name="dst_indirizzo" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
-                    <Label x:Name="dst_citta" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
-                </StackLayout>
+            <StackLayout HorizontalOptions="Fill" MinimumHeightRequest="80">
+                <Label x:Name="dst_desc" LineBreakMode="TailTruncation" HorizontalOptions="Fill" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                <Label x:Name="dst_indirizzo" LineBreakMode="TailTruncation" HorizontalOptions="Fill" VerticalTextAlignment="Center"/>
+                <Label x:Name="dst_citta" LineBreakMode="TailTruncation" HorizontalOptions="Fill" VerticalTextAlignment="Center"/>
+            </StackLayout>
+				
+            
+            <!--  Numero  -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+				<Label Text="Numero" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy" WidthRequest="110"/>	
+                <syncfusion:SfNumericTextBox  x:Name="m_n_doc" WidthRequest="90" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold" />
+                <Label Text="Registro" VerticalOptions = "Center" FontAttributes="Bold" TextColor="Navy"/>
+                <Label x:Name="fat_registro"  VerticalTextAlignment="Center"  FontAttributes="Bold" FontSize="16" TextColor="Black"/>
+            </StackLayout>
 
+            <!-- Data -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+            	<Label Text="Data" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy" WidthRequest="110"/>
+				<DatePicker x:Name="m_d_doc" Format="dd/MM/yyyy" WidthRequest="130" TextColor="Black"/>
+            </StackLayout>
 
-					
-                <Label Text="Numero" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy"/>
-
-                <StackLayout Orientation="Horizontal" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="StartAndExpand">
-                    <syncfusion:SfNumericTextBox  x:Name="m_n_doc" WidthRequest="90" ParserMode="Decimal" HeightRequest="30" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold" />
-                    <Label Text="Registro" VerticalOptions = "Center" FontAttributes="Bold" TextColor="Navy"/>
-                    <Label x:Name="fat_registro" WidthRequest="30"  VerticalTextAlignment="Center"  FontAttributes="Bold"/>
-                </StackLayout>
-
-
-                <Label Text="Data" Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy"/>
-                <StackLayout Orientation="Horizontal" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1" HorizontalOptions="StartAndExpand">
-                    <DatePicker x:Name="m_d_doc" Format="dd/MM/yyyy" WidthRequest="110" HeightRequest="30"  TextColor="Black"/>
-                </StackLayout>
-
-					
-                
-            </Grid>
-
+			<!--  Pulsanti  -->
             <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" Padding="0,0,0,7">
                 <Button x:Name="m_prec" Image="ic_navigate_before_black.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" Clicked="OnClickPrec"/>
                 <Button x:Name="m_succ" Image="ic_navigate_next_black.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" Clicked="OnClickSucc"/>

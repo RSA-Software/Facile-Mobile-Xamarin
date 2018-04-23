@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Facile.Interfaces;
 using Facile.Models;
+using Facile.Utils;
 using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -49,20 +50,21 @@ namespace Facile
 			//
 			// Inizializziamo il documento
 			//
-
 			fat.fat_n_doc = 1;
 			fat.fat_tipo = (short)tipo_;
 			fat.fat_registro = "A";
 			fat.fat_d_doc = DateTime.Now;
 			fat.fat_editable = true;
+			fat.fat_local_doc = true;
 
 			try
 			{
-				var sql = string.Format("SELECT * from FATTURE2 WHERE fat_tipo = {0} ORDER BY fat_n_doc DESC LIMIT 1", (short)tipo_);
-				var docList = await dbcon_.QueryAsync<Fatture>(sql);
-				foreach (var doc in docList)
+				fat.fat_n_doc = 1;
+				var sql = string.Format("SELECT * FROM fatture2 WHERE fat_tipo = {0} AND fat_n_doc > {1} AND fat_n_doc <= {2} ORDER BY fat_n_doc DESC LIMIT 1", (short)tipo_, RsaUtils.GetFirstRegNumber("A"), RsaUtils.GetLastRegNumber("A"));
+				var list = await dbcon_.QueryAsync<Fatture>(sql);
+				foreach (var doc in list)
 				{
-					fat.fat_n_doc = doc.fat_n_doc + 1;
+					fat.fat_n_doc += doc.fat_n_doc;
 					break;
 				}
 			}

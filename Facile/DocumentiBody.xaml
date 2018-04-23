@@ -4,9 +4,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:Facile.Converters;assembly=Facile"
     xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+	xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
     x:Class="Facile.DocumentiBody">
 
-    <StackLayout Padding="0,0,0,5">
+	<AbsoluteLayout>
+    <StackLayout Padding="0,0,0,5" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
         <syncfusion:SfDataGrid x:Name="dataGrid" AllowResizingColumn="true" HorizontalOptions="FillAndExpand"  
             AutoGenerateColumns="False"
             AllowSwiping="true"
@@ -143,4 +145,7 @@
 
         <Button x:Name="m_add" Text=" Aggiungi " HorizontalOptions="Center" Image="ic_add_white.png" TextColor="White" BackgroundColor="#009EDA" Clicked="OnAddClicked" />
     </StackLayout>
+		<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="RollingBall" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+		
+	</AbsoluteLayout>
 </ContentPage>

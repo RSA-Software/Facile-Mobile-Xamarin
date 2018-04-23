@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using Facile.Interfaces;
 using Facile.Models;
@@ -17,11 +18,15 @@ namespace Facile
 		private ContentPage headerPage_;
 		private NavigationPage bodyPage_;
 		private NavigationPage footerPage_;
+		private DocumentiBody body_;
+
+		private int last_num_;
 
 		public DocumentiEdit(ref Fatture f, ref bool nuova)
 		{
 			this.doc = f;
 			this.nuova = nuova;
+			last_num_ = 0;
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 
 			InitializeComponent();
@@ -54,7 +59,8 @@ namespace Facile
 			headerPage_.Title = "Testata";
 			headerPage_.Icon = "ic_perm_identity_white.png";
 
-			bodyPage_ = new NavigationPage(new DocumentiBody(this));
+			body_ = new DocumentiBody(this);
+			bodyPage_ = new NavigationPage(body_);
 			bodyPage_.Title = "Corpo";
 			bodyPage_.Icon = "ic_view_headline_white.png";
 
@@ -65,8 +71,6 @@ namespace Facile
 			Children.Add(headerPage_);
 			Children.Add(bodyPage_);
 			Children.Add(footerPage_);
-
-
 		}
 
 		void OnChildAdded (object sender, ElementEventArgs e)
@@ -74,13 +78,21 @@ namespace Facile
 			e.Element.Parent = this;
 		}
 
-		void OnCurrentPageChanged(object sender, System.EventArgs e)
+		async void OnCurrentPageChanged(object sender, System.EventArgs e)
 		{
 			if (nuova && (CurrentPage == bodyPage_ || CurrentPage == footerPage_))
 			{
 				Device.BeginInvokeOnMainThread(() => {
 					CurrentPage = Children[0];
 				});
+			}
+			if (!nuova && CurrentPage == bodyPage_)
+			{
+				if (last_num_ == 0 || last_num_ != doc.fat_n_doc)
+				{
+					last_num_ = doc.fat_n_doc;
+					await body_.SetItemSource();
+				}
 			}
 		}
 	}

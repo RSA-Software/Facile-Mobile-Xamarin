@@ -357,6 +357,9 @@ namespace Facile.Models
 		// Viene impostata a true per i nuovi documenti che sono editabili fino all'invio
 		public bool fat_editable { get; set; }
 
+		// Viene impostata a true per i documenti inseriti sul dispositivo
+		public bool fat_local_doc { get; set; }
+
 		[Ignore]
 		public double des_imponibile_ivato_0 { get; set; }
 		[Ignore]

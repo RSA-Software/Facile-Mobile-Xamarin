@@ -27,7 +27,7 @@ namespace Facile
 			MainPage = new NavigationPage(new FacilePage());
         }
 
-        async protected override void OnStart()
+        protected override void OnStart()
         {
 			
 			//IFolder rootFolder = FileSystem.Current.LocalStorage;

@@ -37,7 +37,7 @@ namespace Facile
 
 			if (Device.Idiom == TargetIdiom.Phone && Device.RuntimePlatform == Device.Android)
 			{
-				searchBar.HeightRequest = 25;
+				searchBar.HeightRequest = 40;
 			}
 		}
 

@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using Facile.Interfaces;
 using Facile.Models;
+using Facile.Utils;
 //using LinkOS.Plugin;
 //using LinkOS.Plugin.Abstractions;
 using SQLite;
@@ -126,6 +127,8 @@ namespace Facile
 
 		protected async Task LoadRel()
 		{
+			_cli = null;
+			_dst = null;
 			if (_parent.doc.fat_inte != 0)
 			{
 				try
@@ -161,15 +164,29 @@ namespace Facile
 				cli_indirizzo.Text = _cli.cli_indirizzo;
 				cli_citta.Text = _cli.cli_citta;
 			}
+			else
+			{
+				m_cli_cod.Text = "0";
+				cli_desc.Text = "";
+				cli_indirizzo.Text = "";
+				cli_citta.Text = "";
+			}
 			if (_dst != null)
 			{
 				m_dst_cod.Text = _dst.dst_codice.ToString();
-				dst_desc.Text = _dst.dst_desc;	
 				dst_desc.Text = _dst.dst_desc;
 				dst_indirizzo.Text = _dst.dst_indirizzo;
 				dst_citta.Text = _dst.dst_citta;
 			}
-			m_n_doc.Value = _parent.doc.fat_n_doc % 700000000;
+			else
+			{
+				m_dst_cod.Text = "0";
+				dst_desc.Text = "";
+				dst_indirizzo.Text = "";
+				dst_citta.Text = "";
+			}
+
+			m_n_doc.Value = RsaUtils.GetShowedNumDoc(_parent.doc.fat_n_doc);
 			m_d_doc.Date = _parent.doc.fat_d_doc;
 			fat_registro.Text = _parent.doc.fat_registro;
 
@@ -179,7 +196,7 @@ namespace Facile
 		{
 			_parent.doc.fat_inte = Int32.Parse(m_cli_cod.Text);
 			_parent.doc.fat_dest = Int32.Parse(m_dst_cod.Text);
-			//doc_.fat_n_doc = fat_n_doc.Value + () % 700000000 +;
+			_parent.doc.fat_n_doc = RsaUtils.GetStoredNumDoc((int)m_n_doc.Value,fat_registro.Text); 
 			_parent.doc.fat_registro = fat_registro.Text;
 			_parent.doc.fat_d_doc = m_d_doc.Date;
 		}
@@ -190,6 +207,14 @@ namespace Facile
 			page.CliList.ItemDoubleTapped += (source, args) =>
 			{
 				_cli = (Clienti)args.ItemData;
+				if (_dst != null) 
+				{
+					if (_dst.dst_cli_for != _cli.cli_codice)
+					{
+						_dst = null;
+						_parent.doc.fat_dest = 0;
+					}
+				}
 				SetField();
 				Navigation.PopAsync();
 			};
@@ -237,13 +262,31 @@ namespace Facile
 				}
 			}
 			if (_cli == null) _parent.doc.fat_inte = 0;
-			if (_dst == null) _parent.doc.fat_inte = 0;
+			if (_dst == null) _parent.doc.fat_dest = 0;
 			SetField();
 		}
 
-		void OnDstCodUnfocused(object sender, Xamarin.Forms.FocusEventArgs e)
+		async void OnDstCodUnfocused(object sender, Xamarin.Forms.FocusEventArgs e)
 		{
-			DisplayAlert("Attenzione!", "Da Implementare", "OK");
+			GetField();
+			_dst = null;
+			if (_parent.doc.fat_inte != 0)
+			{
+				if (_parent.doc.fat_dest != 0)
+				{
+					try
+					{
+						_dst = await _dbcon.GetAsync<Destinazioni>(_parent.doc.fat_dest);
+						if (_dst.dst_cli_for != _cli.cli_codice || _dst.dst_rel != 0) _dst = null;
+					}
+					catch (System.Exception ex)
+					{
+						System.Diagnostics.Debug.WriteLine(ex.Message);
+					}
+				}
+			}
+			if (_dst == null) _parent.doc.fat_dest = 0;
+			SetField();
 		}
 
 		async void OnClickPrec(object sender, System.EventArgs e)
@@ -375,7 +418,7 @@ namespace Facile
 
 		async void OnRecordStampa(object sender, System.EventArgs e)
 		{
-
+			GetField();
 			// Controllare lo stato del documento
 
 			// Effettuare il ricalcolo
