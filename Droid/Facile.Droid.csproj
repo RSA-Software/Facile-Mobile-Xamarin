@@ -397,6 +397,14 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_camera_alt_white.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_camera_alt_white.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_camera_alt_white.png" />
+    <AndroidResource Include="Resources\drawable\ic_description_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_description_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_description_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_description_white.png" />
+    <AndroidResource Include="Resources\drawable\ic_receipt_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_receipt_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_receipt_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_receipt_white.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />

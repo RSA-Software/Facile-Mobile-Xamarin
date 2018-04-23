@@ -340,6 +340,12 @@
     <BundleResource Include="Resources\ic_camera_alt_white%40.png" />
     <BundleResource Include="Resources\ic_camera_alt_white%402x.png" />
     <BundleResource Include="Resources\ic_camera_alt_white%403x.png" />
+    <BundleResource Include="Resources\ic_description_white.png" />
+    <BundleResource Include="Resources\ic_description_white%402x.png" />
+    <BundleResource Include="Resources\ic_description_white%403x.png" />
+    <BundleResource Include="Resources\ic_receipt_white.png" />
+    <BundleResource Include="Resources\ic_receipt_white%402x.png" />
+    <BundleResource Include="Resources\ic_receipt_white%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>
