@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using System.Threading.Tasks;
 using Facile.Interfaces;
 using Facile.Models;
 using Facile.ViewModels;
 using SQLite;
 using Syncfusion.Data;
-using Syncfusion.SfBusyIndicator.XForms;
 using Syncfusion.SfDataGrid.XForms;
 using Xamarin.Forms;
 using static Facile.Extension.FattureExtensions;
@@ -21,6 +19,7 @@ namespace Facile
 		private string query_;
 		private string filter_;
 		private int swipeIndex;
+		private Documents swipeDoc;
 		private Image leftImage;
 		private int cliCodice_;
 
@@ -31,14 +30,11 @@ namespace Facile
 			InitializeComponent();
 			tipo_ = t_doc;
 			cliCodice_ = 0;
-			//cli_desc.Text = "TUTTI";
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
-			//MessagingCenter.Subscribe<ClientiSearch, Clienti>(this, "ClienteChanged", OnClienteChanged);
-			//NavigationPage.SetHasNavigationBar(this, false);
-
 
 			busyIndicator.IsBusy = true;
 			leftImage = null;
+			swipeDoc = null;
 			swipeIndex = 0;
 			switch(tipo_)
 			{
@@ -68,7 +64,6 @@ namespace Facile
 			dStart.Date = new DateTime(2016, 1, 1); // DateTime.Now;
 			dStop.Date = DateTime.Now;
 
-
 			query_ = "SELECT fat_tipo, fat_n_doc, fat_d_doc, fat_tot_fattura, fat_registro, cli_desc " +
 				"FROM fatture2 " +
 				"LEFT JOIN clienti1 on fat_inte = cli_codice";
@@ -76,6 +71,7 @@ namespace Facile
 			filter_ = String.Format(" WHERE fat_tipo = {0}", (int)tipo_);
 
 			dataGrid.ColumnSizer = Syncfusion.SfDataGrid.XForms.ColumnSizer.LastColumnFill;
+			dataGrid.GridLongPressed += DataGrid_GridLongPressed; 
 
 			GridTableSummaryRow summaryRow1 = new GridTableSummaryRow();
 			summaryRow1.Title = "Totale {Totale} - Numero Doc. : {DocCount}";
@@ -98,6 +94,7 @@ namespace Facile
 			dataGrid.TableSummaryRows.Add(summaryRow1);
 
 		}
+
 		async protected override void OnAppearing()
 		{
 			string sql = query_ + filter_;
@@ -119,12 +116,6 @@ namespace Facile
 			}
 			busyIndicator.IsBusy = false;
 			base.OnAppearing();
-		}
-
-		protected override void OnDisappearing()
-		{
-			//MessagingCenter.Unsubscribe<ClientiSearch>(this, "ClienteChanged");
-			base.OnDisappearing();
 		}
 
 		async void OnDateSelected(object sender, Xamarin.Forms.DateChangedEventArgs e)
@@ -153,75 +144,58 @@ namespace Facile
 		protected override void OnSizeAllocated(double width, double height)
 		{
 			base.OnSizeAllocated(width, height);
-					    
-			if (Device.Idiom != TargetIdiom.Phone)
+
+			var cols = dataGrid.Columns;
+			if (width > height)
 			{
-				if (width > height)
+				foreach (var col in cols)
 				{
-					if (Device.RuntimePlatform == Device.iOS)
-					{
-						AbsoluteLayout.SetLayoutBounds(table, new Rectangle(0, 0, 1, .1));
-						AbsoluteLayout.SetLayoutBounds(dataGrid, new Rectangle(0, 1, 1, 0.9));
-					}
-					if (Device.RuntimePlatform == Device.Android)
-					{
-						AbsoluteLayout.SetLayoutBounds(table, new Rectangle(0, 0, 1, .09));
-						AbsoluteLayout.SetLayoutBounds(dataGrid, new Rectangle(0, 1, 1, 0.91));
-					}
-				}
-				else
-				{
-					if (Device.RuntimePlatform == Device.iOS)
-					{
-						AbsoluteLayout.SetLayoutBounds(table, new Rectangle(0, 0, 1, .08));
-						AbsoluteLayout.SetLayoutBounds(dataGrid, new Rectangle(0, 1, 1, 0.92));
-					}
-					if (Device.RuntimePlatform == Device.Android)
-					{ 
-						AbsoluteLayout.SetLayoutBounds(table, new Rectangle(0, 0, 1, .05));
-						AbsoluteLayout.SetLayoutBounds(dataGrid, new Rectangle(0, 1, 1, 0.95));
-					}
+					if (col.HeaderText == "Tipo") col.IsHidden = false;
 				}
 			}
 			else
 			{
-				var cols = dataGrid.Columns;
-				if (width > height)
+				foreach (var col in cols)
 				{
-					foreach (var col in cols)
-					{
-						if (col.HeaderText == "Tipo")
-							col.IsHidden = false;
-					}
-
-					if (Device.RuntimePlatform == Device.iOS)
-					{
-						AbsoluteLayout.SetLayoutBounds(table, new Rectangle(0, 0, 1, .16));
-						AbsoluteLayout.SetLayoutBounds(dataGrid, new Rectangle(0, 1, 1, 0.86));
-					}
-				}
-				else
-				{
-					foreach (var col in cols)
-					{
-						if (col.HeaderText == "Tipo")
-							col.IsHidden = true;
-					}
-					if (Device.RuntimePlatform == Device.iOS)
-					{
-						AbsoluteLayout.SetLayoutBounds(table, new Rectangle(0, 0, 1, .09));
-						AbsoluteLayout.SetLayoutBounds(dataGrid, new Rectangle(0, 1, 1, 0.91));
-					}
-
-			
-
+					if (col.HeaderText == "Tipo") col.IsHidden = true;
 				}
 			}
+		}
+
+		async void DataGrid_GridLongPressed(object sender, Syncfusion.SfDataGrid.XForms.GridLongPressedEventArgs e)
+		{
+			var doc = e.RowData as Documents;
+			busyIndicator.IsBusy = true;
+
+			Fatture fat = null;
+			bool nuova = false;
+			try
+			{
+				string sql = String.Format("SELECT * from FATTURE2 WHERE fat_tipo = {0} AND fat_n_doc = {1} LIMIT 1", doc.fat_tipo, doc.fat_n_doc);
+				var docList = await dbcon_.QueryAsync<Fatture>(sql);
+				if (docList.Count > 0)
+					fat = docList[0];
+			}
+			catch (Exception ex)
+			{
+				busyIndicator.IsBusy = false;
+				await DisplayAlert("Attenzione!", ex.Message, "OK");
+				return;
+			}
+			if (fat == null) 
+			{
+				busyIndicator.IsBusy = false;
+				return;
+			}
+			var page = new DocumentiEdit(ref fat, ref nuova);
+			await Navigation.PushAsync(page);
+			busyIndicator.IsBusy = false;
 		}
 
 		void OnSwipeStarted(object sender, Syncfusion.SfDataGrid.XForms.SwipeStartedEventArgs e)
 		{
 			swipeIndex = e.RowIndex;
+			swipeDoc = (Documents)e.RowData;
 		}
 
 
@@ -231,19 +205,16 @@ namespace Facile
 			{
 				leftImage = sender as Image;
 				(leftImage.Parent as View).GestureRecognizers.Add(new TapGestureRecognizer() { Command = new Command(Edit) });
-				//leftImage.Source = ImageSource.FromResource("SampleBrowser.Icons.DataGrid.Edit.png");
 			}
 		}
 
 		private async void Edit ()
 		{
 			dataGrid.ResetSwipeOffset();
-			if (swipeIndex == 0)
+			if (swipeIndex == 0 || swipeDoc == null)
 			{
 				return;
 			}
-
-			var doc = docCollection[swipeIndex-1];
 
 			Fatture fat = null;
 			bool nuova = false;
@@ -251,7 +222,7 @@ namespace Facile
 			swipeIndex = 0;
 			try
 			{
-				string sql = String.Format("SELECT * from FATTURE2 WHERE fat_tipo = {0} AND fat_n_doc = {1} LIMIT 1", doc.fat_tipo, doc.fat_n_doc);
+				string sql = String.Format("SELECT * from FATTURE2 WHERE fat_tipo = {0} AND fat_n_doc = {1} LIMIT 1", swipeDoc.fat_tipo, swipeDoc.fat_n_doc);
 				var docList = await dbcon_.QueryAsync<Fatture>(sql);
 				if (docList.Count > 0)
 					fat = docList[0];
@@ -265,25 +236,5 @@ namespace Facile
 			var page = new DocumentiEdit(ref fat, ref nuova);
 			await Navigation.PushAsync(page);
 		}
-
-		void OnTappedClienti(object sender, System.EventArgs e)
-		{
-			var page = new ClientiSearch();
-			page.CliList.ItemDoubleTapped += (source, args) =>
-			{
-				var cli = (Clienti)args.ItemData;
-				cliCodice_ = cli.cli_codice;
-
-			};
-			Navigation.PushAsync(page);
-		}
-
-		void OnClienteChanged(ClientiSearch source, Clienti cli)
-		{
-			if (cli.cli_codice == cliCodice_) return;
-			cliCodice_ = cli.cli_codice;
-			//cli_desc.Text = cli.cli_desc;
-		}
-
 	}
 }

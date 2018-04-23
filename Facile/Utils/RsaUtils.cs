@@ -5,10 +5,6 @@ namespace Facile.Utils
 	{
 		private static readonly int _gap_registro = 70000000;
 
-		//public RsaUtils()
-		//{
-		//}
-
 		public static int GetShowedNumDoc(int num)
 		{
 			return (num % _gap_registro);

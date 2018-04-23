@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using Facile.Utils;
 using Facile.ViewModels;
 using Xamarin.Forms;
 
@@ -13,7 +14,7 @@ namespace Facile.Converters
 				return "";
 
 			var doc = (Documents)value;
-			string str = String.Format("{0}/{1}", doc.fat_n_doc % 700000000, doc.fat_registro);
+			string str = String.Format("{0}/{1}", RsaUtils.GetShowedNumDoc(doc.fat_n_doc), doc.fat_registro);
 
 			return str;
 		}

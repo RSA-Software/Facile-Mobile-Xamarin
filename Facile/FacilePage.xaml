@@ -16,7 +16,7 @@
             <Button Grid.Row="0" Grid.Column="1" ContentLayout="Top,0" Image="ic_shopping_cart.png" Text="Ordini" BorderRadius="0" BorderWidth="0" BackgroundColor="#00C853" TextColor="White"  Clicked="OnClickedOrdini"/>
             <Button Grid.Row="0" Grid.Column="2" ContentLayout="Top,0" Image="ic_style.png" Text="Fatture" BorderRadius="0" BorderWidth="0" BackgroundColor="#FFC400" TextColor="White" Clicked="OnClickedFatture"/>
        
-            <Button Grid.Row="1" Grid.Column="0" ContentLayout="Top,0" Image="ic_perm_media.png" Text="Catalogo" BorderRadius="0" BorderWidth="0" BackgroundColor="#673AB7" TextColor="White" Clicked="OnClickedDdt"/>
+            <Button Grid.Row="1" Grid.Column="0" ContentLayout="Top,0" Image="ic_perm_media.png" Text="D.D.T." BorderRadius="0" BorderWidth="0" BackgroundColor="#673AB7" TextColor="White" Clicked="OnClickedDdt"/>
             <Button Grid.Row="1" Grid.Column="1" ContentLayout="Top,0" Image="ic_alarm.png" Text="Scadenze" BorderRadius="0" BorderWidth="0" BackgroundColor="#BF360C" TextColor="White" Clicked="OnClickedScadenze"/>
             <Button Grid.Row="1" Grid.Column="2" ContentLayout="Top,0" Image="ic_account_balance.png" Text="Incassi" BorderRadius="0" BorderWidth="0" BackgroundColor="#26C6DA" TextColor="White" Clicked="OnClickedIncassi"/>
 
