@@ -10,6 +10,7 @@ using Syncfusion.SfNumericTextBox.XForms.iOS;
 using Syncfusion.SfBusyIndicator.XForms.iOS;
 using Syncfusion.SfNumericUpDown.XForms.iOS;
 using Syncfusion.XForms.iOS.PopupLayout;
+using Syncfusion.XForms.iOS.MaskedEdit;
 
 namespace Facile.iOS
 {
@@ -21,6 +22,8 @@ namespace Facile.iOS
             global::Xamarin.Forms.Forms.Init();
 			SfDataGridRenderer.Init();
 			SfListViewRenderer.Init();
+			SfMaskedEditRenderer.Init();
+
 			new SfNumericTextBoxRenderer();
 			new SfBusyIndicatorRenderer();
 			new SfNumericUpDownRenderer();

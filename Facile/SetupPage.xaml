@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage Title="Impostazioni"
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="Facile.SetupPage">
+    	xmlns="http://xamarin.com/schemas/2014/forms" 
+    	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:syncfusion="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+    	x:Class="Facile.SetupPage">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness"
             iOS="10,10,10,0"
@@ -13,35 +14,29 @@
 	 <ScrollView>
 		<AbsoluteLayout>
 		    <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
-	    	    <Grid>
-	        	    <Grid.ColumnDefinitions>
-	            	    <ColumnDefinition Width="Auto" />
-	                	<ColumnDefinition Width="*" />
-	            	</Grid.ColumnDefinitions>
+		    	
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+	            	<Label Text="FTP Server" WidthRequest="110" VerticalTextAlignment="Center" TextColor="Navy" FontAttributes="Bold"/>
+	            	<Picker Title="Server" x:Name="m_server_picker" WidthRequest="90" TextColor="Black"/>
+				</StackLayout>
 
-	            	<Grid.RowDefinitions>
-						<RowDefinition Height="40"/>
-						<RowDefinition Height="40"/>
-						<RowDefinition Height="40"/>
-						<RowDefinition Height="40"/>
-					</Grid.RowDefinitions>
-				
-	            	<!-- Prima Riga -->
-	            	<Label Grid.Row="0" Grid.Column="0" Text="FTP Server"/>
-	            	<Entry Grid.Row="0" Grid.Column="1" Keyboard="Url" Placeholder="FTP Server" Text="{Binding FtpServer}" TextColor="Black"/> 
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+	            	<Label Text="Utente" WidthRequest="110" VerticalTextAlignment="Center" TextColor="Navy" FontAttributes="Bold"/>
+	            	<Entry Keyboard="Default" x:Name="m_user" TextColor="Black" HorizontalOptions="FillAndExpand"/> 
+				</StackLayout>
 
-	            	<!-- Seconda Riga -->
-	            	<Label Grid.Row="1" Grid.Column="0" Text="User"/>
-	            	<Entry Grid.Row="1" Grid.Column="1" Keyboard="Default" Placeholder="FTP User" Text="{Binding FtpUser}"/> 
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+	            	<Label Text="Cod. Agente" WidthRequest="110" VerticalTextAlignment="Center" TextColor="Navy" FontAttributes="Bold"/>
+					<syncfusion:SfNumericTextBox  x:Name="m_age" WidthRequest="90" ParserMode="Double" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black"/>
+				</StackLayout>
+		
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Padding="0,0,0,20">
+	            	<Label Text="Registro" WidthRequest="110" VerticalTextAlignment="Center" TextColor="Navy" FontAttributes="Bold"/>
+					<Picker Title="Registro" x:Name="m_reg_picker" WidthRequest="90" TextColor="Black"/>
+				</StackLayout>
 
-	            	<!-- Terza Riga -->
-	            	<Label Grid.Row="2" Grid.Column="0" Text="Password"/>
-	            	<Entry Grid.Row="2" Grid.Column="1" Keyboard="Default" IsPassword="true" Placeholder="FTP Password" Text="{Binding FtpPassword}"/> 
-	            
-	            	<!-- Quarta Riga -->
-	            	<Label Grid.Row="3" Grid.Column="0" Text="SSL"/>
-	            	<Switch Grid.Row="3" Grid.Column="1" HorizontalOptions="Start" IsToggled="{Binding FtpSsl}"/>
-				</Grid>
+				<Button Text=" Salva " HorizontalOptions="Center" Image="ic_done_white.png" BackgroundColor="#009EDA" TextColor="White" Clicked="OnClickedSalva"/>
+			
 			</StackLayout>
 		</AbsoluteLayout>
 	</ScrollView>

@@ -121,6 +121,15 @@ namespace Facile
 			await dbcon.CreateTableAsync<Trasporti>();
 			await dbcon.CreateTableAsync<Agganci>();
 			await dbcon.CreateTableAsync<Descrizioni>();
+			await dbcon.CreateTableAsync<LocalImpo>();
+
+			if (await dbcon.Table<LocalImpo>().CountAsync() == 0)
+			{
+				var imp = new LocalImpo();
+				imp.id = 1;
+				await dbcon.InsertAsync(imp);
+			}
+
 
 			base.OnAppearing();
 		}

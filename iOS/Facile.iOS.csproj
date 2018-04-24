@@ -129,63 +129,6 @@
     <Reference Include="SQLitePCLRaw.batteries_v2">
       <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.10\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Core.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.Core.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.Core.XForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.DataSource.Portable">
-      <HintPath>..\packages\Syncfusion.Xamarin.DataSource.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.DataSource.Portable.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.GridCommon.Portable">
-      <HintPath>..\packages\Syncfusion.Xamarin.GridCommon.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.GridCommon.Portable.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfBusyIndicator.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfBusyIndicator.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfBusyIndicator.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfBusyIndicator.XForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfBusyIndicator.XForms.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfBusyIndicator.XForms.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfListView.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfListView.XForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfListView.XForms.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfListView.XForms.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfNumericTextBox.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfNumericTextBox.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfNumericTextBox.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfNumericTextBox.XForms.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfNumericTextBox.XForms.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.Data.Portable">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.Data.Portable.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfDataGrid.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfDataGrid.XForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfDataGrid.XForms.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfDataGrid.XForms.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfNumericUpDown.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericUpDown.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfNumericUpDown.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfNumericUpDown.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericUpDown.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfNumericUpDown.XForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfNumericUpDown.XForms.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericUpDown.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfNumericUpDown.XForms.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfPopupLayout.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfPopupLayout.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfPopupLayout.XForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfPopupLayout.XForms.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfPopupLayout.16.1.0.32\lib\Xamarin.iOS10\Syncfusion.SfPopupLayout.XForms.iOS.dll</HintPath>
-    </Reference>
     <Reference Include="LinkOS.Plugin.Abstractions">
       <HintPath>..\packages\LinkOS_Xamarin_SDK.1.1.75\lib\Xamarin.iOS10\LinkOS.Plugin.Abstractions.dll</HintPath>
     </Reference>
@@ -194,6 +137,69 @@
     </Reference>
     <Reference Include="zsdk_iosx">
       <HintPath>..\packages\LinkOS_Xamarin_SDK.1.1.75\lib\Xamarin.iOS10\zsdk_iosx.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Core.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.Core.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.Core.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DataSource.Portable">
+      <HintPath>..\packages\Syncfusion.Xamarin.DataSource.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.DataSource.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.GridCommon.Portable">
+      <HintPath>..\packages\Syncfusion.Xamarin.GridCommon.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.GridCommon.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBusyIndicator.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfBusyIndicator.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBusyIndicator.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfBusyIndicator.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBusyIndicator.XForms.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfBusyIndicator.XForms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfListView.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfListView.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfListView.XForms.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfListView.XForms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfMaskedEdit.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfMaskedEdit.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfMaskedEdit.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfMaskedEdit.XForms.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfMaskedEdit.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfMaskedEdit.XForms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfNumericTextBox.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.XForms.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfNumericTextBox.XForms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Data.Portable">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.Data.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfDataGrid.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfDataGrid.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfDataGrid.XForms.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfDataGrid.XForms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericUpDown.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericUpDown.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfNumericUpDown.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericUpDown.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericUpDown.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfNumericUpDown.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericUpDown.XForms.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericUpDown.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfNumericUpDown.XForms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPopupLayout.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfPopupLayout.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfPopupLayout.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPopupLayout.XForms.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfPopupLayout.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfPopupLayout.XForms.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

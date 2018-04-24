@@ -14,7 +14,7 @@ namespace Facile.Extension
 			var dec = 2;
 
 
-			if (rig.rig_tara_recalc == true || rig.rig_tara_altre != 0.0 ||rig.rig_tara_imballo != 0.0)
+			if (rig.rig_tara_recalc == true || !rig.rig_tara_altre.TestIfZero(3) || !rig.rig_tara_imballo.TestIfZero(3))
 			{
 				rig.rig_tara = rig.rig_tara_altre + rig.rig_colli * rig.rig_tara_imballo;
 			}
