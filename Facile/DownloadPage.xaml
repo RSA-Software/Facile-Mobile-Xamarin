@@ -35,36 +35,36 @@
 			<Grid ColumnSpacing="3" RowSpacing="1" BackgroundColor="Transparent" VerticalOptions="FillAndExpand" Padding="7,0,7,0">
 
 	            <Grid.RowDefinitions>
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-	                <RowDefinition Height="35" />
-					<RowDefinition Height="35" />
-					<RowDefinition Height="35" />
-					<RowDefinition Height="35" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+					<RowDefinition Height="38" />
+					<RowDefinition Height="38" />
+					<RowDefinition Height="38" />
 	            </Grid.RowDefinitions>
 
 	            <Grid.ColumnDefinitions>

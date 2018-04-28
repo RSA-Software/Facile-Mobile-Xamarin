@@ -14,7 +14,7 @@ namespace Facile
 	//[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DocumentiGrid : ContentPage
 	{
-		private readonly TipoDocumento tipo_;
+		private readonly DocTipo tipo_;
 		private readonly SQLiteAsyncConnection dbcon_;
 		private string query_;
 		private string filter_;
@@ -25,7 +25,7 @@ namespace Facile
 
 		ObservableCollection<Documents> docCollection = null;
 
-		public DocumentiGrid(TipoDocumento t_doc)
+		public DocumentiGrid(DocTipo t_doc)
 		{
 			InitializeComponent();
 			tipo_ = t_doc;
@@ -38,19 +38,19 @@ namespace Facile
 			swipeIndex = 0;
 			switch(tipo_)
 			{
-				case TipoDocumento.TIPO_DDT :
+				case DocTipo.TIPO_DDT :
 					Title = "Documenti di Trasporto";
 					break;
 
-				case TipoDocumento.TIPO_FAT:
+				case DocTipo.TIPO_FAT:
 					Title = "Fatture";
 					break;
 
-				case TipoDocumento.TIPO_PRE:
+				case DocTipo.TIPO_PRE:
 					Title = "Preventivi";
 					break;
 
-				case TipoDocumento.TIPO_ORD:
+				case DocTipo.TIPO_ORD:
 					Title = "Ordini";
 					break;
 
@@ -101,7 +101,7 @@ namespace Facile
 			var docList = await dbcon_.QueryAsync<Documents>(sql);
 			foreach(Documents doc in docList)
 			{
-				if (doc.fat_tipo == (int)TipoDocumento.TIPO_FAT && doc.fat_credito != 0)
+				if (doc.fat_tipo == (int)DocTipo.TIPO_FAT && doc.fat_credito != 0)
 					doc.fat_tot_fattura = -doc.fat_tot_fattura;
 			}
 			if (docList.Count == 0)
@@ -132,7 +132,7 @@ namespace Facile
 				var docList = await dbcon_.QueryAsync<Documents>(sql);
 				foreach (Documents doc in docList)
 				{
-					if (doc.fat_tipo == (int)TipoDocumento.TIPO_FAT && doc.fat_credito != 0)
+					if (doc.fat_tipo == (int)DocTipo.TIPO_FAT && doc.fat_credito != 0)
 						doc.fat_tot_fattura = -doc.fat_tot_fattura;
 				}
 				docCollection = new ObservableCollection<Documents>(docList);

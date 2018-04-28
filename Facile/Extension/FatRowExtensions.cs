@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Facile.Interfaces;
 using Facile.Models;
@@ -12,7 +13,6 @@ namespace Facile.Extension
 		public async static Task<double> RecalcAsync(this FatRow rig)
 		{
 			var dec = 2;
-
 
 			if (rig.rig_tara_recalc == true || !rig.rig_tara_altre.TestIfZero(3) || !rig.rig_tara_imballo.TestIfZero(3))
 			{
@@ -38,7 +38,7 @@ namespace Facile.Extension
 			//
 			// Codice Aggiunto per il calcolo dello sconto iva esclusa 24/03/2009
 			//
-			rig.rig_sco_iva_esc = 0.0;
+			rig.rig_sco_iva_esc = 0;
 			rig.rig_importo_impo = rig.rig_importo;
 			if (rig.rig_iva_inclusa != 0)
 			{
@@ -48,9 +48,9 @@ namespace Facile.Extension
 					var iva = await dbcon.GetAsync<Codiva>(rig.rig_iva);
 					rig.rig_importo_impo = Math.Round(rig.rig_importo_impo / (1 + (iva.iva_aliq / 100.0)), dec, MidpointRounding.AwayFromZero);
 				}
-				catch (System.Exception)
+				catch (Exception e)
 				{
-					// 
+					Debug.WriteLine(e.Message);
 				}
 			}
 			totale = Math.Round((rig.rig_qta - rig.rig_tara - rig.rig_scomerce) * rig.rig_coef_mol * rig.rig_coef_mol2 * (rig.rig_prezzo + rig.rig_spese) - rig.rig_scovalore, dec, MidpointRounding.AwayFromZero);

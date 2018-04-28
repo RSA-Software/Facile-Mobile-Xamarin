@@ -32,19 +32,19 @@ namespace Facile
 			InitializeComponent();
 			switch (this.doc.fat_tipo)
 			{
-				case (int)TipoDocumento.TIPO_DDT:
+				case (int)DocTipo.TIPO_DDT:
 					Title = "Documento di Trasporto";
 					break;
 
-				case (int)TipoDocumento.TIPO_FAT:
+				case (int)DocTipo.TIPO_FAT:
 					Title = "Fattura";
 					break;
 
-				case (int)TipoDocumento.TIPO_PRE:
+				case (int)DocTipo.TIPO_PRE:
 					Title = "Preventivo";
 					break;
 
-				case (int)TipoDocumento.TIPO_ORD:
+				case (int)DocTipo.TIPO_ORD:
 					Title = "Ordine";
 					break;
 

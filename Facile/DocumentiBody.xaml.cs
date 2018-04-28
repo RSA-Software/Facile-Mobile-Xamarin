@@ -58,12 +58,12 @@ namespace Facile
 
 		async void OnAddClicked(object sender, System.EventArgs e)
 		{
-			
-			var ditta = await dbcon_.QueryAsync<Ditte>("SELECT * FROM impostazioni LIMIT 1");
+			var app = (App)Application.Current;
+
 			var rig = new FatRow();
 			rig.rig_tipo = _parent.doc.fat_tipo;
 			rig.rig_n_doc = _parent.doc.fat_n_doc;
-			if (ditta.Count > 0) rig.rig_iva_inclusa = ditta[0].impo_iva_inc;
+			if (app.facile_db_impo != null) rig.rig_iva_inclusa = app.facile_db_impo.dit_iva_inc;
 			rig.rig_coef_mol = 1;
 			rig.rig_coef_mol2 = 1;
 			var page = new DocumentRow(ref rig, true, _parent.doc.fat_editable);

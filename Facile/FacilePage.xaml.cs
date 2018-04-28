@@ -4,6 +4,7 @@ using Facile.Models;
 using SQLite;
 using System;
 using static Facile.Extension.FattureExtensions;
+using System.Diagnostics;
 
 namespace Facile
 {
@@ -17,7 +18,7 @@ namespace Facile
 
 		async void OnClickedOrdini(object sender, System.EventArgs e)
 		{
-			await Navigation.PushAsync(new FatturePage(TipoDocumento.TIPO_ORD));
+			await Navigation.PushAsync(new FatturePage(DocTipo.TIPO_ORD));
 		}
 
 
@@ -25,7 +26,7 @@ namespace Facile
 		async void OnClickedFatture(object sender, System.EventArgs e)
 		{
 
-			await Navigation.PushAsync(new FatturePage(TipoDocumento.TIPO_FAT));
+			await Navigation.PushAsync(new FatturePage(DocTipo.TIPO_FAT));
 
 //			var page = new DocumentiGrid(TipoDocumento.TIPO_FAT);
 //			await Navigation.PushAsync(page);
@@ -33,7 +34,7 @@ namespace Facile
 
 		async void OnClickedDdt(object sender, System.EventArgs e)
 		{
-			await Navigation.PushAsync(new FatturePage(TipoDocumento.TIPO_DDT));
+			await Navigation.PushAsync(new FatturePage(DocTipo.TIPO_DDT));
 
 			//Fatture fat = null;
 			//SQLiteAsyncConnection dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
@@ -130,6 +131,19 @@ namespace Facile
 				await dbcon.InsertAsync(imp);
 			}
 
+			try
+			{
+				var app = (App)Application.Current;
+				var ditlist = await dbcon.QueryAsync<Ditte>("SELECT * FROM ditt2016 ORDER BY dit_codice LIMIT 1");
+				if (ditlist == null) 
+					app.facile_db_impo = null;
+				else
+					app.facile_db_impo = ditlist[0];
+			}
+			catch (Exception e)
+			{
+				Debug.WriteLine(e.Message);
+			}
 
 			base.OnAppearing();
 		}

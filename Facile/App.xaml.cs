@@ -16,10 +16,12 @@ namespace Facile
     public partial class App : Application
     {
 		public IDiscoveredPrinter printer;
+		public Ditte facile_db_impo;
 
         public App()
         {
 			printer = null;
+			facile_db_impo = null;
 			InitializeComponent();
 			MainPage = new NavigationPage(new FacilePage());
         }

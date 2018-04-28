@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Globalization;
+using Facile.Models;
 using Facile.ViewModels;
 using Xamarin.Forms;
-using static Facile.Extension.FattureExtensions;
 
 namespace Facile.Converters
 {
@@ -16,15 +16,15 @@ namespace Facile.Converters
 			var doc = (Documents)value;
 			switch(doc.fat_tipo)
 			{
-				case (int)TipoDocumento.TIPO_DDT: return("DDT"); 
-				case (int)TipoDocumento.TIPO_BOL: return("BOL"); 
-				case (int)TipoDocumento.TIPO_ORD: return("ORD"); 
-				case (int)TipoDocumento.TIPO_FAT:
+				case (int)DocTipo.TIPO_DDT: return("DDT"); 
+				case (int)DocTipo.TIPO_BOL: return("BOL"); 
+				case (int)DocTipo.TIPO_ORD: return("ORD"); 
+				case (int)DocTipo.TIPO_FAT:
 					if (doc.fat_credito != 0)
 						return ("CRE");
 					else
 						return("FAT"); 
-				case (int)TipoDocumento.TIPO_PRE: return("PRE"); 
+				case (int)DocTipo.TIPO_PRE: return("PRE"); 
 				default : return("***");
 			}
 		}

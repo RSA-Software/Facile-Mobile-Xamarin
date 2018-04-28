@@ -92,10 +92,10 @@ namespace Facile
 			string num = "";
 			switch (doc.fat_tipo)
 			{
-				case (int)TipoDocumento.TIPO_BOL: num = "B O L L A"; break;
-				case (int)TipoDocumento.TIPO_DDT: num = "DOCUMENTO GENERALE DI TRASPORTO"; break;
-				case (int)TipoDocumento.TIPO_BUO: num = "B U O N O  D I  C O N S E G N A"; break;
-				case (int)TipoDocumento.TIPO_ORD: num = "O R D I N E"; break;
+				case (int)DocTipo.TIPO_BOL: num = "B O L L A"; break;
+				case (int)DocTipo.TIPO_DDT: num = "DOCUMENTO GENERALE DI TRASPORTO"; break;
+				case (int)DocTipo.TIPO_BUO: num = "B U O N O  D I  C O N S E G N A"; break;
+				case (int)DocTipo.TIPO_ORD: num = "O R D I N E"; break;
 				default: num = "FATTURA/NOTA CONSEGNA TENTATA VENDITA D.P.R.472/96 art.1 comma 3"; break;
 			}
 			str = str + $"^FO{col},{row}" + "^A0,N,23,23" + $"^FB784,1,0,R,0^FD{num}^FS";
@@ -341,8 +341,8 @@ namespace Facile
 					{
 						string dati;
 
-						if (rig.rig_scadenza.Year > 1900)
-							dati = string.Format("Lotto {0} Scadenza {1:dd/MM/yyyy}", rig.rig_lotto.Trim(), rig.rig_scadenza);
+						if ((rig.rig_scadenza != null) && (rig.rig_scadenza.Value.Year > 1900))
+							dati = string.Format("Lotto {0} Scadenza {1:dd/MM/yyyy}", rig.rig_lotto.Trim(), rig.rig_scadenza.Value);
 						else
 							dati = string.Format("Lotto {0}", rig.rig_lotto.Trim());
 
@@ -437,7 +437,7 @@ namespace Facile
 					{
 						string dati;
 
-						if (rig.rig_scadenza.Year > 1900)
+						if ((rig.rig_scadenza != null) && (rig.rig_scadenza.Value.Year > 1900))
 							dati = string.Format("Lotto {0} Scadenza {1:dd/MM/yyyy}", rig.rig_lotto.Trim(), rig.rig_scadenza);
 						else
 							dati = string.Format("Lotto {0}}", rig.rig_lotto.Trim());
@@ -505,13 +505,13 @@ namespace Facile
 			col = 58 * 8;
 			str = str + $"^FO{col},{row + 31 * 8}" + "^A0,N,19,19" + $"^FDFirma per Accettazione di Quanto Sopra^FS";
 
-			if (doc.fat_tipo == (int)TipoDocumento.TIPO_FAT)
+			if (doc.fat_tipo == (int)DocTipo.TIPO_FAT)
 			{
 				col = 35 * 8;
 				str = str + $"^FO{col},{row + 41 * 8}" + "^A0,N,19,19" + $"^FDCONTRIBUTO CONAI ASSOLTO^FS";
 			}
 
-			if (doc.fat_tipo != (int)TipoDocumento.TIPO_DDT)
+			if (doc.fat_tipo != (int)DocTipo.TIPO_DDT)
 			{
 				//
 				// Prima Riga Totali Fattura
@@ -822,7 +822,7 @@ namespace Facile
 				}
 			}
 
-			if ((doc.fat_tipo == (int)TipoDocumento. TIPO_FAT) || (doc.fat_tipo == (int)TipoDocumento.TIPO_DDT))
+			if ((doc.fat_tipo == (int)DocTipo. TIPO_FAT) || (doc.fat_tipo == (int)DocTipo.TIPO_DDT))
 			{
 				if (pag.pag_nota_alimentari)
 				{
@@ -833,7 +833,7 @@ namespace Facile
 					str = str + $"^FO{col},{row + 47 * 8}" + "^A0,N,19,19" + $"^FDconvertito con modificazioni dalla legge 24/3/2012 n. 27^FS";
 
 					col = 20 * 8;
-					if (doc.fat_tipo == (int)TipoDocumento.TIPO_FAT)
+					if (doc.fat_tipo == (int)DocTipo.TIPO_FAT)
 						str = str + $"^FO{col},{row + 50 * 8}" + "^A0,N,19,19" + $"^FDLa durata del rapporto commerciale si riferisce alla singola fattura^FS";
 					else
 						str = str + $"^FO{col},{row + 50 * 8}" + "^A0,N,19,19" + $"^FDLa durata del rapporto commerciale si riferisce al singolo documento^FS";
@@ -905,7 +905,7 @@ namespace Facile
 			//
 
 
-			if (doc.fat_tipo == (int)TipoDocumento.TIPO_DDT)
+			if (doc.fat_tipo == (int)DocTipo.TIPO_DDT)
 			{
 				stprice = await _parent.DisplayAlert("Facile", "Vuoi Stampare i Prezzi ?", "SI", "NO");
 			}
@@ -927,7 +927,7 @@ namespace Facile
 				// Controlliamo che tutte le righe siano dello stesso fornitore
 				//
 				int codfor = -1;
-				if (doc.fat_tipo == (int)TipoDocumento.TIPO_DDT)
+				if (doc.fat_tipo == (int)DocTipo.TIPO_DDT)
 				{
 					foreach(var rig in _riglist)
 					{
@@ -970,7 +970,7 @@ namespace Facile
 					if (_coddst == "C.C.") _coddst = "";
 
 					_codocr = "";
-					if (doc.fat_tipo_ven == (int)TipoVendita.VEN_TRASFERT && codfor != 0) 
+					if (doc.fat_tipo_ven == (int)DocTipoVen.VEN_TRASFERT && codfor != 0) 
 					{
 						sql = String.Format("SELECT * FROM fornito1 WHERE for_codice = {0} LIMIT 1", codfor);
 						var forList = await dbcon_.QueryAsync<Fornitori>(sql);

@@ -222,6 +222,7 @@
       <DependentUpon>SetupPrinter.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\LocalImpo.cs" />
+    <Compile Include="Utils\RsaExceptions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MarkupExtensions\" />

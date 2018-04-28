@@ -141,7 +141,11 @@ namespace Facile
 			else
 				rig_.rig_importo = (double)m_totale.Value;
 			*/
-			rig_.rig_sost = m_sostituzione.IsToggled ? 1 : 0;
+
+			if (m_sostituzione.IsToggled)
+				rig_.rig_sost = 1;
+			else
+				rig_.rig_sost = 0;
 		}
 
 		async void OnValueChanged(object sender, Syncfusion.SfNumericTextBox.XForms.ValueEventArgs e)
