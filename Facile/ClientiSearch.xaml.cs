@@ -59,6 +59,7 @@ namespace Facile
 
 		private async void LoadMoreItems(object obj)
 		{
+			if (listView.ItemsSource == null) return;
 			listView.IsBusy = true;
 			var collection = (ObservableCollection<Clienti>)listView.ItemsSource;
 			string sql = query_ + " LIMIT " + recToLoad_.ToString() + " OFFSET " + recLoaded_.ToString();

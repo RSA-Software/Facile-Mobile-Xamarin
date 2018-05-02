@@ -106,7 +106,7 @@ namespace Facile.Models
   		public float rig_tara_imballo { get; set; }
   		public float rig_prov_cpr { get; set; }
   		public double rig_tot_prov_age { get; set; }
-  		public double rig_rot_prov_cpr { get; set; }
+  		public double rig_tot_prov_cpr { get; set; }
   		public short rig_from_tipo { get; set; }
   		public int rig_from_n_doc { get; set; }
   		public DateTime? rig_from_d_doc { get; set; }

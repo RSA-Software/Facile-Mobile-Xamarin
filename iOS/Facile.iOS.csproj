@@ -352,6 +352,9 @@
     <BundleResource Include="Resources\ic_receipt_white.png" />
     <BundleResource Include="Resources\ic_receipt_white%402x.png" />
     <BundleResource Include="Resources\ic_receipt_white%403x.png" />
+    <BundleResource Include="Resources\header_wallpaper.jpg" />
+    <BundleResource Include="Resources\header_wallpaper%402x.jpg" />
+    <BundleResource Include="Resources\header_wallpaper%403x.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>

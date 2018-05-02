@@ -10,13 +10,16 @@ namespace Facile.Models
 		public int age_codice { get; set; }
 
 		public int age_zon { get; set; }
+		public string age_free_old_desc { get; set; }
+		public string age_free_old_via { get; set; }
 		public string age_citta { get; set; }
 		public string age_cap { get; set; }
 		public string age_prov { get; set; }
 		public string age_tel { get; set; }
 		public string age_da { get; set; }
 		public string age_user { get; set; }
-		public DateTime age_last_update { get; set; }
+		public DateTime? age_last_update { get; set; }
+		public string age_free_space { get; set; }
 		public double age_pro_0 { get; set; }
 		public double age_pro_1 { get; set; }
 		public double age_pro_2 { get; set; }
@@ -36,6 +39,7 @@ namespace Facile.Models
 		public string age_codfis { get; set; }
 		public string age_cod_gesa { get; set; }
 		public string age_password { get; set; }
+		public string age_free_space2 { get; set; }
 		public int age_no_ftp_check { get; set; }
 		public string age_targa { get; set; }
 
@@ -44,6 +48,7 @@ namespace Facile.Models
 
 		public string age_indirizzo { get; set; }
 		public string age_email { get; set; }
-		public DateTime age_last_exp_tablet { get; set; }
+		public DateTime? age_last_exp_tablet { get; set; }
+		public int age_cpr { get; set; }
 	}
 }

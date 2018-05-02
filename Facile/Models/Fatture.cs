@@ -3,6 +3,13 @@ using SQLite;
 
 namespace Facile.Models
 {
+	public enum MovRel
+	{
+		REL_CLI = 0,
+		REL_FOR = 1,
+		REL_NIE = 2,
+	}
+
 	public enum DocTipo : short
 	{
 		TIPO_FAT = 0,

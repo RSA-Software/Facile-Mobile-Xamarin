@@ -37,17 +37,24 @@ namespace Facile
 
 			if (Device.Idiom == TargetIdiom.Phone && Device.RuntimePlatform == Device.Android)
 			{
-				searchBar.HeightRequest = 25;
+				searchBar.HeightRequest = 40;
 			}
 		}
 
 		protected override async void OnAppearing()
 		{
-			string sql = query_ + " LIMIT " + recToLoad_.ToString();
-			recTotal_ = await dbcon_.Table<Artanag>().CountAsync();
-			var anaList = await dbcon_.QueryAsync<Artanag>(sql);
-			recLoaded_ = anaList.Count;
-			listView.ItemsSource = new ObservableCollection<Artanag>(anaList);
+			try
+			{
+				string sql = query_ + " LIMIT " + recToLoad_.ToString();
+				recTotal_ = await dbcon_.Table<Artanag>().CountAsync();
+				var anaList = await dbcon_.QueryAsync<Artanag>(sql);
+				recLoaded_ = anaList.Count;
+				listView.ItemsSource = new ObservableCollection<Artanag>(anaList);
+			}
+			catch (Exception ex)
+			{
+				await DisplayAlert("Errore!", ex.Message, "OK");
+			}
 			base.OnAppearing();
 		}
 
@@ -60,6 +67,7 @@ namespace Facile
 
 		private async void LoadMoreItems(object obj)
 		{
+			if (listView.ItemsSource == null) return;
 			listView.IsBusy = true;
 			var collection = (ObservableCollection<Artanag>)listView.ItemsSource;
 			string sql = query_ + " LIMIT " + recToLoad_.ToString() + " OFFSET " + recLoaded_.ToString();

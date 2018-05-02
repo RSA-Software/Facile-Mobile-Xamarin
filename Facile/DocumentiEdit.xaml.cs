@@ -19,6 +19,7 @@ namespace Facile
 		private NavigationPage bodyPage_;
 		private NavigationPage footerPage_;
 		private DocumentiBody body_;
+		private DocumentiFooter footer_;
 
 		private int last_num_;
 
@@ -64,7 +65,8 @@ namespace Facile
 			bodyPage_.Title = "Corpo";
 			bodyPage_.Icon = "ic_view_headline_white.png";
 
-			footerPage_ = new NavigationPage(new DocumentiFooter(ref doc));
+			footer_ = new DocumentiFooter(this);
+			footerPage_ = new NavigationPage(footer_);
 			footerPage_.Title = "Piede";
 			footerPage_.Icon = "ic_euro_symbol_white.png";
 
@@ -94,6 +96,25 @@ namespace Facile
 					await body_.SetItemSource();
 				}
 			}
+			if (doc.fat_editable && CurrentPage == footerPage_)
+			{
+				try
+				{
+					footer_.SetBusy(true);	
+					await doc.RecalcAsync();
+				}
+				catch (Exception ex)
+				{
+					footer_.SetBusy(false);
+					await DisplayAlert("Errore", ex.Message, "OK");
+					Device.BeginInvokeOnMainThread(() => {
+						CurrentPage = Children[0];
+					});
+				}
+				footer_.SetBusy(false);
+				footer_.SetField();
+			}
+
 		}
 	}
 }

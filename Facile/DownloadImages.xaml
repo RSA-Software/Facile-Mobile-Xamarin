@@ -12,13 +12,15 @@
 
     <StackLayout BackgroundColor="#00C853">
 	
-	    <StackLayout BackgroundColor="#FFC400" Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
-	    	<StackLayout.HeightRequest>
+	    <StackLayout BackgroundColor="#FFC400" Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+
+			<StackLayout.HeightRequest>
 	      		<OnPlatform x:TypeArguments="x:Double" iOS="40" Android="40" />
 	    	</StackLayout.HeightRequest>
 	    	<StackLayout.MinimumHeightRequest>
 	      		<OnPlatform x:TypeArguments="x:Double" iOS="40" Android="40" />
 	    	</StackLayout.MinimumHeightRequest>
+			
 	    	<StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" Padding="3,0,0,0">
 	        	<Label Text="Ricezione Dati" FontAttributes="None"
 	               TextColor=" Gray"
@@ -27,7 +29,7 @@
 	    	</StackLayout>
 		</StackLayout>
 
-		<Image HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" x:Name="m_image" Aspect="AspectFit"/>
+		<Image HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand" x:Name="m_image" Aspect="AspectFit"/>
 
 	</StackLayout>
 	

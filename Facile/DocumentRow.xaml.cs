@@ -59,6 +59,28 @@ namespace Facile
 
 				m_salva.IsVisible = false;
 				m_elimina.IsVisible = false;
+
+				m_quantita.IsEnabled = false;
+				m_prezzo.IsEnabled = false;
+				m_sco1.IsEnabled = false;
+				m_sco2.IsEnabled = false;
+				m_sco3.IsEnabled = false;
+				m_sostituzione.IsEnabled = false;
+
+				m_qta_down.IsEnabled = false;
+				m_qta_up.IsEnabled = false;
+
+				m_prezzo_down.IsEnabled = false;
+				m_prezzo_up.IsEnabled = false;
+
+				m_sco1_down.IsEnabled = false;
+				m_sco1_up.IsEnabled = false;
+
+				m_sco2_down.IsEnabled = false;
+				m_sco2_up.IsEnabled = false;
+
+				m_sco3_down.IsEnabled = false;
+				m_sco3_up.IsEnabled = false;
 			}
 
 			if (Device.RuntimePlatform == Device.Android)
@@ -90,24 +112,28 @@ namespace Facile
 			if (!string.IsNullOrWhiteSpace(rig_.rig_art))
 			{
 				IFolder rootFolder = FileSystem.Current.LocalStorage;
-				IFolder folder = (PCLStorage.IFolder)(await FileSystem.Current.GetFolderFromPathAsync(rootFolder.Path + "/images/"));
-				String fileName = rig_.rig_art.Trim() + "_0.PNG";
+				IFolder imagesFolder = await rootFolder.CreateFolderAsync("images", CreationCollisionOption.OpenIfExists);
 
-				ExistenceCheckResult status = await folder.CheckExistsAsync(fileName);
+				String fileName = rig_.rig_art.Trim() + "_0.PNG";
+				ExistenceCheckResult status = await imagesFolder.CheckExistsAsync(fileName);
 				if (status == ExistenceCheckResult.FileExists)
 				{
 					m_image.Source = rootFolder.Path + "/images/" + fileName;
+					m_image_box.IsVisible = true;
 					return;
 				}
 				fileName = rig_.rig_art.Trim() + "_0.JPG";
-				status = await folder.CheckExistsAsync(fileName);
+				status = await imagesFolder.CheckExistsAsync(fileName);
 				if (status == ExistenceCheckResult.FileExists)
 				{
 					m_image.Source = rootFolder.Path + "/images/" + fileName;
+					m_image_box.IsVisible = true;
 					return;
 				}
 			}
+			//m_image.Source = "header_wallpaper.jpg";
 			m_image.Source = null;
+			m_image_box.IsVisible = false;
 		}
 
 		public void SetField()
@@ -134,14 +160,6 @@ namespace Facile
 			rig_.rig_sconto2 = double.Parse(m_sco2.Value.ToString());
 			rig_.rig_sconto3 = double.Parse(m_sco3.Value.ToString());
 			rig_.rig_importo = double.Parse(m_totale.Value.ToString());
-
-			/*
-			if (m_totale.Value.GetType().Equals(typeof(decimal)))
-				rig_.rig_importo = decimal.ToDouble((decimal)m_totale.Value);
-			else
-				rig_.rig_importo = (double)m_totale.Value;
-			*/
-
 			if (m_sostituzione.IsToggled)
 				rig_.rig_sost = 1;
 			else
@@ -258,7 +276,10 @@ namespace Facile
 
 		async void OnArtUnfocused(object sender, Xamarin.Forms.FocusEventArgs e)
 		{
-			var codice = ((Entry)sender).Text.Trim().ToUpper();
+			var ent = (Entry)sender;
+
+			var codice = "";
+			if (ent.Text != null) codice = ent.Text.Trim().ToUpper();
 			if (string.Compare(codice, rig_.rig_art) == 0) return;
 
 			var sql = string.Format("SELECT * FROM artanag WHERE ana_codice = {0} LIMIT 1", codice.SqlQuote(false));
