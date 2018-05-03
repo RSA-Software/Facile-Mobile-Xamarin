@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage NavigationPage.HasNavigationBar="False"
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+		x:Class="Facile.DocumentiNote">
+
+	<ScrollView>
+		<AbsoluteLayout>
+			<StackLayout Padding="5,5,5,5" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+				<Label x:Name="m_note_title" Text="Note Varie" TextColor="Navy" FontAttributes="Bold"/>
+				<Editor x:Name="m_note" TextChanged="OnTextChanged" Keyboard="Text" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#E1F5FE" TextColor="Black"/>
+				<Button x:Name="m_salva" Image="ic_done_white.png"  WidthRequest="100" HeightRequest="65" HorizontalOptions="CenterAndExpand" VerticalOptions="End" TextColor="White" BackgroundColor="#009EDA" Clicked="OnSalvaClicked"/>
+			</StackLayout>
+			<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="RollingBall" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="#2196F3"/>
+		</AbsoluteLayout>
+	</ScrollView>
+</ContentPage>

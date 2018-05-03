@@ -22,7 +22,7 @@
 			<StackLayout Orientation="Horizontal"  HorizontalOptions="StartAndExpand" >
                	<Label Text="Cliente" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy" WidthRequest="110"/>
 				<Entry x:Name="m_cli_cod" WidthRequest="90" HorizontalOptions="Start" Unfocused="OnCliCodUnfocused" Keyboard="Numeric" HorizontalTextAlignment="End"/>
-                <Button x:Name="m_search_cli" Image="ic_search_black.png" WidthRequest="90"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnClienteTapped"/>
+                <Button x:Name="m_search_cli" Image="ic_search_black.png" WidthRequest="60"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnClienteTapped"/>
             </StackLayout>
 
             <StackLayout HorizontalOptions="Fill">
@@ -70,7 +70,7 @@
             </StackLayout>
                 
         </StackLayout>
-			<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="SlicedCircle" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+			<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="SlicedCircle" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="#2196F3"/>
         </AbsoluteLayout>
     </ScrollView>
 

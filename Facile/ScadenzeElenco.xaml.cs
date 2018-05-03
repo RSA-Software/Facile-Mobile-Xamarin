@@ -31,6 +31,7 @@ namespace Facile
 			first = true;
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 			dataGrid.ColumnSizer = Syncfusion.SfDataGrid.XForms.ColumnSizer.LastColumnFill;
+			dataGrid.GridLongPressed += DataGrid_GridLongPressed;
 
 			GridTableSummaryRow summaryRow1 = new GridTableSummaryRow();
 			summaryRow1.Title = "Totale {Totale} - Numero Cli. : {CliCount}";
@@ -54,7 +55,7 @@ namespace Facile
 
 			if (Device.Idiom == TargetIdiom.Phone && Device.RuntimePlatform == Device.Android)
 			{
-				searchBar.HeightRequest = 25;
+				searchBar.HeightRequest = 40;
 			}
 		}
 
@@ -77,8 +78,16 @@ namespace Facile
 				busyIndicator.IsBusy = false;
 				first = false;
 			}
-			base.OnAppearing();
+			base.OnAppearing();		
 		}
+
+		async void DataGrid_GridLongPressed(object sender, GridLongPressedEventArgs e)
+		{
+			var sca = (ScadenzeInfo)e.RowData;
+			var page = new ScadenzeDetails(sca);
+			await Navigation.PushAsync(page);
+		}
+
 
 		async void OnTextChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
 		{

@@ -18,8 +18,10 @@ namespace Facile
 		private ContentPage headerPage_;
 		private NavigationPage bodyPage_;
 		private NavigationPage footerPage_;
+		private NavigationPage notePage_;
 		private DocumentiBody body_;
 		private DocumentiFooter footer_;
+		private DocumentiNote note_;
 
 		private int last_num_;
 
@@ -70,9 +72,15 @@ namespace Facile
 			footerPage_.Title = "Piede";
 			footerPage_.Icon = "ic_euro_symbol_white.png";
 
+			note_ = new DocumentiNote(this);
+			notePage_ = new NavigationPage(note_);
+			notePage_.Title = "Note";
+			notePage_.Icon = "ic_mode_edit_white.png";
+
 			Children.Add(headerPage_);
 			Children.Add(bodyPage_);
 			Children.Add(footerPage_);
+			Children.Add(notePage_);
 		}
 
 		void OnChildAdded (object sender, ElementEventArgs e)
@@ -96,25 +104,34 @@ namespace Facile
 					await body_.SetItemSource();
 				}
 			}
-			if (doc.fat_editable && CurrentPage == footerPage_)
+			if (CurrentPage == footerPage_)
 			{
-				try
+				if (doc.fat_editable)
 				{
-					footer_.SetBusy(true);	
-					await doc.RecalcAsync();
-				}
-				catch (Exception ex)
-				{
+					try
+					{
+						footer_.SetBusy(true);
+						await doc.RecalcAsync();
+					}
+					catch (Exception ex)
+					{
+						footer_.SetBusy(false);
+						await DisplayAlert("Errore", ex.Message, "OK");
+						Device.BeginInvokeOnMainThread(() =>
+						{
+							CurrentPage = Children[0];
+						});
+					}
 					footer_.SetBusy(false);
-					await DisplayAlert("Errore", ex.Message, "OK");
-					Device.BeginInvokeOnMainThread(() => {
-						CurrentPage = Children[0];
-					});
 				}
-				footer_.SetBusy(false);
+				footer_.SetProtection();
 				footer_.SetField();
 			}
-
+			if (CurrentPage == notePage_)
+			{
+				note_.SetProtection();
+				note_.SetField();
+			}
 		}
 	}
 }

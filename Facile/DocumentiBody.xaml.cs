@@ -14,7 +14,7 @@ namespace Facile
 	{
 		private DocumentiEdit _parent;
 		private readonly SQLiteAsyncConnection dbcon_;
-		ObservableCollection <FatRow> rigCollection = null;
+		public ObservableCollection <FatRow> rigCollection = null;
 		private int swipeIndex;
 
 		public DocumentiBody(DocumentiEdit par)
@@ -51,9 +51,8 @@ namespace Facile
 		async void DataGrid_GridLongPressed(object sender, Syncfusion.SfDataGrid.XForms.GridLongPressedEventArgs e)
 		{
 			var rig = e.RowData as FatRow;
-			var page = new DocumentRow(ref rig, false, _parent.doc.fat_editable);
+			var page = new DocumentRow(this, ref rig, rigCollection.IndexOf(rig), _parent.doc.fat_editable);
 			await this.Navigation.PushModalAsync(page);
-			await SetItemSource();
 		}
 
 		async void OnAddClicked(object sender, System.EventArgs e)
@@ -66,9 +65,9 @@ namespace Facile
 			if (app.facile_db_impo != null) rig.rig_iva_inclusa = app.facile_db_impo.dit_iva_inc;
 			rig.rig_coef_mol = 1;
 			rig.rig_coef_mol2 = 1;
-			var page = new DocumentRow(ref rig, true, _parent.doc.fat_editable);
-			await this.Navigation.PushModalAsync(page);
-			await SetItemSource();
+			var page = new DocumentRow(this, ref rig, -1, _parent.doc.fat_editable);
+			await Navigation.PushModalAsync(page);
+
 		}
 
 		//
@@ -93,9 +92,8 @@ namespace Facile
 			if (swipeIndex > 0 && rigCollection != null)
 			{
 				var rig = rigCollection[swipeIndex - 1];
-				var page = new DocumentRow(ref rig, false, _parent.doc.fat_editable);
+				var page = new DocumentRow(this, ref rig, swipeIndex - 1, _parent.doc.fat_editable);
 				await this.Navigation.PushModalAsync(page);
-				await SetItemSource();
 			}
 		}
 

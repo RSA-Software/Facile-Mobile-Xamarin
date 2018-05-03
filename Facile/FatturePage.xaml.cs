@@ -48,6 +48,8 @@ namespace Facile
 
 			SQLiteAsyncConnection dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 
+			busyIndicator.IsBusy = true;
+
 			//
 			// Leggiamo le impostazioni
 			//
@@ -57,22 +59,26 @@ namespace Facile
 			}
 			catch
 			{
+				busyIndicator.IsBusy = false;
 				await DisplayAlert("Attenzione!", "Impostazioni locali non trovate!\nRiavviare l'App.", "OK");
 				return;
 			}
 
 			if (!lim.data_download)
 			{
+				busyIndicator.IsBusy = false;
 				await DisplayAlert("Attenzione!", "Dati non presenti sul dispositivo!\nPer procedere è necessario scaricare i dati dal server.", "OK");
 				return;
 			}
 			if (string.IsNullOrWhiteSpace(lim.registro))
 			{
+				busyIndicator.IsBusy = false;
 				await DisplayAlert("Attenzione!", "Registro non impostato!\nPer inserire documenti è necessario fare le impostazioni iniziali.", "OK");
 				return;
 			}
 			if (lim.age == 0)
 			{
+				busyIndicator.IsBusy = false;
 				await DisplayAlert("Attenzione!", "Agente non impostato!\nPer inserire documenti è necessario fare le impostazioni iniziali.", "OK");
 				return;
 			}
@@ -86,12 +92,10 @@ namespace Facile
 			}
 			catch
 			{
+				busyIndicator.IsBusy = false;
 				await DisplayAlert("Attenzione!", "L' Agente impostato non è presente in archivio!", "OK");
 				return;
 			}
-
-
-
 
 			bool nuova = true;
 
@@ -124,6 +128,7 @@ namespace Facile
 			}
 			var page = new DocumentiEdit(ref fat, ref nuova);
 			await Navigation.PushAsync(page);
+			busyIndicator.IsBusy = false;
 		}
 
 		async void OnModificaClicked(object sender, System.EventArgs e)
@@ -134,6 +139,7 @@ namespace Facile
 			bool nuova = false;
 			bool editable = false;
 
+			busyIndicator.IsBusy = true;
 			try
 			{
 				var sql = string.Format("SELECT * from FATTURE2 WHERE fat_tipo = {0} ORDER BY fat_tipo, fat_n_doc DESC LIMIT 1",(short)tipo_);
@@ -146,17 +152,20 @@ namespace Facile
 			}
 			catch (Exception ex)
 			{
+				busyIndicator.IsBusy = false;
 				await DisplayAlert("Attenzione!", ex.Message, "OK");
 				return;
 			}
 			if (fat == null) 
 			{
+				busyIndicator.IsBusy = false;
 				await DisplayAlert("Attenzione!", "Non è stato trovato in archivio alcun documento", "Ok");
 				return;
 			}
 			editable = fat.fat_editable;
 			var page = new DocumentiEdit(ref fat, ref nuova);
 			await Navigation.PushAsync(page);
+			busyIndicator.IsBusy = false;
 		}
 
 		async void OnElencoClicked(object sender, System.EventArgs e)

@@ -145,7 +145,7 @@
 
         <Button x:Name="m_add" Text=" Aggiungi " HorizontalOptions="Center" Image="ic_add_white.png" TextColor="White" BackgroundColor="#009EDA" Clicked="OnAddClicked" />
     </StackLayout>
-		<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="RollingBall" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+		<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="RollingBall" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="#2196F3"/>
 		
 	</AbsoluteLayout>
 </ContentPage>

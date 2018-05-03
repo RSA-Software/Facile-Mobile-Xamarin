@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using Facile.Interfaces;
 using Facile.Models;
+using Facile.Utils;
 using SQLite;
 using Xamarin.Forms;
 
@@ -48,9 +49,9 @@ namespace Facile.Extension
 					var iva = await dbcon.GetAsync<Codiva>(rig.rig_iva);
 					rig.rig_importo_impo = Math.Round(rig.rig_importo_impo / (1 + (iva.iva_aliq / 100.0)), dec, MidpointRounding.AwayFromZero);
 				}
-				catch (Exception e)
+				catch
 				{
-					Debug.WriteLine(e.Message);
+					throw new RsaException(RsaException.NotFoundMsg, RsaException.NotFoundErr);
 				}
 			}
 			totale = Math.Round((rig.rig_qta - rig.rig_tara - rig.rig_scomerce) * rig.rig_coef_mol * rig.rig_coef_mol2 * (rig.rig_prezzo + rig.rig_spese) - rig.rig_scovalore, dec, MidpointRounding.AwayFromZero);

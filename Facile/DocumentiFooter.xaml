@@ -6,66 +6,72 @@
 	xmlns:syncfusion="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
 	x:Class="Facile.DocumentiFooter">
 
-	<AbsoluteLayout>
-    <StackLayout Padding="5,7,7,5" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+	<ScrollView>
+		<AbsoluteLayout>
+		    <StackLayout Padding="5,7,5,7" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
 
-		<StackLayout HorizontalOptions="Fill" Orientation="Horizontal">
-			<Label Text="Totale Merce" WidthRequest="150" FontAttributes="Bold" TextColor="Navy"/>
-			<Label Text="%Sconto" WidthRequest="90" FontAttributes="Bold" TextColor="Navy"/>
-		</StackLayout>
-		<StackLayout HorizontalOptions="Fill" Orientation="Horizontal">
-			<syncfusion:SfNumericTextBox  x:Name="m_tot_merce" WidthRequest="150" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Black" FontAttributes="Bold" IsEnabled="false"/>
-			<syncfusion:SfNumericTextBox  x:Name="m_sconto" WidthRequest="150" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Black" FontAttributes="Bold"/>
-		</StackLayout>
+				<Grid x:Name="grid" HorizontalOptions="FillAndExpand">
+            		<Grid.ColumnDefinitions>
+                		<ColumnDefinition Width="*" />
+                		<ColumnDefinition Width="*" />
+            		</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="20"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="20"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="20"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="20"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="20" x:Name="m_consegna_text"/>
+						<RowDefinition Height="*" x:Name="m_consegna_val"/>
+					</Grid.RowDefinitions>
 
+					
+					<Label Grid.Row="0" Grid.Column="0" Text="Totale Merce" WidthRequest="130" FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
+					<Label Grid.Row="0" Grid.Column="1" Text="%Sconto" WidthRequest="90" FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
+					<syncfusion:SfNumericTextBox Grid.Row="1" Grid.Column="0" x:Name="m_tot_merce" WidthRequest="130" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Black" FontAttributes="Bold" IsEnabled="false" BorderColor="Gray"/>
+					<syncfusion:SfNumericTextBox Grid.Row="1" Grid.Column="1" x:Name="m_sconto" WidthRequest="90" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Black" FontAttributes="Bold" BorderColor="Gray" ValueChanged="OnScontoChanged" ValueChangeMode="OnLostFocus"/>
+					
 
-		<StackLayout HorizontalOptions="Fill" Orientation="Horizontal">
-			<Label Text="Totale Netto" WidthRequest="150" FontAttributes="Bold" TextColor="Navy"/>
-			<Label Text="Colli" WidthRequest="75" FontAttributes="Bold" TextColor="Navy"/>
-			<Label Text="Cod.Pag." WidthRequest="75" FontAttributes="Bold" TextColor="Navy"/>
-		</StackLayout>
-		<StackLayout HorizontalOptions="Fill" Orientation="Horizontal">
-			<syncfusion:SfNumericTextBox  x:Name="m_tot_netto" WidthRequest="150" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Black" FontAttributes="Bold" IsEnabled="false"/>
-			<syncfusion:SfNumericTextBox  x:Name="m_colli" WidthRequest="75" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold"/>
-			<syncfusion:SfNumericTextBox  x:Name="m_cod_pag" WidthRequest="75" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold"/>
-		</StackLayout>
-
-			
-		<StackLayout HorizontalOptions="Fill" Orientation="Horizontal">
-			<Label Text="Imponibile" WidthRequest="150" FontAttributes="Bold" TextColor="Navy"/>
-			<Label Text="Imposta" WidthRequest="150"  FontAttributes="Bold" TextColor="Navy"/>
-		</StackLayout>
-		<StackLayout HorizontalOptions="Fill" Orientation="Horizontal">
-			<syncfusion:SfNumericTextBox  x:Name="m_Imponibile" WidthRequest="150" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Black" FontAttributes="Bold" IsEnabled="false"/>
-			<syncfusion:SfNumericTextBox  x:Name="m_Imposta" WidthRequest="150" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Black" FontAttributes="Bold" IsEnabled="false"/>
-		</StackLayout>
-
-			
-
-		<StackLayout HorizontalOptions="Fill" Orientation="Horizontal">
-			<Label Text="Totale" WidthRequest="150" FontAttributes="Bold" TextColor="Navy"/>
-			<Label Text="Acconto" WidthRequest="150" FontAttributes="Bold" TextColor="Navy"/>
-		</StackLayout>
-		<StackLayout HorizontalOptions="Fill" Orientation="Horizontal">
-			<syncfusion:SfNumericTextBox  x:Name="m_totale" WidthRequest="150" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Black" FontAttributes="Bold" IsEnabled="false"/>
-			<syncfusion:SfNumericTextBox  x:Name="m_acconto" WidthRequest="150" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Black" FontAttributes="Bold"/>	
-		</StackLayout>
-
-			
-		<StackLayout HorizontalOptions="Fill" Orientation="Horizontal" x:Name="m_consegna_text">
-			<Label Text="Consegna" WidthRequest="150" FontAttributes="Bold" TextColor="Navy" />
-		</StackLayout>
-		<StackLayout HorizontalOptions="Fill" Orientation="Horizontal" x:Name="m_consegna_val">
-			<DatePicker x:Name="m_d_consegna" Format="dd/MM/yyyy" WidthRequest="150" TextColor="Black"/>
-		</StackLayout>
+					<Label Grid.Row="2" Grid.Column="0" Text="Totale Netto" WidthRequest="130" FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
+					<StackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="Fill" Orientation="Horizontal">
+						<Label x:Name="m_colli_text" Text="Colli" WidthRequest="50" FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
+						<Label x:Name="m_cod_pag_text" Text="Cod.Pag." WidthRequest="60" FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
+					</StackLayout>
+					<syncfusion:SfNumericTextBox Grid.Row="3" Grid.Column="0" x:Name="m_tot_netto" WidthRequest="130" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Black" FontAttributes="Bold" IsEnabled="false" BorderColor="Gray"/>
+					<StackLayout Grid.Row="3" Grid.Column="1" HorizontalOptions="Fill" Orientation="Horizontal">
+						<syncfusion:SfNumericTextBox  x:Name="m_colli" WidthRequest="50" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold" BorderColor="Gray" ValueChanged="OnColliChanged" ValueChangeMode="OnLostFocus"/>
+						<syncfusion:SfNumericTextBox  x:Name="m_cod_pag" WidthRequest="60" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold" BorderColor="Gray" ValueChanged="OnPagamentoChanged" ValueChangeMode="OnLostFocus"/>
+						<Button x:Name="m_search_pag" Image="ic_search_black.png" HorizontalOptions="Start"  TextColor="Black" BackgroundColor="Transparent" HeightRequest="25" WidthRequest="40" Clicked="OnCodPagClicked"/>
+					</StackLayout>
 
 
-        <StackLayout Orientation="Horizontal">  
-            <Button x:Name="m_salva" Image="ic_done_white.png"  WidthRequest="100" HeightRequest="65" HorizontalOptions="CenterAndExpand"  TextColor="White" BackgroundColor="#009EDA"/>
-            <Button x:Name="m_esci" Image="ic_navigate_before_white.png" WidthRequest="100" HeightRequest="65" HorizontalOptions="CenterAndExpand" TextColor="White" BackgroundColor="#009EDA" />
-       </StackLayout>  
-			
-	</StackLayout>
-		<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="RollingBall" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional"/>
-	</AbsoluteLayout>
+					<Label Grid.Row="4" Grid.Column="0" Text="Imponibile" WidthRequest="130" FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
+					<Label Grid.Row="4" Grid.Column="1" Text="Imposta" WidthRequest="130"  FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
+					<syncfusion:SfNumericTextBox Grid.Row="5" Grid.Column="0" x:Name="m_imponibile" WidthRequest="130" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Black" FontAttributes="Bold" IsEnabled="false" BorderColor="Gray"/>
+					<syncfusion:SfNumericTextBox Grid.Row="5" Grid.Column="1" x:Name="m_imposta" WidthRequest="130" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Black" FontAttributes="Bold" IsEnabled="false" BorderColor="Gray"/>
+
+
+					<Label Grid.Row="6" Grid.Column="0" Text="Totale" WidthRequest="130" FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
+					<Label Grid.Row="6" Grid.Column="1" Text="Acconto" WidthRequest="130" FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
+					<syncfusion:SfNumericTextBox Grid.Row="7" Grid.Column="0" x:Name="m_totale" WidthRequest="130" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Red" FontAttributes="Bold" IsEnabled="false" BorderColor="Gray"/>
+					<syncfusion:SfNumericTextBox Grid.Row="7" Grid.Column="1" x:Name="m_acconto" WidthRequest="130" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="N" TextColor="Black" FontAttributes="Bold" BorderColor="Gray"/>	
+
+					
+					<Label Grid.Row="8" Grid.Column="0" Text="Consegna" WidthRequest="130" FontAttributes="Bold" TextColor="Navy" />
+					<DatePicker Grid.Row="9" Grid.Column="0" x:Name="m_d_consegna" Format="dd/MM/yyyy" WidthRequest="150" TextColor="Black" />
+
+				</Grid>
+						
+
+		        <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">  
+		            <Button x:Name="m_salva" Image="ic_done_white.png"  WidthRequest="100" HeightRequest="65" HorizontalOptions="CenterAndExpand"  TextColor="White" BackgroundColor="#009EDA" Clicked="OnSaveClicked"/>
+		       </StackLayout>  
+
+			</StackLayout>
+			<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="RollingBall" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="#2196F3"/>
+		</AbsoluteLayout>
+	</ScrollView>
 </ContentPage>

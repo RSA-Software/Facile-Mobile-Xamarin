@@ -94,7 +94,7 @@
             Factor=0.4, 
             Constant=0}" >
 
-            <busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="SlicedCircle" Title="Attendere..." IsBusy="false"  />
+            <busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="SlicedCircle" Title="Attendere..." IsBusy="false" TextColor="#2196F3" />
         </StackLayout>
 
     </RelativeLayout>

@@ -207,6 +207,11 @@ namespace Facile
 			page.CliList.ItemDoubleTapped += (source, args) =>
 			{
 				_cli = (Clienti)args.ItemData;
+				if (_parent.doc.fat_tipo_ven == (short)DocTipoVen.VEN_TRASFERT)
+					_parent.doc.fat_listino = _cli.cli_listino_tra;
+				else
+					_parent.doc.fat_listino = _cli.cli_listino;
+				_parent.doc.fat_pag = _cli.cli_pag;
 				if (_dst != null) 
 				{
 					if (_dst.dst_cli_for != _cli.cli_codice)
@@ -243,6 +248,11 @@ namespace Facile
 				try
 				{
 					_cli = await _dbcon.GetAsync<Clienti>(_parent.doc.fat_inte);
+					if (_parent.doc.fat_tipo_ven == (short)DocTipoVen.VEN_TRASFERT)
+						_parent.doc.fat_listino = _cli.cli_listino_tra;
+					else
+						_parent.doc.fat_listino = _cli.cli_listino;
+					_parent.doc.fat_pag = _cli.cli_pag;
 				}
 				catch (System.Exception ex)
 				{

@@ -16,19 +16,21 @@ namespace Facile
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DocumentRow : ContentPage
 	{
+		protected DocumentiBody par_;
 		protected FatRow rig_;
 		private bool change_;
-		private readonly bool nuovo_;
+		private readonly int index_;
 		private bool first_;
 		private bool editable_;
 		private readonly SQLiteAsyncConnection dbcon_;
 
-		public DocumentRow(ref FatRow rig, bool nuovo = true, bool editable = true)
+		public DocumentRow(DocumentiBody par,  ref FatRow rig, int index = -1, bool editable = true)
 		{
+			par_ = par; 
 			rig_ = rig;
 			change_ = false;
 			first_ = true;
-			nuovo_ = nuovo;
+			index_ = index;
 			editable_ = editable;
 			InitializeComponent();
 			NavigationPage.SetHasNavigationBar(this, false);
@@ -37,17 +39,16 @@ namespace Facile
 			m_image.Source = null;
 			if (Device.RuntimePlatform == Device.iOS) Padding = new Thickness(0, 30, 0, 0);
 
-			if (nuovo_)
+			if (Device.Idiom == TargetIdiom.Tablet)
+			{
+				m_image_box.HeightRequest = 500;
+			}
+
+			if (index_ == -1)
 			{ 
 				m_elimina.IsEnabled = false;
 				m_elimina.IsVisible = false;
 			}
-
-			//
-			// Attenzione : da rimuovere
-			//
-			//editable_ = true;
-			// fine
 
 			if (!editable_)
 			{
@@ -131,9 +132,15 @@ namespace Facile
 					return;
 				}
 			}
-			//m_image.Source = "header_wallpaper.jpg";
-			m_image.Source = null;
-			m_image_box.IsVisible = false;
+			if (Device.Idiom == TargetIdiom.Phone)
+			{
+				m_image.Source = null;
+				m_image_box.IsVisible = false;
+			}
+			else
+			{
+				m_image.Source = "header_wallpaper.jpg";	
+			}
 		}
 
 		public void SetField()
@@ -244,26 +251,32 @@ namespace Facile
 			}
 			await rig_.RecalcAsync();
 
-			if (nuovo_)
+			if (index_ == -1)
 			{
 				rig_.rig_d_ins = DateTime.Now;
 				rig_.rig_t_ins = rig_.rig_d_ins.Hour * 3600 + rig_.rig_d_ins.Minute * 60 + rig_.rig_d_ins.Second;
 				await dbcon_.InsertAsync(rig_);
+				par_.rigCollection.Add(rig_);
 			}
 			else
+			{
 				await dbcon_.UpdateAsync(rig_);
-
-
+				par_.rigCollection.RemoveAt(index_);
+				par_.rigCollection.Insert(index_, rig_);
+			}
 			await Navigation.PopModalAsync();
 		}
 
 		async void OnClickedElimina(object sender, System.EventArgs e)
 		{
-			if (editable_ && !nuovo_ && await DisplayAlert("Attenzione!", "Confermi la cancellazione della riga?", "Si", "No"))
+			if (editable_ && index_ != -1 && await DisplayAlert("Attenzione!", "Confermi la cancellazione della riga?", "Si", "No"))
 			{
 
 				if (await dbcon_.DeleteAsync(rig_) != 0)
+				{
+					par_.rigCollection.RemoveAt(index_);
 					await Navigation.PopModalAsync();
+				}
 				else
 					await DisplayAlert("Attenzione!", "Non è stato possibile eliminare la riga", "Ok");
 			}

@@ -7,7 +7,7 @@
     x:Class="Facile.DocumentRow">
 
     <ScrollView>
-    <StackLayout Padding="7,0,7,0">
+    <StackLayout Padding="7,0,7,7">
     	<StackLayout Orientation="Horizontal" HeightRequest="250" x:Name="m_image_box" >
 			<Image x:Name = "m_image" Aspect="AspectFit" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
 		</StackLayout>
@@ -75,7 +75,7 @@
             
         </Grid>
             
-        <StackLayout Orientation="Horizontal">  
+        <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">  
             <Button x:Name="m_salva" Image="ic_done_white.png"  WidthRequest="100" HeightRequest="65" HorizontalOptions="CenterAndExpand"  TextColor="White" BackgroundColor="#009EDA" Clicked="OnClickedSalva"/>
             <Button x:Name="m_elimina" Image="ic_delete_white.png" WidthRequest="100" HeightRequest="65" HorizontalOptions="CenterAndExpand" TextColor="White" BackgroundColor="Red" Clicked="OnClickedElimina"/>
             <Button x:Name="m_esci" Image="ic_navigate_before_white.png" WidthRequest="100" HeightRequest="65" HorizontalOptions="CenterAndExpand" TextColor="White" BackgroundColor="#009EDA" Clicked="OnClickedEsci"/>
