@@ -17,7 +17,7 @@
 		    	
 				<StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
 	            	<Label Text="FTP Server" WidthRequest="110" VerticalTextAlignment="Center" TextColor="Navy" FontAttributes="Bold"/>
-	            	<Picker Title="Server" x:Name="m_server_picker" WidthRequest="90" TextColor="Black"/>
+	            	<Picker Title="Server" x:Name="m_server_picker" WidthRequest="120" TextColor="Black"/>
 				</StackLayout>
 
 				<StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
@@ -27,12 +27,12 @@
 
 				<StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
 	            	<Label Text="Cod. Agente" WidthRequest="110" VerticalTextAlignment="Center" TextColor="Navy" FontAttributes="Bold"/>
-					<syncfusion:SfNumericTextBox  x:Name="m_age" WidthRequest="90" ParserMode="Double" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black"/>
+					<syncfusion:SfNumericTextBox  x:Name="m_age" WidthRequest="120" ParserMode="Double" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black"/>
 				</StackLayout>
 		
 				<StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Padding="0,0,0,20">
 	            	<Label Text="Registro" WidthRequest="110" VerticalTextAlignment="Center" TextColor="Navy" FontAttributes="Bold"/>
-					<Picker Title="Registro" x:Name="m_reg_picker" WidthRequest="90" TextColor="Black"/>
+					<Picker Title="Registro" x:Name="m_reg_picker" WidthRequest="120" TextColor="Black"/>
 				</StackLayout>
 
 				<Button Text=" Salva " HorizontalOptions="Center" Image="ic_done_white.png" BackgroundColor="#009EDA" TextColor="White" Clicked="OnClickedSalva"/>

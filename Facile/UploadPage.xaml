@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+	x:Class="Facile.UploadPage">
+
+	<AbsoluteLayout>
+		<StackLayout Padding="5,7,5,7" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#FFEB3B">
+
+	        <StackLayout BackgroundColor="#FBC02D" Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+            	<StackLayout.HeightRequest>
+              		<OnPlatform x:TypeArguments="x:Double" iOS="40" Android="40" />
+            	</StackLayout.HeightRequest>
+            	<StackLayout.MinimumHeightRequest>
+              		<OnPlatform x:TypeArguments="x:Double" iOS="40" Android="40" />
+            	</StackLayout.MinimumHeightRequest>
+            	<StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" Padding="3,0,0,0">
+                	<Label Text="Invio Documenti" FontAttributes="None"
+                       TextColor="Gray"
+                       HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center" FontSize="18"  x:Name="m_desc"/>
+            	</StackLayout>
+        	</StackLayout>
+
+			<Grid ColumnSpacing="3" RowSpacing="1" BackgroundColor="Transparent" VerticalOptions="FillAndExpand" Padding="7,0,7,0">
+
+	            <Grid.RowDefinitions>
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	                <RowDefinition Height="38" />
+	            </Grid.RowDefinitions>
+
+	            <Grid.ColumnDefinitions>
+	                <ColumnDefinition Width="3*"/>
+					<ColumnDefinition Width="1*"/>
+	                <ColumnDefinition Width="1*"/>
+	                <ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+	            </Grid.ColumnDefinitions>
+
+	            
+	            <Label Grid.Row="0" Grid.Column="0"  Text="Documenti" FontAttributes="Bold" TextColor="White" x:Name="m_doc"/>
+	            <Image Grid.Row="0" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_doc_upload"/>
+	            <Image Grid.Row="0" Grid.Column="2" Source="" x:Name="m_doc_json"/>
+	            <Image Grid.Row="0" Grid.Column="3" Source="" x:Name="m_dic_load"/>
+				<Label Grid.Row="0" Grid.Column="4" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_doc_rec"/>
+
+	            <Label Grid.Row="1" Grid.Column="0"  Text="Righe Documenti" FontAttributes="Bold" TextColor="White" x:Name="m_rig"/>
+	            <Image Grid.Row="1" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_rig_upload"/>
+	            <Image Grid.Row="1" Grid.Column="2" Source="" x:Name="m_rig_json"/>
+	            <Image Grid.Row="1" Grid.Column="3" Source="" x:Name="m_rig_load"/>
+	            <Label Grid.Row="1" Grid.Column="4" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_rig_rec"/>
+					
+	            <Label Grid.Row="2" Grid.Column="0"  Text="Clienti" FontAttributes="Bold" TextColor="White" x:Name="m_cli"/>
+	            <Image Grid.Row="2" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_cli_upload"/>
+	            <Image Grid.Row="2" Grid.Column="2" Source="" x:Name="m_cli_json"/>
+	            <Image Grid.Row="2" Grid.Column="3" Source="" x:Name="m_cli_load"/>
+	            <Label Grid.Row="2" Grid.Column="4" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_cli_rec"/>
+					
+	            <Label Grid.Row="3" Grid.Column="0"  Text="Destinazioni" FontAttributes="Bold" TextColor="White" x:Name="m_dst"/>
+	            <Image Grid.Row="3" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_dst_upload"/>
+	            <Image Grid.Row="3" Grid.Column="2" Source="" x:Name="m_dst_json"/>
+	            <Image Grid.Row="3" Grid.Column="3" Source="" x:Name="m_dst_load"/>
+				<Label Grid.Row="3" Grid.Column="4" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_dst_rec"/>
+
+			</Grid>
+			<Button Text="Invia" Clicked="OnInviaClicked"/>
+		</StackLayout>
+		<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="RollingBall" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="#2196F3"/>
+	</AbsoluteLayout>
+	
+</ContentPage>

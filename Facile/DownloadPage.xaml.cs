@@ -84,6 +84,11 @@ namespace Facile
 				await DisplayAlert("Attenzione!", "Utente non impostato o non valido.", "OK");
 				return;
 			}
+			if (lim.age == 0)
+			{
+				await DisplayAlert("Attenzione!", "Agente non impostato o non valido.", "OK");
+				return;
+			}
 
 			try
 			{

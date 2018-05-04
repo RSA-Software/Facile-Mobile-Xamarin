@@ -67,7 +67,17 @@ namespace Facile
 
 		protected override async  void OnAppearing()
 		{
-			imp_ = await dbcon_.GetAsync<LocalImpo>(1);
+			try
+			{
+				imp_ = await dbcon_.GetAsync<LocalImpo>(1);	
+			}
+			catch
+			{
+				await DisplayAlert("Attenzione!", "Sto configurando il Database.\n\nAttendere qualche secondo e riprovare.", "OK");
+				await Navigation.PopAsync();
+				return;
+			}
+
 			SetField();
 			base.OnAppearing();
 		}

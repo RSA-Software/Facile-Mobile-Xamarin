@@ -26,9 +26,9 @@ namespace Facile
 		}
 
 
-		void OnUploadDocuments(object sender, System.EventArgs e)
+		async void OnUploadDocumentsAsync(object sender, System.EventArgs e)
 		{
-			throw new NotImplementedException();
+			await Navigation.PushModalAsync(new UploadPage());
 		}
 	}
 }

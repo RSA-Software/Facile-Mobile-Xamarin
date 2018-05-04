@@ -135,7 +135,7 @@ namespace Facile
 			{
 				var app = (App)Application.Current;
 				var ditlist = await dbcon.QueryAsync<Ditte>("SELECT * FROM ditt2016 ORDER BY dit_codice LIMIT 1");
-				if (ditlist == null) 
+				if (ditlist.Count == 0) 
 					app.facile_db_impo = null;
 				else
 					app.facile_db_impo = ditlist[0];
