@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Facile.Interfaces;
+using Facile.Models;
 using PCLStorage;
+using SQLite;
 using Xamarin.Forms;
 
 namespace Facile
@@ -10,12 +12,15 @@ namespace Facile
 	public partial class DownloadImages : ContentPage
 	{
 		protected bool first;
+		private LocalImpo lim;
+		private readonly SQLiteAsyncConnection dbcon_;
+
 		public DownloadImages()
 		{
 			first = true;
+			lim = null;
+			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 			InitializeComponent();
-
-
 		}
 
 		protected override async void OnAppearing()
@@ -34,15 +39,61 @@ namespace Facile
 
 		private async Task Download()
 		{
+			//
+			// Leggiamo le impostazioni
+			//
 			try
 			{
-				String remoteServer = "ftp://www.facile2013.it/images/";
+				lim = await dbcon_.GetAsync<LocalImpo>(1);
+			}
+			catch
+			{
+				await DisplayAlert("Attenzione!", "Impostazioni locali non trovate!\nRiavviare l'App.", "OK");
+				await Navigation.PopModalAsync();
+				return;
+			}
+
+			if (string.IsNullOrWhiteSpace(lim.ftpServer))
+			{
+				await DisplayAlert("Attenzione!", "Server non impostato o non valido.", "OK");
+				await Navigation.PopModalAsync();
+				return;
+			}
+			if (string.IsNullOrWhiteSpace(lim.user))
+			{
+				await DisplayAlert("Attenzione!", "Utente non impostato o non valido.", "OK");
+				await Navigation.PopModalAsync();
+				return;
+			}
+
+			string password = "";
+			string remoteServer = "";
+
+			if (lim.ftpServer == "Facile - 01")
+				remoteServer = "ftp://www.facile2013.it/images/";
+
+			if (lim.ftpServer == "Facile - 02")
+				remoteServer = "ftp://www.rsaweb.com/images/";
+
+			if (lim.ftpServer == "Facile - 03")
+				remoteServer = "ftp://www.facilecloud.com/images/";
+
+			if (remoteServer == "")
+				throw new Exception("Server non impostato o non valido");
+
+			if (lim.user != "demo2017")
+				password = $"$_{lim.user}_$";
+			else
+				password = lim.user;
+			
+			try
+			{
 				IFolder rootFolder = FileSystem.Current.LocalStorage;
 				IFolder imagesFolder = await rootFolder.CreateFolderAsync("images", CreationCollisionOption.OpenIfExists);
 
 				m_desc.Text = "Otteniamo la lista dei files... ";
 				var ftp = DependencyService.Get<IFtpWebRequest>();
-				var files = await ftp.ListDirectory("demo2017", "demo2017", remoteServer);
+				var files = await ftp.ListDirectory(lim.user, password, remoteServer);
 
 				if (files != null && files.Count > 0)
 				{
@@ -52,19 +103,37 @@ namespace Facile
 						String remoteFile = remoteServer + file;
 						String localFile = imagesFolder.Path + "/" + file;
 
-						idx++;
-						m_desc.Text = string.Format("Scarico {0} di {1} - {2}", idx ,files.Count, file);
+						bool skip = true;
+						var x = file.LastIndexOf('.');
 
-						var result = await ftp.DownloadFile("demo2017", "demo2017", remoteFile, localFile);
-						if (!result.StartsWith("221", StringComparison.CurrentCulture))
+						if (x >= 0)
 						{
-							for (int retry = 0; retry < 5; retry++)
-							{
-								result = await ftp.DownloadFile("demo2017", "demo2017", remoteFile, localFile);
-								if (result.StartsWith("221", StringComparison.CurrentCulture)) break;
-							}
+							var ext = file.Substring(x);
+							if (ext.ToUpper() == ".JPG" || ext.ToUpper() == ".PNG" || ext.ToUpper() == ".PRN") skip = false;
+
+
+							//
+							// Controllare qui se si vuole la presenza dell'articolo
+							//
+
 						}
-						m_image.Source = localFile;
+						idx++;
+						if (skip)
+							m_desc.Text = string.Format("Salto {0} di {1} - {2}", idx, files.Count, file);
+						else
+						{
+							m_desc.Text = string.Format("Scarico {0} di {1} - {2}", idx, files.Count, file);
+							var result = await ftp.DownloadFile(lim.user, password, remoteFile, localFile);
+							if (!result.StartsWith("221", StringComparison.CurrentCulture))
+							{
+								for (int retry = 0; retry < 5; retry++)
+								{
+									result = await ftp.DownloadFile(lim.user, password, remoteFile, localFile);
+									if (result.StartsWith("221", StringComparison.CurrentCulture)) break;
+								}
+							}
+							m_image.Source = localFile;
+						}
 					}
 				}
 				m_desc.Text = "";

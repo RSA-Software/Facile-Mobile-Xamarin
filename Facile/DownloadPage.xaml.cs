@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net;
 using Xamarin.Forms;
 using Facile.Interfaces;
 using Facile.Imports;
@@ -8,12 +7,9 @@ using Facile.Models;
 using PCLStorage;
 using System.IO;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Converters;
 using System.Threading.Tasks;
 using ICSharpCode.SharpZipLib.Zip;
 using Xamarin.Forms.Xaml;
-using Syncfusion.XForms.PopupLayout;
 using SQLite;
 using System.Diagnostics;
 
@@ -40,7 +36,7 @@ namespace Facile
 			if (first)
 			{
 				var response = await DisplayAlert("Facile", "La ricezione dati potrebbe richiede una connessione internet e potrebbero essere necessari diversi minuti.\n\nVuoi proseguire?", "Si", "No");
-				if (response)
+				if (response) 
 					await Download();
 				else
 					await Navigation.PopModalAsync();
@@ -50,6 +46,8 @@ namespace Facile
 
 		private async Task Download()
 		{
+			busyIndicator.IsBusy = true;
+
 			//
 			// Leggiamo le impostazioni
 			//
@@ -59,7 +57,9 @@ namespace Facile
 			}
 			catch
 			{
+				busyIndicator.IsBusy = false;
 				await DisplayAlert("Attenzione!", "Impostazioni locali non trovate!\nRiavviare l'App.", "OK");
+				await Navigation.PopModalAsync();
 				return;
 			}
 
@@ -70,28 +70,125 @@ namespace Facile
 			}
 			catch (Exception ex)
 			{
+				busyIndicator.IsBusy = false;
 				await DisplayAlert("Attenzione!", ex.Message, "OK");
+				await Navigation.PopModalAsync();
 				return;
 			}
 
 			if (string.IsNullOrWhiteSpace(lim.ftpServer))
 			{
+				busyIndicator.IsBusy = false;
 				await DisplayAlert("Attenzione!", "Server non impostato o non valido.", "OK");
+				await Navigation.PopModalAsync();
 				return;
 			}
 			if (string.IsNullOrWhiteSpace(lim.user))
 			{
+				busyIndicator.IsBusy = false;
 				await DisplayAlert("Attenzione!", "Utente non impostato o non valido.", "OK");
+				await Navigation.PopModalAsync();
 				return;
 			}
 			if (lim.age == 0)
 			{
+				busyIndicator.IsBusy = false;
 				await DisplayAlert("Attenzione!", "Agente non impostato o non valido.", "OK");
+				await Navigation.PopModalAsync();
 				return;
 			}
 
+			var docList = new List<Fatture>();
+			var rigList = new List<FatRow>();
+
 			try
 			{
+				busyIndicator.Title = "Effettuo Backup...";
+
+				IFolder rootFolder = FileSystem.Current.LocalStorage;
+				String docJson = rootFolder.Path + "/" + "DOCBACKUP" + ".JSON";
+				String rigJson = rootFolder.Path + "/" + "RIGBACKUP" + ".JSON";
+
+				//
+				// Leggiamo i dati se esistono i file di backup su disco
+				//
+				ExistenceCheckResult doc_exist = await rootFolder.CheckExistsAsync(docJson);
+				ExistenceCheckResult rig_exist = await rootFolder.CheckExistsAsync(rigJson);
+
+				if (doc_exist == ExistenceCheckResult.FileExists)
+				{
+					IFile file = await rootFolder.CreateFileAsync(docJson, CreationCollisionOption.OpenIfExists);
+					string str = await file.ReadAllTextAsync();
+
+					var settings = new JsonSerializerSettings();
+					settings.DateFormatString = "dd/MM/yyyy HH:mm:ss";
+					settings.NullValueHandling = NullValueHandling.Ignore;
+
+					docList = JsonConvert.DeserializeObject<List<Fatture>>(str, settings);
+				}
+
+				if (rig_exist == ExistenceCheckResult.FileExists)
+				{
+					IFile file = await rootFolder.CreateFileAsync(rigJson, CreationCollisionOption.OpenIfExists);
+					string str = await file.ReadAllTextAsync();
+
+					var settings = new JsonSerializerSettings();
+					settings.DateFormatString = "dd/MM/yyyy HH:mm:ss";
+					settings.NullValueHandling = NullValueHandling.Ignore;
+
+					rigList = JsonConvert.DeserializeObject<List<FatRow>>(str, settings);
+				}
+
+				//
+				// Estraiamo i documenti e rimuoviamo i duplicati
+				//
+				var sql = "SELECT * FROM fatture2 WHERE fat_local_doc = 1";
+				var documenti = await dbcon_.QueryAsync<Fatture>(sql);
+				if (docList.Count > 0)
+				{
+					for (int idx = 0; idx < documenti.Count; idx++)
+					{
+						for (int idy = 0; idy < docList.Count; idy++)
+						{
+							if (documenti[idx].fat_tipo == docList[idy].fat_tipo && documenti[idx].fat_n_doc == docList[idy].fat_n_doc)
+							{
+								for (int idz = 0; idz < rigList.Count; idz++)
+								{
+									if (rigList[idz].rig_tipo == docList[idy].fat_tipo && rigList[idz].rig_n_doc == docList[idy].fat_n_doc)
+									{
+										rigList.RemoveAt(idz);
+										idz--;
+									}
+								}
+								docList.RemoveAt(idy);
+								idy--;
+							}
+						}
+					}
+				}
+				docList.AddRange(documenti);
+
+				//
+				// Estraiamo le righe dei documenti
+				//
+				foreach (var doc in docList)
+				{
+					sql = $"SELECT * from fatrow2 WHERE rig_tipo = {doc.fat_tipo} AND rig_n_doc = {doc.fat_n_doc} ORDER BY rig_tipo, rig_n_doc, rig_d_ins, rig_t_ins";
+					var righe = await dbcon_.QueryAsync<FatRow>(sql);
+					rigList.AddRange(righe); 
+				}
+
+				//
+				// Salviamo i dati
+				//
+				IFile doc_file = await rootFolder.CreateFileAsync(docJson, CreationCollisionOption.ReplaceExisting);
+				await doc_file.WriteAllTextAsync(JsonConvert.SerializeObject(docList, Formatting.Indented));
+
+				IFile rig_file = await rootFolder.CreateFileAsync(rigJson, CreationCollisionOption.ReplaceExisting);
+				await rig_file.WriteAllTextAsync(JsonConvert.SerializeObject(rigList, Formatting.Indented));
+
+				busyIndicator.Title = "Scarico Dati...";
+
 				await ImportTableAsync<Ditte>("ditt2016", m_dit_download, m_dit_unzip, m_dit_json, m_dit_load, m_dit, m_dit_rec);
 				await ImportTableAsync<Zone>("zone", m_zon_download, m_zon_unzip, m_zon_json, m_zon_load, m_zon, m_zon_rec);
 				await ImportTableAsync<Cateco>("cateco", m_eco_download, m_eco_unzip, m_eco_json, m_eco_load, m_eco, m_eco_rec);
@@ -123,11 +220,47 @@ namespace Facile
 				await ImportTableAsync<Agganci>("agganci1", m_agg_download, m_agg_unzip, m_agg_json, m_agg_load, m_agg, m_agg_rec);
 				await ImportTableAsync<Descrizioni>("descriz1", m_des_download, m_des_unzip, m_des_json, m_des_load, m_des, m_des_rec);
 
+				busyIndicator.Title = "Ripristino Backup...";
+
+				//
+				// Verifichiamo l'esistenza dei dati di backup
+				//
+				for (int idx = 0; idx < docList.Count; idx++)
+				{
+					docList[idx].fat_id = 0;
+					sql = $"SELECT COUNT(*) FROM fatture2 WHERE fat_tipo = {docList[idx].fat_tipo} AND fat_n_doc = {docList[idx].fat_n_doc}";
+					var num = await dbcon_.ExecuteScalarAsync<int>(sql);
+					if (num > 0)
+					{
+						for (int idy = 0; idy < rigList.Count; idy++)
+						{
+							if (rigList[idy].rig_tipo == docList[idx].fat_tipo && rigList[idy].rig_n_doc == docList[idx].fat_n_doc)
+							{
+								rigList.RemoveAt(idy);
+								idy--;
+							}
+						}
+						docList.RemoveAt(idx);
+						idx--;
+					}
+				}
+				for (int idx = 0; idx < rigList.Count; idx++)
+				{
+					rigList[idx].rig_id = 0;
+				}
+
+				//
+				// Inseriamo i dati nel database
+				//
+				if (docList.Count > 0) await dbcon_.InsertAllAsync(docList);
+				if (rigList.Count > 0) await dbcon_.InsertAllAsync(rigList);
+
+
 				try
 				{
 					var app = (App)Application.Current;
 					var ditlist = await dbcon_.QueryAsync<Ditte>("SELECT * FROM ditt2016 ORDER BY dit_codice LIMIT 1");
-					if (ditlist == null)
+					if (ditlist.Count == 0)
 						app.facile_db_impo = null;
 					else
 						app.facile_db_impo = ditlist[0];
@@ -135,7 +268,9 @@ namespace Facile
 				catch (Exception e)
 				{
 					Debug.WriteLine(e.Message);
+					busyIndicator.IsBusy = false;
 					await DisplayAlert("Attenzione!", "Nessuna Ditta Trovata in Archivio", "OK");
+					await Navigation.PopModalAsync();
 					return;
 				}
 
@@ -144,10 +279,19 @@ namespace Facile
 				//
 				lim.data_download = true;
 				await dbcon_.UpdateAsync(lim);
+
+				//
+				// Rimuoviamo i files di backup
+				//
+				await doc_file.DeleteAsync();
+				await rig_file.DeleteAsync();
+
+				busyIndicator.IsBusy = false;
 				await DisplayAlert("Facile", "Importazione dati conclusa regolarmente!", "Ok");
 			}
 			catch (Exception ex)
 			{
+				busyIndicator.IsBusy = false;
 				await DisplayAlert("Download Error", ex.Message, "OK");
 			}
 			await Navigation.PopModalAsync();

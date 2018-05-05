@@ -90,7 +90,7 @@ namespace Facile
 
 		async void OnCurrentPageChanged(object sender, System.EventArgs e)
 		{
-			if (nuova && (CurrentPage == bodyPage_ || CurrentPage == footerPage_))
+			if (nuova && (CurrentPage == bodyPage_ || CurrentPage == footerPage_ || CurrentPage == notePage_))
 			{
 				Device.BeginInvokeOnMainThread(() => {
 					CurrentPage = Children[0];

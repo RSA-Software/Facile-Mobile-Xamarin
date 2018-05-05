@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 using Facile.ExportModels;
 using Facile.Interfaces;
 using Facile.Models;
@@ -10,22 +11,50 @@ using PCLStorage;
 using SQLite;
 using Syncfusion.SfBusyIndicator.XForms;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace Facile
 {
+	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class UploadPage : ContentPage
 	{
+		protected bool first;
 		private LocalImpo lim;
 		private readonly SQLiteAsyncConnection dbcon_;
 
 		public UploadPage()
 		{
-			lim = null;
+			first  = true;
+			lim    = null;
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 			InitializeComponent();
 		}
 
-		async void OnInviaClicked(object sender, System.EventArgs e)
+		protected async override void OnAppearing()
+		{
+			if (first)
+			{
+				var response = await DisplayAlert("Facile", "L'invio dei documenti richiede una connessione internet e potrebbero essere necessari diversi minuti.\n\nVuoi proseguire?", "Si", "No");
+				if (response)
+				{
+					try
+					{
+						await Upload();
+					}
+					catch (Exception ex)
+					{
+						await DisplayAlert("Errore", ex.Message, "OK");
+						await Navigation.PopModalAsync();
+					}
+				}
+				else
+					await Navigation.PopModalAsync();
+			}
+			first = false;
+		}
+
+
+		private async Task Upload()
 		{
 			int cli_rec = 0;
 			int dst_rec = 0;
@@ -41,22 +70,26 @@ namespace Facile
 			catch
 			{
 				await DisplayAlert("Attenzione!", "Impostazioni locali non trovate!\nRiavviare l'App.", "OK");
+				await Navigation.PopModalAsync();
 				return;
 			}
 
 			if (string.IsNullOrWhiteSpace(lim.ftpServer))
 			{
 				await DisplayAlert("Attenzione!", "Server non impostato o non valido.", "OK");
+				await Navigation.PopModalAsync();
 				return;
 			}
 			if (string.IsNullOrWhiteSpace(lim.user))
 			{
 				await DisplayAlert("Attenzione!", "Utente non impostato o non valido.", "OK");
+				await Navigation.PopModalAsync();
 				return;
 			}
 			if (lim.age == 0)
 			{
 				await DisplayAlert("Attenzione!", "Agente non impostato o non valido.", "OK");
+				await Navigation.PopModalAsync();
 				return;
 			}
 
@@ -66,17 +99,29 @@ namespace Facile
 
 			var docList = new List<Documento>();
 
+
+			m_doc_ext.Source = "ic_hourglass_full_white.png";
+			m_rig_ext.Source = "ic_hourglass_full_white.png";
+			m_cli_ext.Source = "ic_hourglass_full_white.png";
+			m_dst_ext.Source = "ic_hourglass_full_white.png";
+
+
+			m_doc.FontSize = m_doc.FontSize + 3;
+			m_doc.TextColor = Color.Red;
+
 			var sql = "SELECT * FROM fatture2 WHERE fat_local_doc = 1";
 			var fatList = await dbcon_.QueryAsync<Fatture>(sql);
 			if (fatList.Count == 0)
 			{
 				busyIndicator.IsBusy = false;
 				await DisplayAlert("Attenzione!", "Non ci sono documenti da inviare alla sede.", "OK");
+				await Navigation.PopModalAsync();
 				return;
 			}
 
 			m_doc_rec.Text = $"{fatList.Count}";
-
+			m_doc.FontSize = m_doc.FontSize - 3;
+			m_doc.TextColor = Color.White;
 
 			busyIndicator.AnimationType = AnimationTypes.Gear;
 			busyIndicator.Title = "Estrazione Dati Documenti";
@@ -88,6 +133,8 @@ namespace Facile
 				// 
 				// Inseriamo i dati del cliente
 				//
+				m_cli.FontSize = m_cli.FontSize + 3;
+				m_cli.TextColor = Color.Red;
 				try
 				{
 					cli_rec++;
@@ -98,6 +145,8 @@ namespace Facile
 					throw new RsaException(RsaException.NotFoundMsg, RsaException.NotFoundErr);
 				}
 				m_cli_rec.Text = $"{cli_rec}";
+				m_cli.FontSize = m_cli.FontSize - 3;
+				m_cli.TextColor = Color.White;
 
 
 				//
@@ -105,6 +154,9 @@ namespace Facile
 				//
 				if (fat.fat_dest != 0)
 				{
+					m_dst.FontSize = m_dst.FontSize + 3;
+					m_dst.TextColor = Color.Red;
+
 					try
 					{
 						dst_rec++;
@@ -114,14 +166,22 @@ namespace Facile
 					{
 						throw new RsaException(RsaException.NotFoundMsg, RsaException.NotFoundErr);
 					}
+					m_dst.FontSize = m_dst.FontSize - 3;
+					m_dst.TextColor = Color.White;
 				}
 				m_dst_rec.Text = $"{dst_rec}";
 
 				//
 				// Inseriamo le righe dei documenti
 				//
-				sql = string.Format("SELECT * from fatrow2 WHERE rig_tipo = {0} AND rig_n_doc = {1}", fat.fat_tipo, fat.fat_n_doc);
+				m_rig.FontSize = m_rig.FontSize + 3;
+				m_rig.TextColor = Color.Red;
+
+				sql = string.Format("SELECT * from fatrow2 WHERE rig_tipo = {0} AND rig_n_doc = {1} ORDER BY rig_tipo, rig_n_doc, rig_d_ins, rig_t_ins", fat.fat_tipo, fat.fat_n_doc);
 				doc.righe = await dbcon_.QueryAsync<FatRow>(sql);
+
+				m_rig.FontSize = m_rig.FontSize - 3;
+				m_rig.TextColor = Color.White;
 
 				rig_rec += doc.righe.Count;
 				m_rig_rec.Text = $"{rig_rec}";
@@ -149,7 +209,11 @@ namespace Facile
 							break;
 					}
 					var test = await DisplayAlert("Attenzone", sql, "SI", "NO");
-					if (!test) return;
+					if (!test) 
+					{
+						await Navigation.PopModalAsync();
+						return;
+					}
 					
 				}
 
@@ -158,10 +222,19 @@ namespace Facile
 				//
 				docList.Add(doc);
 			}
+			m_doc_ext.Source = "ic_storage_black.png";
+			m_rig_ext.Source = "ic_storage_black.png";
+			m_cli_ext.Source = "ic_storage_black.png";
+			m_dst_ext.Source = "ic_storage_black.png";
 
 			//
 			// Creiamo il file
 			//
+			m_doc_json.Source = "ic_hourglass_full_white.png";
+			m_rig_json.Source = "ic_hourglass_full_white.png";
+			m_cli_json.Source = "ic_hourglass_full_white.png";
+			m_dst_json.Source = "ic_hourglass_full_white.png";
+
 			busyIndicator.AnimationType = AnimationTypes.DoubleCircle;
 			busyIndicator.Title = "Serializzazione";
 
@@ -172,6 +245,16 @@ namespace Facile
 
 			IFile json_file = await rootFolder.CreateFileAsync(localJson, CreationCollisionOption.ReplaceExisting);
 			await json_file.WriteAllTextAsync(JsonConvert.SerializeObject(docList, Formatting.Indented));
+
+			m_doc_json.Source = "ic_code_black.png";
+			m_rig_json.Source = "ic_code_black.png";
+			m_cli_json.Source = "ic_code_black.png";
+			m_dst_json.Source = "ic_code_black.png";
+
+			m_doc_upload.Source = "ic_file_download_black.png";
+			m_rig_upload.Source = "ic_file_download_black.png";
+			m_cli_upload.Source = "ic_file_download_black.png";
+			m_dst_upload.Source = "ic_file_download_black.png";
 
 			//
 			// Trasmettiamo il file
@@ -217,6 +300,11 @@ namespace Facile
 				m_dst_upload.Source = "ic_cloud_black.png";
 
 
+				m_doc.TextColor = Color.Black;
+				m_rig.TextColor = Color.Black;
+				m_cli.TextColor = Color.Black;
+				m_dst.TextColor = Color.Black;
+
 				//
 				// Marchiamo i documenti come non più editabili
 				//
@@ -225,37 +313,26 @@ namespace Facile
 					fat.fat_editable = false;
 				}
 				await dbcon_.UpdateAllAsync(fatList);
-
-				//
-				// Rimuoviamo il file
-				//
-				await json_file.DeleteAsync();
 				await DisplayAlert("Facile", "Invio documenti concluso con successo!", "OK");
 			}
 			else if (result.StartsWith("530", StringComparison.CurrentCulture))
 			{
-				//
-				// Rimuoviamo il file
-				//
-				await json_file.DeleteAsync();
 				await DisplayAlert("Facile", "Parametri di Login non validi!\nVerificare il nome utente configurato.", "OK");
 			}
 			else if (result.StartsWith("System.Net.WebException", StringComparison.CurrentCulture))
 			{
-				//
-				// Rimuoviamo il file
-				//
-				await json_file.DeleteAsync();
 				await DisplayAlert("Facile", result, "OK");
 			}
 			else
 			{
-				//
-				// Rimuoviamo il file
-				//
-				await json_file.DeleteAsync();
 				await DisplayAlert("Facile", "Impossibile caricare il file sul server!", "OK");
 			}
+
+			//
+			// Rimuoviamo il file
+			//
+			await json_file.DeleteAsync();
+			await Navigation.PopModalAsync();
 		}
 	}
 }

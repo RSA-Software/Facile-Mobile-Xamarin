@@ -12,6 +12,13 @@ namespace Facile
 		public SincronizePage()
 		{
 			InitializeComponent();
+
+			if (Device.RuntimePlatform == Device.iOS)
+			{
+				m_down_data.Text = "Ric. Dati";
+				m_down_img.Text = "Immagini";
+				m_upl_doc.Text = "Invio Doc.";
+			}
 		}
 
 		async void OnDownloadDati(object sender, System.EventArgs e)

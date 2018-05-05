@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using Facile.Extension;
 using Facile.Interfaces;
 using Facile.Models;
 using Facile.Utils;
@@ -375,6 +376,16 @@ namespace Facile
 				return;
 			}
 
+			try
+			{
+				await _parent.doc.RecalcAsync();
+			}
+			catch (Exception ex)
+			{
+				await DisplayAlert("Errore", ex.Message, "OK");
+				return;
+			}
+
 			//
 			// Controlliamo che l'anno sia coincidente con le impostazioni
 			//
@@ -429,14 +440,39 @@ namespace Facile
 		async void OnRecordStampa(object sender, System.EventArgs e)
 		{
 			GetField();
-			// Controllare lo stato del documento
+			if (_parent.doc.fat_inte == 0L)
+			{
+				m_cli_cod.Focus();
+				return;
+			}
 
-			// Effettuare il ricalcolo
+			try
+			{
+				await _parent.doc.RecalcAsync();
+			}
+			catch (Exception ex)
+			{
+				await DisplayAlert("Errore", ex.Message, "OK");
+				return;
+			}
 
+			try
+			{
+				await _dbcon.UpdateAsync(_parent.doc);
+			}
+			catch (SQLiteException ex)
+			{
+				await DisplayAlert("Attenzione!", ex.Message, "OK");
+				return;
+			}
+
+			var animation = busyIndicator.AnimationType;
 			busyIndicator.IsBusy = true;
+			busyIndicator.AnimationType = Syncfusion.SfBusyIndicator.XForms.AnimationTypes.Print;
 			var prn = new ZebraPrn(this);
-			await prn.PrintDoc(_parent.doc, 2);
+			await prn.PrintDoc(_parent.doc);
 			busyIndicator.IsBusy = false;
+			busyIndicator.AnimationType = animation;
 		}
 	}
 }
