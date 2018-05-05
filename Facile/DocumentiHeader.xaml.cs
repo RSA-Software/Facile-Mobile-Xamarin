@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Facile.Extension;
 using Facile.Interfaces;
@@ -35,6 +36,16 @@ namespace Facile
 			_dbcon = DependencyService.Get<ISQLiteDb>().GetConnection();
 
 			InitializeComponent();
+
+			if (Device.Idiom == TargetIdiom.Tablet)
+			{
+				m_cli_cod.WidthRequest = 150;
+				m_dst_cod.WidthRequest = 150;
+				m_n_doc.WidthRequest = 150;
+				m_d_doc.WidthRequest = 150;
+			}
+
+
 			SetProtection();
 		}
 		protected override async void OnAppearing()
@@ -197,7 +208,17 @@ namespace Facile
 		{
 			_parent.doc.fat_inte = Int32.Parse(m_cli_cod.Text);
 			_parent.doc.fat_dest = Int32.Parse(m_dst_cod.Text);
-			_parent.doc.fat_n_doc = RsaUtils.GetStoredNumDoc((int)m_n_doc.Value,fat_registro.Text); 
+
+			try
+			{
+				int num  = m_n_doc.Value == null ? 0 : Convert.ToInt32(m_n_doc.Value);
+				_parent.doc.fat_n_doc = RsaUtils.GetStoredNumDoc(num, fat_registro.Text); 
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
+
 			_parent.doc.fat_registro = fat_registro.Text;
 			_parent.doc.fat_d_doc = m_d_doc.Date;
 		}
@@ -369,10 +390,19 @@ namespace Facile
 		async void OnRecordSalva(object sender, System.EventArgs e)
 		{
 			if (!m_salva.IsEnabled) return;
+
+
 			GetField();
 			if (_parent.doc.fat_inte == 0L)
 			{
 				m_cli_cod.Focus();
+				return;
+			}
+			var anno = ((App)Application.Current).facile_db_impo.dit_anno;
+			if (_parent.doc.fat_d_doc.Year != anno)
+			{
+				m_d_doc.Focus();
+				await DisplayAlert("Attenzione!", $"Anno documento diverso anno di lavoro ({anno})\n\nImpossibile continuare", "OK");
 				return;
 			}
 

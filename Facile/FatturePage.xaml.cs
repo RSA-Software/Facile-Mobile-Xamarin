@@ -82,6 +82,13 @@ namespace Facile
 				await DisplayAlert("Attenzione!", "Agente non impostato!\nPer inserire documenti è necessario fare le impostazioni iniziali.", "OK");
 				return;
 			}
+			if (lim.dep == 0)
+			{
+				busyIndicator.IsBusy = false;
+				await DisplayAlert("Attenzione!", "Deposito non impostato!\nPer inserire documenti è necessario fare le impostazioni iniziali.", "OK");
+				return;
+			}
+
 
 			//
 			// Leggiamo i dati dell' agente

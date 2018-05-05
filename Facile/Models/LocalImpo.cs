@@ -14,6 +14,7 @@ namespace Facile.Models
 		public string registro { get; set; }
 		public int age { get; set; }
 		public bool data_download { get; set; }
+		public int dep { get; set; }
 
 		public LocalImpo()
 		{
@@ -26,6 +27,7 @@ namespace Facile.Models
 			user = "";
 			registro = "";
 			age = 0;
+			dep = 0;
 			data_download = false;
 		}
 	}

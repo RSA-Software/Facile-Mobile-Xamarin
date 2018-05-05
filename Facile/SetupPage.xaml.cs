@@ -87,7 +87,24 @@ namespace Facile
 			imp_.ftpServer = m_server_picker.SelectedItem != null ? m_server_picker.SelectedItem.ToString().Trim() : "";
 			imp_.user = m_user.Text != null ? m_user.Text.Trim() : "";
 			imp_.registro = m_reg_picker.SelectedItem != null ? m_reg_picker.SelectedItem.ToString().Trim() : "";
-			imp_.age = Int32.Parse(m_age.Value.ToString());
+
+			try
+			{
+				imp_.age = m_age.Value == null ? 0 : Convert.ToInt32(m_age.Value);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
+
+			try
+			{
+				imp_.dep = m_dep.Value == null ? 0 : Convert.ToInt32(m_dep.Value);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
 		}
 
 		void SetField()
@@ -98,6 +115,7 @@ namespace Facile
 				m_server_picker.SelectedItem = imp_.ftpServer;
 			m_user.Text = imp_.user;
 			m_age.Value = imp_.age;
+			m_dep.Value = imp_.dep;
 			if (imp_.registro == "")
 				m_reg_picker.SelectedItem = null;
 			else
@@ -121,6 +139,11 @@ namespace Facile
 			if (imp_.age == 0)
 			{
 				m_age.Focus();
+				return;
+			}
+			if (imp_.dep == 0)
+			{
+				m_dep.Focus();
 				return;
 			}
 			if (imp_.registro == "")

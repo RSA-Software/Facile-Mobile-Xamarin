@@ -58,10 +58,31 @@ namespace Facile
 		async void OnAddClicked(object sender, System.EventArgs e)
 		{
 			var app = (App)Application.Current;
+			LocalImpo lim = null;
+			//
+			// Leggiamo le impostazioni
+			//
+			try
+			{
+				lim = await dbcon_.GetAsync<LocalImpo>(1);
+			}
+			catch
+			{
+				await DisplayAlert("Attenzione!", "Impostazioni locali non trovate!\nRiavviare l'App.", "OK");
+				return;
+			}
+
+			if (lim.dep == 0)
+			{
+				await DisplayAlert("Attenzione!", "Deposito non impostato!\nEffettuare le impostazioni iniziali.", "OK");
+				return;
+			}
+
 
 			var rig = new FatRow();
 			rig.rig_tipo = _parent.doc.fat_tipo;
 			rig.rig_n_doc = _parent.doc.fat_n_doc;
+			rig.rig_dep = lim.dep;
 			if (app.facile_db_impo != null) rig.rig_iva_inclusa = app.facile_db_impo.dit_iva_inc;
 			rig.rig_coef_mol = 1;
 			rig.rig_coef_mol2 = 1;

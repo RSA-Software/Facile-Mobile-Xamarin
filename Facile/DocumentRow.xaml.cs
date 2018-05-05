@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Threading.Tasks;
@@ -33,6 +34,16 @@ namespace Facile
 			index_ = index;
 			editable_ = editable;
 			InitializeComponent();
+
+			//var culture = new CultureInfo("en-US");
+			//m_quantita.Culture = culture; 
+			//m_prezzo.Culture = culture; 
+			//m_sco1.Culture = culture; 
+			//m_sco2.Culture = culture; 
+			//m_sco3.Culture = culture; 
+			//m_totale.Culture = culture; 
+
+
 			NavigationPage.SetHasNavigationBar(this, false);
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 
@@ -158,15 +169,63 @@ namespace Facile
 
 		public void GetField()
 		{
+			
 			rig_.rig_art = m_art.Text;
 			rig_.rig_newdes = m_desc.Text;
 
-			rig_.rig_qta     = m_quantita.Value == null ? 0 : (double)m_quantita.Value;
-			rig_.rig_prezzo  = m_prezzo.Value == null ? 0 : (double)m_prezzo.Value;
-			rig_.rig_sconto1 = m_sco1.Value == null ? 0 : (double)m_sco1.Value;
-		    rig_.rig_sconto2 = m_sco2.Value == null ? 0 : (double)m_sco2.Value;
-			rig_.rig_sconto3 = m_sco3.Value == null ? 0 : (double)m_sco3.Value;
-			rig_.rig_importo = m_totale.Value == null ? 0 : (double)m_totale.Value;
+			try
+			{
+				rig_.rig_qta = m_quantita.Value == null ? 0 : Convert.ToDouble(m_quantita.Value);	
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
+
+			try
+			{
+				rig_.rig_prezzo = m_prezzo.Value == null ? 0 : Convert.ToDouble(m_prezzo.Value);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
+
+			try
+			{
+				rig_.rig_sconto1 = m_sco1.Value == null ? 0 : Convert.ToDouble(m_sco1.Value);	
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
+
+			try
+			{
+				rig_.rig_sconto2 = m_sco2.Value == null ? 0 : Convert.ToDouble(m_sco2.Value);	
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
+
+			try
+			{
+				rig_.rig_sconto3 = m_sco3.Value == null ? 0 : Convert.ToDouble(m_sco3.Value);	
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
+
+			try
+			{
+				rig_.rig_importo = m_totale.Value == null ? 0 : Convert.ToDouble(m_totale.Value);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
 
 			if (m_sostituzione.IsToggled)
 				rig_.rig_sost = 1;

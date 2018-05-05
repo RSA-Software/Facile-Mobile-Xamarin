@@ -60,7 +60,7 @@ Global
 		$0.DotNetNamingPolicy = $2
 		$2.DirectoryNamespaceAssociation = PrefixedHierarchical
 		$0.TextStylePolicy = $3
-		$3.FileWidth = 200
+		$3.FileWidth = 210
 		$3.scope = text/x-csharp
 		$0.CSharpFormattingPolicy = $4
 		$4.scope = text/x-csharp

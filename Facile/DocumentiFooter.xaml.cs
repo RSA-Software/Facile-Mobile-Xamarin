@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using Facile.Extension;
 using Facile.Interfaces;
@@ -94,16 +95,87 @@ namespace Facile
 
 		public void GetField()
 		{
-			_parent.doc.fat_tot_merce = m_tot_merce.Value == null ? 0 : (double)m_tot_merce.Value;
-			_parent.doc.fat_sconto    = m_sconto.Value == null ? 0 : (double)m_sconto.Value;
-			_parent.doc.fat_tot_netto = m_tot_netto.Value == null ? 0 : (double)m_tot_netto.Value;
-			_parent.doc.fat_colli     = m_colli.Value == null ? 0 : (int)m_colli.Value;
-			_parent.doc.fat_pag       = m_cod_pag.Value == null ? 0 : (int)m_cod_pag.Value;
+			try
+			{
+				_parent.doc.fat_tot_merce = m_tot_merce.Value == null ? 0 : Convert.ToDouble(m_tot_merce.Value);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
 
-			_parent.doc.fat_totale_imponibile = m_imponibile.Value == null ? 0 : (double)m_imponibile.Value;
-			_parent.doc.fat_tot_iva           = m_imposta.Value == null ? 0 : (double)m_imposta.Value;
-			_parent.doc.fat_tot_fattura       = m_totale.Value == null ? 0 : (double)m_totale.Value;
-			_parent.doc.fat_anticipo          = m_acconto.Value == null ? 0 : (double)m_acconto.Value;
+			try
+			{
+				_parent.doc.fat_sconto = m_sconto.Value == null ? 0 : Convert.ToDouble(m_sconto.Value);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
+
+			try
+			{
+				_parent.doc.fat_tot_netto = m_tot_netto.Value == null ? 0 : Convert.ToDouble(m_tot_netto.Value);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
+
+			try
+			{
+				_parent.doc.fat_colli = m_colli.Value == null ? 0 : Convert.ToInt32(m_colli.Value);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
+
+			try
+			{
+				_parent.doc.fat_pag = m_cod_pag.Value == null ? 0 : Convert.ToInt32(m_cod_pag.Value);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
+
+			try
+			{
+				_parent.doc.fat_totale_imponibile = m_imponibile.Value == null ? 0 : Convert.ToDouble(m_imponibile.Value);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);	
+			}
+
+			try
+			{
+				_parent.doc.fat_tot_iva = m_imposta.Value == null ? 0 : Convert.ToDouble(m_imposta.Value);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
+
+			try
+			{
+				_parent.doc.fat_tot_fattura = m_totale.Value == null ? 0 : Convert.ToDouble(m_totale.Value);
+
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
+
+			try
+			{
+				_parent.doc.fat_anticipo = m_acconto.Value == null ? 0 : Convert.ToDouble(m_acconto.Value);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
 		}
 
 

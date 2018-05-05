@@ -31,8 +31,8 @@
 					
 					<Label Grid.Row="0" Grid.Column="0" Text="Totale Merce" WidthRequest="130" FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
 					<Label Grid.Row="0" Grid.Column="1" Text="%Sconto" WidthRequest="90" FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
-					<syncfusion:SfNumericTextBox Grid.Row="1" Grid.Column="0" x:Name="m_tot_merce" WidthRequest="130" ParserMode="Double" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="C" TextColor="Black" FontAttributes="Bold" IsEnabled="false" BorderColor="Gray"/>
-					<syncfusion:SfNumericTextBox Grid.Row="1" Grid.Column="1" x:Name="m_sconto" WidthRequest="90" ParserMode="Double" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="P" PercentDisplayMode="Value" TextColor="Black" FontAttributes="Bold" BorderColor="Gray" ValueChanged="OnScontoChanged" ValueChangeMode="OnLostFocus"/>
+					<syncfusion:SfNumericTextBox Grid.Row="1" Grid.Column="0" x:Name="m_tot_merce" WidthRequest="130" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="C" TextColor="Black" FontAttributes="Bold" IsEnabled="false" BorderColor="Gray"/>
+					<syncfusion:SfNumericTextBox Grid.Row="1" Grid.Column="1" x:Name="m_sconto" WidthRequest="90" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="P" PercentDisplayMode="Value" TextColor="Black" FontAttributes="Bold" BorderColor="Gray" ValueChanged="OnScontoChanged" ValueChangeMode="OnLostFocus"/>
 					
 
 					<Label Grid.Row="2" Grid.Column="0" Text="Totale Netto" WidthRequest="130" FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
@@ -40,24 +40,24 @@
 						<Label x:Name="m_colli_text" Text="Colli" WidthRequest="50" FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
 						<Label x:Name="m_cod_pag_text" Text="Cod.Pag." WidthRequest="60" FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
 					</StackLayout>
-					<syncfusion:SfNumericTextBox Grid.Row="3" Grid.Column="0" x:Name="m_tot_netto" WidthRequest="130" ParserMode="Double" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="C" TextColor="Black" FontAttributes="Bold" IsEnabled="false" BorderColor="Gray"/>
+					<syncfusion:SfNumericTextBox Grid.Row="3" Grid.Column="0" x:Name="m_tot_netto" WidthRequest="130" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="C" TextColor="Black" FontAttributes="Bold" IsEnabled="false" BorderColor="Gray"/>
 					<StackLayout Grid.Row="3" Grid.Column="1" HorizontalOptions="Fill" Orientation="Horizontal">
-						<syncfusion:SfNumericTextBox  x:Name="m_colli" WidthRequest="50" ParserMode="Double" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold" BorderColor="Gray" ValueChanged="OnColliChanged" ValueChangeMode="OnLostFocus"/>
-						<syncfusion:SfNumericTextBox  x:Name="m_cod_pag" WidthRequest="60" ParserMode="Double" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold" BorderColor="Gray" ValueChanged="OnPagamentoChanged" ValueChangeMode="OnLostFocus"/>
+						<syncfusion:SfNumericTextBox  x:Name="m_colli" WidthRequest="50" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold" BorderColor="Gray" ValueChanged="OnColliChanged" ValueChangeMode="OnLostFocus"/>
+						<syncfusion:SfNumericTextBox  x:Name="m_cod_pag" WidthRequest="60" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold" BorderColor="Gray" ValueChanged="OnPagamentoChanged" ValueChangeMode="OnLostFocus"/>
 						<Button x:Name="m_search_pag" Image="ic_search_black.png" HorizontalOptions="Start"  TextColor="Black" BackgroundColor="Transparent" HeightRequest="25" WidthRequest="40" Clicked="OnCodPagClicked"/>
 					</StackLayout>
 
 
 					<Label Grid.Row="4" Grid.Column="0" Text="Imponibile" WidthRequest="130" FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
 					<Label Grid.Row="4" Grid.Column="1" Text="Imposta" WidthRequest="130"  FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
-					<syncfusion:SfNumericTextBox Grid.Row="5" Grid.Column="0" x:Name="m_imponibile" WidthRequest="130" ParserMode="Double" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="C" TextColor="Black" FontAttributes="Bold" IsEnabled="false" BorderColor="Gray"/>
-					<syncfusion:SfNumericTextBox Grid.Row="5" Grid.Column="1" x:Name="m_imposta" WidthRequest="130" ParserMode="Double" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="C" TextColor="Black" FontAttributes="Bold" IsEnabled="false" BorderColor="Gray"/>
+					<syncfusion:SfNumericTextBox Grid.Row="5" Grid.Column="0" x:Name="m_imponibile" WidthRequest="130" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="C" TextColor="Black" FontAttributes="Bold" IsEnabled="false" BorderColor="Gray"/>
+					<syncfusion:SfNumericTextBox Grid.Row="5" Grid.Column="1" x:Name="m_imposta" WidthRequest="130" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="C" TextColor="Black" FontAttributes="Bold" IsEnabled="false" BorderColor="Gray"/>
 
 
 					<Label Grid.Row="6" Grid.Column="0" Text="Totale" WidthRequest="130" FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
 					<Label Grid.Row="6" Grid.Column="1" Text="Acconto" WidthRequest="130" FontAttributes="Bold" TextColor="Navy" HorizontalTextAlignment="Center"/>
-					<syncfusion:SfNumericTextBox Grid.Row="7" Grid.Column="0" x:Name="m_totale" WidthRequest="130" ParserMode="Double" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="C" TextColor="Red" FontAttributes="Bold" IsEnabled="false" BorderColor="Gray"/>
-					<syncfusion:SfNumericTextBox Grid.Row="7" Grid.Column="1" x:Name="m_acconto" WidthRequest="130" ParserMode="Double" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="C" TextColor="Black" FontAttributes="Bold" BorderColor="Gray"/>	
+					<syncfusion:SfNumericTextBox Grid.Row="7" Grid.Column="0" x:Name="m_totale" WidthRequest="130" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="C" TextColor="Red" FontAttributes="Bold" IsEnabled="false" BorderColor="Gray"/>
+					<syncfusion:SfNumericTextBox Grid.Row="7" Grid.Column="1" x:Name="m_acconto" WidthRequest="130" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="C" TextColor="Black" FontAttributes="Bold" BorderColor="Gray"/>	
 
 					
 					<Label Grid.Row="8" Grid.Column="0" Text="Consegna" WidthRequest="130" FontAttributes="Bold" TextColor="Navy" />
