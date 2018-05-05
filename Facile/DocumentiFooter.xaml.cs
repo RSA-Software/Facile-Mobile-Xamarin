@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using Facile.Extension;
 using Facile.Interfaces;
 using Facile.Models;
@@ -20,6 +21,11 @@ namespace Facile
 			change_event = true;
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 			InitializeComponent();
+
+			//var culture = new CultureInfo("it-IT");
+			//culture.NumberFormat.CurrencyGroupSeparator = "?";
+			//culture.NumberFormat.NumberGroupSeparator = "?";
+			//m_imponibile.Culture = culture;
 
 			if (Device.Idiom == TargetIdiom.Tablet)
 			{
@@ -88,16 +94,16 @@ namespace Facile
 
 		public void GetField()
 		{
-			_parent.doc.fat_tot_merce = m_tot_merce.Value == null ?  0 : double.Parse(m_tot_merce.Value.ToString());
-			_parent.doc.fat_sconto    = m_sconto.Value == null ? 0 : double.Parse(m_sconto.Value.ToString());
-			_parent.doc.fat_tot_netto = m_tot_netto.Value == null ? 0 : double.Parse(m_tot_netto.Value.ToString());
-			_parent.doc.fat_colli     = m_colli.Value == null ? 0 : int.Parse(m_colli.Value.ToString());
-			_parent.doc.fat_pag       = m_cod_pag.Value == null ? 0 : int.Parse(m_cod_pag.Value.ToString());
+			_parent.doc.fat_tot_merce = m_tot_merce.Value == null ? 0 : (double)m_tot_merce.Value;
+			_parent.doc.fat_sconto    = m_sconto.Value == null ? 0 : (double)m_sconto.Value;
+			_parent.doc.fat_tot_netto = m_tot_netto.Value == null ? 0 : (double)m_tot_netto.Value;
+			_parent.doc.fat_colli     = m_colli.Value == null ? 0 : (int)m_colli.Value;
+			_parent.doc.fat_pag       = m_cod_pag.Value == null ? 0 : (int)m_cod_pag.Value;
 
-			_parent.doc.fat_totale_imponibile = m_imponibile.Value == null ? 0 : double.Parse(m_imponibile.Value.ToString());
-			_parent.doc.fat_tot_iva           = m_imposta.Value == null ? 0 : double.Parse(m_imposta.Value.ToString());
-			_parent.doc.fat_tot_fattura       = m_totale.Value == null ? 0 : double.Parse(m_totale.Value.ToString());
-			_parent.doc.fat_anticipo          = m_acconto.Value == null ? 0 : double.Parse(m_acconto.Value.ToString());
+			_parent.doc.fat_totale_imponibile = m_imponibile.Value == null ? 0 : (double)m_imponibile.Value;
+			_parent.doc.fat_tot_iva           = m_imposta.Value == null ? 0 : (double)m_imposta.Value;
+			_parent.doc.fat_tot_fattura       = m_totale.Value == null ? 0 : (double)m_totale.Value;
+			_parent.doc.fat_anticipo          = m_acconto.Value == null ? 0 : (double)m_acconto.Value;
 		}
 
 

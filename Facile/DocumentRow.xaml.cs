@@ -161,12 +161,13 @@ namespace Facile
 			rig_.rig_art = m_art.Text;
 			rig_.rig_newdes = m_desc.Text;
 
-			rig_.rig_qta = double.Parse(m_quantita.Value.ToString());
-			rig_.rig_prezzo = double.Parse(m_prezzo.Value.ToString());
-			rig_.rig_sconto1 = double.Parse(m_sco1.Value.ToString());
-			rig_.rig_sconto2 = double.Parse(m_sco2.Value.ToString());
-			rig_.rig_sconto3 = double.Parse(m_sco3.Value.ToString());
-			rig_.rig_importo = double.Parse(m_totale.Value.ToString());
+			rig_.rig_qta     = m_quantita.Value == null ? 0 : (double)m_quantita.Value;
+			rig_.rig_prezzo  = m_prezzo.Value == null ? 0 : (double)m_prezzo.Value;
+			rig_.rig_sconto1 = m_sco1.Value == null ? 0 : (double)m_sco1.Value;
+		    rig_.rig_sconto2 = m_sco2.Value == null ? 0 : (double)m_sco2.Value;
+			rig_.rig_sconto3 = m_sco3.Value == null ? 0 : (double)m_sco3.Value;
+			rig_.rig_importo = m_totale.Value == null ? 0 : (double)m_totale.Value;
+
 			if (m_sostituzione.IsToggled)
 				rig_.rig_sost = 1;
 			else
