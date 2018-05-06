@@ -355,6 +355,9 @@
     <BundleResource Include="Resources\header_wallpaper.jpg" />
     <BundleResource Include="Resources\header_wallpaper%402x.jpg" />
     <BundleResource Include="Resources\header_wallpaper%403x.jpg" />
+    <BundleResource Include="Resources\ic_group_blue%403x.png" />
+    <BundleResource Include="Resources\ic_group_blue%402x.png" />
+    <BundleResource Include="Resources\ic_group_blue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>

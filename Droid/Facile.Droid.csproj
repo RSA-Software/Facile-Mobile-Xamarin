@@ -415,6 +415,10 @@
     <AndroidResource Include="Resources\drawable-hdpi\header_wallpaper.jpg" />
     <AndroidResource Include="Resources\drawable-xhdpi\header_wallpaper.jpg" />
     <AndroidResource Include="Resources\drawable-xxhdpi\header_wallpaper.jpg" />
+    <AndroidResource Include="Resources\drawable\ic_group_blue.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_group_blue.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_group_blue.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_group_blue.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />

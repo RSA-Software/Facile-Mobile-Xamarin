@@ -115,6 +115,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="LottiSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -238,6 +242,9 @@
     <Compile Include="ExportModels\Documento.cs" />
     <Compile Include="UploadPage.xaml.cs">
       <DependentUpon>UploadPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LottiSearch.xaml.cs">
+      <DependentUpon>LottiSearch.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

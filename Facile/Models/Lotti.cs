@@ -18,12 +18,12 @@ namespace Facile.Models
 		public string lot_sscc_unused { get; set; }
 
 		[Indexed]
-		public DateTime lot_scadenza { get; set; }
-		public DateTime lot_start { get; set; }
-		public DateTime lot_stop { get; set; }
+		public DateTime? lot_scadenza { get; set; }
+		public DateTime? lot_start { get; set; }
+		public DateTime? lot_stop { get; set; }
 		public int lot_numero { get; set; }
 		public string lot_user { get; set; }
-		public DateTime lot_last_update { get; set; }
-		public DateTime lot_produzione { get; set; }
+		public DateTime? lot_last_update { get; set; }
+		public DateTime? lot_produzione { get; set; }
 	}
 }

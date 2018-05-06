@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Facile.Extension;
 using Facile.Interfaces;
 using Facile.Models;
+using Facile.ViewModels;
 using PCLStorage;
 using SQLite;
 using Xamarin.Forms;
@@ -43,6 +44,21 @@ namespace Facile
 			//m_sco3.Culture = culture; 
 			//m_totale.Culture = culture; 
 
+			//
+			// Rimuoviamo le righe per i lotti se non gestiti
+			//
+			if (!((App)Application.Current).facile_db_impo.dit_usa_lotti)
+			{
+				int x = 0;
+				foreach(var row in m_grid.RowDefinitions)
+				{
+					if (x == 9 || x == 10)
+					{
+						row.Height = 0;
+					}
+					x++;
+				}
+			}
 
 			NavigationPage.SetHasNavigationBar(this, false);
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
@@ -52,7 +68,10 @@ namespace Facile
 
 			if (Device.Idiom == TargetIdiom.Tablet)
 			{
-				m_image_box.HeightRequest = 500;
+				if (((App)Application.Current).facile_db_impo.dit_usa_lotti)
+					m_image_box.HeightRequest = 450;
+				else
+					m_image_box.HeightRequest = 500;
 			}
 
 			if (index_ == -1)
@@ -93,6 +112,8 @@ namespace Facile
 
 				m_sco3_down.IsEnabled = false;
 				m_sco3_up.IsEnabled = false;
+
+				m_search_lotto.IsEnabled = false;
 			}
 
 			if (Device.RuntimePlatform == Device.Android)
@@ -165,11 +186,14 @@ namespace Facile
 			m_sco3.Value = rig_.rig_sconto3;
 			m_totale.Value = rig_.rig_importo;
 			m_sostituzione.IsToggled = rig_.rig_sost != 0 ? true : false;
+			m_lotto.Text = rig_.rig_lotto;
+			m_scadenza.Date = rig_.rig_scadenza != null ? rig_.rig_scadenza.Value : DateTime.Now;
+
+			m_scadenza.IsVisible = rig_.rig_scadenza != null;
 		}
 
 		public void GetField()
 		{
-			
 			rig_.rig_art = m_art.Text;
 			rig_.rig_newdes = m_desc.Text;
 
@@ -231,6 +255,11 @@ namespace Facile
 				rig_.rig_sost = 1;
 			else
 				rig_.rig_sost = 0;
+
+			rig_.rig_lotto = m_lotto.Text;
+			rig_.rig_scadenza = m_scadenza.Date;
+
+			if (string.IsNullOrWhiteSpace(rig_.rig_lotto)) rig_.rig_scadenza = null;
 		}
 
 		async void OnValueChanged(object sender, Syncfusion.SfNumericTextBox.XForms.ValueEventArgs e)
@@ -287,6 +316,9 @@ namespace Facile
 				await Navigation.PopModalAsync();
 				if (string.Compare(rig_.rig_art,old_art) != 0)
 				{
+					rig_.rig_gest_lotto = 0;
+					rig_.rig_lotto = "";
+					rig_.rig_scadenza = null;
 					await LoadImage();
 				}
 				SetField();
@@ -295,6 +327,38 @@ namespace Facile
 			};
 			await Navigation.PushModalAsync(page);
 		}
+
+		async void OnLottoSearchClicked(object sender, System.EventArgs e)
+		{
+			if (string.IsNullOrWhiteSpace(rig_.rig_art)) return;
+
+			//
+			// Verifichiamo che ci  siano lotti per l'articolo
+			//
+			var cod_art = rig_.rig_art;
+			string sql = "SELECT COUNT(*) FROM lotti1 WHERE lot_stop IS NULL AND lot_start IS NOT NULL AND lot_codice = " + cod_art.SqlQuote(false);
+			var recTotal_ = await dbcon_.ExecuteScalarAsync<int>(sql);
+			if (recTotal_ == 0)
+			{
+				await DisplayAlert("Attenzione!", "Non ci sono lotti per l'articolo indicato", "OK");
+				return;
+			}
+
+			var page = new LottiSearch(rig_.rig_art);
+			page.LotList.ItemDoubleTapped += async (source, args) =>
+			{
+				Lotti lotti = (Lotti)args.ItemData;
+				change_ = true;
+				rig_.rig_gest_lotto = 1;
+				rig_.rig_lotto = lotti.lot_lotto;
+				rig_.rig_scadenza = lotti.lot_scadenza;
+				await Navigation.PopModalAsync();
+				SetField();
+				change_ = false;
+			};
+			await Navigation.PushModalAsync(page);
+		}
+
 
 		async void OnClickedSalva(object sender, System.EventArgs e)
 		{
@@ -391,6 +455,13 @@ namespace Facile
 					rig_.rig_sconto2 = 0;
 					rig_.rig_sconto3 = 0;
 				}
+
+				rig_.rig_gest_lotto = 0;
+				rig_.rig_lotto = "";
+				rig_.rig_scadenza = null;
+
+
+
 				await rig_.RecalcAsync();
 				await LoadImage();
 				SetField();
@@ -399,17 +470,20 @@ namespace Facile
 			else
 			{
 				change_ = true;
-				rig_.rig_art = string.Empty;
-				rig_.rig_newdes = string.Empty;
+				rig_.rig_art = "";
+				rig_.rig_newdes = "";
 				rig_.rig_iva = 0;
 				rig_.rig_mis = 0;
 				rig_.rig_peso = 0;
-				rig_.rig_peso_mis = string.Empty;
+				rig_.rig_peso_mis = "";
 				rig_.rig_qta = 1;
 				rig_.rig_prezzo = 0;
 				rig_.rig_sconto1 = 0;
 				rig_.rig_sconto2 = 0;
 				rig_.rig_sconto3 = 0;
+				rig_.rig_gest_lotto = 0;
+				rig_.rig_lotto = "";
+				rig_.rig_scadenza = null;
 				await rig_.RecalcAsync();
 				await LoadImage();
 				SetField();

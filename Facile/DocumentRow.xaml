@@ -12,11 +12,25 @@
 			<Image x:Name = "m_image" Aspect="AspectFit" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
 		</StackLayout>
 
-        <Grid HorizontalOptions="FillAndExpand">
+        <Grid HorizontalOptions="FillAndExpand" x:Name="m_grid">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="3*" />
             </Grid.ColumnDefinitions>  
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>	
+				<RowDefinition Height="*"/>	
+				<RowDefinition Height="*"/>	
+				<RowDefinition Height="*"/>	
+				<RowDefinition Height="*"/>	
+				<RowDefinition Height="*"/>	
+				<RowDefinition Height="*"/>	
+				<RowDefinition Height="*"/>	
+				<RowDefinition Height="*"/>	
+				<RowDefinition Height="*"/>	
+				<RowDefinition Height="*"/>	
+			</Grid.RowDefinitions>
 
             <Label Text="Articolo" Grid.Row="0" Grid.Column="0" WidthRequest="100" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" TextColor="Navy"/>
             <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand" >
@@ -72,8 +86,19 @@
             <StackLayout Orientation="Horizontal" Grid.Row="8" Grid.Column="1" HorizontalOptions="CenterAndExpand">
                 <Switch IsToggled="false" x:Name="m_sostituzione" WidthRequest="100" HeightRequest="40" Toggled="OnSwitchToggled"/>
             </StackLayout>
-            
-        </Grid>
+
+        	<Label Text="Lotto" Grid.Row="9" Grid.Column="0" VerticalTextAlignment="Center" WidthRequest="100" HeightRequest="40" HorizontalTextAlignment="End" FontAttributes="Bold" TextColor="Navy"/>
+        	<StackLayout Orientation="Horizontal" Grid.Row="9" Grid.Column="1" HorizontalOptions="CenterAndExpand">
+            	<Entry x:Name="m_lotto" WidthRequest="200" HorizontalOptions="Start" IsEnabled="false" FontAttributes="Bold"/>
+            	<Button x:Name="m_search_lotto" Image="ic_search_black.png" WidthRequest="35"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnLottoSearchClicked"/>
+        	</StackLayout>
+
+        	<Label Text="Scadenza" Grid.Row="10" Grid.Column="0" VerticalTextAlignment="Center" WidthRequest="100" HeightRequest="40" HorizontalTextAlignment="End" FontAttributes="Bold" TextColor="Navy"/>
+        	<StackLayout Orientation="Horizontal" Grid.Row="10" Grid.Column="1" HorizontalOptions="CenterAndExpand">
+            	<DatePicker x:Name="m_scadenza" Format="dd/MM/yyyy" WidthRequest="150" TextColor="Black" IsEnabled="false" FontAttributes="Bold"/>
+        	</StackLayout>
+
+		</Grid>
             
         <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">  
             <Button x:Name="m_salva" Image="ic_done_white.png"  WidthRequest="100" HeightRequest="65" HorizontalOptions="CenterAndExpand"  TextColor="White" BackgroundColor="#009EDA" Clicked="OnClickedSalva"/>

@@ -13,7 +13,7 @@
 				<DataTemplate>
 					<StackLayout Orientation="Horizontal"> 
 						<StackLayout>
-							<Image Source="ic_cloud_black.png" VerticalOptions="Center"/>
+							<Image Source="ic_group_blue.png" VerticalOptions="Center"/>
 						</StackLayout>
 	                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 	                        <Label Text="{Binding cli_desc}" FontAttributes="Bold" HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap"/>
