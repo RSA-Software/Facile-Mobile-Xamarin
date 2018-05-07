@@ -1,30 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage Title="Cerca Cliente"
+<ContentPage Title="Cerca Cliente" 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+	xmlns:local="clr-namespace:Facile.Converters;assembly=Facile"
+	xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+	xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
     x:Class="Facile.ClientiSearch">
 
     <StackLayout>
-        <SearchBar x:Name="searchBar" Placeholder="Cerca" TextChanged="OnTextChanged" IsVisible="true" />
+        <SearchBar x:Name="searchBar" Placeholder="Cerca" TextChanged="OnTextChanged" IsVisible="true"  BackgroundColor="#2196F3" TextColor="White" PlaceholderColor="White" CancelButtonColor="White" />
         <syncfusion:SfListView x:Name="listView" AutoFitMode="Height" SelectionMode="Single" Padding="7,0,7,0" >
-            <syncfusion:SfListView.ItemTemplate>
 
-				<DataTemplate>
-					<StackLayout Orientation="Horizontal"> 
-						<StackLayout>
-							<Image Source="ic_group_blue.png" VerticalOptions="Center"/>
+			<syncfusion:SfListView.ItemTemplate>
+            	<DataTemplate>
+					<Frame x:Name="frame" CornerRadius="10" BackgroundColor="{Binding .,Converter={local:IndexToColorConverter},ConverterParameter={x:Reference Name=listView}}" Padding="5"  >
+						<StackLayout Orientation="Horizontal" BackgroundColor="{Binding .,Converter={local:IndexToColorConverter},ConverterParameter={x:Reference Name=listView}}"> 
+								<ic:CircleImage Source="ic_group_blue.png" BorderColor="#2196F3" BorderThickness="2" WidthRequest="70" HeightRequest="70" Aspect="AspectFill" VerticalOptions="Center"/>
+							<StackLayout>
+        		                <Label Text="{Binding cli_desc}" FontAttributes="Bold" HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap"/>
+	            		        <Label Text="{Binding cli_indirizzo}" TextColor="Gray"/>
+    	                		<Label Text="{Binding cli_full_address}" TextColor="Gray"/>
+	                    	</StackLayout>
 						</StackLayout>
-	                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-	                        <Label Text="{Binding cli_desc}" FontAttributes="Bold" HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap"/>
-    	                    <Label Text="{Binding cli_indirizzo}" TextColor="Gray" FontSize="13"/>
-        	                <Label Text="{Binding cli_citta}" TextColor="Gray" FontSize="13"/>
-          	        		<BoxView HeightRequest="1" WidthRequest="1" Color="Silver"/>    
-                	    </StackLayout>
-					</StackLayout>
+					</Frame>
                 </DataTemplate>
-				
             </syncfusion:SfListView.ItemTemplate>
+
+			<syncfusion:SfListView.SelectedItemTemplate>
+				<DataTemplate>
+					<Frame x:Name="frame" CornerRadius="10" BackgroundColor="#2196F3" Padding="5" >
+						<StackLayout Orientation="Horizontal" BackgroundColor="#2196F3">
+								<ic:CircleImage Source="ic_group_blue.png" BorderColor="White" BorderThickness="2" WidthRequest="70" HeightRequest="70" Aspect="AspectFill" VerticalOptions="Center"/>
+							<StackLayout>
+        		                <Label Text="{Binding cli_desc}" FontAttributes="Bold" HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap"/>
+	            		        <Label Text="{Binding cli_indirizzo}" TextColor="White" />
+    	                		<Label Text="{Binding cli_full_address}" TextColor="White"/>
+	                    	</StackLayout>
+						</StackLayout>
+					</Frame>
+                </DataTemplate>
+             </syncfusion:SfListView.SelectedItemTemplate>    
+
         </syncfusion:SfListView>
     </StackLayout>
     

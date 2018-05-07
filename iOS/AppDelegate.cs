@@ -29,6 +29,8 @@ namespace Facile.iOS
 			new SfNumericUpDownRenderer();
 			new SfPopupLayoutRenderer();
 
+			ImageCircle.Forms.Plugin.iOS.ImageCircleRenderer.Init();
+
             LoadApplication(new App());
             return base.FinishedLaunching(app, options);
         }

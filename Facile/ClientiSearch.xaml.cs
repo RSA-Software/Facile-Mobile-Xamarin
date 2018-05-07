@@ -38,6 +38,7 @@ namespace Facile
 			{
 				searchBar.HeightRequest = 40;
 			}
+
 		}
 
 		protected override async void OnAppearing()
@@ -45,6 +46,19 @@ namespace Facile
 			string sql = query_ + " LIMIT " + recToLoad_.ToString();
 			recTotal_ = await dbcon_.Table<Clienti>().CountAsync();
 			var cliList = await dbcon_.QueryAsync<Clienti>(sql);
+
+			foreach (var cli in cliList)
+			{
+				cli.cli_full_address = cli.cli_cap + " " + cli.cli_citta;
+				if (!string.IsNullOrWhiteSpace(cli.cli_prov))
+				{
+					cli.cli_full_address +=  " (";
+					cli.cli_full_address += cli.cli_prov;
+					cli.cli_full_address += ")";
+				}
+				cli.cli_full_address = cli.cli_full_address.Trim();
+			}
+
 			recLoaded_ = cliList.Count;
 			listView.ItemsSource = new ObservableCollection<Clienti>(cliList);
 			base.OnAppearing();
@@ -66,6 +80,14 @@ namespace Facile
 			var cliList = await dbcon_.QueryAsync<Clienti>(sql);
 			foreach (Clienti cli in cliList)
 			{
+				cli.cli_full_address = cli.cli_cap + " " + cli.cli_citta;
+				if (!string.IsNullOrWhiteSpace(cli.cli_prov))
+				{
+					cli.cli_full_address += " (";
+					cli.cli_full_address += cli.cli_prov;
+					cli.cli_full_address += ")";
+				}
+				cli.cli_full_address = cli.cli_full_address.Trim();
 				collection.Add(cli);
 			}
 			recLoaded_ = collection.Count;
@@ -89,6 +111,18 @@ namespace Facile
 			}
 			string sql = query_ + " LIMIT " + recToLoad_.ToString();
 			var cliList = await dbcon_.QueryAsync<Clienti>(sql);
+			foreach (var cli in cliList)
+			{
+				cli.cli_full_address = cli.cli_cap + " " + cli.cli_citta;
+				if (!string.IsNullOrWhiteSpace(cli.cli_prov))
+				{
+					cli.cli_full_address += " (";
+					cli.cli_full_address += cli.cli_prov;
+					cli.cli_full_address += ")";
+				}
+				cli.cli_full_address = cli.cli_full_address.Trim();
+			}
+
 			recLoaded_ = cliList.Count;
 			listView.ItemsSource = new ObservableCollection<Clienti>(cliList);
 			listView.IsBusy = false;

@@ -3,6 +3,16 @@ using SQLite;
 
 namespace Facile.Models
 {
+	public enum DatiEtichetta : int
+	{
+		ANA_VEN_CODICE        = 0,
+		ANA_VEN_COD_PESO      = 1,
+		ANA_VEN_COD_PREZZO    = 2,
+		ANA_VEN_COD_PREZZO_Q1 = 3,
+	}
+
+
+
 	public class Artanag
 	{
 		[PrimaryKey]
@@ -220,5 +230,12 @@ namespace Facile.Models
 		public int ana_pos_in_evidenza { get; set; }
 		public DateTime ana_d_primo_acq { get; set; }
 		public DateTime ana_d_prima_ven { get; set; }
+
+
+		[Ignore]
+		public string ana_img_path { get; set;}
+
+		[Ignore]
+		public string ana_desc { get; set; }
 	}
 }

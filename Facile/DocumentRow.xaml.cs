@@ -414,6 +414,8 @@ namespace Facile
 		async void OnArtUnfocused(object sender, Xamarin.Forms.FocusEventArgs e)
 		{
 			var ent = (Entry)sender;
+			double quantita = 0.0;
+			double totale   = 0.0;
 
 			var codice = "";
 			if (ent.Text != null) codice = ent.Text.Trim().ToUpper();
@@ -424,9 +426,41 @@ namespace Facile
 
 			if (anaList.Count == 0)  // Cerchiamo tra i codici a Barre
 			{
-				//sql = string.Format("SELECT * FROM artanag WHERE ana_codice = {0} LIMIT 1", input.Text.SqlQuote(false));
+				sql = string.Format("SELECT * FROM barcode WHERE bar_barcode = {0} LIMIT 1", codice.SqlQuote(false));
+				var barList = await dbcon_.QueryAsync<Barcode>(sql);
+				if (barList.Count != 0)
+				{
+					sql = string.Format("SELECT * FROM artanag WHERE ana_codice = {0} LIMIT 1", barList[0].bar_codart.Trim().SqlQuote(false));
+					anaList = await dbcon_.QueryAsync<Artanag>(sql);
+				}
+				else
+				{
+					if (((codice.Length == 12 || codice.Length == 13)) && codice.AllDigits() && codice.StartsWith("2", StringComparison.CurrentCulture))
+					{
+						var codelen = 0;
+						if (((App)Application.Current).facile_db_impo.dit_codbil == 0)
+							codelen = 6;
+						else
+							codelen = 7;
+						var code = codice.Substring(0, codelen);
+						var data = codice.Substring(7, 5);
 
+						sql = string.Format("SELECT * FROM artanag WHERE ana_codice = {0} LIMIT 1", code.SqlQuote(false));
+						anaList = await dbcon_.QueryAsync<Artanag>(sql);
 
+						if (anaList.Count > 0)
+						{
+							if (anaList[0].ana_venapeso == (int)DatiEtichetta.ANA_VEN_COD_PESO)
+							{
+								quantita = Math.Round(Convert.ToDouble(data) / 1000, 3, MidpointRounding.AwayFromZero);
+							}
+							else if (anaList[0].ana_venapeso == (int)DatiEtichetta.ANA_VEN_COD_PREZZO || anaList[0].ana_venapeso == (int)DatiEtichetta.ANA_VEN_COD_PREZZO_Q1)
+							{ 
+								totale = Math.Round(Convert.ToDouble(data) / 100, 2, MidpointRounding.AwayFromZero);
+							}
+						}
+					}
+				}
 			}
 			if (anaList.Count > 0)
 			{
@@ -437,16 +471,46 @@ namespace Facile
 				rig_.rig_mis = anaList[0].ana_mis;
 				rig_.rig_peso = anaList[0].ana_peso;
 				rig_.rig_peso_mis = anaList[0].ana_peso_mis;
+
+				if (quantita > 0.0) rig_.rig_qta = quantita;
 				if (Math.Abs(rig_.rig_qta) < NumericExtensions.EPSILON) rig_.rig_qta = 1;
+
 				sql = string.Format("SELECT * FROM listini1 WHERE lis_codice = {0} AND lis_art = {1} LIMIT 1", 1, anaList[0].ana_codice.SqlQuote(false));
 				var listini = await dbcon_.QueryAsync<Listini>(sql);
 
 				if (listini.Count > 0)
 				{
-					rig_.rig_prezzo = listini[0].lis_prezzo;
-					rig_.rig_sconto1 = listini[0].lis_sco1;
-					rig_.rig_sconto2 = listini[0].lis_sco2;
-					rig_.rig_sconto3 = listini[0].lis_sco3;
+					if ((anaList[0].ana_venapeso == (int)DatiEtichetta.ANA_VEN_COD_PREZZO_Q1) && (totale > 0.0))
+					{
+						rig_.rig_prezzo = totale;
+						rig_.rig_sconto1 = 0;
+						rig_.rig_sconto2 = 0;
+						rig_.rig_sconto3 = 0;
+					}
+					else if ((anaList[0].ana_venapeso == (int)DatiEtichetta.ANA_VEN_COD_PREZZO) && (totale > 0.0))
+					{
+						rig_.rig_prezzo = listini[0].lis_prezzo;
+						rig_.rig_sconto1 = listini[0].lis_sco1;
+						rig_.rig_sconto2 = listini[0].lis_sco2;
+						rig_.rig_sconto3 = listini[0].lis_sco3;
+
+						var prezzo = listini[0].lis_prezzo;
+						prezzo -= Math.Round(prezzo * (listini[0].lis_sco1 / 100), 4, MidpointRounding.AwayFromZero);
+						prezzo -= Math.Round(prezzo * (listini[0].lis_sco2 / 100), 4, MidpointRounding.AwayFromZero);
+						prezzo -= Math.Round(prezzo * (listini[0].lis_sco3 / 100), 4, MidpointRounding.AwayFromZero);
+
+						if (!prezzo.TestIfZero(4))
+						{
+							rig_.rig_qta = Math.Round(totale / prezzo, 3, MidpointRounding.AwayFromZero); 
+						}
+					}
+					else
+					{
+						rig_.rig_prezzo = listini[0].lis_prezzo;
+						rig_.rig_sconto1 = listini[0].lis_sco1;
+						rig_.rig_sconto2 = listini[0].lis_sco2;
+						rig_.rig_sconto3 = listini[0].lis_sco3;
+					}
 				}
 				else
 				{
@@ -459,8 +523,6 @@ namespace Facile
 				rig_.rig_gest_lotto = 0;
 				rig_.rig_lotto = "";
 				rig_.rig_scadenza = null;
-
-
 
 				await rig_.RecalcAsync();
 				await LoadImage();

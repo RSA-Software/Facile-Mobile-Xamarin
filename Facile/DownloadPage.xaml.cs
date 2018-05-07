@@ -98,8 +98,8 @@ namespace Facile
 				return;
 			}
 
-			var docList = new List<Fatture>();
-			var rigList = new List<FatRow>();
+			List<Fatture> docList = null;
+			List<FatRow> rigList = null;
 
 			try
 			{
@@ -138,6 +138,9 @@ namespace Facile
 
 					rigList = JsonConvert.DeserializeObject<List<FatRow>>(str, settings);
 				}
+
+				if (docList == null) docList = new List<Fatture>();
+				if (rigList == null) rigList = new List<FatRow>();
 
 				//
 				// Estraiamo i documenti e rimuoviamo i duplicati

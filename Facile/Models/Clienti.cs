@@ -131,5 +131,9 @@ namespace Facile.Models
 		public float cli_pr3 { get; set; }
 		public float cli_pr4 { get; set; }
 		public bool cli_esc_cerved_payline { get; set; }
+
+		[Ignore]
+		public string cli_full_address { get; set; }
+
 	}
 }

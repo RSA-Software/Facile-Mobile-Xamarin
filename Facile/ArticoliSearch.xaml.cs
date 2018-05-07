@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using Facile.Extension;
 using Facile.Interfaces;
 using Facile.Models;
+using PCLStorage;
 using SQLite;
 using Syncfusion.ListView.XForms;
 using Xamarin.Forms;
@@ -49,6 +51,12 @@ namespace Facile
 				recTotal_ = await dbcon_.Table<Artanag>().CountAsync();
 				var anaList = await dbcon_.QueryAsync<Artanag>(sql);
 				recLoaded_ = anaList.Count;
+				foreach(var ana in anaList)
+				{
+					ana.ana_desc = ana.ana_desc1 + " " + ana.ana_desc2;
+					ana.ana_desc = ana.ana_desc.Trim();
+					ana.ana_img_path = await GetImagePath(ana.ana_codice);
+				}
 				listView.ItemsSource = new ObservableCollection<Artanag>(anaList);
 			}
 			catch (Exception ex)
@@ -74,6 +82,9 @@ namespace Facile
 			var anaList = await dbcon_.QueryAsync<Artanag>(sql);
 			foreach (Artanag ana in anaList)
 			{
+				ana.ana_desc = ana.ana_desc1 + " " + ana.ana_desc2;
+				ana.ana_desc = ana.ana_desc.Trim();
+				ana.ana_img_path = await GetImagePath(ana.ana_codice);
 				collection.Add(ana);
 			}
 			recLoaded_ = collection.Count;
@@ -97,9 +108,40 @@ namespace Facile
 			}
 			string sql = query_ + " LIMIT " + recToLoad_.ToString();
 			var anaList = await dbcon_.QueryAsync<Artanag>(sql);
+			foreach (var ana in anaList)
+			{
+				ana.ana_desc = ana.ana_desc1 + " " + ana.ana_desc2;
+				ana.ana_desc = ana.ana_desc.Trim();
+				ana.ana_img_path = await GetImagePath(ana.ana_codice);
+			}
 			recLoaded_ = anaList.Count;
 			listView.ItemsSource = new ObservableCollection<Artanag>(anaList);
 			listView.IsBusy = false;
+		}
+
+
+		protected async Task<string> GetImagePath(string codart)
+		{
+			if (!string.IsNullOrWhiteSpace(codart))
+			{
+				IFolder rootFolder = FileSystem.Current.LocalStorage;
+				IFolder imagesFolder = await rootFolder.CreateFolderAsync("images", CreationCollisionOption.OpenIfExists);
+
+				String fileName = codart.Trim() + "_0.PNG";
+				ExistenceCheckResult status = await imagesFolder.CheckExistsAsync(fileName);
+				if (status == ExistenceCheckResult.FileExists)
+				{
+					return (rootFolder.Path + "/images/" + fileName);
+				}
+				fileName = codart.Trim() + "_0.JPG";
+				status = await imagesFolder.CheckExistsAsync(fileName);
+				if (status == ExistenceCheckResult.FileExists)
+				{
+					return(rootFolder.Path + "/images/" + fileName);
+				}
+			}
+			return("header_wallpaper.jpg");
+			//return (null);
 		}
 
 		public SfListView AnaList { get { return listView; } }

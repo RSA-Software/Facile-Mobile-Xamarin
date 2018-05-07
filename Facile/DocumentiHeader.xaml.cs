@@ -248,8 +248,22 @@ namespace Facile
 			Navigation.PushAsync(page);
 		}
 
-		void OnDestinazioneTapped(object sender, System.EventArgs e)
+		async void OnDestinazioneTapped(object sender, System.EventArgs e)
 		{
+			//
+			// Verifichiamo che ci destinazioni per il cliente
+			//
+			var recTotal_ = 0;
+			if (_cli != null)
+			{
+				string sql = "SELECT COUNT(*) FROM destina1 WHERE dst_rel = 0 AND dst_cli_for = " + _cli.cli_codice;
+				recTotal_ = await _dbcon.ExecuteScalarAsync<int>(sql);
+			}
+			if (recTotal_ == 0)
+			{
+				await DisplayAlert("Attenzione!", "Non ci sono destinazioni per il Cliente selezionato", "OK");
+				return;
+			}
 			var page = new DestinazioniSearch(_cli != null ? _cli.cli_codice : 0);
 			page.DstList.ItemDoubleTapped += (source, args) =>
 			{
@@ -257,7 +271,7 @@ namespace Facile
 				SetField();
 				Navigation.PopAsync();
 			};
-			Navigation.PushAsync(page);
+			await Navigation.PushAsync(page);
 		}
 
 		async void OnCliCodUnfocused(object sender, Xamarin.Forms.FocusEventArgs e)

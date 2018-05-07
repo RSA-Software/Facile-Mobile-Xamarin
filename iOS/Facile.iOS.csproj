@@ -201,6 +201,12 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.3.0.0.446417\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.2.0.2\lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.iOS">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.2.0.2\lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Facile\Facile.csproj">
@@ -211,6 +217,14 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo180x180_60dpi.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo120x120_60dpi.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo120x120_40dpi.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo80x80_40dpi.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo167x167_83_5dpi.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo152x152_76dpi.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo76x76_76dpi.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo40x40_40dpi.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
