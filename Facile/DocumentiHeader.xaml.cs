@@ -134,6 +134,10 @@ namespace Facile
 					m_d_doc.IsEnabled = false;
 				}
 			}
+
+
+			m_email.IsEnabled = false;
+			m_email.IsVisible = false;
 		}
 
 
