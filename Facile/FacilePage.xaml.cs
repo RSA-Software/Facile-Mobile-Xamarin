@@ -27,38 +27,11 @@ namespace Facile
 		{
 
 			await Navigation.PushAsync(new FatturePage(DocTipo.TIPO_FAT));
-
-//			var page = new DocumentiGrid(TipoDocumento.TIPO_FAT);
-//			await Navigation.PushAsync(page);
 		}
 
 		async void OnClickedDdt(object sender, System.EventArgs e)
 		{
 			await Navigation.PushAsync(new FatturePage(DocTipo.TIPO_DDT));
-
-			//Fatture fat = null;
-			//SQLiteAsyncConnection dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
-
-			//bool nuova = false;
-			//try
-			//{
-			//	var docList = await dbcon_.QueryAsync<Fatture>("SELECT * from FATTURE2 WHERE fat_tipo = 0 AND fat_n_doc = 5228 LIMIT 1");
-
-			//	foreach (var doc in docList)
-			//	{
-			//		fat = doc;
-			//		break;
-			//	}
-			//}
-			//catch (Exception ex)
-			//{
-			//	await DisplayAlert("Attenzione!", ex.Message, "OK");
-			//	return;
-			//}
-			//if (fat == null) return;
-
-			//var page = new DocumentiEdit(ref fat, ref nuova);
-			//await Navigation.PushAsync(page);
 		}
 
 		async void OnClickedScadenze(object sender, System.EventArgs e)
@@ -69,7 +42,7 @@ namespace Facile
 
 		void OnClickedIncassi(object sender, System.EventArgs e)
 		{
-			DisplayAlert("Incassi", "Clicked", "ok");
+			DisplayAlert("Incassi", "La procedura sarà disponibile nelle prossime release!", "OK");
 		}
 
 		async void OnClickedSincronizza(object sender, System.EventArgs e)

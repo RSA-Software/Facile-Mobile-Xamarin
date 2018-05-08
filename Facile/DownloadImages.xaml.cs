@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Facile.Extension;
 using Facile.Interfaces;
 using Facile.Models;
 using PCLStorage;
@@ -98,10 +99,14 @@ namespace Facile
 				if (files != null && files.Count > 0)
 				{
 					int idx = 0;
+					bool stop = false;
+
 					foreach (var file in files)
 					{
 						String remoteFile = remoteServer + file;
 						String localFile = imagesFolder.Path + "/" + file;
+
+						if (stop) break;
 
 						bool skip = true;
 						var x = file.LastIndexOf('.');
@@ -115,7 +120,17 @@ namespace Facile
 							//
 							// Controllare qui se si vuole la presenza dell'articolo
 							//
-
+							if (ext.ToUpper() == ".JPG" || ext.ToUpper() == ".PNG" )
+							{
+								x = file.LastIndexOf('_');
+								if (x > 0)
+								{
+									var code = file.Substring(0, x).Trim().ToUpper();
+									var sql = string.Format("SELECT COUNT(*) FROM artanag WHERE ana_codice = {0}", code.SqlQuote(false));
+									var rec = await dbcon_.ExecuteScalarAsync<int>(sql);
+									if (rec == 0) skip = true;
+								}
+							}
 						}
 						idx++;
 						if (skip)
@@ -129,7 +144,16 @@ namespace Facile
 								for (int retry = 0; retry < 5; retry++)
 								{
 									result = await ftp.DownloadFile(lim.user, password, remoteFile, localFile);
-									if (result.StartsWith("221", StringComparison.CurrentCulture)) break;
+									if (result.StartsWith("221", StringComparison.CurrentCulture)) 
+										break;
+									else
+									{
+										if (idx == 4)
+										{
+											var str = "Impossibile scaricare il file : " + file + "\n\nVuoi continuare?";
+											stop = !(await DisplayAlert("Errore", str, "SI", "NO"));
+										}
+									}
 								}
 							}
 							m_image.Source = localFile;
@@ -137,7 +161,7 @@ namespace Facile
 					}
 				}
 				m_desc.Text = "";
-				await DisplayAlert("Facile", "Importazione dati conclusa regolarmente!", "Ok");
+				await DisplayAlert("Facile", "Importazione dati conclusa!", "Ok");
 			}
 			catch (Exception ex)
 			{
