@@ -225,6 +225,7 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo152x152_76dpi.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo76x76_76dpi.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo40x40_40dpi.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo40x40_20dpi.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
