@@ -226,6 +226,12 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo76x76_76dpi.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo40x40_40dpi.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo40x40_20dpi.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo60x61_20dpi.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo58x58_29dpi.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo87x87_29dpi copia.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo20x20_20dpi.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo29x29_29dpi.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logo1024x1024_240dpi.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -385,6 +391,6 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
-  <Import Project="..\packages\NETStandard.Library.2.0.2\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.2\build\netstandard2.0\NETStandard.Library.targets')" />
   <Import Project="..\packages\Xamarin.Forms.3.0.0.446417\build\netstandard2.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.0.0.446417\build\netstandard2.0\Xamarin.Forms.targets')" />
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
 </Project>

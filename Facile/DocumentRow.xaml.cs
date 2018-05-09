@@ -445,6 +445,11 @@ namespace Facile
 						var code = codice.Substring(0, codelen);
 						var data = codice.Substring(7, 5);
 
+						while (code.Length < 13)
+						{
+							code += "0";
+						}
+
 						sql = string.Format("SELECT * FROM artanag WHERE ana_codice = {0} LIMIT 1", code.SqlQuote(false));
 						anaList = await dbcon_.QueryAsync<Artanag>(sql);
 
@@ -501,7 +506,7 @@ namespace Facile
 
 						if (!prezzo.TestIfZero(4))
 						{
-							rig_.rig_qta = Math.Round(totale / prezzo, 3, MidpointRounding.AwayFromZero); 
+							rig_.rig_qta = Math.Round(totale / prezzo, 3, MidpointRounding.AwayFromZero);
 						}
 					}
 					else
@@ -524,7 +529,14 @@ namespace Facile
 				rig_.rig_lotto = "";
 				rig_.rig_scadenza = null;
 
-				await rig_.RecalcAsync();
+				try
+				{
+					await rig_.RecalcAsync();
+				}
+				catch (Exception ex)
+				{
+					Debug.WriteLine(ex.Message);
+				}
 				await LoadImage();
 				SetField();
 				change_ = false;
@@ -546,7 +558,14 @@ namespace Facile
 				rig_.rig_gest_lotto = 0;
 				rig_.rig_lotto = "";
 				rig_.rig_scadenza = null;
-				await rig_.RecalcAsync();
+				try
+				{ 
+					await rig_.RecalcAsync();
+				}
+				catch (Exception ex)
+				{
+					Debug.WriteLine(ex.Message);
+				}
 				await LoadImage();
 				SetField();
 				change_ = false;

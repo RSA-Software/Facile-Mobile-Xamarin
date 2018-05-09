@@ -41,7 +41,7 @@ namespace Facile.Extension
 			//
 			rig.rig_sco_iva_esc = 0;
 			rig.rig_importo_impo = rig.rig_importo;
-			if (rig.rig_iva_inclusa != 0)
+			if (rig.rig_iva_inclusa != 0 && rig.rig_iva != 0)
 			{
 				try
 				{

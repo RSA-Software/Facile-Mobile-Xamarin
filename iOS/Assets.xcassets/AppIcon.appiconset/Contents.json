@@ -7,16 +7,19 @@
       "idiom": "iphone"
     },
     {
+      "filename": "logo60x61_20dpi.png",
       "size": "20x20",
       "scale": "3x",
       "idiom": "iphone"
     },
     {
+      "filename": "logo58x58_29dpi.png",
       "size": "29x29",
       "scale": "2x",
       "idiom": "iphone"
     },
     {
+      "filename": "logo87x87_29dpi copia.png",
       "size": "29x29",
       "scale": "3x",
       "idiom": "iphone"
@@ -46,21 +49,25 @@
       "idiom": "iphone"
     },
     {
+      "filename": "logo20x20_20dpi.png",
       "size": "20x20",
       "scale": "1x",
       "idiom": "ipad"
     },
     {
+      "filename": "logo40x40_20dpi.png",
       "size": "20x20",
       "scale": "2x",
       "idiom": "ipad"
     },
     {
+      "filename": "logo29x29_29dpi.png",
       "size": "29x29",
       "scale": "1x",
       "idiom": "ipad"
     },
     {
+      "filename": "logo58x58_29dpi.png",
       "size": "29x29",
       "scale": "2x",
       "idiom": "ipad"
@@ -96,6 +103,7 @@
       "idiom": "ipad"
     },
     {
+      "filename": "logo1024x1024_240dpi.png",
       "size": "1024x1024",
       "scale": "1x",
       "idiom": "ios-marketing"
