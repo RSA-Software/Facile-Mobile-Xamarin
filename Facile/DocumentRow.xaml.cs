@@ -26,9 +26,9 @@ namespace Facile
 		private bool editable_;
 		private readonly SQLiteAsyncConnection dbcon_;
 
-		public DocumentRow(DocumentiBody par,  ref FatRow rig, int index = -1, bool editable = true)
+		public DocumentRow(DocumentiBody par, ref FatRow rig, int index = -1, bool editable = true)
 		{
-			par_ = par; 
+			par_ = par;
 			rig_ = rig;
 			change_ = false;
 			first_ = true;
@@ -50,7 +50,7 @@ namespace Facile
 			if (!((App)Application.Current).facile_db_impo.dit_usa_lotti)
 			{
 				int x = 0;
-				foreach(var row in m_grid.RowDefinitions)
+				foreach (var row in m_grid.RowDefinitions)
 				{
 					if (x == 9 || x == 10)
 					{
@@ -75,7 +75,7 @@ namespace Facile
 			}
 
 			if (index_ == -1)
-			{ 
+			{
 				m_elimina.IsEnabled = false;
 				m_elimina.IsVisible = false;
 			}
@@ -134,13 +134,13 @@ namespace Facile
 		protected async override void OnAppearing()
 		{
 			if (first_)
-			{ 
+			{
 				await LoadImage();
 				first_ = false;
 			}
 		}
 
-		protected async Task LoadImage ()
+		protected async Task LoadImage()
 		{
 			if (!string.IsNullOrWhiteSpace(rig_.rig_art))
 			{
@@ -171,7 +171,7 @@ namespace Facile
 			}
 			else
 			{
-				m_image.Source = "header_wallpaper.jpg";	
+				m_image.Source = "header_wallpaper.jpg";
 			}
 		}
 
@@ -199,7 +199,7 @@ namespace Facile
 
 			try
 			{
-				rig_.rig_qta = m_quantita.Value == null ? 0 : Convert.ToDouble(m_quantita.Value);	
+				rig_.rig_qta = m_quantita.Value == null ? 0 : Convert.ToDouble(m_quantita.Value);
 			}
 			catch (Exception ex)
 			{
@@ -217,7 +217,7 @@ namespace Facile
 
 			try
 			{
-				rig_.rig_sconto1 = m_sco1.Value == null ? 0 : Convert.ToDouble(m_sco1.Value);	
+				rig_.rig_sconto1 = m_sco1.Value == null ? 0 : Convert.ToDouble(m_sco1.Value);
 			}
 			catch (Exception ex)
 			{
@@ -226,7 +226,7 @@ namespace Facile
 
 			try
 			{
-				rig_.rig_sconto2 = m_sco2.Value == null ? 0 : Convert.ToDouble(m_sco2.Value);	
+				rig_.rig_sconto2 = m_sco2.Value == null ? 0 : Convert.ToDouble(m_sco2.Value);
 			}
 			catch (Exception ex)
 			{
@@ -235,7 +235,7 @@ namespace Facile
 
 			try
 			{
-				rig_.rig_sconto3 = m_sco3.Value == null ? 0 : Convert.ToDouble(m_sco3.Value);	
+				rig_.rig_sconto3 = m_sco3.Value == null ? 0 : Convert.ToDouble(m_sco3.Value);
 			}
 			catch (Exception ex)
 			{
@@ -314,7 +314,7 @@ namespace Facile
 					await rig_.RecalcAsync();
 				}
 				await Navigation.PopModalAsync();
-				if (string.Compare(rig_.rig_art,old_art) != 0)
+				if (string.Compare(rig_.rig_art, old_art) != 0)
 				{
 					rig_.rig_gest_lotto = 0;
 					rig_.rig_lotto = "";
@@ -415,7 +415,7 @@ namespace Facile
 		{
 			var ent = (Entry)sender;
 			double quantita = 0.0;
-			double totale   = 0.0;
+			double totale = 0.0;
 
 			var codice = "";
 			if (ent.Text != null) codice = ent.Text.Trim().ToUpper();
@@ -460,7 +460,7 @@ namespace Facile
 								quantita = Math.Round(Convert.ToDouble(data) / 1000, 3, MidpointRounding.AwayFromZero);
 							}
 							else if (anaList[0].ana_venapeso == (int)DatiEtichetta.ANA_VEN_COD_PREZZO || anaList[0].ana_venapeso == (int)DatiEtichetta.ANA_VEN_COD_PREZZO_Q1)
-							{ 
+							{
 								totale = Math.Round(Convert.ToDouble(data) / 100, 2, MidpointRounding.AwayFromZero);
 							}
 						}
@@ -559,7 +559,7 @@ namespace Facile
 				rig_.rig_lotto = "";
 				rig_.rig_scadenza = null;
 				try
-				{ 
+				{
 					await rig_.RecalcAsync();
 				}
 				catch (Exception ex)

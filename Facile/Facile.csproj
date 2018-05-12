@@ -6,7 +6,6 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D1A58065-12BC-4BE3-A075-2BE5EAE68346}</ProjectGuid>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <UseMSBuildEngine>true</UseMSBuildEngine>
     <OutputType>Library</OutputType>
     <RootNamespace>Facile</RootNamespace>
     <AssemblyName>Facile</AssemblyName>
@@ -36,10 +35,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ClientiBr.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -119,6 +114,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Incassi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -163,9 +166,6 @@
     <Compile Include="Models\Stagioni.cs" />
     <Compile Include="Models\Marchi.cs" />
     <Compile Include="Models\Associazioni.cs" />
-    <Compile Include="ClientiBr.xaml.cs">
-      <DependentUpon>ClientiBr.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PagamentiBr.xaml.cs">
       <DependentUpon>PagamentiBr.xaml</DependentUpon>
     </Compile>
@@ -247,6 +247,13 @@
       <DependentUpon>LottiSearch.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converters\IndexToColorConverter.cs" />
+    <Compile Include="Catalogo.xaml.cs">
+      <DependentUpon>Catalogo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CatalogoModel.cs" />
+    <Compile Include="Incassi.xaml.cs">
+      <DependentUpon>Incassi.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MarkupExtensions\" />
@@ -340,6 +347,9 @@
     </Reference>
     <Reference Include="ImageCircle.Forms.Plugin.Abstractions">
       <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.2.0.2\lib\netstandard1.0\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfCarousel.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.1.0.37\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfCarousel.XForms.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -14,18 +14,18 @@ namespace Facile
 	{
 		private DocumentiEdit _parent;
 		private readonly SQLiteAsyncConnection dbcon_;
-		public ObservableCollection <FatRow> rigCollection = null;
+		public ObservableCollection<FatRow> rigCollection = null;
 		private int swipeIndex;
 
 		public DocumentiBody(DocumentiEdit par)
 		{
-			swipeIndex = 0;		
+			swipeIndex = 0;
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 
 			_parent = par;
 			InitializeComponent();
 			dataGrid.ColumnSizer = Syncfusion.SfDataGrid.XForms.ColumnSizer.LastColumnFill;
-			dataGrid.GridLongPressed += DataGrid_GridLongPressed; 
+			dataGrid.GridLongPressed += DataGrid_GridLongPressed;
 		}
 
 		protected override void OnAppearing()
@@ -33,7 +33,7 @@ namespace Facile
 			base.OnAppearing();
 		}
 
-		public async Task SetItemSource ()
+		public async Task SetItemSource()
 		{
 			busyIndicator.IsBusy = true;
 			dataGrid.ItemsSource = null;
@@ -122,7 +122,7 @@ namespace Facile
 		{
 			dataGrid.ResetSwipeOffset();
 			if (swipeIndex > 0 && rigCollection != null)
-			{ 
+			{
 				if (await DisplayAlert("Attenzione!", "Confermi la cancellazione della riga?", "Si", "No"))
 				{
 					var rig = rigCollection[swipeIndex - 1];
@@ -144,7 +144,7 @@ namespace Facile
 				if (await dbcon_.UpdateAsync(rig) == 1)
 				{
 					rigCollection.RemoveAt(swipeIndex - 1);
-					rigCollection.Insert(swipeIndex -1, rig);
+					rigCollection.Insert(swipeIndex - 1, rig);
 				}
 				else
 				{

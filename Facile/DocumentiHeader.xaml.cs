@@ -78,7 +78,7 @@ namespace Facile
 				m_email.IsVisible = false;
 
 				m_cli_cod.IsEnabled = true;
-				m_search_cli.IsEnabled = true;  
+				m_search_cli.IsEnabled = true;
 				m_dst_cod.IsEnabled = true;
 				m_search_dst.IsEnabled = true;
 
@@ -215,8 +215,8 @@ namespace Facile
 
 			try
 			{
-				int num  = m_n_doc.Value == null ? 0 : Convert.ToInt32(m_n_doc.Value);
-				_parent.doc.fat_n_doc = RsaUtils.GetStoredNumDoc(num, fat_registro.Text); 
+				int num = m_n_doc.Value == null ? 0 : Convert.ToInt32(m_n_doc.Value);
+				_parent.doc.fat_n_doc = RsaUtils.GetStoredNumDoc(num, fat_registro.Text);
 			}
 			catch (Exception ex)
 			{
@@ -238,7 +238,7 @@ namespace Facile
 				else
 					_parent.doc.fat_listino = _cli.cli_listino;
 				_parent.doc.fat_pag = _cli.cli_pag;
-				if (_dst != null) 
+				if (_dst != null)
 				{
 					if (_dst.dst_cli_for != _cli.cli_codice)
 					{
@@ -344,7 +344,7 @@ namespace Facile
 			if (_parent.nuova) return;
 
 			busyIndicator.IsBusy = true;
-			var sql = string.Format("SELECT * FROM fatture2 WHERE fat_tipo = {0} AND fat_n_doc < {1} ORDER BY  fat_tipo, fat_n_doc  DESC LIMIT 1", _parent.doc.fat_tipo, _parent.doc.fat_n_doc); 
+			var sql = string.Format("SELECT * FROM fatture2 WHERE fat_tipo = {0} AND fat_n_doc < {1} ORDER BY  fat_tipo, fat_n_doc  DESC LIMIT 1", _parent.doc.fat_tipo, _parent.doc.fat_n_doc);
 
 			try
 			{
@@ -401,7 +401,7 @@ namespace Facile
 			}
 			finally
 			{
-				busyIndicator.IsBusy = false; 
+				busyIndicator.IsBusy = false;
 			}
 		}
 
@@ -457,7 +457,7 @@ namespace Facile
 					}
 					catch (SQLiteException ex)
 					{
-						if (string.Compare(ex.Message.ToUpper(),"CONSTRAINT") == 0)
+						if (string.Compare(ex.Message.ToUpper(), "CONSTRAINT") == 0)
 						{
 							_parent.doc.fat_n_doc++;
 							continue;

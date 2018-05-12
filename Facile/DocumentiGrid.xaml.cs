@@ -36,9 +36,9 @@ namespace Facile
 			leftImage = null;
 			swipeDoc = null;
 			swipeIndex = 0;
-			switch(tipo_)
+			switch (tipo_)
 			{
-				case DocTipo.TIPO_DDT :
+				case DocTipo.TIPO_DDT:
 					Title = "Documenti di Trasporto";
 					break;
 
@@ -67,11 +67,11 @@ namespace Facile
 			query_ = "SELECT fat_tipo, fat_n_doc, fat_d_doc, fat_tot_fattura, fat_registro, cli_desc " +
 				"FROM fatture2 " +
 				"LEFT JOIN clienti1 on fat_inte = cli_codice";
-			
+
 			filter_ = String.Format(" WHERE fat_tipo = {0}", (int)tipo_);
 
 			dataGrid.ColumnSizer = Syncfusion.SfDataGrid.XForms.ColumnSizer.LastColumnFill;
-			dataGrid.GridLongPressed += DataGrid_GridLongPressed; 
+			dataGrid.GridLongPressed += DataGrid_GridLongPressed;
 
 			GridTableSummaryRow summaryRow1 = new GridTableSummaryRow();
 			summaryRow1.Title = "Totale {Totale} - Numero Doc. : {DocCount}";
@@ -99,7 +99,7 @@ namespace Facile
 		{
 			string sql = query_ + filter_;
 			var docList = await dbcon_.QueryAsync<Documents>(sql);
-			foreach(Documents doc in docList)
+			foreach (Documents doc in docList)
 			{
 				if (doc.fat_tipo == (int)DocTipo.TIPO_FAT && doc.fat_credito != 0)
 					doc.fat_tot_fattura = -doc.fat_tot_fattura;
@@ -125,8 +125,8 @@ namespace Facile
 				busyIndicator.IsBusy = true;
 				string where;
 				if (cliCodice_ != 0)
-					where = String.Format(" AND fat_d_doc BETWEEN {0} AND {1} AND fat_inte = {2}", dStart.Date.Ticks,dStop.Date.Ticks, cliCodice_);
-				else 
+					where = String.Format(" AND fat_d_doc BETWEEN {0} AND {1} AND fat_inte = {2}", dStart.Date.Ticks, dStop.Date.Ticks, cliCodice_);
+				else
 					where = String.Format(" AND fat_d_doc BETWEEN {0} AND {1}", dStart.Date.Ticks, dStop.Date.Ticks);
 				string sql = query_ + filter_ + where;
 				var docList = await dbcon_.QueryAsync<Documents>(sql);
@@ -182,7 +182,7 @@ namespace Facile
 				await DisplayAlert("Attenzione!", ex.Message, "OK");
 				return;
 			}
-			if (fat == null) 
+			if (fat == null)
 			{
 				busyIndicator.IsBusy = false;
 				return;
@@ -208,7 +208,7 @@ namespace Facile
 			}
 		}
 
-		private async void Edit ()
+		private async void Edit()
 		{
 			dataGrid.ResetSwipeOffset();
 			if (swipeIndex == 0 || swipeDoc == null)

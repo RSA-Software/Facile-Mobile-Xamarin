@@ -51,7 +51,7 @@ namespace Facile
 				recTotal_ = await dbcon_.Table<Artanag>().CountAsync();
 				var anaList = await dbcon_.QueryAsync<Artanag>(sql);
 				recLoaded_ = anaList.Count;
-				foreach(var ana in anaList)
+				foreach (var ana in anaList)
 				{
 					ana.ana_desc = ana.ana_desc1 + " " + ana.ana_desc2;
 					ana.ana_desc = ana.ana_desc.Trim();
@@ -137,10 +137,10 @@ namespace Facile
 				status = await imagesFolder.CheckExistsAsync(fileName);
 				if (status == ExistenceCheckResult.FileExists)
 				{
-					return(rootFolder.Path + "/images/" + fileName);
+					return (rootFolder.Path + "/images/" + fileName);
 				}
 			}
-			return("header_wallpaper.jpg");
+			return ("header_wallpaper.jpg");
 			//return (null);
 		}
 

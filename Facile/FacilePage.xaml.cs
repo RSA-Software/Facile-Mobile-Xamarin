@@ -40,9 +40,15 @@ namespace Facile
 			await Navigation.PushAsync(page);
 		}
 
-		void OnClickedIncassi(object sender, System.EventArgs e)
+		async void OnClickedIncassi(object sender, System.EventArgs e)
 		{
-			DisplayAlert("Incassi", "La procedura sarà disponibile nelle prossime release!", "OK");
+			//var page = new Catalogo();
+			var page = new Incassi(null, null);
+
+
+			await Navigation.PushAsync(page);
+
+			//DisplayAlert("Incassi", "La procedura sarà disponibile nelle prossime release!", "OK");
 		}
 
 		async void OnClickedSincronizza(object sender, System.EventArgs e)

@@ -86,7 +86,7 @@ namespace Facile
 				password = $"$_{lim.user}_$";
 			else
 				password = lim.user;
-			
+
 			try
 			{
 				IFolder rootFolder = FileSystem.Current.LocalStorage;
@@ -120,7 +120,7 @@ namespace Facile
 							//
 							// Controllare qui se si vuole la presenza dell'articolo
 							//
-							if (ext.ToUpper() == ".JPG" || ext.ToUpper() == ".PNG" )
+							if (ext.ToUpper() == ".JPG" || ext.ToUpper() == ".PNG")
 							{
 								x = file.LastIndexOf('_');
 								if (x > 0)
@@ -144,7 +144,7 @@ namespace Facile
 								for (int retry = 0; retry < 5; retry++)
 								{
 									result = await ftp.DownloadFile(lim.user, password, remoteFile, localFile);
-									if (result.StartsWith("221", StringComparison.CurrentCulture)) 
+									if (result.StartsWith("221", StringComparison.CurrentCulture))
 										break;
 									else
 									{

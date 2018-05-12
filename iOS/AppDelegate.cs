@@ -11,6 +11,7 @@ using Syncfusion.SfBusyIndicator.XForms.iOS;
 using Syncfusion.SfNumericUpDown.XForms.iOS;
 using Syncfusion.XForms.iOS.PopupLayout;
 using Syncfusion.XForms.iOS.MaskedEdit;
+using Syncfusion.SfCarousel.XForms.iOS;
 
 namespace Facile.iOS
 {
@@ -28,6 +29,7 @@ namespace Facile.iOS
 			new SfBusyIndicatorRenderer();
 			new SfNumericUpDownRenderer();
 			new SfPopupLayoutRenderer();
+			new SfCarouselRenderer();
 
 			ImageCircle.Forms.Plugin.iOS.ImageCircleRenderer.Init();
 

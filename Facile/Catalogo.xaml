@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage  Title="Catalogo"
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:syncfusion="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+	xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+	x:Class="Facile.Catalogo">
+
+	<ContentPage.Resources>
+    	<ResourceDictionary>
+     	 	<DataTemplate x:Key="itemTemplate">
+       	 		<Image Source="{Binding Image}" 
+					Aspect="AspectFit"/>
+      		</DataTemplate>
+    	</ResourceDictionary>
+ 	 </ContentPage.Resources>
+
+	
+	<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+            iOS="0,20,0,0">
+        </OnPlatform>
+    </ContentPage.Padding>
+
+	<ContentPage.Content>
+	<AbsoluteLayout  BackgroundColor="#e3f2f">
+		<StackLayout Padding="0,0,0,7" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" >
+
+	        <StackLayout BackgroundColor="#0d47a1" Orientation="Vertical" HorizontalOptions="FillAndExpand">
+            	<StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" Padding="3,0,0,0" HeightRequest="40">
+                	<Label Text="Catalogo Articoli" FontAttributes="None"
+                       TextColor="Yellow"
+                       HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center" FontSize="18"  x:Name="m_title"/>
+            	</StackLayout>
+            	<Label x:Name="m_desc" Text="DESCRIZIONE ARTICOLO" FontAttributes="None" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontSize="Medium"/>
+        	</StackLayout>
+
+			
+			<syncfusion:SfCarousel x:Name="m_carousel" SelectionChanged="OnSelectionChanged" HorizontalOptions="Fill" VerticalOptions="FillAndExpand"  ItemTemplate="{StaticResource itemTemplate}" DataSource="{Binding ImageCollection}" />	
+
+			<Button Text="Aggiungi" BackgroundColor="#1e88e5" HorizontalOptions="Center" VerticalOptions="End" TextColor="White" WidthRequest="120" HeightRequest="60"/>
+
+		</StackLayout>
+		<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="RollingBall" Title="Attendere..." IsBusy="true" AbsoluteLayout.LayoutBounds="0.5,0.5,250,250" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="Black"/>
+	</AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>

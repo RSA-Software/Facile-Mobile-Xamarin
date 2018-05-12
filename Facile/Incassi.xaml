@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+	x:Class="Facile.Incassi">
+
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
+	</ContentPage.Padding>
+	
+	<AbsoluteLayout>	
+	    <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Padding="5,0,5,5">
+
+			<!--  Cliente 	-->
+			<Label Text="Cliente" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy"/>
+			<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+               	<Entry x:Name="m_cli_cod" WidthRequest="70" HorizontalOptions="Start" Keyboard="Numeric" HorizontalTextAlignment="End" FontAttributes="Bold"/>
+                <Button x:Name="m_search_cli" Image="ic_search_black.png" WidthRequest="50"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent" Clicked="OnClientiTapped"/>
+				<Label x:Name="m_cli_des" Text="Prova" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" FontAttributes="Bold" VerticalTextAlignment="Center" />
+            </StackLayout>
+
+			<!--  Destinazione 	-->
+			<Label Text="Destinazione"  VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy" WidthRequest="110"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+				<Entry x:Name="m_dst_cod" WidthRequest="70" HorizontalOptions="Start" Keyboard="Numeric" HorizontalTextAlignment="End" FontAttributes="Bold"/>
+                <Button x:Name="m_search_dst" Image="ic_search_black.png" WidthRequest="50"  HeightRequest="30" HorizontalOptions="Center"  TextColor="Black" BackgroundColor="Transparent"  Clicked="Handle_Clicked"/>
+				<Label x:Name="m_dst_des" Text="Prova" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" FontAttributes="Bold" VerticalTextAlignment="Center" />
+			</StackLayout>
+
+
+
+       	<syncfusion:SfDataGrid x:Name="dataGrid" AllowResizingColumn="true" HorizontalOptions="FillAndExpand"  AutoGenerateColumns="False" ColumnSizer="LastColumnFill">
+            <syncfusion:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
+
+                <syncfusion:GridTextColumn HeaderText="Data" MappingName="sca_data" Width="90" TextAlignment="Center" Format="dd/MM/yy">
+                </syncfusion:GridTextColumn>
+
+                <syncfusion:GridTextColumn HeaderText="Importo" MappingName="sca_importo" Width="100" Format="N2" TextAlignment="End">
+                    <syncfusion:GridTextColumn.CellStyle>
+                        <Style TargetType="syncfusion:GridCell">
+                            <Setter Property="Foreground" Value="Red" />
+                        </Style>
+                    </syncfusion:GridTextColumn.CellStyle>
+                </syncfusion:GridTextColumn>
+
+                <syncfusion:GridTextColumn HeaderText="Num. Fattura" MappingName="sca_fattura" Width="90" TextAlignment="End">
+                </syncfusion:GridTextColumn>
+
+                <syncfusion:GridTextColumn HeaderText="Tot. Fattura" MappingName="sca_tot_fat" Width="90" TextAlignment="End" Format="N2">
+                </syncfusion:GridTextColumn>
+            
+                <syncfusion:GridTextColumn HeaderText="Descrizione" MappingName="sca_desc" TextAlignment="Start" MinimumWidth="120">
+                </syncfusion:GridTextColumn>
+            
+            </syncfusion:SfDataGrid.Columns>
+            
+       	</syncfusion:SfDataGrid>
+			
+		</StackLayout>
+	</AbsoluteLayout>
+	
+</ContentPage>

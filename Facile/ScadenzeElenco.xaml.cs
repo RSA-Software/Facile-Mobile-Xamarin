@@ -78,7 +78,7 @@ namespace Facile
 				busyIndicator.IsBusy = false;
 				first = false;
 			}
-			base.OnAppearing();		
+			base.OnAppearing();
 		}
 
 		async void DataGrid_GridLongPressed(object sender, GridLongPressedEventArgs e)
@@ -109,7 +109,7 @@ namespace Facile
 				sql = @"SELECT sca_cli_for as CliId, cli_desc as CliDesc, cli_tel as CliTel,  SUM(sca_importo) as CliTotale
 				FROM scadenze 
 				INNER JOIN clienti1 on cli_codice = sca_cli_for
-				WHERE sca_relaz = 0 AND sca_pagato = 0" + " AND cli_desc LIKE(" + e.NewTextValue.Trim().SqlQuote(true) + ")"  + " GROUP BY cli_desc, cli_tel, sca_cli_for";
+				WHERE sca_relaz = 0 AND sca_pagato = 0" + " AND cli_desc LIKE(" + e.NewTextValue.Trim().SqlQuote(true) + ")" + " GROUP BY cli_desc, cli_tel, sca_cli_for";
 			}
 
 			var scaList = await dbcon_.QueryAsync<ScadenzeInfo>(sql);
@@ -138,7 +138,7 @@ namespace Facile
 		private async void ShowDetails()
 		{
 			dataGrid.ResetSwipeOffset();
-			if (swipeIndex_ == 0) return; 
+			if (swipeIndex_ == 0) return;
 			if (swipeData_ == null) return;
 
 			try

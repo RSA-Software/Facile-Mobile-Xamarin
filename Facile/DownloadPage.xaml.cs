@@ -36,7 +36,7 @@ namespace Facile
 			if (first)
 			{
 				var response = await DisplayAlert("Facile", "La ricezione dati potrebbe richiede una connessione internet e potrebbero essere necessari diversi minuti.\n\nVuoi proseguire?", "Si", "No");
-				if (response) 
+				if (response)
 					await Download();
 				else
 					await Navigation.PopModalAsync();
@@ -178,7 +178,7 @@ namespace Facile
 				{
 					sql = $"SELECT * from fatrow2 WHERE rig_tipo = {doc.fat_tipo} AND rig_n_doc = {doc.fat_n_doc} ORDER BY rig_tipo, rig_n_doc, rig_d_ins, rig_t_ins";
 					var righe = await dbcon_.QueryAsync<FatRow>(sql);
-					rigList.AddRange(righe); 
+					rigList.AddRange(righe);
 				}
 
 				//
@@ -302,7 +302,7 @@ namespace Facile
 
 		public async Task ImportTableAsync<T>(string tblName, Image m_down, Image m_unzip, Image m_json, Image m_load, Label m_label, Label m_rec)
 		{
-			string remotePath ="";
+			string remotePath = "";
 			string password = "";
 
 			IFolder rootFolder = FileSystem.Current.LocalStorage;
@@ -311,7 +311,7 @@ namespace Facile
 
 			if (lim.ftpServer == "Facile - 01")
 				remotePath = $"ftp://www.facile2013.it/{lim.age}/in/{tblName.ToUpper()}.ZIP";
-		
+
 			if (lim.ftpServer == "Facile - 02")
 				remotePath = $"ftp://www.rsaweb.com/{lim.age}/in/{tblName.ToUpper()}.ZIP";
 
@@ -325,7 +325,7 @@ namespace Facile
 				password = $"$_{lim.user}_$";
 			else
 				password = lim.user;
-			
+
 			m_label.FontSize = m_label.FontSize + 3;
 			m_label.TextColor = Color.Red;
 			m_label.FontAttributes = FontAttributes.Italic | FontAttributes.Bold;
@@ -339,8 +339,8 @@ namespace Facile
 				m_down.Source = "ic_file_download_black.png";
 				m_desc.Text = "Unzip " + tblName.ToLower() + ".zip";
 				IFile zip_file = await FileSystem.Current.GetFileFromPathAsync(localZip);
-				var zip_stream = await zip_file.OpenAsync(FileAccess.Read); 
-				ZipInputStream  zip = new ZipInputStream(zip_stream);
+				var zip_stream = await zip_file.OpenAsync(FileAccess.Read);
+				ZipInputStream zip = new ZipInputStream(zip_stream);
 
 				m_unzip.Source = "ic_hourglass_full_white.png";
 
@@ -357,8 +357,8 @@ namespace Facile
 					if (!string.IsNullOrEmpty(fileName))
 					{
 						IFolder folder = FileSystem.Current.LocalStorage;
-						IFile json_file = await folder.CreateFileAsync(fileName,CreationCollisionOption.ReplaceExisting);
-						Stream json_stream = await json_file.OpenAsync(FileAccess.ReadAndWrite); 
+						IFile json_file = await folder.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
+						Stream json_stream = await json_file.OpenAsync(FileAccess.ReadAndWrite);
 
 						int size = 2048;
 						byte[] data = new byte[2048];
@@ -408,7 +408,7 @@ namespace Facile
 			}
 			else if (result.StartsWith("System.Net.WebException", StringComparison.CurrentCulture))
 			{
-				throw new Exception(result);	
+				throw new Exception(result);
 			}
 			else
 			{

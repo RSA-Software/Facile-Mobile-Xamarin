@@ -16,7 +16,7 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
     <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
   </PropertyGroup>
@@ -230,6 +230,18 @@
     </Reference>
     <Reference Include="ImageCircle.Forms.Plugin.Android">
       <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.2.0.2\lib\MonoAndroid10\ImageCircle.Forms.Plugin.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfCarousel.Android">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.1.0.37\lib\MonoAndroid10\Syncfusion.SfCarousel.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfCarousel.XForms.Android">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.1.0.37\lib\MonoAndroid10\Syncfusion.SfCarousel.XForms.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfCarousel.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.1.0.37\lib\MonoAndroid10\Syncfusion.SfCarousel.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v17.Leanback">
+      <HintPath>..\packages\Xamarin.Android.Support.v17.Leanback.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v17.Leanback.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -454,4 +466,5 @@
   <Import Project="..\packages\Xamarin.Android.Support.v7.MediaRouter.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.MediaRouter.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.MediaRouter.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.MediaRouter.targets')" />
   <Import Project="..\packages\Xamarin.Forms.3.0.0.446417\build\netstandard2.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.0.0.446417\build\netstandard2.0\Xamarin.Forms.targets')" />
   <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v17.Leanback.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v17.Leanback.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v17.Leanback.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v17.Leanback.targets')" />
 </Project>

@@ -24,8 +24,8 @@ namespace Facile
 
 		public UploadPage()
 		{
-			first  = true;
-			lim    = null;
+			first = true;
+			lim = null;
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 			InitializeComponent();
 		}
@@ -190,9 +190,9 @@ namespace Facile
 				{
 					sql = "";
 					busyIndicator.IsBusy = true;
-					switch(fat.fat_tipo)
+					switch (fat.fat_tipo)
 					{
-						case (short)DocTipo.TIPO_FAT :
+						case (short)DocTipo.TIPO_FAT:
 							sql = string.Format("La fattura N. {0}/{1} non contiene righe!\n\nVuoi continuare?", RsaUtils.GetShowedNumDoc(fat.fat_n_doc), fat.fat_registro);
 							break;
 
@@ -204,17 +204,17 @@ namespace Facile
 							sql = string.Format("L' Ordine N. {0}/{1} non contiene righe!\n\nVuoi continuare?", RsaUtils.GetShowedNumDoc(fat.fat_n_doc), fat.fat_registro);
 							break;
 
-						default :
+						default:
 							sql = string.Format("Il Documento N. {0}/{1} (Tipo - {2}) non contiene righe!\n\nVuoi continuare?", RsaUtils.GetShowedNumDoc(fat.fat_n_doc), fat.fat_registro, fat.fat_tipo);
 							break;
 					}
 					var test = await DisplayAlert("Attenzone", sql, "SI", "NO");
-					if (!test) 
+					if (!test)
 					{
 						await Navigation.PopModalAsync();
 						return;
 					}
-					
+
 				}
 
 				//
