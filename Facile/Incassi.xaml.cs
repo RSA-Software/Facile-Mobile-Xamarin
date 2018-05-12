@@ -7,6 +7,7 @@ using Facile.Models;
 using SQLite;
 using Syncfusion.Data;
 using Syncfusion.SfDataGrid.XForms;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -230,16 +231,19 @@ namespace Facile
 			dataGrid.IsBusy = false;
 		}
 
-		void OnSalvaClicked(object sender, System.EventArgs e)
+		async void OnSalvaClicked(object sender, System.EventArgs e)
 		{
-			/*
+			var recipients = new List<string>();
+			recipients.Add("capizz.filippo.rsa@gmail.com");
+
+
 			try
 			{
-				var message = new MailMessage
+				var message = new EmailMessage
 				{
 					Subject = "Incasso",
 					Body = "Ho incassato 100.000,00 €",
-					To = "mariorifici@gmail.com"
+					To = recipients,
 					//Cc = ccRecipients,
 					//Bcc = bccRecipients
 				};
@@ -254,7 +258,7 @@ namespace Facile
 			{
 				// Some other exception occured
 			}
-*/
+
 		}
 	}
 }
