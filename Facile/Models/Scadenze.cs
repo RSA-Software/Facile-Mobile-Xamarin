@@ -63,5 +63,8 @@ namespace Facile.Models
 		public string sca_fattura { get; set; }
 		public bool sca_insoluto { get; set; }
 		public DateTime sca_data_orig { get; set; }
+
+		[Ignore]
+		public double incasso { get; set; }
 	}
 }

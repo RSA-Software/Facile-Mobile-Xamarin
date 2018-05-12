@@ -231,10 +231,16 @@ namespace Facile
 			dataGrid.IsBusy = false;
 		}
 
+		void OnGridLongPressed(object sender, Syncfusion.SfDataGrid.XForms.GridLongPressedEventArgs e)
+		{
+			((Scadenze)e.RowData).incasso = ((Scadenze)e.RowData).sca_importo;
+		}
+
 		async void OnSalvaClicked(object sender, System.EventArgs e)
 		{
 			var recipients = new List<string>();
 			recipients.Add("capizz.filippo.rsa@gmail.com");
+			recipients.Add("mariorifici@gmail.com");
 
 
 			try
@@ -252,11 +258,11 @@ namespace Facile
 			}
 			catch (FeatureNotSupportedException fbsEx)
 			{
-				// Sms is not supported on this device
+				await DisplayAlert("Attenzione", "Non supportato : " + fbsEx.Message, "OK");
 			}
 			catch (Exception ex)
 			{
-				// Some other exception occured
+				await DisplayAlert("Attenzione", ex.Message, "OK");
 			}
 
 		}
