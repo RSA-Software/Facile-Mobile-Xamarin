@@ -464,6 +464,27 @@ namespace Facile
 								totale = Math.Round(Convert.ToDouble(data) / 100, 2, MidpointRounding.AwayFromZero);
 							}
 						}
+						else
+						{
+							sql = string.Format("SELECT * FROM barcode WHERE bar_barcode = {0} LIMIT 1", code.SqlQuote(false));
+							barList = await dbcon_.QueryAsync<Barcode>(sql);
+							if (barList.Count != 0)
+							{
+								sql = string.Format("SELECT * FROM artanag WHERE ana_codice = {0} LIMIT 1", barList[0].bar_codart.Trim().SqlQuote(false));
+								anaList = await dbcon_.QueryAsync<Artanag>(sql);
+							}
+							if (anaList.Count > 0)
+							{
+								if (anaList[0].ana_venapeso == (int)DatiEtichetta.ANA_VEN_COD_PESO)
+								{
+									quantita = Math.Round(Convert.ToDouble(data) / 1000, 3, MidpointRounding.AwayFromZero);
+								}
+								else if (anaList[0].ana_venapeso == (int)DatiEtichetta.ANA_VEN_COD_PREZZO || anaList[0].ana_venapeso == (int)DatiEtichetta.ANA_VEN_COD_PREZZO_Q1)
+								{
+									totale = Math.Round(Convert.ToDouble(data) / 100, 2, MidpointRounding.AwayFromZero);
+								}
+							}
+						}
 					}
 				}
 			}

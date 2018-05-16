@@ -42,13 +42,14 @@ namespace Facile
 
 		async void OnClickedIncassi(object sender, System.EventArgs e)
 		{
+			//var page = new WebPage();
 			//var page = new Catalogo();
-			var page = new Incassi(null, null);
+			//var page = new Incassi(null, null);
 
 
-			await Navigation.PushAsync(page);
+			//await Navigation.PushAsync(page);
 
-			//DisplayAlert("Incassi", "La procedura sarà disponibile nelle prossime release!", "OK");
+			DisplayAlert("Incassi", "La procedura sarà disponibile nelle prossime release!", "OK");
 		}
 
 		async void OnClickedSincronizza(object sender, System.EventArgs e)
@@ -102,6 +103,8 @@ namespace Facile
 			await dbcon.CreateTableAsync<Agganci>();
 			await dbcon.CreateTableAsync<Descrizioni>();
 			await dbcon.CreateTableAsync<LocalImpo>();
+			await dbcon.CreateTableAsync<ScaPagHead>();
+			await dbcon.CreateTableAsync<ScaPagRow>();
 
 			if (await dbcon.Table<LocalImpo>().CountAsync() == 0)
 			{

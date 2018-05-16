@@ -30,13 +30,19 @@
 
 				<!--  Griglia con Scadenze	-->
 				<syncfusion:SfDataGrid x:Name="dataGrid" AllowResizingColumn="true" HorizontalOptions="FillAndExpand"  AutoGenerateColumns="False" ColumnSizer="LastColumnFill" 
-									   AllowEditing="true"  
+									   AllowEditing="false"  
 									   GridLongPressed="OnGridLongPressed"
-									   EditTapAction="OnTap">
+									   EditTapAction="OnTap"
+									   CurrentCellBeginEdit="OnCurrentCellBeginEdit"
+									   CurrentCellEndEdit="OnCurrentCellEndEdit"
+									   QueryCellStyle="Handle_QueryCellStyle"
+									   >
+
+					
 	            	<syncfusion:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
 
 	                	<syncfusion:GridTextColumn HeaderText="Data" MappingName="sca_data" Width="90" TextAlignment="Center" Format="dd/MM/yy" AllowEditing="false">
-	                	</syncfusion:GridTextColumn>
+						</syncfusion:GridTextColumn>
 
 	                	<syncfusion:GridTextColumn HeaderText="Importo" MappingName="sca_importo" Width="100" Format="N2" TextAlignment="End" AllowEditing="false">
 	                    	<syncfusion:GridTextColumn.CellStyle>
@@ -46,8 +52,8 @@
 	                    	</syncfusion:GridTextColumn.CellStyle>
 	                	</syncfusion:GridTextColumn>
 
-	                	<syncfusion:GridNumericColumn HeaderText="Incasso" MappingName="incasso" Width="90" TextAlignment="End" AllowEditing="true" Format="N2">
-	                	</syncfusion:GridNumericColumn>
+	                	<syncfusion:GridNumericColumn HeaderText="Incasso" MappingName="sca_incasso" Width="90" TextAlignment="End" AllowEditing="true" Format="N2">
+						</syncfusion:GridNumericColumn>
 						
 	                	<syncfusion:GridTextColumn HeaderText="Num. Fattura" MappingName="sca_fattura" Width="90" TextAlignment="End" AllowEditing="false">
 	                	</syncfusion:GridTextColumn>

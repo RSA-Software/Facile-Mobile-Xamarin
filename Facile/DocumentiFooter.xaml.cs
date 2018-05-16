@@ -23,6 +23,9 @@ namespace Facile
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 			InitializeComponent();
 
+			//m_tot_merce.Culture = new System.Globalization.CultureInfo("it-IT");
+			//numericTextBox.Culture = new System.Globalization.CultureInfo("fr-FR");
+
 			//var culture = new CultureInfo("it-IT");
 			//culture.NumberFormat.CurrencyGroupSeparator = "?";
 			//culture.NumberFormat.NumberGroupSeparator = "?";
@@ -77,7 +80,7 @@ namespace Facile
 			busyIndicator.IsBusy = isBusy;	
 		}
 
-		public void SetField()
+		public async void SetField()
 		{
 			change_event = false;
 			m_tot_merce.Value = _parent.doc.fat_tot_merce;

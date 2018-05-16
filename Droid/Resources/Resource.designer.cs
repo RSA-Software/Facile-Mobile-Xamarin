@@ -1227,10 +1227,6 @@ namespace Facile.Droid
 			global::Com.Syncfusion.Carousel.Resource.Styleable.lbVerticalGridView_numberOfColumns = global::Facile.Droid.Resource.Styleable.lbVerticalGridView_numberOfColumns;
 			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Layout.ScrollViewer = global::Facile.Droid.Resource.Layout.ScrollViewer;
 			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.library_name = global::Facile.Droid.Resource.String.library_name;
-			global::Syncfusion.XForms.Android.PopupLayout.Resource.Drawable.popup_forms_android_close_icon = global::Facile.Droid.Resource.Drawable.popup_forms_android_close_icon;
-			global::Syncfusion.XForms.Android.PopupLayout.Resource.Drawable.popup_forms_android_shadow = global::Facile.Droid.Resource.Drawable.popup_forms_android_shadow;
-			global::Syncfusion.XForms.Android.PopupLayout.Resource.Id.BorderView = global::Facile.Droid.Resource.Id.BorderView;
-			global::Syncfusion.XForms.Android.PopupLayout.Resource.String.library_name = global::Facile.Droid.Resource.String.library_name;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Facile.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -5002,26 +4998,26 @@ namespace Facile.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
+			// aapt resource value: 0x7f02018d
+			public const int avd_hide_password_1 = 2130837901;
+			
+			// aapt resource value: 0x7f02018e
+			public const int avd_hide_password_2 = 2130837902;
+			
 			// aapt resource value: 0x7f02018f
-			public const int avd_hide_password_1 = 2130837903;
-			
-			// aapt resource value: 0x7f020190
-			public const int avd_hide_password_2 = 2130837904;
-			
-			// aapt resource value: 0x7f020191
-			public const int avd_hide_password_3 = 2130837905;
+			public const int avd_hide_password_3 = 2130837903;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
+			// aapt resource value: 0x7f020190
+			public const int avd_show_password_1 = 2130837904;
+			
+			// aapt resource value: 0x7f020191
+			public const int avd_show_password_2 = 2130837905;
+			
 			// aapt resource value: 0x7f020192
-			public const int avd_show_password_1 = 2130837906;
-			
-			// aapt resource value: 0x7f020193
-			public const int avd_show_password_2 = 2130837907;
-			
-			// aapt resource value: 0x7f020194
-			public const int avd_show_password_3 = 2130837908;
+			public const int avd_show_password_3 = 2130837906;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
@@ -5941,11 +5937,11 @@ namespace Facile.Droid
 			// aapt resource value: 0x7f020186
 			public const int notification_icon_background = 2130837894;
 			
-			// aapt resource value: 0x7f02018d
-			public const int notification_template_icon_bg = 2130837901;
+			// aapt resource value: 0x7f02018b
+			public const int notification_template_icon_bg = 2130837899;
 			
-			// aapt resource value: 0x7f02018e
-			public const int notification_template_icon_low_bg = 2130837902;
+			// aapt resource value: 0x7f02018c
+			public const int notification_template_icon_low_bg = 2130837900;
 			
 			// aapt resource value: 0x7f020187
 			public const int notification_tile_bg = 2130837895;
@@ -5954,16 +5950,10 @@ namespace Facile.Droid
 			public const int notify_panel_notification_icon_bg = 2130837896;
 			
 			// aapt resource value: 0x7f020189
-			public const int popup_forms_android_close_icon = 2130837897;
+			public const int tooltip_frame_dark = 2130837897;
 			
 			// aapt resource value: 0x7f02018a
-			public const int popup_forms_android_shadow = 2130837898;
-			
-			// aapt resource value: 0x7f02018b
-			public const int tooltip_frame_dark = 2130837899;
-			
-			// aapt resource value: 0x7f02018c
-			public const int tooltip_frame_light = 2130837900;
+			public const int tooltip_frame_light = 2130837898;
 			
 			static Drawable()
 			{
@@ -6023,9 +6013,6 @@ namespace Facile.Droid
 			
 			// aapt resource value: 0x7f0b0045
 			public const int ALT = 2131427397;
-			
-			// aapt resource value: 0x7f0b0175
-			public const int BorderView = 2131427701;
 			
 			// aapt resource value: 0x7f0b0046
 			public const int CTRL = 2131427398;

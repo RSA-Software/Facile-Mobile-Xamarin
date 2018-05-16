@@ -10,7 +10,10 @@
 		<AbsoluteLayout>
 		    <StackLayout Padding="5,7,5,7" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
 
-				<Grid x:Name="grid" HorizontalOptions="FillAndExpand">
+<!--				<syncfusion:SfNumericTextBox x:Name="numericTextBox" MaximumNumberDecimalDigits="4" FormatString="C" ParserMode="Double" Value="7.4925" />
+				<syncfusion:SfNumericTextBox x:Name="numericTextBox1" FormatString="C" ParserMode="Double" Value="7.4925" />
+				<syncfusion:SfNumericTextBox x:Name="numericTextBox2" MaximumNumberDecimalDigits="4" FormatString="N" ParserMode="Double" Value="7.4925" />
+-->				<Grid x:Name="grid" HorizontalOptions="FillAndExpand">
             		<Grid.ColumnDefinitions>
                 		<ColumnDefinition Width="*" />
                 		<ColumnDefinition Width="*" />
