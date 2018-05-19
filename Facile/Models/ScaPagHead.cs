@@ -33,7 +33,7 @@ namespace Facile.Models
 		public double dsp_ass { get; set; }
 		public int dsp_sez_sca { get; set; }
 		public int dsp_nonconf { get; set; }
-		public double dsp_timeid { get; set; }
+		public DateTime? dsp_timeid { get; set; }
 		public int dsp_codppc { get; set; }
 		public short dsp_parked { get; set; }
 		public DateTime? dsp_data_ass { get; set; }

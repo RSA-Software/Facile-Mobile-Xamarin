@@ -418,20 +418,45 @@ namespace Facile
 			double totale = 0.0;
 
 			var codice = "";
+			var sql    = "";
+			var anaList = new List<Artanag>();
 			if (ent.Text != null) codice = ent.Text.Trim().ToUpper();
 			if (string.Compare(codice, rig_.rig_art) == 0) return;
 
-			var sql = string.Format("SELECT * FROM artanag WHERE ana_codice = {0} LIMIT 1", codice.SqlQuote(false));
-			var anaList = await dbcon_.QueryAsync<Artanag>(sql);
+			try
+			{ 
+				sql = string.Format("SELECT * FROM artanag WHERE ana_codice = {0} LIMIT 1", codice.SqlQuote(false));
+				anaList = await dbcon_.QueryAsync<Artanag>(sql);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
 
 			if (anaList.Count == 0)  // Cerchiamo tra i codici a Barre
 			{
-				sql = string.Format("SELECT * FROM barcode WHERE bar_barcode = {0} LIMIT 1", codice.SqlQuote(false));
-				var barList = await dbcon_.QueryAsync<Barcode>(sql);
+				var barList = new List<Barcode>();
+				try
+				{
+					sql = string.Format("SELECT * FROM barcode WHERE bar_barcode = {0} LIMIT 1", codice.SqlQuote(false));
+					barList = await dbcon_.QueryAsync<Barcode>(sql);
+				}
+				catch (Exception ex)
+				{
+					Debug.WriteLine(ex.Message);
+				}
 				if (barList.Count != 0)
 				{
-					sql = string.Format("SELECT * FROM artanag WHERE ana_codice = {0} LIMIT 1", barList[0].bar_codart.Trim().SqlQuote(false));
-					anaList = await dbcon_.QueryAsync<Artanag>(sql);
+					try
+					{
+						anaList.Clear();
+						sql = string.Format("SELECT * FROM artanag WHERE ana_codice = {0} LIMIT 1", barList[0].bar_codart.Trim().SqlQuote(false));
+						anaList = await dbcon_.QueryAsync<Artanag>(sql);
+					}
+					catch (Exception ex)
+					{
+						Debug.WriteLine(ex.Message);
+					}
 				}
 				else
 				{
@@ -450,8 +475,16 @@ namespace Facile
 							code += "0";
 						}
 
-						sql = string.Format("SELECT * FROM artanag WHERE ana_codice = {0} LIMIT 1", code.SqlQuote(false));
-						anaList = await dbcon_.QueryAsync<Artanag>(sql);
+						try
+						{
+							anaList.Clear();
+							sql = string.Format("SELECT * FROM artanag WHERE ana_codice = {0} LIMIT 1", code.SqlQuote(false));
+							anaList = await dbcon_.QueryAsync<Artanag>(sql);
+						}
+						catch (Exception ex)
+						{
+							Debug.WriteLine(ex.Message);
+						}
 
 						if (anaList.Count > 0)
 						{
@@ -466,12 +499,28 @@ namespace Facile
 						}
 						else
 						{
-							sql = string.Format("SELECT * FROM barcode WHERE bar_barcode = {0} LIMIT 1", code.SqlQuote(false));
-							barList = await dbcon_.QueryAsync<Barcode>(sql);
+							try
+							{
+								barList.Clear();
+								sql = string.Format("SELECT * FROM barcode WHERE bar_barcode = {0} LIMIT 1", code.SqlQuote(false));
+								barList = await dbcon_.QueryAsync<Barcode>(sql);
+							}
+							catch (Exception ex)
+							{
+								Debug.WriteLine(ex.Message);
+							}
 							if (barList.Count != 0)
 							{
-								sql = string.Format("SELECT * FROM artanag WHERE ana_codice = {0} LIMIT 1", barList[0].bar_codart.Trim().SqlQuote(false));
-								anaList = await dbcon_.QueryAsync<Artanag>(sql);
+								try
+								{
+									anaList.Clear();
+									sql = string.Format("SELECT * FROM artanag WHERE ana_codice = {0} LIMIT 1", barList[0].bar_codart.Trim().SqlQuote(false));
+									anaList = await dbcon_.QueryAsync<Artanag>(sql);
+								}
+								catch (Exception ex)
+								{
+									Debug.WriteLine(ex.Message);
+								}
 							}
 							if (anaList.Count > 0)
 							{
@@ -501,8 +550,16 @@ namespace Facile
 				if (quantita > 0.0) rig_.rig_qta = quantita;
 				if (Math.Abs(rig_.rig_qta) < NumericExtensions.EPSILON) rig_.rig_qta = 1;
 
-				sql = string.Format("SELECT * FROM listini1 WHERE lis_codice = {0} AND lis_art = {1} LIMIT 1", 1, anaList[0].ana_codice.SqlQuote(false));
-				var listini = await dbcon_.QueryAsync<Listini>(sql);
+				var listini = new List<Listini>();
+				try
+				{
+					sql = string.Format("SELECT * FROM listini1 WHERE lis_codice = {0} AND lis_art = {1} LIMIT 1", 1, anaList[0].ana_codice.SqlQuote(false));
+					listini = await dbcon_.QueryAsync<Listini>(sql);
+				}
+				catch (Exception ex)
+				{
+					Debug.WriteLine(ex.Message);
+				}
 
 				if (listini.Count > 0)
 				{

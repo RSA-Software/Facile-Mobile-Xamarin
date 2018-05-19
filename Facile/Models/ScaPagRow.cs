@@ -19,7 +19,7 @@ namespace Facile.Models
 		public DateTime? dsr_data { get; set; }
 		public string dsr_old_num_doc { get; set; }
 		public DateTime? dsr_d_doc { get; set; }
-		public double dsr_t_doc { get; set; }
+		public double dsr_tot_doc { get; set; }
 		public double dsr_importo { get; set; }
 		public double dsr_paginc { get; set; }
 		public int dsr_idx { get; set; }

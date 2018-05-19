@@ -16,16 +16,19 @@ namespace Facile.ViewModels
 		private string _sca_fattura;
 		private double _sca_tot_fat;
 		private string _sca_desc;
+		private int _sca_locked;
 
 		public IncassiInfo()
 		{
 			sca_id = 0;
+
 			sca_data = DateTime.Now;
 			sca_importo = 0.0;
 			sca_incasso = 0.0;
 			sca_fattura = "";
 			sca_tot_fat = 0.0;
 			sca_desc = "";
+			sca_locked = 0;
 		}
 
 		public int sca_id 
@@ -95,6 +98,16 @@ namespace Facile.ViewModels
 			{
 				this._sca_desc = value;
 				RaisePropertyChanged("sca_desc");
+			}
+		}
+
+		public int sca_locked
+		{
+			get { return _sca_locked; }
+			set
+			{
+				this._sca_locked = value;
+				RaisePropertyChanged("sca_locked");
 			}
 		}
 
