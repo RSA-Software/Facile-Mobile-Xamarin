@@ -80,7 +80,7 @@ namespace Facile
 			busyIndicator.IsBusy = isBusy;	
 		}
 
-		public async void SetField()
+		public void SetField()
 		{
 			change_event = false;
 			m_tot_merce.Value = _parent.doc.fat_tot_merce;

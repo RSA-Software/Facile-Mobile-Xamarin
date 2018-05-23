@@ -12,8 +12,8 @@
 			<StackLayout Padding="7,7,7,0" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
 				<StackLayout Orientation ="Horizontal">
                     <Label Text="Periodo" WidthRequest="100" VerticalOptions="Center"  />
-                    <DatePicker x:Name="dStart" Format="dd MMM yyyy" DateSelected="OnDateSelected" WidthRequest = "130"/>
-                    <DatePicker x:Name="dStop" Format="dd MMM yyyy" DateSelected="OnDateSelected" WidthRequest = "130"/>
+                    <DatePicker x:Name="dStart" Format="dd MMM yyyy" DateSelected="OnDateSelected" WidthRequest = "150"/>
+                    <DatePicker x:Name="dStop" Format="dd MMM yyyy" DateSelected="OnDateSelected" WidthRequest = "150"/>
                 </StackLayout>
             
             	<syncfusion:SfDataGrid x:Name="dataGrid"  AllowResizingColumn="true" 
