@@ -116,14 +116,14 @@ namespace Facile
 					m_prec.IsVisible = true;
 					m_succ.IsVisible = true;
 					m_salva.IsVisible = false;
-					m_elimina.IsVisible = false;
+					m_elimina.IsVisible = true;
 					m_stampa.IsVisible = true;
 					m_email.IsVisible = true;
 
 					m_prec.IsEnabled = true;
 					m_succ.IsEnabled = true;
 					m_salva.IsEnabled = false;
-					m_elimina.IsEnabled = false;
+					m_elimina.IsEnabled = true;
 					m_stampa.IsEnabled = true;
 					m_email.IsEnabled = true;
 
@@ -365,6 +365,7 @@ namespace Facile
 			catch (Exception ex)
 			{
 				await DisplayAlert("Attenzione!", ex.Message, "OK");
+				await Navigation.PopAsync();
 				return;
 			}
 			finally
@@ -397,6 +398,7 @@ namespace Facile
 			catch (Exception ex)
 			{
 				await DisplayAlert("Attenzione!", ex.Message, "OK");
+				await Navigation.PopAsync();
 				return;
 			}
 			finally
@@ -521,6 +523,71 @@ namespace Facile
 			await prn.PrintDoc(_parent.doc);
 			busyIndicator.IsBusy = false;
 			busyIndicator.AnimationType = animation;
+		}
+
+		async void OnRecordElimina(object sender, System.EventArgs e)
+		{
+			var test = await DisplayAlert("Attenzione!", "Confermi la cancellazione del documento?", "Si", "No");
+			if (!test) return;
+
+			//
+			// Cancelliamo le righe
+			//
+			try
+			{
+				await _dbcon.ExecuteAsync("DELETE FROM fatrow2 WHERE rig_tipo = ? AND rig_n_doc = ?", _parent.doc.fat_tipo, _parent.doc.fat_n_doc);
+				await _dbcon.ExecuteAsync("DELETE FROM fatture2 WHERE fat_tipo = ? AND fat_n_doc = ?", _parent.doc.fat_tipo, _parent.doc.fat_n_doc);
+			}
+			catch (Exception ex)
+			{
+				await DisplayAlert("Errore!", "Impossibile cancellare : " + ex.Message, "OK");
+				return;
+			}
+
+			busyIndicator.IsBusy = true;
+			var sql = string.Format("SELECT * FROM fatture2 WHERE fat_tipo = {0} AND fat_n_doc > {1} ORDER BY fat_tipo, fat_n_doc LIMIT 1", _parent.doc.fat_tipo, _parent.doc.fat_n_doc);
+			try
+			{
+				var docList = await _dbcon.QueryAsync<Fatture>(sql);
+				if (docList.Count > 0)
+				{
+					foreach (var doc in docList)
+					{
+						_parent.doc = doc;
+						SetProtection();
+						await LoadRel();
+						SetField();
+						break;
+					}
+				}
+				else
+				{
+					sql = string.Format("SELECT * FROM fatture2 WHERE fat_tipo = {0} AND fat_n_doc < {1} ORDER BY fat_tipo, fat_n_doc DESC LIMIT 1", _parent.doc.fat_tipo, _parent.doc.fat_n_doc);
+					docList = await _dbcon.QueryAsync<Fatture>(sql);
+					if (docList.Count > 0)
+					{
+						foreach (var doc in docList)
+						{
+							_parent.doc = doc;
+							SetProtection();
+							await LoadRel();
+							SetField();
+							break;
+						}
+					}
+					else await Navigation.PopAsync();
+				}
+			}
+			catch (Exception ex)
+			{
+				await DisplayAlert("Attenzione!", ex.Message, "OK");
+				await Navigation.PopAsync();
+				return;
+			}
+			finally
+			{
+				busyIndicator.IsBusy = false;
+			}
 		}
 	}
 }

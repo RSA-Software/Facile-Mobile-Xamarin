@@ -179,7 +179,7 @@ namespace Facile
 				// Inseriamo le righe
 				//
 				var sql = string.Format("SELECT * FROM scapagro WHERE dsr_codice = {0} ORDER BY dsr_idx", dsp.dsp_codice);
-				inc.righe = await _dbcon.QueryAsync<ScaPagRow>(sql);
+				inc.rows = await _dbcon.QueryAsync<ScaPagRow>(sql);
 
 				//
 				// Aggiungiamo il documento alla list

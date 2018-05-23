@@ -64,7 +64,7 @@
                 <Button x:Name="m_prec" Image="ic_navigate_before_black.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" Clicked="OnClickPrec"/>
                 <Button x:Name="m_succ" Image="ic_navigate_next_black.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" Clicked="OnClickSucc"/>
                 <Button x:Name="m_salva" Image="ic_done_black.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" Clicked="OnRecordSalva"/>
-                <Button x:Name="m_elimina" Image="ic_delete_black.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent"/>
+                <Button x:Name="m_elimina" Image="ic_delete_black.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" Clicked="OnRecordElimina"/>
                 <Button x:Name="m_stampa" Image="ic_print_black.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" Clicked="OnRecordStampa"/>
                 <Button x:Name="m_email" Image="ic_mail_black.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent"/>
             </StackLayout>
