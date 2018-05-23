@@ -12,6 +12,8 @@ using ICSharpCode.SharpZipLib.Zip;
 using Xamarin.Forms.Xaml;
 using SQLite;
 using System.Diagnostics;
+using Facile.ExportModels;
+using Facile.Extension;
 
 namespace Facile
 {
@@ -258,6 +260,79 @@ namespace Facile
 				if (docList.Count > 0) await dbcon_.InsertAllAsync(docList);
 				if (rigList.Count > 0) await dbcon_.InsertAllAsync(rigList);
 
+				//
+				// Marchiamo le Scadenze Pagate e Incassate
+				//
+				busyIndicator.Title = "Controllo Scadenze...";
+				try
+				{
+					int numrec = 0;
+					var dsrList = await dbcon_.QueryAsync<ScadenzeSinc>("SELECT dsr_rel_sca, dsr_num_sca, dsr_paginc FROM scapagro");
+					busyIndicator.Title = "Controllo Scadenze 0/" + dsrList.Count;
+					foreach(var dsr in dsrList)
+					{
+						numrec++;
+						try
+						{
+							var scaList = await dbcon_.QueryAsync<Scadenze>("SELECT * FROM scadenze WHERE sca_relaz = ? AND sca_num = ? LIMIT 1", dsr.dsr_rel_sca, dsr.dsr_num_sca);
+							if (scaList.Count > 0)
+							{
+								var resto = scaList[0].sca_importo - dsr.dsr_paginc;
+								if (!resto.TestIfZero(2))
+								{
+									try
+									{
+										scaList[0].sca_importo = dsr.dsr_paginc;
+										scaList[0].sca_pagato = 1;
+										scaList[0].sca_cont   = 1;
+										await dbcon_.UpdateAsync(scaList[0]);
+
+										scaList[0].sca_id = 0;
+										scaList[0].sca_num = 1 + await dbcon_.ExecuteScalarAsync<int>("SELECT MAX(sca_num) FROM scadenze WHERE sca_relaz = 0");
+										scaList[0].sca_pagato = 0;
+										scaList[0].sca_cont = 0;
+										scaList[0].sca_importo = resto;
+										scaList[0].sca_locked = 1;
+										await dbcon_.InsertAsync(scaList[0]);
+									}
+									catch (Exception ex)
+									{
+										await DisplayAlert("Errore", "Impossibile aggiornare la scadenza : " + ex.Message, "OK");
+									}
+								}
+								else
+								{
+									try
+									{
+										scaList[0].sca_pagato = 1;
+										scaList[0].sca_cont = 1;
+										await dbcon_.UpdateAsync(scaList[0]);
+									}
+									catch (Exception ex)
+									{
+										await DisplayAlert("Errore", "Impossibile aggiornare la scadenza : " + ex.Message, "OK");
+									}
+								}
+							}
+						}
+						catch (Exception e)
+						{
+							Debug.WriteLine(e.Message);
+						}
+						busyIndicator.Title = "Controllo Scadenze " + numrec + "/" + dsrList.Count;
+					}
+				}
+				catch (Exception e)
+				{
+					Debug.WriteLine(e.Message);
+					busyIndicator.IsBusy = false;
+					await DisplayAlert("Attenzione!", "Sincronizzazione Scadenze Fallita", "OK");
+					await Navigation.PopModalAsync();
+					return;
+				}
+				//
+				// Fine Marcatura scadenze
+				//
 
 				try
 				{

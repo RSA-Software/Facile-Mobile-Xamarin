@@ -6,7 +6,7 @@ namespace Facile.Models
 	[Table("ditt2016")]
 	public class Ditte
 	{
-		[PrimaryKey , AutoIncrement]
+		[PrimaryKey]
 		public int dit_codice { get; set; }
 
 		public string dit_rag_soc1 { get; set; }

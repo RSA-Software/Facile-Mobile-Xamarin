@@ -287,7 +287,7 @@
 
 		        </Grid>
 		    </StackLayout>
-			<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="Globe" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,250,250" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="Black"/>
+			<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="Globe" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,250,250" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="Red"/>
 		</AbsoluteLayout>
     </ScrollView>
 </ContentPage>

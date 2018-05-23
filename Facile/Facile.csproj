@@ -271,6 +271,7 @@
       <DependentUpon>IncassiPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ExportModels\Incasso.cs" />
+    <Compile Include="ExportModels\ScadenzeSinc.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MarkupExtensions\" />

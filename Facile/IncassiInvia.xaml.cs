@@ -6,7 +6,6 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Facile.Models;
 using Facile.ExportModels;
-using Facile.Utils;
 using PCLStorage;
 using Newtonsoft.Json;
 using Syncfusion.SfBusyIndicator.XForms;
