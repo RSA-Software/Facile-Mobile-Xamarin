@@ -42,11 +42,10 @@ namespace Facile
 
 		async void OnClickedIncassi(object sender, System.EventArgs e)
 		{
-			
+
 			//var page = new Catalogo();
-			var page = new Incassi(null, null);
-
-
+			//var page = new Incassi(null, null);
+			var page = new IncassiPage();
 			await Navigation.PushAsync(page);
 
 			//DisplayAlert("Incassi", "La procedura sarà disponibile nelle prossime release!", "OK");

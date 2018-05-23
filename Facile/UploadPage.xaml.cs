@@ -51,6 +51,7 @@ namespace Facile
 					await Navigation.PopModalAsync();
 			}
 			first = false;
+			base.OnAppearing();
 		}
 
 

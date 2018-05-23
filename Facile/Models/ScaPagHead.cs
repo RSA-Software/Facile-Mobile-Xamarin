@@ -40,5 +40,8 @@ namespace Facile.Models
 		public string dsp_user { get; set; }
 		public DateTime? dsp_last_update { get; set; }
 		public bool dsp_immediato { get; set; }
+
+		// Viene impostata a true per i documenti inviati alla sede
+		public bool dsp_inviato { get; set; }
 	}
 }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="F a c i l e"
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+	x:Class="Facile.IncassiPage">
+	
+<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+            iOS="0,5,0,0">
+        </OnPlatform>
+    </ContentPage.Padding>
+
+	<AbsoluteLayout>
+	    <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+			<Label x:Name="m_title" Text="Fatture" HorizontalOptions="Center"/>
+	        <Grid ColumnSpacing="3" RowSpacing="1" BackgroundColor="Silver" VerticalOptions="FillAndExpand">
+	            <Grid.RowDefinitions>
+	                        <RowDefinition Height="1*" />
+	                        <RowDefinition Height="1*" />
+	                        <RowDefinition Height="1*" />
+	            </Grid.RowDefinitions>
+	            <Button Grid.Row="0" Grid.Column="0" ContentLayout="Top,0" Image="ic_add_white.png" Text="Aggiungi" BorderRadius="0" BorderWidth="0" BackgroundColor="#768FFF" TextColor="White" Clicked="OnAggiungiClicked"/>
+	            <Button Grid.Row="0" Grid.Column="1" ContentLayout="Top,0" Image="ic_mode_edit_white.png" Text="Modifica" BorderRadius="0" BorderWidth="0" BackgroundColor="#00C853" TextColor="White" Clicked="OnModificaClicked" />
+	            <Button Grid.Row="0" Grid.Column="2" ContentLayout="Top,0" Image="ic_view_headline_white.png" Text="Elenco" BorderRadius="0" BorderWidth="0" BackgroundColor="#FFC400" TextColor="White" Clicked="OnElencoClicked"/>
+	       
+	<!--            <Button Grid.Row="1" Grid.Column="0" ContentLayout="Top,0" Image="ic_perm_media.png" Text="Catalogo" BorderRadius="0" BorderWidth="0" BackgroundColor="#673AB7" TextColor="White"/>
+	            <Button Grid.Row="1" Grid.Column="1" ContentLayout="Top,0" Image="ic_alarm.png" Text="Scadenze" BorderRadius="0" BorderWidth="0" BackgroundColor="#BF360C" TextColor="White"/>
+	            <Button Grid.Row="1" Grid.Column="2" ContentLayout="Top,0" Image="ic_account_balance.png" Text="Incassi" BorderRadius="0" BorderWidth="0" BackgroundColor="#26C6DA" TextColor="White"/>
+
+	            <Button Grid.Row="2" Grid.Column="0" ContentLayout="Top,0" Image="ic_cached.png" Text="Sincron." BorderRadius="0" BorderWidth="0" BackgroundColor="#0039CB" TextColor="White"/>
+	            <Button Grid.Row="2" Grid.Column="1" ContentLayout="Top,0" Image="ic_settings.png" Text="Impostaz." BorderRadius="0" BorderWidth="0" BackgroundColor="#FF9800" TextColor="White"/>
+	-->        
+	        </Grid>
+		</StackLayout>
+		<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="Ball" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="#2196F3"/>
+		
+	</AbsoluteLayout></ContentPage>

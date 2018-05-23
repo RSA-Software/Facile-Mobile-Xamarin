@@ -420,7 +420,8 @@ namespace Facile
 				dsp_data_ass = null,
 				dsp_user = "",
 				dsp_last_update = DateTime.Now,
-				dsp_immediato = false
+				dsp_immediato = false,
+				dsp_inviato = false
 			};
 
 			try

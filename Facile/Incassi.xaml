@@ -9,7 +9,7 @@
 		<OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
 	</ContentPage.Padding>
 	<ScrollView>
-		<AbsoluteLayout>	
+		<AbsoluteLayout>
 		    <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Padding="5,0,5,5">
 
 				<!--  Cliente 	-->

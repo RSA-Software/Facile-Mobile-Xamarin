@@ -210,6 +210,15 @@
     <Reference Include="Syncfusion.SfCarousel.XForms.iOS">
       <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfCarousel.XForms.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfNumericTextBox.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.XForms.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.1.0.37\lib\Xamarin.iOS10\Syncfusion.SfNumericTextBox.XForms.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Facile\Facile.csproj">
@@ -382,6 +391,9 @@
     <BundleResource Include="Resources\ic_group_blue%403x.png" />
     <BundleResource Include="Resources\ic_group_blue%402x.png" />
     <BundleResource Include="Resources\ic_group_blue.png" />
+    <BundleResource Include="Resources\ic_cloud_upload_white.png" />
+    <BundleResource Include="Resources\ic_cloud_upload_white%402x.png" />
+    <BundleResource Include="Resources\ic_cloud_upload_white%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>

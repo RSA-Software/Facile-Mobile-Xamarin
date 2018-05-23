@@ -246,6 +246,12 @@
     <Reference Include="Syncfusion.SfCarousel.XForms">
       <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.1.0.37\lib\MonoAndroid10\Syncfusion.SfCarousel.XForms.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.1.0.37\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.1.0.37\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Facile\Facile.csproj">
@@ -443,6 +449,10 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_group_blue.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_group_blue.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_group_blue.png" />
+    <AndroidResource Include="Resources\drawable\ic_cloud_upload_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_cloud_upload_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_cloud_upload_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_cloud_upload_white.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />

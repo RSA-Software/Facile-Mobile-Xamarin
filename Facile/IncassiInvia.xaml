@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:syncfusion="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+	xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+	x:Class="Facile.IncassiInvia">
+
+	<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+            iOS="0,20,0,0">
+        </OnPlatform>
+    </ContentPage.Padding>
+	
+		<AbsoluteLayout BackgroundColor="#E3F2FD">
+		    <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Padding="0,0,0,20">
+
+		    	<StackLayout BackgroundColor="#1565C0" Orientation="Vertical" HorizontalOptions="FillAndExpand" HeightRequest="40" MinimumWidthRequest="40">
+            		<StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" Padding="0,0,0,0">
+                		<Label Text="Invio Incassi" FontAttributes="None"
+                       		TextColor="White"
+                       		HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"
+                       		HorizontalTextAlignment="Center" FontSize="18"  x:Name="m_desc"/>
+            		</StackLayout>
+        		</StackLayout>
+			
+		    	<Grid>
+				 	<Grid.RowDefinitions>
+        				<RowDefinition Height="35" />
+        				<RowDefinition Height="45" />
+						<RowDefinition Height="35" />
+						<RowDefinition Height="45" />
+    				</Grid.RowDefinitions>
+
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="150"/>
+						<ColumnDefinition Width="150"/>
+					</Grid.ColumnDefinitions>
+
+					<!--1 - Riga-->
+					<Label Grid.Row="0" Grid.Column="0" Text="Num. Iniziale"/>
+					<Label Grid.Row="0" Grid.Column="1" Text="Num. Finale" />
+
+					<!--2 - riga-->
+			    	<syncfusion:SfNumericTextBox Grid.Row="1" Grid.Column="0" x:Name="m_n_start" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold"/>
+					<syncfusion:SfNumericTextBox Grid.Row="1" Grid.Column="1" x:Name="m_n_stop" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold"/>
+
+					<!--2 - Riga-->
+					<Label Grid.Row="2" Grid.Column="0" Text="Data Iniziale"/>
+					<Label Grid.Row="2" Grid.Column="1" Text="Data Finale" />
+
+					<!--3 - Riga-->
+					<DatePicker Grid.Row="3" Grid.Column="0" x:Name="m_d_start" Format="dd/MM/yyyy" TextColor="Black"/>
+					<DatePicker Grid.Row="3" Grid.Column="1" x:Name="m_d_stop" Format="dd/MM/yyyy" TextColor="Black"/>
+				</Grid>
+
+				<Button Text=" Invia " Image="ic_cloud_upload_white.png" Clicked="OnInviaClicked" VerticalOptions="EndAndExpand" HorizontalOptions="Center" TextColor="White" BackgroundColor="#1E88E5"/>
+			    	
+			</StackLayout>
+			<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="SlicedCircle" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="#1565C0"/>
+		</AbsoluteLayout>
+</ContentPage>

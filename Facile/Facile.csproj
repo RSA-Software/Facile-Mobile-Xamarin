@@ -123,6 +123,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="IncassiInvia.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncassiPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -256,6 +264,13 @@
     <Compile Include="ViewModels\IncassiInfo.cs" />
     <Compile Include="Models\ScaPagHead.cs" />
     <Compile Include="Models\ScaPagRow.cs" />
+    <Compile Include="IncassiInvia.xaml.cs">
+      <DependentUpon>IncassiInvia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IncassiPage.xaml.cs">
+      <DependentUpon>IncassiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExportModels\Incasso.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MarkupExtensions\" />
