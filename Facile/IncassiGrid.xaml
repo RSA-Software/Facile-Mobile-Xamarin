@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Elenco Incassi"
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:Facile.Converters;assembly=Facile"
+		xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+		xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+		x:Class="Facile.IncassiGrid">
+
+    <AbsoluteLayout>
+		<StackLayout Padding="7,7,7,0" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+			<StackLayout Orientation ="Horizontal">
+                <Label Text="Periodo" WidthRequest="100" VerticalOptions="Center"  />
+                <DatePicker x:Name="dStart" Format="dd MMM yyyy" DateSelected="OnDateSelected" WidthRequest = "150"/>
+                <DatePicker x:Name="dStop" Format="dd MMM yyyy" DateSelected="OnDateSelected" WidthRequest = "150"/>
+            </StackLayout>
+        
+        	<syncfusion:SfDataGrid x:Name="dataGrid"  AllowResizingColumn="true" 
+                            AllowSwiping="true"  
+                            AllowSorting="true"     
+                            HorizontalOptions="FillAndExpand"  
+							VerticalOptions="FillAndExpand"
+                            AutoGenerateColumns="False" 
+                            SwipeStarted="OnSwipeStarted"
+                            >
+
+            	<syncfusion:SfDataGrid.RightSwipeTemplate>
+                	<DataTemplate>
+                    	<Grid  BackgroundColor="#009EDA" >
+                        	<Grid.ColumnDefinitions>
+                            	<ColumnDefinition/>
+                            	<ColumnDefinition/>
+                        	</Grid.ColumnDefinitions>
+                        
+                           	<Image Grid.Column="0"   
+                                BackgroundColor="Transparent" 
+                                HorizontalOptions="CenterAndExpand" 
+                                BindingContextChanged="OnLeftBindingContextChanged"
+								Source="ic_mode_edit_white.png"  />
+                        
+                            <Label Grid.Column="1" 
+                                Text ="Modifica" 
+                                HorizontalTextAlignment="Start" 
+                                VerticalTextAlignment="Center"  
+                                LineBreakMode ="NoWrap" 
+                                BackgroundColor="Transparent" 
+                                TextColor ="White" />
+						</Grid>
+                    </DataTemplate>
+                </syncfusion:SfDataGrid.RightSwipeTemplate>
+
+	            <syncfusion:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
+    	            <syncfusion:GridNumericColumn HeaderText="Codice" MappingName="dsp_codice" Width="80" NumberDecimalDigits="0"/>
+    	            <syncfusion:GridDateTimeColumn HeaderText="Data" MappingName="dsp_data" Width="90" />
+					<syncfusion:GridNumericColumn HeaderText="Importo" MappingName="dsp_totale" Width="100" NumberDecimalDigits="2"/>
+    	            <syncfusion:GridNumericColumn HeaderText="Cod.Cli" MappingName="dsp_clifor" Width="80" NumberDecimalDigits="0"/>
+					<syncfusion:GridTextColumn HeaderText="Desc.Cliente" MappingName="cli_desc" TextAlignment="Start"/>
+				</syncfusion:SfDataGrid.Columns>
+                
+        	</syncfusion:SfDataGrid>
+
+		</StackLayout>
+       	<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="SlicedCircle" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="#2196F3"/>
+	</AbsoluteLayout>
+
+</ContentPage>

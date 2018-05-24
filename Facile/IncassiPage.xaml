@@ -13,7 +13,7 @@
 
 	<AbsoluteLayout>
 	    <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
-			<Label x:Name="m_title" Text="Fatture" HorizontalOptions="Center"/>
+			<Label x:Name="m_title" Text="Incassi" HorizontalOptions="Center" FontSize="Medium"/>
 	        <Grid ColumnSpacing="3" RowSpacing="1" BackgroundColor="Silver" VerticalOptions="FillAndExpand">
 	            <Grid.RowDefinitions>
 	                        <RowDefinition Height="1*" />

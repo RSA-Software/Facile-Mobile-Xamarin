@@ -22,11 +22,13 @@ namespace Facile
 
 		void OnModificaClicked(object sender, System.EventArgs e)
 		{
+			
 		}
 
-		void OnElencoClicked(object sender, System.EventArgs e)
+		async void OnElencoClicked(object sender, System.EventArgs e)
 		{
-			
+			var page = new IncassiGrid();
+			await Navigation.PushAsync(page);
 		}
 	}
 }
