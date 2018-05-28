@@ -135,6 +135,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="IncassiModifica.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -280,6 +284,9 @@
       <DependentUpon>IncassiGrid.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\IncassiGridModel.cs" />
+    <Compile Include="IncassiModifica.xaml.cs">
+      <DependentUpon>IncassiModifica.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MarkupExtensions\" />

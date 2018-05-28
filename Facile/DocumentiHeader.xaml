@@ -18,7 +18,7 @@
 		<AbsoluteLayout>
         <StackLayout Padding="7,7,7,0" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
 
-			<!--  Cliente  -->
+			<!-- Cliente  -->
 			<StackLayout Orientation="Horizontal"  HorizontalOptions="StartAndExpand" >
                	<Label Text="Cliente" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy" WidthRequest="110"/>
 				<Entry x:Name="m_cli_cod" WidthRequest="90" HorizontalOptions="Start" Unfocused="OnCliCodUnfocused" Keyboard="Numeric" HorizontalTextAlignment="End"/>
@@ -31,7 +31,7 @@
                 <Label x:Name="cli_citta" LineBreakMode="TailTruncation" HorizontalOptions="Fill" VerticalTextAlignment="Center"/>
             </StackLayout>
 
-			<!--  Destinazione 	-->
+			<!-- Destinazione 	-->
             <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" >
                 <Label Text="Destinazione"  VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy" WidthRequest="110"/>
 				<Entry x:Name="m_dst_cod" WidthRequest="90" HorizontalOptions="Start" Unfocused="OnDstCodUnfocused" Keyboard="Numeric" HorizontalTextAlignment="End"/>
@@ -45,7 +45,7 @@
             </StackLayout>
 				
             
-            <!--  Numero  -->
+            <!-- Numero -->
             <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
 				<Label Text="Numero" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy" WidthRequest="110"/>	
                 <syncfusion:SfNumericTextBox  x:Name="m_n_doc" WidthRequest="90" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold" />

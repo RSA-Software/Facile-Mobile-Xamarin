@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Modifica Incassi"
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+	xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+	xmlns:sfn="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+	x:Class="Facile.IncassiModifica">
+
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
+	</ContentPage.Padding>
+
+	<ScrollView>
+		<AbsoluteLayout>
+		    <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Padding="5,0,5,5">
+
+				<!-- Numero e Data -->
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+					<Label Text="Numero" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy" WidthRequest="130" />
+					<Label Text="Data" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy" WidthRequest="130" Margin="50,0,0,0"/>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+					<sfn:SfNumericTextBox  x:Name="m_codice" WidthRequest="70" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FontSize="Default" FormatString="N" TextColor="Black" FontAttributes="Bold" IsEnabled="false"/>
+					<Label x:Name="m_data" Text="" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Black" FontSize="Default" WidthRequest="130" Margin="110,0,0,0"/>
+				</StackLayout>
+
+				<!--  Cliente 	-->
+				<Label Text="Cliente" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy"/>
+				<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+					<sfn:SfNumericTextBox  x:Name="m_cli_cod" WidthRequest="70" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold" IsEnabled="false"/>
+					<Label x:Name="m_cli_des" Text="Prova" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" FontAttributes="Bold" VerticalTextAlignment="Center" TextColor="Black" />
+	            </StackLayout>
+
+				<!--  Destinazione 	-->
+				<Label Text="Destinazione"  VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Navy" WidthRequest="110"/>
+	            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+	            	<sfn:SfNumericTextBox  x:Name="m_dst_cod" WidthRequest="70" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black" FontAttributes="Bold" IsEnabled="false"/>
+					<Label x:Name="m_dst_des" Text="Prova" LineBreakMode="TailTruncation" HorizontalOptions="FillAndExpand" FontAttributes="Bold" VerticalTextAlignment="Center" TextColor="Black" />
+				</StackLayout>
+
+				<!--  Griglia con Scadenze	-->
+				<syncfusion:SfDataGrid x:Name="dataGrid" AllowResizingColumn="true" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" AutoGenerateColumns="False" ColumnSizer="LastColumnFill" AllowEditing="false">
+					
+	            	<syncfusion:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
+
+						<syncfusion:GridTextColumn HeaderText="Num. Scad." MappingName="dsr_num_sca" Width="90" TextAlignment="End" AllowEditing="false"/>
+	                	<syncfusion:GridTextColumn HeaderText="Data" MappingName="dsr_data" Width="90" TextAlignment="Center" Format="dd/MM/yy" AllowEditing="false"/> 
+	                	<syncfusion:GridTextColumn HeaderText="Importo" MappingName="dsr_importo" Width="90" TextAlignment="End" Format="N2" AllowEditing="false"/>
+						<syncfusion:GridTextColumn HeaderText="Num. Fattura" MappingName="dsr_num_doc" Width="90" TextAlignment="End" AllowEditing="false"/>
+	                	<syncfusion:GridTextColumn HeaderText="Tot. Fattura" MappingName="dsr_tot_doc" Width="90" TextAlignment="End" Format="N2" AllowEditing="false"/>
+	                	<syncfusion:GridTextColumn HeaderText="Incasso" MappingName="dsr_paginc" Width="100" Format="N2" TextAlignment="End" AllowEditing="false">
+							<syncfusion:GridTextColumn.CellStyle>
+	                        	<Style TargetType="syncfusion:GridCell">
+	                            	<Setter Property="Foreground" Value="Red" />
+	                        	</Style>
+	                    	</syncfusion:GridTextColumn.CellStyle>
+	                	</syncfusion:GridTextColumn>
+
+	            	</syncfusion:SfDataGrid.Columns>
+	            
+	       		</syncfusion:SfDataGrid>
+
+				<!--  Totali  -->
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+					<Label Text="Abbuoni" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="Navy" WidthRequest="130" />
+					<Label Text="Totale" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="Navy" WidthRequest="130" Margin="50,0,0,0"/>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+					<sfn:SfNumericTextBox  x:Name="m_abbuoni" WidthRequest="130" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="C" TextColor="Red" FontAttributes="Bold" IsEnabled="false"/>
+					<sfn:SfNumericTextBox  x:Name="m_totale"  WidthRequest="130" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="2" FormatString="C" TextColor="Black" FontAttributes="Bold" IsEnabled="false" Margin="50,0,0,0"/>
+				</StackLayout>
+
+				<!--  Pulsanti  -->
+            	<StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" Padding="0,0,0,7">
+                	<Button x:Name="m_prec" Image="ic_navigate_before_black.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" Clicked="OnClickPrec"/>
+                	<Button x:Name="m_succ" Image="ic_navigate_next_black.png"  WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" Clicked="OnClickSucc"/>
+                	<Button x:Name="m_elimina" Image="ic_delete_black.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" Clicked="OnClickElimina"/>
+            	</StackLayout>
+
+			</StackLayout>
+			<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="SlicedCircle" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="#2196F3"/>
+		</AbsoluteLayout>
+	</ScrollView>
+	
+</ContentPage>

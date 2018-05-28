@@ -10,7 +10,7 @@
         </OnPlatform>
     </ContentPage.Padding>
     <StackLayout>
-        <Label x:Name="m_title" Text="Fatture" HorizontalOptions="Center"/>
+        <Label x:Name="m_title" Text="Sincronizzazione Dati Aziendali" HorizontalOptions="Center" FontSize="Medium"/>
         <Grid ColumnSpacing="3" RowSpacing="1" BackgroundColor="Silver" VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />

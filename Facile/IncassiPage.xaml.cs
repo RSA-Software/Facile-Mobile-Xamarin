@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Facile.Interfaces;
+using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Facile.Models;
 
 namespace Facile
 {
@@ -20,9 +22,38 @@ namespace Facile
 			await Navigation.PushAsync(page);
 		}
 
-		void OnModificaClicked(object sender, System.EventArgs e)
+		async void OnModificaClicked(object sender, System.EventArgs e)
 		{
-			
+			ScaPagHead dsp = null;
+			SQLiteAsyncConnection dbcon;
+			dbcon = DependencyService.Get<ISQLiteDb>().GetConnection();
+
+			busyIndicator.IsBusy = true;
+			try
+			{
+				var sql = string.Format("SELECT * from scapaghe WHERE ORDER BY dsp_codice DESC LIMIT 1");
+				var dspList = await dbcon.QueryAsync<ScaPagHead>("SELECT * from scapaghe ORDER BY dsp_codice DESC LIMIT 1");
+				foreach (var x in dspList)
+				{
+					dsp = x;
+					break;
+				}
+			}
+			catch (Exception ex)
+			{
+				busyIndicator.IsBusy = false;
+				await DisplayAlert("Attenzione!", ex.Message, "OK");
+				return;
+			}
+			if (dsp == null)
+			{
+				busyIndicator.IsBusy = false;
+				await DisplayAlert("Attenzione!", "Non è stato trovato in archivio alcun incasso", "Ok");
+				return;
+			}
+			var page = new IncassiModifica(ref dsp);
+			await Navigation.PushAsync(page);
+			busyIndicator.IsBusy = false;
 		}
 
 		async void OnElencoClicked(object sender, System.EventArgs e)
