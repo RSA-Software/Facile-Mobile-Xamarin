@@ -96,7 +96,7 @@ namespace Facile
 			}
 			catch (Exception ex)
 			{
-				await DisplayAlert("Errore!", ex.Message, "OK");
+				await DisplayAlert("Errore!", "Dati non trovati : " + ex.Message, "OK");
 				await Navigation.PopAsync();
 			}
 			busyIndicator.IsBusy = false;
