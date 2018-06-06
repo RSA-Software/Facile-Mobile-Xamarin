@@ -489,10 +489,12 @@ namespace Facile
 
 		async void OnRecordStampa(object sender, System.EventArgs e)
 		{
+			m_stampa.IsEnabled = false;
 			GetField();
 			if (_parent.doc.fat_inte == 0L)
 			{
 				m_cli_cod.Focus();
+				m_stampa.IsEnabled = true;
 				return;
 			}
 
@@ -503,6 +505,7 @@ namespace Facile
 			catch (Exception ex)
 			{
 				await DisplayAlert("Errore", ex.Message, "OK");
+				m_stampa.IsEnabled = true;
 				return;
 			}
 
@@ -513,16 +516,20 @@ namespace Facile
 			catch (SQLiteException ex)
 			{
 				await DisplayAlert("Attenzione!", ex.Message, "OK");
+				m_stampa.IsEnabled = true;
 				return;
 			}
 
 			var animation = busyIndicator.AnimationType;
 			busyIndicator.IsBusy = true;
 			busyIndicator.AnimationType = Syncfusion.SfBusyIndicator.XForms.AnimationTypes.Print;
+
 			var prn = new ZebraPrn(this);
-			await prn.PrintDoc(_parent.doc);
+			await prn.PrintDoc(_parent.doc, 2);
+
 			busyIndicator.IsBusy = false;
 			busyIndicator.AnimationType = animation;
+			m_stampa.IsEnabled = true;
 		}
 
 		async void OnRecordElimina(object sender, System.EventArgs e)

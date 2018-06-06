@@ -395,13 +395,15 @@ namespace Facile
 					col = 93 * 8;
 					num = string.Format("{0}", rig.rig_iva);
 					str = str + $"^FO{col},{row}" + "^A0,N,23,23" + $"^FB{6 * 8},1,0,R,0^FD{num}^FS";
+
+					row += 4 * 8;
 				}
 				else
 				{
 					string num;
 					bool first = true;
 
-					col += 1 * 8;
+					col = 1 * 8;
 					str = $"^FO{col},{row}" + "^A0,N,23,23" + $"^FB{13 * 8},1,0,L,0^FD{rig.rig_art}^FS";
 
 					rig.rig_newdes = rig.rig_newdes.Replace("\n\r", "\n");
@@ -414,11 +416,9 @@ namespace Facile
 
 						if (first == true)
 						{
-							// Misura
-							row += 77;
-							col = 30 * 8;
 							if (mis != null)
 							{
+								col = 75 * 8;
 								str = str + $"^FO{col},{row}" + "^A0,N,23,23" + $"^FD{mis.mis_abbr}^FS";
 							}
 
@@ -426,12 +426,10 @@ namespace Facile
 							col = 91 * 8;
 							num = string.Format("{0,9:0.000}", rig.rig_qta);
 							str = str + $"^FO{col},{row}" + "^A0,N,23,23" + $"^FB{9 * 8},1,0,R,0^FD{num}^FS";
-
 						}
 						first = false;
 						row += 3 * 8;
 					}
-
 
 					if (!string.IsNullOrWhiteSpace(rig.rig_lotto))
 					{
@@ -444,9 +442,11 @@ namespace Facile
 						str = str + $"^FO{col},{row}" + "^A0,N,23,23" + $"^FD{dati}^FS";
 						row += 3 * 8;
 					}
+
+					row += 1 * 8;
 				}
 
-				row += 4 * 8;
+
 
 				var t = new UTF8Encoding().GetBytes(str);
 				_con.Write(t);
@@ -799,8 +799,11 @@ namespace Facile
 				col = 1 * 8;
 				str = str + $"^FO{col},{row + 8 * 8}" + "^A0,N,19,19" + $"^FDAnnotazioni^FS";
 
-				col = 2 * 8;
-				str = str + $"^FO{col},{row + 4 * 8}" + "^A0,N,23,23" + $"^FD{tra.tra_desc}^FS";
+				if (tra != null)
+				{
+					col = 2 * 8;
+					str = str + $"^FO{col},{row + 4 * 8}" + "^A0,N,23,23" + $"^FD{tra.tra_desc}^FS";
+				}
 
 				col = 84 * 8;
 				num = string.Format("{0,5:#######}", doc.fat_colli);
@@ -903,8 +906,6 @@ namespace Facile
 			//
 			// Ricalcolare il documento
 			//
-
-
 			if (doc.fat_tipo == (int)DocTipo.TIPO_DDT)
 			{
 				stprice = await _parent.DisplayAlert("Facile", "Vuoi Stampare i Prezzi ?", "SI", "NO");
@@ -951,14 +952,14 @@ namespace Facile
 
 					_codcli = "C.F. ";
 					_coddst = "C.C. ";
-					sql = String.Format("SELECT * FROM agganci WHERE agg_forn = {0} AND agg_cli = {1} AND agg_dst {2} LIMIT 1", codfor, doc.fat_inte, 0);
+					sql = String.Format("SELECT * FROM agganci1 WHERE agg_forn = {0} AND agg_cli = {1} AND agg_dst = {2} LIMIT 1", codfor, doc.fat_inte, 0);
 					var agg = await dbcon_.QueryAsync<Agganci>(sql);
 					if (agg.Count > 0)
 					{
 						_codcli = _codcli + agg[0].agg_codice;
 						_coddst = _coddst + agg[0].agg_codice;
 					}
-					sql = String.Format("SELECT * FROM agganci WHERE agg_forn = {0} AND agg_cli = {1} AND agg_dst {2} LIMIT 1", codfor, doc.fat_inte, doc.fat_dest);
+					sql = String.Format("SELECT * FROM agganci1 WHERE agg_forn = {0} AND agg_cli = {1} AND agg_dst = {2} LIMIT 1", codfor, doc.fat_inte, doc.fat_dest);
 					agg = await dbcon_.QueryAsync<Agganci>(sql);
 					if (agg.Count > 0)
 					{
@@ -1020,7 +1021,12 @@ namespace Facile
 				{
 					int row = 0;
 
-					if (idx != 0) PrePrintCheckStatus();
+					if (idx != 0)
+					{
+						var test = await _parent.DisplayAlert("Attenzione...", "Vuoi stampare un'altra copia?", "Si", "No");
+						if (test == false) return(true);
+						PrePrintCheckStatus();
+					}
 
 					row = await PrintDocHeaderAsync(doc, row, stprice);
 					row = await PrintDocBodyAsync(doc, row, stprice);

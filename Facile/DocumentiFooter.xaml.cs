@@ -71,6 +71,8 @@ namespace Facile
 				m_consegna_val.Height  = 0;
 			}
 
+			if (_parent.doc.fat_tipo != (short)DocTipo.TIPO_FAT) m_acconto.IsEnabled = false;
+
 			m_salva.IsVisible = _parent.doc.fat_editable;
 			m_salva.IsEnabled = _parent.doc.fat_editable;
 		}

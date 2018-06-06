@@ -12,6 +12,7 @@ using PCLStorage;
 using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Linq;
 
 namespace Facile
 {
@@ -302,17 +303,28 @@ namespace Facile
 				rig_.rig_peso_mis = ana.ana_peso_mis;
 				rig_.rig_qta = 1;
 
-				var sql = string.Format("SELECT * FROM listini1 WHERE lis_codice = {0} AND lis_art = {1} LIMIT 1", 1, ana.ana_codice.SqlQuote(false));
-				var listini = await dbcon_.QueryAsync<Listini>(sql);
+				rig_.rig_prezzo  = 0.0;
+				rig_.rig_sconto1 = 0.0;
+				rig_.rig_sconto2 = 0.0;
+				rig_.rig_sconto3 = 0.0;
 
+				var sql = string.Format("SELECT * FROM listini1 WHERE lis_codice = {0} AND lis_art = {1} LIMIT 1",  par_.GetListino(), ana.ana_codice.SqlQuote(false));
+				var listini = await dbcon_.QueryAsync<Listini>(sql);
+				if (listini.Count == 0)
+				{
+					sql = string.Format("SELECT * FROM listini1 WHERE lis_codice = {0} AND lis_art = {1} LIMIT 1", ((App)Application.Current).facile_db_impo.dit_listino, ana.ana_codice.SqlQuote(false));
+					listini = await dbcon_.QueryAsync<Listini>(sql);
+				}
 				if (listini.Count > 0)
 				{
 					rig_.rig_prezzo = listini[0].lis_prezzo;
 					rig_.rig_sconto1 = listini[0].lis_sco1;
 					rig_.rig_sconto2 = listini[0].lis_sco2;
 					rig_.rig_sconto3 = listini[0].lis_sco3;
-					await rig_.RecalcAsync();
+
 				}
+				await rig_.RecalcAsync();
+
 				await Navigation.PopModalAsync();
 				if (string.Compare(rig_.rig_art, old_art) != 0)
 				{
@@ -553,8 +565,13 @@ namespace Facile
 				var listini = new List<Listini>();
 				try
 				{
-					sql = string.Format("SELECT * FROM listini1 WHERE lis_codice = {0} AND lis_art = {1} LIMIT 1", 1, anaList[0].ana_codice.SqlQuote(false));
+					sql = string.Format("SELECT * FROM listini1 WHERE lis_codice = {0} AND lis_art = {1} LIMIT 1", par_.GetListino(), anaList[0].ana_codice.SqlQuote(false));
 					listini = await dbcon_.QueryAsync<Listini>(sql);
+					if (listini.Count == 0)
+					{
+						sql = string.Format("SELECT * FROM listini1 WHERE lis_codice = {0} AND lis_art = {1} LIMIT 1", ((App)Application.Current).facile_db_impo.dit_listino, anaList[0].ana_codice.SqlQuote(false));
+						listini = await dbcon_.QueryAsync<Listini>(sql);
+					}
 				}
 				catch (Exception ex)
 				{

@@ -28,6 +28,11 @@ namespace Facile
 			dataGrid.GridLongPressed += DataGrid_GridLongPressed;
 		}
 
+		public int GetListino()
+		{
+			return (_parent.doc.fat_listino != 0 ? _parent.doc.fat_listino : ((App)Application.Current).facile_db_impo.dit_listino);
+		}
+
 		protected override void OnAppearing()
 		{
 			base.OnAppearing();

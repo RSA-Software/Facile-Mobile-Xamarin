@@ -94,9 +94,9 @@ namespace Facile
 					dataGrid.ItemsSource = dspCollection;
 				}
 			}
-			catch (Exception ex)
+			catch 
 			{
-				await DisplayAlert("Errore!", "Dati non trovati : " + ex.Message, "OK");
+				await DisplayAlert("Errore!", "Dati non trovati.", "OK");
 				await Navigation.PopAsync();
 			}
 			busyIndicator.IsBusy = false;
