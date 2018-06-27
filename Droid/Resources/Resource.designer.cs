@@ -29,1204 +29,15 @@ namespace Facile.Droid
 			global::PCLStorage.Resource.String.ApplicationName = global::Facile.Droid.Resource.String.ApplicationName;
 			global::PCLStorage.Resource.String.Hello = global::Facile.Droid.Resource.String.Hello;
 			global::Com.Syncfusion.Sfbusyindicator.Resource.String.library_name = global::Facile.Droid.Resource.String.library_name;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_guidedactions_item_pressed = global::Facile.Droid.Resource.Animator.lb_guidedactions_item_pressed;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_guidedactions_item_unpressed = global::Facile.Droid.Resource.Animator.lb_guidedactions_item_unpressed;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_guidedstep_slide_down = global::Facile.Droid.Resource.Animator.lb_guidedstep_slide_down;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_guidedstep_slide_up = global::Facile.Droid.Resource.Animator.lb_guidedstep_slide_up;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_description_enter = global::Facile.Droid.Resource.Animator.lb_onboarding_description_enter;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_logo_enter = global::Facile.Droid.Resource.Animator.lb_onboarding_logo_enter;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_logo_exit = global::Facile.Droid.Resource.Animator.lb_onboarding_logo_exit;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_page_indicator_enter = global::Facile.Droid.Resource.Animator.lb_onboarding_page_indicator_enter;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_page_indicator_fade_in = global::Facile.Droid.Resource.Animator.lb_onboarding_page_indicator_fade_in;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_page_indicator_fade_out = global::Facile.Droid.Resource.Animator.lb_onboarding_page_indicator_fade_out;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_start_button_fade_in = global::Facile.Droid.Resource.Animator.lb_onboarding_start_button_fade_in;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_start_button_fade_out = global::Facile.Droid.Resource.Animator.lb_onboarding_start_button_fade_out;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_title_enter = global::Facile.Droid.Resource.Animator.lb_onboarding_title_enter;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_playback_bg_fade_in = global::Facile.Droid.Resource.Animator.lb_playback_bg_fade_in;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_playback_bg_fade_out = global::Facile.Droid.Resource.Animator.lb_playback_bg_fade_out;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_playback_controls_fade_in = global::Facile.Droid.Resource.Animator.lb_playback_controls_fade_in;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_playback_controls_fade_out = global::Facile.Droid.Resource.Animator.lb_playback_controls_fade_out;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_playback_description_fade_in = global::Facile.Droid.Resource.Animator.lb_playback_description_fade_in;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_playback_description_fade_out = global::Facile.Droid.Resource.Animator.lb_playback_description_fade_out;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_playback_rows_fade_in = global::Facile.Droid.Resource.Animator.lb_playback_rows_fade_in;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_playback_rows_fade_out = global::Facile.Droid.Resource.Animator.lb_playback_rows_fade_out;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.activatedAnimationDuration = global::Facile.Droid.Resource.Attribute.activatedAnimationDuration;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.arrowBgColor = global::Facile.Droid.Resource.Attribute.arrowBgColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.arrowRadius = global::Facile.Droid.Resource.Attribute.arrowRadius;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.baseCardViewStyle = global::Facile.Droid.Resource.Attribute.baseCardViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browsePaddingBottom = global::Facile.Droid.Resource.Attribute.browsePaddingBottom;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browsePaddingEnd = global::Facile.Droid.Resource.Attribute.browsePaddingEnd;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browsePaddingStart = global::Facile.Droid.Resource.Attribute.browsePaddingStart;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browsePaddingTop = global::Facile.Droid.Resource.Attribute.browsePaddingTop;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browseRowsFadingEdgeLength = global::Facile.Droid.Resource.Attribute.browseRowsFadingEdgeLength;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browseRowsMarginStart = global::Facile.Droid.Resource.Attribute.browseRowsMarginStart;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browseRowsMarginTop = global::Facile.Droid.Resource.Attribute.browseRowsMarginTop;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browseTitleIconStyle = global::Facile.Droid.Resource.Attribute.browseTitleIconStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browseTitleTextStyle = global::Facile.Droid.Resource.Attribute.browseTitleTextStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browseTitleViewLayout = global::Facile.Droid.Resource.Attribute.browseTitleViewLayout;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browseTitleViewStyle = global::Facile.Droid.Resource.Attribute.browseTitleViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.cardBackground = global::Facile.Droid.Resource.Attribute.cardBackground;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.cardForeground = global::Facile.Droid.Resource.Attribute.cardForeground;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.cardType = global::Facile.Droid.Resource.Attribute.cardType;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.closed_captioning = global::Facile.Droid.Resource.Attribute.closed_captioning;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.columnWidth = global::Facile.Droid.Resource.Attribute.columnWidth;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.datePickerFormat = global::Facile.Droid.Resource.Attribute.datePickerFormat;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.defaultBrandColor = global::Facile.Droid.Resource.Attribute.defaultBrandColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.defaultBrandColorDark = global::Facile.Droid.Resource.Attribute.defaultBrandColorDark;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.defaultSearchBrightColor = global::Facile.Droid.Resource.Attribute.defaultSearchBrightColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.defaultSearchColor = global::Facile.Droid.Resource.Attribute.defaultSearchColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.defaultSearchIcon = global::Facile.Droid.Resource.Attribute.defaultSearchIcon;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.defaultSearchIconColor = global::Facile.Droid.Resource.Attribute.defaultSearchIconColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.defaultSectionHeaderColor = global::Facile.Droid.Resource.Attribute.defaultSectionHeaderColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.detailsActionButtonStyle = global::Facile.Droid.Resource.Attribute.detailsActionButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.detailsDescriptionBodyStyle = global::Facile.Droid.Resource.Attribute.detailsDescriptionBodyStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.detailsDescriptionSubtitleStyle = global::Facile.Droid.Resource.Attribute.detailsDescriptionSubtitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.detailsDescriptionTitleStyle = global::Facile.Droid.Resource.Attribute.detailsDescriptionTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.dotBgColor = global::Facile.Droid.Resource.Attribute.dotBgColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.dotToArrowGap = global::Facile.Droid.Resource.Attribute.dotToArrowGap;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.dotToDotGap = global::Facile.Droid.Resource.Attribute.dotToDotGap;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.errorMessageStyle = global::Facile.Droid.Resource.Attribute.errorMessageStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.extraVisibility = global::Facile.Droid.Resource.Attribute.extraVisibility;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.fast_forward = global::Facile.Droid.Resource.Attribute.fast_forward;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.focusOutEnd = global::Facile.Droid.Resource.Attribute.focusOutEnd;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.focusOutFront = global::Facile.Droid.Resource.Attribute.focusOutFront;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.focusOutSideEnd = global::Facile.Droid.Resource.Attribute.focusOutSideEnd;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.focusOutSideStart = global::Facile.Droid.Resource.Attribute.focusOutSideStart;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidanceBreadcrumbStyle = global::Facile.Droid.Resource.Attribute.guidanceBreadcrumbStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidanceContainerStyle = global::Facile.Droid.Resource.Attribute.guidanceContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidanceDescriptionStyle = global::Facile.Droid.Resource.Attribute.guidanceDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidanceEntryAnimation = global::Facile.Droid.Resource.Attribute.guidanceEntryAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidanceIconStyle = global::Facile.Droid.Resource.Attribute.guidanceIconStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidanceTitleStyle = global::Facile.Droid.Resource.Attribute.guidanceTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionCheckedAnimation = global::Facile.Droid.Resource.Attribute.guidedActionCheckedAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionContentWidth = global::Facile.Droid.Resource.Attribute.guidedActionContentWidth;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionContentWidthNoIcon = global::Facile.Droid.Resource.Attribute.guidedActionContentWidthNoIcon;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionContentWidthWeight = global::Facile.Droid.Resource.Attribute.guidedActionContentWidthWeight;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionContentWidthWeightTwoPanels = global::Facile.Droid.Resource.Attribute.guidedActionContentWidthWeightTwoPanels;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionDescriptionMinLines = global::Facile.Droid.Resource.Attribute.guidedActionDescriptionMinLines;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionDisabledChevronAlpha = global::Facile.Droid.Resource.Attribute.guidedActionDisabledChevronAlpha;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionEnabledChevronAlpha = global::Facile.Droid.Resource.Attribute.guidedActionEnabledChevronAlpha;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionItemCheckmarkStyle = global::Facile.Droid.Resource.Attribute.guidedActionItemCheckmarkStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionItemChevronStyle = global::Facile.Droid.Resource.Attribute.guidedActionItemChevronStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionItemContainerStyle = global::Facile.Droid.Resource.Attribute.guidedActionItemContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionItemContentStyle = global::Facile.Droid.Resource.Attribute.guidedActionItemContentStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionItemDescriptionStyle = global::Facile.Droid.Resource.Attribute.guidedActionItemDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionItemIconStyle = global::Facile.Droid.Resource.Attribute.guidedActionItemIconStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionItemTitleStyle = global::Facile.Droid.Resource.Attribute.guidedActionItemTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionPressedAnimation = global::Facile.Droid.Resource.Attribute.guidedActionPressedAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionTitleMaxLines = global::Facile.Droid.Resource.Attribute.guidedActionTitleMaxLines;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionTitleMinLines = global::Facile.Droid.Resource.Attribute.guidedActionTitleMinLines;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionUncheckedAnimation = global::Facile.Droid.Resource.Attribute.guidedActionUncheckedAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionUnpressedAnimation = global::Facile.Droid.Resource.Attribute.guidedActionUnpressedAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionVerticalPadding = global::Facile.Droid.Resource.Attribute.guidedActionVerticalPadding;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsBackground = global::Facile.Droid.Resource.Attribute.guidedActionsBackground;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsBackgroundDark = global::Facile.Droid.Resource.Attribute.guidedActionsBackgroundDark;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsContainerStyle = global::Facile.Droid.Resource.Attribute.guidedActionsContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsElevation = global::Facile.Droid.Resource.Attribute.guidedActionsElevation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsEntryAnimation = global::Facile.Droid.Resource.Attribute.guidedActionsEntryAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsListStyle = global::Facile.Droid.Resource.Attribute.guidedActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsSelectorDrawable = global::Facile.Droid.Resource.Attribute.guidedActionsSelectorDrawable;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsSelectorHideAnimation = global::Facile.Droid.Resource.Attribute.guidedActionsSelectorHideAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsSelectorShowAnimation = global::Facile.Droid.Resource.Attribute.guidedActionsSelectorShowAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsSelectorStyle = global::Facile.Droid.Resource.Attribute.guidedActionsSelectorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedButtonActionsListStyle = global::Facile.Droid.Resource.Attribute.guidedButtonActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedButtonActionsWidthWeight = global::Facile.Droid.Resource.Attribute.guidedButtonActionsWidthWeight;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepBackground = global::Facile.Droid.Resource.Attribute.guidedStepBackground;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepEntryAnimation = global::Facile.Droid.Resource.Attribute.guidedStepEntryAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepExitAnimation = global::Facile.Droid.Resource.Attribute.guidedStepExitAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepHeightWeight = global::Facile.Droid.Resource.Attribute.guidedStepHeightWeight;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepImeAppearingAnimation = global::Facile.Droid.Resource.Attribute.guidedStepImeAppearingAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepImeDisappearingAnimation = global::Facile.Droid.Resource.Attribute.guidedStepImeDisappearingAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepKeyline = global::Facile.Droid.Resource.Attribute.guidedStepKeyline;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepReentryAnimation = global::Facile.Droid.Resource.Attribute.guidedStepReentryAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepReturnAnimation = global::Facile.Droid.Resource.Attribute.guidedStepReturnAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepTheme = global::Facile.Droid.Resource.Attribute.guidedStepTheme;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepThemeFlag = global::Facile.Droid.Resource.Attribute.guidedStepThemeFlag;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedSubActionsListStyle = global::Facile.Droid.Resource.Attribute.guidedSubActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.headerStyle = global::Facile.Droid.Resource.Attribute.headerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.headersVerticalGridStyle = global::Facile.Droid.Resource.Attribute.headersVerticalGridStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.high_quality = global::Facile.Droid.Resource.Attribute.high_quality;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.horizontalMargin = global::Facile.Droid.Resource.Attribute.horizontalMargin;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.imageCardViewBadgeStyle = global::Facile.Droid.Resource.Attribute.imageCardViewBadgeStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.imageCardViewContentStyle = global::Facile.Droid.Resource.Attribute.imageCardViewContentStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.imageCardViewImageStyle = global::Facile.Droid.Resource.Attribute.imageCardViewImageStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.imageCardViewInfoAreaStyle = global::Facile.Droid.Resource.Attribute.imageCardViewInfoAreaStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.imageCardViewStyle = global::Facile.Droid.Resource.Attribute.imageCardViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.imageCardViewTitleStyle = global::Facile.Droid.Resource.Attribute.imageCardViewTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.infoAreaBackground = global::Facile.Droid.Resource.Attribute.infoAreaBackground;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.infoVisibility = global::Facile.Droid.Resource.Attribute.infoVisibility;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.is24HourFormat = global::Facile.Droid.Resource.Attribute.is24HourFormat;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.itemsVerticalGridStyle = global::Facile.Droid.Resource.Attribute.itemsVerticalGridStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.layoutManager = global::Facile.Droid.Resource.Attribute.layoutManager;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.layout_viewType = global::Facile.Droid.Resource.Attribute.layout_viewType;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.lbDotRadius = global::Facile.Droid.Resource.Attribute.lbDotRadius;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.lbImageCardViewType = global::Facile.Droid.Resource.Attribute.lbImageCardViewType;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.lb_slideEdge = global::Facile.Droid.Resource.Attribute.lb_slideEdge;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.maintainLineSpacing = global::Facile.Droid.Resource.Attribute.maintainLineSpacing;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.numberOfColumns = global::Facile.Droid.Resource.Attribute.numberOfColumns;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.numberOfRows = global::Facile.Droid.Resource.Attribute.numberOfRows;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.onboardingDescriptionStyle = global::Facile.Droid.Resource.Attribute.onboardingDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.onboardingHeaderStyle = global::Facile.Droid.Resource.Attribute.onboardingHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.onboardingLogoStyle = global::Facile.Droid.Resource.Attribute.onboardingLogoStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.onboardingNavigatorContainerStyle = global::Facile.Droid.Resource.Attribute.onboardingNavigatorContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.onboardingPageIndicatorStyle = global::Facile.Droid.Resource.Attribute.onboardingPageIndicatorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.onboardingStartButtonStyle = global::Facile.Droid.Resource.Attribute.onboardingStartButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.onboardingTheme = global::Facile.Droid.Resource.Attribute.onboardingTheme;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.onboardingTitleStyle = global::Facile.Droid.Resource.Attribute.onboardingTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.overlayDimActiveLevel = global::Facile.Droid.Resource.Attribute.overlayDimActiveLevel;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.overlayDimDimmedLevel = global::Facile.Droid.Resource.Attribute.overlayDimDimmedLevel;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.overlayDimMaskColor = global::Facile.Droid.Resource.Attribute.overlayDimMaskColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.pause = global::Facile.Droid.Resource.Attribute.pause;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.picture_in_picture = global::Facile.Droid.Resource.Attribute.picture_in_picture;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.play = global::Facile.Droid.Resource.Attribute.play;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackControlButtonLabelStyle = global::Facile.Droid.Resource.Attribute.playbackControlButtonLabelStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackControlsActionIcons = global::Facile.Droid.Resource.Attribute.playbackControlsActionIcons;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackControlsButtonStyle = global::Facile.Droid.Resource.Attribute.playbackControlsButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackControlsIconHighlightColor = global::Facile.Droid.Resource.Attribute.playbackControlsIconHighlightColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackControlsTimeStyle = global::Facile.Droid.Resource.Attribute.playbackControlsTimeStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemDetailsStyle = global::Facile.Droid.Resource.Attribute.playbackMediaItemDetailsStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemDurationStyle = global::Facile.Droid.Resource.Attribute.playbackMediaItemDurationStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemNameStyle = global::Facile.Droid.Resource.Attribute.playbackMediaItemNameStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemNumberStyle = global::Facile.Droid.Resource.Attribute.playbackMediaItemNumberStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemNumberViewFlipperLayout = global::Facile.Droid.Resource.Attribute.playbackMediaItemNumberViewFlipperLayout;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemNumberViewFlipperStyle = global::Facile.Droid.Resource.Attribute.playbackMediaItemNumberViewFlipperStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemPaddingStart = global::Facile.Droid.Resource.Attribute.playbackMediaItemPaddingStart;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemRowStyle = global::Facile.Droid.Resource.Attribute.playbackMediaItemRowStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemSeparatorStyle = global::Facile.Droid.Resource.Attribute.playbackMediaItemSeparatorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaListHeaderStyle = global::Facile.Droid.Resource.Attribute.playbackMediaListHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaListHeaderTitleStyle = global::Facile.Droid.Resource.Attribute.playbackMediaListHeaderTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackPaddingEnd = global::Facile.Droid.Resource.Attribute.playbackPaddingEnd;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackPaddingStart = global::Facile.Droid.Resource.Attribute.playbackPaddingStart;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackProgressPrimaryColor = global::Facile.Droid.Resource.Attribute.playbackProgressPrimaryColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.repeat = global::Facile.Droid.Resource.Attribute.repeat;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.repeat_one = global::Facile.Droid.Resource.Attribute.repeat_one;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.resizeTrigger = global::Facile.Droid.Resource.Attribute.resizeTrigger;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.resizedPaddingAdjustmentBottom = global::Facile.Droid.Resource.Attribute.resizedPaddingAdjustmentBottom;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.resizedPaddingAdjustmentTop = global::Facile.Droid.Resource.Attribute.resizedPaddingAdjustmentTop;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.resizedTextSize = global::Facile.Droid.Resource.Attribute.resizedTextSize;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.reverseLayout = global::Facile.Droid.Resource.Attribute.reverseLayout;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rewind = global::Facile.Droid.Resource.Attribute.rewind;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rowHeaderDescriptionStyle = global::Facile.Droid.Resource.Attribute.rowHeaderDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rowHeaderDockStyle = global::Facile.Droid.Resource.Attribute.rowHeaderDockStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rowHeaderStyle = global::Facile.Droid.Resource.Attribute.rowHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rowHeight = global::Facile.Droid.Resource.Attribute.rowHeight;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rowHorizontalGridStyle = global::Facile.Droid.Resource.Attribute.rowHorizontalGridStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rowHoverCardDescriptionStyle = global::Facile.Droid.Resource.Attribute.rowHoverCardDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rowHoverCardTitleStyle = global::Facile.Droid.Resource.Attribute.rowHoverCardTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rowsVerticalGridStyle = global::Facile.Droid.Resource.Attribute.rowsVerticalGridStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.searchOrbBrightColor = global::Facile.Droid.Resource.Attribute.searchOrbBrightColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.searchOrbColor = global::Facile.Droid.Resource.Attribute.searchOrbColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.searchOrbIcon = global::Facile.Droid.Resource.Attribute.searchOrbIcon;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.searchOrbIconColor = global::Facile.Droid.Resource.Attribute.searchOrbIconColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.searchOrbViewStyle = global::Facile.Droid.Resource.Attribute.searchOrbViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.sectionHeaderStyle = global::Facile.Droid.Resource.Attribute.sectionHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.selectedAnimationDelay = global::Facile.Droid.Resource.Attribute.selectedAnimationDelay;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.selectedAnimationDuration = global::Facile.Droid.Resource.Attribute.selectedAnimationDuration;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.shuffle = global::Facile.Droid.Resource.Attribute.shuffle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.skip_next = global::Facile.Droid.Resource.Attribute.skip_next;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.skip_previous = global::Facile.Droid.Resource.Attribute.skip_previous;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.spanCount = global::Facile.Droid.Resource.Attribute.spanCount;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.stackFromEnd = global::Facile.Droid.Resource.Attribute.stackFromEnd;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.thumb_down = global::Facile.Droid.Resource.Attribute.thumb_down;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.thumb_down_outline = global::Facile.Droid.Resource.Attribute.thumb_down_outline;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.thumb_up = global::Facile.Droid.Resource.Attribute.thumb_up;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.thumb_up_outline = global::Facile.Droid.Resource.Attribute.thumb_up_outline;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.useCurrentTime = global::Facile.Droid.Resource.Attribute.useCurrentTime;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.verticalMargin = global::Facile.Droid.Resource.Attribute.verticalMargin;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_action_text_color = global::Facile.Droid.Resource.Color.lb_action_text_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_background_protection = global::Facile.Droid.Resource.Color.lb_background_protection;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_basic_card_bg_color = global::Facile.Droid.Resource.Color.lb_basic_card_bg_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_basic_card_content_text_color = global::Facile.Droid.Resource.Color.lb_basic_card_content_text_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_basic_card_info_bg_color = global::Facile.Droid.Resource.Color.lb_basic_card_info_bg_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_basic_card_title_text_color = global::Facile.Droid.Resource.Color.lb_basic_card_title_text_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_browse_header_color = global::Facile.Droid.Resource.Color.lb_browse_header_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_browse_header_description_color = global::Facile.Droid.Resource.Color.lb_browse_header_description_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_browse_title_color = global::Facile.Droid.Resource.Color.lb_browse_title_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_control_button_color = global::Facile.Droid.Resource.Color.lb_control_button_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_control_button_text = global::Facile.Droid.Resource.Color.lb_control_button_text;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_default_brand_color = global::Facile.Droid.Resource.Color.lb_default_brand_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_default_brand_color_dark = global::Facile.Droid.Resource.Color.lb_default_brand_color_dark;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_default_search_color = global::Facile.Droid.Resource.Color.lb_default_search_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_default_search_icon_color = global::Facile.Droid.Resource.Color.lb_default_search_icon_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_details_description_body_color = global::Facile.Droid.Resource.Color.lb_details_description_body_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_details_description_color = global::Facile.Droid.Resource.Color.lb_details_description_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_details_overview_bg_color = global::Facile.Droid.Resource.Color.lb_details_overview_bg_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_error_background_color_opaque = global::Facile.Droid.Resource.Color.lb_error_background_color_opaque;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_error_background_color_translucent = global::Facile.Droid.Resource.Color.lb_error_background_color_translucent;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_error_message = global::Facile.Droid.Resource.Color.lb_error_message;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_grey = global::Facile.Droid.Resource.Color.lb_grey;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_guidedactions_background = global::Facile.Droid.Resource.Color.lb_guidedactions_background;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_guidedactions_background_dark = global::Facile.Droid.Resource.Color.lb_guidedactions_background_dark;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_guidedactions_item_unselected_text_color = global::Facile.Droid.Resource.Color.lb_guidedactions_item_unselected_text_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_list_item_unselected_text_color = global::Facile.Droid.Resource.Color.lb_list_item_unselected_text_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_media_background_color = global::Facile.Droid.Resource.Color.lb_media_background_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_page_indicator_arrow_background = global::Facile.Droid.Resource.Color.lb_page_indicator_arrow_background;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_page_indicator_arrow_shadow = global::Facile.Droid.Resource.Color.lb_page_indicator_arrow_shadow;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_page_indicator_dot = global::Facile.Droid.Resource.Color.lb_page_indicator_dot;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_background_progress_color = global::Facile.Droid.Resource.Color.lb_playback_background_progress_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_controls_background_dark = global::Facile.Droid.Resource.Color.lb_playback_controls_background_dark;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_controls_background_light = global::Facile.Droid.Resource.Color.lb_playback_controls_background_light;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_controls_time_text_color = global::Facile.Droid.Resource.Color.lb_playback_controls_time_text_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_icon_highlight_no_theme = global::Facile.Droid.Resource.Color.lb_playback_icon_highlight_no_theme;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_media_row_highlight_color = global::Facile.Droid.Resource.Color.lb_playback_media_row_highlight_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_media_row_separator_highlight_color = global::Facile.Droid.Resource.Color.lb_playback_media_row_separator_highlight_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_now_playing_bar_color = global::Facile.Droid.Resource.Color.lb_playback_now_playing_bar_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_progress_color_no_theme = global::Facile.Droid.Resource.Color.lb_playback_progress_color_no_theme;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_secondary_progress_color = global::Facile.Droid.Resource.Color.lb_playback_secondary_progress_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_search_bar_hint = global::Facile.Droid.Resource.Color.lb_search_bar_hint;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_search_bar_hint_speech_mode = global::Facile.Droid.Resource.Color.lb_search_bar_hint_speech_mode;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_search_bar_text = global::Facile.Droid.Resource.Color.lb_search_bar_text;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_search_bar_text_speech_mode = global::Facile.Droid.Resource.Color.lb_search_bar_text_speech_mode;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_search_plate_hint_text_color = global::Facile.Droid.Resource.Color.lb_search_plate_hint_text_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_speech_orb_not_recording = global::Facile.Droid.Resource.Color.lb_speech_orb_not_recording;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_speech_orb_not_recording_icon = global::Facile.Droid.Resource.Color.lb_speech_orb_not_recording_icon;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_speech_orb_not_recording_pulsed = global::Facile.Droid.Resource.Color.lb_speech_orb_not_recording_pulsed;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_speech_orb_recording = global::Facile.Droid.Resource.Color.lb_speech_orb_recording;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_tv_white = global::Facile.Droid.Resource.Color.lb_tv_white;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_view_dim_mask_color = global::Facile.Droid.Resource.Color.lb_view_dim_mask_color;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.drag_offset = global::Facile.Droid.Resource.Dimension.drag_offset;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.fastswipe_offset = global::Facile.Droid.Resource.Dimension.fastswipe_offset;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.init_offset = global::Facile.Droid.Resource.Dimension.init_offset;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::Facile.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::Facile.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::Facile.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_action_1_line_height = global::Facile.Droid.Resource.Dimension.lb_action_1_line_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_action_2_lines_height = global::Facile.Droid.Resource.Dimension.lb_action_2_lines_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_action_button_corner_radius = global::Facile.Droid.Resource.Dimension.lb_action_button_corner_radius;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_action_icon_margin = global::Facile.Droid.Resource.Dimension.lb_action_icon_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_action_padding_horizontal = global::Facile.Droid.Resource.Dimension.lb_action_padding_horizontal;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_action_text_size = global::Facile.Droid.Resource.Dimension.lb_action_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_action_with_icon_padding_end = global::Facile.Droid.Resource.Dimension.lb_action_with_icon_padding_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_action_with_icon_padding_start = global::Facile.Droid.Resource.Dimension.lb_action_with_icon_padding_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_content_text_size = global::Facile.Droid.Resource.Dimension.lb_basic_card_content_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_info_badge_margin = global::Facile.Droid.Resource.Dimension.lb_basic_card_info_badge_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_info_badge_size = global::Facile.Droid.Resource.Dimension.lb_basic_card_info_badge_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_info_height = global::Facile.Droid.Resource.Dimension.lb_basic_card_info_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_info_height_no_content = global::Facile.Droid.Resource.Dimension.lb_basic_card_info_height_no_content;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_info_padding_bottom = global::Facile.Droid.Resource.Dimension.lb_basic_card_info_padding_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_info_padding_horizontal = global::Facile.Droid.Resource.Dimension.lb_basic_card_info_padding_horizontal;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_info_padding_top = global::Facile.Droid.Resource.Dimension.lb_basic_card_info_padding_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_info_text_margin = global::Facile.Droid.Resource.Dimension.lb_basic_card_info_text_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_main_height = global::Facile.Droid.Resource.Dimension.lb_basic_card_main_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_main_width = global::Facile.Droid.Resource.Dimension.lb_basic_card_main_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_title_text_size = global::Facile.Droid.Resource.Dimension.lb_basic_card_title_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_expanded_row_no_hovercard_bottom_padding = global::Facile.Droid.Resource.Dimension.lb_browse_expanded_row_no_hovercard_bottom_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_expanded_selected_row_top_padding = global::Facile.Droid.Resource.Dimension.lb_browse_expanded_selected_row_top_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_header_description_text_size = global::Facile.Droid.Resource.Dimension.lb_browse_header_description_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_header_fading_length = global::Facile.Droid.Resource.Dimension.lb_browse_header_fading_length;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_header_height = global::Facile.Droid.Resource.Dimension.lb_browse_header_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_header_padding_end = global::Facile.Droid.Resource.Dimension.lb_browse_header_padding_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_header_select_duration = global::Facile.Droid.Resource.Dimension.lb_browse_header_select_duration;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_header_select_scale = global::Facile.Droid.Resource.Dimension.lb_browse_header_select_scale;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_header_text_size = global::Facile.Droid.Resource.Dimension.lb_browse_header_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_headers_vertical_spacing = global::Facile.Droid.Resource.Dimension.lb_browse_headers_vertical_spacing;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_headers_width = global::Facile.Droid.Resource.Dimension.lb_browse_headers_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_headers_z = global::Facile.Droid.Resource.Dimension.lb_browse_headers_z;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_item_horizontal_spacing = global::Facile.Droid.Resource.Dimension.lb_browse_item_horizontal_spacing;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_item_vertical_spacing = global::Facile.Droid.Resource.Dimension.lb_browse_item_vertical_spacing;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_padding_bottom = global::Facile.Droid.Resource.Dimension.lb_browse_padding_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_padding_end = global::Facile.Droid.Resource.Dimension.lb_browse_padding_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_padding_start = global::Facile.Droid.Resource.Dimension.lb_browse_padding_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_padding_top = global::Facile.Droid.Resource.Dimension.lb_browse_padding_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_row_hovercard_description_font_size = global::Facile.Droid.Resource.Dimension.lb_browse_row_hovercard_description_font_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_row_hovercard_max_width = global::Facile.Droid.Resource.Dimension.lb_browse_row_hovercard_max_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_row_hovercard_title_font_size = global::Facile.Droid.Resource.Dimension.lb_browse_row_hovercard_title_font_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_rows_fading_edge = global::Facile.Droid.Resource.Dimension.lb_browse_rows_fading_edge;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_rows_margin_start = global::Facile.Droid.Resource.Dimension.lb_browse_rows_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_rows_margin_top = global::Facile.Droid.Resource.Dimension.lb_browse_rows_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_section_header_text_size = global::Facile.Droid.Resource.Dimension.lb_browse_section_header_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_selected_row_top_padding = global::Facile.Droid.Resource.Dimension.lb_browse_selected_row_top_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_title_height = global::Facile.Droid.Resource.Dimension.lb_browse_title_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_title_icon_height = global::Facile.Droid.Resource.Dimension.lb_browse_title_icon_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_title_icon_max_width = global::Facile.Droid.Resource.Dimension.lb_browse_title_icon_max_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_title_text_size = global::Facile.Droid.Resource.Dimension.lb_browse_title_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_control_button_diameter = global::Facile.Droid.Resource.Dimension.lb_control_button_diameter;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_control_button_height = global::Facile.Droid.Resource.Dimension.lb_control_button_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_control_button_secondary_diameter = global::Facile.Droid.Resource.Dimension.lb_control_button_secondary_diameter;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_control_button_secondary_height = global::Facile.Droid.Resource.Dimension.lb_control_button_secondary_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_control_button_text_size = global::Facile.Droid.Resource.Dimension.lb_control_button_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_control_icon_height = global::Facile.Droid.Resource.Dimension.lb_control_icon_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_control_icon_width = global::Facile.Droid.Resource.Dimension.lb_control_icon_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_cover_drawable_parallax_movement = global::Facile.Droid.Resource.Dimension.lb_details_cover_drawable_parallax_movement;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_body_line_spacing = global::Facile.Droid.Resource.Dimension.lb_details_description_body_line_spacing;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_body_text_size = global::Facile.Droid.Resource.Dimension.lb_details_description_body_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_subtitle_text_size = global::Facile.Droid.Resource.Dimension.lb_details_description_subtitle_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_title_baseline = global::Facile.Droid.Resource.Dimension.lb_details_description_title_baseline;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_title_line_spacing = global::Facile.Droid.Resource.Dimension.lb_details_description_title_line_spacing;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_title_padding_adjust_bottom = global::Facile.Droid.Resource.Dimension.lb_details_description_title_padding_adjust_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_title_padding_adjust_top = global::Facile.Droid.Resource.Dimension.lb_details_description_title_padding_adjust_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_title_resized_text_size = global::Facile.Droid.Resource.Dimension.lb_details_description_title_resized_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_title_text_size = global::Facile.Droid.Resource.Dimension.lb_details_description_title_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_under_subtitle_baseline_margin = global::Facile.Droid.Resource.Dimension.lb_details_description_under_subtitle_baseline_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_under_title_baseline_margin = global::Facile.Droid.Resource.Dimension.lb_details_description_under_title_baseline_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_action_items_spacing = global::Facile.Droid.Resource.Dimension.lb_details_overview_action_items_spacing;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_action_select_duration = global::Facile.Droid.Resource.Dimension.lb_details_overview_action_select_duration;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_actions_fade_size = global::Facile.Droid.Resource.Dimension.lb_details_overview_actions_fade_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_actions_height = global::Facile.Droid.Resource.Dimension.lb_details_overview_actions_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_actions_padding_end = global::Facile.Droid.Resource.Dimension.lb_details_overview_actions_padding_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_actions_padding_start = global::Facile.Droid.Resource.Dimension.lb_details_overview_actions_padding_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_description_margin_bottom = global::Facile.Droid.Resource.Dimension.lb_details_overview_description_margin_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_description_margin_end = global::Facile.Droid.Resource.Dimension.lb_details_overview_description_margin_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_description_margin_start = global::Facile.Droid.Resource.Dimension.lb_details_overview_description_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_description_margin_top = global::Facile.Droid.Resource.Dimension.lb_details_overview_description_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_height_large = global::Facile.Droid.Resource.Dimension.lb_details_overview_height_large;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_height_small = global::Facile.Droid.Resource.Dimension.lb_details_overview_height_small;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_image_margin_horizontal = global::Facile.Droid.Resource.Dimension.lb_details_overview_image_margin_horizontal;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_image_margin_vertical = global::Facile.Droid.Resource.Dimension.lb_details_overview_image_margin_vertical;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_margin_bottom = global::Facile.Droid.Resource.Dimension.lb_details_overview_margin_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_margin_end = global::Facile.Droid.Resource.Dimension.lb_details_overview_margin_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_margin_start = global::Facile.Droid.Resource.Dimension.lb_details_overview_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_z = global::Facile.Droid.Resource.Dimension.lb_details_overview_z;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_rows_align_top = global::Facile.Droid.Resource.Dimension.lb_details_rows_align_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_actions_height = global::Facile.Droid.Resource.Dimension.lb_details_v2_actions_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_align_pos_for_actions = global::Facile.Droid.Resource.Dimension.lb_details_v2_align_pos_for_actions;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_align_pos_for_description = global::Facile.Droid.Resource.Dimension.lb_details_v2_align_pos_for_description;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_blank_height = global::Facile.Droid.Resource.Dimension.lb_details_v2_blank_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_card_height = global::Facile.Droid.Resource.Dimension.lb_details_v2_card_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_description_margin_end = global::Facile.Droid.Resource.Dimension.lb_details_v2_description_margin_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_description_margin_start = global::Facile.Droid.Resource.Dimension.lb_details_v2_description_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_description_margin_top = global::Facile.Droid.Resource.Dimension.lb_details_v2_description_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_left = global::Facile.Droid.Resource.Dimension.lb_details_v2_left;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_logo_margin_start = global::Facile.Droid.Resource.Dimension.lb_details_v2_logo_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_logo_max_height = global::Facile.Droid.Resource.Dimension.lb_details_v2_logo_max_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_logo_max_width = global::Facile.Droid.Resource.Dimension.lb_details_v2_logo_max_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_error_image_max_height = global::Facile.Droid.Resource.Dimension.lb_error_image_max_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_error_message_max_width = global::Facile.Droid.Resource.Dimension.lb_error_message_max_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_error_message_text_size = global::Facile.Droid.Resource.Dimension.lb_error_message_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_error_under_image_baseline_margin = global::Facile.Droid.Resource.Dimension.lb_error_under_image_baseline_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_error_under_message_baseline_margin = global::Facile.Droid.Resource.Dimension.lb_error_under_message_baseline_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_elevation = global::Facile.Droid.Resource.Dimension.lb_guidedactions_elevation;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_bottom_padding = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_bottom_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_checkmark_diameter = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_checkmark_diameter;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_delimiter_padding = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_delimiter_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_description_font_size = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_description_font_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_end_padding = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_end_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_icon_height = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_icon_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_icon_width = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_icon_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_space_between_title_and_description = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_space_between_title_and_description;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_start_padding = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_start_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_text_width = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_text_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_text_width_no_icon = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_text_width_no_icon;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_title_font_size = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_title_font_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_top_padding = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_top_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_list_padding_end = global::Facile.Droid.Resource.Dimension.lb_guidedactions_list_padding_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_list_padding_start = global::Facile.Droid.Resource.Dimension.lb_guidedactions_list_padding_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_list_vertical_spacing = global::Facile.Droid.Resource.Dimension.lb_guidedactions_list_vertical_spacing;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_section_shadow_width = global::Facile.Droid.Resource.Dimension.lb_guidedactions_section_shadow_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_sublist_bottom_margin = global::Facile.Droid.Resource.Dimension.lb_guidedactions_sublist_bottom_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_sublist_padding_bottom = global::Facile.Droid.Resource.Dimension.lb_guidedactions_sublist_padding_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_sublist_padding_top = global::Facile.Droid.Resource.Dimension.lb_guidedactions_sublist_padding_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_vertical_padding = global::Facile.Droid.Resource.Dimension.lb_guidedactions_vertical_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedstep_slide_ime_distance = global::Facile.Droid.Resource.Dimension.lb_guidedstep_slide_ime_distance;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_list_row_height = global::Facile.Droid.Resource.Dimension.lb_list_row_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_material_shadow_details_z = global::Facile.Droid.Resource.Dimension.lb_material_shadow_details_z;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_material_shadow_focused_z = global::Facile.Droid.Resource.Dimension.lb_material_shadow_focused_z;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_material_shadow_normal_z = global::Facile.Droid.Resource.Dimension.lb_material_shadow_normal_z;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_content_margin_bottom = global::Facile.Droid.Resource.Dimension.lb_onboarding_content_margin_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_content_margin_top = global::Facile.Droid.Resource.Dimension.lb_onboarding_content_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_content_width = global::Facile.Droid.Resource.Dimension.lb_onboarding_content_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_header_height = global::Facile.Droid.Resource.Dimension.lb_onboarding_header_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_header_margin_top = global::Facile.Droid.Resource.Dimension.lb_onboarding_header_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_navigation_height = global::Facile.Droid.Resource.Dimension.lb_onboarding_navigation_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_start_button_height = global::Facile.Droid.Resource.Dimension.lb_onboarding_start_button_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_start_button_margin_bottom = global::Facile.Droid.Resource.Dimension.lb_onboarding_start_button_margin_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_start_button_translation_offset = global::Facile.Droid.Resource.Dimension.lb_onboarding_start_button_translation_offset;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_page_indicator_arrow_gap = global::Facile.Droid.Resource.Dimension.lb_page_indicator_arrow_gap;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_page_indicator_arrow_radius = global::Facile.Droid.Resource.Dimension.lb_page_indicator_arrow_radius;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_page_indicator_arrow_shadow_offset = global::Facile.Droid.Resource.Dimension.lb_page_indicator_arrow_shadow_offset;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_page_indicator_arrow_shadow_radius = global::Facile.Droid.Resource.Dimension.lb_page_indicator_arrow_shadow_radius;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_page_indicator_dot_gap = global::Facile.Droid.Resource.Dimension.lb_page_indicator_dot_gap;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_page_indicator_dot_radius = global::Facile.Droid.Resource.Dimension.lb_page_indicator_dot_radius;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_card_height = global::Facile.Droid.Resource.Dimension.lb_playback_controls_card_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_child_margin_bigger = global::Facile.Droid.Resource.Dimension.lb_playback_controls_child_margin_bigger;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_child_margin_biggest = global::Facile.Droid.Resource.Dimension.lb_playback_controls_child_margin_biggest;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_child_margin_default = global::Facile.Droid.Resource.Dimension.lb_playback_controls_child_margin_default;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_margin_bottom = global::Facile.Droid.Resource.Dimension.lb_playback_controls_margin_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_margin_end = global::Facile.Droid.Resource.Dimension.lb_playback_controls_margin_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_margin_start = global::Facile.Droid.Resource.Dimension.lb_playback_controls_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_padding_bottom = global::Facile.Droid.Resource.Dimension.lb_playback_controls_padding_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_time_text_size = global::Facile.Droid.Resource.Dimension.lb_playback_controls_time_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_z = global::Facile.Droid.Resource.Dimension.lb_playback_controls_z;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_current_time_margin_start = global::Facile.Droid.Resource.Dimension.lb_playback_current_time_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_description_margin_end = global::Facile.Droid.Resource.Dimension.lb_playback_description_margin_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_description_margin_start = global::Facile.Droid.Resource.Dimension.lb_playback_description_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_description_margin_top = global::Facile.Droid.Resource.Dimension.lb_playback_description_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_major_fade_translate_y = global::Facile.Droid.Resource.Dimension.lb_playback_major_fade_translate_y;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_media_item_radio_icon_size = global::Facile.Droid.Resource.Dimension.lb_playback_media_item_radio_icon_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_media_radio_width_with_padding = global::Facile.Droid.Resource.Dimension.lb_playback_media_radio_width_with_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_media_row_details_selector_width = global::Facile.Droid.Resource.Dimension.lb_playback_media_row_details_selector_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_media_row_horizontal_padding = global::Facile.Droid.Resource.Dimension.lb_playback_media_row_horizontal_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_media_row_radio_selector_width = global::Facile.Droid.Resource.Dimension.lb_playback_media_row_radio_selector_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_media_row_selector_round_rect_radius = global::Facile.Droid.Resource.Dimension.lb_playback_media_row_selector_round_rect_radius;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_media_row_separator_height = global::Facile.Droid.Resource.Dimension.lb_playback_media_row_separator_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_minor_fade_translate_y = global::Facile.Droid.Resource.Dimension.lb_playback_minor_fade_translate_y;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_now_playing_bar_height = global::Facile.Droid.Resource.Dimension.lb_playback_now_playing_bar_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_now_playing_bar_left_margin = global::Facile.Droid.Resource.Dimension.lb_playback_now_playing_bar_left_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_now_playing_bar_margin = global::Facile.Droid.Resource.Dimension.lb_playback_now_playing_bar_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_now_playing_bar_top_margin = global::Facile.Droid.Resource.Dimension.lb_playback_now_playing_bar_top_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_now_playing_bar_width = global::Facile.Droid.Resource.Dimension.lb_playback_now_playing_bar_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_now_playing_view_size = global::Facile.Droid.Resource.Dimension.lb_playback_now_playing_view_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_other_rows_center_to_bottom = global::Facile.Droid.Resource.Dimension.lb_playback_other_rows_center_to_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_play_icon_size = global::Facile.Droid.Resource.Dimension.lb_playback_play_icon_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_time_padding_top = global::Facile.Droid.Resource.Dimension.lb_playback_time_padding_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_total_time_margin_end = global::Facile.Droid.Resource.Dimension.lb_playback_total_time_margin_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_rounded_rect_corner_radius = global::Facile.Droid.Resource.Dimension.lb_rounded_rect_corner_radius;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_edit_text_margin_start = global::Facile.Droid.Resource.Dimension.lb_search_bar_edit_text_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_height = global::Facile.Droid.Resource.Dimension.lb_search_bar_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_hint_margin_start = global::Facile.Droid.Resource.Dimension.lb_search_bar_hint_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_icon_height = global::Facile.Droid.Resource.Dimension.lb_search_bar_icon_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_icon_margin_start = global::Facile.Droid.Resource.Dimension.lb_search_bar_icon_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_icon_width = global::Facile.Droid.Resource.Dimension.lb_search_bar_icon_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_inner_margin_bottom = global::Facile.Droid.Resource.Dimension.lb_search_bar_inner_margin_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_inner_margin_top = global::Facile.Droid.Resource.Dimension.lb_search_bar_inner_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_items_height = global::Facile.Droid.Resource.Dimension.lb_search_bar_items_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_items_layout_margin_top = global::Facile.Droid.Resource.Dimension.lb_search_bar_items_layout_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_items_margin_start = global::Facile.Droid.Resource.Dimension.lb_search_bar_items_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_items_width = global::Facile.Droid.Resource.Dimension.lb_search_bar_items_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_padding_start = global::Facile.Droid.Resource.Dimension.lb_search_bar_padding_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_padding_top = global::Facile.Droid.Resource.Dimension.lb_search_bar_padding_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_speech_orb_margin_start = global::Facile.Droid.Resource.Dimension.lb_search_bar_speech_orb_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_speech_orb_size = global::Facile.Droid.Resource.Dimension.lb_search_bar_speech_orb_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_text_size = global::Facile.Droid.Resource.Dimension.lb_search_bar_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_unfocused_text_size = global::Facile.Droid.Resource.Dimension.lb_search_bar_unfocused_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_browse_row_padding_start = global::Facile.Droid.Resource.Dimension.lb_search_browse_row_padding_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_browse_rows_align_top = global::Facile.Droid.Resource.Dimension.lb_search_browse_rows_align_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_orb_focused_z = global::Facile.Droid.Resource.Dimension.lb_search_orb_focused_z;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_orb_margin_bottom = global::Facile.Droid.Resource.Dimension.lb_search_orb_margin_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_orb_margin_end = global::Facile.Droid.Resource.Dimension.lb_search_orb_margin_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_orb_margin_start = global::Facile.Droid.Resource.Dimension.lb_search_orb_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_orb_margin_top = global::Facile.Droid.Resource.Dimension.lb_search_orb_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_orb_size = global::Facile.Droid.Resource.Dimension.lb_search_orb_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_orb_unfocused_z = global::Facile.Droid.Resource.Dimension.lb_search_orb_unfocused_z;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_vertical_grid_padding_bottom = global::Facile.Droid.Resource.Dimension.lb_vertical_grid_padding_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.picker_column_horizontal_padding = global::Facile.Droid.Resource.Dimension.picker_column_horizontal_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.picker_item_height = global::Facile.Droid.Resource.Dimension.picker_item_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.picker_item_spacing = global::Facile.Droid.Resource.Dimension.picker_item_spacing;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.picker_separator_horizontal_padding = global::Facile.Droid.Resource.Dimension.picker_separator_horizontal_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.slowdrag_offset = global::Facile.Droid.Resource.Dimension.slowdrag_offset;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_action_bg = global::Facile.Droid.Resource.Drawable.lb_action_bg;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_action_bg_focused = global::Facile.Droid.Resource.Drawable.lb_action_bg_focused;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_background = global::Facile.Droid.Resource.Drawable.lb_background;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_card_foreground = global::Facile.Droid.Resource.Drawable.lb_card_foreground;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_card_shadow_focused = global::Facile.Droid.Resource.Drawable.lb_card_shadow_focused;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_card_shadow_normal = global::Facile.Droid.Resource.Drawable.lb_card_shadow_normal;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_control_button_primary = global::Facile.Droid.Resource.Drawable.lb_control_button_primary;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_control_button_secondary = global::Facile.Droid.Resource.Drawable.lb_control_button_secondary;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_headers_right_fading = global::Facile.Droid.Resource.Drawable.lb_headers_right_fading;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_actions_right_arrow = global::Facile.Droid.Resource.Drawable.lb_ic_actions_right_arrow;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_cc = global::Facile.Droid.Resource.Drawable.lb_ic_cc;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_fast_forward = global::Facile.Droid.Resource.Drawable.lb_ic_fast_forward;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_fast_rewind = global::Facile.Droid.Resource.Drawable.lb_ic_fast_rewind;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_guidedactions_item_chevron = global::Facile.Droid.Resource.Drawable.lb_ic_guidedactions_item_chevron;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_hq = global::Facile.Droid.Resource.Drawable.lb_ic_hq;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_in_app_search = global::Facile.Droid.Resource.Drawable.lb_ic_in_app_search;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_loop = global::Facile.Droid.Resource.Drawable.lb_ic_loop;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_loop_one = global::Facile.Droid.Resource.Drawable.lb_ic_loop_one;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_more = global::Facile.Droid.Resource.Drawable.lb_ic_more;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_nav_arrow = global::Facile.Droid.Resource.Drawable.lb_ic_nav_arrow;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_pause = global::Facile.Droid.Resource.Drawable.lb_ic_pause;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_pip = global::Facile.Droid.Resource.Drawable.lb_ic_pip;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_play = global::Facile.Droid.Resource.Drawable.lb_ic_play;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_play_fit = global::Facile.Droid.Resource.Drawable.lb_ic_play_fit;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_playback_loop = global::Facile.Droid.Resource.Drawable.lb_ic_playback_loop;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_replay = global::Facile.Droid.Resource.Drawable.lb_ic_replay;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_sad_cloud = global::Facile.Droid.Resource.Drawable.lb_ic_sad_cloud;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_search_mic = global::Facile.Droid.Resource.Drawable.lb_ic_search_mic;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_search_mic_out = global::Facile.Droid.Resource.Drawable.lb_ic_search_mic_out;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_shuffle = global::Facile.Droid.Resource.Drawable.lb_ic_shuffle;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_skip_next = global::Facile.Droid.Resource.Drawable.lb_ic_skip_next;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_skip_previous = global::Facile.Droid.Resource.Drawable.lb_ic_skip_previous;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_stop = global::Facile.Droid.Resource.Drawable.lb_ic_stop;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_thumb_down = global::Facile.Droid.Resource.Drawable.lb_ic_thumb_down;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_thumb_down_outline = global::Facile.Droid.Resource.Drawable.lb_ic_thumb_down_outline;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_thumb_up = global::Facile.Droid.Resource.Drawable.lb_ic_thumb_up;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_thumb_up_outline = global::Facile.Droid.Resource.Drawable.lb_ic_thumb_up_outline;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_in_app_search_bg = global::Facile.Droid.Resource.Drawable.lb_in_app_search_bg;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_in_app_search_shadow_focused = global::Facile.Droid.Resource.Drawable.lb_in_app_search_shadow_focused;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_in_app_search_shadow_normal = global::Facile.Droid.Resource.Drawable.lb_in_app_search_shadow_normal;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_onboarding_start_button_background = global::Facile.Droid.Resource.Drawable.lb_onboarding_start_button_background;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_playback_now_playing_bar = global::Facile.Droid.Resource.Drawable.lb_playback_now_playing_bar;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_playback_progress_bar = global::Facile.Droid.Resource.Drawable.lb_playback_progress_bar;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_search_orb = global::Facile.Droid.Resource.Drawable.lb_search_orb;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_selectable_item_rounded_rect = global::Facile.Droid.Resource.Drawable.lb_selectable_item_rounded_rect;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_speech_orb = global::Facile.Droid.Resource.Drawable.lb_speech_orb;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_text_dot_one = global::Facile.Droid.Resource.Drawable.lb_text_dot_one;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_text_dot_one_small = global::Facile.Droid.Resource.Drawable.lb_text_dot_one_small;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_text_dot_two = global::Facile.Droid.Resource.Drawable.lb_text_dot_two;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_text_dot_two_small = global::Facile.Droid.Resource.Drawable.lb_text_dot_two_small;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_browse_header_unselect_alpha = global::Facile.Droid.Resource.Fraction.lb_browse_header_unselect_alpha;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_browse_rows_scale = global::Facile.Droid.Resource.Fraction.lb_browse_rows_scale;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_focus_zoom_factor_large = global::Facile.Droid.Resource.Fraction.lb_focus_zoom_factor_large;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_focus_zoom_factor_medium = global::Facile.Droid.Resource.Fraction.lb_focus_zoom_factor_medium;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_focus_zoom_factor_small = global::Facile.Droid.Resource.Fraction.lb_focus_zoom_factor_small;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_focus_zoom_factor_xsmall = global::Facile.Droid.Resource.Fraction.lb_focus_zoom_factor_xsmall;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_search_bar_speech_orb_max_level_zoom = global::Facile.Droid.Resource.Fraction.lb_search_bar_speech_orb_max_level_zoom;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_search_orb_focused_zoom = global::Facile.Droid.Resource.Fraction.lb_search_orb_focused_zoom;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_view_active_level = global::Facile.Droid.Resource.Fraction.lb_view_active_level;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_view_dimmed_level = global::Facile.Droid.Resource.Fraction.lb_view_dimmed_level;
-			global::Com.Syncfusion.Carousel.Resource.Id.Content = global::Facile.Droid.Resource.Id.Content;
-			global::Com.Syncfusion.Carousel.Resource.Id.IconOnLeft = global::Facile.Droid.Resource.Id.IconOnLeft;
-			global::Com.Syncfusion.Carousel.Resource.Id.IconOnRight = global::Facile.Droid.Resource.Id.IconOnRight;
-			global::Com.Syncfusion.Carousel.Resource.Id.ImageOnly = global::Facile.Droid.Resource.Id.ImageOnly;
-			global::Com.Syncfusion.Carousel.Resource.Id.Title = global::Facile.Droid.Resource.Id.Title;
-			global::Com.Syncfusion.Carousel.Resource.Id.actionIcon = global::Facile.Droid.Resource.Id.actionIcon;
-			global::Com.Syncfusion.Carousel.Resource.Id.action_fragment = global::Facile.Droid.Resource.Id.action_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Id.action_fragment_background = global::Facile.Droid.Resource.Id.action_fragment_background;
-			global::Com.Syncfusion.Carousel.Resource.Id.action_fragment_root = global::Facile.Droid.Resource.Id.action_fragment_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.activated = global::Facile.Droid.Resource.Id.activated;
-			global::Com.Syncfusion.Carousel.Resource.Id.always = global::Facile.Droid.Resource.Id.always;
-			global::Com.Syncfusion.Carousel.Resource.Id.background = global::Facile.Droid.Resource.Id.background;
-			global::Com.Syncfusion.Carousel.Resource.Id.background_container = global::Facile.Droid.Resource.Id.background_container;
-			global::Com.Syncfusion.Carousel.Resource.Id.background_imagein = global::Facile.Droid.Resource.Id.background_imagein;
-			global::Com.Syncfusion.Carousel.Resource.Id.background_imageout = global::Facile.Droid.Resource.Id.background_imageout;
-			global::Com.Syncfusion.Carousel.Resource.Id.bar1 = global::Facile.Droid.Resource.Id.bar1;
-			global::Com.Syncfusion.Carousel.Resource.Id.bar2 = global::Facile.Droid.Resource.Id.bar2;
-			global::Com.Syncfusion.Carousel.Resource.Id.bar3 = global::Facile.Droid.Resource.Id.bar3;
-			global::Com.Syncfusion.Carousel.Resource.Id.bottom = global::Facile.Droid.Resource.Id.bottom;
-			global::Com.Syncfusion.Carousel.Resource.Id.bottom_spacer = global::Facile.Droid.Resource.Id.bottom_spacer;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_container_dock = global::Facile.Droid.Resource.Id.browse_container_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_dummy = global::Facile.Droid.Resource.Id.browse_dummy;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_frame = global::Facile.Droid.Resource.Id.browse_frame;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_grid = global::Facile.Droid.Resource.Id.browse_grid;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_grid_dock = global::Facile.Droid.Resource.Id.browse_grid_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_headers = global::Facile.Droid.Resource.Id.browse_headers;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_headers_dock = global::Facile.Droid.Resource.Id.browse_headers_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_headers_root = global::Facile.Droid.Resource.Id.browse_headers_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_title_group = global::Facile.Droid.Resource.Id.browse_title_group;
-			global::Com.Syncfusion.Carousel.Resource.Id.button = global::Facile.Droid.Resource.Id.button;
-			global::Com.Syncfusion.Carousel.Resource.Id.button_start = global::Facile.Droid.Resource.Id.button_start;
-			global::Com.Syncfusion.Carousel.Resource.Id.column = global::Facile.Droid.Resource.Id.column;
-			global::Com.Syncfusion.Carousel.Resource.Id.container_list = global::Facile.Droid.Resource.Id.container_list;
-			global::Com.Syncfusion.Carousel.Resource.Id.content_container = global::Facile.Droid.Resource.Id.content_container;
-			global::Com.Syncfusion.Carousel.Resource.Id.content_fragment = global::Facile.Droid.Resource.Id.content_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Id.content_frame = global::Facile.Droid.Resource.Id.content_frame;
-			global::Com.Syncfusion.Carousel.Resource.Id.content_text = global::Facile.Droid.Resource.Id.content_text;
-			global::Com.Syncfusion.Carousel.Resource.Id.control_bar = global::Facile.Droid.Resource.Id.control_bar;
-			global::Com.Syncfusion.Carousel.Resource.Id.controls_card = global::Facile.Droid.Resource.Id.controls_card;
-			global::Com.Syncfusion.Carousel.Resource.Id.controls_card_right_panel = global::Facile.Droid.Resource.Id.controls_card_right_panel;
-			global::Com.Syncfusion.Carousel.Resource.Id.controls_container = global::Facile.Droid.Resource.Id.controls_container;
-			global::Com.Syncfusion.Carousel.Resource.Id.controls_dock = global::Facile.Droid.Resource.Id.controls_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.current_time = global::Facile.Droid.Resource.Id.current_time;
-			global::Com.Syncfusion.Carousel.Resource.Id.description = global::Facile.Droid.Resource.Id.description;
-			global::Com.Syncfusion.Carousel.Resource.Id.description_dock = global::Facile.Droid.Resource.Id.description_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_background_view = global::Facile.Droid.Resource.Id.details_background_view;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_fragment_root = global::Facile.Droid.Resource.Id.details_fragment_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_frame = global::Facile.Droid.Resource.Id.details_frame;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_overview = global::Facile.Droid.Resource.Id.details_overview;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_overview_actions = global::Facile.Droid.Resource.Id.details_overview_actions;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_overview_actions_background = global::Facile.Droid.Resource.Id.details_overview_actions_background;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_overview_description = global::Facile.Droid.Resource.Id.details_overview_description;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_overview_image = global::Facile.Droid.Resource.Id.details_overview_image;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_overview_right_panel = global::Facile.Droid.Resource.Id.details_overview_right_panel;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_root = global::Facile.Droid.Resource.Id.details_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_rows_dock = global::Facile.Droid.Resource.Id.details_rows_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.dummy = global::Facile.Droid.Resource.Id.dummy;
-			global::Com.Syncfusion.Carousel.Resource.Id.end = global::Facile.Droid.Resource.Id.end;
-			global::Com.Syncfusion.Carousel.Resource.Id.error_frame = global::Facile.Droid.Resource.Id.error_frame;
-			global::Com.Syncfusion.Carousel.Resource.Id.extra = global::Facile.Droid.Resource.Id.extra;
-			global::Com.Syncfusion.Carousel.Resource.Id.extra_badge = global::Facile.Droid.Resource.Id.extra_badge;
-			global::Com.Syncfusion.Carousel.Resource.Id.fade_out_edge = global::Facile.Droid.Resource.Id.fade_out_edge;
-			global::Com.Syncfusion.Carousel.Resource.Id.foreground_container = global::Facile.Droid.Resource.Id.foreground_container;
-			global::Com.Syncfusion.Carousel.Resource.Id.grid_frame = global::Facile.Droid.Resource.Id.grid_frame;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidance_breadcrumb = global::Facile.Droid.Resource.Id.guidance_breadcrumb;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidance_container = global::Facile.Droid.Resource.Id.guidance_container;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidance_description = global::Facile.Droid.Resource.Id.guidance_description;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidance_icon = global::Facile.Droid.Resource.Id.guidance_icon;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidance_title = global::Facile.Droid.Resource.Id.guidance_title;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_activator_item = global::Facile.Droid.Resource.Id.guidedactions_activator_item;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_content = global::Facile.Droid.Resource.Id.guidedactions_content;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_content2 = global::Facile.Droid.Resource.Id.guidedactions_content2;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_item_checkmark = global::Facile.Droid.Resource.Id.guidedactions_item_checkmark;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_item_chevron = global::Facile.Droid.Resource.Id.guidedactions_item_chevron;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_item_content = global::Facile.Droid.Resource.Id.guidedactions_item_content;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_item_description = global::Facile.Droid.Resource.Id.guidedactions_item_description;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_item_icon = global::Facile.Droid.Resource.Id.guidedactions_item_icon;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_item_title = global::Facile.Droid.Resource.Id.guidedactions_item_title;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_list = global::Facile.Droid.Resource.Id.guidedactions_list;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_list2 = global::Facile.Droid.Resource.Id.guidedactions_list2;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_list_background = global::Facile.Droid.Resource.Id.guidedactions_list_background;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_list_background2 = global::Facile.Droid.Resource.Id.guidedactions_list_background2;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_root = global::Facile.Droid.Resource.Id.guidedactions_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_root2 = global::Facile.Droid.Resource.Id.guidedactions_root2;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_sub_list = global::Facile.Droid.Resource.Id.guidedactions_sub_list;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_sub_list_background = global::Facile.Droid.Resource.Id.guidedactions_sub_list_background;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedstep_background = global::Facile.Droid.Resource.Id.guidedstep_background;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedstep_background_view_root = global::Facile.Droid.Resource.Id.guidedstep_background_view_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedstep_root = global::Facile.Droid.Resource.Id.guidedstep_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.hovercard_panel = global::Facile.Droid.Resource.Id.hovercard_panel;
-			global::Com.Syncfusion.Carousel.Resource.Id.icon = global::Facile.Droid.Resource.Id.icon;
-			global::Com.Syncfusion.Carousel.Resource.Id.image = global::Facile.Droid.Resource.Id.image;
-			global::Com.Syncfusion.Carousel.Resource.Id.info = global::Facile.Droid.Resource.Id.info;
-			global::Com.Syncfusion.Carousel.Resource.Id.infoOver = global::Facile.Droid.Resource.Id.infoOver;
-			global::Com.Syncfusion.Carousel.Resource.Id.infoUnder = global::Facile.Droid.Resource.Id.infoUnder;
-			global::Com.Syncfusion.Carousel.Resource.Id.infoUnderWithExtra = global::Facile.Droid.Resource.Id.infoUnderWithExtra;
-			global::Com.Syncfusion.Carousel.Resource.Id.info_field = global::Facile.Droid.Resource.Id.info_field;
-			global::Com.Syncfusion.Carousel.Resource.Id.initial = global::Facile.Droid.Resource.Id.initial;
-			global::Com.Syncfusion.Carousel.Resource.Id.item_touch_helper_previous_elevation = global::Facile.Droid.Resource.Id.item_touch_helper_previous_elevation;
-			global::Com.Syncfusion.Carousel.Resource.Id.label = global::Facile.Droid.Resource.Id.label;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_action_button = global::Facile.Droid.Resource.Id.lb_action_button;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_closed_captioning = global::Facile.Droid.Resource.Id.lb_control_closed_captioning;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_fast_forward = global::Facile.Droid.Resource.Id.lb_control_fast_forward;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_fast_rewind = global::Facile.Droid.Resource.Id.lb_control_fast_rewind;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_high_quality = global::Facile.Droid.Resource.Id.lb_control_high_quality;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_more_actions = global::Facile.Droid.Resource.Id.lb_control_more_actions;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_picture_in_picture = global::Facile.Droid.Resource.Id.lb_control_picture_in_picture;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_play_pause = global::Facile.Droid.Resource.Id.lb_control_play_pause;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_repeat = global::Facile.Droid.Resource.Id.lb_control_repeat;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_shuffle = global::Facile.Droid.Resource.Id.lb_control_shuffle;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_skip_next = global::Facile.Droid.Resource.Id.lb_control_skip_next;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_skip_previous = global::Facile.Droid.Resource.Id.lb_control_skip_previous;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_thumbs_down = global::Facile.Droid.Resource.Id.lb_control_thumbs_down;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_thumbs_up = global::Facile.Droid.Resource.Id.lb_control_thumbs_up;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_details_description_body = global::Facile.Droid.Resource.Id.lb_details_description_body;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_details_description_subtitle = global::Facile.Droid.Resource.Id.lb_details_description_subtitle;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_details_description_title = global::Facile.Droid.Resource.Id.lb_details_description_title;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_focus_animator = global::Facile.Droid.Resource.Id.lb_focus_animator;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_guidedstep_background = global::Facile.Droid.Resource.Id.lb_guidedstep_background;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_parallax_source = global::Facile.Droid.Resource.Id.lb_parallax_source;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_results_frame = global::Facile.Droid.Resource.Id.lb_results_frame;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_row_container_header_dock = global::Facile.Droid.Resource.Id.lb_row_container_header_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_search_bar = global::Facile.Droid.Resource.Id.lb_search_bar;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_search_bar_badge = global::Facile.Droid.Resource.Id.lb_search_bar_badge;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_search_bar_items = global::Facile.Droid.Resource.Id.lb_search_bar_items;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_search_bar_speech_orb = global::Facile.Droid.Resource.Id.lb_search_bar_speech_orb;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_search_frame = global::Facile.Droid.Resource.Id.lb_search_frame;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_search_text_editor = global::Facile.Droid.Resource.Id.lb_search_text_editor;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_shadow_focused = global::Facile.Droid.Resource.Id.lb_shadow_focused;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_shadow_impl = global::Facile.Droid.Resource.Id.lb_shadow_impl;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_shadow_normal = global::Facile.Droid.Resource.Id.lb_shadow_normal;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_slide_transition_value = global::Facile.Droid.Resource.Id.lb_slide_transition_value;
-			global::Com.Syncfusion.Carousel.Resource.Id.left = global::Facile.Droid.Resource.Id.left;
-			global::Com.Syncfusion.Carousel.Resource.Id.list_item = global::Facile.Droid.Resource.Id.list_item;
-			global::Com.Syncfusion.Carousel.Resource.Id.logo = global::Facile.Droid.Resource.Id.logo;
-			global::Com.Syncfusion.Carousel.Resource.Id.main = global::Facile.Droid.Resource.Id.main;
-			global::Com.Syncfusion.Carousel.Resource.Id.mainOnly = global::Facile.Droid.Resource.Id.mainOnly;
-			global::Com.Syncfusion.Carousel.Resource.Id.main_image = global::Facile.Droid.Resource.Id.main_image;
-			global::Com.Syncfusion.Carousel.Resource.Id.maxLines = global::Facile.Droid.Resource.Id.maxLines;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaItemActionsContainer = global::Facile.Droid.Resource.Id.mediaItemActionsContainer;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaItemDetails = global::Facile.Droid.Resource.Id.mediaItemDetails;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaItemDuration = global::Facile.Droid.Resource.Id.mediaItemDuration;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaItemName = global::Facile.Droid.Resource.Id.mediaItemName;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaItemNumberViewFlipper = global::Facile.Droid.Resource.Id.mediaItemNumberViewFlipper;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaItemRow = global::Facile.Droid.Resource.Id.mediaItemRow;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaListHeader = global::Facile.Droid.Resource.Id.mediaListHeader;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaRowSelector = global::Facile.Droid.Resource.Id.mediaRowSelector;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaRowSeparator = global::Facile.Droid.Resource.Id.mediaRowSeparator;
-			global::Com.Syncfusion.Carousel.Resource.Id.message = global::Facile.Droid.Resource.Id.message;
-			global::Com.Syncfusion.Carousel.Resource.Id.more_actions_dock = global::Facile.Droid.Resource.Id.more_actions_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.navigator_container = global::Facile.Droid.Resource.Id.navigator_container;
-			global::Com.Syncfusion.Carousel.Resource.Id.onboarding_fragment_root = global::Facile.Droid.Resource.Id.onboarding_fragment_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.page_container = global::Facile.Droid.Resource.Id.page_container;
-			global::Com.Syncfusion.Carousel.Resource.Id.page_indicator = global::Facile.Droid.Resource.Id.page_indicator;
-			global::Com.Syncfusion.Carousel.Resource.Id.paused = global::Facile.Droid.Resource.Id.paused;
-			global::Com.Syncfusion.Carousel.Resource.Id.picker = global::Facile.Droid.Resource.Id.picker;
-			global::Com.Syncfusion.Carousel.Resource.Id.playback_controls_dock = global::Facile.Droid.Resource.Id.playback_controls_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.playback_fragment_root = global::Facile.Droid.Resource.Id.playback_fragment_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.playback_progress = global::Facile.Droid.Resource.Id.playback_progress;
-			global::Com.Syncfusion.Carousel.Resource.Id.playing = global::Facile.Droid.Resource.Id.playing;
-			global::Com.Syncfusion.Carousel.Resource.Id.right = global::Facile.Droid.Resource.Id.right;
-			global::Com.Syncfusion.Carousel.Resource.Id.row_content = global::Facile.Droid.Resource.Id.row_content;
-			global::Com.Syncfusion.Carousel.Resource.Id.row_header = global::Facile.Droid.Resource.Id.row_header;
-			global::Com.Syncfusion.Carousel.Resource.Id.row_header_description = global::Facile.Droid.Resource.Id.row_header_description;
-			global::Com.Syncfusion.Carousel.Resource.Id.scale_frame = global::Facile.Droid.Resource.Id.scale_frame;
-			global::Com.Syncfusion.Carousel.Resource.Id.search_orb = global::Facile.Droid.Resource.Id.search_orb;
-			global::Com.Syncfusion.Carousel.Resource.Id.secondary_controls_dock = global::Facile.Droid.Resource.Id.secondary_controls_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.selected = global::Facile.Droid.Resource.Id.selected;
-			global::Com.Syncfusion.Carousel.Resource.Id.separator = global::Facile.Droid.Resource.Id.separator;
-			global::Com.Syncfusion.Carousel.Resource.Id.spacer = global::Facile.Droid.Resource.Id.spacer;
-			global::Com.Syncfusion.Carousel.Resource.Id.start = global::Facile.Droid.Resource.Id.start;
-			global::Com.Syncfusion.Carousel.Resource.Id.title = global::Facile.Droid.Resource.Id.title;
-			global::Com.Syncfusion.Carousel.Resource.Id.title_badge = global::Facile.Droid.Resource.Id.title_badge;
-			global::Com.Syncfusion.Carousel.Resource.Id.title_orb = global::Facile.Droid.Resource.Id.title_orb;
-			global::Com.Syncfusion.Carousel.Resource.Id.title_text = global::Facile.Droid.Resource.Id.title_text;
-			global::Com.Syncfusion.Carousel.Resource.Id.top = global::Facile.Droid.Resource.Id.top;
-			global::Com.Syncfusion.Carousel.Resource.Id.total_time = global::Facile.Droid.Resource.Id.total_time;
-			global::Com.Syncfusion.Carousel.Resource.Id.transitionPosition = global::Facile.Droid.Resource.Id.transitionPosition;
-			global::Com.Syncfusion.Carousel.Resource.Id.video_surface = global::Facile.Droid.Resource.Id.video_surface;
-			global::Com.Syncfusion.Carousel.Resource.Id.video_surface_container = global::Facile.Droid.Resource.Id.video_surface_container;
-			global::Com.Syncfusion.Carousel.Resource.Id.wrap_content = global::Facile.Droid.Resource.Id.wrap_content;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_browse_headers_transition_delay = global::Facile.Droid.Resource.Integer.lb_browse_headers_transition_delay;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_browse_headers_transition_duration = global::Facile.Droid.Resource.Integer.lb_browse_headers_transition_duration;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_browse_rows_anim_duration = global::Facile.Droid.Resource.Integer.lb_browse_rows_anim_duration;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_card_activated_animation_duration = global::Facile.Droid.Resource.Integer.lb_card_activated_animation_duration;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_card_selected_animation_delay = global::Facile.Droid.Resource.Integer.lb_card_selected_animation_delay;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_card_selected_animation_duration = global::Facile.Droid.Resource.Integer.lb_card_selected_animation_duration;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_details_description_body_max_lines = global::Facile.Droid.Resource.Integer.lb_details_description_body_max_lines;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_details_description_body_min_lines = global::Facile.Droid.Resource.Integer.lb_details_description_body_min_lines;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_details_description_subtitle_max_lines = global::Facile.Droid.Resource.Integer.lb_details_description_subtitle_max_lines;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_details_description_title_max_lines = global::Facile.Droid.Resource.Integer.lb_details_description_title_max_lines;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_error_message_max_lines = global::Facile.Droid.Resource.Integer.lb_error_message_max_lines;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_guidedactions_item_animation_duration = global::Facile.Droid.Resource.Integer.lb_guidedactions_item_animation_duration;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_guidedactions_item_description_min_lines = global::Facile.Droid.Resource.Integer.lb_guidedactions_item_description_min_lines;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_guidedactions_item_title_max_lines = global::Facile.Droid.Resource.Integer.lb_guidedactions_item_title_max_lines;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_guidedactions_item_title_min_lines = global::Facile.Droid.Resource.Integer.lb_guidedactions_item_title_min_lines;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_guidedstep_activity_background_fade_duration_ms = global::Facile.Droid.Resource.Integer.lb_guidedstep_activity_background_fade_duration_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_bg_fade_in_ms = global::Facile.Droid.Resource.Integer.lb_playback_bg_fade_in_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_bg_fade_out_ms = global::Facile.Droid.Resource.Integer.lb_playback_bg_fade_out_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_controls_fade_in_ms = global::Facile.Droid.Resource.Integer.lb_playback_controls_fade_in_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_controls_fade_out_ms = global::Facile.Droid.Resource.Integer.lb_playback_controls_fade_out_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_controls_show_time_ms = global::Facile.Droid.Resource.Integer.lb_playback_controls_show_time_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_description_fade_in_ms = global::Facile.Droid.Resource.Integer.lb_playback_description_fade_in_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_description_fade_out_ms = global::Facile.Droid.Resource.Integer.lb_playback_description_fade_out_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_rows_fade_delay_ms = global::Facile.Droid.Resource.Integer.lb_playback_rows_fade_delay_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_rows_fade_in_ms = global::Facile.Droid.Resource.Integer.lb_playback_rows_fade_in_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_rows_fade_out_ms = global::Facile.Droid.Resource.Integer.lb_playback_rows_fade_out_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_search_bar_speech_mode_background_alpha = global::Facile.Droid.Resource.Integer.lb_search_bar_speech_mode_background_alpha;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_search_bar_text_mode_background_alpha = global::Facile.Droid.Resource.Integer.lb_search_bar_text_mode_background_alpha;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_search_orb_pulse_duration_ms = global::Facile.Droid.Resource.Integer.lb_search_orb_pulse_duration_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_search_orb_scale_duration_ms = global::Facile.Droid.Resource.Integer.lb_search_orb_scale_duration_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.slideEdgeEnd = global::Facile.Droid.Resource.Integer.slideEdgeEnd;
-			global::Com.Syncfusion.Carousel.Resource.Integer.slideEdgeStart = global::Facile.Droid.Resource.Integer.slideEdgeStart;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_action_1_line = global::Facile.Droid.Resource.Layout.lb_action_1_line;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_action_2_lines = global::Facile.Droid.Resource.Layout.lb_action_2_lines;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_background_window = global::Facile.Droid.Resource.Layout.lb_background_window;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_browse_fragment = global::Facile.Droid.Resource.Layout.lb_browse_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_browse_title = global::Facile.Droid.Resource.Layout.lb_browse_title;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_control_bar = global::Facile.Droid.Resource.Layout.lb_control_bar;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_control_button_primary = global::Facile.Droid.Resource.Layout.lb_control_button_primary;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_control_button_secondary = global::Facile.Droid.Resource.Layout.lb_control_button_secondary;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_details_description = global::Facile.Droid.Resource.Layout.lb_details_description;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_details_fragment = global::Facile.Droid.Resource.Layout.lb_details_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_details_overview = global::Facile.Droid.Resource.Layout.lb_details_overview;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_divider = global::Facile.Droid.Resource.Layout.lb_divider;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_error_fragment = global::Facile.Droid.Resource.Layout.lb_error_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_fullwidth_details_overview = global::Facile.Droid.Resource.Layout.lb_fullwidth_details_overview;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_fullwidth_details_overview_logo = global::Facile.Droid.Resource.Layout.lb_fullwidth_details_overview_logo;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_guidance = global::Facile.Droid.Resource.Layout.lb_guidance;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_guidedactions = global::Facile.Droid.Resource.Layout.lb_guidedactions;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_guidedactions_datepicker_item = global::Facile.Droid.Resource.Layout.lb_guidedactions_datepicker_item;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_guidedactions_item = global::Facile.Droid.Resource.Layout.lb_guidedactions_item;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_guidedbuttonactions = global::Facile.Droid.Resource.Layout.lb_guidedbuttonactions;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_guidedstep_background = global::Facile.Droid.Resource.Layout.lb_guidedstep_background;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_guidedstep_fragment = global::Facile.Droid.Resource.Layout.lb_guidedstep_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_header = global::Facile.Droid.Resource.Layout.lb_header;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_headers_fragment = global::Facile.Droid.Resource.Layout.lb_headers_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_image_card_view = global::Facile.Droid.Resource.Layout.lb_image_card_view;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_image_card_view_themed_badge_left = global::Facile.Droid.Resource.Layout.lb_image_card_view_themed_badge_left;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_image_card_view_themed_badge_right = global::Facile.Droid.Resource.Layout.lb_image_card_view_themed_badge_right;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_image_card_view_themed_content = global::Facile.Droid.Resource.Layout.lb_image_card_view_themed_content;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_image_card_view_themed_title = global::Facile.Droid.Resource.Layout.lb_image_card_view_themed_title;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_list_row = global::Facile.Droid.Resource.Layout.lb_list_row;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_list_row_hovercard = global::Facile.Droid.Resource.Layout.lb_list_row_hovercard;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_media_item_number_view_flipper = global::Facile.Droid.Resource.Layout.lb_media_item_number_view_flipper;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_media_list_header = global::Facile.Droid.Resource.Layout.lb_media_list_header;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_onboarding_fragment = global::Facile.Droid.Resource.Layout.lb_onboarding_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_picker = global::Facile.Droid.Resource.Layout.lb_picker;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_picker_column = global::Facile.Droid.Resource.Layout.lb_picker_column;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_picker_item = global::Facile.Droid.Resource.Layout.lb_picker_item;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_picker_separator = global::Facile.Droid.Resource.Layout.lb_picker_separator;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_playback_controls = global::Facile.Droid.Resource.Layout.lb_playback_controls;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_playback_controls_row = global::Facile.Droid.Resource.Layout.lb_playback_controls_row;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_playback_fragment = global::Facile.Droid.Resource.Layout.lb_playback_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_playback_now_playing_bars = global::Facile.Droid.Resource.Layout.lb_playback_now_playing_bars;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_row_container = global::Facile.Droid.Resource.Layout.lb_row_container;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_row_header = global::Facile.Droid.Resource.Layout.lb_row_header;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_row_media_item = global::Facile.Droid.Resource.Layout.lb_row_media_item;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_row_media_item_action = global::Facile.Droid.Resource.Layout.lb_row_media_item_action;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_rows_fragment = global::Facile.Droid.Resource.Layout.lb_rows_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_search_bar = global::Facile.Droid.Resource.Layout.lb_search_bar;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_search_fragment = global::Facile.Droid.Resource.Layout.lb_search_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_search_orb = global::Facile.Droid.Resource.Layout.lb_search_orb;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_section_header = global::Facile.Droid.Resource.Layout.lb_section_header;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_shadow = global::Facile.Droid.Resource.Layout.lb_shadow;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_speech_orb = global::Facile.Droid.Resource.Layout.lb_speech_orb;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_title_view = global::Facile.Droid.Resource.Layout.lb_title_view;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_vertical_grid = global::Facile.Droid.Resource.Layout.lb_vertical_grid;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_vertical_grid_fragment = global::Facile.Droid.Resource.Layout.lb_vertical_grid_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_video_surface = global::Facile.Droid.Resource.Layout.lb_video_surface;
-			global::Com.Syncfusion.Carousel.Resource.Layout.video_surface_fragment = global::Facile.Droid.Resource.Layout.video_surface_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Raw.lb_voice_failure = global::Facile.Droid.Resource.Raw.lb_voice_failure;
-			global::Com.Syncfusion.Carousel.Resource.Raw.lb_voice_no_input = global::Facile.Droid.Resource.Raw.lb_voice_no_input;
-			global::Com.Syncfusion.Carousel.Resource.Raw.lb_voice_open = global::Facile.Droid.Resource.Raw.lb_voice_open;
-			global::Com.Syncfusion.Carousel.Resource.Raw.lb_voice_success = global::Facile.Droid.Resource.Raw.lb_voice_success;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_control_display_fast_forward_multiplier = global::Facile.Droid.Resource.String.lb_control_display_fast_forward_multiplier;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_control_display_rewind_multiplier = global::Facile.Droid.Resource.String.lb_control_display_rewind_multiplier;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedaction_continue_title = global::Facile.Droid.Resource.String.lb_guidedaction_continue_title;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedaction_finish_title = global::Facile.Droid.Resource.String.lb_guidedaction_finish_title;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedactions_item_disabled_chevron_alpha = global::Facile.Droid.Resource.String.lb_guidedactions_item_disabled_chevron_alpha;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedactions_item_disabled_description_text_alpha = global::Facile.Droid.Resource.String.lb_guidedactions_item_disabled_description_text_alpha;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedactions_item_disabled_text_alpha = global::Facile.Droid.Resource.String.lb_guidedactions_item_disabled_text_alpha;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedactions_item_enabled_chevron_alpha = global::Facile.Droid.Resource.String.lb_guidedactions_item_enabled_chevron_alpha;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedactions_item_unselected_description_text_alpha = global::Facile.Droid.Resource.String.lb_guidedactions_item_unselected_description_text_alpha;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedactions_item_unselected_text_alpha = global::Facile.Droid.Resource.String.lb_guidedactions_item_unselected_text_alpha;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedactions_width_weight = global::Facile.Droid.Resource.String.lb_guidedactions_width_weight;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedactions_width_weight_two_panels = global::Facile.Droid.Resource.String.lb_guidedactions_width_weight_two_panels;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedbuttonactions_width_weight = global::Facile.Droid.Resource.String.lb_guidedbuttonactions_width_weight;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedstep_height_weight = global::Facile.Droid.Resource.String.lb_guidedstep_height_weight;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedstep_height_weight_translucent = global::Facile.Droid.Resource.String.lb_guidedstep_height_weight_translucent;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedstep_keyline = global::Facile.Droid.Resource.String.lb_guidedstep_keyline;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_navigation_menu_contentDescription = global::Facile.Droid.Resource.String.lb_navigation_menu_contentDescription;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_onboarding_accessibility_next = global::Facile.Droid.Resource.String.lb_onboarding_accessibility_next;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_onboarding_get_started = global::Facile.Droid.Resource.String.lb_onboarding_get_started;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_closed_captioning_disable = global::Facile.Droid.Resource.String.lb_playback_controls_closed_captioning_disable;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_closed_captioning_enable = global::Facile.Droid.Resource.String.lb_playback_controls_closed_captioning_enable;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_fast_forward = global::Facile.Droid.Resource.String.lb_playback_controls_fast_forward;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_fast_forward_multiplier = global::Facile.Droid.Resource.String.lb_playback_controls_fast_forward_multiplier;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_hidden = global::Facile.Droid.Resource.String.lb_playback_controls_hidden;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_high_quality_disable = global::Facile.Droid.Resource.String.lb_playback_controls_high_quality_disable;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_high_quality_enable = global::Facile.Droid.Resource.String.lb_playback_controls_high_quality_enable;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_more_actions = global::Facile.Droid.Resource.String.lb_playback_controls_more_actions;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_pause = global::Facile.Droid.Resource.String.lb_playback_controls_pause;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_picture_in_picture = global::Facile.Droid.Resource.String.lb_playback_controls_picture_in_picture;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_play = global::Facile.Droid.Resource.String.lb_playback_controls_play;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_repeat_all = global::Facile.Droid.Resource.String.lb_playback_controls_repeat_all;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_repeat_none = global::Facile.Droid.Resource.String.lb_playback_controls_repeat_none;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_repeat_one = global::Facile.Droid.Resource.String.lb_playback_controls_repeat_one;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_rewind = global::Facile.Droid.Resource.String.lb_playback_controls_rewind;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_rewind_multiplier = global::Facile.Droid.Resource.String.lb_playback_controls_rewind_multiplier;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_shown = global::Facile.Droid.Resource.String.lb_playback_controls_shown;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_shuffle_disable = global::Facile.Droid.Resource.String.lb_playback_controls_shuffle_disable;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_shuffle_enable = global::Facile.Droid.Resource.String.lb_playback_controls_shuffle_enable;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_skip_next = global::Facile.Droid.Resource.String.lb_playback_controls_skip_next;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_skip_previous = global::Facile.Droid.Resource.String.lb_playback_controls_skip_previous;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_thumb_down = global::Facile.Droid.Resource.String.lb_playback_controls_thumb_down;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_thumb_down_outline = global::Facile.Droid.Resource.String.lb_playback_controls_thumb_down_outline;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_thumb_up = global::Facile.Droid.Resource.String.lb_playback_controls_thumb_up;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_thumb_up_outline = global::Facile.Droid.Resource.String.lb_playback_controls_thumb_up_outline;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_search_bar_hint = global::Facile.Droid.Resource.String.lb_search_bar_hint;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_search_bar_hint_speech = global::Facile.Droid.Resource.String.lb_search_bar_hint_speech;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_search_bar_hint_with_title = global::Facile.Droid.Resource.String.lb_search_bar_hint_with_title;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_search_bar_hint_with_title_speech = global::Facile.Droid.Resource.String.lb_search_bar_hint_with_title_speech;
-			global::Com.Syncfusion.Carousel.Resource.String.library_name = global::Facile.Droid.Resource.String.library_name;
-			global::Com.Syncfusion.Carousel.Resource.String.orb_search_action = global::Facile.Droid.Resource.String.orb_search_action;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback = global::Facile.Droid.Resource.Style.TextAppearance_Leanback;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_DetailsActionButton = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_DetailsActionButton;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_DetailsDescriptionBody = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_DetailsDescriptionBody;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_DetailsDescriptionSubtitle = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_DetailsDescriptionSubtitle;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_DetailsDescriptionTitle = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_DetailsDescriptionTitle;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_ErrorMessage = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_ErrorMessage;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_Header = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_Header;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_Header_Section = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_Header_Section;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_ImageCardView = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_ImageCardView;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_ImageCardView_Content = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_ImageCardView_Content;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_ImageCardView_Title = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_ImageCardView_Title;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_PlaybackControlLabel = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_PlaybackControlLabel;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_PlaybackControlsTime = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_PlaybackControlsTime;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_PlaybackMediaItemDuration = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_PlaybackMediaItemDuration;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_PlaybackMediaItemName = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_PlaybackMediaItemName;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_PlaybackMediaItemNumber = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_PlaybackMediaItemNumber;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_PlaybackMediaListHeaderTitle = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_PlaybackMediaListHeaderTitle;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_Row_Header = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_Row_Header;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_Row_Header_Description = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_Row_Header_Description;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_Row_HoverCardDescription = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_Row_HoverCardDescription;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_Row_HoverCardTitle = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_Row_HoverCardTitle;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_SearchTextEdit = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_SearchTextEdit;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_Title = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_Title;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_LeanbackBase = global::Facile.Droid.Resource.Style.TextAppearance_LeanbackBase;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback = global::Facile.Droid.Resource.Style.Theme_Leanback;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback_Browse = global::Facile.Droid.Resource.Style.Theme_Leanback_Browse;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback_Details = global::Facile.Droid.Resource.Style.Theme_Leanback_Details;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback_Details_NoSharedElementTransition = global::Facile.Droid.Resource.Style.Theme_Leanback_Details_NoSharedElementTransition;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback_GuidedStep = global::Facile.Droid.Resource.Style.Theme_Leanback_GuidedStep;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback_GuidedStep_Half = global::Facile.Droid.Resource.Style.Theme_Leanback_GuidedStep_Half;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback_GuidedStepBase = global::Facile.Droid.Resource.Style.Theme_Leanback_GuidedStepBase;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback_Onboarding = global::Facile.Droid.Resource.Style.Theme_Leanback_Onboarding;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback_VerticalGrid = global::Facile.Droid.Resource.Style.Theme_Leanback_VerticalGrid;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_LeanbackBase = global::Facile.Droid.Resource.Style.Theme_LeanbackBase;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback = global::Facile.Droid.Resource.Style.Widget_Leanback;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_BaseCardViewStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_BaseCardViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_DetailsActionButtonStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_DetailsActionButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_DetailsActionButtonStyleBase = global::Facile.Droid.Resource.Style.Widget_Leanback_DetailsActionButtonStyleBase;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_DetailsDescriptionBodyStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_DetailsDescriptionBodyStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_DetailsDescriptionSubtitleStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_DetailsDescriptionSubtitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_DetailsDescriptionTitleStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_DetailsDescriptionTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_ErrorMessageStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_ErrorMessageStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GridItems = global::Facile.Droid.Resource.Style.Widget_Leanback_GridItems;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GridItems_VerticalGridView = global::Facile.Droid.Resource.Style.Widget_Leanback_GridItems_VerticalGridView;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidanceBreadcrumbStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidanceBreadcrumbStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidanceContainerStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidanceContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidanceDescriptionStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidanceDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidanceIconStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidanceIconStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidanceTitleStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidanceTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionItemCheckmarkStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionItemCheckmarkStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionItemChevronStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionItemChevronStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionItemContainerStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionItemContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionItemContentStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionItemContentStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionItemDescriptionStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionItemDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionItemIconStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionItemIconStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionItemTitleStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionItemTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionsContainerStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionsContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionsListStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionsSelectorStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionsSelectorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedButtonActionsListStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedButtonActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedSubActionsListStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedSubActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Header = global::Facile.Droid.Resource.Style.Widget_Leanback_Header;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Header_Section = global::Facile.Droid.Resource.Style.Widget_Leanback_Header_Section;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Headers = global::Facile.Droid.Resource.Style.Widget_Leanback_Headers;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Headers_VerticalGridView = global::Facile.Droid.Resource.Style.Widget_Leanback_Headers_VerticalGridView;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_ImageCardView = global::Facile.Droid.Resource.Style.Widget_Leanback_ImageCardView;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_ImageCardView_BadgeStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_ImageCardView_BadgeStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_ImageCardView_ContentStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_ImageCardView_ContentStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_ImageCardView_ImageStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_ImageCardView_ImageStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_ImageCardView_InfoAreaStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_ImageCardView_InfoAreaStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_ImageCardView_TitleStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_ImageCardView_TitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_ImageCardViewStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_ImageCardViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_OnboardingDescriptionStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_OnboardingDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_OnboardingHeaderStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_OnboardingHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_OnboardingLogoStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_OnboardingLogoStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_OnboardingNavigatorContainerStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_OnboardingNavigatorContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_OnboardingPageIndicatorStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_OnboardingPageIndicatorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_OnboardingStartButtonStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_OnboardingStartButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_OnboardingTitleStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_OnboardingTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackControlLabelStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackControlLabelStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackControlsActionIconsStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackControlsActionIconsStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackControlsButtonStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackControlsButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackControlsTimeStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackControlsTimeStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaItemDetailsStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaItemDetailsStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaItemDurationStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaItemDurationStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaItemNameStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaItemNameStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaItemNumberStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaItemNumberStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaItemNumberViewFlipperStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaItemNumberViewFlipperStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaItemRowStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaItemRowStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaItemSeparatorStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaItemSeparatorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaListHeaderStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaListHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaListHeaderTitleStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaListHeaderTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackRow = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackRow;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Row = global::Facile.Droid.Resource.Style.Widget_Leanback_Row;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Row_Header = global::Facile.Droid.Resource.Style.Widget_Leanback_Row_Header;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Row_Header_Description = global::Facile.Droid.Resource.Style.Widget_Leanback_Row_Header_Description;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Row_HeaderDock = global::Facile.Droid.Resource.Style.Widget_Leanback_Row_HeaderDock;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Row_HorizontalGridView = global::Facile.Droid.Resource.Style.Widget_Leanback_Row_HorizontalGridView;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Row_HoverCardDescription = global::Facile.Droid.Resource.Style.Widget_Leanback_Row_HoverCardDescription;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Row_HoverCardTitle = global::Facile.Droid.Resource.Style.Widget_Leanback_Row_HoverCardTitle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Rows = global::Facile.Droid.Resource.Style.Widget_Leanback_Rows;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Rows_VerticalGridView = global::Facile.Droid.Resource.Style.Widget_Leanback_Rows_VerticalGridView;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_SearchOrbViewStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_SearchOrbViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Title = global::Facile.Droid.Resource.Style.Widget_Leanback_Title;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Title_Icon = global::Facile.Droid.Resource.Style.Widget_Leanback_Title_Icon;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Title_Text = global::Facile.Droid.Resource.Style.Widget_Leanback_Title_Text;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_TitleView = global::Facile.Droid.Resource.Style.Widget_Leanback_TitleView;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_LeanbackBase = global::Facile.Droid.Resource.Style.Widget_LeanbackBase;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_browse_enter_transition = global::Facile.Droid.Resource.Transition.lb_browse_enter_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_browse_entrance_transition = global::Facile.Droid.Resource.Transition.lb_browse_entrance_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_browse_headers_in = global::Facile.Droid.Resource.Transition.lb_browse_headers_in;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_browse_headers_out = global::Facile.Droid.Resource.Transition.lb_browse_headers_out;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_browse_return_transition = global::Facile.Droid.Resource.Transition.lb_browse_return_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_details_enter_transition = global::Facile.Droid.Resource.Transition.lb_details_enter_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_details_return_transition = global::Facile.Droid.Resource.Transition.lb_details_return_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_enter_transition = global::Facile.Droid.Resource.Transition.lb_enter_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_guidedstep_activity_enter = global::Facile.Droid.Resource.Transition.lb_guidedstep_activity_enter;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_guidedstep_activity_enter_bottom = global::Facile.Droid.Resource.Transition.lb_guidedstep_activity_enter_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_return_transition = global::Facile.Droid.Resource.Transition.lb_return_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_shared_element_enter_transition = global::Facile.Droid.Resource.Transition.lb_shared_element_enter_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_shared_element_return_transition = global::Facile.Droid.Resource.Transition.lb_shared_element_return_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_title_in = global::Facile.Droid.Resource.Transition.lb_title_in;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_title_out = global::Facile.Droid.Resource.Transition.lb_title_out;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_vertical_grid_enter_transition = global::Facile.Droid.Resource.Transition.lb_vertical_grid_enter_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_vertical_grid_entrance_transition = global::Facile.Droid.Resource.Transition.lb_vertical_grid_entrance_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_vertical_grid_return_transition = global::Facile.Droid.Resource.Transition.lb_vertical_grid_return_transition;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidanceBreadcrumbStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidanceBreadcrumbStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidanceContainerStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidanceContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidanceDescriptionStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidanceDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidanceEntryAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidanceEntryAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidanceIconStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidanceIconStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidanceTitleStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidanceTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionCheckedAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionCheckedAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionContentWidth = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionContentWidth;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionContentWidthNoIcon = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionContentWidthNoIcon;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionContentWidthWeight = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionContentWidthWeight;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionContentWidthWeightTwoPanels = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionContentWidthWeightTwoPanels;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionDescriptionMinLines = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionDescriptionMinLines;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionDisabledChevronAlpha = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionDisabledChevronAlpha;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionEnabledChevronAlpha = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionEnabledChevronAlpha;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemCheckmarkStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemCheckmarkStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemChevronStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemChevronStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemContainerStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemContentStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemContentStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemDescriptionStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemIconStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemIconStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemTitleStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionPressedAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionPressedAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionTitleMaxLines = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionTitleMaxLines;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionTitleMinLines = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionTitleMinLines;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionUncheckedAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionUncheckedAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionUnpressedAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionUnpressedAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionVerticalPadding = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionVerticalPadding;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsBackground = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsBackground;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsBackgroundDark = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsBackgroundDark;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsContainerStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsElevation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsElevation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsEntryAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsEntryAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsListStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsSelectorDrawable = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsSelectorDrawable;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsSelectorHideAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsSelectorHideAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsSelectorShowAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsSelectorShowAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsSelectorStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsSelectorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedButtonActionsListStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedButtonActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedButtonActionsWidthWeight = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedButtonActionsWidthWeight;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepBackground = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepBackground;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepEntryAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepEntryAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepExitAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepExitAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepHeightWeight = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepHeightWeight;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepImeAppearingAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepImeAppearingAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepImeDisappearingAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepImeDisappearingAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepKeyline = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepKeyline;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepReentryAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepReentryAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepReturnAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepReturnAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepTheme = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepTheme;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepThemeFlag = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepThemeFlag;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedSubActionsListStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedSubActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme_onboardingDescriptionStyle = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme_onboardingDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme_onboardingHeaderStyle = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme_onboardingHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme_onboardingLogoStyle = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme_onboardingLogoStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme_onboardingNavigatorContainerStyle = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme_onboardingNavigatorContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme_onboardingPageIndicatorStyle = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme_onboardingPageIndicatorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme_onboardingStartButtonStyle = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme_onboardingStartButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme_onboardingTheme = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme_onboardingTheme;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme_onboardingTitleStyle = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme_onboardingTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme = global::Facile.Droid.Resource.Styleable.LeanbackTheme;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_baseCardViewStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_baseCardViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browsePaddingBottom = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browsePaddingBottom;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browsePaddingEnd = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browsePaddingEnd;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browsePaddingStart = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browsePaddingStart;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browsePaddingTop = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browsePaddingTop;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browseRowsFadingEdgeLength = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browseRowsFadingEdgeLength;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browseRowsMarginStart = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browseRowsMarginStart;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browseRowsMarginTop = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browseRowsMarginTop;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browseTitleIconStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browseTitleIconStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browseTitleTextStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browseTitleTextStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browseTitleViewLayout = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browseTitleViewLayout;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browseTitleViewStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browseTitleViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_defaultBrandColor = global::Facile.Droid.Resource.Styleable.LeanbackTheme_defaultBrandColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_defaultBrandColorDark = global::Facile.Droid.Resource.Styleable.LeanbackTheme_defaultBrandColorDark;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_defaultSearchBrightColor = global::Facile.Droid.Resource.Styleable.LeanbackTheme_defaultSearchBrightColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_defaultSearchColor = global::Facile.Droid.Resource.Styleable.LeanbackTheme_defaultSearchColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_defaultSearchIcon = global::Facile.Droid.Resource.Styleable.LeanbackTheme_defaultSearchIcon;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_defaultSearchIconColor = global::Facile.Droid.Resource.Styleable.LeanbackTheme_defaultSearchIconColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_defaultSectionHeaderColor = global::Facile.Droid.Resource.Styleable.LeanbackTheme_defaultSectionHeaderColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_detailsActionButtonStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_detailsActionButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_detailsDescriptionBodyStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_detailsDescriptionBodyStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_detailsDescriptionSubtitleStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_detailsDescriptionSubtitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_detailsDescriptionTitleStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_detailsDescriptionTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_errorMessageStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_errorMessageStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_headerStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_headerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_headersVerticalGridStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_headersVerticalGridStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_imageCardViewBadgeStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_imageCardViewBadgeStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_imageCardViewContentStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_imageCardViewContentStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_imageCardViewImageStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_imageCardViewImageStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_imageCardViewInfoAreaStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_imageCardViewInfoAreaStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_imageCardViewStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_imageCardViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_imageCardViewTitleStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_imageCardViewTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_itemsVerticalGridStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_itemsVerticalGridStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_overlayDimActiveLevel = global::Facile.Droid.Resource.Styleable.LeanbackTheme_overlayDimActiveLevel;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_overlayDimDimmedLevel = global::Facile.Droid.Resource.Styleable.LeanbackTheme_overlayDimDimmedLevel;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_overlayDimMaskColor = global::Facile.Droid.Resource.Styleable.LeanbackTheme_overlayDimMaskColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackControlButtonLabelStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackControlButtonLabelStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackControlsActionIcons = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackControlsActionIcons;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackControlsButtonStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackControlsButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackControlsIconHighlightColor = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackControlsIconHighlightColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackControlsTimeStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackControlsTimeStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemDetailsStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemDetailsStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemDurationStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemDurationStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemNameStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemNameStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemNumberStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemNumberStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemNumberViewFlipperLayout = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemNumberViewFlipperLayout;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemNumberViewFlipperStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemNumberViewFlipperStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemPaddingStart = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemPaddingStart;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemRowStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemRowStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemSeparatorStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemSeparatorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaListHeaderStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaListHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaListHeaderTitleStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaListHeaderTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackPaddingEnd = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackPaddingEnd;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackPaddingStart = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackPaddingStart;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackProgressPrimaryColor = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackProgressPrimaryColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_rowHeaderDescriptionStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_rowHeaderDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_rowHeaderDockStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_rowHeaderDockStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_rowHeaderStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_rowHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_rowHorizontalGridStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_rowHorizontalGridStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_rowHoverCardDescriptionStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_rowHoverCardDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_rowHoverCardTitleStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_rowHoverCardTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_rowsVerticalGridStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_rowsVerticalGridStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_searchOrbViewStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_searchOrbViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_sectionHeaderStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_sectionHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.PagingIndicator = global::Facile.Droid.Resource.Styleable.PagingIndicator;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.PagingIndicator_arrowBgColor = global::Facile.Droid.Resource.Styleable.PagingIndicator_arrowBgColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.PagingIndicator_arrowRadius = global::Facile.Droid.Resource.Styleable.PagingIndicator_arrowRadius;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.PagingIndicator_dotBgColor = global::Facile.Droid.Resource.Styleable.PagingIndicator_dotBgColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.PagingIndicator_dotToArrowGap = global::Facile.Droid.Resource.Styleable.PagingIndicator_dotToArrowGap;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.PagingIndicator_dotToDotGap = global::Facile.Droid.Resource.Styleable.PagingIndicator_dotToDotGap;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.PagingIndicator_lbDotRadius = global::Facile.Droid.Resource.Styleable.PagingIndicator_lbDotRadius;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.RecyclerView = global::Facile.Droid.Resource.Styleable.RecyclerView;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.RecyclerView_android_descendantFocusability = global::Facile.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.RecyclerView_android_orientation = global::Facile.Droid.Resource.Styleable.RecyclerView_android_orientation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.RecyclerView_layoutManager = global::Facile.Droid.Resource.Styleable.RecyclerView_layoutManager;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.RecyclerView_reverseLayout = global::Facile.Droid.Resource.Styleable.RecyclerView_reverseLayout;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.RecyclerView_spanCount = global::Facile.Droid.Resource.Styleable.RecyclerView_spanCount;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.RecyclerView_stackFromEnd = global::Facile.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView = global::Facile.Droid.Resource.Styleable.lbBaseCardView;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_activatedAnimationDuration = global::Facile.Droid.Resource.Styleable.lbBaseCardView_activatedAnimationDuration;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_cardBackground = global::Facile.Droid.Resource.Styleable.lbBaseCardView_cardBackground;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_cardForeground = global::Facile.Droid.Resource.Styleable.lbBaseCardView_cardForeground;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_cardType = global::Facile.Droid.Resource.Styleable.lbBaseCardView_cardType;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_extraVisibility = global::Facile.Droid.Resource.Styleable.lbBaseCardView_extraVisibility;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_infoVisibility = global::Facile.Droid.Resource.Styleable.lbBaseCardView_infoVisibility;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_selectedAnimationDelay = global::Facile.Droid.Resource.Styleable.lbBaseCardView_selectedAnimationDelay;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_selectedAnimationDuration = global::Facile.Droid.Resource.Styleable.lbBaseCardView_selectedAnimationDuration;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_Layout = global::Facile.Droid.Resource.Styleable.lbBaseCardView_Layout;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_Layout_layout_viewType = global::Facile.Droid.Resource.Styleable.lbBaseCardView_Layout_layout_viewType;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView = global::Facile.Droid.Resource.Styleable.lbBaseGridView;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_android_gravity = global::Facile.Droid.Resource.Styleable.lbBaseGridView_android_gravity;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_android_horizontalSpacing = global::Facile.Droid.Resource.Styleable.lbBaseGridView_android_horizontalSpacing;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_android_verticalSpacing = global::Facile.Droid.Resource.Styleable.lbBaseGridView_android_verticalSpacing;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_focusOutEnd = global::Facile.Droid.Resource.Styleable.lbBaseGridView_focusOutEnd;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_focusOutFront = global::Facile.Droid.Resource.Styleable.lbBaseGridView_focusOutFront;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_focusOutSideEnd = global::Facile.Droid.Resource.Styleable.lbBaseGridView_focusOutSideEnd;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_focusOutSideStart = global::Facile.Droid.Resource.Styleable.lbBaseGridView_focusOutSideStart;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_horizontalMargin = global::Facile.Droid.Resource.Styleable.lbBaseGridView_horizontalMargin;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_verticalMargin = global::Facile.Droid.Resource.Styleable.lbBaseGridView_verticalMargin;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbDatePicker = global::Facile.Droid.Resource.Styleable.lbDatePicker;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbDatePicker_android_maxDate = global::Facile.Droid.Resource.Styleable.lbDatePicker_android_maxDate;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbDatePicker_android_minDate = global::Facile.Droid.Resource.Styleable.lbDatePicker_android_minDate;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbDatePicker_datePickerFormat = global::Facile.Droid.Resource.Styleable.lbDatePicker_datePickerFormat;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbHorizontalGridView = global::Facile.Droid.Resource.Styleable.lbHorizontalGridView;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbHorizontalGridView_numberOfRows = global::Facile.Droid.Resource.Styleable.lbHorizontalGridView_numberOfRows;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbHorizontalGridView_rowHeight = global::Facile.Droid.Resource.Styleable.lbHorizontalGridView_rowHeight;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbImageCardView = global::Facile.Droid.Resource.Styleable.lbImageCardView;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbImageCardView_infoAreaBackground = global::Facile.Droid.Resource.Styleable.lbImageCardView_infoAreaBackground;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbImageCardView_lbImageCardViewType = global::Facile.Droid.Resource.Styleable.lbImageCardView_lbImageCardViewType;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_closed_captioning = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_closed_captioning;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_fast_forward = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_fast_forward;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_high_quality = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_high_quality;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_pause = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_pause;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_picture_in_picture = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_picture_in_picture;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_play = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_play;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_repeat = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_repeat;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_repeat_one = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_repeat_one;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_rewind = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_rewind;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_shuffle = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_shuffle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_skip_next = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_skip_next;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_skip_previous = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_skip_previous;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_thumb_down = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_thumb_down;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_thumb_down_outline = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_thumb_down_outline;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_thumb_up = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_thumb_up;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_thumb_up_outline = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_thumb_up_outline;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbResizingTextView = global::Facile.Droid.Resource.Styleable.lbResizingTextView;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbResizingTextView_maintainLineSpacing = global::Facile.Droid.Resource.Styleable.lbResizingTextView_maintainLineSpacing;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbResizingTextView_resizeTrigger = global::Facile.Droid.Resource.Styleable.lbResizingTextView_resizeTrigger;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbResizingTextView_resizedPaddingAdjustmentBottom = global::Facile.Droid.Resource.Styleable.lbResizingTextView_resizedPaddingAdjustmentBottom;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbResizingTextView_resizedPaddingAdjustmentTop = global::Facile.Droid.Resource.Styleable.lbResizingTextView_resizedPaddingAdjustmentTop;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbResizingTextView_resizedTextSize = global::Facile.Droid.Resource.Styleable.lbResizingTextView_resizedTextSize;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSearchOrbView = global::Facile.Droid.Resource.Styleable.lbSearchOrbView;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSearchOrbView_searchOrbBrightColor = global::Facile.Droid.Resource.Styleable.lbSearchOrbView_searchOrbBrightColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSearchOrbView_searchOrbColor = global::Facile.Droid.Resource.Styleable.lbSearchOrbView_searchOrbColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSearchOrbView_searchOrbIcon = global::Facile.Droid.Resource.Styleable.lbSearchOrbView_searchOrbIcon;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSearchOrbView_searchOrbIconColor = global::Facile.Droid.Resource.Styleable.lbSearchOrbView_searchOrbIconColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSlide = global::Facile.Droid.Resource.Styleable.lbSlide;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSlide_android_duration = global::Facile.Droid.Resource.Styleable.lbSlide_android_duration;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSlide_android_interpolator = global::Facile.Droid.Resource.Styleable.lbSlide_android_interpolator;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSlide_android_startDelay = global::Facile.Droid.Resource.Styleable.lbSlide_android_startDelay;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSlide_lb_slideEdge = global::Facile.Droid.Resource.Styleable.lbSlide_lb_slideEdge;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbTimePicker = global::Facile.Droid.Resource.Styleable.lbTimePicker;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbTimePicker_is24HourFormat = global::Facile.Droid.Resource.Styleable.lbTimePicker_is24HourFormat;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbTimePicker_useCurrentTime = global::Facile.Droid.Resource.Styleable.lbTimePicker_useCurrentTime;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbVerticalGridView = global::Facile.Droid.Resource.Styleable.lbVerticalGridView;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbVerticalGridView_columnWidth = global::Facile.Droid.Resource.Styleable.lbVerticalGridView_columnWidth;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbVerticalGridView_numberOfColumns = global::Facile.Droid.Resource.Styleable.lbVerticalGridView_numberOfColumns;
 			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Layout.ScrollViewer = global::Facile.Droid.Resource.Layout.ScrollViewer;
+			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.cancel_drop = global::Facile.Droid.Resource.String.cancel_drop;
+			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.drop_above = global::Facile.Droid.Resource.String.drop_above;
+			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.drop_below = global::Facile.Droid.Resource.String.drop_below;
 			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.library_name = global::Facile.Droid.Resource.String.library_name;
+			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.load_more_items = global::Facile.Droid.Resource.String.load_more_items;
+			global::Syncfusion.ListView.XForms.Android.Resource.String.ApplicationName = global::Facile.Droid.Resource.String.ApplicationName;
+			global::Syncfusion.ListView.XForms.Android.Resource.String.Hello = global::Facile.Droid.Resource.String.Hello;
+			global::Syncfusion.ListView.XForms.Android.Resource.String.Load_More = global::Facile.Droid.Resource.String.Load_More;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Facile.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -3905,9 +2716,6 @@ namespace Facile.Droid
 			// aapt resource value: 0x7f0a005a
 			public const int disabled_alpha_material_light = 2131361882;
 			
-			// aapt resource value: 0x7f0a018a
-			public const int drag_offset = 2131362186;
-			
 			// aapt resource value: 0x7f0a0000
 			public const int fastscroll_default_thickness = 2131361792;
 			
@@ -3916,9 +2724,6 @@ namespace Facile.Droid
 			
 			// aapt resource value: 0x7f0a0002
 			public const int fastscroll_minimum_range = 2131361794;
-			
-			// aapt resource value: 0x7f0a018d
-			public const int fastswipe_offset = 2131362189;
 			
 			// aapt resource value: 0x7f0a005b
 			public const int highlight_alpha_material_colored = 2131361883;
@@ -3940,9 +2745,6 @@ namespace Facile.Droid
 			
 			// aapt resource value: 0x7f0a0061
 			public const int hint_pressed_alpha_material_light = 2131361889;
-			
-			// aapt resource value: 0x7f0a018b
-			public const int init_offset = 2131362187;
 			
 			// aapt resource value: 0x7f0a0003
 			public const int item_touch_helper_max_drag_scroll_per_frame = 2131361795;
@@ -4706,9 +3508,6 @@ namespace Facile.Droid
 			// aapt resource value: 0x7f0a014f
 			public const int picker_separator_horizontal_padding = 2131362127;
 			
-			// aapt resource value: 0x7f0a018c
-			public const int slowdrag_offset = 2131362188;
-			
 			// aapt resource value: 0x7f0a0062
 			public const int tooltip_corner_radius = 2131361890;
 			
@@ -4998,26 +3797,26 @@ namespace Facile.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f02018e
-			public const int avd_hide_password_1 = 2130837902;
-			
 			// aapt resource value: 0x7f02018f
-			public const int avd_hide_password_2 = 2130837903;
+			public const int avd_hide_password_1 = 2130837903;
 			
 			// aapt resource value: 0x7f020190
-			public const int avd_hide_password_3 = 2130837904;
+			public const int avd_hide_password_2 = 2130837904;
+			
+			// aapt resource value: 0x7f020191
+			public const int avd_hide_password_3 = 2130837905;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f020191
-			public const int avd_show_password_1 = 2130837905;
-			
 			// aapt resource value: 0x7f020192
-			public const int avd_show_password_2 = 2130837906;
+			public const int avd_show_password_1 = 2130837906;
 			
 			// aapt resource value: 0x7f020193
-			public const int avd_show_password_3 = 2130837907;
+			public const int avd_show_password_2 = 2130837907;
+			
+			// aapt resource value: 0x7f020194
+			public const int avd_show_password_3 = 2130837908;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
@@ -5668,295 +4467,298 @@ namespace Facile.Droid
 			public const int ic_search_black = 2130837804;
 			
 			// aapt resource value: 0x7f02012d
-			public const int ic_settings = 2130837805;
+			public const int ic_search_white_24 = 2130837805;
 			
 			// aapt resource value: 0x7f02012e
-			public const int ic_shopping_cart = 2130837806;
+			public const int ic_settings = 2130837806;
 			
 			// aapt resource value: 0x7f02012f
-			public const int ic_storage_black = 2130837807;
+			public const int ic_shopping_cart = 2130837807;
 			
 			// aapt resource value: 0x7f020130
-			public const int ic_style = 2130837808;
+			public const int ic_storage_black = 2130837808;
 			
 			// aapt resource value: 0x7f020131
-			public const int ic_view_headline_white = 2130837809;
+			public const int ic_style = 2130837809;
 			
 			// aapt resource value: 0x7f020132
-			public const int ic_vol_type_speaker_dark = 2130837810;
+			public const int ic_view_headline_white = 2130837810;
 			
 			// aapt resource value: 0x7f020133
-			public const int ic_vol_type_speaker_group_dark = 2130837811;
+			public const int ic_vol_type_speaker_dark = 2130837811;
 			
 			// aapt resource value: 0x7f020134
-			public const int ic_vol_type_speaker_group_light = 2130837812;
+			public const int ic_vol_type_speaker_group_dark = 2130837812;
 			
 			// aapt resource value: 0x7f020135
-			public const int ic_vol_type_speaker_light = 2130837813;
+			public const int ic_vol_type_speaker_group_light = 2130837813;
 			
 			// aapt resource value: 0x7f020136
-			public const int ic_vol_type_tv_dark = 2130837814;
+			public const int ic_vol_type_speaker_light = 2130837814;
 			
 			// aapt resource value: 0x7f020137
-			public const int ic_vol_type_tv_light = 2130837815;
+			public const int ic_vol_type_tv_dark = 2130837815;
 			
 			// aapt resource value: 0x7f020138
-			public const int icon = 2130837816;
+			public const int ic_vol_type_tv_light = 2130837816;
 			
 			// aapt resource value: 0x7f020139
-			public const int lb_action_bg = 2130837817;
+			public const int icon = 2130837817;
 			
 			// aapt resource value: 0x7f02013a
-			public const int lb_action_bg_focused = 2130837818;
+			public const int lb_action_bg = 2130837818;
 			
 			// aapt resource value: 0x7f02013b
-			public const int lb_background = 2130837819;
+			public const int lb_action_bg_focused = 2130837819;
 			
 			// aapt resource value: 0x7f02013c
-			public const int lb_card_foreground = 2130837820;
+			public const int lb_background = 2130837820;
 			
 			// aapt resource value: 0x7f02013d
-			public const int lb_card_shadow_focused = 2130837821;
+			public const int lb_card_foreground = 2130837821;
 			
 			// aapt resource value: 0x7f02013e
-			public const int lb_card_shadow_normal = 2130837822;
+			public const int lb_card_shadow_focused = 2130837822;
 			
 			// aapt resource value: 0x7f02013f
-			public const int lb_control_button_primary = 2130837823;
+			public const int lb_card_shadow_normal = 2130837823;
 			
 			// aapt resource value: 0x7f020140
-			public const int lb_control_button_secondary = 2130837824;
+			public const int lb_control_button_primary = 2130837824;
 			
 			// aapt resource value: 0x7f020141
-			public const int lb_headers_right_fading = 2130837825;
+			public const int lb_control_button_secondary = 2130837825;
 			
 			// aapt resource value: 0x7f020142
-			public const int lb_ic_actions_right_arrow = 2130837826;
+			public const int lb_headers_right_fading = 2130837826;
 			
 			// aapt resource value: 0x7f020143
-			public const int lb_ic_cc = 2130837827;
+			public const int lb_ic_actions_right_arrow = 2130837827;
 			
 			// aapt resource value: 0x7f020144
-			public const int lb_ic_fast_forward = 2130837828;
+			public const int lb_ic_cc = 2130837828;
 			
 			// aapt resource value: 0x7f020145
-			public const int lb_ic_fast_rewind = 2130837829;
+			public const int lb_ic_fast_forward = 2130837829;
 			
 			// aapt resource value: 0x7f020146
-			public const int lb_ic_guidedactions_item_chevron = 2130837830;
+			public const int lb_ic_fast_rewind = 2130837830;
 			
 			// aapt resource value: 0x7f020147
-			public const int lb_ic_hq = 2130837831;
+			public const int lb_ic_guidedactions_item_chevron = 2130837831;
 			
 			// aapt resource value: 0x7f020148
-			public const int lb_ic_in_app_search = 2130837832;
+			public const int lb_ic_hq = 2130837832;
 			
 			// aapt resource value: 0x7f020149
-			public const int lb_ic_loop = 2130837833;
+			public const int lb_ic_in_app_search = 2130837833;
 			
 			// aapt resource value: 0x7f02014a
-			public const int lb_ic_loop_one = 2130837834;
+			public const int lb_ic_loop = 2130837834;
 			
 			// aapt resource value: 0x7f02014b
-			public const int lb_ic_more = 2130837835;
+			public const int lb_ic_loop_one = 2130837835;
 			
 			// aapt resource value: 0x7f02014c
-			public const int lb_ic_nav_arrow = 2130837836;
+			public const int lb_ic_more = 2130837836;
 			
 			// aapt resource value: 0x7f02014d
-			public const int lb_ic_pause = 2130837837;
+			public const int lb_ic_nav_arrow = 2130837837;
 			
 			// aapt resource value: 0x7f02014e
-			public const int lb_ic_pip = 2130837838;
+			public const int lb_ic_pause = 2130837838;
 			
 			// aapt resource value: 0x7f02014f
-			public const int lb_ic_play = 2130837839;
+			public const int lb_ic_pip = 2130837839;
 			
 			// aapt resource value: 0x7f020150
-			public const int lb_ic_play_fit = 2130837840;
+			public const int lb_ic_play = 2130837840;
 			
 			// aapt resource value: 0x7f020151
-			public const int lb_ic_playback_loop = 2130837841;
+			public const int lb_ic_play_fit = 2130837841;
 			
 			// aapt resource value: 0x7f020152
-			public const int lb_ic_replay = 2130837842;
+			public const int lb_ic_playback_loop = 2130837842;
 			
 			// aapt resource value: 0x7f020153
-			public const int lb_ic_sad_cloud = 2130837843;
+			public const int lb_ic_replay = 2130837843;
 			
 			// aapt resource value: 0x7f020154
-			public const int lb_ic_search_mic = 2130837844;
+			public const int lb_ic_sad_cloud = 2130837844;
 			
 			// aapt resource value: 0x7f020155
-			public const int lb_ic_search_mic_out = 2130837845;
+			public const int lb_ic_search_mic = 2130837845;
 			
 			// aapt resource value: 0x7f020156
-			public const int lb_ic_shuffle = 2130837846;
+			public const int lb_ic_search_mic_out = 2130837846;
 			
 			// aapt resource value: 0x7f020157
-			public const int lb_ic_skip_next = 2130837847;
+			public const int lb_ic_shuffle = 2130837847;
 			
 			// aapt resource value: 0x7f020158
-			public const int lb_ic_skip_previous = 2130837848;
+			public const int lb_ic_skip_next = 2130837848;
 			
 			// aapt resource value: 0x7f020159
-			public const int lb_ic_stop = 2130837849;
+			public const int lb_ic_skip_previous = 2130837849;
 			
 			// aapt resource value: 0x7f02015a
-			public const int lb_ic_thumb_down = 2130837850;
+			public const int lb_ic_stop = 2130837850;
 			
 			// aapt resource value: 0x7f02015b
-			public const int lb_ic_thumb_down_outline = 2130837851;
+			public const int lb_ic_thumb_down = 2130837851;
 			
 			// aapt resource value: 0x7f02015c
-			public const int lb_ic_thumb_up = 2130837852;
+			public const int lb_ic_thumb_down_outline = 2130837852;
 			
 			// aapt resource value: 0x7f02015d
-			public const int lb_ic_thumb_up_outline = 2130837853;
+			public const int lb_ic_thumb_up = 2130837853;
 			
 			// aapt resource value: 0x7f02015e
-			public const int lb_in_app_search_bg = 2130837854;
+			public const int lb_ic_thumb_up_outline = 2130837854;
 			
 			// aapt resource value: 0x7f02015f
-			public const int lb_in_app_search_shadow_focused = 2130837855;
+			public const int lb_in_app_search_bg = 2130837855;
 			
 			// aapt resource value: 0x7f020160
-			public const int lb_in_app_search_shadow_normal = 2130837856;
+			public const int lb_in_app_search_shadow_focused = 2130837856;
 			
 			// aapt resource value: 0x7f020161
-			public const int lb_onboarding_start_button_background = 2130837857;
+			public const int lb_in_app_search_shadow_normal = 2130837857;
 			
 			// aapt resource value: 0x7f020162
-			public const int lb_playback_now_playing_bar = 2130837858;
+			public const int lb_onboarding_start_button_background = 2130837858;
 			
 			// aapt resource value: 0x7f020163
-			public const int lb_playback_progress_bar = 2130837859;
+			public const int lb_playback_now_playing_bar = 2130837859;
 			
 			// aapt resource value: 0x7f020164
-			public const int lb_search_orb = 2130837860;
+			public const int lb_playback_progress_bar = 2130837860;
 			
 			// aapt resource value: 0x7f020165
-			public const int lb_selectable_item_rounded_rect = 2130837861;
+			public const int lb_search_orb = 2130837861;
 			
 			// aapt resource value: 0x7f020166
-			public const int lb_speech_orb = 2130837862;
+			public const int lb_selectable_item_rounded_rect = 2130837862;
 			
 			// aapt resource value: 0x7f020167
-			public const int lb_text_dot_one = 2130837863;
+			public const int lb_speech_orb = 2130837863;
 			
 			// aapt resource value: 0x7f020168
-			public const int lb_text_dot_one_small = 2130837864;
+			public const int lb_text_dot_one = 2130837864;
 			
 			// aapt resource value: 0x7f020169
-			public const int lb_text_dot_two = 2130837865;
+			public const int lb_text_dot_one_small = 2130837865;
 			
 			// aapt resource value: 0x7f02016a
-			public const int lb_text_dot_two_small = 2130837866;
+			public const int lb_text_dot_two = 2130837866;
 			
 			// aapt resource value: 0x7f02016b
-			public const int mr_button_connected_dark = 2130837867;
+			public const int lb_text_dot_two_small = 2130837867;
 			
 			// aapt resource value: 0x7f02016c
-			public const int mr_button_connected_light = 2130837868;
+			public const int mr_button_connected_dark = 2130837868;
 			
 			// aapt resource value: 0x7f02016d
-			public const int mr_button_connecting_dark = 2130837869;
+			public const int mr_button_connected_light = 2130837869;
 			
 			// aapt resource value: 0x7f02016e
-			public const int mr_button_connecting_light = 2130837870;
+			public const int mr_button_connecting_dark = 2130837870;
 			
 			// aapt resource value: 0x7f02016f
-			public const int mr_button_dark = 2130837871;
+			public const int mr_button_connecting_light = 2130837871;
 			
 			// aapt resource value: 0x7f020170
-			public const int mr_button_light = 2130837872;
+			public const int mr_button_dark = 2130837872;
 			
 			// aapt resource value: 0x7f020171
-			public const int mr_dialog_close_dark = 2130837873;
+			public const int mr_button_light = 2130837873;
 			
 			// aapt resource value: 0x7f020172
-			public const int mr_dialog_close_light = 2130837874;
+			public const int mr_dialog_close_dark = 2130837874;
 			
 			// aapt resource value: 0x7f020173
-			public const int mr_dialog_material_background_dark = 2130837875;
+			public const int mr_dialog_close_light = 2130837875;
 			
 			// aapt resource value: 0x7f020174
-			public const int mr_dialog_material_background_light = 2130837876;
+			public const int mr_dialog_material_background_dark = 2130837876;
 			
 			// aapt resource value: 0x7f020175
-			public const int mr_group_collapse = 2130837877;
+			public const int mr_dialog_material_background_light = 2130837877;
 			
 			// aapt resource value: 0x7f020176
-			public const int mr_group_expand = 2130837878;
+			public const int mr_group_collapse = 2130837878;
 			
 			// aapt resource value: 0x7f020177
-			public const int mr_media_pause_dark = 2130837879;
+			public const int mr_group_expand = 2130837879;
 			
 			// aapt resource value: 0x7f020178
-			public const int mr_media_pause_light = 2130837880;
+			public const int mr_media_pause_dark = 2130837880;
 			
 			// aapt resource value: 0x7f020179
-			public const int mr_media_play_dark = 2130837881;
+			public const int mr_media_pause_light = 2130837881;
 			
 			// aapt resource value: 0x7f02017a
-			public const int mr_media_play_light = 2130837882;
+			public const int mr_media_play_dark = 2130837882;
 			
 			// aapt resource value: 0x7f02017b
-			public const int mr_media_stop_dark = 2130837883;
+			public const int mr_media_play_light = 2130837883;
 			
 			// aapt resource value: 0x7f02017c
-			public const int mr_media_stop_light = 2130837884;
+			public const int mr_media_stop_dark = 2130837884;
 			
 			// aapt resource value: 0x7f02017d
-			public const int mr_vol_type_audiotrack_dark = 2130837885;
+			public const int mr_media_stop_light = 2130837885;
 			
 			// aapt resource value: 0x7f02017e
-			public const int mr_vol_type_audiotrack_light = 2130837886;
+			public const int mr_vol_type_audiotrack_dark = 2130837886;
 			
 			// aapt resource value: 0x7f02017f
-			public const int navigation_empty_icon = 2130837887;
+			public const int mr_vol_type_audiotrack_light = 2130837887;
 			
 			// aapt resource value: 0x7f020180
-			public const int notification_action_background = 2130837888;
+			public const int navigation_empty_icon = 2130837888;
 			
 			// aapt resource value: 0x7f020181
-			public const int notification_bg = 2130837889;
+			public const int notification_action_background = 2130837889;
 			
 			// aapt resource value: 0x7f020182
-			public const int notification_bg_low = 2130837890;
+			public const int notification_bg = 2130837890;
 			
 			// aapt resource value: 0x7f020183
-			public const int notification_bg_low_normal = 2130837891;
+			public const int notification_bg_low = 2130837891;
 			
 			// aapt resource value: 0x7f020184
-			public const int notification_bg_low_pressed = 2130837892;
+			public const int notification_bg_low_normal = 2130837892;
 			
 			// aapt resource value: 0x7f020185
-			public const int notification_bg_normal = 2130837893;
+			public const int notification_bg_low_pressed = 2130837893;
 			
 			// aapt resource value: 0x7f020186
-			public const int notification_bg_normal_pressed = 2130837894;
+			public const int notification_bg_normal = 2130837894;
 			
 			// aapt resource value: 0x7f020187
-			public const int notification_icon_background = 2130837895;
-			
-			// aapt resource value: 0x7f02018c
-			public const int notification_template_icon_bg = 2130837900;
-			
-			// aapt resource value: 0x7f02018d
-			public const int notification_template_icon_low_bg = 2130837901;
+			public const int notification_bg_normal_pressed = 2130837895;
 			
 			// aapt resource value: 0x7f020188
-			public const int notification_tile_bg = 2130837896;
+			public const int notification_icon_background = 2130837896;
+			
+			// aapt resource value: 0x7f02018d
+			public const int notification_template_icon_bg = 2130837901;
+			
+			// aapt resource value: 0x7f02018e
+			public const int notification_template_icon_low_bg = 2130837902;
 			
 			// aapt resource value: 0x7f020189
-			public const int notify_panel_notification_icon_bg = 2130837897;
+			public const int notification_tile_bg = 2130837897;
 			
 			// aapt resource value: 0x7f02018a
-			public const int tooltip_frame_dark = 2130837898;
+			public const int notify_panel_notification_icon_bg = 2130837898;
 			
 			// aapt resource value: 0x7f02018b
-			public const int tooltip_frame_light = 2130837899;
+			public const int tooltip_frame_dark = 2130837899;
+			
+			// aapt resource value: 0x7f02018c
+			public const int tooltip_frame_light = 2130837900;
 			
 			static Drawable()
 			{
@@ -7750,6 +6552,9 @@ namespace Facile.Droid
 			// aapt resource value: 0x7f090000
 			public const int Hello = 2131296256;
 			
+			// aapt resource value: 0x7f090071
+			public const int Load_More = 2131296369;
+			
 			// aapt resource value: 0x7f090017
 			public const int abc_action_bar_home_description = 2131296279;
 			
@@ -7843,8 +6648,17 @@ namespace Facile.Droid
 			// aapt resource value: 0x7f090069
 			public const int bottom_sheet_behavior = 2131296361;
 			
+			// aapt resource value: 0x7f090074
+			public const int cancel_drop = 2131296372;
+			
 			// aapt resource value: 0x7f09006a
 			public const int character_counter_pattern = 2131296362;
+			
+			// aapt resource value: 0x7f090075
+			public const int drop_above = 2131296373;
+			
+			// aapt resource value: 0x7f090076
+			public const int drop_below = 2131296374;
 			
 			// aapt resource value: 0x7f090035
 			public const int lb_control_display_fast_forward_multiplier = 2131296309;
@@ -7996,8 +6810,11 @@ namespace Facile.Droid
 			// aapt resource value: 0x7f09005a
 			public const int lb_search_bar_hint_with_title_speech = 2131296346;
 			
-			// aapt resource value: 0x7f090071
-			public const int library_name = 2131296369;
+			// aapt resource value: 0x7f090072
+			public const int library_name = 2131296370;
+			
+			// aapt resource value: 0x7f090073
+			public const int load_more_items = 2131296371;
 			
 			// aapt resource value: 0x7f090002
 			public const int mr_button_content_description = 2131296258;

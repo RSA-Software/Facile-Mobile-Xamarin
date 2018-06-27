@@ -35,9 +35,20 @@
 					<syncfusion:SfNumericTextBox  x:Name="m_dep" WidthRequest="120" ParserMode="Decimal" TextAlignment="End" MaximumNumberDecimalDigits="0" FormatString="N" TextColor="Black"/>
 				</StackLayout>
 
-				<StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Padding="0,0,0,20">
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
 	            	<Label Text="Registro" WidthRequest="110" VerticalTextAlignment="Center" TextColor="Navy" FontAttributes="Bold"/>
 					<Picker Title="Registro" x:Name="m_reg_picker" WidthRequest="120" TextColor="Black"/>
+				</StackLayout>
+
+				<StackLayout  Orientation="Horizontal" HorizontalOptions="Fill">
+	            	<Label Text="Stampante" WidthRequest="110" VerticalTextAlignment="Center" TextColor="Navy" FontAttributes="Bold"/>
+					<Entry Keyboard="Default" x:Name="m_printer" TextColor="Black" WidthRequest="170"/> 
+					<Button x:Name="m_search" Image="ic_search_white_24.png" HorizontalOptions="Center" BackgroundColor="#009EDA" TextColor="White" Clicked="OnClickedSearch"/>
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Padding="0,0,0,20">
+	            	<Label Text="Seconda Copia" WidthRequest="110" VerticalTextAlignment="Center" TextColor="Navy" FontAttributes="Bold"/>
+					<Picker Title="Seleziona" x:Name="m_copy_picker" WidthRequest="120" TextColor="Black"/>
 				</StackLayout>
 
 				<Button Text=" Salva " HorizontalOptions="Center" Image="ic_done_white.png" BackgroundColor="#009EDA" TextColor="White" Clicked="OnClickedSalva"/>

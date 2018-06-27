@@ -9,6 +9,7 @@ using LinkOS.Plugin;
 using LinkOS.Plugin.Abstractions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Syncfusion.ListView.XForms;
 
 namespace Facile
 {
@@ -45,24 +46,48 @@ namespace Facile
 				});
 			};
 			btnPrint.Clicked += BtnPrint_Clicked; ;
-
-
 		}
 
 		void Handle_ItemTapped(object sender, Syncfusion.ListView.XForms.ItemTappedEventArgs e)
 		{
 			DependencyService.Get<IPrinterDiscovery>().CancelDiscovery();
-			var app = (App)Application.Current;
-			app.printer = e.ItemData as IDiscoveredPrinter;
 			btnPrint.IsEnabled = true;
 		}
 
 		async void BtnPrint_Clicked(object sender, System.EventArgs e)
 		{
+			var sel = (IDiscoveredPrinter)lstDevices.SelectedItem;
+			if (sel == null) return;
+
 			busyIndicator.IsBusy = true;
-			var prn = new ZebraPrn(this);
-			await prn.PrintTest();
+			await Task.Delay(100);
+			try
+			{
+				if (Device.RuntimePlatform == Device.iOS)
+				{
+					var t = Task.Run(async () =>
+					{
+						var prn = new ZebraPrn(sel.Address.Trim());
+						await prn.PrintTest();
+					});
+					t.Wait();
+				}
+				else if (Device.RuntimePlatform == Device.Android)
+				{
+					var prn = new ZebraPrn(sel.Address.Trim());
+					await prn.PrintTest();
+				}
+			}
+			catch (ZebraExceptions ex)
+			{
+				await DisplayAlert("Errore", ex.Message, "ok");
+			}
+			catch (Exception ex)
+			{
+				await DisplayAlert("Errore", ex.Message, "ok");
+			}
 			busyIndicator.IsBusy = false;
+			await Task.Delay(100);
 		}
 
 		//Start searching for printers
@@ -134,7 +159,7 @@ namespace Facile
 			{
 				IsBusy = false;
 				btnScan.Text = "Cerca Stampanti";
-				btnScan.TextColor = Color.Black;
+				btnScan.TextColor = Color.White;
 				btnScan.IsEnabled = true;
 				busyIndicator.IsBusy = false;
 			});
@@ -154,5 +179,6 @@ namespace Facile
 			});
 		}
 
+		public SfListView PrnList { get { return lstDevices; } }
 	}
 }

@@ -489,43 +489,141 @@ namespace Facile
 
 		async void OnRecordStampa(object sender, System.EventArgs e)
 		{
+			bool stprice = true;
+			LocalImpo imp = null;
+			short num_copy = 1;
+			short max_copy = 1;
+			bool req_copy = false;
+
 			m_stampa.IsEnabled = false;
 			GetField();
+			var animation = busyIndicator.AnimationType;
+			busyIndicator.IsBusy = true;
+			busyIndicator.AnimationType = Syncfusion.SfBusyIndicator.XForms.AnimationTypes.Print;
+
 			if (_parent.doc.fat_inte == 0L)
 			{
+				busyIndicator.IsBusy = true;
 				m_cli_cod.Focus();
 				m_stampa.IsEnabled = true;
 				return;
 			}
 
+			//
+			// Ricalcoliamo il documento
+			//
 			try
 			{
 				await _parent.doc.RecalcAsync();
+				await _dbcon.UpdateAsync(_parent.doc);
+			}
+			catch (SQLiteException ex)
+			{
+				busyIndicator.IsBusy = true;
+				await DisplayAlert("Attenzione!", ex.Message, "OK");
+				m_stampa.IsEnabled = true;
+				return;
 			}
 			catch (Exception ex)
 			{
+				busyIndicator.IsBusy = true;
 				await DisplayAlert("Errore", ex.Message, "OK");
 				m_stampa.IsEnabled = true;
 				return;
 			}
 
+			//
+			// Leggiamo le impostazioni della stampante
+			//
 			try
 			{
-				await _dbcon.UpdateAsync(_parent.doc);
+				imp = await _dbcon.GetAsync<LocalImpo>(1);
+				 
+				switch(imp.seconda_copia)
+				{
+					case 0 :  // A Rchiesta
+						max_copy = 2;
+						num_copy = 1;
+						req_copy = true;
+						break;
+
+					case 1 :  // Stampa automatica
+						max_copy = 1;
+						num_copy = 2;
+						req_copy = false;
+						break;
+
+					default : // Non Stampare la seconda copia
+						max_copy = 1;
+						num_copy = 1;
+						req_copy = false;
+						break;
+				}
 			}
-			catch (SQLiteException ex)
+			catch
 			{
-				await DisplayAlert("Attenzione!", ex.Message, "OK");
+				await DisplayAlert("Attenzione!", "Impossibile leggere le impostazioni della stampante", "OK");
+				busyIndicator.IsBusy = true;
+				m_stampa.IsEnabled = true;
+				return;
+			}
+			if (string.IsNullOrWhiteSpace(imp.printer))
+			{
+				await DisplayAlert("Attenzione!", "Nessuna stampante configurata.", "OK");
+				busyIndicator.IsBusy = true;
 				m_stampa.IsEnabled = true;
 				return;
 			}
 
-			var animation = busyIndicator.AnimationType;
-			busyIndicator.IsBusy = true;
-			busyIndicator.AnimationType = Syncfusion.SfBusyIndicator.XForms.AnimationTypes.Print;
+			if (_parent.doc.fat_tipo == (short)DocTipo.TIPO_DDT)
+			{
+				stprice = await DisplayAlert("Facile", "Vuoi Stampare i Prezzi ?", "SI", "NO");
+				await Task.Delay(100);
+			}
 
-			var prn = new ZebraPrn(this);
-			await prn.PrintDoc(_parent.doc, 2);
+			try
+			{
+				if (Device.RuntimePlatform == Device.iOS)
+				{
+					for (var idx = 0; idx < max_copy; idx++)
+					{
+						if (idx != 0 && req_copy)
+						{
+							var test = await DisplayAlert("Attenzione...", "Vuoi stampare un'altra copia?", "Si", "No");
+							if (test == false) break;
+							await Task.Delay(100);
+						}
+						var t = Task.Run(async () =>
+						{
+							var prn = new ZebraPrn(imp.printer);
+							await prn.PrintDoc(_parent.doc, stprice, num_copy);
+						});
+						t.Wait();
+					}
+				}
+				else if (Device.RuntimePlatform == Device.Android)
+				{
+					var prn = new ZebraPrn(imp.printer);
+					for (var idx = 0; idx < max_copy; idx++)
+					{
+						if (idx != 0 && req_copy)
+						{
+							var test = await DisplayAlert("Attenzione...", "Vuoi stampare un'altra copia?", "Si", "No");
+							if (test == false) break;
+							await Task.Delay(100);
+						}
+						await prn.PrintDoc(_parent.doc, stprice, num_copy);
+					}
+				}
+			}
+			catch (ZebraExceptions ex)
+			{
+				await DisplayAlert("Errore", ex.Message, "ok");
+			}
+			catch (Exception ex)
+			{
+				await DisplayAlert("Errore", ex.Message, "ok");
+			}
 
 			busyIndicator.IsBusy = false;
 			busyIndicator.AnimationType = animation;

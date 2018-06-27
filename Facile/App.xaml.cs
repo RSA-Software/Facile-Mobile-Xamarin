@@ -22,6 +22,10 @@ namespace Facile
         {
 			printer = null;
 			facile_db_impo = null;
+
+			Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzUyQDMxMzYyZTMyMmUzMEZpOGZMSHMvU3hFMU5Dazc2QVNJYjlPdWhMWlZOSHhFRjFLZ1RNbE55RTg9");
+
+
 			InitializeComponent();
 			MainPage = new NavigationPage(new FacilePage());
         }

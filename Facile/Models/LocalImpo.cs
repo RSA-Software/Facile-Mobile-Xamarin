@@ -15,6 +15,8 @@ namespace Facile.Models
 		public int age { get; set; }
 		public bool data_download { get; set; }
 		public int dep { get; set; }
+		public string printer { get; set; }
+		public int seconda_copia { get; set; }
 
 		public LocalImpo()
 		{
@@ -29,6 +31,8 @@ namespace Facile.Models
 			age = 0;
 			dep = 0;
 			data_download = false;
+			printer = "";
+			seconda_copia = 0;
 		}
 	}
 }

@@ -20,7 +20,6 @@ namespace Facile
 {
 	public class ZebraPrn
 	{
-		private Page _parent;
 		private IConnection _con;
 		private IZebraPrinter _prn;
 		private readonly SQLiteAsyncConnection dbcon_;
@@ -29,11 +28,11 @@ namespace Facile
 		private string _codcli;
 		private string _coddst;
 		private string _codocr;
+		private string _printer;
 
-		public ZebraPrn(Page par)
+		public ZebraPrn(string printer)
 		{
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
-			_parent = par;
 			_con = null;
 			_prn = null;
 			_riglist = null;
@@ -41,6 +40,7 @@ namespace Facile
 			_codcli = "";
 			_coddst = "";
 			_codocr = "";
+			_printer = printer;
 		}
 
 		public void Initialize()
@@ -705,7 +705,7 @@ namespace Facile
 				str = str + $"^FO{col},{row + 24 * 8}" + "^A0,N,19,19" + $"^FDTot. Bolli Eff.^FS";
 
 				col = 49 * 8;
-				str = str + $"^FO{col},{row + 24 * 8}" + "^A0,N,19,19" + $"^FDAnticipo^FS";
+				str = str + $"^FO{col},{row + 24 * 8}" + "^A0,N,19,19" + $"^FDAcconto^FS";
 
 				col = 65 * 8;
 				str = str + $"^FO{col},{row + 24 * 8}" + "^A0,N,19,19" + $"^FDAbbuoni^FS";
@@ -784,17 +784,38 @@ namespace Facile
 				Trasporti tra = null;
 				if (doc.fat_tra != 0) tra = await dbcon_.GetAsync<Trasporti>(doc.fat_tra);
 
-				col = 1 * 8;
-				str = str + $"^FO{col},{row + 1 * 8}" + "^A0,N,19,19" + $"^FDCausale Trasporto^FS";
+				if (stprice)
+				{
+					col = 1 * 8;
+					str = str + $"^FO{col},{row + 1 * 8}" + "^A0,N,19,19" + $"^FDCausale Trasporto^FS";
 
-				col = 84 * 8;
-				str = str + $"^FO{col},{row + 1 * 8}" + "^A0,N,19,19" + $"^FDColli^FS";
+					col = 60 * 8;
+					str = str + $"^FO{col},{row + 1 * 8}" + "^A0,N,19,19" + $"^FDColli^FS";
+
+					col = 75 * 8;
+					str = str + $"^FO{col},{row + 1 * 8}" + "^A0,N,19,19" + $"^FDTOTALE DOCUMENTO^FS";
+
+					col = 59 * 8;
+					str = str + $"^FO{col},{row}" + $"^GB1,{7 * 8},2^FS";
+
+					col = 74 * 8;
+					str = str + $"^FO{col},{row}" + $"^GB1,{7 * 8},2^FS";
+				}
+				else
+				{
+					col = 1 * 8;
+					str = str + $"^FO{col},{row + 1 * 8}" + "^A0,N,19,19" + $"^FDCausale Trasporto^FS";
+
+					col = 84 * 8;
+					str = str + $"^FO{col},{row + 1 * 8}" + "^A0,N,19,19" + $"^FDColli^FS";
+
+					col = 83 * 8;
+					str = str + $"^FO{col},{row}" + $"^GB1,{7 * 8},2^FS";
+				}
 
 				col = 0;
 				str = str + $"^FO{col},{row + 7 * 8}" + $"^GB800,1,2^FS";
 
-				col = 83 * 8;
-				str = str + $"^FO{col},{row}" + $"^GB1,{7 * 8},2^FS";
 
 				col = 1 * 8;
 				str = str + $"^FO{col},{row + 8 * 8}" + "^A0,N,19,19" + $"^FDAnnotazioni^FS";
@@ -805,9 +826,27 @@ namespace Facile
 					str = str + $"^FO{col},{row + 4 * 8}" + "^A0,N,23,23" + $"^FD{tra.tra_desc}^FS";
 				}
 
-				col = 84 * 8;
-				num = string.Format("{0,5:#######}", doc.fat_colli);
-				str = str + $"^FO{col},{row + 4 * 8}" + "^A0,N,23,23" + $"^FD{num}^FS";
+				if (stprice)
+				{
+					col = 60 * 8;
+					num = string.Format("{0,5:#######}", doc.fat_colli);
+					str = str + $"^FO{col},{row + 4 * 8}" + "^A0,N,23,23" + $"^FD{num}^FS";
+
+					col = 75 * 8;
+					num = string.Format("{0,5:#######}", doc.fat_colli);
+					str = str + $"^FO{col},{row + 4 * 8}" + "^A0,N,23,23" + $"^FD{num}^FS";
+
+
+					col = 75 * 8;
+					num = string.Format("{0:#,##0.00}", doc.fat_tot_fattura);
+					str = str + $"^FO{col},{row + 4 * 8}" + "^A0,N,28,28" + $"^FB{23 * 8},1,0,C,0^FD{num}^FS";
+				}
+				else
+				{
+					col = 84 * 8;
+					num = string.Format("{0,5:#######}", doc.fat_colli);
+					str = str + $"^FO{col},{row + 4 * 8}" + "^A0,N,23,23" + $"^FD{num}^FS";
+				}
 
 				col = 2 * 8;
 				str = str + $"^FO{col},{row + 11 * 8}" + "^A0,N,23,23" + $"^FD{doc.fat_annotaz}^FS";
@@ -888,32 +927,14 @@ namespace Facile
 			return (len * 8);
 		}
 
-		public async Task<bool> PrintDoc(Fatture doc, short copie = 1)
+		public async Task<bool> PrintDoc(Fatture doc, bool stprice, short copie = 1)
 		{
-			var app = (App)Application.Current;
 			var result = false;
-			bool stprice = true;
 			bool rewrite = false;
-
-		
-			if (app.printer == null)
-			{
-				await _parent.DisplayAlert("Attenzione...", "Selezionare una stampante e riprovare!", "OK");
-				await _parent.Navigation.PushAsync(new SetupPrinter());
-				return (false);
-			}
-
-			//
-			// Ricalcolare il documento
-			//
-			if (doc.fat_tipo == (int)DocTipo.TIPO_DDT)
-			{
-				stprice = await _parent.DisplayAlert("Facile", "Vuoi Stampare i Prezzi ?", "SI", "NO");
-			}
 
 			try
 			{
-				_con = app.printer.Connection;
+				_con = ConnectionBuilder.Current.Build(_printer);
 				_con.Open();
 				_prn = ZebraPrinterFactory.Current.GetInstance(_con);
 
@@ -1021,13 +1042,7 @@ namespace Facile
 				{
 					int row = 0;
 
-					if (idx != 0)
-					{
-						var test = await _parent.DisplayAlert("Attenzione...", "Vuoi stampare un'altra copia?", "Si", "No");
-						if (test == false) return(true);
-						PrePrintCheckStatus();
-					}
-
+					PrePrintCheckStatus();
 					row = await PrintDocHeaderAsync(doc, row, stprice);
 					row = await PrintDocBodyAsync(doc, row, stprice);
 					row = await PrintDocFooterAsync(doc, row, stprice);
@@ -1036,13 +1051,13 @@ namespace Facile
 			}
 			catch (ZebraExceptions ex)
 			{
-				await _parent.DisplayAlert("Errore!", ex.Message, "OK");
+				Debug.WriteLine(ex.Message);
+				throw;
 			}
 			catch (Exception ex)
 			{
-				// Connection Exceptions and issues are caught here
 				Debug.WriteLine(ex.Message);
-				await _parent.DisplayAlert("Errore!", ex.Message, "OK");
+				throw;
 			}
 			finally
 			{
@@ -1059,19 +1074,16 @@ namespace Facile
 		public async Task<bool> PrintTest()
 		{
 			bool result = false;
-			var app = (App)Application.Current;
 
-			if (app.printer == null)
-			{
-				await _parent.DisplayAlert("Attenzione...", "Non è stata selezionata alcuna stampante!", "OK");
-				return(result);
-			}
 			try
 			{
-				_con = app.printer.Connection;
+				_con = ConnectionBuilder.Current.Build(_printer);
 				_con.Open();
 				_prn = ZebraPrinterFactory.Current.GetInstance(_con);
 
+				// 
+				// Query fatta per rendere il metodo asincrono
+				//
 				var rec =  await dbcon_.QueryAsync<int>("SELECT COUNT(*) FROM canali");
 
 				Initialize();
@@ -1095,7 +1107,7 @@ namespace Facile
 				string header = string.Format(tmpHeader, dateString);
 				var t = new UTF8Encoding().GetBytes(header);
 				_con.Write(t);
-
+				PostPrintCheckStatus();
 
 				//
 				// Settiamo la lunghezza del modulo ad 1 cm
@@ -1109,21 +1121,25 @@ namespace Facile
 
 				t = new UTF8Encoding().GetBytes(header);
 				_con.Write(t);
+				PostPrintCheckStatus();
 
 				result = true;
 			}
 			catch (ZebraExceptions ex)
 			{
-				await _parent.DisplayAlert("Errore!", ex.Message, "OK");
+				Debug.WriteLine(ex.Message);
+				throw;
 			}
 			catch (Exception ex)
 			{
-				// Connection Exceptions and issues are caught here
 				Debug.WriteLine(ex.Message);
-				await _parent.DisplayAlert("Errore!", ex.Message, "OK");
+				throw;
 			}
 			finally
 			{
+
+	
+
 				_con.Open();
 				if ((_con != null) && (_con.IsConnected)) _con.Close();
 				_con = null;

@@ -47,6 +47,17 @@
 	<array>
 		<dict/>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>external-accessory</string>
+		<string>bluetooth-central</string>
+	</array>
+	<key>UISupportedExternalAccessoryProtocols</key>
+	<array>
+		<string>com.zebra.rawport</string>
+		<string>com.zebra.protocols</string>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

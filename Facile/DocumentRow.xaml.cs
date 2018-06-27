@@ -70,7 +70,7 @@ namespace Facile
 			if (Device.Idiom == TargetIdiom.Tablet)
 			{
 				if (((App)Application.Current).facile_db_impo.dit_usa_lotti)
-					m_image_box.HeightRequest = 450;
+					m_image_box.HeightRequest = 350;
 				else
 					m_image_box.HeightRequest = 500;
 			}
