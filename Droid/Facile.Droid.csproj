@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Xamarin.Forms.3.1.0.583944\build\netstandard2.0\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.3.1.0.583944\build\netstandard2.0\Xamarin.Forms.props')" />
+  <Import Project="..\packages\Xamarin.Forms.3.1.0.637273\build\netstandard2.0\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.3.1.0.637273\build\netstandard2.0\Xamarin.Forms.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -96,9 +96,6 @@
     </Reference>
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors" />
-    <Reference Include="Syncfusion.SfNumericTextBox.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.1.0.37\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
-    </Reference>
     <Reference Include="ImageCircle.Forms.Plugin">
       <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.3.0.0.5\lib\monoandroid71\ImageCircle.Forms.Plugin.dll</HintPath>
     </Reference>
@@ -126,18 +123,6 @@
     </Reference>
     <Reference Include="ZSDK_ANDROIDX">
       <HintPath>..\packages\LinkOS_Xamarin_SDK.1.2.0\lib\MonoAndroid\ZSDK_ANDROIDX.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.Licensing">
-      <HintPath>..\packages\Syncfusion.Licensing.16.2.0.41\lib\MonoAndroid10\Syncfusion.Licensing.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.Core.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.Core.16.2.0.41\lib\MonoAndroid10\Syncfusion.Core.XForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.DataSource.Portable">
-      <HintPath>..\packages\Syncfusion.Xamarin.DataSource.16.2.0.41\lib\MonoAndroid10\Syncfusion.DataSource.Portable.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.GridCommon.Portable">
-      <HintPath>..\packages\Syncfusion.Xamarin.GridCommon.16.2.0.41\lib\MonoAndroid10\Syncfusion.GridCommon.Portable.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.Annotations">
       <HintPath>..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Annotations.dll</HintPath>
@@ -196,72 +181,84 @@
     <Reference Include="Xamarin.Android.Support.v7.MediaRouter">
       <HintPath>..\packages\Xamarin.Android.Support.v7.MediaRouter.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v7.MediaRouter.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Essentials">
-      <HintPath>..\packages\Xamarin.Essentials.0.7.0.17-preview\lib\monoandroid81\Xamarin.Essentials.dll</HintPath>
+    <Reference Include="Syncfusion.Core.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.Core.16.2.0.42\lib\MonoAndroid10\Syncfusion.Core.XForms.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime" />
-    <Reference Include="FormsViewGroup">
-      <HintPath>..\packages\Xamarin.Forms.3.1.0.583944\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
+    <Reference Include="Syncfusion.DataSource.Portable">
+      <HintPath>..\packages\Syncfusion.Xamarin.DataSource.16.2.0.42\lib\MonoAndroid10\Syncfusion.DataSource.Portable.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\packages\Xamarin.Forms.3.1.0.583944\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Platform.Android">
-      <HintPath>..\packages\Xamarin.Forms.3.1.0.583944\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Platform">
-      <HintPath>..\packages\Xamarin.Forms.3.1.0.583944\lib\MonoAndroid10\Xamarin.Forms.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\packages\Xamarin.Forms.3.1.0.583944\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+    <Reference Include="Syncfusion.GridCommon.Portable">
+      <HintPath>..\packages\Syncfusion.Xamarin.GridCommon.16.2.0.42\lib\MonoAndroid10\Syncfusion.GridCommon.Portable.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfBusyIndicator.Android">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.2.0.41\lib\MonoAndroid10\Syncfusion.SfBusyIndicator.Android.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.2.0.42\lib\MonoAndroid10\Syncfusion.SfBusyIndicator.Android.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfBusyIndicator.XForms.Android">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.2.0.41\lib\MonoAndroid10\Syncfusion.SfBusyIndicator.XForms.Android.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.2.0.42\lib\MonoAndroid10\Syncfusion.SfBusyIndicator.XForms.Android.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfBusyIndicator.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.2.0.41\lib\MonoAndroid10\Syncfusion.SfBusyIndicator.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.2.0.42\lib\MonoAndroid10\Syncfusion.SfBusyIndicator.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfCarousel.Android">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.2.0.41\lib\MonoAndroid10\Syncfusion.SfCarousel.Android.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.2.0.42\lib\MonoAndroid10\Syncfusion.SfCarousel.Android.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfCarousel.XForms.Android">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.2.0.41\lib\MonoAndroid10\Syncfusion.SfCarousel.XForms.Android.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.2.0.42\lib\MonoAndroid10\Syncfusion.SfCarousel.XForms.Android.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfCarousel.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.2.0.41\lib\MonoAndroid10\Syncfusion.SfCarousel.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.2.0.42\lib\MonoAndroid10\Syncfusion.SfCarousel.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfListView.XForms.Android">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.16.2.0.41\lib\MonoAndroid10\Syncfusion.SfListView.XForms.Android.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.16.2.0.42\lib\MonoAndroid10\Syncfusion.SfListView.XForms.Android.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfListView.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.16.2.0.41\lib\MonoAndroid10\Syncfusion.SfListView.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.16.2.0.42\lib\MonoAndroid10\Syncfusion.SfListView.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfMaskedEdit.XForms.Android">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfMaskedEdit.16.2.0.41\lib\MonoAndroid10\Syncfusion.SfMaskedEdit.XForms.Android.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfMaskedEdit.16.2.0.42\lib\MonoAndroid10\Syncfusion.SfMaskedEdit.XForms.Android.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfMaskedEdit.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfMaskedEdit.16.2.0.41\lib\MonoAndroid10\Syncfusion.SfMaskedEdit.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfMaskedEdit.16.2.0.42\lib\MonoAndroid10\Syncfusion.SfMaskedEdit.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfNumericTextBox.Android">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.2.0.41\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.Android.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.2.0.42\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.Android.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfNumericTextBox.XForms.Android">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.2.0.41\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.XForms.Android.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.2.0.42\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.XForms.Android.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfNumericTextBox.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.2.0.41\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.2.0.42\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Syncfusion.Data.Portable">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.2.0.41\lib\MonoAndroid10\Syncfusion.Data.Portable.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.2.0.42\lib\MonoAndroid10\Syncfusion.Data.Portable.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfDataGrid.XForms.Android">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.2.0.41\lib\MonoAndroid10\Syncfusion.SfDataGrid.XForms.Android.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.2.0.42\lib\MonoAndroid10\Syncfusion.SfDataGrid.XForms.Android.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfDataGrid.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.2.0.41\lib\MonoAndroid10\Syncfusion.SfDataGrid.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.2.0.42\lib\MonoAndroid10\Syncfusion.SfDataGrid.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing">
+      <HintPath>..\packages\Syncfusion.Licensing.16.2.0.43\lib\MonoAndroid10\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="FormsViewGroup">
+      <HintPath>..\packages\Xamarin.Forms.3.1.0.637273\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.3.1.0.637273\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.Android">
+      <HintPath>..\packages\Xamarin.Forms.3.1.0.637273\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.3.1.0.637273\lib\MonoAndroid10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.3.1.0.637273\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Essentials">
+      <HintPath>..\packages\Xamarin.Essentials.0.9.1-preview\lib\monoandroid81\Xamarin.Essentials.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -495,5 +492,5 @@
   <Import Project="..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.targets')" />
   <Import Project="..\packages\Xamarin.Android.Support.Design.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Design.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Design.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Design.targets')" />
   <Import Project="..\packages\Xamarin.Android.Support.v7.MediaRouter.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.MediaRouter.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.MediaRouter.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.MediaRouter.targets')" />
-  <Import Project="..\packages\Xamarin.Forms.3.1.0.583944\build\netstandard2.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.1.0.583944\build\netstandard2.0\Xamarin.Forms.targets')" />
+  <Import Project="..\packages\Xamarin.Forms.3.1.0.637273\build\netstandard2.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.1.0.637273\build\netstandard2.0\Xamarin.Forms.targets')" />
 </Project>

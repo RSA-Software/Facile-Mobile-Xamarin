@@ -1,5 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
+//using System.Collections.Generic;
+using System.IO;
+using System.Text;
 using System.Threading.Tasks;
 using Facile.Extension;
 using Facile.Interfaces;
@@ -7,27 +9,35 @@ using Facile.Models;
 using PCLStorage;
 using SQLite;
 using Xamarin.Forms;
+using Facile.Utils;
 
 namespace Facile
 {
 	public partial class DownloadImages : ContentPage
 	{
-		protected bool first;
+		protected bool first_;
+		private int _max_download;
 		private LocalImpo lim;
 		private readonly SQLiteAsyncConnection dbcon_;
 
-		public DownloadImages()
+		public DownloadImages(int start_index, int stop_index)
 		{
-			first = true;
+			first_ = true;
 			lim = null;
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
 			InitializeComponent();
+
+			Random randomImages = new Random();
+			if (Device.RuntimePlatform == Device.Android)
+				_max_download = randomImages.Next(400,1000);
+			else
+				_max_download = randomImages.Next(250,400);
 		}
 
 		protected override async void OnAppearing()
 		{
 			base.OnAppearing();
-			if (first)
+			if (first_)
 			{
 				var response = await DisplayAlert("Facile", "La ricezione dati potrebbe richiede una connessione internet e potrebbero essere necessari diversi minuti.\n\nVuoi proseguire?", "Si", "No");
 				if (response)
@@ -35,11 +45,13 @@ namespace Facile
 				else
 					await Navigation.PopModalAsync();
 			}
-			first = false;
+			first_ = false;
 		}
 
 		private async Task Download()
 		{
+			int num_download = 0;
+
 			//
 			// Leggiamo le impostazioni
 			//
@@ -103,41 +115,68 @@ namespace Facile
 
 					foreach (var file in files)
 					{
-						String remoteFile = remoteServer + file;
-						String localFile = imagesFolder.Path + "/" + file;
+						String remoteFile = remoteServer + file.Name;
+						String localFile = imagesFolder.Path + "/" + file.Name;
 
 						if (stop) break;
 
+						if (num_download > _max_download)
+						{
+							throw new RsaException(RsaException.ImagesMsg, RsaException.ImageErr); 
+						}
+
 						bool skip = true;
-						var x = file.LastIndexOf('.');
+						var x = file.Name.LastIndexOf('.');
 
 						if (x >= 0)
 						{
-							var ext = file.Substring(x);
+							var ext = file.Name.Substring(x);
 							if (ext.ToUpper() == ".JPG" || ext.ToUpper() == ".PNG" || ext.ToUpper() == ".PRN") skip = false;
-
 
 							//
 							// Controllare qui se si vuole la presenza dell'articolo
 							//
 							if (ext.ToUpper() == ".JPG" || ext.ToUpper() == ".PNG")
 							{
-								x = file.LastIndexOf('_');
+								x = file.Name.LastIndexOf('_');
 								if (x > 0)
 								{
-									var code = file.Substring(0, x).Trim().ToUpper();
+									var code = file.Name.Substring(0, x).Trim().ToUpper();
 									var sql = string.Format("SELECT COUNT(*) FROM artanag WHERE ana_codice = {0}", code.SqlQuote(false));
 									var rec = await dbcon_.ExecuteScalarAsync<int>(sql);
 									if (rec == 0) skip = true;
 								}
+
+								//
+								// Controlliamo il timestamp
+								//
+								if (!skip && file.LastUpdate.HasValue)
+								{
+									try
+									{
+										var img = await dbcon_.GetAsync<Images>(file.Name.ToUpper());
+										if (img.img_last_update.HasValue) 
+										{
+											if (DateTime.Compare(file.LastUpdate.Value, img.img_last_update.Value) <= 0)
+											{
+												skip = true;
+											}
+										}
+									}
+									catch
+									{
+										
+									}
+								}
 							}
 						}
 						idx++;
+
 						if (skip)
-							m_desc.Text = string.Format("Salto {0} di {1} - {2}", idx, files.Count, file);
+							m_desc.Text = string.Format("Salto {0} di {1} - {2}", idx, files.Count, file.Name);
 						else
 						{
-							m_desc.Text = string.Format("Scarico {0} di {1} - {2}", idx, files.Count, file);
+							m_desc.Text = string.Format("Scarico {0} di {1} - {2}", idx, files.Count, file.Name);
 							var result = await ftp.DownloadFile(lim.user, password, remoteFile, localFile);
 							if (!result.StartsWith("221", StringComparison.CurrentCulture))
 							{
@@ -145,23 +184,36 @@ namespace Facile
 								{
 									result = await ftp.DownloadFile(lim.user, password, remoteFile, localFile);
 									if (result.StartsWith("221", StringComparison.CurrentCulture))
+									{
 										break;
+									}
 									else
 									{
 										if (idx == 4)
 										{
-											var str = "Impossibile scaricare il file : " + file + "\n\nVuoi continuare?";
+											var str = "Impossibile scaricare il file : " + file.Name + "\n\nVuoi continuare?";
 											stop = !(await DisplayAlert("Errore", str, "SI", "NO"));
 										}
 									}
 								}
 							}
+							num_download++;
+							Images image = new Images
+							{
+								img_name = file.Name.ToUpper(),
+								img_last_update = file.LastUpdate
+							};
+							await dbcon_.InsertOrReplaceAsync(image);
 							m_image.Source = localFile;
 						}
 					}
 				}
 				m_desc.Text = "";
 				await DisplayAlert("Facile", "Importazione dati conclusa!", "Ok");
+			}
+			catch (RsaException ex)
+			{
+				await DisplayAlert("Download Error", ex.Message, "OK");
 			}
 			catch (Exception ex)
 			{

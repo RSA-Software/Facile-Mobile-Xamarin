@@ -105,7 +105,7 @@ namespace Facile
 			}
 			catch (Exception ex)
 			{
-				await DisplayAlert("Attenzione", "Errore : " + ex.Message, "OK");	
+				await DisplayAlert("Attenzione", "Errore : " + ex.Message, "OK");
 			}
 		}
 
@@ -132,9 +132,9 @@ namespace Facile
 			{
 				try
 				{
-				var rig = rigCollection[swipeIndex - 1];
-				var page = new DocumentRow(this, ref rig, swipeIndex - 1, _parent.doc.fat_editable);
-				await this.Navigation.PushModalAsync(page);
+					var rig = rigCollection[swipeIndex - 1];
+					var page = new DocumentRow(this, ref rig, swipeIndex - 1, _parent.doc.fat_editable);
+					await this.Navigation.PushModalAsync(page);
 				}
 				catch (Exception ex)
 				{

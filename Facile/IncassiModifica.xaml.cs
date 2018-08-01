@@ -74,7 +74,7 @@ namespace Facile
 			}
 		}
 
-		public void SetField ()
+		public void SetField()
 		{
 			m_codice.Value = _dsp.dsp_codice;
 
@@ -109,13 +109,13 @@ namespace Facile
 			if (_dsrList != null)
 				dataGrid.ItemsSource = new ObservableCollection<ScaPagRow>(_dsrList);
 			else
-				dataGrid.ItemsSource = null; 
+				dataGrid.ItemsSource = null;
 
 		}
 
 		public void GetField()
 		{
-			
+
 		}
 
 		async void OnClickPrec(object sender, System.EventArgs e)

@@ -47,7 +47,6 @@ namespace Facile
 			recLoaded_ = pagList.Count;
 			listView.ItemsSource = new ObservableCollection<Pagamenti>(pagList);
 			base.OnAppearing();
-
 		}
 
 		private bool CanLoadMoreItems(object obj)

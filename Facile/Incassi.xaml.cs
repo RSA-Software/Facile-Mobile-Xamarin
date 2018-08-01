@@ -304,7 +304,7 @@ namespace Facile
 
 		async void OnSalvaClicked(object sender, System.EventArgs e)
 		{
-			
+
 			//if (await DisplayAlert("Attenzione", "Vuoi inviare un messaggio alla sede?", "Si", "No"))
 			//{
 			//	var recipients = new List<string>();
@@ -347,8 +347,8 @@ namespace Facile
 
 			double incasso = 0.0;
 			int num_sca = 0;
-			foreach(var item in dataGrid.View.Records) 
-			{     			
+			foreach (var item in dataGrid.View.Records)
+			{
 				var rowData = (IncassiInfo)item.Data;
 
 				if (!rowData.sca_incasso.TestIfZero(2))
@@ -356,7 +356,7 @@ namespace Facile
 					incasso += rowData.sca_incasso;
 					num_sca++;
 				}
-			} 
+			}
 			if (num_sca == 0)
 			{
 				await DisplayAlert("Attenzione", "Non è stato inserito alcun importo da incassare!", "OK");
@@ -438,7 +438,7 @@ namespace Facile
 			// Inseriamo le righe incassate
 			//
 			int idx = 0;
-			foreach(var item in dataGrid.View.Records) 
+			foreach (var item in dataGrid.View.Records)
 			{
 				idx++;
 				var rowData = (IncassiInfo)item.Data;
@@ -483,7 +483,7 @@ namespace Facile
 									await _dbcon.UpdateAsync(sca);
 
 									sca.sca_id = 0;
-									sca.sca_num = 1 +  await _dbcon.ExecuteScalarAsync<int>("SELECT MAX(sca_num) FROM scadenze WHERE sca_relaz = 0");
+									sca.sca_num = 1 + await _dbcon.ExecuteScalarAsync<int>("SELECT MAX(sca_num) FROM scadenze WHERE sca_relaz = 0");
 									sca.sca_pagato = 0;
 									sca.sca_cont = 0;
 									sca.sca_importo = resto;

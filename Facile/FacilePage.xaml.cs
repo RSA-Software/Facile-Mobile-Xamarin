@@ -104,6 +104,7 @@ namespace Facile
 			await dbcon.CreateTableAsync<LocalImpo>();
 			await dbcon.CreateTableAsync<ScaPagHead>();
 			await dbcon.CreateTableAsync<ScaPagRow>();
+			await dbcon.CreateTableAsync<Images>();
 
 			if (await dbcon.Table<LocalImpo>().CountAsync() == 0)
 			{
@@ -126,7 +127,6 @@ namespace Facile
 				Debug.WriteLine(e.Message);
 			}
 
-			base.OnAppearing();
-		}
+			base.OnAppearing();}
 	}
 }

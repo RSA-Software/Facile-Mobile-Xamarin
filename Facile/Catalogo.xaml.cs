@@ -23,11 +23,11 @@ namespace Facile
 
 		public Catalogo()
 		{
-			first      = true;
+			first = true;
 			last_index = 0;
 			first_load = -1;
-			last_load  = -1;
-			_files     = null;
+			last_load = -1;
+			_files = null;
 			_load_block = 10;
 
 			InitializeComponent();
@@ -164,7 +164,7 @@ namespace Facile
 			}
 			catch (OutOfMemoryException)
 			{
-				await DisplayAlert("Errore!","Memoria non sufficiente per eseguire l'operazione","OK");
+				await DisplayAlert("Errore!", "Memoria non sufficiente per eseguire l'operazione", "OK");
 			}
 			busyIndicator.IsBusy = false;
 			m_desc.Text = $"Immagini caricate : Memory {first_load}-{last_load}      {e.SelectedIndex}+{first_load} == {e.SelectedIndex + first_load} == {last_load - 4}/{_files.Count} - Corrente : {e.SelectedIndex}";

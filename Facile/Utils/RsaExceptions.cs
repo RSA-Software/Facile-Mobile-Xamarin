@@ -84,6 +84,7 @@ namespace Facile.Utils
 		public static readonly string MixedMsg = "Nella documento sono stati inserti articoli con icva inclusa\ne articoli con iva esclusa.\n\n Impossibile calcolare  i totali.";
 		public static readonly string IvaZeroMsg = "Rigo Documento con Codice IVA a Zero.";
 		public static readonly string TroppiMsg = "Nel documento ci sono troppe aliquote Iva.\nE' possibile usare al massimo 4 aliquote diverse.";
+		public static readonly string ImagesMsg = "Si è verificato un problema sulla linea.\n\nRiprovare l'operazione tra qualche scondo.";
 
 		public static readonly int NoErr = 0;
 		public static readonly int LockedErr = -10;
@@ -166,6 +167,7 @@ namespace Facile.Utils
 		public static readonly int MixedErr = -89;
 		public static readonly int IvaZeroErr = -90;
 		public static readonly int TroppiErr = -91;
+		public static readonly int ImageErr = -91;
 
 		private readonly int _error;
 		public RsaException()

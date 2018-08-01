@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Facile.Interfaces;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -29,7 +30,19 @@ namespace Facile
 
 		async void OnDownloadImages(object sender, System.EventArgs e)
 		{
-			await Navigation.PushModalAsync(new DownloadImages());
+			int start = 0;
+			//do
+			//{
+				var page = new DownloadImages(start, start + 25);
+				await Navigation.PushModalAsync(page);
+				//while(page.IsWorking)
+				//{
+				//	Task.Delay(100).Wait();
+				//}
+				//if (!page.Recall) break;
+			//	start += 25 + 1;
+			//	if (start > 3500) break;
+			//} while (true);
 		}
 
 
