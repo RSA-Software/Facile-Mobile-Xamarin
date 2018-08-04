@@ -189,7 +189,6 @@ namespace Facile
 			m_sostituzione.IsToggled = rig_.rig_sost != 0 ? true : false;
 			m_lotto.Text = rig_.rig_lotto;
 			m_scadenza.Date = rig_.rig_scadenza != null ? rig_.rig_scadenza.Value : DateTime.Now;
-
 			m_scadenza.IsVisible = rig_.rig_scadenza != null;
 		}
 
@@ -258,8 +257,11 @@ namespace Facile
 				rig_.rig_sost = 0;
 
 			rig_.rig_lotto = m_lotto.Text;
-			rig_.rig_scadenza = m_scadenza.Date;
 
+			if (m_scadenza.IsVisible)
+				rig_.rig_scadenza = m_scadenza.Date;
+			else
+				rig_.rig_scadenza = null;
 			if (string.IsNullOrWhiteSpace(rig_.rig_lotto)) rig_.rig_scadenza = null;
 		}
 

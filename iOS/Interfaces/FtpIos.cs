@@ -13,32 +13,6 @@ using System.Globalization;
 [assembly: Xamarin.Forms.Dependency(typeof(FTP))]
 namespace Facile.iOS.Interfaces
 {
-	/*
-	public class ListingData
-	{
-		private string _name;
-		private DateTime? _last_update;
-
-		public ListingData()
-		{
-			Name = "";
-			LastUpdate = null;
-		}
-
-		public string Name
-		{
-			get { return _name; }
-			set { _name = value; }
-		}
-
-		public DateTime? LastUpdate
-		{
-			get { return _last_update; }
-			set { _last_update = value; }
-		}
-	}
-	*/
-
 	class FTP : IFtpWebRequest
 	{
 		public FTP()

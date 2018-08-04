@@ -423,7 +423,8 @@ namespace Facile
 				string fileName = string.Empty;
 				string fileExtension = string.Empty;
 				string fileSize = string.Empty;
-
+				var first = true;
+				var rec_total = 0;
 				while ((theEntry = zip.GetNextEntry()) != null)
 				{
 					fileName = Path.GetFileName(theEntry.Name);
@@ -446,7 +447,7 @@ namespace Facile
 
 						m_json.Source = "ic_hourglass_full_white.png";
 						m_desc.Text = "Deserializing " + tblName.ToLower() + ".json";
-						string qry = "DELETE FROM " + tblName.ToLower();
+
 						string str = await json_file.ReadAllTextAsync();
 
 						var settings = new JsonSerializerSettings();
@@ -454,23 +455,31 @@ namespace Facile
 						settings.NullValueHandling = NullValueHandling.Ignore;
 						FacileJson<T> json = JsonConvert.DeserializeObject<FacileJson<T>>(str, settings);
 
+						rec_total += json.Records;
+
 						m_json.Source = "ic_code_black.png";
 
 						m_load.Source = "ic_hourglass_full_white.png";
-						m_desc.Text = "Importing " + tblName.ToLower() + " " + json.Records;
-						await dbcon_.ExecuteAsync(qry);
+						m_desc.Text = "Importing " + tblName.ToLower() + " " + json.Records + " di " + rec_total;
+
+						if (first)
+						{
+							string qry = "DELETE FROM " + tblName.ToLower();
+							await dbcon_.ExecuteAsync(qry);
+						}
 						await dbcon_.InsertAllAsync(json.Data);
 
 						m_load.Source = "ic_storage_black.png";
 						m_rec.TextColor = Color.Black;
-						m_rec.Text = json.Records.ToString();
+						m_rec.Text = rec_total.ToString();
 
 						//var rows = await dbcon.Table<Fatture>().CountAsync();
 
-
 						await json_file.DeleteAsync();
+						first = false;
 					}
 				}
+				await zip_file.DeleteAsync();
 				zip.Dispose();
 				m_unzip.Source = "ic_build_black.png";
 				m_label.FontSize = m_label.FontSize - 3;
