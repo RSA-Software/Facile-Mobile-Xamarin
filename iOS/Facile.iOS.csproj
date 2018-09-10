@@ -10,7 +10,7 @@
     <AssemblyName>Facile.iOS</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <ReleaseVersion>2</ReleaseVersion>
+    <ReleaseVersion>3</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -146,21 +146,6 @@
     <Reference Include="zsdk_iosx">
       <HintPath>..\packages\LinkOS_Xamarin_SDK.1.2.0\lib\Xamarin.iOS10\zsdk_iosx.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Essentials">
-      <HintPath>..\packages\Xamarin.Essentials.0.9.1-preview\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.Licensing">
-      <HintPath>..\packages\Syncfusion.Licensing.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.Licensing.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.Core.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.Core.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.Core.XForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.DataSource.Portable">
-      <HintPath>..\packages\Syncfusion.Xamarin.DataSource.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.DataSource.Portable.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.GridCommon.Portable">
-      <HintPath>..\packages\Syncfusion.Xamarin.GridCommon.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.GridCommon.Portable.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Forms.Core">
       <HintPath>..\packages\Xamarin.Forms.3.1.0.697729\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
@@ -173,53 +158,68 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.3.1.0.697729\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.Licensing">
+      <HintPath>..\packages\Syncfusion.Licensing.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Core.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.Core.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.Core.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DataSource.Portable">
+      <HintPath>..\packages\Syncfusion.Xamarin.DataSource.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.DataSource.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.GridCommon.Portable">
+      <HintPath>..\packages\Syncfusion.Xamarin.GridCommon.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.GridCommon.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Essentials">
+      <HintPath>..\packages\Xamarin.Essentials.0.10.0-preview\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.SfBusyIndicator.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.SfBusyIndicator.iOS.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.SfBusyIndicator.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfBusyIndicator.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.SfBusyIndicator.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.SfBusyIndicator.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfBusyIndicator.XForms.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.SfBusyIndicator.XForms.iOS.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.SfBusyIndicator.XForms.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfCarousel.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.SfCarousel.iOS.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.SfCarousel.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfCarousel.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.SfCarousel.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.SfCarousel.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfCarousel.XForms.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.SfCarousel.XForms.iOS.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.SfCarousel.XForms.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfListView.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.SfListView.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.SfListView.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfListView.XForms.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.SfListView.XForms.iOS.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.SfListView.XForms.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfMaskedEdit.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfMaskedEdit.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.SfMaskedEdit.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfMaskedEdit.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.SfMaskedEdit.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfMaskedEdit.XForms.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfMaskedEdit.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.SfMaskedEdit.XForms.iOS.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfMaskedEdit.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.SfMaskedEdit.XForms.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfNumericTextBox.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.SfNumericTextBox.iOS.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.SfNumericTextBox.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfNumericTextBox.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfNumericTextBox.XForms.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.SfNumericTextBox.XForms.iOS.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.SfNumericTextBox.XForms.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Data.Portable">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.Data.Portable.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.Data.Portable.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfDataGrid.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.SfDataGrid.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.SfDataGrid.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfDataGrid.XForms.iOS">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.2.0.46\lib\Xamarin.iOS10\Syncfusion.SfDataGrid.XForms.iOS.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.2.0.50\lib\Xamarin.iOS10\Syncfusion.SfDataGrid.XForms.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -8,8 +8,8 @@
     x:Class="Facile.DestinazioniSearch">
 
     <StackLayout>
-        <SearchBar x:Name="searchBar" Placeholder="Cerca" TextChanged="OnTextChanged" IsVisible="true" BackgroundColor="#2196F3" TextColor="White" PlaceholderColor="White" CancelButtonColor="White" />
-        <syncfusion:SfListView x:Name="listView" AutoFitMode="Height" SelectionMode="Single" Padding="7,0,7,0" >
+        <SearchBar x:Name="searchBar" Placeholder="Cerca" TextChanged="OnTextChanged" IsVisible="true" />
+        <syncfusion:SfListView x:Name="listView" AutoFitMode="Height" SelectionMode="Single" Padding="7,0,7,0" VerticalOptions="FillAndExpand" >
 
 			<syncfusion:SfListView.ItemTemplate>
                 <DataTemplate>

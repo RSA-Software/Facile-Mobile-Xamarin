@@ -14,8 +14,8 @@
     </ContentPage.Padding>
 
     <StackLayout>
-        <SearchBar x:Name="searchBar" Placeholder="Cerca" TextChanged="OnTextChanged" IsVisible="true" BackgroundColor="#1976D2" TextColor="White" PlaceholderColor="White"/>
-        <syncfusion:SfListView x:Name="listView" AutoFitMode="Height" SelectionMode="Single" Padding="7,0,7,0" >
+        <SearchBar x:Name="searchBar" Placeholder="Cerca" TextChanged="OnTextChanged" IsVisible="true"/>
+        <syncfusion:SfListView x:Name="listView" AutoFitMode="Height" SelectionMode="Single" Padding="7,0,7,0" VerticalOptions="FillAndExpand">
             <syncfusion:SfListView.ItemTemplate>
 				<DataTemplate>
 					<Frame x:Name="frame" CornerRadius="10" BackgroundColor="{Binding .,Converter={local:IndexToColorConverter},ConverterParameter={x:Reference Name=listView}}" Padding="5">

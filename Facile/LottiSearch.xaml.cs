@@ -38,9 +38,9 @@ namespace Facile
 			listView.LoadMoreCommandParameter = listView;
 			listView.LoadMoreCommand = new Command<object>(LoadMoreItems, CanLoadMoreItems);
 
-			if (Device.Idiom == TargetIdiom.Phone && Device.RuntimePlatform == Device.Android)
+			if (Device.RuntimePlatform == Device.Android)
 			{
-				searchBar.HeightRequest = 40;
+				searchBar.HeightRequest = 42;
 			}
 		}
 

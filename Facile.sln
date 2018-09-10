@@ -93,6 +93,6 @@ Global
 		$13.FormatOnPaste = True
 		$13.scope = text/x-json
 		$0.StandardHeader = $14
-		version = 2
+		version = 3
 	EndGlobalSection
 EndGlobal
