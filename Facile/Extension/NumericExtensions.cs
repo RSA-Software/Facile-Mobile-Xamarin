@@ -3,6 +3,14 @@ namespace Facile.Extension
 {
 	public static class NumericExtensions
 	{
+		public enum DecPlaces
+		{
+			MAX_DECIMAL_PLACES = 5,
+			TOT_DECIMAL_PLACES = 2,
+			SCO_DECIMAL_PLACES = 2,
+			QTA_DECIMAL_PLACES = 3,
+		}
+
 		public const double EPSILON = 0.0000000000000000001;
 
 		public static double MyFloor(this double num, short dec)

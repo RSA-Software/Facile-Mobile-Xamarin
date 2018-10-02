@@ -393,7 +393,8 @@ namespace Facile.Models
   		public double fat_tot_prov_age { get; set; }
   		public double fat_tot_prov_cpr { get; set; }
   		public double fat_tot_qevasa { get; set; }
-  		public string fat_unused { get; set; }
+		public short fat_stato_anomalia { get; set; }
+		public string fat_unused { get; set; }
 
 		// Viene impostata a true per i nuovi documenti che sono editabili fino all'invio
 		public bool fat_editable { get; set; }

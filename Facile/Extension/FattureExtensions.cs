@@ -7,6 +7,7 @@ using Facile.Models;
 using Facile.Utils;
 using SQLite;
 using Xamarin.Forms;
+using static Facile.Extension.NumericExtensions;
 
 namespace Facile.Extension
 {
@@ -22,7 +23,6 @@ namespace Facile.Extension
 			SQLiteAsyncConnection dbcon = DependencyService.Get<ISQLiteDb>().GetConnection();
 			if (app.facile_db_impo == null) throw new ArgumentNullException();
 
-			short dec = 2;
 			fat.fat_tot_merce = 0.0;
 			fat.fat_tot_netto = 0.0;
 			fat.fat_imponibile = 0.0;
@@ -42,12 +42,12 @@ namespace Facile.Extension
 				{
 					case 0 :
 						fat.fat_ripartizione_0 = 0.0;
-						if (fat.fat_importo_cas_0.TestIfZero(dec) != true)
+						if (fat.fat_importo_cas_0.TestIfZero((int)DecPlaces.TOT_DECIMAL_PLACES) != true)
 						{
 							try
 							{
 								var iva = await dbcon.GetAsync<Codiva>(fat.fat_cod_iva_0);
-								rip_cassa[i] = Math.Round(fat.fat_imponibile_0 * (iva.iva_cassa / 100.0), dec, MidpointRounding.AwayFromZero);
+								rip_cassa[i] = Math.Round(fat.fat_imponibile_0 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 							}
 							catch 
 							{
@@ -58,12 +58,12 @@ namespace Facile.Extension
 
 					case 1:
 						fat.fat_ripartizione_1 = 0.0;
-						if (fat.fat_importo_cas_1.TestIfZero(dec) != true)
+						if (fat.fat_importo_cas_1.TestIfZero((int)DecPlaces.TOT_DECIMAL_PLACES) != true)
 						{
 							try
 							{
 								var iva = await dbcon.GetAsync<Codiva>(fat.fat_cod_iva_1);
-								rip_cassa[i] = Math.Round(fat.fat_imponibile_1 * (iva.iva_cassa / 100.0), dec, MidpointRounding.AwayFromZero);
+								rip_cassa[i] = Math.Round(fat.fat_imponibile_1 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 							}
 							catch (System.Exception)
 							{
@@ -74,12 +74,12 @@ namespace Facile.Extension
 
 					case 2:
 						fat.fat_ripartizione_2 = 0.0;
-						if (fat.fat_importo_cas_2.TestIfZero(dec) != true)
+						if (fat.fat_importo_cas_2.TestIfZero((int)DecPlaces.TOT_DECIMAL_PLACES) != true)
 						{
 							try
 							{
 								var iva = await dbcon.GetAsync<Codiva>(fat.fat_cod_iva_2);
-								rip_cassa[i] = Math.Round(fat.fat_imponibile_2 * (iva.iva_cassa / 100.0), dec, MidpointRounding.AwayFromZero);
+								rip_cassa[i] = Math.Round(fat.fat_imponibile_2 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 							}
 							catch (System.Exception)
 							{
@@ -90,12 +90,12 @@ namespace Facile.Extension
 
 					case 3:
 						fat.fat_ripartizione_3 = 0.0;
-						if (fat.fat_importo_cas_3.TestIfZero(dec) != true)
+						if (fat.fat_importo_cas_3.TestIfZero((int)DecPlaces.TOT_DECIMAL_PLACES) != true)
 						{
 							try
 							{
 								var iva = await dbcon.GetAsync<Codiva>(fat.fat_cod_iva_3);
-								rip_cassa[i] = Math.Round(fat.fat_imponibile_3 * (iva.iva_cassa / 100.0), dec, MidpointRounding.AwayFromZero);
+								rip_cassa[i] = Math.Round(fat.fat_imponibile_3 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 							}
 							catch (System.Exception)
 							{
@@ -106,10 +106,10 @@ namespace Facile.Extension
 				}
 			}
 
-			fat.fat_tot_conai = Math.Round(fat.fat_tot_conai, dec, MidpointRounding.AwayFromZero);
-			fat.fat_tot_raee = Math.Round(fat.fat_tot_raee, dec, MidpointRounding.AwayFromZero);
-			fat.fat_tot_accise = Math.Round(fat.fat_tot_accise, dec, MidpointRounding.AwayFromZero);
-			fat.fat_tot_contrassegni = Math.Round(fat.fat_tot_contrassegni, dec, MidpointRounding.AwayFromZero);
+			fat.fat_tot_conai = Math.Round(fat.fat_tot_conai, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+			fat.fat_tot_raee = Math.Round(fat.fat_tot_raee, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+			fat.fat_tot_accise = Math.Round(fat.fat_tot_accise, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+			fat.fat_tot_contrassegni = Math.Round(fat.fat_tot_contrassegni, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
 
 			// Eseguiamo la ripartizione delle spese 
@@ -170,7 +170,7 @@ namespace Facile.Extension
 								break;
 							}
 						}
-						fat.fat_imballo = Math.Round(importo_merci * (perc / 100.0), dec,MidpointRounding.AwayFromZero);
+						fat.fat_imballo = Math.Round(importo_merci * (perc / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 						fat.fat_imballo += app.facile_db_impo.dit_spetra;
 					}
 
@@ -394,17 +394,17 @@ namespace Facile.Extension
 
 				fat.fat_ripartizione_0 += rip_cassa[0];
 
-				fat.fat_tot_merce += fat.fat_imponibile_0.MyFloor(dec);
+				fat.fat_tot_merce += fat.fat_imponibile_0.MyFloor((int)DecPlaces.TOT_DECIMAL_PLACES);
 
 				if (fat.fat_scorporo != 0)
 				{
-					fat.fat_importo_0 = Math.Round(fat.des_imponibile_ivato_0 - fat.des_imponibile_ivato_0 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					fat.fat_importo_0 = Math.Round(fat.des_imponibile_ivato_0 - fat.des_imponibile_ivato_0 * fat.fat_sconto / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 					double xxxtot = fat.fat_importo_0;
-					fat.fat_importo_0 = Math.Round(fat.fat_importo_0 / (1 + (fat.fat_aliquota_0 / 100.0)), dec, MidpointRounding.AwayFromZero);
-					double xxxiva = Math.Round(fat.fat_importo_0 * (1 + (fat.fat_aliquota_0 / 100.0)), dec, MidpointRounding.AwayFromZero);
+					fat.fat_importo_0 = Math.Round(fat.fat_importo_0 / (1 + (fat.fat_aliquota_0 / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					double xxxiva = Math.Round(fat.fat_importo_0 * (1 + (fat.fat_aliquota_0 / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 					xxxiva -= xxxtot;
-					xxxiva = Math.Round(xxxiva, dec, MidpointRounding.AwayFromZero);
-					if (xxxiva.TestIfZero(dec) != true)
+					xxxiva = Math.Round(xxxiva, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					if (xxxiva.TestIfZero((int)DecPlaces.TOT_DECIMAL_PLACES) != true)
 					{
 						fat.fat_dec_iva_0 = (float)xxxiva;
 					}
@@ -422,7 +422,7 @@ namespace Facile.Extension
 //				}
 //#endif
 
-				fat.fat_importo_iva_0 = Math.Round((fat.fat_importo_0 + fat.fat_ripartizione_0) * fat.fat_aliquota_0 / 100.0, dec, MidpointRounding.AwayFromZero);
+				fat.fat_importo_iva_0 = Math.Round((fat.fat_importo_0 + fat.fat_ripartizione_0) * fat.fat_aliquota_0 / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
 				//
 				// Codice aggiunto per adeguamento imponibile ed iva con terza cifra decimale = 5 (Es. 11.61/1.20) 
@@ -432,7 +432,7 @@ namespace Facile.Extension
 					fat.fat_importo_iva_0 -= fat.fat_dec_iva_0;
 
 					double val = fat.fat_importo_iva_0 + fat.fat_importo_0;
-					double target = Math.Round(fat.des_imponibile_ivato_0 - fat.des_imponibile_ivato_0 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					double target = Math.Round(fat.des_imponibile_ivato_0 - fat.des_imponibile_ivato_0 * fat.fat_sconto / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 					val = Math.Round(val - target, 2, MidpointRounding.AwayFromZero);
 					if (val <= 0.0100000000000000000)
 					{
@@ -445,7 +445,7 @@ namespace Facile.Extension
 				//******************************************************************
 				// Modificato Arrotondamento il 27/03/2001                        
 				//fat->rec.importo[i]     = MyFloor(fat->rec.importo[i],impo.dec);
-				fat.fat_importo_0 = Math.Round(fat.fat_importo_0, dec, MidpointRounding.AwayFromZero);
+				fat.fat_importo_0 = Math.Round(fat.fat_importo_0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
 				switch (fat.fat_tipo_iva_0)
 				{
@@ -479,8 +479,8 @@ namespace Facile.Extension
 				{
 					double diff;
 
-					fat.fat_tot_merce += Math.Round(fat.fat_imponibile_0 * fat.fat_aliquota_0 / 100.0, dec, MidpointRounding.AwayFromZero);
-					fat.fat_tot_netto += Math.Round(fat.fat_importo_0 * fat.fat_aliquota_0 / 100.0, dec, MidpointRounding.AwayFromZero);
+					fat.fat_tot_merce += Math.Round(fat.fat_imponibile_0 * fat.fat_aliquota_0 / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_tot_netto += Math.Round(fat.fat_importo_0 * fat.fat_aliquota_0 / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
 					// Codice Aggiunto il 31/03/2004 Gestione importi a scorporo con terzo dec. = 5
 					diff = fat.fat_tot_merce - fat.fat_tot_netto;
@@ -500,17 +500,17 @@ namespace Facile.Extension
 
 				fat.fat_ripartizione_1 += rip_cassa[1];
 
-				fat.fat_tot_merce += fat.fat_imponibile_1.MyFloor(dec);
+				fat.fat_tot_merce += fat.fat_imponibile_1.MyFloor((int)DecPlaces.TOT_DECIMAL_PLACES);
 
 				if (fat.fat_scorporo != 0)
 				{
-					fat.fat_importo_1 = Math.Round(fat.des_imponibile_ivato_1 - fat.des_imponibile_ivato_1 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					fat.fat_importo_1 = Math.Round(fat.des_imponibile_ivato_1 - fat.des_imponibile_ivato_1 * fat.fat_sconto / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 					double xxxtot = fat.fat_importo_1;
-					fat.fat_importo_1 = Math.Round(fat.fat_importo_1 / (1 + (fat.fat_aliquota_1 / 100.0)), dec, MidpointRounding.AwayFromZero);
-					double xxxiva = Math.Round(fat.fat_importo_1 * (1 + (fat.fat_aliquota_1 / 100.0)), dec, MidpointRounding.AwayFromZero);
+					fat.fat_importo_1 = Math.Round(fat.fat_importo_1 / (1 + (fat.fat_aliquota_1 / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					double xxxiva = Math.Round(fat.fat_importo_1 * (1 + (fat.fat_aliquota_1 / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 					xxxiva -= xxxtot;
-					xxxiva = Math.Round(xxxiva, dec, MidpointRounding.AwayFromZero);
-					if (xxxiva.TestIfZero(dec) != true)
+					xxxiva = Math.Round(xxxiva, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					if (xxxiva.TestIfZero((int)DecPlaces.TOT_DECIMAL_PLACES) != true)
 					{
 						fat.fat_dec_iva_1 = (float)xxxiva;
 					}
@@ -529,7 +529,7 @@ namespace Facile.Extension
 				}
 	#endif
 */
-				fat.fat_importo_iva_1 = Math.Round((fat.fat_importo_1 + fat.fat_ripartizione_1) * fat.fat_aliquota_1 / 100.0, dec, MidpointRounding.AwayFromZero);
+				fat.fat_importo_iva_1 = Math.Round((fat.fat_importo_1 + fat.fat_ripartizione_1) * fat.fat_aliquota_1 / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
 				//
 				// Codice aggiunto per adeguamento imponibile ed iva con terza cifra decimale = 5 (Es. 11.61/1.20) 
@@ -539,7 +539,7 @@ namespace Facile.Extension
 					fat.fat_importo_iva_1 -= fat.fat_dec_iva_1;
 
 					double val = fat.fat_importo_iva_1 + fat.fat_importo_1;
-					double target = Math.Round(fat.des_imponibile_ivato_1 - fat.des_imponibile_ivato_1 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					double target = Math.Round(fat.des_imponibile_ivato_1 - fat.des_imponibile_ivato_1 * fat.fat_sconto / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 					val = Math.Round(val - target, 2, MidpointRounding.AwayFromZero);
 					if (val <= 0.0100000000000000000)
 					{
@@ -552,7 +552,7 @@ namespace Facile.Extension
 				//******************************************************************
 				// Modificato Arrotondamento il 27/03/2001                        
 				//fat->rec.importo[i]     = MyFloor(fat->rec.importo[i],impo.dec);
-				fat.fat_importo_1 = Math.Round(fat.fat_importo_1, dec, MidpointRounding.AwayFromZero);
+				fat.fat_importo_1 = Math.Round(fat.fat_importo_1, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
 				switch (fat.fat_tipo_iva_1)
 				{
@@ -586,8 +586,8 @@ namespace Facile.Extension
 				{
 					double diff;
 
-					fat.fat_tot_merce += Math.Round(fat.fat_imponibile_1 * fat.fat_aliquota_1 / 100.0, dec, MidpointRounding.AwayFromZero);
-					fat.fat_tot_netto += Math.Round(fat.fat_importo_1 * fat.fat_aliquota_1 / 100.0, dec, MidpointRounding.AwayFromZero);
+					fat.fat_tot_merce += Math.Round(fat.fat_imponibile_1 * fat.fat_aliquota_1 / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_tot_netto += Math.Round(fat.fat_importo_1 * fat.fat_aliquota_1 / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
 					// Codice Aggiunto il 31/03/2004 Gestione importi a scorporo con terzo dec. = 5
 					diff = fat.fat_tot_merce - fat.fat_tot_netto;
@@ -607,17 +607,17 @@ namespace Facile.Extension
 
 				fat.fat_ripartizione_2 += rip_cassa[2];
 
-				fat.fat_tot_merce += fat.fat_imponibile_2.MyFloor(dec);
+				fat.fat_tot_merce += fat.fat_imponibile_2.MyFloor((int)DecPlaces.TOT_DECIMAL_PLACES);
 
 				if (fat.fat_scorporo != 0)
 				{
-					fat.fat_importo_2 = Math.Round(fat.des_imponibile_ivato_2 - fat.des_imponibile_ivato_2 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					fat.fat_importo_2 = Math.Round(fat.des_imponibile_ivato_2 - fat.des_imponibile_ivato_2 * fat.fat_sconto / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 					double xxxtot = fat.fat_importo_2;
-					fat.fat_importo_2 = Math.Round(fat.fat_importo_2 / (1 + (fat.fat_aliquota_2 / 100.0)), dec, MidpointRounding.AwayFromZero);
-					double xxxiva = Math.Round(fat.fat_importo_2 * (1 + (fat.fat_aliquota_2 / 100.0)), dec, MidpointRounding.AwayFromZero);
+					fat.fat_importo_2 = Math.Round(fat.fat_importo_2 / (1 + (fat.fat_aliquota_2 / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					double xxxiva = Math.Round(fat.fat_importo_2 * (1 + (fat.fat_aliquota_2 / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 					xxxiva -= xxxtot;
-					xxxiva = Math.Round(xxxiva, dec, MidpointRounding.AwayFromZero);
-					if (xxxiva.TestIfZero(dec) != true)
+					xxxiva = Math.Round(xxxiva, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					if (xxxiva.TestIfZero((int)DecPlaces.TOT_DECIMAL_PLACES) != true)
 					{
 						fat.fat_dec_iva_2 = (float)xxxiva;
 					}
@@ -636,7 +636,7 @@ namespace Facile.Extension
 				}
 	#endif
 */
-				fat.fat_importo_iva_2 = Math.Round((fat.fat_importo_2 + fat.fat_ripartizione_2) * fat.fat_aliquota_2 / 100.0, dec, MidpointRounding.AwayFromZero);
+				fat.fat_importo_iva_2 = Math.Round((fat.fat_importo_2 + fat.fat_ripartizione_2) * fat.fat_aliquota_2 / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
 				//
 				// Codice aggiunto per adeguamento imponibile ed iva con terza cifra decimale = 5 (Es. 11.61/1.20) 
@@ -646,7 +646,7 @@ namespace Facile.Extension
 					fat.fat_importo_iva_2 -= fat.fat_dec_iva_2;
 
 					double val = fat.fat_importo_iva_2 + fat.fat_importo_2;
-					double target = Math.Round(fat.des_imponibile_ivato_2 - fat.des_imponibile_ivato_2 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					double target = Math.Round(fat.des_imponibile_ivato_2 - fat.des_imponibile_ivato_2 * fat.fat_sconto / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 					val = Math.Round(val - target, 2, MidpointRounding.AwayFromZero);
 					if (val <= 0.0100000000000000000)
 					{
@@ -659,7 +659,7 @@ namespace Facile.Extension
 				//******************************************************************
 				// Modificato Arrotondamento il 27/03/2001                        
 				//fat->rec.importo[i]     = MyFloor(fat->rec.importo[i],impo.dec);
-				fat.fat_importo_2 = Math.Round(fat.fat_importo_2, dec, MidpointRounding.AwayFromZero);
+				fat.fat_importo_2 = Math.Round(fat.fat_importo_2, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
 				switch (fat.fat_tipo_iva_2)
 				{
@@ -693,8 +693,8 @@ namespace Facile.Extension
 				{
 					double diff;
 
-					fat.fat_tot_merce += Math.Round(fat.fat_imponibile_2 * fat.fat_aliquota_2 / 100.0, dec, MidpointRounding.AwayFromZero);
-					fat.fat_tot_netto += Math.Round(fat.fat_importo_2 * fat.fat_aliquota_2 / 100.0, dec, MidpointRounding.AwayFromZero);
+					fat.fat_tot_merce += Math.Round(fat.fat_imponibile_2 * fat.fat_aliquota_2 / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_tot_netto += Math.Round(fat.fat_importo_2 * fat.fat_aliquota_2 / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
 					// Codice Aggiunto il 31/03/2004 Gestione importi a scorporo con terzo dec. = 5
 					diff = fat.fat_tot_merce - fat.fat_tot_netto;
@@ -714,17 +714,17 @@ namespace Facile.Extension
 
 				fat.fat_ripartizione_3 += rip_cassa[3];
 
-				fat.fat_tot_merce += fat.fat_imponibile_3.MyFloor(dec);
+				fat.fat_tot_merce += fat.fat_imponibile_3.MyFloor((int)DecPlaces.TOT_DECIMAL_PLACES);
 
 				if (fat.fat_scorporo != 0)
 				{
-					fat.fat_importo_3 = Math.Round(fat.des_imponibile_ivato_3 - fat.des_imponibile_ivato_3 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					fat.fat_importo_3 = Math.Round(fat.des_imponibile_ivato_3 - fat.des_imponibile_ivato_3 * fat.fat_sconto / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 					double xxxtot = fat.fat_importo_3;
-					fat.fat_importo_3 = Math.Round(fat.fat_importo_3 / (1 + (fat.fat_aliquota_3 / 100.0)), dec, MidpointRounding.AwayFromZero);
-					double xxxiva = Math.Round(fat.fat_importo_3 * (1 + (fat.fat_aliquota_3 / 100.0)), dec, MidpointRounding.AwayFromZero);
+					fat.fat_importo_3 = Math.Round(fat.fat_importo_3 / (1 + (fat.fat_aliquota_3 / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					double xxxiva = Math.Round(fat.fat_importo_3 * (1 + (fat.fat_aliquota_3 / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 					xxxiva -= xxxtot;
-					xxxiva = Math.Round(xxxiva, dec, MidpointRounding.AwayFromZero);
-					if (xxxiva.TestIfZero(dec) != true)
+					xxxiva = Math.Round(xxxiva, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					if (xxxiva.TestIfZero((int)DecPlaces.TOT_DECIMAL_PLACES) != true)
 					{
 						fat.fat_dec_iva_3 = (float)xxxiva;
 					}
@@ -743,7 +743,7 @@ namespace Facile.Extension
 				}
 	#endif
 */
-				fat.fat_importo_iva_3 = Math.Round((fat.fat_importo_3 + fat.fat_ripartizione_3) * fat.fat_aliquota_3 / 100.0, dec, MidpointRounding.AwayFromZero);
+				fat.fat_importo_iva_3 = Math.Round((fat.fat_importo_3 + fat.fat_ripartizione_3) * fat.fat_aliquota_3 / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
 				//
 				// Codice aggiunto per adeguamento imponibile ed iva con terza cifra decimale = 5 (Es. 11.61/1.20) 
@@ -753,7 +753,7 @@ namespace Facile.Extension
 					fat.fat_importo_iva_3 -= fat.fat_dec_iva_3;
 
 					double val = fat.fat_importo_iva_3 + fat.fat_importo_3;
-					double target = Math.Round(fat.des_imponibile_ivato_3 - fat.des_imponibile_ivato_3 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					double target = Math.Round(fat.des_imponibile_ivato_3 - fat.des_imponibile_ivato_3 * fat.fat_sconto / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 					val = Math.Round(val - target, 2, MidpointRounding.AwayFromZero);
 					if (val <= 0.0100000000000000000)
 					{
@@ -766,7 +766,7 @@ namespace Facile.Extension
 				//******************************************************************
 				// Modificato Arrotondamento il 27/03/2001                        
 				//fat->rec.importo[i]     = MyFloor(fat->rec.importo[i],impo.dec);
-				fat.fat_importo_3 = Math.Round(fat.fat_importo_3, dec, MidpointRounding.AwayFromZero);
+				fat.fat_importo_3 = Math.Round(fat.fat_importo_3, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
 				switch (fat.fat_tipo_iva_3)
 				{
@@ -800,8 +800,8 @@ namespace Facile.Extension
 				{
 					double diff;
 
-					fat.fat_tot_merce += Math.Round(fat.fat_imponibile_3 * fat.fat_aliquota_3 / 100.0, dec, MidpointRounding.AwayFromZero);
-					fat.fat_tot_netto += Math.Round(fat.fat_importo_3 * fat.fat_aliquota_3 / 100.0, dec, MidpointRounding.AwayFromZero);
+					fat.fat_tot_merce += Math.Round(fat.fat_imponibile_3 * fat.fat_aliquota_3 / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_tot_netto += Math.Round(fat.fat_importo_3 * fat.fat_aliquota_3 / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
 					// Codice Aggiunto il 31/03/2004 Gestione importi a scorporo con terzo dec. = 5
 					diff = fat.fat_tot_merce - fat.fat_tot_netto;
@@ -827,7 +827,7 @@ namespace Facile.Extension
 			if (fat.fat_tot_netto > FattureExtensions.LIMITE_BOLLO)
 			{
 				double val = fat.fat_tot_netto - FattureExtensions.LIMITE_BOLLO;
-				if (val.TestIfZero(dec) != true) fat.fat_bolli_eff += app.facile_db_impo.dit_bolli;
+				if (val.TestIfZero((int)DecPlaces.TOT_DECIMAL_PLACES) != true) fat.fat_bolli_eff += app.facile_db_impo.dit_bolli;
 			}
 			// Fine
 
@@ -848,7 +848,7 @@ namespace Facile.Extension
 						if (pag.pag_tipo_pag == (int)TipoPagamento.PAG_TRATTA)
 						{
 							double totval = fat.fat_tot_fattura + fat.fat_tot_non_docum + fat.fat_tot_iva + fat.fat_art15 + fat.fat_bolli_eff;
-							totval = Math.Round(totval * (app.facile_db_impo.dit_trat_perc_bolli / 100.0), dec, MidpointRounding.AwayFromZero);
+							totval = Math.Round(totval * (app.facile_db_impo.dit_trat_perc_bolli / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 							fat.fat_bolli_eff += totval;
 						}
 					}
@@ -1036,8 +1036,11 @@ namespace Facile.Extension
 			if (app.facile_db_impo == null) throw new ArgumentNullException();
 			SQLiteAsyncConnection dbcon = DependencyService.Get<ISQLiteDb>().GetConnection();
 
+			/*
 			short dec = 0;
 			if (app.facile_db_impo.dit_anno >= 2002) dec = 2;
+			*/
+
 			string peso_mis = "";
 			var first = true;
 			var calc = true;
@@ -1258,7 +1261,7 @@ namespace Facile.Extension
 					if (app.facile_db_impo.dit_anno < 2002)
 						prezzo = Math.Floor(100.0 * (rig.rig_prezzo / prezzo)) / 100.0;
 					else
-						prezzo = Math.Round(100.0 * (rig.rig_prezzo / prezzo), dec, MidpointRounding.AwayFromZero) / 100.0;
+						prezzo = Math.Round(100.0 * (rig.rig_prezzo / prezzo), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero) / 100.0;
 				}
 				else prezzo = rig.rig_prezzo;
 
@@ -1284,20 +1287,20 @@ namespace Facile.Extension
 							throw new RsaException(RsaException.NotFoundMsg, RsaException.NotFoundErr);
 						}
 					}
-					var max_sconto = Math.Round(prezzo - prezzo * (ana.ana_sconto_agente / 100.0), dec + 2, MidpointRounding.AwayFromZero);
+					var max_sconto = Math.Round(prezzo - prezzo * (ana.ana_sconto_agente / 100.0), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
-					sco1 = Math.Round((prezzo * (rig.rig_sconto1 / 100.0)), dec + 2, MidpointRounding.AwayFromZero);
-					sco2 = Math.Round(((prezzo - sco1) * (rig.rig_sconto2 / 100.0)), dec + 2, MidpointRounding.AwayFromZero);
-					sco3 = Math.Round(((prezzo - sco1 - sco2) * (rig.rig_sconto3 / 100.0)), dec + 2, MidpointRounding.AwayFromZero);
-					sco4 = Math.Round(((prezzo - sco1 - sco2 - sco3) * (rig.rig_sconto4 / 100.0)), dec + 2, MidpointRounding.AwayFromZero);
-					sco5 = Math.Round(((prezzo - sco1 - sco2 - sco3 - sco4) * (rig.rig_sconto5 / 100.0)), dec + 2, MidpointRounding.AwayFromZero);
-					sco6 = Math.Round(((prezzo - sco1 - sco2 - sco3 - sco4 - sco5) * (rig.rig_sconto6 / 100.0)), dec + 2, MidpointRounding.AwayFromZero);
-					sco7 = Math.Round(((prezzo - sco1 - sco2 - sco3 - sco4 - sco5 - sco6) * (rig.rig_sconto7 / 100.0)), dec + 2, MidpointRounding.AwayFromZero);
-					prezzo = Math.Round(prezzo - sco1 - sco2 - sco3 - sco4 - sco5 - sco6 - sco7 + rig.rig_spese, dec + 2, MidpointRounding.AwayFromZero);
-					totale = Math.Round((prezzo * rig.rig_coef_mol * rig.rig_coef_mol2 * (rig.rig_qta - rig.rig_tara - rig.rig_scomerce)) - rig.rig_scovalore, dec, MidpointRounding.AwayFromZero);
+					sco1 = Math.Round((prezzo * (rig.rig_sconto1 / 100.0)), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					sco2 = Math.Round(((prezzo - sco1) * (rig.rig_sconto2 / 100.0)), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					sco3 = Math.Round(((prezzo - sco1 - sco2) * (rig.rig_sconto3 / 100.0)), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					sco4 = Math.Round(((prezzo - sco1 - sco2 - sco3) * (rig.rig_sconto4 / 100.0)), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					sco5 = Math.Round(((prezzo - sco1 - sco2 - sco3 - sco4) * (rig.rig_sconto5 / 100.0)), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					sco6 = Math.Round(((prezzo - sco1 - sco2 - sco3 - sco4 - sco5) * (rig.rig_sconto6 / 100.0)), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					sco7 = Math.Round(((prezzo - sco1 - sco2 - sco3 - sco4 - sco5 - sco6) * (rig.rig_sconto7 / 100.0)), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					prezzo = Math.Round(prezzo - sco1 - sco2 - sco3 - sco4 - sco5 - sco6 - sco7 + rig.rig_spese, (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					totale = Math.Round((prezzo * rig.rig_coef_mol * rig.rig_coef_mol2 * (rig.rig_qta - rig.rig_tara - rig.rig_scomerce)) - rig.rig_scovalore, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
-					var sconto = Math.Round(totale * (fat.fat_sconto / 100.0), dec + 2, MidpointRounding.AwayFromZero);
-					totale = Math.Round(totale - sconto, dec, MidpointRounding.AwayFromZero);
+					var sconto = Math.Round(totale * (fat.fat_sconto / 100.0), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					totale = Math.Round(totale - sconto, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
 					if (max_sconto <= prezzo || fat.fat_age == 0)
 					{
@@ -1325,7 +1328,7 @@ namespace Facile.Extension
 									default: rig.rig_provvig = 0; break;
 								}
 								rig.rig_tot_prov_cpr = 0.0;
-								rig.rig_tot_prov_age = Math.Round(totale * (rig.rig_provvig / 100.0), dec + 2, MidpointRounding.AwayFromZero);
+								rig.rig_tot_prov_age = Math.Round(totale * (rig.rig_provvig / 100.0), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 								rig.rig_tot_prov = rig.rig_tot_prov_cpr + rig.rig_tot_prov_age;
 								fat.fat_tot_prov_cpr += rig.rig_tot_prov_cpr;
 								fat.fat_tot_prov_age += rig.rig_tot_prov_age;
@@ -1356,7 +1359,7 @@ namespace Facile.Extension
 									default: rig.rig_provvig = 0; break;
 								}
 								rig.rig_tot_prov_cpr = 0.0;
-								rig.rig_tot_prov_age = Math.Round(totale * (rig.rig_provvig / 100.0), dec + 2, MidpointRounding.AwayFromZero);
+								rig.rig_tot_prov_age = Math.Round(totale * (rig.rig_provvig / 100.0), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 								rig.rig_tot_prov = rig.rig_tot_prov_cpr + rig.rig_tot_prov_age;
 								fat.fat_tot_prov_cpr += rig.rig_tot_prov_cpr;
 								fat.fat_tot_prov_age += rig.rig_tot_prov_age;
@@ -1383,7 +1386,7 @@ namespace Facile.Extension
 									break;
 							}
 							rig.rig_tot_prov_cpr = 0.0;
-							rig.rig_tot_prov_age = Math.Round(totale * rig.rig_provvig / 100, dec + 2, MidpointRounding.AwayFromZero);
+							rig.rig_tot_prov_age = Math.Round(totale * rig.rig_provvig / 100, (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 							rig.rig_tot_prov = rig.rig_tot_prov_cpr + rig.rig_tot_prov_age;
 
 							fat.fat_tot_prov_cpr += rig.rig_tot_prov_cpr;
@@ -1395,7 +1398,7 @@ namespace Facile.Extension
 							var normale = true;
 							if ((ana.ana_complistino == 3) && (fat.fat_tipo_ven != (short)DocTipoVen.VEN_NORMALE))
 							{
-								if (!ana.ana_comp_age.TestIfZero(dec + 2))
+								if (!ana.ana_comp_age.TestIfZero((int)DecPlaces.MAX_DECIMAL_PLACES))
 								{
 									normale = false;
 									var mul = 1.0;
@@ -1410,7 +1413,7 @@ namespace Facile.Extension
 									var peso = rig.rig_peso * rig.rig_qta * rig.rig_coef_mol * rig.rig_coef_mol2 * mul;
 
 									rig.rig_tot_prov_cpr = 0.0;
-									rig.rig_tot_prov_age = Math.Round(ana.ana_comp_age * peso, dec + 2, MidpointRounding.AwayFromZero);
+									rig.rig_tot_prov_age = Math.Round(ana.ana_comp_age * peso, (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 									rig.rig_tot_prov = rig.rig_tot_prov_cpr + rig.rig_tot_prov_age;
 
 									fat.fat_tot_prov_cpr += rig.rig_tot_prov_cpr;
@@ -1425,7 +1428,7 @@ namespace Facile.Extension
 								if ((aggList != null) && (aggList.Count > 0))
 								{
 									var agg = aggList[0];
-									if (!agg.agg_comp_age.TestIfZero(dec + 2))
+									if (!agg.agg_comp_age.TestIfZero((int)DecPlaces.MAX_DECIMAL_PLACES))
 									{
 										normale = false;
 										var mul = 1.0;
@@ -1439,7 +1442,7 @@ namespace Facile.Extension
 										if (pesomis == "T.") mul = 1000;
 										var peso = rig.rig_peso * rig.rig_qta * rig.rig_coef_mol * rig.rig_coef_mol2 * mul;
 										rig.rig_tot_prov_cpr = 0.0;
-										rig.rig_tot_prov_age = Math.Round(agg.agg_comp_age * peso, dec + 2, MidpointRounding.AwayFromZero);
+										rig.rig_tot_prov_age = Math.Round(agg.agg_comp_age * peso, (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 										rig.rig_tot_prov = rig.rig_tot_prov_cpr + rig.rig_tot_prov_age;
 										fat.fat_tot_prov_cpr += rig.rig_tot_prov_cpr;
 										fat.fat_tot_prov_age += rig.rig_tot_prov_age;
@@ -1449,7 +1452,7 @@ namespace Facile.Extension
 							}
 							if (normale)
 							{
-								if (rig.rig_provvig.TestIfZero(dec) && (rig.rig_art.Trim() != ""))
+								if (rig.rig_provvig.TestIfZero((int)DecPlaces.TOT_DECIMAL_PLACES) && (rig.rig_art.Trim() != ""))
 								{
 									sql = String.Format("SELECT * FROM listini1 WHERE lis_art = {0} AND lis_codice = {1} LIMIT 1", rig.rig_art.SqlQuote(false), fat.fat_listino);
 									var lisList = await dbcon.QueryAsync<Listini>(sql);
@@ -1478,8 +1481,8 @@ namespace Facile.Extension
 										}
 									}
 								}
-								rig.rig_tot_prov_age = Math.Round(totale * (rig.rig_provvig / 100.0), dec + 2, MidpointRounding.AwayFromZero);
-								rig.rig_tot_prov_cpr = Math.Round(totale * (rig.rig_prov_cpr / 100.0), dec + 2, MidpointRounding.AwayFromZero);
+								rig.rig_tot_prov_age = Math.Round(totale * (rig.rig_provvig / 100.0), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+								rig.rig_tot_prov_cpr = Math.Round(totale * (rig.rig_prov_cpr / 100.0), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 								rig.rig_tot_prov = rig.rig_tot_prov_cpr + rig.rig_tot_prov_age;
 								fat.fat_tot_prov_cpr += rig.rig_tot_prov_cpr;
 								fat.fat_tot_prov_age += rig.rig_tot_prov_age;
@@ -1501,19 +1504,23 @@ namespace Facile.Extension
 				}
 				// Fine 
 
-				sco1 = Math.Round((rig.rig_prezzo * (rig.rig_sconto1 / 100.0)), dec + 2, MidpointRounding.AwayFromZero);
-				sco2 = Math.Round(((rig.rig_prezzo - sco1) * (rig.rig_sconto2 / 100.0)), dec + 2, MidpointRounding.AwayFromZero);
-				sco3 = Math.Round(((rig.rig_prezzo - sco1 - sco2) * (rig.rig_sconto3 / 100.0)), dec + 2, MidpointRounding.AwayFromZero);
-				sco4 = Math.Round(((rig.rig_prezzo - sco1 - sco2 - sco3) * (rig.rig_sconto4 / 100.0)), dec + 2, MidpointRounding.AwayFromZero);
-				sco5 = Math.Round(((rig.rig_prezzo - sco1 - sco2 - sco3 - sco4) * (rig.rig_sconto5 / 100.0)), dec + 2, MidpointRounding.AwayFromZero);
-				sco6 = Math.Round(((rig.rig_prezzo - sco1 - sco2 - sco3 - sco4 - sco5) * (rig.rig_sconto6 / 100.0)), dec + 2, MidpointRounding.AwayFromZero);
-				sco7 = Math.Round(((rig.rig_prezzo - sco1 - sco2 - sco3 - sco4 - sco5 - sco6) * (rig.rig_sconto7 / 100.0)), dec + 2, MidpointRounding.AwayFromZero);
-				totale = Math.Round(rig.rig_prezzo - sco1 - sco2 - sco3 - sco4 - sco5 - sco6 - sco7 + rig.rig_spese, dec + 2, MidpointRounding.AwayFromZero);
+				sco1 = Math.Round((rig.rig_prezzo * (rig.rig_sconto1 / 100.0)), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+				sco2 = Math.Round(((rig.rig_prezzo - sco1) * (rig.rig_sconto2 / 100.0)), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+				sco3 = Math.Round(((rig.rig_prezzo - sco1 - sco2) * (rig.rig_sconto3 / 100.0)), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+				sco4 = Math.Round(((rig.rig_prezzo - sco1 - sco2 - sco3) * (rig.rig_sconto4 / 100.0)), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+				sco5 = Math.Round(((rig.rig_prezzo - sco1 - sco2 - sco3 - sco4) * (rig.rig_sconto5 / 100.0)), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+				sco6 = Math.Round(((rig.rig_prezzo - sco1 - sco2 - sco3 - sco4 - sco5) * (rig.rig_sconto6 / 100.0)), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+				sco7 = Math.Round(((rig.rig_prezzo - sco1 - sco2 - sco3 - sco4 - sco5 - sco6) * (rig.rig_sconto7 / 100.0)), (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+				totale = Math.Round(rig.rig_prezzo - sco1 - sco2 - sco3 - sco4 - sco5 - sco6 - sco7 + rig.rig_spese, (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 				if ((fat.fat_sco_iva_esc && (app.facile_db_impo.dit_iva_inc == 1)) && !app.facile_db_impo.dit_no_scorporo)
 				{
-					totale = Math.Round(rig.rig_prezzo - rig.rig_prezzo * (rig.rig_sco_iva_esc / 100.0) + rig.rig_spese, dec + 2, MidpointRounding.AwayFromZero);
+					totale = Math.Round(rig.rig_prezzo - rig.rig_prezzo * (rig.rig_sco_iva_esc / 100.0) + rig.rig_spese, (int)DecPlaces.MAX_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 				}
-				totale = Math.Round(((rig.rig_qta - rig.rig_tara - rig.rig_scomerce) * rig.rig_coef_mol * rig.rig_coef_mol2 * totale) - rig.rig_scovalore, dec);
+
+
+			//	totale = ((rig.rig_qta - rig.rig_tara - rig.rig_scomerce) * rig.rig_coef_mol * rig.rig_coef_mol2 * totale) - rig.rig_scovalore;
+
+				totale = Math.Round(((rig.rig_qta - rig.rig_tara - rig.rig_scomerce) * rig.rig_coef_mol * rig.rig_coef_mol2 * totale) - rig.rig_scovalore, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
 				var skip_iva = false;
 				if (app.facile_db_impo.dit_anno >= 2002)
@@ -1523,7 +1530,7 @@ namespace Facile.Extension
 						if (!app.facile_db_impo.dit_nocalc_sostituzioni)
 						{
 
-							fat.fat_abbuoni = rig.rig_iva_inclusa == 0 ? Math.Round(totale * (1 + (iva.iva_aliq / 100.0)), dec, MidpointRounding.AwayFromZero) : totale;
+							fat.fat_abbuoni = rig.rig_iva_inclusa == 0 ? Math.Round(totale * (1 + (iva.iva_aliq / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero) : totale;
 						}
 						else
 						{
@@ -1671,15 +1678,15 @@ namespace Facile.Extension
 						if (app.facile_db_impo.dit_anno < 2002)
 						{
 							fat.fat_imponibile_0 = fat.fat_imponibile_0 / (1 + (iva.iva_aliq / 100.0));
-							fat.fat_imponibile_0 = fat.fat_imponibile_0.MyFloor(dec);
+							fat.fat_imponibile_0 = fat.fat_imponibile_0.MyFloor((int)DecPlaces.TOT_DECIMAL_PLACES);
 						}
 						else
 						{
 							var xxxtot = fat.fat_imponibile_0;
-							fat.fat_imponibile_0 = Math.Round(fat.fat_imponibile_0 / (1 + (iva.iva_aliq / 100.0)), dec, MidpointRounding.AwayFromZero);
-							var xxxiva = Math.Round(fat.fat_imponibile_0 * (1 + (iva.iva_aliq / 100.0)), dec, MidpointRounding.AwayFromZero);
+							fat.fat_imponibile_0 = Math.Round(fat.fat_imponibile_0 / (1 + (iva.iva_aliq / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+							var xxxiva = Math.Round(fat.fat_imponibile_0 * (1 + (iva.iva_aliq / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 							xxxiva -= xxxtot;
-							if (!xxxiva.TestIfZero(dec))
+							if (!xxxiva.TestIfZero((int)DecPlaces.TOT_DECIMAL_PLACES))
 							{
 								fat.fat_dec_iva_0 = (float)xxxiva;
 							}
@@ -1694,16 +1701,16 @@ namespace Facile.Extension
 				{
 					fat.fat_aliquota_rit_0 = iva.iva_ritenuta;
 					fat.fat_perc_rit_0 = iva.iva_ritenuta_perc;
-					fat.fat_importo_rit_0 += Math.Round((fat.fat_imponibile_0 * (iva.iva_ritenuta_perc / 100.0)) * (iva.iva_ritenuta / 100.0), dec, MidpointRounding.AwayFromZero);
-					fat.fat_ritenuta_acconto += Math.Round((fat.fat_imponibile_0 * (iva.iva_ritenuta_perc / 100.0)) * (iva.iva_ritenuta / 100.0), dec, MidpointRounding.AwayFromZero);
+					fat.fat_importo_rit_0 += Math.Round((fat.fat_imponibile_0 * (iva.iva_ritenuta_perc / 100.0)) * (iva.iva_ritenuta / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_ritenuta_acconto += Math.Round((fat.fat_imponibile_0 * (iva.iva_ritenuta_perc / 100.0)) * (iva.iva_ritenuta / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 				}
 
 				if (!iva.iva_cassa.TestIfZero(2))
 				{
 					fat.fat_aliquota_cas_0 = iva.iva_cassa;
-					fat.fat_importo_cas_0 += Math.Round(fat.fat_imponibile_0 * (iva.iva_cassa / 100.0), dec, MidpointRounding.AwayFromZero);
-					fat.fat_cassa += Math.Round(fat.fat_imponibile_0 * (iva.iva_cassa / 100.0), dec, MidpointRounding.AwayFromZero);
-					fat.fat_ripartizione_0 += Math.Round(fat.fat_imponibile_0 * (iva.iva_cassa / 100.0), dec, MidpointRounding.AwayFromZero);
+					fat.fat_importo_cas_0 += Math.Round(fat.fat_imponibile_0 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_cassa += Math.Round(fat.fat_imponibile_0 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_ripartizione_0 += Math.Round(fat.fat_imponibile_0 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 				}
 				// Fine Gestione Ritenuta Acconto e cassa previdenziale professionisti
 
@@ -1713,7 +1720,7 @@ namespace Facile.Extension
 				if (iva.iva_omaggi == 1)
 				{
 					fat.fat_desc_iva_0 = iva.iva_desc;
-					fat.fat_omaggi += Math.Round(fat.fat_imponibile_0 - fat.fat_imponibile_0 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					fat.fat_omaggi += Math.Round(fat.fat_imponibile_0 - fat.fat_imponibile_0 * fat.fat_sconto / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 				}
 				// Fine Codice aggiunto
 			} while (false);
@@ -1747,15 +1754,15 @@ namespace Facile.Extension
 						if (app.facile_db_impo.dit_anno < 2002)
 						{
 							fat.fat_imponibile_1 = fat.fat_imponibile_1 / (1 + (iva.iva_aliq / 100.0));
-							fat.fat_imponibile_1 = fat.fat_imponibile_1.MyFloor(dec);
+							fat.fat_imponibile_1 = fat.fat_imponibile_1.MyFloor((int)DecPlaces.TOT_DECIMAL_PLACES);
 						}
 						else
 						{
 							var xxxtot = fat.fat_imponibile_1;
-							fat.fat_imponibile_1 = Math.Round(fat.fat_imponibile_1 / (1 + (iva.iva_aliq / 100.0)), dec, MidpointRounding.AwayFromZero);
-							var xxxiva = Math.Round(fat.fat_imponibile_1 * (1 + (iva.iva_aliq / 100.0)), dec, MidpointRounding.AwayFromZero);
+							fat.fat_imponibile_1 = Math.Round(fat.fat_imponibile_1 / (1 + (iva.iva_aliq / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+							var xxxiva = Math.Round(fat.fat_imponibile_1 * (1 + (iva.iva_aliq / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 							xxxiva -= xxxtot;
-							if (!xxxiva.TestIfZero(dec))
+							if (!xxxiva.TestIfZero((int)DecPlaces.TOT_DECIMAL_PLACES))
 							{
 								fat.fat_dec_iva_1 = (float)xxxiva;
 							}
@@ -1770,16 +1777,16 @@ namespace Facile.Extension
 				{
 					fat.fat_aliquota_rit_1 = iva.iva_ritenuta;
 					fat.fat_perc_rit_1 = iva.iva_ritenuta_perc;
-					fat.fat_importo_rit_1 += Math.Round((fat.fat_imponibile_1 * (iva.iva_ritenuta_perc / 100.0)) * (iva.iva_ritenuta / 100.0), dec, MidpointRounding.AwayFromZero);
-					fat.fat_ritenuta_acconto += Math.Round((fat.fat_imponibile_1 * (iva.iva_ritenuta_perc / 100.0)) * (iva.iva_ritenuta / 100.0), dec, MidpointRounding.AwayFromZero);
+					fat.fat_importo_rit_1 += Math.Round((fat.fat_imponibile_1 * (iva.iva_ritenuta_perc / 100.0)) * (iva.iva_ritenuta / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_ritenuta_acconto += Math.Round((fat.fat_imponibile_1 * (iva.iva_ritenuta_perc / 100.0)) * (iva.iva_ritenuta / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 				}
 
 				if (!iva.iva_cassa.TestIfZero(2))
 				{
 					fat.fat_aliquota_cas_1 = iva.iva_cassa;
-					fat.fat_importo_cas_1 += Math.Round(fat.fat_imponibile_1 * (iva.iva_cassa / 100.0), dec, MidpointRounding.AwayFromZero);
-					fat.fat_cassa += Math.Round(fat.fat_imponibile_1 * (iva.iva_cassa / 100.0), dec, MidpointRounding.AwayFromZero);
-					fat.fat_ripartizione_1 += Math.Round(fat.fat_imponibile_1 * (iva.iva_cassa / 100.0), dec, MidpointRounding.AwayFromZero);
+					fat.fat_importo_cas_1 += Math.Round(fat.fat_imponibile_1 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_cassa += Math.Round(fat.fat_imponibile_1 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_ripartizione_1 += Math.Round(fat.fat_imponibile_1 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 				}
 				// Fine Gestione Ritenuta Acconto e cassa previdenziale professionisti
 
@@ -1789,7 +1796,7 @@ namespace Facile.Extension
 				if (iva.iva_omaggi == 1)
 				{
 					fat.fat_desc_iva_1 = iva.iva_desc;
-					fat.fat_omaggi += Math.Round(fat.fat_imponibile_1 - fat.fat_imponibile_1 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					fat.fat_omaggi += Math.Round(fat.fat_imponibile_1 - fat.fat_imponibile_1 * fat.fat_sconto / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 				}
 				// Fine Codice aggiunto
 			} while (false);
@@ -1824,15 +1831,15 @@ namespace Facile.Extension
 						if (app.facile_db_impo.dit_anno < 2002)
 						{
 							fat.fat_imponibile_2 = fat.fat_imponibile_2 / (1 + (iva.iva_aliq / 100.0));
-							fat.fat_imponibile_2 = fat.fat_imponibile_2.MyFloor(dec);
+							fat.fat_imponibile_2 = fat.fat_imponibile_2.MyFloor((int)DecPlaces.TOT_DECIMAL_PLACES);
 						}
 						else
 						{
 							var xxxtot = fat.fat_imponibile_2;
-							fat.fat_imponibile_2 = Math.Round(fat.fat_imponibile_2 / (1 + (iva.iva_aliq / 100.0)), dec, MidpointRounding.AwayFromZero);
-							var xxxiva = Math.Round(fat.fat_imponibile_2 * (1 + (iva.iva_aliq / 100.0)), dec, MidpointRounding.AwayFromZero);
+							fat.fat_imponibile_2 = Math.Round(fat.fat_imponibile_2 / (1 + (iva.iva_aliq / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+							var xxxiva = Math.Round(fat.fat_imponibile_2 * (1 + (iva.iva_aliq / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 							xxxiva -= xxxtot;
-							if (!xxxiva.TestIfZero(dec))
+							if (!xxxiva.TestIfZero((int)DecPlaces.TOT_DECIMAL_PLACES))
 							{
 								fat.fat_dec_iva_2 = (float)xxxiva;
 							}
@@ -1847,16 +1854,16 @@ namespace Facile.Extension
 				{
 					fat.fat_aliquota_rit_2 = iva.iva_ritenuta;
 					fat.fat_perc_rit_2 = iva.iva_ritenuta_perc;
-					fat.fat_importo_rit_2 += Math.Round((fat.fat_imponibile_2 * (iva.iva_ritenuta_perc / 100.0)) * (iva.iva_ritenuta / 100.0), dec, MidpointRounding.AwayFromZero);
-					fat.fat_ritenuta_acconto += Math.Round((fat.fat_imponibile_2 * (iva.iva_ritenuta_perc / 100.0)) * (iva.iva_ritenuta / 100.0), dec, MidpointRounding.AwayFromZero);
+					fat.fat_importo_rit_2 += Math.Round((fat.fat_imponibile_2 * (iva.iva_ritenuta_perc / 100.0)) * (iva.iva_ritenuta / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_ritenuta_acconto += Math.Round((fat.fat_imponibile_2 * (iva.iva_ritenuta_perc / 100.0)) * (iva.iva_ritenuta / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 				}
 
 				if (!iva.iva_cassa.TestIfZero(2))
 				{
 					fat.fat_aliquota_cas_2 = iva.iva_cassa;
-					fat.fat_importo_cas_2 += Math.Round(fat.fat_imponibile_2 * (iva.iva_cassa / 100.0), dec, MidpointRounding.AwayFromZero);
-					fat.fat_cassa += Math.Round(fat.fat_imponibile_2 * (iva.iva_cassa / 100.0), dec, MidpointRounding.AwayFromZero);
-					fat.fat_ripartizione_2 += Math.Round(fat.fat_imponibile_2 * (iva.iva_cassa / 100.0), dec, MidpointRounding.AwayFromZero);
+					fat.fat_importo_cas_2 += Math.Round(fat.fat_imponibile_2 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_cassa += Math.Round(fat.fat_imponibile_2 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_ripartizione_2 += Math.Round(fat.fat_imponibile_2 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 				}
 				// Fine Gestione Ritenuta Acconto e cassa previdenziale professionisti
 
@@ -1866,7 +1873,7 @@ namespace Facile.Extension
 				if (iva.iva_omaggi == 1)
 				{
 					fat.fat_desc_iva_2 = iva.iva_desc;
-					fat.fat_omaggi += Math.Round(fat.fat_imponibile_2 - fat.fat_imponibile_2 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					fat.fat_omaggi += Math.Round(fat.fat_imponibile_2 - fat.fat_imponibile_2 * fat.fat_sconto / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 				}
 				// Fine Codice aggiunto
 			} while (false);
@@ -1900,15 +1907,15 @@ namespace Facile.Extension
 						if (app.facile_db_impo.dit_anno < 2002)
 						{
 							fat.fat_imponibile_3 = fat.fat_imponibile_3 / (1 + (iva.iva_aliq / 100.0));
-							fat.fat_imponibile_3 = fat.fat_imponibile_3.MyFloor(dec);
+							fat.fat_imponibile_3 = fat.fat_imponibile_3.MyFloor((int)DecPlaces.TOT_DECIMAL_PLACES);
 						}
 						else
 						{
 							var xxxtot = fat.fat_imponibile_3;
-							fat.fat_imponibile_3 = Math.Round(fat.fat_imponibile_3 / (1 + (iva.iva_aliq / 100.0)), dec, MidpointRounding.AwayFromZero);
-							var xxxiva = Math.Round(fat.fat_imponibile_3 * (1 + (iva.iva_aliq / 100.0)), dec, MidpointRounding.AwayFromZero);
+							fat.fat_imponibile_3 = Math.Round(fat.fat_imponibile_3 / (1 + (iva.iva_aliq / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+							var xxxiva = Math.Round(fat.fat_imponibile_3 * (1 + (iva.iva_aliq / 100.0)), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 							xxxiva -= xxxtot;
-							if (!xxxiva.TestIfZero(dec))
+							if (!xxxiva.TestIfZero((int)DecPlaces.TOT_DECIMAL_PLACES))
 							{
 								fat.fat_dec_iva_3 = (float)xxxiva;
 							}
@@ -1923,16 +1930,16 @@ namespace Facile.Extension
 				{
 					fat.fat_aliquota_rit_3 = iva.iva_ritenuta;
 					fat.fat_perc_rit_3 = iva.iva_ritenuta_perc;
-					fat.fat_importo_rit_3 += Math.Round((fat.fat_imponibile_3 * (iva.iva_ritenuta_perc / 100.0)) * (iva.iva_ritenuta / 100.0), dec, MidpointRounding.AwayFromZero);
-					fat.fat_ritenuta_acconto += Math.Round((fat.fat_imponibile_3 * (iva.iva_ritenuta_perc / 100.0)) * (iva.iva_ritenuta / 100.0), dec, MidpointRounding.AwayFromZero);
+					fat.fat_importo_rit_3 += Math.Round((fat.fat_imponibile_3 * (iva.iva_ritenuta_perc / 100.0)) * (iva.iva_ritenuta / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_ritenuta_acconto += Math.Round((fat.fat_imponibile_3 * (iva.iva_ritenuta_perc / 100.0)) * (iva.iva_ritenuta / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 				}
 
 				if (!iva.iva_cassa.TestIfZero(2))
 				{
 					fat.fat_aliquota_cas_3 = iva.iva_cassa;
-					fat.fat_importo_cas_3 += Math.Round(fat.fat_imponibile_3 * (iva.iva_cassa / 100.0), dec, MidpointRounding.AwayFromZero);
-					fat.fat_cassa += Math.Round(fat.fat_imponibile_3 * (iva.iva_cassa / 100.0), dec, MidpointRounding.AwayFromZero);
-					fat.fat_ripartizione_3 += Math.Round(fat.fat_imponibile_3 * (iva.iva_cassa / 100.0), dec, MidpointRounding.AwayFromZero);
+					fat.fat_importo_cas_3 += Math.Round(fat.fat_imponibile_3 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_cassa += Math.Round(fat.fat_imponibile_3 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_ripartizione_3 += Math.Round(fat.fat_imponibile_3 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 				}
 				// Fine Gestione Ritenuta Acconto e cassa previdenziale professionisti
 
@@ -1942,7 +1949,7 @@ namespace Facile.Extension
 				if (iva.iva_omaggi == 1)
 				{
 					fat.fat_desc_iva_3 = iva.iva_desc;
-					fat.fat_omaggi += Math.Round(fat.fat_imponibile_3 - fat.fat_imponibile_3 * fat.fat_sconto / 100.0, dec, MidpointRounding.AwayFromZero);
+					fat.fat_omaggi += Math.Round(fat.fat_imponibile_3 - fat.fat_imponibile_3 * fat.fat_sconto / 100.0, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 				}
 				// Fine Codice aggiunto
 			} while (false);
@@ -1975,12 +1982,11 @@ namespace Facile.Extension
 					}
 				}
 			}
-			fat.fat_provvigione = Math.Round(fat.fat_provvigione, dec, MidpointRounding.AwayFromZero);
-			fat.fat_tot_costo = Math.Round(fat.fat_tot_costo, dec, MidpointRounding.AwayFromZero);
-			fat.fat_tot_commiss = Math.Round(fat.fat_tot_commiss, dec, MidpointRounding.AwayFromZero);
+			fat.fat_provvigione = Math.Round(fat.fat_provvigione, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+			fat.fat_tot_costo = Math.Round(fat.fat_tot_costo, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+			fat.fat_tot_commiss = Math.Round(fat.fat_tot_commiss, (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 
 			await GetTotaliAsync(fat);
 		}
-
 	}
 }

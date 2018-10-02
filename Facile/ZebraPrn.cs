@@ -203,7 +203,7 @@ namespace Facile
 			num = "";
 			if (!string.IsNullOrWhiteSpace(cli.cli_piva)) num = $"P.IVA {cli.cli_piva}";
 			num = num + "       ";
-			if (!string.IsNullOrWhiteSpace(cli.cli_codfis)) num = $"Cod. Fiscale {cli.cli_codfis}";
+			if (!string.IsNullOrWhiteSpace(cli.cli_codfis)) num = num + $"Cod. Fiscale {cli.cli_codfis}";
 			str = str + $"^FO{col},{row}" + "^A0,N,23,23" + $"^FD{num.Trim()}^FS";
 
 			// Tracciamo la linea orizzontale
