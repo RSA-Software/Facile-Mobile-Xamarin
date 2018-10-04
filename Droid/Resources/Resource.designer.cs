@@ -28,1346 +28,16 @@ namespace Facile.Droid
 		{
 			global::PCLStorage.Resource.String.ApplicationName = global::Facile.Droid.Resource.String.ApplicationName;
 			global::PCLStorage.Resource.String.Hello = global::Facile.Droid.Resource.String.Hello;
-			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglecollapseicon = global::Facile.Droid.Resource.Drawable.inputlayout_togglecollapseicon;
-			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglevisibleicon = global::Facile.Droid.Resource.Drawable.inputlayout_togglevisibleicon;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorAnimationTypes = global::Facile.Droid.Resource.Attribute.busyIndicatorAnimationTypes;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorIsBusy = global::Facile.Droid.Resource.Attribute.busyIndicatorIsBusy;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorSecondaryColor = global::Facile.Droid.Resource.Attribute.busyIndicatorSecondaryColor;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorTextColor = global::Facile.Droid.Resource.Attribute.busyIndicatorTextColor;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorTextSize = global::Facile.Droid.Resource.Attribute.busyIndicatorTextSize;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorTitle = global::Facile.Droid.Resource.Attribute.busyIndicatorTitle;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorTitlePlacement = global::Facile.Droid.Resource.Attribute.busyIndicatorTitlePlacement;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorViewBoxHeight = global::Facile.Droid.Resource.Attribute.busyIndicatorViewBoxHeight;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorViewBoxWidth = global::Facile.Droid.Resource.Attribute.busyIndicatorViewBoxWidth;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.ball = global::Facile.Droid.Resource.Id.ball;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.battery = global::Facile.Droid.Resource.Id.battery;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.bottom = global::Facile.Droid.Resource.Id.bottom;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.box = global::Facile.Droid.Resource.Id.box;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.doubleCircle = global::Facile.Droid.Resource.Id.doubleCircle;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.ecg = global::Facile.Droid.Resource.Id.ecg;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.gearBox = global::Facile.Droid.Resource.Id.gearBox;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.globe = global::Facile.Droid.Resource.Id.globe;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.horizontalPulsingBox = global::Facile.Droid.Resource.Id.horizontalPulsingBox;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.movieTimer = global::Facile.Droid.Resource.Id.movieTimer;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.none = global::Facile.Droid.Resource.Id.none;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.print = global::Facile.Droid.Resource.Id.print;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.rectangle = global::Facile.Droid.Resource.Id.rectangle;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.rollingBall = global::Facile.Droid.Resource.Id.rollingBall;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.singleCircle = global::Facile.Droid.Resource.Id.singleCircle;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.slicedCircle = global::Facile.Droid.Resource.Id.slicedCircle;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.top = global::Facile.Droid.Resource.Id.top;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.zoomingTarget = global::Facile.Droid.Resource.Id.zoomingTarget;
 			global::Com.Syncfusion.Sfbusyindicator.Resource.String.library_name = global::Facile.Droid.Resource.String.library_name;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator = global::Facile.Droid.Resource.Styleable.SfBusyIndicator;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorAnimationTypes = global::Facile.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorAnimationTypes;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorIsBusy = global::Facile.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorIsBusy;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorSecondaryColor = global::Facile.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorSecondaryColor;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorTextColor = global::Facile.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorTextColor;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorTextSize = global::Facile.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorTextSize;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorTitle = global::Facile.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorTitle;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorTitlePlacement = global::Facile.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorTitlePlacement;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorViewBoxHeight = global::Facile.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorViewBoxHeight;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorViewBoxWidth = global::Facile.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorViewBoxWidth;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_guidedactions_item_pressed = global::Facile.Droid.Resource.Animator.lb_guidedactions_item_pressed;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_guidedactions_item_unpressed = global::Facile.Droid.Resource.Animator.lb_guidedactions_item_unpressed;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_guidedstep_slide_down = global::Facile.Droid.Resource.Animator.lb_guidedstep_slide_down;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_guidedstep_slide_up = global::Facile.Droid.Resource.Animator.lb_guidedstep_slide_up;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_description_enter = global::Facile.Droid.Resource.Animator.lb_onboarding_description_enter;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_logo_enter = global::Facile.Droid.Resource.Animator.lb_onboarding_logo_enter;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_logo_exit = global::Facile.Droid.Resource.Animator.lb_onboarding_logo_exit;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_page_indicator_enter = global::Facile.Droid.Resource.Animator.lb_onboarding_page_indicator_enter;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_page_indicator_fade_in = global::Facile.Droid.Resource.Animator.lb_onboarding_page_indicator_fade_in;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_page_indicator_fade_out = global::Facile.Droid.Resource.Animator.lb_onboarding_page_indicator_fade_out;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_start_button_fade_in = global::Facile.Droid.Resource.Animator.lb_onboarding_start_button_fade_in;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_start_button_fade_out = global::Facile.Droid.Resource.Animator.lb_onboarding_start_button_fade_out;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_onboarding_title_enter = global::Facile.Droid.Resource.Animator.lb_onboarding_title_enter;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_playback_bg_fade_in = global::Facile.Droid.Resource.Animator.lb_playback_bg_fade_in;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_playback_bg_fade_out = global::Facile.Droid.Resource.Animator.lb_playback_bg_fade_out;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_playback_controls_fade_in = global::Facile.Droid.Resource.Animator.lb_playback_controls_fade_in;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_playback_controls_fade_out = global::Facile.Droid.Resource.Animator.lb_playback_controls_fade_out;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_playback_description_fade_in = global::Facile.Droid.Resource.Animator.lb_playback_description_fade_in;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_playback_description_fade_out = global::Facile.Droid.Resource.Animator.lb_playback_description_fade_out;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_playback_rows_fade_in = global::Facile.Droid.Resource.Animator.lb_playback_rows_fade_in;
-			global::Com.Syncfusion.Carousel.Resource.Animator.lb_playback_rows_fade_out = global::Facile.Droid.Resource.Animator.lb_playback_rows_fade_out;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.activatedAnimationDuration = global::Facile.Droid.Resource.Attribute.activatedAnimationDuration;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.arrowBgColor = global::Facile.Droid.Resource.Attribute.arrowBgColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.arrowRadius = global::Facile.Droid.Resource.Attribute.arrowRadius;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.baseCardViewStyle = global::Facile.Droid.Resource.Attribute.baseCardViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browsePaddingBottom = global::Facile.Droid.Resource.Attribute.browsePaddingBottom;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browsePaddingEnd = global::Facile.Droid.Resource.Attribute.browsePaddingEnd;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browsePaddingStart = global::Facile.Droid.Resource.Attribute.browsePaddingStart;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browsePaddingTop = global::Facile.Droid.Resource.Attribute.browsePaddingTop;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browseRowsFadingEdgeLength = global::Facile.Droid.Resource.Attribute.browseRowsFadingEdgeLength;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browseRowsMarginStart = global::Facile.Droid.Resource.Attribute.browseRowsMarginStart;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browseRowsMarginTop = global::Facile.Droid.Resource.Attribute.browseRowsMarginTop;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browseTitleIconStyle = global::Facile.Droid.Resource.Attribute.browseTitleIconStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browseTitleTextStyle = global::Facile.Droid.Resource.Attribute.browseTitleTextStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browseTitleViewLayout = global::Facile.Droid.Resource.Attribute.browseTitleViewLayout;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.browseTitleViewStyle = global::Facile.Droid.Resource.Attribute.browseTitleViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.cardBackground = global::Facile.Droid.Resource.Attribute.cardBackground;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.cardForeground = global::Facile.Droid.Resource.Attribute.cardForeground;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.cardType = global::Facile.Droid.Resource.Attribute.cardType;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.carouselAllowLoadMore = global::Facile.Droid.Resource.Attribute.carouselAllowLoadMore;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.carouselDuration = global::Facile.Droid.Resource.Attribute.carouselDuration;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.carouselEnableVirtualization = global::Facile.Droid.Resource.Attribute.carouselEnableVirtualization;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.carouselItemHeight = global::Facile.Droid.Resource.Attribute.carouselItemHeight;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.carouselItemSpacing = global::Facile.Droid.Resource.Attribute.carouselItemSpacing;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.carouselItemWidth = global::Facile.Droid.Resource.Attribute.carouselItemWidth;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.carouselLoadMoreItemsCount = global::Facile.Droid.Resource.Attribute.carouselLoadMoreItemsCount;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.carouselOffset = global::Facile.Droid.Resource.Attribute.carouselOffset;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.carouselRotationAngle = global::Facile.Droid.Resource.Attribute.carouselRotationAngle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.carouselScaleOffset = global::Facile.Droid.Resource.Attribute.carouselScaleOffset;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.carouselSelectedIndex = global::Facile.Droid.Resource.Attribute.carouselSelectedIndex;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.carouselSelectedItemOffset = global::Facile.Droid.Resource.Attribute.carouselSelectedItemOffset;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.carouselViewMode = global::Facile.Droid.Resource.Attribute.carouselViewMode;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.closed_captioning = global::Facile.Droid.Resource.Attribute.closed_captioning;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.columnWidth = global::Facile.Droid.Resource.Attribute.columnWidth;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.datePickerFormat = global::Facile.Droid.Resource.Attribute.datePickerFormat;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.defaultBrandColor = global::Facile.Droid.Resource.Attribute.defaultBrandColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.defaultBrandColorDark = global::Facile.Droid.Resource.Attribute.defaultBrandColorDark;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.defaultSearchBrightColor = global::Facile.Droid.Resource.Attribute.defaultSearchBrightColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.defaultSearchColor = global::Facile.Droid.Resource.Attribute.defaultSearchColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.defaultSearchIcon = global::Facile.Droid.Resource.Attribute.defaultSearchIcon;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.defaultSearchIconColor = global::Facile.Droid.Resource.Attribute.defaultSearchIconColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.defaultSectionHeaderColor = global::Facile.Droid.Resource.Attribute.defaultSectionHeaderColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.detailsActionButtonStyle = global::Facile.Droid.Resource.Attribute.detailsActionButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.detailsDescriptionBodyStyle = global::Facile.Droid.Resource.Attribute.detailsDescriptionBodyStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.detailsDescriptionSubtitleStyle = global::Facile.Droid.Resource.Attribute.detailsDescriptionSubtitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.detailsDescriptionTitleStyle = global::Facile.Droid.Resource.Attribute.detailsDescriptionTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.dotBgColor = global::Facile.Droid.Resource.Attribute.dotBgColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.dotToArrowGap = global::Facile.Droid.Resource.Attribute.dotToArrowGap;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.dotToDotGap = global::Facile.Droid.Resource.Attribute.dotToDotGap;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.errorMessageStyle = global::Facile.Droid.Resource.Attribute.errorMessageStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.extraVisibility = global::Facile.Droid.Resource.Attribute.extraVisibility;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.fast_forward = global::Facile.Droid.Resource.Attribute.fast_forward;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.focusOutEnd = global::Facile.Droid.Resource.Attribute.focusOutEnd;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.focusOutFront = global::Facile.Droid.Resource.Attribute.focusOutFront;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.focusOutSideEnd = global::Facile.Droid.Resource.Attribute.focusOutSideEnd;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.focusOutSideStart = global::Facile.Droid.Resource.Attribute.focusOutSideStart;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidanceBreadcrumbStyle = global::Facile.Droid.Resource.Attribute.guidanceBreadcrumbStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidanceContainerStyle = global::Facile.Droid.Resource.Attribute.guidanceContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidanceDescriptionStyle = global::Facile.Droid.Resource.Attribute.guidanceDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidanceEntryAnimation = global::Facile.Droid.Resource.Attribute.guidanceEntryAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidanceIconStyle = global::Facile.Droid.Resource.Attribute.guidanceIconStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidanceTitleStyle = global::Facile.Droid.Resource.Attribute.guidanceTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionCheckedAnimation = global::Facile.Droid.Resource.Attribute.guidedActionCheckedAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionContentWidth = global::Facile.Droid.Resource.Attribute.guidedActionContentWidth;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionContentWidthNoIcon = global::Facile.Droid.Resource.Attribute.guidedActionContentWidthNoIcon;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionContentWidthWeight = global::Facile.Droid.Resource.Attribute.guidedActionContentWidthWeight;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionContentWidthWeightTwoPanels = global::Facile.Droid.Resource.Attribute.guidedActionContentWidthWeightTwoPanels;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionDescriptionMinLines = global::Facile.Droid.Resource.Attribute.guidedActionDescriptionMinLines;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionDisabledChevronAlpha = global::Facile.Droid.Resource.Attribute.guidedActionDisabledChevronAlpha;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionEnabledChevronAlpha = global::Facile.Droid.Resource.Attribute.guidedActionEnabledChevronAlpha;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionItemCheckmarkStyle = global::Facile.Droid.Resource.Attribute.guidedActionItemCheckmarkStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionItemChevronStyle = global::Facile.Droid.Resource.Attribute.guidedActionItemChevronStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionItemContainerStyle = global::Facile.Droid.Resource.Attribute.guidedActionItemContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionItemContentStyle = global::Facile.Droid.Resource.Attribute.guidedActionItemContentStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionItemDescriptionStyle = global::Facile.Droid.Resource.Attribute.guidedActionItemDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionItemIconStyle = global::Facile.Droid.Resource.Attribute.guidedActionItemIconStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionItemTitleStyle = global::Facile.Droid.Resource.Attribute.guidedActionItemTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionPressedAnimation = global::Facile.Droid.Resource.Attribute.guidedActionPressedAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionTitleMaxLines = global::Facile.Droid.Resource.Attribute.guidedActionTitleMaxLines;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionTitleMinLines = global::Facile.Droid.Resource.Attribute.guidedActionTitleMinLines;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionUncheckedAnimation = global::Facile.Droid.Resource.Attribute.guidedActionUncheckedAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionUnpressedAnimation = global::Facile.Droid.Resource.Attribute.guidedActionUnpressedAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionVerticalPadding = global::Facile.Droid.Resource.Attribute.guidedActionVerticalPadding;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsBackground = global::Facile.Droid.Resource.Attribute.guidedActionsBackground;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsBackgroundDark = global::Facile.Droid.Resource.Attribute.guidedActionsBackgroundDark;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsContainerStyle = global::Facile.Droid.Resource.Attribute.guidedActionsContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsElevation = global::Facile.Droid.Resource.Attribute.guidedActionsElevation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsEntryAnimation = global::Facile.Droid.Resource.Attribute.guidedActionsEntryAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsListStyle = global::Facile.Droid.Resource.Attribute.guidedActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsSelectorDrawable = global::Facile.Droid.Resource.Attribute.guidedActionsSelectorDrawable;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsSelectorHideAnimation = global::Facile.Droid.Resource.Attribute.guidedActionsSelectorHideAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsSelectorShowAnimation = global::Facile.Droid.Resource.Attribute.guidedActionsSelectorShowAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedActionsSelectorStyle = global::Facile.Droid.Resource.Attribute.guidedActionsSelectorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedButtonActionsListStyle = global::Facile.Droid.Resource.Attribute.guidedButtonActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedButtonActionsWidthWeight = global::Facile.Droid.Resource.Attribute.guidedButtonActionsWidthWeight;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepBackground = global::Facile.Droid.Resource.Attribute.guidedStepBackground;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepEntryAnimation = global::Facile.Droid.Resource.Attribute.guidedStepEntryAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepExitAnimation = global::Facile.Droid.Resource.Attribute.guidedStepExitAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepHeightWeight = global::Facile.Droid.Resource.Attribute.guidedStepHeightWeight;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepImeAppearingAnimation = global::Facile.Droid.Resource.Attribute.guidedStepImeAppearingAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepImeDisappearingAnimation = global::Facile.Droid.Resource.Attribute.guidedStepImeDisappearingAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepKeyline = global::Facile.Droid.Resource.Attribute.guidedStepKeyline;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepReentryAnimation = global::Facile.Droid.Resource.Attribute.guidedStepReentryAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepReturnAnimation = global::Facile.Droid.Resource.Attribute.guidedStepReturnAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepTheme = global::Facile.Droid.Resource.Attribute.guidedStepTheme;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedStepThemeFlag = global::Facile.Droid.Resource.Attribute.guidedStepThemeFlag;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.guidedSubActionsListStyle = global::Facile.Droid.Resource.Attribute.guidedSubActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.headerStyle = global::Facile.Droid.Resource.Attribute.headerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.headersVerticalGridStyle = global::Facile.Droid.Resource.Attribute.headersVerticalGridStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.high_quality = global::Facile.Droid.Resource.Attribute.high_quality;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.horizontalMargin = global::Facile.Droid.Resource.Attribute.horizontalMargin;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.imageCardViewBadgeStyle = global::Facile.Droid.Resource.Attribute.imageCardViewBadgeStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.imageCardViewContentStyle = global::Facile.Droid.Resource.Attribute.imageCardViewContentStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.imageCardViewImageStyle = global::Facile.Droid.Resource.Attribute.imageCardViewImageStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.imageCardViewInfoAreaStyle = global::Facile.Droid.Resource.Attribute.imageCardViewInfoAreaStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.imageCardViewStyle = global::Facile.Droid.Resource.Attribute.imageCardViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.imageCardViewTitleStyle = global::Facile.Droid.Resource.Attribute.imageCardViewTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.infoAreaBackground = global::Facile.Droid.Resource.Attribute.infoAreaBackground;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.infoVisibility = global::Facile.Droid.Resource.Attribute.infoVisibility;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.is24HourFormat = global::Facile.Droid.Resource.Attribute.is24HourFormat;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.itemsVerticalGridStyle = global::Facile.Droid.Resource.Attribute.itemsVerticalGridStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.layoutManager = global::Facile.Droid.Resource.Attribute.layoutManager;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.layout_viewType = global::Facile.Droid.Resource.Attribute.layout_viewType;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.lbDotRadius = global::Facile.Droid.Resource.Attribute.lbDotRadius;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.lbImageCardViewType = global::Facile.Droid.Resource.Attribute.lbImageCardViewType;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.lb_slideEdge = global::Facile.Droid.Resource.Attribute.lb_slideEdge;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.maintainLineSpacing = global::Facile.Droid.Resource.Attribute.maintainLineSpacing;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.numberOfColumns = global::Facile.Droid.Resource.Attribute.numberOfColumns;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.numberOfRows = global::Facile.Droid.Resource.Attribute.numberOfRows;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.onboardingDescriptionStyle = global::Facile.Droid.Resource.Attribute.onboardingDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.onboardingHeaderStyle = global::Facile.Droid.Resource.Attribute.onboardingHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.onboardingLogoStyle = global::Facile.Droid.Resource.Attribute.onboardingLogoStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.onboardingNavigatorContainerStyle = global::Facile.Droid.Resource.Attribute.onboardingNavigatorContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.onboardingPageIndicatorStyle = global::Facile.Droid.Resource.Attribute.onboardingPageIndicatorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.onboardingStartButtonStyle = global::Facile.Droid.Resource.Attribute.onboardingStartButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.onboardingTheme = global::Facile.Droid.Resource.Attribute.onboardingTheme;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.onboardingTitleStyle = global::Facile.Droid.Resource.Attribute.onboardingTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.overlayDimActiveLevel = global::Facile.Droid.Resource.Attribute.overlayDimActiveLevel;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.overlayDimDimmedLevel = global::Facile.Droid.Resource.Attribute.overlayDimDimmedLevel;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.overlayDimMaskColor = global::Facile.Droid.Resource.Attribute.overlayDimMaskColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.pause = global::Facile.Droid.Resource.Attribute.pause;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.picture_in_picture = global::Facile.Droid.Resource.Attribute.picture_in_picture;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.play = global::Facile.Droid.Resource.Attribute.play;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackControlButtonLabelStyle = global::Facile.Droid.Resource.Attribute.playbackControlButtonLabelStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackControlsActionIcons = global::Facile.Droid.Resource.Attribute.playbackControlsActionIcons;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackControlsButtonStyle = global::Facile.Droid.Resource.Attribute.playbackControlsButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackControlsIconHighlightColor = global::Facile.Droid.Resource.Attribute.playbackControlsIconHighlightColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackControlsTimeStyle = global::Facile.Droid.Resource.Attribute.playbackControlsTimeStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemDetailsStyle = global::Facile.Droid.Resource.Attribute.playbackMediaItemDetailsStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemDurationStyle = global::Facile.Droid.Resource.Attribute.playbackMediaItemDurationStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemNameStyle = global::Facile.Droid.Resource.Attribute.playbackMediaItemNameStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemNumberStyle = global::Facile.Droid.Resource.Attribute.playbackMediaItemNumberStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemNumberViewFlipperLayout = global::Facile.Droid.Resource.Attribute.playbackMediaItemNumberViewFlipperLayout;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemNumberViewFlipperStyle = global::Facile.Droid.Resource.Attribute.playbackMediaItemNumberViewFlipperStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemPaddingStart = global::Facile.Droid.Resource.Attribute.playbackMediaItemPaddingStart;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemRowStyle = global::Facile.Droid.Resource.Attribute.playbackMediaItemRowStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaItemSeparatorStyle = global::Facile.Droid.Resource.Attribute.playbackMediaItemSeparatorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaListHeaderStyle = global::Facile.Droid.Resource.Attribute.playbackMediaListHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackMediaListHeaderTitleStyle = global::Facile.Droid.Resource.Attribute.playbackMediaListHeaderTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackPaddingEnd = global::Facile.Droid.Resource.Attribute.playbackPaddingEnd;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackPaddingStart = global::Facile.Droid.Resource.Attribute.playbackPaddingStart;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.playbackProgressPrimaryColor = global::Facile.Droid.Resource.Attribute.playbackProgressPrimaryColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.repeat = global::Facile.Droid.Resource.Attribute.repeat;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.repeat_one = global::Facile.Droid.Resource.Attribute.repeat_one;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.resizeTrigger = global::Facile.Droid.Resource.Attribute.resizeTrigger;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.resizedPaddingAdjustmentBottom = global::Facile.Droid.Resource.Attribute.resizedPaddingAdjustmentBottom;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.resizedPaddingAdjustmentTop = global::Facile.Droid.Resource.Attribute.resizedPaddingAdjustmentTop;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.resizedTextSize = global::Facile.Droid.Resource.Attribute.resizedTextSize;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.reverseLayout = global::Facile.Droid.Resource.Attribute.reverseLayout;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rewind = global::Facile.Droid.Resource.Attribute.rewind;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rowHeaderDescriptionStyle = global::Facile.Droid.Resource.Attribute.rowHeaderDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rowHeaderDockStyle = global::Facile.Droid.Resource.Attribute.rowHeaderDockStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rowHeaderStyle = global::Facile.Droid.Resource.Attribute.rowHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rowHeight = global::Facile.Droid.Resource.Attribute.rowHeight;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rowHorizontalGridStyle = global::Facile.Droid.Resource.Attribute.rowHorizontalGridStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rowHoverCardDescriptionStyle = global::Facile.Droid.Resource.Attribute.rowHoverCardDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rowHoverCardTitleStyle = global::Facile.Droid.Resource.Attribute.rowHoverCardTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.rowsVerticalGridStyle = global::Facile.Droid.Resource.Attribute.rowsVerticalGridStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.searchOrbBrightColor = global::Facile.Droid.Resource.Attribute.searchOrbBrightColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.searchOrbColor = global::Facile.Droid.Resource.Attribute.searchOrbColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.searchOrbIcon = global::Facile.Droid.Resource.Attribute.searchOrbIcon;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.searchOrbIconColor = global::Facile.Droid.Resource.Attribute.searchOrbIconColor;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.searchOrbViewStyle = global::Facile.Droid.Resource.Attribute.searchOrbViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.sectionHeaderStyle = global::Facile.Droid.Resource.Attribute.sectionHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.selectedAnimationDelay = global::Facile.Droid.Resource.Attribute.selectedAnimationDelay;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.selectedAnimationDuration = global::Facile.Droid.Resource.Attribute.selectedAnimationDuration;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.shuffle = global::Facile.Droid.Resource.Attribute.shuffle;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.skip_next = global::Facile.Droid.Resource.Attribute.skip_next;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.skip_previous = global::Facile.Droid.Resource.Attribute.skip_previous;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.spanCount = global::Facile.Droid.Resource.Attribute.spanCount;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.stackFromEnd = global::Facile.Droid.Resource.Attribute.stackFromEnd;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.thumb_down = global::Facile.Droid.Resource.Attribute.thumb_down;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.thumb_down_outline = global::Facile.Droid.Resource.Attribute.thumb_down_outline;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.thumb_up = global::Facile.Droid.Resource.Attribute.thumb_up;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.thumb_up_outline = global::Facile.Droid.Resource.Attribute.thumb_up_outline;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.useCurrentTime = global::Facile.Droid.Resource.Attribute.useCurrentTime;
-			global::Com.Syncfusion.Carousel.Resource.Attribute.verticalMargin = global::Facile.Droid.Resource.Attribute.verticalMargin;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_action_text_color = global::Facile.Droid.Resource.Color.lb_action_text_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_background_protection = global::Facile.Droid.Resource.Color.lb_background_protection;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_basic_card_bg_color = global::Facile.Droid.Resource.Color.lb_basic_card_bg_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_basic_card_content_text_color = global::Facile.Droid.Resource.Color.lb_basic_card_content_text_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_basic_card_info_bg_color = global::Facile.Droid.Resource.Color.lb_basic_card_info_bg_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_basic_card_title_text_color = global::Facile.Droid.Resource.Color.lb_basic_card_title_text_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_browse_header_color = global::Facile.Droid.Resource.Color.lb_browse_header_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_browse_header_description_color = global::Facile.Droid.Resource.Color.lb_browse_header_description_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_browse_title_color = global::Facile.Droid.Resource.Color.lb_browse_title_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_control_button_color = global::Facile.Droid.Resource.Color.lb_control_button_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_control_button_text = global::Facile.Droid.Resource.Color.lb_control_button_text;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_default_brand_color = global::Facile.Droid.Resource.Color.lb_default_brand_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_default_brand_color_dark = global::Facile.Droid.Resource.Color.lb_default_brand_color_dark;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_default_search_color = global::Facile.Droid.Resource.Color.lb_default_search_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_default_search_icon_color = global::Facile.Droid.Resource.Color.lb_default_search_icon_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_details_description_body_color = global::Facile.Droid.Resource.Color.lb_details_description_body_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_details_description_color = global::Facile.Droid.Resource.Color.lb_details_description_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_details_overview_bg_color = global::Facile.Droid.Resource.Color.lb_details_overview_bg_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_error_background_color_opaque = global::Facile.Droid.Resource.Color.lb_error_background_color_opaque;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_error_background_color_translucent = global::Facile.Droid.Resource.Color.lb_error_background_color_translucent;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_error_message = global::Facile.Droid.Resource.Color.lb_error_message;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_grey = global::Facile.Droid.Resource.Color.lb_grey;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_guidedactions_background = global::Facile.Droid.Resource.Color.lb_guidedactions_background;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_guidedactions_background_dark = global::Facile.Droid.Resource.Color.lb_guidedactions_background_dark;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_guidedactions_item_unselected_text_color = global::Facile.Droid.Resource.Color.lb_guidedactions_item_unselected_text_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_list_item_unselected_text_color = global::Facile.Droid.Resource.Color.lb_list_item_unselected_text_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_media_background_color = global::Facile.Droid.Resource.Color.lb_media_background_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_page_indicator_arrow_background = global::Facile.Droid.Resource.Color.lb_page_indicator_arrow_background;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_page_indicator_arrow_shadow = global::Facile.Droid.Resource.Color.lb_page_indicator_arrow_shadow;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_page_indicator_dot = global::Facile.Droid.Resource.Color.lb_page_indicator_dot;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_background_progress_color = global::Facile.Droid.Resource.Color.lb_playback_background_progress_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_controls_background_dark = global::Facile.Droid.Resource.Color.lb_playback_controls_background_dark;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_controls_background_light = global::Facile.Droid.Resource.Color.lb_playback_controls_background_light;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_controls_time_text_color = global::Facile.Droid.Resource.Color.lb_playback_controls_time_text_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_icon_highlight_no_theme = global::Facile.Droid.Resource.Color.lb_playback_icon_highlight_no_theme;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_media_row_highlight_color = global::Facile.Droid.Resource.Color.lb_playback_media_row_highlight_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_media_row_separator_highlight_color = global::Facile.Droid.Resource.Color.lb_playback_media_row_separator_highlight_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_now_playing_bar_color = global::Facile.Droid.Resource.Color.lb_playback_now_playing_bar_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_progress_color_no_theme = global::Facile.Droid.Resource.Color.lb_playback_progress_color_no_theme;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_playback_secondary_progress_color = global::Facile.Droid.Resource.Color.lb_playback_secondary_progress_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_search_bar_hint = global::Facile.Droid.Resource.Color.lb_search_bar_hint;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_search_bar_hint_speech_mode = global::Facile.Droid.Resource.Color.lb_search_bar_hint_speech_mode;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_search_bar_text = global::Facile.Droid.Resource.Color.lb_search_bar_text;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_search_bar_text_speech_mode = global::Facile.Droid.Resource.Color.lb_search_bar_text_speech_mode;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_search_plate_hint_text_color = global::Facile.Droid.Resource.Color.lb_search_plate_hint_text_color;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_speech_orb_not_recording = global::Facile.Droid.Resource.Color.lb_speech_orb_not_recording;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_speech_orb_not_recording_icon = global::Facile.Droid.Resource.Color.lb_speech_orb_not_recording_icon;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_speech_orb_not_recording_pulsed = global::Facile.Droid.Resource.Color.lb_speech_orb_not_recording_pulsed;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_speech_orb_recording = global::Facile.Droid.Resource.Color.lb_speech_orb_recording;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_tv_white = global::Facile.Droid.Resource.Color.lb_tv_white;
-			global::Com.Syncfusion.Carousel.Resource.Color.lb_view_dim_mask_color = global::Facile.Droid.Resource.Color.lb_view_dim_mask_color;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::Facile.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::Facile.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::Facile.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_action_1_line_height = global::Facile.Droid.Resource.Dimension.lb_action_1_line_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_action_2_lines_height = global::Facile.Droid.Resource.Dimension.lb_action_2_lines_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_action_button_corner_radius = global::Facile.Droid.Resource.Dimension.lb_action_button_corner_radius;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_action_icon_margin = global::Facile.Droid.Resource.Dimension.lb_action_icon_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_action_padding_horizontal = global::Facile.Droid.Resource.Dimension.lb_action_padding_horizontal;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_action_text_size = global::Facile.Droid.Resource.Dimension.lb_action_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_action_with_icon_padding_end = global::Facile.Droid.Resource.Dimension.lb_action_with_icon_padding_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_action_with_icon_padding_start = global::Facile.Droid.Resource.Dimension.lb_action_with_icon_padding_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_content_text_size = global::Facile.Droid.Resource.Dimension.lb_basic_card_content_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_info_badge_margin = global::Facile.Droid.Resource.Dimension.lb_basic_card_info_badge_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_info_badge_size = global::Facile.Droid.Resource.Dimension.lb_basic_card_info_badge_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_info_height = global::Facile.Droid.Resource.Dimension.lb_basic_card_info_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_info_height_no_content = global::Facile.Droid.Resource.Dimension.lb_basic_card_info_height_no_content;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_info_padding_bottom = global::Facile.Droid.Resource.Dimension.lb_basic_card_info_padding_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_info_padding_horizontal = global::Facile.Droid.Resource.Dimension.lb_basic_card_info_padding_horizontal;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_info_padding_top = global::Facile.Droid.Resource.Dimension.lb_basic_card_info_padding_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_info_text_margin = global::Facile.Droid.Resource.Dimension.lb_basic_card_info_text_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_main_height = global::Facile.Droid.Resource.Dimension.lb_basic_card_main_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_main_width = global::Facile.Droid.Resource.Dimension.lb_basic_card_main_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_basic_card_title_text_size = global::Facile.Droid.Resource.Dimension.lb_basic_card_title_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_expanded_row_no_hovercard_bottom_padding = global::Facile.Droid.Resource.Dimension.lb_browse_expanded_row_no_hovercard_bottom_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_expanded_selected_row_top_padding = global::Facile.Droid.Resource.Dimension.lb_browse_expanded_selected_row_top_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_header_description_text_size = global::Facile.Droid.Resource.Dimension.lb_browse_header_description_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_header_fading_length = global::Facile.Droid.Resource.Dimension.lb_browse_header_fading_length;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_header_height = global::Facile.Droid.Resource.Dimension.lb_browse_header_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_header_padding_end = global::Facile.Droid.Resource.Dimension.lb_browse_header_padding_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_header_select_duration = global::Facile.Droid.Resource.Dimension.lb_browse_header_select_duration;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_header_select_scale = global::Facile.Droid.Resource.Dimension.lb_browse_header_select_scale;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_header_text_size = global::Facile.Droid.Resource.Dimension.lb_browse_header_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_headers_vertical_spacing = global::Facile.Droid.Resource.Dimension.lb_browse_headers_vertical_spacing;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_headers_width = global::Facile.Droid.Resource.Dimension.lb_browse_headers_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_headers_z = global::Facile.Droid.Resource.Dimension.lb_browse_headers_z;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_item_horizontal_spacing = global::Facile.Droid.Resource.Dimension.lb_browse_item_horizontal_spacing;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_item_vertical_spacing = global::Facile.Droid.Resource.Dimension.lb_browse_item_vertical_spacing;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_padding_bottom = global::Facile.Droid.Resource.Dimension.lb_browse_padding_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_padding_end = global::Facile.Droid.Resource.Dimension.lb_browse_padding_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_padding_start = global::Facile.Droid.Resource.Dimension.lb_browse_padding_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_padding_top = global::Facile.Droid.Resource.Dimension.lb_browse_padding_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_row_hovercard_description_font_size = global::Facile.Droid.Resource.Dimension.lb_browse_row_hovercard_description_font_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_row_hovercard_max_width = global::Facile.Droid.Resource.Dimension.lb_browse_row_hovercard_max_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_row_hovercard_title_font_size = global::Facile.Droid.Resource.Dimension.lb_browse_row_hovercard_title_font_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_rows_fading_edge = global::Facile.Droid.Resource.Dimension.lb_browse_rows_fading_edge;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_rows_margin_start = global::Facile.Droid.Resource.Dimension.lb_browse_rows_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_rows_margin_top = global::Facile.Droid.Resource.Dimension.lb_browse_rows_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_section_header_text_size = global::Facile.Droid.Resource.Dimension.lb_browse_section_header_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_selected_row_top_padding = global::Facile.Droid.Resource.Dimension.lb_browse_selected_row_top_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_title_height = global::Facile.Droid.Resource.Dimension.lb_browse_title_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_title_icon_height = global::Facile.Droid.Resource.Dimension.lb_browse_title_icon_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_title_icon_max_width = global::Facile.Droid.Resource.Dimension.lb_browse_title_icon_max_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_browse_title_text_size = global::Facile.Droid.Resource.Dimension.lb_browse_title_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_control_button_diameter = global::Facile.Droid.Resource.Dimension.lb_control_button_diameter;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_control_button_height = global::Facile.Droid.Resource.Dimension.lb_control_button_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_control_button_secondary_diameter = global::Facile.Droid.Resource.Dimension.lb_control_button_secondary_diameter;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_control_button_secondary_height = global::Facile.Droid.Resource.Dimension.lb_control_button_secondary_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_control_button_text_size = global::Facile.Droid.Resource.Dimension.lb_control_button_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_control_icon_height = global::Facile.Droid.Resource.Dimension.lb_control_icon_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_control_icon_width = global::Facile.Droid.Resource.Dimension.lb_control_icon_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_cover_drawable_parallax_movement = global::Facile.Droid.Resource.Dimension.lb_details_cover_drawable_parallax_movement;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_body_line_spacing = global::Facile.Droid.Resource.Dimension.lb_details_description_body_line_spacing;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_body_text_size = global::Facile.Droid.Resource.Dimension.lb_details_description_body_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_subtitle_text_size = global::Facile.Droid.Resource.Dimension.lb_details_description_subtitle_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_title_baseline = global::Facile.Droid.Resource.Dimension.lb_details_description_title_baseline;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_title_line_spacing = global::Facile.Droid.Resource.Dimension.lb_details_description_title_line_spacing;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_title_padding_adjust_bottom = global::Facile.Droid.Resource.Dimension.lb_details_description_title_padding_adjust_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_title_padding_adjust_top = global::Facile.Droid.Resource.Dimension.lb_details_description_title_padding_adjust_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_title_resized_text_size = global::Facile.Droid.Resource.Dimension.lb_details_description_title_resized_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_title_text_size = global::Facile.Droid.Resource.Dimension.lb_details_description_title_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_under_subtitle_baseline_margin = global::Facile.Droid.Resource.Dimension.lb_details_description_under_subtitle_baseline_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_description_under_title_baseline_margin = global::Facile.Droid.Resource.Dimension.lb_details_description_under_title_baseline_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_action_items_spacing = global::Facile.Droid.Resource.Dimension.lb_details_overview_action_items_spacing;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_action_select_duration = global::Facile.Droid.Resource.Dimension.lb_details_overview_action_select_duration;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_actions_fade_size = global::Facile.Droid.Resource.Dimension.lb_details_overview_actions_fade_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_actions_height = global::Facile.Droid.Resource.Dimension.lb_details_overview_actions_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_actions_padding_end = global::Facile.Droid.Resource.Dimension.lb_details_overview_actions_padding_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_actions_padding_start = global::Facile.Droid.Resource.Dimension.lb_details_overview_actions_padding_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_description_margin_bottom = global::Facile.Droid.Resource.Dimension.lb_details_overview_description_margin_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_description_margin_end = global::Facile.Droid.Resource.Dimension.lb_details_overview_description_margin_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_description_margin_start = global::Facile.Droid.Resource.Dimension.lb_details_overview_description_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_description_margin_top = global::Facile.Droid.Resource.Dimension.lb_details_overview_description_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_height_large = global::Facile.Droid.Resource.Dimension.lb_details_overview_height_large;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_height_small = global::Facile.Droid.Resource.Dimension.lb_details_overview_height_small;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_image_margin_horizontal = global::Facile.Droid.Resource.Dimension.lb_details_overview_image_margin_horizontal;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_image_margin_vertical = global::Facile.Droid.Resource.Dimension.lb_details_overview_image_margin_vertical;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_margin_bottom = global::Facile.Droid.Resource.Dimension.lb_details_overview_margin_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_margin_end = global::Facile.Droid.Resource.Dimension.lb_details_overview_margin_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_margin_start = global::Facile.Droid.Resource.Dimension.lb_details_overview_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_overview_z = global::Facile.Droid.Resource.Dimension.lb_details_overview_z;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_rows_align_top = global::Facile.Droid.Resource.Dimension.lb_details_rows_align_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_actions_height = global::Facile.Droid.Resource.Dimension.lb_details_v2_actions_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_align_pos_for_actions = global::Facile.Droid.Resource.Dimension.lb_details_v2_align_pos_for_actions;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_align_pos_for_description = global::Facile.Droid.Resource.Dimension.lb_details_v2_align_pos_for_description;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_blank_height = global::Facile.Droid.Resource.Dimension.lb_details_v2_blank_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_card_height = global::Facile.Droid.Resource.Dimension.lb_details_v2_card_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_description_margin_end = global::Facile.Droid.Resource.Dimension.lb_details_v2_description_margin_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_description_margin_start = global::Facile.Droid.Resource.Dimension.lb_details_v2_description_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_description_margin_top = global::Facile.Droid.Resource.Dimension.lb_details_v2_description_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_left = global::Facile.Droid.Resource.Dimension.lb_details_v2_left;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_logo_margin_start = global::Facile.Droid.Resource.Dimension.lb_details_v2_logo_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_logo_max_height = global::Facile.Droid.Resource.Dimension.lb_details_v2_logo_max_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_details_v2_logo_max_width = global::Facile.Droid.Resource.Dimension.lb_details_v2_logo_max_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_error_image_max_height = global::Facile.Droid.Resource.Dimension.lb_error_image_max_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_error_message_max_width = global::Facile.Droid.Resource.Dimension.lb_error_message_max_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_error_message_text_size = global::Facile.Droid.Resource.Dimension.lb_error_message_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_error_under_image_baseline_margin = global::Facile.Droid.Resource.Dimension.lb_error_under_image_baseline_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_error_under_message_baseline_margin = global::Facile.Droid.Resource.Dimension.lb_error_under_message_baseline_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_elevation = global::Facile.Droid.Resource.Dimension.lb_guidedactions_elevation;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_bottom_padding = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_bottom_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_checkmark_diameter = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_checkmark_diameter;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_delimiter_padding = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_delimiter_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_description_font_size = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_description_font_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_end_padding = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_end_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_icon_height = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_icon_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_icon_width = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_icon_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_space_between_title_and_description = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_space_between_title_and_description;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_start_padding = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_start_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_text_width = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_text_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_text_width_no_icon = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_text_width_no_icon;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_title_font_size = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_title_font_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_item_top_padding = global::Facile.Droid.Resource.Dimension.lb_guidedactions_item_top_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_list_padding_end = global::Facile.Droid.Resource.Dimension.lb_guidedactions_list_padding_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_list_padding_start = global::Facile.Droid.Resource.Dimension.lb_guidedactions_list_padding_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_list_vertical_spacing = global::Facile.Droid.Resource.Dimension.lb_guidedactions_list_vertical_spacing;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_section_shadow_width = global::Facile.Droid.Resource.Dimension.lb_guidedactions_section_shadow_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_sublist_bottom_margin = global::Facile.Droid.Resource.Dimension.lb_guidedactions_sublist_bottom_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_sublist_padding_bottom = global::Facile.Droid.Resource.Dimension.lb_guidedactions_sublist_padding_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_sublist_padding_top = global::Facile.Droid.Resource.Dimension.lb_guidedactions_sublist_padding_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedactions_vertical_padding = global::Facile.Droid.Resource.Dimension.lb_guidedactions_vertical_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_guidedstep_slide_ime_distance = global::Facile.Droid.Resource.Dimension.lb_guidedstep_slide_ime_distance;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_list_row_height = global::Facile.Droid.Resource.Dimension.lb_list_row_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_material_shadow_details_z = global::Facile.Droid.Resource.Dimension.lb_material_shadow_details_z;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_material_shadow_focused_z = global::Facile.Droid.Resource.Dimension.lb_material_shadow_focused_z;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_material_shadow_normal_z = global::Facile.Droid.Resource.Dimension.lb_material_shadow_normal_z;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_content_margin_bottom = global::Facile.Droid.Resource.Dimension.lb_onboarding_content_margin_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_content_margin_top = global::Facile.Droid.Resource.Dimension.lb_onboarding_content_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_content_width = global::Facile.Droid.Resource.Dimension.lb_onboarding_content_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_header_height = global::Facile.Droid.Resource.Dimension.lb_onboarding_header_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_header_margin_top = global::Facile.Droid.Resource.Dimension.lb_onboarding_header_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_navigation_height = global::Facile.Droid.Resource.Dimension.lb_onboarding_navigation_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_start_button_height = global::Facile.Droid.Resource.Dimension.lb_onboarding_start_button_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_start_button_margin_bottom = global::Facile.Droid.Resource.Dimension.lb_onboarding_start_button_margin_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_onboarding_start_button_translation_offset = global::Facile.Droid.Resource.Dimension.lb_onboarding_start_button_translation_offset;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_page_indicator_arrow_gap = global::Facile.Droid.Resource.Dimension.lb_page_indicator_arrow_gap;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_page_indicator_arrow_radius = global::Facile.Droid.Resource.Dimension.lb_page_indicator_arrow_radius;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_page_indicator_arrow_shadow_offset = global::Facile.Droid.Resource.Dimension.lb_page_indicator_arrow_shadow_offset;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_page_indicator_arrow_shadow_radius = global::Facile.Droid.Resource.Dimension.lb_page_indicator_arrow_shadow_radius;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_page_indicator_dot_gap = global::Facile.Droid.Resource.Dimension.lb_page_indicator_dot_gap;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_page_indicator_dot_radius = global::Facile.Droid.Resource.Dimension.lb_page_indicator_dot_radius;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_card_height = global::Facile.Droid.Resource.Dimension.lb_playback_controls_card_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_child_margin_bigger = global::Facile.Droid.Resource.Dimension.lb_playback_controls_child_margin_bigger;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_child_margin_biggest = global::Facile.Droid.Resource.Dimension.lb_playback_controls_child_margin_biggest;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_child_margin_default = global::Facile.Droid.Resource.Dimension.lb_playback_controls_child_margin_default;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_margin_bottom = global::Facile.Droid.Resource.Dimension.lb_playback_controls_margin_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_margin_end = global::Facile.Droid.Resource.Dimension.lb_playback_controls_margin_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_margin_start = global::Facile.Droid.Resource.Dimension.lb_playback_controls_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_padding_bottom = global::Facile.Droid.Resource.Dimension.lb_playback_controls_padding_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_time_text_size = global::Facile.Droid.Resource.Dimension.lb_playback_controls_time_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_controls_z = global::Facile.Droid.Resource.Dimension.lb_playback_controls_z;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_current_time_margin_start = global::Facile.Droid.Resource.Dimension.lb_playback_current_time_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_description_margin_end = global::Facile.Droid.Resource.Dimension.lb_playback_description_margin_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_description_margin_start = global::Facile.Droid.Resource.Dimension.lb_playback_description_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_description_margin_top = global::Facile.Droid.Resource.Dimension.lb_playback_description_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_major_fade_translate_y = global::Facile.Droid.Resource.Dimension.lb_playback_major_fade_translate_y;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_media_item_radio_icon_size = global::Facile.Droid.Resource.Dimension.lb_playback_media_item_radio_icon_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_media_radio_width_with_padding = global::Facile.Droid.Resource.Dimension.lb_playback_media_radio_width_with_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_media_row_details_selector_width = global::Facile.Droid.Resource.Dimension.lb_playback_media_row_details_selector_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_media_row_horizontal_padding = global::Facile.Droid.Resource.Dimension.lb_playback_media_row_horizontal_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_media_row_radio_selector_width = global::Facile.Droid.Resource.Dimension.lb_playback_media_row_radio_selector_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_media_row_selector_round_rect_radius = global::Facile.Droid.Resource.Dimension.lb_playback_media_row_selector_round_rect_radius;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_media_row_separator_height = global::Facile.Droid.Resource.Dimension.lb_playback_media_row_separator_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_minor_fade_translate_y = global::Facile.Droid.Resource.Dimension.lb_playback_minor_fade_translate_y;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_now_playing_bar_height = global::Facile.Droid.Resource.Dimension.lb_playback_now_playing_bar_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_now_playing_bar_left_margin = global::Facile.Droid.Resource.Dimension.lb_playback_now_playing_bar_left_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_now_playing_bar_margin = global::Facile.Droid.Resource.Dimension.lb_playback_now_playing_bar_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_now_playing_bar_top_margin = global::Facile.Droid.Resource.Dimension.lb_playback_now_playing_bar_top_margin;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_now_playing_bar_width = global::Facile.Droid.Resource.Dimension.lb_playback_now_playing_bar_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_now_playing_view_size = global::Facile.Droid.Resource.Dimension.lb_playback_now_playing_view_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_other_rows_center_to_bottom = global::Facile.Droid.Resource.Dimension.lb_playback_other_rows_center_to_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_play_icon_size = global::Facile.Droid.Resource.Dimension.lb_playback_play_icon_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_time_padding_top = global::Facile.Droid.Resource.Dimension.lb_playback_time_padding_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_playback_total_time_margin_end = global::Facile.Droid.Resource.Dimension.lb_playback_total_time_margin_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_rounded_rect_corner_radius = global::Facile.Droid.Resource.Dimension.lb_rounded_rect_corner_radius;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_edit_text_margin_start = global::Facile.Droid.Resource.Dimension.lb_search_bar_edit_text_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_height = global::Facile.Droid.Resource.Dimension.lb_search_bar_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_hint_margin_start = global::Facile.Droid.Resource.Dimension.lb_search_bar_hint_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_icon_height = global::Facile.Droid.Resource.Dimension.lb_search_bar_icon_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_icon_margin_start = global::Facile.Droid.Resource.Dimension.lb_search_bar_icon_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_icon_width = global::Facile.Droid.Resource.Dimension.lb_search_bar_icon_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_inner_margin_bottom = global::Facile.Droid.Resource.Dimension.lb_search_bar_inner_margin_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_inner_margin_top = global::Facile.Droid.Resource.Dimension.lb_search_bar_inner_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_items_height = global::Facile.Droid.Resource.Dimension.lb_search_bar_items_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_items_layout_margin_top = global::Facile.Droid.Resource.Dimension.lb_search_bar_items_layout_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_items_margin_start = global::Facile.Droid.Resource.Dimension.lb_search_bar_items_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_items_width = global::Facile.Droid.Resource.Dimension.lb_search_bar_items_width;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_padding_start = global::Facile.Droid.Resource.Dimension.lb_search_bar_padding_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_padding_top = global::Facile.Droid.Resource.Dimension.lb_search_bar_padding_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_speech_orb_margin_start = global::Facile.Droid.Resource.Dimension.lb_search_bar_speech_orb_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_speech_orb_size = global::Facile.Droid.Resource.Dimension.lb_search_bar_speech_orb_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_text_size = global::Facile.Droid.Resource.Dimension.lb_search_bar_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_bar_unfocused_text_size = global::Facile.Droid.Resource.Dimension.lb_search_bar_unfocused_text_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_browse_row_padding_start = global::Facile.Droid.Resource.Dimension.lb_search_browse_row_padding_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_browse_rows_align_top = global::Facile.Droid.Resource.Dimension.lb_search_browse_rows_align_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_orb_focused_z = global::Facile.Droid.Resource.Dimension.lb_search_orb_focused_z;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_orb_margin_bottom = global::Facile.Droid.Resource.Dimension.lb_search_orb_margin_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_orb_margin_end = global::Facile.Droid.Resource.Dimension.lb_search_orb_margin_end;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_orb_margin_start = global::Facile.Droid.Resource.Dimension.lb_search_orb_margin_start;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_orb_margin_top = global::Facile.Droid.Resource.Dimension.lb_search_orb_margin_top;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_orb_size = global::Facile.Droid.Resource.Dimension.lb_search_orb_size;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_search_orb_unfocused_z = global::Facile.Droid.Resource.Dimension.lb_search_orb_unfocused_z;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.lb_vertical_grid_padding_bottom = global::Facile.Droid.Resource.Dimension.lb_vertical_grid_padding_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.picker_column_horizontal_padding = global::Facile.Droid.Resource.Dimension.picker_column_horizontal_padding;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.picker_item_height = global::Facile.Droid.Resource.Dimension.picker_item_height;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.picker_item_spacing = global::Facile.Droid.Resource.Dimension.picker_item_spacing;
-			global::Com.Syncfusion.Carousel.Resource.Dimension.picker_separator_horizontal_padding = global::Facile.Droid.Resource.Dimension.picker_separator_horizontal_padding;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_action_bg = global::Facile.Droid.Resource.Drawable.lb_action_bg;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_action_bg_focused = global::Facile.Droid.Resource.Drawable.lb_action_bg_focused;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_background = global::Facile.Droid.Resource.Drawable.lb_background;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_card_foreground = global::Facile.Droid.Resource.Drawable.lb_card_foreground;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_card_shadow_focused = global::Facile.Droid.Resource.Drawable.lb_card_shadow_focused;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_card_shadow_normal = global::Facile.Droid.Resource.Drawable.lb_card_shadow_normal;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_control_button_primary = global::Facile.Droid.Resource.Drawable.lb_control_button_primary;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_control_button_secondary = global::Facile.Droid.Resource.Drawable.lb_control_button_secondary;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_headers_right_fading = global::Facile.Droid.Resource.Drawable.lb_headers_right_fading;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_actions_right_arrow = global::Facile.Droid.Resource.Drawable.lb_ic_actions_right_arrow;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_cc = global::Facile.Droid.Resource.Drawable.lb_ic_cc;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_fast_forward = global::Facile.Droid.Resource.Drawable.lb_ic_fast_forward;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_fast_rewind = global::Facile.Droid.Resource.Drawable.lb_ic_fast_rewind;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_guidedactions_item_chevron = global::Facile.Droid.Resource.Drawable.lb_ic_guidedactions_item_chevron;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_hq = global::Facile.Droid.Resource.Drawable.lb_ic_hq;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_in_app_search = global::Facile.Droid.Resource.Drawable.lb_ic_in_app_search;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_loop = global::Facile.Droid.Resource.Drawable.lb_ic_loop;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_loop_one = global::Facile.Droid.Resource.Drawable.lb_ic_loop_one;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_more = global::Facile.Droid.Resource.Drawable.lb_ic_more;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_nav_arrow = global::Facile.Droid.Resource.Drawable.lb_ic_nav_arrow;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_pause = global::Facile.Droid.Resource.Drawable.lb_ic_pause;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_pip = global::Facile.Droid.Resource.Drawable.lb_ic_pip;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_play = global::Facile.Droid.Resource.Drawable.lb_ic_play;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_play_fit = global::Facile.Droid.Resource.Drawable.lb_ic_play_fit;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_playback_loop = global::Facile.Droid.Resource.Drawable.lb_ic_playback_loop;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_replay = global::Facile.Droid.Resource.Drawable.lb_ic_replay;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_sad_cloud = global::Facile.Droid.Resource.Drawable.lb_ic_sad_cloud;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_search_mic = global::Facile.Droid.Resource.Drawable.lb_ic_search_mic;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_search_mic_out = global::Facile.Droid.Resource.Drawable.lb_ic_search_mic_out;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_shuffle = global::Facile.Droid.Resource.Drawable.lb_ic_shuffle;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_skip_next = global::Facile.Droid.Resource.Drawable.lb_ic_skip_next;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_skip_previous = global::Facile.Droid.Resource.Drawable.lb_ic_skip_previous;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_stop = global::Facile.Droid.Resource.Drawable.lb_ic_stop;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_thumb_down = global::Facile.Droid.Resource.Drawable.lb_ic_thumb_down;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_thumb_down_outline = global::Facile.Droid.Resource.Drawable.lb_ic_thumb_down_outline;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_thumb_up = global::Facile.Droid.Resource.Drawable.lb_ic_thumb_up;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_ic_thumb_up_outline = global::Facile.Droid.Resource.Drawable.lb_ic_thumb_up_outline;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_in_app_search_bg = global::Facile.Droid.Resource.Drawable.lb_in_app_search_bg;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_in_app_search_shadow_focused = global::Facile.Droid.Resource.Drawable.lb_in_app_search_shadow_focused;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_in_app_search_shadow_normal = global::Facile.Droid.Resource.Drawable.lb_in_app_search_shadow_normal;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_onboarding_start_button_background = global::Facile.Droid.Resource.Drawable.lb_onboarding_start_button_background;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_playback_now_playing_bar = global::Facile.Droid.Resource.Drawable.lb_playback_now_playing_bar;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_playback_progress_bar = global::Facile.Droid.Resource.Drawable.lb_playback_progress_bar;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_search_orb = global::Facile.Droid.Resource.Drawable.lb_search_orb;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_selectable_item_rounded_rect = global::Facile.Droid.Resource.Drawable.lb_selectable_item_rounded_rect;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_speech_orb = global::Facile.Droid.Resource.Drawable.lb_speech_orb;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_text_dot_one = global::Facile.Droid.Resource.Drawable.lb_text_dot_one;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_text_dot_one_small = global::Facile.Droid.Resource.Drawable.lb_text_dot_one_small;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_text_dot_two = global::Facile.Droid.Resource.Drawable.lb_text_dot_two;
-			global::Com.Syncfusion.Carousel.Resource.Drawable.lb_text_dot_two_small = global::Facile.Droid.Resource.Drawable.lb_text_dot_two_small;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_browse_header_unselect_alpha = global::Facile.Droid.Resource.Fraction.lb_browse_header_unselect_alpha;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_browse_rows_scale = global::Facile.Droid.Resource.Fraction.lb_browse_rows_scale;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_focus_zoom_factor_large = global::Facile.Droid.Resource.Fraction.lb_focus_zoom_factor_large;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_focus_zoom_factor_medium = global::Facile.Droid.Resource.Fraction.lb_focus_zoom_factor_medium;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_focus_zoom_factor_small = global::Facile.Droid.Resource.Fraction.lb_focus_zoom_factor_small;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_focus_zoom_factor_xsmall = global::Facile.Droid.Resource.Fraction.lb_focus_zoom_factor_xsmall;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_search_bar_speech_orb_max_level_zoom = global::Facile.Droid.Resource.Fraction.lb_search_bar_speech_orb_max_level_zoom;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_search_orb_focused_zoom = global::Facile.Droid.Resource.Fraction.lb_search_orb_focused_zoom;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_view_active_level = global::Facile.Droid.Resource.Fraction.lb_view_active_level;
-			global::Com.Syncfusion.Carousel.Resource.Fraction.lb_view_dimmed_level = global::Facile.Droid.Resource.Fraction.lb_view_dimmed_level;
-			global::Com.Syncfusion.Carousel.Resource.Id.Content = global::Facile.Droid.Resource.Id.Content;
-			global::Com.Syncfusion.Carousel.Resource.Id.Default = global::Facile.Droid.Resource.Id.Default;
-			global::Com.Syncfusion.Carousel.Resource.Id.IconOnLeft = global::Facile.Droid.Resource.Id.IconOnLeft;
-			global::Com.Syncfusion.Carousel.Resource.Id.IconOnRight = global::Facile.Droid.Resource.Id.IconOnRight;
-			global::Com.Syncfusion.Carousel.Resource.Id.ImageOnly = global::Facile.Droid.Resource.Id.ImageOnly;
-			global::Com.Syncfusion.Carousel.Resource.Id.Linear = global::Facile.Droid.Resource.Id.Linear;
-			global::Com.Syncfusion.Carousel.Resource.Id.Title = global::Facile.Droid.Resource.Id.Title;
-			global::Com.Syncfusion.Carousel.Resource.Id.actionIcon = global::Facile.Droid.Resource.Id.actionIcon;
-			global::Com.Syncfusion.Carousel.Resource.Id.action_fragment = global::Facile.Droid.Resource.Id.action_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Id.action_fragment_background = global::Facile.Droid.Resource.Id.action_fragment_background;
-			global::Com.Syncfusion.Carousel.Resource.Id.action_fragment_root = global::Facile.Droid.Resource.Id.action_fragment_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.activated = global::Facile.Droid.Resource.Id.activated;
-			global::Com.Syncfusion.Carousel.Resource.Id.always = global::Facile.Droid.Resource.Id.always;
-			global::Com.Syncfusion.Carousel.Resource.Id.background = global::Facile.Droid.Resource.Id.background;
-			global::Com.Syncfusion.Carousel.Resource.Id.background_container = global::Facile.Droid.Resource.Id.background_container;
-			global::Com.Syncfusion.Carousel.Resource.Id.background_imagein = global::Facile.Droid.Resource.Id.background_imagein;
-			global::Com.Syncfusion.Carousel.Resource.Id.background_imageout = global::Facile.Droid.Resource.Id.background_imageout;
-			global::Com.Syncfusion.Carousel.Resource.Id.bar1 = global::Facile.Droid.Resource.Id.bar1;
-			global::Com.Syncfusion.Carousel.Resource.Id.bar2 = global::Facile.Droid.Resource.Id.bar2;
-			global::Com.Syncfusion.Carousel.Resource.Id.bar3 = global::Facile.Droid.Resource.Id.bar3;
-			global::Com.Syncfusion.Carousel.Resource.Id.bottom = global::Facile.Droid.Resource.Id.bottom;
-			global::Com.Syncfusion.Carousel.Resource.Id.bottom_spacer = global::Facile.Droid.Resource.Id.bottom_spacer;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_container_dock = global::Facile.Droid.Resource.Id.browse_container_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_dummy = global::Facile.Droid.Resource.Id.browse_dummy;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_frame = global::Facile.Droid.Resource.Id.browse_frame;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_grid = global::Facile.Droid.Resource.Id.browse_grid;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_grid_dock = global::Facile.Droid.Resource.Id.browse_grid_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_headers = global::Facile.Droid.Resource.Id.browse_headers;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_headers_dock = global::Facile.Droid.Resource.Id.browse_headers_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_headers_root = global::Facile.Droid.Resource.Id.browse_headers_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.browse_title_group = global::Facile.Droid.Resource.Id.browse_title_group;
-			global::Com.Syncfusion.Carousel.Resource.Id.button = global::Facile.Droid.Resource.Id.button;
-			global::Com.Syncfusion.Carousel.Resource.Id.button_start = global::Facile.Droid.Resource.Id.button_start;
-			global::Com.Syncfusion.Carousel.Resource.Id.column = global::Facile.Droid.Resource.Id.column;
-			global::Com.Syncfusion.Carousel.Resource.Id.container_list = global::Facile.Droid.Resource.Id.container_list;
-			global::Com.Syncfusion.Carousel.Resource.Id.content_container = global::Facile.Droid.Resource.Id.content_container;
-			global::Com.Syncfusion.Carousel.Resource.Id.content_fragment = global::Facile.Droid.Resource.Id.content_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Id.content_frame = global::Facile.Droid.Resource.Id.content_frame;
-			global::Com.Syncfusion.Carousel.Resource.Id.content_text = global::Facile.Droid.Resource.Id.content_text;
-			global::Com.Syncfusion.Carousel.Resource.Id.control_bar = global::Facile.Droid.Resource.Id.control_bar;
-			global::Com.Syncfusion.Carousel.Resource.Id.controls_card = global::Facile.Droid.Resource.Id.controls_card;
-			global::Com.Syncfusion.Carousel.Resource.Id.controls_card_right_panel = global::Facile.Droid.Resource.Id.controls_card_right_panel;
-			global::Com.Syncfusion.Carousel.Resource.Id.controls_container = global::Facile.Droid.Resource.Id.controls_container;
-			global::Com.Syncfusion.Carousel.Resource.Id.controls_dock = global::Facile.Droid.Resource.Id.controls_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.current_time = global::Facile.Droid.Resource.Id.current_time;
-			global::Com.Syncfusion.Carousel.Resource.Id.description = global::Facile.Droid.Resource.Id.description;
-			global::Com.Syncfusion.Carousel.Resource.Id.description_dock = global::Facile.Droid.Resource.Id.description_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_background_view = global::Facile.Droid.Resource.Id.details_background_view;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_fragment_root = global::Facile.Droid.Resource.Id.details_fragment_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_frame = global::Facile.Droid.Resource.Id.details_frame;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_overview = global::Facile.Droid.Resource.Id.details_overview;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_overview_actions = global::Facile.Droid.Resource.Id.details_overview_actions;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_overview_actions_background = global::Facile.Droid.Resource.Id.details_overview_actions_background;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_overview_description = global::Facile.Droid.Resource.Id.details_overview_description;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_overview_image = global::Facile.Droid.Resource.Id.details_overview_image;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_overview_right_panel = global::Facile.Droid.Resource.Id.details_overview_right_panel;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_root = global::Facile.Droid.Resource.Id.details_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.details_rows_dock = global::Facile.Droid.Resource.Id.details_rows_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.dummy = global::Facile.Droid.Resource.Id.dummy;
-			global::Com.Syncfusion.Carousel.Resource.Id.end = global::Facile.Droid.Resource.Id.end;
-			global::Com.Syncfusion.Carousel.Resource.Id.error_frame = global::Facile.Droid.Resource.Id.error_frame;
-			global::Com.Syncfusion.Carousel.Resource.Id.extra = global::Facile.Droid.Resource.Id.extra;
-			global::Com.Syncfusion.Carousel.Resource.Id.extra_badge = global::Facile.Droid.Resource.Id.extra_badge;
-			global::Com.Syncfusion.Carousel.Resource.Id.fade_out_edge = global::Facile.Droid.Resource.Id.fade_out_edge;
-			global::Com.Syncfusion.Carousel.Resource.Id.foreground_container = global::Facile.Droid.Resource.Id.foreground_container;
-			global::Com.Syncfusion.Carousel.Resource.Id.grid_frame = global::Facile.Droid.Resource.Id.grid_frame;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidance_breadcrumb = global::Facile.Droid.Resource.Id.guidance_breadcrumb;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidance_container = global::Facile.Droid.Resource.Id.guidance_container;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidance_description = global::Facile.Droid.Resource.Id.guidance_description;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidance_icon = global::Facile.Droid.Resource.Id.guidance_icon;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidance_title = global::Facile.Droid.Resource.Id.guidance_title;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_activator_item = global::Facile.Droid.Resource.Id.guidedactions_activator_item;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_content = global::Facile.Droid.Resource.Id.guidedactions_content;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_content2 = global::Facile.Droid.Resource.Id.guidedactions_content2;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_item_checkmark = global::Facile.Droid.Resource.Id.guidedactions_item_checkmark;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_item_chevron = global::Facile.Droid.Resource.Id.guidedactions_item_chevron;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_item_content = global::Facile.Droid.Resource.Id.guidedactions_item_content;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_item_description = global::Facile.Droid.Resource.Id.guidedactions_item_description;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_item_icon = global::Facile.Droid.Resource.Id.guidedactions_item_icon;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_item_title = global::Facile.Droid.Resource.Id.guidedactions_item_title;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_list = global::Facile.Droid.Resource.Id.guidedactions_list;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_list2 = global::Facile.Droid.Resource.Id.guidedactions_list2;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_list_background = global::Facile.Droid.Resource.Id.guidedactions_list_background;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_list_background2 = global::Facile.Droid.Resource.Id.guidedactions_list_background2;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_root = global::Facile.Droid.Resource.Id.guidedactions_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_root2 = global::Facile.Droid.Resource.Id.guidedactions_root2;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_sub_list = global::Facile.Droid.Resource.Id.guidedactions_sub_list;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedactions_sub_list_background = global::Facile.Droid.Resource.Id.guidedactions_sub_list_background;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedstep_background = global::Facile.Droid.Resource.Id.guidedstep_background;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedstep_background_view_root = global::Facile.Droid.Resource.Id.guidedstep_background_view_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.guidedstep_root = global::Facile.Droid.Resource.Id.guidedstep_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.hovercard_panel = global::Facile.Droid.Resource.Id.hovercard_panel;
-			global::Com.Syncfusion.Carousel.Resource.Id.icon = global::Facile.Droid.Resource.Id.icon;
-			global::Com.Syncfusion.Carousel.Resource.Id.image = global::Facile.Droid.Resource.Id.image;
-			global::Com.Syncfusion.Carousel.Resource.Id.info = global::Facile.Droid.Resource.Id.info;
-			global::Com.Syncfusion.Carousel.Resource.Id.infoOver = global::Facile.Droid.Resource.Id.infoOver;
-			global::Com.Syncfusion.Carousel.Resource.Id.infoUnder = global::Facile.Droid.Resource.Id.infoUnder;
-			global::Com.Syncfusion.Carousel.Resource.Id.infoUnderWithExtra = global::Facile.Droid.Resource.Id.infoUnderWithExtra;
-			global::Com.Syncfusion.Carousel.Resource.Id.info_field = global::Facile.Droid.Resource.Id.info_field;
-			global::Com.Syncfusion.Carousel.Resource.Id.initial = global::Facile.Droid.Resource.Id.initial;
-			global::Com.Syncfusion.Carousel.Resource.Id.item_touch_helper_previous_elevation = global::Facile.Droid.Resource.Id.item_touch_helper_previous_elevation;
-			global::Com.Syncfusion.Carousel.Resource.Id.label = global::Facile.Droid.Resource.Id.label;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_action_button = global::Facile.Droid.Resource.Id.lb_action_button;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_closed_captioning = global::Facile.Droid.Resource.Id.lb_control_closed_captioning;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_fast_forward = global::Facile.Droid.Resource.Id.lb_control_fast_forward;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_fast_rewind = global::Facile.Droid.Resource.Id.lb_control_fast_rewind;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_high_quality = global::Facile.Droid.Resource.Id.lb_control_high_quality;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_more_actions = global::Facile.Droid.Resource.Id.lb_control_more_actions;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_picture_in_picture = global::Facile.Droid.Resource.Id.lb_control_picture_in_picture;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_play_pause = global::Facile.Droid.Resource.Id.lb_control_play_pause;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_repeat = global::Facile.Droid.Resource.Id.lb_control_repeat;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_shuffle = global::Facile.Droid.Resource.Id.lb_control_shuffle;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_skip_next = global::Facile.Droid.Resource.Id.lb_control_skip_next;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_skip_previous = global::Facile.Droid.Resource.Id.lb_control_skip_previous;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_thumbs_down = global::Facile.Droid.Resource.Id.lb_control_thumbs_down;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_control_thumbs_up = global::Facile.Droid.Resource.Id.lb_control_thumbs_up;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_details_description_body = global::Facile.Droid.Resource.Id.lb_details_description_body;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_details_description_subtitle = global::Facile.Droid.Resource.Id.lb_details_description_subtitle;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_details_description_title = global::Facile.Droid.Resource.Id.lb_details_description_title;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_focus_animator = global::Facile.Droid.Resource.Id.lb_focus_animator;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_guidedstep_background = global::Facile.Droid.Resource.Id.lb_guidedstep_background;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_parallax_source = global::Facile.Droid.Resource.Id.lb_parallax_source;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_results_frame = global::Facile.Droid.Resource.Id.lb_results_frame;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_row_container_header_dock = global::Facile.Droid.Resource.Id.lb_row_container_header_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_search_bar = global::Facile.Droid.Resource.Id.lb_search_bar;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_search_bar_badge = global::Facile.Droid.Resource.Id.lb_search_bar_badge;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_search_bar_items = global::Facile.Droid.Resource.Id.lb_search_bar_items;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_search_bar_speech_orb = global::Facile.Droid.Resource.Id.lb_search_bar_speech_orb;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_search_frame = global::Facile.Droid.Resource.Id.lb_search_frame;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_search_text_editor = global::Facile.Droid.Resource.Id.lb_search_text_editor;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_shadow_focused = global::Facile.Droid.Resource.Id.lb_shadow_focused;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_shadow_impl = global::Facile.Droid.Resource.Id.lb_shadow_impl;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_shadow_normal = global::Facile.Droid.Resource.Id.lb_shadow_normal;
-			global::Com.Syncfusion.Carousel.Resource.Id.lb_slide_transition_value = global::Facile.Droid.Resource.Id.lb_slide_transition_value;
-			global::Com.Syncfusion.Carousel.Resource.Id.left = global::Facile.Droid.Resource.Id.left;
-			global::Com.Syncfusion.Carousel.Resource.Id.list_item = global::Facile.Droid.Resource.Id.list_item;
-			global::Com.Syncfusion.Carousel.Resource.Id.logo = global::Facile.Droid.Resource.Id.logo;
-			global::Com.Syncfusion.Carousel.Resource.Id.main = global::Facile.Droid.Resource.Id.main;
-			global::Com.Syncfusion.Carousel.Resource.Id.mainOnly = global::Facile.Droid.Resource.Id.mainOnly;
-			global::Com.Syncfusion.Carousel.Resource.Id.main_image = global::Facile.Droid.Resource.Id.main_image;
-			global::Com.Syncfusion.Carousel.Resource.Id.maxLines = global::Facile.Droid.Resource.Id.maxLines;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaItemActionsContainer = global::Facile.Droid.Resource.Id.mediaItemActionsContainer;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaItemDetails = global::Facile.Droid.Resource.Id.mediaItemDetails;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaItemDuration = global::Facile.Droid.Resource.Id.mediaItemDuration;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaItemName = global::Facile.Droid.Resource.Id.mediaItemName;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaItemNumberViewFlipper = global::Facile.Droid.Resource.Id.mediaItemNumberViewFlipper;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaItemRow = global::Facile.Droid.Resource.Id.mediaItemRow;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaListHeader = global::Facile.Droid.Resource.Id.mediaListHeader;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaRowSelector = global::Facile.Droid.Resource.Id.mediaRowSelector;
-			global::Com.Syncfusion.Carousel.Resource.Id.mediaRowSeparator = global::Facile.Droid.Resource.Id.mediaRowSeparator;
-			global::Com.Syncfusion.Carousel.Resource.Id.message = global::Facile.Droid.Resource.Id.message;
-			global::Com.Syncfusion.Carousel.Resource.Id.more_actions_dock = global::Facile.Droid.Resource.Id.more_actions_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.navigator_container = global::Facile.Droid.Resource.Id.navigator_container;
-			global::Com.Syncfusion.Carousel.Resource.Id.onboarding_fragment_root = global::Facile.Droid.Resource.Id.onboarding_fragment_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.page_container = global::Facile.Droid.Resource.Id.page_container;
-			global::Com.Syncfusion.Carousel.Resource.Id.page_indicator = global::Facile.Droid.Resource.Id.page_indicator;
-			global::Com.Syncfusion.Carousel.Resource.Id.paused = global::Facile.Droid.Resource.Id.paused;
-			global::Com.Syncfusion.Carousel.Resource.Id.picker = global::Facile.Droid.Resource.Id.picker;
-			global::Com.Syncfusion.Carousel.Resource.Id.playback_controls_dock = global::Facile.Droid.Resource.Id.playback_controls_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.playback_fragment_root = global::Facile.Droid.Resource.Id.playback_fragment_root;
-			global::Com.Syncfusion.Carousel.Resource.Id.playback_progress = global::Facile.Droid.Resource.Id.playback_progress;
-			global::Com.Syncfusion.Carousel.Resource.Id.playing = global::Facile.Droid.Resource.Id.playing;
-			global::Com.Syncfusion.Carousel.Resource.Id.right = global::Facile.Droid.Resource.Id.right;
-			global::Com.Syncfusion.Carousel.Resource.Id.row_content = global::Facile.Droid.Resource.Id.row_content;
-			global::Com.Syncfusion.Carousel.Resource.Id.row_header = global::Facile.Droid.Resource.Id.row_header;
-			global::Com.Syncfusion.Carousel.Resource.Id.row_header_description = global::Facile.Droid.Resource.Id.row_header_description;
-			global::Com.Syncfusion.Carousel.Resource.Id.scale_frame = global::Facile.Droid.Resource.Id.scale_frame;
-			global::Com.Syncfusion.Carousel.Resource.Id.search_orb = global::Facile.Droid.Resource.Id.search_orb;
-			global::Com.Syncfusion.Carousel.Resource.Id.secondary_controls_dock = global::Facile.Droid.Resource.Id.secondary_controls_dock;
-			global::Com.Syncfusion.Carousel.Resource.Id.selected = global::Facile.Droid.Resource.Id.selected;
-			global::Com.Syncfusion.Carousel.Resource.Id.separator = global::Facile.Droid.Resource.Id.separator;
-			global::Com.Syncfusion.Carousel.Resource.Id.spacer = global::Facile.Droid.Resource.Id.spacer;
-			global::Com.Syncfusion.Carousel.Resource.Id.start = global::Facile.Droid.Resource.Id.start;
-			global::Com.Syncfusion.Carousel.Resource.Id.title = global::Facile.Droid.Resource.Id.title;
-			global::Com.Syncfusion.Carousel.Resource.Id.title_badge = global::Facile.Droid.Resource.Id.title_badge;
-			global::Com.Syncfusion.Carousel.Resource.Id.title_orb = global::Facile.Droid.Resource.Id.title_orb;
-			global::Com.Syncfusion.Carousel.Resource.Id.title_text = global::Facile.Droid.Resource.Id.title_text;
-			global::Com.Syncfusion.Carousel.Resource.Id.top = global::Facile.Droid.Resource.Id.top;
-			global::Com.Syncfusion.Carousel.Resource.Id.total_time = global::Facile.Droid.Resource.Id.total_time;
-			global::Com.Syncfusion.Carousel.Resource.Id.transitionPosition = global::Facile.Droid.Resource.Id.transitionPosition;
-			global::Com.Syncfusion.Carousel.Resource.Id.video_surface = global::Facile.Droid.Resource.Id.video_surface;
-			global::Com.Syncfusion.Carousel.Resource.Id.video_surface_container = global::Facile.Droid.Resource.Id.video_surface_container;
-			global::Com.Syncfusion.Carousel.Resource.Id.wrap_content = global::Facile.Droid.Resource.Id.wrap_content;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_browse_headers_transition_delay = global::Facile.Droid.Resource.Integer.lb_browse_headers_transition_delay;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_browse_headers_transition_duration = global::Facile.Droid.Resource.Integer.lb_browse_headers_transition_duration;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_browse_rows_anim_duration = global::Facile.Droid.Resource.Integer.lb_browse_rows_anim_duration;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_card_activated_animation_duration = global::Facile.Droid.Resource.Integer.lb_card_activated_animation_duration;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_card_selected_animation_delay = global::Facile.Droid.Resource.Integer.lb_card_selected_animation_delay;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_card_selected_animation_duration = global::Facile.Droid.Resource.Integer.lb_card_selected_animation_duration;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_details_description_body_max_lines = global::Facile.Droid.Resource.Integer.lb_details_description_body_max_lines;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_details_description_body_min_lines = global::Facile.Droid.Resource.Integer.lb_details_description_body_min_lines;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_details_description_subtitle_max_lines = global::Facile.Droid.Resource.Integer.lb_details_description_subtitle_max_lines;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_details_description_title_max_lines = global::Facile.Droid.Resource.Integer.lb_details_description_title_max_lines;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_error_message_max_lines = global::Facile.Droid.Resource.Integer.lb_error_message_max_lines;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_guidedactions_item_animation_duration = global::Facile.Droid.Resource.Integer.lb_guidedactions_item_animation_duration;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_guidedactions_item_description_min_lines = global::Facile.Droid.Resource.Integer.lb_guidedactions_item_description_min_lines;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_guidedactions_item_title_max_lines = global::Facile.Droid.Resource.Integer.lb_guidedactions_item_title_max_lines;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_guidedactions_item_title_min_lines = global::Facile.Droid.Resource.Integer.lb_guidedactions_item_title_min_lines;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_guidedstep_activity_background_fade_duration_ms = global::Facile.Droid.Resource.Integer.lb_guidedstep_activity_background_fade_duration_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_bg_fade_in_ms = global::Facile.Droid.Resource.Integer.lb_playback_bg_fade_in_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_bg_fade_out_ms = global::Facile.Droid.Resource.Integer.lb_playback_bg_fade_out_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_controls_fade_in_ms = global::Facile.Droid.Resource.Integer.lb_playback_controls_fade_in_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_controls_fade_out_ms = global::Facile.Droid.Resource.Integer.lb_playback_controls_fade_out_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_controls_show_time_ms = global::Facile.Droid.Resource.Integer.lb_playback_controls_show_time_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_description_fade_in_ms = global::Facile.Droid.Resource.Integer.lb_playback_description_fade_in_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_description_fade_out_ms = global::Facile.Droid.Resource.Integer.lb_playback_description_fade_out_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_rows_fade_delay_ms = global::Facile.Droid.Resource.Integer.lb_playback_rows_fade_delay_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_rows_fade_in_ms = global::Facile.Droid.Resource.Integer.lb_playback_rows_fade_in_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_playback_rows_fade_out_ms = global::Facile.Droid.Resource.Integer.lb_playback_rows_fade_out_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_search_bar_speech_mode_background_alpha = global::Facile.Droid.Resource.Integer.lb_search_bar_speech_mode_background_alpha;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_search_bar_text_mode_background_alpha = global::Facile.Droid.Resource.Integer.lb_search_bar_text_mode_background_alpha;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_search_orb_pulse_duration_ms = global::Facile.Droid.Resource.Integer.lb_search_orb_pulse_duration_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.lb_search_orb_scale_duration_ms = global::Facile.Droid.Resource.Integer.lb_search_orb_scale_duration_ms;
-			global::Com.Syncfusion.Carousel.Resource.Integer.slideEdgeEnd = global::Facile.Droid.Resource.Integer.slideEdgeEnd;
-			global::Com.Syncfusion.Carousel.Resource.Integer.slideEdgeStart = global::Facile.Droid.Resource.Integer.slideEdgeStart;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_action_1_line = global::Facile.Droid.Resource.Layout.lb_action_1_line;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_action_2_lines = global::Facile.Droid.Resource.Layout.lb_action_2_lines;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_background_window = global::Facile.Droid.Resource.Layout.lb_background_window;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_browse_fragment = global::Facile.Droid.Resource.Layout.lb_browse_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_browse_title = global::Facile.Droid.Resource.Layout.lb_browse_title;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_control_bar = global::Facile.Droid.Resource.Layout.lb_control_bar;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_control_button_primary = global::Facile.Droid.Resource.Layout.lb_control_button_primary;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_control_button_secondary = global::Facile.Droid.Resource.Layout.lb_control_button_secondary;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_details_description = global::Facile.Droid.Resource.Layout.lb_details_description;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_details_fragment = global::Facile.Droid.Resource.Layout.lb_details_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_details_overview = global::Facile.Droid.Resource.Layout.lb_details_overview;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_divider = global::Facile.Droid.Resource.Layout.lb_divider;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_error_fragment = global::Facile.Droid.Resource.Layout.lb_error_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_fullwidth_details_overview = global::Facile.Droid.Resource.Layout.lb_fullwidth_details_overview;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_fullwidth_details_overview_logo = global::Facile.Droid.Resource.Layout.lb_fullwidth_details_overview_logo;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_guidance = global::Facile.Droid.Resource.Layout.lb_guidance;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_guidedactions = global::Facile.Droid.Resource.Layout.lb_guidedactions;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_guidedactions_datepicker_item = global::Facile.Droid.Resource.Layout.lb_guidedactions_datepicker_item;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_guidedactions_item = global::Facile.Droid.Resource.Layout.lb_guidedactions_item;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_guidedbuttonactions = global::Facile.Droid.Resource.Layout.lb_guidedbuttonactions;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_guidedstep_background = global::Facile.Droid.Resource.Layout.lb_guidedstep_background;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_guidedstep_fragment = global::Facile.Droid.Resource.Layout.lb_guidedstep_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_header = global::Facile.Droid.Resource.Layout.lb_header;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_headers_fragment = global::Facile.Droid.Resource.Layout.lb_headers_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_image_card_view = global::Facile.Droid.Resource.Layout.lb_image_card_view;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_image_card_view_themed_badge_left = global::Facile.Droid.Resource.Layout.lb_image_card_view_themed_badge_left;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_image_card_view_themed_badge_right = global::Facile.Droid.Resource.Layout.lb_image_card_view_themed_badge_right;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_image_card_view_themed_content = global::Facile.Droid.Resource.Layout.lb_image_card_view_themed_content;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_image_card_view_themed_title = global::Facile.Droid.Resource.Layout.lb_image_card_view_themed_title;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_list_row = global::Facile.Droid.Resource.Layout.lb_list_row;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_list_row_hovercard = global::Facile.Droid.Resource.Layout.lb_list_row_hovercard;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_media_item_number_view_flipper = global::Facile.Droid.Resource.Layout.lb_media_item_number_view_flipper;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_media_list_header = global::Facile.Droid.Resource.Layout.lb_media_list_header;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_onboarding_fragment = global::Facile.Droid.Resource.Layout.lb_onboarding_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_picker = global::Facile.Droid.Resource.Layout.lb_picker;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_picker_column = global::Facile.Droid.Resource.Layout.lb_picker_column;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_picker_item = global::Facile.Droid.Resource.Layout.lb_picker_item;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_picker_separator = global::Facile.Droid.Resource.Layout.lb_picker_separator;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_playback_controls = global::Facile.Droid.Resource.Layout.lb_playback_controls;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_playback_controls_row = global::Facile.Droid.Resource.Layout.lb_playback_controls_row;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_playback_fragment = global::Facile.Droid.Resource.Layout.lb_playback_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_playback_now_playing_bars = global::Facile.Droid.Resource.Layout.lb_playback_now_playing_bars;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_row_container = global::Facile.Droid.Resource.Layout.lb_row_container;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_row_header = global::Facile.Droid.Resource.Layout.lb_row_header;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_row_media_item = global::Facile.Droid.Resource.Layout.lb_row_media_item;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_row_media_item_action = global::Facile.Droid.Resource.Layout.lb_row_media_item_action;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_rows_fragment = global::Facile.Droid.Resource.Layout.lb_rows_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_search_bar = global::Facile.Droid.Resource.Layout.lb_search_bar;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_search_fragment = global::Facile.Droid.Resource.Layout.lb_search_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_search_orb = global::Facile.Droid.Resource.Layout.lb_search_orb;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_section_header = global::Facile.Droid.Resource.Layout.lb_section_header;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_shadow = global::Facile.Droid.Resource.Layout.lb_shadow;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_speech_orb = global::Facile.Droid.Resource.Layout.lb_speech_orb;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_title_view = global::Facile.Droid.Resource.Layout.lb_title_view;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_vertical_grid = global::Facile.Droid.Resource.Layout.lb_vertical_grid;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_vertical_grid_fragment = global::Facile.Droid.Resource.Layout.lb_vertical_grid_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Layout.lb_video_surface = global::Facile.Droid.Resource.Layout.lb_video_surface;
-			global::Com.Syncfusion.Carousel.Resource.Layout.video_surface_fragment = global::Facile.Droid.Resource.Layout.video_surface_fragment;
-			global::Com.Syncfusion.Carousel.Resource.Raw.lb_voice_failure = global::Facile.Droid.Resource.Raw.lb_voice_failure;
-			global::Com.Syncfusion.Carousel.Resource.Raw.lb_voice_no_input = global::Facile.Droid.Resource.Raw.lb_voice_no_input;
-			global::Com.Syncfusion.Carousel.Resource.Raw.lb_voice_open = global::Facile.Droid.Resource.Raw.lb_voice_open;
-			global::Com.Syncfusion.Carousel.Resource.Raw.lb_voice_success = global::Facile.Droid.Resource.Raw.lb_voice_success;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_control_display_fast_forward_multiplier = global::Facile.Droid.Resource.String.lb_control_display_fast_forward_multiplier;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_control_display_rewind_multiplier = global::Facile.Droid.Resource.String.lb_control_display_rewind_multiplier;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedaction_continue_title = global::Facile.Droid.Resource.String.lb_guidedaction_continue_title;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedaction_finish_title = global::Facile.Droid.Resource.String.lb_guidedaction_finish_title;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedactions_item_disabled_chevron_alpha = global::Facile.Droid.Resource.String.lb_guidedactions_item_disabled_chevron_alpha;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedactions_item_disabled_description_text_alpha = global::Facile.Droid.Resource.String.lb_guidedactions_item_disabled_description_text_alpha;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedactions_item_disabled_text_alpha = global::Facile.Droid.Resource.String.lb_guidedactions_item_disabled_text_alpha;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedactions_item_enabled_chevron_alpha = global::Facile.Droid.Resource.String.lb_guidedactions_item_enabled_chevron_alpha;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedactions_item_unselected_description_text_alpha = global::Facile.Droid.Resource.String.lb_guidedactions_item_unselected_description_text_alpha;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedactions_item_unselected_text_alpha = global::Facile.Droid.Resource.String.lb_guidedactions_item_unselected_text_alpha;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedactions_width_weight = global::Facile.Droid.Resource.String.lb_guidedactions_width_weight;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedactions_width_weight_two_panels = global::Facile.Droid.Resource.String.lb_guidedactions_width_weight_two_panels;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedbuttonactions_width_weight = global::Facile.Droid.Resource.String.lb_guidedbuttonactions_width_weight;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedstep_height_weight = global::Facile.Droid.Resource.String.lb_guidedstep_height_weight;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedstep_height_weight_translucent = global::Facile.Droid.Resource.String.lb_guidedstep_height_weight_translucent;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_guidedstep_keyline = global::Facile.Droid.Resource.String.lb_guidedstep_keyline;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_navigation_menu_contentDescription = global::Facile.Droid.Resource.String.lb_navigation_menu_contentDescription;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_onboarding_accessibility_next = global::Facile.Droid.Resource.String.lb_onboarding_accessibility_next;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_onboarding_get_started = global::Facile.Droid.Resource.String.lb_onboarding_get_started;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_closed_captioning_disable = global::Facile.Droid.Resource.String.lb_playback_controls_closed_captioning_disable;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_closed_captioning_enable = global::Facile.Droid.Resource.String.lb_playback_controls_closed_captioning_enable;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_fast_forward = global::Facile.Droid.Resource.String.lb_playback_controls_fast_forward;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_fast_forward_multiplier = global::Facile.Droid.Resource.String.lb_playback_controls_fast_forward_multiplier;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_hidden = global::Facile.Droid.Resource.String.lb_playback_controls_hidden;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_high_quality_disable = global::Facile.Droid.Resource.String.lb_playback_controls_high_quality_disable;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_high_quality_enable = global::Facile.Droid.Resource.String.lb_playback_controls_high_quality_enable;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_more_actions = global::Facile.Droid.Resource.String.lb_playback_controls_more_actions;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_pause = global::Facile.Droid.Resource.String.lb_playback_controls_pause;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_picture_in_picture = global::Facile.Droid.Resource.String.lb_playback_controls_picture_in_picture;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_play = global::Facile.Droid.Resource.String.lb_playback_controls_play;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_repeat_all = global::Facile.Droid.Resource.String.lb_playback_controls_repeat_all;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_repeat_none = global::Facile.Droid.Resource.String.lb_playback_controls_repeat_none;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_repeat_one = global::Facile.Droid.Resource.String.lb_playback_controls_repeat_one;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_rewind = global::Facile.Droid.Resource.String.lb_playback_controls_rewind;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_rewind_multiplier = global::Facile.Droid.Resource.String.lb_playback_controls_rewind_multiplier;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_shown = global::Facile.Droid.Resource.String.lb_playback_controls_shown;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_shuffle_disable = global::Facile.Droid.Resource.String.lb_playback_controls_shuffle_disable;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_shuffle_enable = global::Facile.Droid.Resource.String.lb_playback_controls_shuffle_enable;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_skip_next = global::Facile.Droid.Resource.String.lb_playback_controls_skip_next;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_skip_previous = global::Facile.Droid.Resource.String.lb_playback_controls_skip_previous;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_thumb_down = global::Facile.Droid.Resource.String.lb_playback_controls_thumb_down;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_thumb_down_outline = global::Facile.Droid.Resource.String.lb_playback_controls_thumb_down_outline;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_thumb_up = global::Facile.Droid.Resource.String.lb_playback_controls_thumb_up;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_playback_controls_thumb_up_outline = global::Facile.Droid.Resource.String.lb_playback_controls_thumb_up_outline;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_search_bar_hint = global::Facile.Droid.Resource.String.lb_search_bar_hint;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_search_bar_hint_speech = global::Facile.Droid.Resource.String.lb_search_bar_hint_speech;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_search_bar_hint_with_title = global::Facile.Droid.Resource.String.lb_search_bar_hint_with_title;
-			global::Com.Syncfusion.Carousel.Resource.String.lb_search_bar_hint_with_title_speech = global::Facile.Droid.Resource.String.lb_search_bar_hint_with_title_speech;
-			global::Com.Syncfusion.Carousel.Resource.String.orb_search_action = global::Facile.Droid.Resource.String.orb_search_action;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback = global::Facile.Droid.Resource.Style.TextAppearance_Leanback;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_DetailsActionButton = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_DetailsActionButton;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_DetailsDescriptionBody = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_DetailsDescriptionBody;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_DetailsDescriptionSubtitle = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_DetailsDescriptionSubtitle;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_DetailsDescriptionTitle = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_DetailsDescriptionTitle;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_ErrorMessage = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_ErrorMessage;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_Header = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_Header;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_Header_Section = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_Header_Section;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_ImageCardView = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_ImageCardView;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_ImageCardView_Content = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_ImageCardView_Content;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_ImageCardView_Title = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_ImageCardView_Title;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_PlaybackControlLabel = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_PlaybackControlLabel;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_PlaybackControlsTime = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_PlaybackControlsTime;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_PlaybackMediaItemDuration = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_PlaybackMediaItemDuration;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_PlaybackMediaItemName = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_PlaybackMediaItemName;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_PlaybackMediaItemNumber = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_PlaybackMediaItemNumber;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_PlaybackMediaListHeaderTitle = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_PlaybackMediaListHeaderTitle;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_Row_Header = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_Row_Header;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_Row_Header_Description = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_Row_Header_Description;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_Row_HoverCardDescription = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_Row_HoverCardDescription;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_Row_HoverCardTitle = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_Row_HoverCardTitle;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_SearchTextEdit = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_SearchTextEdit;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_Leanback_Title = global::Facile.Droid.Resource.Style.TextAppearance_Leanback_Title;
-			global::Com.Syncfusion.Carousel.Resource.Style.TextAppearance_LeanbackBase = global::Facile.Droid.Resource.Style.TextAppearance_LeanbackBase;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback = global::Facile.Droid.Resource.Style.Theme_Leanback;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback_Browse = global::Facile.Droid.Resource.Style.Theme_Leanback_Browse;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback_Details = global::Facile.Droid.Resource.Style.Theme_Leanback_Details;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback_Details_NoSharedElementTransition = global::Facile.Droid.Resource.Style.Theme_Leanback_Details_NoSharedElementTransition;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback_GuidedStep = global::Facile.Droid.Resource.Style.Theme_Leanback_GuidedStep;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback_GuidedStep_Half = global::Facile.Droid.Resource.Style.Theme_Leanback_GuidedStep_Half;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback_GuidedStepBase = global::Facile.Droid.Resource.Style.Theme_Leanback_GuidedStepBase;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback_Onboarding = global::Facile.Droid.Resource.Style.Theme_Leanback_Onboarding;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_Leanback_VerticalGrid = global::Facile.Droid.Resource.Style.Theme_Leanback_VerticalGrid;
-			global::Com.Syncfusion.Carousel.Resource.Style.Theme_LeanbackBase = global::Facile.Droid.Resource.Style.Theme_LeanbackBase;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback = global::Facile.Droid.Resource.Style.Widget_Leanback;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_BaseCardViewStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_BaseCardViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_DetailsActionButtonStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_DetailsActionButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_DetailsActionButtonStyleBase = global::Facile.Droid.Resource.Style.Widget_Leanback_DetailsActionButtonStyleBase;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_DetailsDescriptionBodyStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_DetailsDescriptionBodyStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_DetailsDescriptionSubtitleStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_DetailsDescriptionSubtitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_DetailsDescriptionTitleStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_DetailsDescriptionTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_ErrorMessageStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_ErrorMessageStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GridItems = global::Facile.Droid.Resource.Style.Widget_Leanback_GridItems;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GridItems_VerticalGridView = global::Facile.Droid.Resource.Style.Widget_Leanback_GridItems_VerticalGridView;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidanceBreadcrumbStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidanceBreadcrumbStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidanceContainerStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidanceContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidanceDescriptionStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidanceDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidanceIconStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidanceIconStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidanceTitleStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidanceTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionItemCheckmarkStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionItemCheckmarkStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionItemChevronStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionItemChevronStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionItemContainerStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionItemContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionItemContentStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionItemContentStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionItemDescriptionStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionItemDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionItemIconStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionItemIconStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionItemTitleStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionItemTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionsContainerStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionsContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionsListStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedActionsSelectorStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedActionsSelectorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedButtonActionsListStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedButtonActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_GuidedSubActionsListStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_GuidedSubActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Header = global::Facile.Droid.Resource.Style.Widget_Leanback_Header;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Header_Section = global::Facile.Droid.Resource.Style.Widget_Leanback_Header_Section;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Headers = global::Facile.Droid.Resource.Style.Widget_Leanback_Headers;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Headers_VerticalGridView = global::Facile.Droid.Resource.Style.Widget_Leanback_Headers_VerticalGridView;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_ImageCardView = global::Facile.Droid.Resource.Style.Widget_Leanback_ImageCardView;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_ImageCardView_BadgeStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_ImageCardView_BadgeStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_ImageCardView_ContentStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_ImageCardView_ContentStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_ImageCardView_ImageStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_ImageCardView_ImageStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_ImageCardView_InfoAreaStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_ImageCardView_InfoAreaStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_ImageCardView_TitleStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_ImageCardView_TitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_ImageCardViewStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_ImageCardViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_OnboardingDescriptionStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_OnboardingDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_OnboardingHeaderStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_OnboardingHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_OnboardingLogoStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_OnboardingLogoStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_OnboardingNavigatorContainerStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_OnboardingNavigatorContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_OnboardingPageIndicatorStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_OnboardingPageIndicatorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_OnboardingStartButtonStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_OnboardingStartButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_OnboardingTitleStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_OnboardingTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackControlLabelStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackControlLabelStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackControlsActionIconsStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackControlsActionIconsStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackControlsButtonStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackControlsButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackControlsTimeStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackControlsTimeStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaItemDetailsStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaItemDetailsStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaItemDurationStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaItemDurationStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaItemNameStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaItemNameStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaItemNumberStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaItemNumberStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaItemNumberViewFlipperStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaItemNumberViewFlipperStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaItemRowStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaItemRowStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaItemSeparatorStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaItemSeparatorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaListHeaderStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaListHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackMediaListHeaderTitleStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackMediaListHeaderTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_PlaybackRow = global::Facile.Droid.Resource.Style.Widget_Leanback_PlaybackRow;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Row = global::Facile.Droid.Resource.Style.Widget_Leanback_Row;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Row_Header = global::Facile.Droid.Resource.Style.Widget_Leanback_Row_Header;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Row_Header_Description = global::Facile.Droid.Resource.Style.Widget_Leanback_Row_Header_Description;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Row_HeaderDock = global::Facile.Droid.Resource.Style.Widget_Leanback_Row_HeaderDock;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Row_HorizontalGridView = global::Facile.Droid.Resource.Style.Widget_Leanback_Row_HorizontalGridView;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Row_HoverCardDescription = global::Facile.Droid.Resource.Style.Widget_Leanback_Row_HoverCardDescription;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Row_HoverCardTitle = global::Facile.Droid.Resource.Style.Widget_Leanback_Row_HoverCardTitle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Rows = global::Facile.Droid.Resource.Style.Widget_Leanback_Rows;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Rows_VerticalGridView = global::Facile.Droid.Resource.Style.Widget_Leanback_Rows_VerticalGridView;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_SearchOrbViewStyle = global::Facile.Droid.Resource.Style.Widget_Leanback_SearchOrbViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Title = global::Facile.Droid.Resource.Style.Widget_Leanback_Title;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Title_Icon = global::Facile.Droid.Resource.Style.Widget_Leanback_Title_Icon;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_Title_Text = global::Facile.Droid.Resource.Style.Widget_Leanback_Title_Text;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_Leanback_TitleView = global::Facile.Droid.Resource.Style.Widget_Leanback_TitleView;
-			global::Com.Syncfusion.Carousel.Resource.Style.Widget_LeanbackBase = global::Facile.Droid.Resource.Style.Widget_LeanbackBase;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_browse_enter_transition = global::Facile.Droid.Resource.Transition.lb_browse_enter_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_browse_entrance_transition = global::Facile.Droid.Resource.Transition.lb_browse_entrance_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_browse_headers_in = global::Facile.Droid.Resource.Transition.lb_browse_headers_in;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_browse_headers_out = global::Facile.Droid.Resource.Transition.lb_browse_headers_out;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_browse_return_transition = global::Facile.Droid.Resource.Transition.lb_browse_return_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_details_enter_transition = global::Facile.Droid.Resource.Transition.lb_details_enter_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_details_return_transition = global::Facile.Droid.Resource.Transition.lb_details_return_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_enter_transition = global::Facile.Droid.Resource.Transition.lb_enter_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_guidedstep_activity_enter = global::Facile.Droid.Resource.Transition.lb_guidedstep_activity_enter;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_guidedstep_activity_enter_bottom = global::Facile.Droid.Resource.Transition.lb_guidedstep_activity_enter_bottom;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_return_transition = global::Facile.Droid.Resource.Transition.lb_return_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_shared_element_enter_transition = global::Facile.Droid.Resource.Transition.lb_shared_element_enter_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_shared_element_return_transition = global::Facile.Droid.Resource.Transition.lb_shared_element_return_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_title_in = global::Facile.Droid.Resource.Transition.lb_title_in;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_title_out = global::Facile.Droid.Resource.Transition.lb_title_out;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_vertical_grid_enter_transition = global::Facile.Droid.Resource.Transition.lb_vertical_grid_enter_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_vertical_grid_entrance_transition = global::Facile.Droid.Resource.Transition.lb_vertical_grid_entrance_transition;
-			global::Com.Syncfusion.Carousel.Resource.Transition.lb_vertical_grid_return_transition = global::Facile.Droid.Resource.Transition.lb_vertical_grid_return_transition;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidanceBreadcrumbStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidanceBreadcrumbStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidanceContainerStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidanceContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidanceDescriptionStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidanceDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidanceEntryAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidanceEntryAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidanceIconStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidanceIconStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidanceTitleStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidanceTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionCheckedAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionCheckedAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionContentWidth = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionContentWidth;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionContentWidthNoIcon = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionContentWidthNoIcon;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionContentWidthWeight = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionContentWidthWeight;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionContentWidthWeightTwoPanels = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionContentWidthWeightTwoPanels;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionDescriptionMinLines = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionDescriptionMinLines;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionDisabledChevronAlpha = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionDisabledChevronAlpha;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionEnabledChevronAlpha = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionEnabledChevronAlpha;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemCheckmarkStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemCheckmarkStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemChevronStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemChevronStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemContainerStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemContentStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemContentStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemDescriptionStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemIconStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemIconStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemTitleStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionItemTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionPressedAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionPressedAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionTitleMaxLines = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionTitleMaxLines;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionTitleMinLines = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionTitleMinLines;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionUncheckedAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionUncheckedAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionUnpressedAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionUnpressedAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionVerticalPadding = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionVerticalPadding;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsBackground = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsBackground;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsBackgroundDark = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsBackgroundDark;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsContainerStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsElevation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsElevation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsEntryAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsEntryAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsListStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsSelectorDrawable = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsSelectorDrawable;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsSelectorHideAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsSelectorHideAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsSelectorShowAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsSelectorShowAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsSelectorStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedActionsSelectorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedButtonActionsListStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedButtonActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedButtonActionsWidthWeight = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedButtonActionsWidthWeight;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepBackground = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepBackground;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepEntryAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepEntryAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepExitAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepExitAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepHeightWeight = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepHeightWeight;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepImeAppearingAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepImeAppearingAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepImeDisappearingAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepImeDisappearingAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepKeyline = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepKeyline;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepReentryAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepReentryAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepReturnAnimation = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepReturnAnimation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepTheme = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepTheme;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepThemeFlag = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedStepThemeFlag;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackGuidedStepTheme_guidedSubActionsListStyle = global::Facile.Droid.Resource.Styleable.LeanbackGuidedStepTheme_guidedSubActionsListStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme_onboardingDescriptionStyle = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme_onboardingDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme_onboardingHeaderStyle = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme_onboardingHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme_onboardingLogoStyle = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme_onboardingLogoStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme_onboardingNavigatorContainerStyle = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme_onboardingNavigatorContainerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme_onboardingPageIndicatorStyle = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme_onboardingPageIndicatorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme_onboardingStartButtonStyle = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme_onboardingStartButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme_onboardingTheme = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme_onboardingTheme;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackOnboardingTheme_onboardingTitleStyle = global::Facile.Droid.Resource.Styleable.LeanbackOnboardingTheme_onboardingTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme = global::Facile.Droid.Resource.Styleable.LeanbackTheme;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_baseCardViewStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_baseCardViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browsePaddingBottom = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browsePaddingBottom;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browsePaddingEnd = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browsePaddingEnd;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browsePaddingStart = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browsePaddingStart;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browsePaddingTop = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browsePaddingTop;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browseRowsFadingEdgeLength = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browseRowsFadingEdgeLength;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browseRowsMarginStart = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browseRowsMarginStart;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browseRowsMarginTop = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browseRowsMarginTop;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browseTitleIconStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browseTitleIconStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browseTitleTextStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browseTitleTextStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browseTitleViewLayout = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browseTitleViewLayout;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_browseTitleViewStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_browseTitleViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_defaultBrandColor = global::Facile.Droid.Resource.Styleable.LeanbackTheme_defaultBrandColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_defaultBrandColorDark = global::Facile.Droid.Resource.Styleable.LeanbackTheme_defaultBrandColorDark;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_defaultSearchBrightColor = global::Facile.Droid.Resource.Styleable.LeanbackTheme_defaultSearchBrightColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_defaultSearchColor = global::Facile.Droid.Resource.Styleable.LeanbackTheme_defaultSearchColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_defaultSearchIcon = global::Facile.Droid.Resource.Styleable.LeanbackTheme_defaultSearchIcon;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_defaultSearchIconColor = global::Facile.Droid.Resource.Styleable.LeanbackTheme_defaultSearchIconColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_defaultSectionHeaderColor = global::Facile.Droid.Resource.Styleable.LeanbackTheme_defaultSectionHeaderColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_detailsActionButtonStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_detailsActionButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_detailsDescriptionBodyStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_detailsDescriptionBodyStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_detailsDescriptionSubtitleStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_detailsDescriptionSubtitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_detailsDescriptionTitleStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_detailsDescriptionTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_errorMessageStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_errorMessageStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_headerStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_headerStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_headersVerticalGridStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_headersVerticalGridStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_imageCardViewBadgeStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_imageCardViewBadgeStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_imageCardViewContentStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_imageCardViewContentStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_imageCardViewImageStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_imageCardViewImageStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_imageCardViewInfoAreaStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_imageCardViewInfoAreaStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_imageCardViewStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_imageCardViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_imageCardViewTitleStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_imageCardViewTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_itemsVerticalGridStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_itemsVerticalGridStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_overlayDimActiveLevel = global::Facile.Droid.Resource.Styleable.LeanbackTheme_overlayDimActiveLevel;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_overlayDimDimmedLevel = global::Facile.Droid.Resource.Styleable.LeanbackTheme_overlayDimDimmedLevel;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_overlayDimMaskColor = global::Facile.Droid.Resource.Styleable.LeanbackTheme_overlayDimMaskColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackControlButtonLabelStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackControlButtonLabelStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackControlsActionIcons = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackControlsActionIcons;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackControlsButtonStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackControlsButtonStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackControlsIconHighlightColor = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackControlsIconHighlightColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackControlsTimeStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackControlsTimeStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemDetailsStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemDetailsStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemDurationStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemDurationStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemNameStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemNameStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemNumberStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemNumberStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemNumberViewFlipperLayout = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemNumberViewFlipperLayout;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemNumberViewFlipperStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemNumberViewFlipperStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemPaddingStart = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemPaddingStart;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemRowStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemRowStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaItemSeparatorStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaItemSeparatorStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaListHeaderStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaListHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackMediaListHeaderTitleStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackMediaListHeaderTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackPaddingEnd = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackPaddingEnd;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackPaddingStart = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackPaddingStart;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_playbackProgressPrimaryColor = global::Facile.Droid.Resource.Styleable.LeanbackTheme_playbackProgressPrimaryColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_rowHeaderDescriptionStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_rowHeaderDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_rowHeaderDockStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_rowHeaderDockStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_rowHeaderStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_rowHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_rowHorizontalGridStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_rowHorizontalGridStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_rowHoverCardDescriptionStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_rowHoverCardDescriptionStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_rowHoverCardTitleStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_rowHoverCardTitleStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_rowsVerticalGridStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_rowsVerticalGridStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_searchOrbViewStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_searchOrbViewStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.LeanbackTheme_sectionHeaderStyle = global::Facile.Droid.Resource.Styleable.LeanbackTheme_sectionHeaderStyle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.PagingIndicator = global::Facile.Droid.Resource.Styleable.PagingIndicator;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.PagingIndicator_arrowBgColor = global::Facile.Droid.Resource.Styleable.PagingIndicator_arrowBgColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.PagingIndicator_arrowRadius = global::Facile.Droid.Resource.Styleable.PagingIndicator_arrowRadius;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.PagingIndicator_dotBgColor = global::Facile.Droid.Resource.Styleable.PagingIndicator_dotBgColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.PagingIndicator_dotToArrowGap = global::Facile.Droid.Resource.Styleable.PagingIndicator_dotToArrowGap;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.PagingIndicator_dotToDotGap = global::Facile.Droid.Resource.Styleable.PagingIndicator_dotToDotGap;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.PagingIndicator_lbDotRadius = global::Facile.Droid.Resource.Styleable.PagingIndicator_lbDotRadius;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.RecyclerView = global::Facile.Droid.Resource.Styleable.RecyclerView;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.RecyclerView_android_descendantFocusability = global::Facile.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.RecyclerView_android_orientation = global::Facile.Droid.Resource.Styleable.RecyclerView_android_orientation;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.RecyclerView_layoutManager = global::Facile.Droid.Resource.Styleable.RecyclerView_layoutManager;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.RecyclerView_reverseLayout = global::Facile.Droid.Resource.Styleable.RecyclerView_reverseLayout;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.RecyclerView_spanCount = global::Facile.Droid.Resource.Styleable.RecyclerView_spanCount;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.RecyclerView_stackFromEnd = global::Facile.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.SfCarousel = global::Facile.Droid.Resource.Styleable.SfCarousel;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.SfCarousel_carouselAllowLoadMore = global::Facile.Droid.Resource.Styleable.SfCarousel_carouselAllowLoadMore;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.SfCarousel_carouselDuration = global::Facile.Droid.Resource.Styleable.SfCarousel_carouselDuration;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.SfCarousel_carouselEnableVirtualization = global::Facile.Droid.Resource.Styleable.SfCarousel_carouselEnableVirtualization;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.SfCarousel_carouselItemHeight = global::Facile.Droid.Resource.Styleable.SfCarousel_carouselItemHeight;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.SfCarousel_carouselItemSpacing = global::Facile.Droid.Resource.Styleable.SfCarousel_carouselItemSpacing;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.SfCarousel_carouselItemWidth = global::Facile.Droid.Resource.Styleable.SfCarousel_carouselItemWidth;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.SfCarousel_carouselLoadMoreItemsCount = global::Facile.Droid.Resource.Styleable.SfCarousel_carouselLoadMoreItemsCount;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.SfCarousel_carouselOffset = global::Facile.Droid.Resource.Styleable.SfCarousel_carouselOffset;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.SfCarousel_carouselRotationAngle = global::Facile.Droid.Resource.Styleable.SfCarousel_carouselRotationAngle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.SfCarousel_carouselScaleOffset = global::Facile.Droid.Resource.Styleable.SfCarousel_carouselScaleOffset;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.SfCarousel_carouselSelectedIndex = global::Facile.Droid.Resource.Styleable.SfCarousel_carouselSelectedIndex;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.SfCarousel_carouselSelectedItemOffset = global::Facile.Droid.Resource.Styleable.SfCarousel_carouselSelectedItemOffset;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.SfCarousel_carouselViewMode = global::Facile.Droid.Resource.Styleable.SfCarousel_carouselViewMode;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView = global::Facile.Droid.Resource.Styleable.lbBaseCardView;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_activatedAnimationDuration = global::Facile.Droid.Resource.Styleable.lbBaseCardView_activatedAnimationDuration;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_cardBackground = global::Facile.Droid.Resource.Styleable.lbBaseCardView_cardBackground;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_cardForeground = global::Facile.Droid.Resource.Styleable.lbBaseCardView_cardForeground;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_cardType = global::Facile.Droid.Resource.Styleable.lbBaseCardView_cardType;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_extraVisibility = global::Facile.Droid.Resource.Styleable.lbBaseCardView_extraVisibility;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_infoVisibility = global::Facile.Droid.Resource.Styleable.lbBaseCardView_infoVisibility;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_selectedAnimationDelay = global::Facile.Droid.Resource.Styleable.lbBaseCardView_selectedAnimationDelay;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_selectedAnimationDuration = global::Facile.Droid.Resource.Styleable.lbBaseCardView_selectedAnimationDuration;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_Layout = global::Facile.Droid.Resource.Styleable.lbBaseCardView_Layout;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseCardView_Layout_layout_viewType = global::Facile.Droid.Resource.Styleable.lbBaseCardView_Layout_layout_viewType;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView = global::Facile.Droid.Resource.Styleable.lbBaseGridView;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_android_gravity = global::Facile.Droid.Resource.Styleable.lbBaseGridView_android_gravity;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_android_horizontalSpacing = global::Facile.Droid.Resource.Styleable.lbBaseGridView_android_horizontalSpacing;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_android_verticalSpacing = global::Facile.Droid.Resource.Styleable.lbBaseGridView_android_verticalSpacing;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_focusOutEnd = global::Facile.Droid.Resource.Styleable.lbBaseGridView_focusOutEnd;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_focusOutFront = global::Facile.Droid.Resource.Styleable.lbBaseGridView_focusOutFront;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_focusOutSideEnd = global::Facile.Droid.Resource.Styleable.lbBaseGridView_focusOutSideEnd;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_focusOutSideStart = global::Facile.Droid.Resource.Styleable.lbBaseGridView_focusOutSideStart;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_horizontalMargin = global::Facile.Droid.Resource.Styleable.lbBaseGridView_horizontalMargin;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbBaseGridView_verticalMargin = global::Facile.Droid.Resource.Styleable.lbBaseGridView_verticalMargin;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbDatePicker = global::Facile.Droid.Resource.Styleable.lbDatePicker;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbDatePicker_android_maxDate = global::Facile.Droid.Resource.Styleable.lbDatePicker_android_maxDate;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbDatePicker_android_minDate = global::Facile.Droid.Resource.Styleable.lbDatePicker_android_minDate;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbDatePicker_datePickerFormat = global::Facile.Droid.Resource.Styleable.lbDatePicker_datePickerFormat;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbHorizontalGridView = global::Facile.Droid.Resource.Styleable.lbHorizontalGridView;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbHorizontalGridView_numberOfRows = global::Facile.Droid.Resource.Styleable.lbHorizontalGridView_numberOfRows;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbHorizontalGridView_rowHeight = global::Facile.Droid.Resource.Styleable.lbHorizontalGridView_rowHeight;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbImageCardView = global::Facile.Droid.Resource.Styleable.lbImageCardView;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbImageCardView_infoAreaBackground = global::Facile.Droid.Resource.Styleable.lbImageCardView_infoAreaBackground;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbImageCardView_lbImageCardViewType = global::Facile.Droid.Resource.Styleable.lbImageCardView_lbImageCardViewType;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_closed_captioning = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_closed_captioning;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_fast_forward = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_fast_forward;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_high_quality = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_high_quality;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_pause = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_pause;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_picture_in_picture = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_picture_in_picture;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_play = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_play;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_repeat = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_repeat;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_repeat_one = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_repeat_one;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_rewind = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_rewind;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_shuffle = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_shuffle;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_skip_next = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_skip_next;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_skip_previous = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_skip_previous;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_thumb_down = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_thumb_down;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_thumb_down_outline = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_thumb_down_outline;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_thumb_up = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_thumb_up;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbPlaybackControlsActionIcons_thumb_up_outline = global::Facile.Droid.Resource.Styleable.lbPlaybackControlsActionIcons_thumb_up_outline;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbResizingTextView = global::Facile.Droid.Resource.Styleable.lbResizingTextView;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbResizingTextView_maintainLineSpacing = global::Facile.Droid.Resource.Styleable.lbResizingTextView_maintainLineSpacing;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbResizingTextView_resizeTrigger = global::Facile.Droid.Resource.Styleable.lbResizingTextView_resizeTrigger;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbResizingTextView_resizedPaddingAdjustmentBottom = global::Facile.Droid.Resource.Styleable.lbResizingTextView_resizedPaddingAdjustmentBottom;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbResizingTextView_resizedPaddingAdjustmentTop = global::Facile.Droid.Resource.Styleable.lbResizingTextView_resizedPaddingAdjustmentTop;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbResizingTextView_resizedTextSize = global::Facile.Droid.Resource.Styleable.lbResizingTextView_resizedTextSize;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSearchOrbView = global::Facile.Droid.Resource.Styleable.lbSearchOrbView;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSearchOrbView_searchOrbBrightColor = global::Facile.Droid.Resource.Styleable.lbSearchOrbView_searchOrbBrightColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSearchOrbView_searchOrbColor = global::Facile.Droid.Resource.Styleable.lbSearchOrbView_searchOrbColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSearchOrbView_searchOrbIcon = global::Facile.Droid.Resource.Styleable.lbSearchOrbView_searchOrbIcon;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSearchOrbView_searchOrbIconColor = global::Facile.Droid.Resource.Styleable.lbSearchOrbView_searchOrbIconColor;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSlide = global::Facile.Droid.Resource.Styleable.lbSlide;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSlide_android_duration = global::Facile.Droid.Resource.Styleable.lbSlide_android_duration;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSlide_android_interpolator = global::Facile.Droid.Resource.Styleable.lbSlide_android_interpolator;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSlide_android_startDelay = global::Facile.Droid.Resource.Styleable.lbSlide_android_startDelay;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbSlide_lb_slideEdge = global::Facile.Droid.Resource.Styleable.lbSlide_lb_slideEdge;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbTimePicker = global::Facile.Droid.Resource.Styleable.lbTimePicker;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbTimePicker_is24HourFormat = global::Facile.Droid.Resource.Styleable.lbTimePicker_is24HourFormat;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbTimePicker_useCurrentTime = global::Facile.Droid.Resource.Styleable.lbTimePicker_useCurrentTime;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbVerticalGridView = global::Facile.Droid.Resource.Styleable.lbVerticalGridView;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbVerticalGridView_columnWidth = global::Facile.Droid.Resource.Styleable.lbVerticalGridView_columnWidth;
-			global::Com.Syncfusion.Carousel.Resource.Styleable.lbVerticalGridView_numberOfColumns = global::Facile.Droid.Resource.Styleable.lbVerticalGridView_numberOfColumns;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Attribute.allowNull = global::Facile.Droid.Resource.Attribute.allowNull;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Attribute.borderColor = global::Facile.Droid.Resource.Attribute.borderColor;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Attribute.culture = global::Facile.Droid.Resource.Attribute.culture;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Attribute.enableGroupSeparator = global::Facile.Droid.Resource.Attribute.enableGroupSeparator;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Attribute.fontSize = global::Facile.Droid.Resource.Attribute.fontSize;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Attribute.maximumDecimalDigits = global::Facile.Droid.Resource.Attribute.maximumDecimalDigits;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Attribute.numberFormat = global::Facile.Droid.Resource.Attribute.numberFormat;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Attribute.numericTextBoxValue = global::Facile.Droid.Resource.Attribute.numericTextBoxValue;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Attribute.parsingMode = global::Facile.Droid.Resource.Attribute.parsingMode;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Attribute.percentDisplayMode = global::Facile.Droid.Resource.Attribute.percentDisplayMode;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Attribute.selectAllOnFocus = global::Facile.Droid.Resource.Attribute.selectAllOnFocus;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Attribute.valueChangeMode = global::Facile.Droid.Resource.Attribute.valueChangeMode;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Attribute.watermark = global::Facile.Droid.Resource.Attribute.watermark;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Attribute.watermarkColor = global::Facile.Droid.Resource.Attribute.watermarkColor;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Id.compute = global::Facile.Droid.Resource.Id.compute;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Id.decimalMode = global::Facile.Droid.Resource.Id.decimalMode;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Id.doubleMode = global::Facile.Droid.Resource.Id.doubleMode;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Id.onKeyFocus = global::Facile.Droid.Resource.Id.onKeyFocus;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Id.onLostFocus = global::Facile.Droid.Resource.Id.onLostFocus;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Id.value = global::Facile.Droid.Resource.Id.value;
 			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Layout.ScrollViewer = global::Facile.Droid.Resource.Layout.ScrollViewer;
 			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.cancel_drop = global::Facile.Droid.Resource.String.cancel_drop;
 			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.drop_above = global::Facile.Droid.Resource.String.drop_above;
 			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.drop_below = global::Facile.Droid.Resource.String.drop_below;
 			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.library_name = global::Facile.Droid.Resource.String.library_name;
 			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.load_more_items = global::Facile.Droid.Resource.String.load_more_items;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Styleable.SfNumericTextBox = global::Facile.Droid.Resource.Styleable.SfNumericTextBox;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Styleable.SfNumericTextBox_allowNull = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_allowNull;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Styleable.SfNumericTextBox_borderColor = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_borderColor;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Styleable.SfNumericTextBox_culture = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_culture;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Styleable.SfNumericTextBox_enableGroupSeparator = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_enableGroupSeparator;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Styleable.SfNumericTextBox_fontSize = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_fontSize;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Styleable.SfNumericTextBox_maximumDecimalDigits = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_maximumDecimalDigits;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Styleable.SfNumericTextBox_numberFormat = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_numberFormat;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Styleable.SfNumericTextBox_numericTextBoxValue = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_numericTextBoxValue;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Styleable.SfNumericTextBox_parsingMode = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_parsingMode;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Styleable.SfNumericTextBox_percentDisplayMode = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_percentDisplayMode;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Styleable.SfNumericTextBox_selectAllOnFocus = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_selectAllOnFocus;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Styleable.SfNumericTextBox_valueChangeMode = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_valueChangeMode;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Styleable.SfNumericTextBox_watermark = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_watermark;
-			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Styleable.SfNumericTextBox_watermarkColor = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_watermarkColor;
 			global::Syncfusion.ListView.XForms.Android.Resource.String.ApplicationName = global::Facile.Droid.Resource.String.ApplicationName;
 			global::Syncfusion.ListView.XForms.Android.Resource.String.Hello = global::Facile.Droid.Resource.String.Hello;
 			global::Syncfusion.ListView.XForms.Android.Resource.String.Load_More = global::Facile.Droid.Resource.String.Load_More;
-			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.allowNull = global::Facile.Droid.Resource.Attribute.allowNull;
-			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.borderColor = global::Facile.Droid.Resource.Attribute.borderColor;
-			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.culture = global::Facile.Droid.Resource.Attribute.culture;
-			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.enableGroupSeparator = global::Facile.Droid.Resource.Attribute.enableGroupSeparator;
-			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.fontSize = global::Facile.Droid.Resource.Attribute.fontSize;
-			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.maximumDecimalDigits = global::Facile.Droid.Resource.Attribute.maximumDecimalDigits;
-			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.numberFormat = global::Facile.Droid.Resource.Attribute.numberFormat;
-			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.numericTextBoxValue = global::Facile.Droid.Resource.Attribute.numericTextBoxValue;
-			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.parsingMode = global::Facile.Droid.Resource.Attribute.parsingMode;
-			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.percentDisplayMode = global::Facile.Droid.Resource.Attribute.percentDisplayMode;
-			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.selectAllOnFocus = global::Facile.Droid.Resource.Attribute.selectAllOnFocus;
-			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.valueChangeMode = global::Facile.Droid.Resource.Attribute.valueChangeMode;
-			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.watermark = global::Facile.Droid.Resource.Attribute.watermark;
-			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.watermarkColor = global::Facile.Droid.Resource.Attribute.watermarkColor;
-			global::Com.Syncfusion.Numerictextbox.Resource.Id.compute = global::Facile.Droid.Resource.Id.compute;
-			global::Com.Syncfusion.Numerictextbox.Resource.Id.decimalMode = global::Facile.Droid.Resource.Id.decimalMode;
-			global::Com.Syncfusion.Numerictextbox.Resource.Id.doubleMode = global::Facile.Droid.Resource.Id.doubleMode;
-			global::Com.Syncfusion.Numerictextbox.Resource.Id.onKeyFocus = global::Facile.Droid.Resource.Id.onKeyFocus;
-			global::Com.Syncfusion.Numerictextbox.Resource.Id.onLostFocus = global::Facile.Droid.Resource.Id.onLostFocus;
-			global::Com.Syncfusion.Numerictextbox.Resource.Id.value = global::Facile.Droid.Resource.Id.value;
-			global::Com.Syncfusion.Numerictextbox.Resource.String.library_name = global::Facile.Droid.Resource.String.library_name;
-			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox = global::Facile.Droid.Resource.Styleable.SfNumericTextBox;
-			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_allowNull = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_allowNull;
-			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_borderColor = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_borderColor;
-			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_culture = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_culture;
-			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_enableGroupSeparator = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_enableGroupSeparator;
-			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_fontSize = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_fontSize;
-			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_maximumDecimalDigits = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_maximumDecimalDigits;
-			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_numberFormat = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_numberFormat;
-			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_numericTextBoxValue = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_numericTextBoxValue;
-			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_parsingMode = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_parsingMode;
-			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_percentDisplayMode = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_percentDisplayMode;
-			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_selectAllOnFocus = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_selectAllOnFocus;
-			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_valueChangeMode = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_valueChangeMode;
-			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_watermark = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_watermark;
-			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_watermarkColor = global::Facile.Droid.Resource.Styleable.SfNumericTextBox_watermarkColor;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Facile.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -1637,9 +307,6 @@ namespace Facile.Droid
 			// aapt resource value: 0x7f0100b5
 			public const int alertDialogTheme = 2130772149;
 			
-			// aapt resource value: 0x7f010231
-			public const int allowNull = 2130772529;
-			
 			// aapt resource value: 0x7f0100cb
 			public const int allowStacking = 2130772171;
 			
@@ -1718,9 +385,6 @@ namespace Facile.Droid
 			// aapt resource value: 0x7f0101d4
 			public const int behavior_skipCollapsed = 2130772436;
 			
-			// aapt resource value: 0x7f010232
-			public const int borderColor = 2130772530;
-			
 			// aapt resource value: 0x7f0101f4
 			public const int borderWidth = 2130772468;
 			
@@ -1765,33 +429,6 @@ namespace Facile.Droid
 			
 			// aapt resource value: 0x7f01015d
 			public const int browseTitleViewStyle = 2130772317;
-			
-			// aapt resource value: 0x7f010243
-			public const int busyIndicatorAnimationTypes = 2130772547;
-			
-			// aapt resource value: 0x7f01024b
-			public const int busyIndicatorIsBusy = 2130772555;
-			
-			// aapt resource value: 0x7f010249
-			public const int busyIndicatorSecondaryColor = 2130772553;
-			
-			// aapt resource value: 0x7f010244
-			public const int busyIndicatorTextColor = 2130772548;
-			
-			// aapt resource value: 0x7f010248
-			public const int busyIndicatorTextSize = 2130772552;
-			
-			// aapt resource value: 0x7f010247
-			public const int busyIndicatorTitle = 2130772551;
-			
-			// aapt resource value: 0x7f01024a
-			public const int busyIndicatorTitlePlacement = 2130772554;
-			
-			// aapt resource value: 0x7f010245
-			public const int busyIndicatorViewBoxHeight = 2130772549;
-			
-			// aapt resource value: 0x7f010246
-			public const int busyIndicatorViewBoxWidth = 2130772550;
 			
 			// aapt resource value: 0x7f010088
 			public const int buttonBarButtonStyle = 2130772104;
@@ -1852,45 +489,6 @@ namespace Facile.Droid
 			
 			// aapt resource value: 0x7f01001b
 			public const int cardUseCompatPadding = 2130771995;
-			
-			// aapt resource value: 0x7f010242
-			public const int carouselAllowLoadMore = 2130772546;
-			
-			// aapt resource value: 0x7f01023f
-			public const int carouselDuration = 2130772543;
-			
-			// aapt resource value: 0x7f010237
-			public const int carouselEnableVirtualization = 2130772535;
-			
-			// aapt resource value: 0x7f01023b
-			public const int carouselItemHeight = 2130772539;
-			
-			// aapt resource value: 0x7f010238
-			public const int carouselItemSpacing = 2130772536;
-			
-			// aapt resource value: 0x7f01023c
-			public const int carouselItemWidth = 2130772540;
-			
-			// aapt resource value: 0x7f010241
-			public const int carouselLoadMoreItemsCount = 2130772545;
-			
-			// aapt resource value: 0x7f010239
-			public const int carouselOffset = 2130772537;
-			
-			// aapt resource value: 0x7f01023d
-			public const int carouselRotationAngle = 2130772541;
-			
-			// aapt resource value: 0x7f010240
-			public const int carouselScaleOffset = 2130772544;
-			
-			// aapt resource value: 0x7f01023a
-			public const int carouselSelectedIndex = 2130772538;
-			
-			// aapt resource value: 0x7f01023e
-			public const int carouselSelectedItemOffset = 2130772542;
-			
-			// aapt resource value: 0x7f010236
-			public const int carouselViewMode = 2130772534;
 			
 			// aapt resource value: 0x7f0100bd
 			public const int checkboxStyle = 2130772157;
@@ -2012,9 +610,6 @@ namespace Facile.Droid
 			// aapt resource value: 0x7f010217
 			public const int counterTextAppearance = 2130772503;
 			
-			// aapt resource value: 0x7f010234
-			public const int culture = 2130772532;
-			
 			// aapt resource value: 0x7f010031
 			public const int customNavigationLayout = 2130772017;
 			
@@ -2110,9 +705,6 @@ namespace Facile.Droid
 			
 			// aapt resource value: 0x7f01003e
 			public const int elevation = 2130772030;
-			
-			// aapt resource value: 0x7f01022b
-			public const int enableGroupSeparator = 2130772523;
 			
 			// aapt resource value: 0x7f010213
 			public const int errorEnabled = 2130772499;
@@ -2212,9 +804,6 @@ namespace Facile.Droid
 			
 			// aapt resource value: 0x7f010221
 			public const int fontProviderQuery = 2130772513;
-			
-			// aapt resource value: 0x7f010230
-			public const int fontSize = 2130772528;
 			
 			// aapt resource value: 0x7f010225
 			public const int fontStyle = 2130772517;
@@ -2591,9 +1180,6 @@ namespace Facile.Droid
 			// aapt resource value: 0x7f01010a
 			public const int maxButtonHeight = 2130772234;
 			
-			// aapt resource value: 0x7f01022e
-			public const int maximumDecimalDigits = 2130772526;
-			
 			// aapt resource value: 0x7f0100d7
 			public const int measureWithLargestChild = 2130772183;
 			
@@ -2651,9 +1237,6 @@ namespace Facile.Droid
 			// aapt resource value: 0x7f010026
 			public const int navigationMode = 2130772006;
 			
-			// aapt resource value: 0x7f01022c
-			public const int numberFormat = 2130772524;
-			
 			// aapt resource value: 0x7f0101cc
 			public const int numberOfColumns = 2130772428;
 			
@@ -2662,9 +1245,6 @@ namespace Facile.Droid
 			
 			// aapt resource value: 0x7f0100db
 			public const int numericModifiers = 2130772187;
-			
-			// aapt resource value: 0x7f010235
-			public const int numericTextBoxValue = 2130772533;
 			
 			// aapt resource value: 0x7f01014e
 			public const int onboardingDescriptionStyle = 2130772302;
@@ -2726,9 +1306,6 @@ namespace Facile.Droid
 			// aapt resource value: 0x7f0100a5
 			public const int panelMenuListWidth = 2130772133;
 			
-			// aapt resource value: 0x7f010228
-			public const int parsingMode = 2130772520;
-			
 			// aapt resource value: 0x7f01021c
 			public const int passwordToggleContentDescription = 2130772508;
 			
@@ -2746,9 +1323,6 @@ namespace Facile.Droid
 			
 			// aapt resource value: 0x7f0101b0
 			public const int pause = 2130772400;
-			
-			// aapt resource value: 0x7f010229
-			public const int percentDisplayMode = 2130772521;
 			
 			// aapt resource value: 0x7f0101be
 			public const int picture_in_picture = 2130772414;
@@ -2938,9 +1512,6 @@ namespace Facile.Droid
 			
 			// aapt resource value: 0x7f0100c4
 			public const int seekBarStyle = 2130772164;
-			
-			// aapt resource value: 0x7f01022f
-			public const int selectAllOnFocus = 2130772527;
 			
 			// aapt resource value: 0x7f010089
 			public const int selectableItemBackground = 2130772105;
@@ -3239,20 +1810,11 @@ namespace Facile.Droid
 			// aapt resource value: 0x7f0101ca
 			public const int useCurrentTime = 2130772426;
 			
-			// aapt resource value: 0x7f01022a
-			public const int valueChangeMode = 2130772522;
-			
 			// aapt resource value: 0x7f0101a9
 			public const int verticalMargin = 2130772393;
 			
 			// aapt resource value: 0x7f0100f2
 			public const int voiceIcon = 2130772210;
-			
-			// aapt resource value: 0x7f01022d
-			public const int watermark = 2130772525;
-			
-			// aapt resource value: 0x7f010233
-			public const int watermarkColor = 2130772531;
 			
 			// aapt resource value: 0x7f010056
 			public const int windowActionBar = 2130772054;
@@ -3788,1187 +2350,1187 @@ namespace Facile.Droid
 		public partial class Dimension
 		{
 			
-			// aapt resource value: 0x7f0a001b
-			public const int abc_action_bar_content_inset_material = 2131361819;
+			// aapt resource value: 0x7f09001b
+			public const int abc_action_bar_content_inset_material = 2131296283;
 			
-			// aapt resource value: 0x7f0a001c
-			public const int abc_action_bar_content_inset_with_nav = 2131361820;
+			// aapt resource value: 0x7f09001c
+			public const int abc_action_bar_content_inset_with_nav = 2131296284;
 			
-			// aapt resource value: 0x7f0a0010
-			public const int abc_action_bar_default_height_material = 2131361808;
+			// aapt resource value: 0x7f090010
+			public const int abc_action_bar_default_height_material = 2131296272;
 			
-			// aapt resource value: 0x7f0a001d
-			public const int abc_action_bar_default_padding_end_material = 2131361821;
+			// aapt resource value: 0x7f09001d
+			public const int abc_action_bar_default_padding_end_material = 2131296285;
 			
-			// aapt resource value: 0x7f0a001e
-			public const int abc_action_bar_default_padding_start_material = 2131361822;
+			// aapt resource value: 0x7f09001e
+			public const int abc_action_bar_default_padding_start_material = 2131296286;
 			
-			// aapt resource value: 0x7f0a0020
-			public const int abc_action_bar_elevation_material = 2131361824;
+			// aapt resource value: 0x7f090020
+			public const int abc_action_bar_elevation_material = 2131296288;
 			
-			// aapt resource value: 0x7f0a0021
-			public const int abc_action_bar_icon_vertical_padding_material = 2131361825;
+			// aapt resource value: 0x7f090021
+			public const int abc_action_bar_icon_vertical_padding_material = 2131296289;
 			
-			// aapt resource value: 0x7f0a0022
-			public const int abc_action_bar_overflow_padding_end_material = 2131361826;
+			// aapt resource value: 0x7f090022
+			public const int abc_action_bar_overflow_padding_end_material = 2131296290;
 			
-			// aapt resource value: 0x7f0a0023
-			public const int abc_action_bar_overflow_padding_start_material = 2131361827;
+			// aapt resource value: 0x7f090023
+			public const int abc_action_bar_overflow_padding_start_material = 2131296291;
 			
-			// aapt resource value: 0x7f0a0011
-			public const int abc_action_bar_progress_bar_size = 2131361809;
+			// aapt resource value: 0x7f090011
+			public const int abc_action_bar_progress_bar_size = 2131296273;
 			
-			// aapt resource value: 0x7f0a0024
-			public const int abc_action_bar_stacked_max_height = 2131361828;
+			// aapt resource value: 0x7f090024
+			public const int abc_action_bar_stacked_max_height = 2131296292;
 			
-			// aapt resource value: 0x7f0a0025
-			public const int abc_action_bar_stacked_tab_max_width = 2131361829;
+			// aapt resource value: 0x7f090025
+			public const int abc_action_bar_stacked_tab_max_width = 2131296293;
 			
-			// aapt resource value: 0x7f0a0026
-			public const int abc_action_bar_subtitle_bottom_margin_material = 2131361830;
+			// aapt resource value: 0x7f090026
+			public const int abc_action_bar_subtitle_bottom_margin_material = 2131296294;
 			
-			// aapt resource value: 0x7f0a0027
-			public const int abc_action_bar_subtitle_top_margin_material = 2131361831;
+			// aapt resource value: 0x7f090027
+			public const int abc_action_bar_subtitle_top_margin_material = 2131296295;
 			
-			// aapt resource value: 0x7f0a0028
-			public const int abc_action_button_min_height_material = 2131361832;
+			// aapt resource value: 0x7f090028
+			public const int abc_action_button_min_height_material = 2131296296;
 			
-			// aapt resource value: 0x7f0a0029
-			public const int abc_action_button_min_width_material = 2131361833;
+			// aapt resource value: 0x7f090029
+			public const int abc_action_button_min_width_material = 2131296297;
 			
-			// aapt resource value: 0x7f0a002a
-			public const int abc_action_button_min_width_overflow_material = 2131361834;
+			// aapt resource value: 0x7f09002a
+			public const int abc_action_button_min_width_overflow_material = 2131296298;
 			
-			// aapt resource value: 0x7f0a000f
-			public const int abc_alert_dialog_button_bar_height = 2131361807;
+			// aapt resource value: 0x7f09000f
+			public const int abc_alert_dialog_button_bar_height = 2131296271;
 			
-			// aapt resource value: 0x7f0a002b
-			public const int abc_button_inset_horizontal_material = 2131361835;
+			// aapt resource value: 0x7f09002b
+			public const int abc_button_inset_horizontal_material = 2131296299;
 			
-			// aapt resource value: 0x7f0a002c
-			public const int abc_button_inset_vertical_material = 2131361836;
+			// aapt resource value: 0x7f09002c
+			public const int abc_button_inset_vertical_material = 2131296300;
 			
-			// aapt resource value: 0x7f0a002d
-			public const int abc_button_padding_horizontal_material = 2131361837;
+			// aapt resource value: 0x7f09002d
+			public const int abc_button_padding_horizontal_material = 2131296301;
 			
-			// aapt resource value: 0x7f0a002e
-			public const int abc_button_padding_vertical_material = 2131361838;
+			// aapt resource value: 0x7f09002e
+			public const int abc_button_padding_vertical_material = 2131296302;
 			
-			// aapt resource value: 0x7f0a002f
-			public const int abc_cascading_menus_min_smallest_width = 2131361839;
+			// aapt resource value: 0x7f09002f
+			public const int abc_cascading_menus_min_smallest_width = 2131296303;
 			
-			// aapt resource value: 0x7f0a0014
-			public const int abc_config_prefDialogWidth = 2131361812;
+			// aapt resource value: 0x7f090014
+			public const int abc_config_prefDialogWidth = 2131296276;
 			
-			// aapt resource value: 0x7f0a0030
-			public const int abc_control_corner_material = 2131361840;
+			// aapt resource value: 0x7f090030
+			public const int abc_control_corner_material = 2131296304;
 			
-			// aapt resource value: 0x7f0a0031
-			public const int abc_control_inset_material = 2131361841;
+			// aapt resource value: 0x7f090031
+			public const int abc_control_inset_material = 2131296305;
 			
-			// aapt resource value: 0x7f0a0032
-			public const int abc_control_padding_material = 2131361842;
+			// aapt resource value: 0x7f090032
+			public const int abc_control_padding_material = 2131296306;
 			
-			// aapt resource value: 0x7f0a0015
-			public const int abc_dialog_fixed_height_major = 2131361813;
+			// aapt resource value: 0x7f090015
+			public const int abc_dialog_fixed_height_major = 2131296277;
 			
-			// aapt resource value: 0x7f0a0016
-			public const int abc_dialog_fixed_height_minor = 2131361814;
+			// aapt resource value: 0x7f090016
+			public const int abc_dialog_fixed_height_minor = 2131296278;
 			
-			// aapt resource value: 0x7f0a0017
-			public const int abc_dialog_fixed_width_major = 2131361815;
+			// aapt resource value: 0x7f090017
+			public const int abc_dialog_fixed_width_major = 2131296279;
 			
-			// aapt resource value: 0x7f0a0018
-			public const int abc_dialog_fixed_width_minor = 2131361816;
+			// aapt resource value: 0x7f090018
+			public const int abc_dialog_fixed_width_minor = 2131296280;
 			
-			// aapt resource value: 0x7f0a0033
-			public const int abc_dialog_list_padding_bottom_no_buttons = 2131361843;
+			// aapt resource value: 0x7f090033
+			public const int abc_dialog_list_padding_bottom_no_buttons = 2131296307;
 			
-			// aapt resource value: 0x7f0a0034
-			public const int abc_dialog_list_padding_top_no_title = 2131361844;
+			// aapt resource value: 0x7f090034
+			public const int abc_dialog_list_padding_top_no_title = 2131296308;
 			
-			// aapt resource value: 0x7f0a0019
-			public const int abc_dialog_min_width_major = 2131361817;
+			// aapt resource value: 0x7f090019
+			public const int abc_dialog_min_width_major = 2131296281;
 			
-			// aapt resource value: 0x7f0a001a
-			public const int abc_dialog_min_width_minor = 2131361818;
+			// aapt resource value: 0x7f09001a
+			public const int abc_dialog_min_width_minor = 2131296282;
 			
-			// aapt resource value: 0x7f0a0035
-			public const int abc_dialog_padding_material = 2131361845;
+			// aapt resource value: 0x7f090035
+			public const int abc_dialog_padding_material = 2131296309;
 			
-			// aapt resource value: 0x7f0a0036
-			public const int abc_dialog_padding_top_material = 2131361846;
+			// aapt resource value: 0x7f090036
+			public const int abc_dialog_padding_top_material = 2131296310;
 			
-			// aapt resource value: 0x7f0a0037
-			public const int abc_dialog_title_divider_material = 2131361847;
+			// aapt resource value: 0x7f090037
+			public const int abc_dialog_title_divider_material = 2131296311;
 			
-			// aapt resource value: 0x7f0a0038
-			public const int abc_disabled_alpha_material_dark = 2131361848;
+			// aapt resource value: 0x7f090038
+			public const int abc_disabled_alpha_material_dark = 2131296312;
 			
-			// aapt resource value: 0x7f0a0039
-			public const int abc_disabled_alpha_material_light = 2131361849;
+			// aapt resource value: 0x7f090039
+			public const int abc_disabled_alpha_material_light = 2131296313;
 			
-			// aapt resource value: 0x7f0a003a
-			public const int abc_dropdownitem_icon_width = 2131361850;
+			// aapt resource value: 0x7f09003a
+			public const int abc_dropdownitem_icon_width = 2131296314;
 			
-			// aapt resource value: 0x7f0a003b
-			public const int abc_dropdownitem_text_padding_left = 2131361851;
+			// aapt resource value: 0x7f09003b
+			public const int abc_dropdownitem_text_padding_left = 2131296315;
 			
-			// aapt resource value: 0x7f0a003c
-			public const int abc_dropdownitem_text_padding_right = 2131361852;
+			// aapt resource value: 0x7f09003c
+			public const int abc_dropdownitem_text_padding_right = 2131296316;
 			
-			// aapt resource value: 0x7f0a003d
-			public const int abc_edit_text_inset_bottom_material = 2131361853;
+			// aapt resource value: 0x7f09003d
+			public const int abc_edit_text_inset_bottom_material = 2131296317;
 			
-			// aapt resource value: 0x7f0a003e
-			public const int abc_edit_text_inset_horizontal_material = 2131361854;
+			// aapt resource value: 0x7f09003e
+			public const int abc_edit_text_inset_horizontal_material = 2131296318;
 			
-			// aapt resource value: 0x7f0a003f
-			public const int abc_edit_text_inset_top_material = 2131361855;
+			// aapt resource value: 0x7f09003f
+			public const int abc_edit_text_inset_top_material = 2131296319;
 			
-			// aapt resource value: 0x7f0a0040
-			public const int abc_floating_window_z = 2131361856;
+			// aapt resource value: 0x7f090040
+			public const int abc_floating_window_z = 2131296320;
 			
-			// aapt resource value: 0x7f0a0041
-			public const int abc_list_item_padding_horizontal_material = 2131361857;
+			// aapt resource value: 0x7f090041
+			public const int abc_list_item_padding_horizontal_material = 2131296321;
 			
-			// aapt resource value: 0x7f0a0042
-			public const int abc_panel_menu_list_width = 2131361858;
+			// aapt resource value: 0x7f090042
+			public const int abc_panel_menu_list_width = 2131296322;
 			
-			// aapt resource value: 0x7f0a0043
-			public const int abc_progress_bar_height_material = 2131361859;
+			// aapt resource value: 0x7f090043
+			public const int abc_progress_bar_height_material = 2131296323;
 			
-			// aapt resource value: 0x7f0a0044
-			public const int abc_search_view_preferred_height = 2131361860;
+			// aapt resource value: 0x7f090044
+			public const int abc_search_view_preferred_height = 2131296324;
 			
-			// aapt resource value: 0x7f0a0045
-			public const int abc_search_view_preferred_width = 2131361861;
+			// aapt resource value: 0x7f090045
+			public const int abc_search_view_preferred_width = 2131296325;
 			
-			// aapt resource value: 0x7f0a0046
-			public const int abc_seekbar_track_background_height_material = 2131361862;
+			// aapt resource value: 0x7f090046
+			public const int abc_seekbar_track_background_height_material = 2131296326;
 			
-			// aapt resource value: 0x7f0a0047
-			public const int abc_seekbar_track_progress_height_material = 2131361863;
+			// aapt resource value: 0x7f090047
+			public const int abc_seekbar_track_progress_height_material = 2131296327;
 			
-			// aapt resource value: 0x7f0a0048
-			public const int abc_select_dialog_padding_start_material = 2131361864;
+			// aapt resource value: 0x7f090048
+			public const int abc_select_dialog_padding_start_material = 2131296328;
 			
-			// aapt resource value: 0x7f0a001f
-			public const int abc_switch_padding = 2131361823;
+			// aapt resource value: 0x7f09001f
+			public const int abc_switch_padding = 2131296287;
 			
-			// aapt resource value: 0x7f0a0049
-			public const int abc_text_size_body_1_material = 2131361865;
+			// aapt resource value: 0x7f090049
+			public const int abc_text_size_body_1_material = 2131296329;
 			
-			// aapt resource value: 0x7f0a004a
-			public const int abc_text_size_body_2_material = 2131361866;
+			// aapt resource value: 0x7f09004a
+			public const int abc_text_size_body_2_material = 2131296330;
 			
-			// aapt resource value: 0x7f0a004b
-			public const int abc_text_size_button_material = 2131361867;
+			// aapt resource value: 0x7f09004b
+			public const int abc_text_size_button_material = 2131296331;
 			
-			// aapt resource value: 0x7f0a004c
-			public const int abc_text_size_caption_material = 2131361868;
+			// aapt resource value: 0x7f09004c
+			public const int abc_text_size_caption_material = 2131296332;
 			
-			// aapt resource value: 0x7f0a004d
-			public const int abc_text_size_display_1_material = 2131361869;
+			// aapt resource value: 0x7f09004d
+			public const int abc_text_size_display_1_material = 2131296333;
 			
-			// aapt resource value: 0x7f0a004e
-			public const int abc_text_size_display_2_material = 2131361870;
+			// aapt resource value: 0x7f09004e
+			public const int abc_text_size_display_2_material = 2131296334;
 			
-			// aapt resource value: 0x7f0a004f
-			public const int abc_text_size_display_3_material = 2131361871;
+			// aapt resource value: 0x7f09004f
+			public const int abc_text_size_display_3_material = 2131296335;
 			
-			// aapt resource value: 0x7f0a0050
-			public const int abc_text_size_display_4_material = 2131361872;
+			// aapt resource value: 0x7f090050
+			public const int abc_text_size_display_4_material = 2131296336;
 			
-			// aapt resource value: 0x7f0a0051
-			public const int abc_text_size_headline_material = 2131361873;
+			// aapt resource value: 0x7f090051
+			public const int abc_text_size_headline_material = 2131296337;
 			
-			// aapt resource value: 0x7f0a0052
-			public const int abc_text_size_large_material = 2131361874;
+			// aapt resource value: 0x7f090052
+			public const int abc_text_size_large_material = 2131296338;
 			
-			// aapt resource value: 0x7f0a0053
-			public const int abc_text_size_medium_material = 2131361875;
+			// aapt resource value: 0x7f090053
+			public const int abc_text_size_medium_material = 2131296339;
 			
-			// aapt resource value: 0x7f0a0054
-			public const int abc_text_size_menu_header_material = 2131361876;
+			// aapt resource value: 0x7f090054
+			public const int abc_text_size_menu_header_material = 2131296340;
 			
-			// aapt resource value: 0x7f0a0055
-			public const int abc_text_size_menu_material = 2131361877;
+			// aapt resource value: 0x7f090055
+			public const int abc_text_size_menu_material = 2131296341;
 			
-			// aapt resource value: 0x7f0a0056
-			public const int abc_text_size_small_material = 2131361878;
+			// aapt resource value: 0x7f090056
+			public const int abc_text_size_small_material = 2131296342;
 			
-			// aapt resource value: 0x7f0a0057
-			public const int abc_text_size_subhead_material = 2131361879;
+			// aapt resource value: 0x7f090057
+			public const int abc_text_size_subhead_material = 2131296343;
 			
-			// aapt resource value: 0x7f0a0012
-			public const int abc_text_size_subtitle_material_toolbar = 2131361810;
+			// aapt resource value: 0x7f090012
+			public const int abc_text_size_subtitle_material_toolbar = 2131296274;
 			
-			// aapt resource value: 0x7f0a0058
-			public const int abc_text_size_title_material = 2131361880;
+			// aapt resource value: 0x7f090058
+			public const int abc_text_size_title_material = 2131296344;
 			
-			// aapt resource value: 0x7f0a0013
-			public const int abc_text_size_title_material_toolbar = 2131361811;
+			// aapt resource value: 0x7f090013
+			public const int abc_text_size_title_material_toolbar = 2131296275;
 			
-			// aapt resource value: 0x7f0a000c
-			public const int cardview_compat_inset_shadow = 2131361804;
+			// aapt resource value: 0x7f09000c
+			public const int cardview_compat_inset_shadow = 2131296268;
 			
-			// aapt resource value: 0x7f0a000d
-			public const int cardview_default_elevation = 2131361805;
+			// aapt resource value: 0x7f09000d
+			public const int cardview_default_elevation = 2131296269;
 			
-			// aapt resource value: 0x7f0a000e
-			public const int cardview_default_radius = 2131361806;
+			// aapt resource value: 0x7f09000e
+			public const int cardview_default_radius = 2131296270;
 			
-			// aapt resource value: 0x7f0a017a
-			public const int compat_button_inset_horizontal_material = 2131362170;
+			// aapt resource value: 0x7f09017a
+			public const int compat_button_inset_horizontal_material = 2131296634;
 			
-			// aapt resource value: 0x7f0a017b
-			public const int compat_button_inset_vertical_material = 2131362171;
+			// aapt resource value: 0x7f09017b
+			public const int compat_button_inset_vertical_material = 2131296635;
 			
-			// aapt resource value: 0x7f0a017c
-			public const int compat_button_padding_horizontal_material = 2131362172;
+			// aapt resource value: 0x7f09017c
+			public const int compat_button_padding_horizontal_material = 2131296636;
 			
-			// aapt resource value: 0x7f0a017d
-			public const int compat_button_padding_vertical_material = 2131362173;
+			// aapt resource value: 0x7f09017d
+			public const int compat_button_padding_vertical_material = 2131296637;
 			
-			// aapt resource value: 0x7f0a017e
-			public const int compat_control_corner_material = 2131362174;
+			// aapt resource value: 0x7f09017e
+			public const int compat_control_corner_material = 2131296638;
 			
-			// aapt resource value: 0x7f0a0158
-			public const int design_appbar_elevation = 2131362136;
+			// aapt resource value: 0x7f090158
+			public const int design_appbar_elevation = 2131296600;
 			
-			// aapt resource value: 0x7f0a0159
-			public const int design_bottom_navigation_active_item_max_width = 2131362137;
+			// aapt resource value: 0x7f090159
+			public const int design_bottom_navigation_active_item_max_width = 2131296601;
 			
-			// aapt resource value: 0x7f0a015a
-			public const int design_bottom_navigation_active_text_size = 2131362138;
+			// aapt resource value: 0x7f09015a
+			public const int design_bottom_navigation_active_text_size = 2131296602;
 			
-			// aapt resource value: 0x7f0a015b
-			public const int design_bottom_navigation_elevation = 2131362139;
+			// aapt resource value: 0x7f09015b
+			public const int design_bottom_navigation_elevation = 2131296603;
 			
-			// aapt resource value: 0x7f0a015c
-			public const int design_bottom_navigation_height = 2131362140;
+			// aapt resource value: 0x7f09015c
+			public const int design_bottom_navigation_height = 2131296604;
 			
-			// aapt resource value: 0x7f0a015d
-			public const int design_bottom_navigation_item_max_width = 2131362141;
+			// aapt resource value: 0x7f09015d
+			public const int design_bottom_navigation_item_max_width = 2131296605;
 			
-			// aapt resource value: 0x7f0a015e
-			public const int design_bottom_navigation_item_min_width = 2131362142;
+			// aapt resource value: 0x7f09015e
+			public const int design_bottom_navigation_item_min_width = 2131296606;
 			
-			// aapt resource value: 0x7f0a015f
-			public const int design_bottom_navigation_margin = 2131362143;
+			// aapt resource value: 0x7f09015f
+			public const int design_bottom_navigation_margin = 2131296607;
 			
-			// aapt resource value: 0x7f0a0160
-			public const int design_bottom_navigation_shadow_height = 2131362144;
+			// aapt resource value: 0x7f090160
+			public const int design_bottom_navigation_shadow_height = 2131296608;
 			
-			// aapt resource value: 0x7f0a0161
-			public const int design_bottom_navigation_text_size = 2131362145;
+			// aapt resource value: 0x7f090161
+			public const int design_bottom_navigation_text_size = 2131296609;
 			
-			// aapt resource value: 0x7f0a0162
-			public const int design_bottom_sheet_modal_elevation = 2131362146;
+			// aapt resource value: 0x7f090162
+			public const int design_bottom_sheet_modal_elevation = 2131296610;
 			
-			// aapt resource value: 0x7f0a0163
-			public const int design_bottom_sheet_peek_height_min = 2131362147;
+			// aapt resource value: 0x7f090163
+			public const int design_bottom_sheet_peek_height_min = 2131296611;
 			
-			// aapt resource value: 0x7f0a0164
-			public const int design_fab_border_width = 2131362148;
+			// aapt resource value: 0x7f090164
+			public const int design_fab_border_width = 2131296612;
 			
-			// aapt resource value: 0x7f0a0165
-			public const int design_fab_elevation = 2131362149;
+			// aapt resource value: 0x7f090165
+			public const int design_fab_elevation = 2131296613;
 			
-			// aapt resource value: 0x7f0a0166
-			public const int design_fab_image_size = 2131362150;
+			// aapt resource value: 0x7f090166
+			public const int design_fab_image_size = 2131296614;
 			
-			// aapt resource value: 0x7f0a0167
-			public const int design_fab_size_mini = 2131362151;
+			// aapt resource value: 0x7f090167
+			public const int design_fab_size_mini = 2131296615;
 			
-			// aapt resource value: 0x7f0a0168
-			public const int design_fab_size_normal = 2131362152;
+			// aapt resource value: 0x7f090168
+			public const int design_fab_size_normal = 2131296616;
 			
-			// aapt resource value: 0x7f0a0169
-			public const int design_fab_translation_z_pressed = 2131362153;
+			// aapt resource value: 0x7f090169
+			public const int design_fab_translation_z_pressed = 2131296617;
 			
-			// aapt resource value: 0x7f0a016a
-			public const int design_navigation_elevation = 2131362154;
+			// aapt resource value: 0x7f09016a
+			public const int design_navigation_elevation = 2131296618;
 			
-			// aapt resource value: 0x7f0a016b
-			public const int design_navigation_icon_padding = 2131362155;
+			// aapt resource value: 0x7f09016b
+			public const int design_navigation_icon_padding = 2131296619;
 			
-			// aapt resource value: 0x7f0a016c
-			public const int design_navigation_icon_size = 2131362156;
+			// aapt resource value: 0x7f09016c
+			public const int design_navigation_icon_size = 2131296620;
 			
-			// aapt resource value: 0x7f0a0150
-			public const int design_navigation_max_width = 2131362128;
+			// aapt resource value: 0x7f090150
+			public const int design_navigation_max_width = 2131296592;
 			
-			// aapt resource value: 0x7f0a016d
-			public const int design_navigation_padding_bottom = 2131362157;
+			// aapt resource value: 0x7f09016d
+			public const int design_navigation_padding_bottom = 2131296621;
 			
-			// aapt resource value: 0x7f0a016e
-			public const int design_navigation_separator_vertical_padding = 2131362158;
+			// aapt resource value: 0x7f09016e
+			public const int design_navigation_separator_vertical_padding = 2131296622;
 			
-			// aapt resource value: 0x7f0a0151
-			public const int design_snackbar_action_inline_max_width = 2131362129;
+			// aapt resource value: 0x7f090151
+			public const int design_snackbar_action_inline_max_width = 2131296593;
 			
-			// aapt resource value: 0x7f0a0152
-			public const int design_snackbar_background_corner_radius = 2131362130;
+			// aapt resource value: 0x7f090152
+			public const int design_snackbar_background_corner_radius = 2131296594;
 			
-			// aapt resource value: 0x7f0a016f
-			public const int design_snackbar_elevation = 2131362159;
+			// aapt resource value: 0x7f09016f
+			public const int design_snackbar_elevation = 2131296623;
 			
-			// aapt resource value: 0x7f0a0153
-			public const int design_snackbar_extra_spacing_horizontal = 2131362131;
+			// aapt resource value: 0x7f090153
+			public const int design_snackbar_extra_spacing_horizontal = 2131296595;
 			
-			// aapt resource value: 0x7f0a0154
-			public const int design_snackbar_max_width = 2131362132;
+			// aapt resource value: 0x7f090154
+			public const int design_snackbar_max_width = 2131296596;
 			
-			// aapt resource value: 0x7f0a0155
-			public const int design_snackbar_min_width = 2131362133;
+			// aapt resource value: 0x7f090155
+			public const int design_snackbar_min_width = 2131296597;
 			
-			// aapt resource value: 0x7f0a0170
-			public const int design_snackbar_padding_horizontal = 2131362160;
+			// aapt resource value: 0x7f090170
+			public const int design_snackbar_padding_horizontal = 2131296624;
 			
-			// aapt resource value: 0x7f0a0171
-			public const int design_snackbar_padding_vertical = 2131362161;
+			// aapt resource value: 0x7f090171
+			public const int design_snackbar_padding_vertical = 2131296625;
 			
-			// aapt resource value: 0x7f0a0156
-			public const int design_snackbar_padding_vertical_2lines = 2131362134;
+			// aapt resource value: 0x7f090156
+			public const int design_snackbar_padding_vertical_2lines = 2131296598;
 			
-			// aapt resource value: 0x7f0a0172
-			public const int design_snackbar_text_size = 2131362162;
+			// aapt resource value: 0x7f090172
+			public const int design_snackbar_text_size = 2131296626;
 			
-			// aapt resource value: 0x7f0a0173
-			public const int design_tab_max_width = 2131362163;
+			// aapt resource value: 0x7f090173
+			public const int design_tab_max_width = 2131296627;
 			
-			// aapt resource value: 0x7f0a0157
-			public const int design_tab_scrollable_min_width = 2131362135;
+			// aapt resource value: 0x7f090157
+			public const int design_tab_scrollable_min_width = 2131296599;
 			
-			// aapt resource value: 0x7f0a0174
-			public const int design_tab_text_size = 2131362164;
+			// aapt resource value: 0x7f090174
+			public const int design_tab_text_size = 2131296628;
 			
-			// aapt resource value: 0x7f0a0175
-			public const int design_tab_text_size_2line = 2131362165;
+			// aapt resource value: 0x7f090175
+			public const int design_tab_text_size_2line = 2131296629;
 			
-			// aapt resource value: 0x7f0a0059
-			public const int disabled_alpha_material_dark = 2131361881;
+			// aapt resource value: 0x7f090059
+			public const int disabled_alpha_material_dark = 2131296345;
 			
-			// aapt resource value: 0x7f0a005a
-			public const int disabled_alpha_material_light = 2131361882;
+			// aapt resource value: 0x7f09005a
+			public const int disabled_alpha_material_light = 2131296346;
 			
-			// aapt resource value: 0x7f0a0000
-			public const int fastscroll_default_thickness = 2131361792;
+			// aapt resource value: 0x7f090000
+			public const int fastscroll_default_thickness = 2131296256;
 			
-			// aapt resource value: 0x7f0a0001
-			public const int fastscroll_margin = 2131361793;
+			// aapt resource value: 0x7f090001
+			public const int fastscroll_margin = 2131296257;
 			
-			// aapt resource value: 0x7f0a0002
-			public const int fastscroll_minimum_range = 2131361794;
+			// aapt resource value: 0x7f090002
+			public const int fastscroll_minimum_range = 2131296258;
 			
-			// aapt resource value: 0x7f0a005b
-			public const int highlight_alpha_material_colored = 2131361883;
+			// aapt resource value: 0x7f09005b
+			public const int highlight_alpha_material_colored = 2131296347;
 			
-			// aapt resource value: 0x7f0a005c
-			public const int highlight_alpha_material_dark = 2131361884;
+			// aapt resource value: 0x7f09005c
+			public const int highlight_alpha_material_dark = 2131296348;
 			
-			// aapt resource value: 0x7f0a005d
-			public const int highlight_alpha_material_light = 2131361885;
+			// aapt resource value: 0x7f09005d
+			public const int highlight_alpha_material_light = 2131296349;
 			
-			// aapt resource value: 0x7f0a005e
-			public const int hint_alpha_material_dark = 2131361886;
+			// aapt resource value: 0x7f09005e
+			public const int hint_alpha_material_dark = 2131296350;
 			
-			// aapt resource value: 0x7f0a005f
-			public const int hint_alpha_material_light = 2131361887;
+			// aapt resource value: 0x7f09005f
+			public const int hint_alpha_material_light = 2131296351;
 			
-			// aapt resource value: 0x7f0a0060
-			public const int hint_pressed_alpha_material_dark = 2131361888;
+			// aapt resource value: 0x7f090060
+			public const int hint_pressed_alpha_material_dark = 2131296352;
 			
-			// aapt resource value: 0x7f0a0061
-			public const int hint_pressed_alpha_material_light = 2131361889;
+			// aapt resource value: 0x7f090061
+			public const int hint_pressed_alpha_material_light = 2131296353;
 			
-			// aapt resource value: 0x7f0a0003
-			public const int item_touch_helper_max_drag_scroll_per_frame = 2131361795;
+			// aapt resource value: 0x7f090003
+			public const int item_touch_helper_max_drag_scroll_per_frame = 2131296259;
 			
-			// aapt resource value: 0x7f0a0004
-			public const int item_touch_helper_swipe_escape_max_velocity = 2131361796;
+			// aapt resource value: 0x7f090004
+			public const int item_touch_helper_swipe_escape_max_velocity = 2131296260;
 			
-			// aapt resource value: 0x7f0a0005
-			public const int item_touch_helper_swipe_escape_velocity = 2131361797;
+			// aapt resource value: 0x7f090005
+			public const int item_touch_helper_swipe_escape_velocity = 2131296261;
 			
-			// aapt resource value: 0x7f0a006b
-			public const int lb_action_1_line_height = 2131361899;
+			// aapt resource value: 0x7f09006b
+			public const int lb_action_1_line_height = 2131296363;
 			
-			// aapt resource value: 0x7f0a006c
-			public const int lb_action_2_lines_height = 2131361900;
+			// aapt resource value: 0x7f09006c
+			public const int lb_action_2_lines_height = 2131296364;
 			
-			// aapt resource value: 0x7f0a006d
-			public const int lb_action_button_corner_radius = 2131361901;
+			// aapt resource value: 0x7f09006d
+			public const int lb_action_button_corner_radius = 2131296365;
 			
-			// aapt resource value: 0x7f0a006e
-			public const int lb_action_icon_margin = 2131361902;
+			// aapt resource value: 0x7f09006e
+			public const int lb_action_icon_margin = 2131296366;
 			
-			// aapt resource value: 0x7f0a006f
-			public const int lb_action_padding_horizontal = 2131361903;
+			// aapt resource value: 0x7f09006f
+			public const int lb_action_padding_horizontal = 2131296367;
 			
-			// aapt resource value: 0x7f0a0070
-			public const int lb_action_text_size = 2131361904;
+			// aapt resource value: 0x7f090070
+			public const int lb_action_text_size = 2131296368;
 			
-			// aapt resource value: 0x7f0a0071
-			public const int lb_action_with_icon_padding_end = 2131361905;
+			// aapt resource value: 0x7f090071
+			public const int lb_action_with_icon_padding_end = 2131296369;
 			
-			// aapt resource value: 0x7f0a0072
-			public const int lb_action_with_icon_padding_start = 2131361906;
+			// aapt resource value: 0x7f090072
+			public const int lb_action_with_icon_padding_start = 2131296370;
 			
-			// aapt resource value: 0x7f0a0073
-			public const int lb_basic_card_content_text_size = 2131361907;
+			// aapt resource value: 0x7f090073
+			public const int lb_basic_card_content_text_size = 2131296371;
 			
-			// aapt resource value: 0x7f0a0074
-			public const int lb_basic_card_info_badge_margin = 2131361908;
+			// aapt resource value: 0x7f090074
+			public const int lb_basic_card_info_badge_margin = 2131296372;
 			
-			// aapt resource value: 0x7f0a0075
-			public const int lb_basic_card_info_badge_size = 2131361909;
+			// aapt resource value: 0x7f090075
+			public const int lb_basic_card_info_badge_size = 2131296373;
 			
-			// aapt resource value: 0x7f0a0076
-			public const int lb_basic_card_info_height = 2131361910;
+			// aapt resource value: 0x7f090076
+			public const int lb_basic_card_info_height = 2131296374;
 			
-			// aapt resource value: 0x7f0a0077
-			public const int lb_basic_card_info_height_no_content = 2131361911;
+			// aapt resource value: 0x7f090077
+			public const int lb_basic_card_info_height_no_content = 2131296375;
 			
-			// aapt resource value: 0x7f0a0078
-			public const int lb_basic_card_info_padding_bottom = 2131361912;
+			// aapt resource value: 0x7f090078
+			public const int lb_basic_card_info_padding_bottom = 2131296376;
 			
-			// aapt resource value: 0x7f0a0079
-			public const int lb_basic_card_info_padding_horizontal = 2131361913;
+			// aapt resource value: 0x7f090079
+			public const int lb_basic_card_info_padding_horizontal = 2131296377;
 			
-			// aapt resource value: 0x7f0a007a
-			public const int lb_basic_card_info_padding_top = 2131361914;
+			// aapt resource value: 0x7f09007a
+			public const int lb_basic_card_info_padding_top = 2131296378;
 			
-			// aapt resource value: 0x7f0a007b
-			public const int lb_basic_card_info_text_margin = 2131361915;
+			// aapt resource value: 0x7f09007b
+			public const int lb_basic_card_info_text_margin = 2131296379;
 			
-			// aapt resource value: 0x7f0a007c
-			public const int lb_basic_card_main_height = 2131361916;
+			// aapt resource value: 0x7f09007c
+			public const int lb_basic_card_main_height = 2131296380;
 			
-			// aapt resource value: 0x7f0a007d
-			public const int lb_basic_card_main_width = 2131361917;
+			// aapt resource value: 0x7f09007d
+			public const int lb_basic_card_main_width = 2131296381;
 			
-			// aapt resource value: 0x7f0a007e
-			public const int lb_basic_card_title_text_size = 2131361918;
+			// aapt resource value: 0x7f09007e
+			public const int lb_basic_card_title_text_size = 2131296382;
 			
-			// aapt resource value: 0x7f0a007f
-			public const int lb_browse_expanded_row_no_hovercard_bottom_padding = 2131361919;
+			// aapt resource value: 0x7f09007f
+			public const int lb_browse_expanded_row_no_hovercard_bottom_padding = 2131296383;
 			
-			// aapt resource value: 0x7f0a0080
-			public const int lb_browse_expanded_selected_row_top_padding = 2131361920;
+			// aapt resource value: 0x7f090080
+			public const int lb_browse_expanded_selected_row_top_padding = 2131296384;
 			
-			// aapt resource value: 0x7f0a0081
-			public const int lb_browse_header_description_text_size = 2131361921;
+			// aapt resource value: 0x7f090081
+			public const int lb_browse_header_description_text_size = 2131296385;
 			
-			// aapt resource value: 0x7f0a0082
-			public const int lb_browse_header_fading_length = 2131361922;
+			// aapt resource value: 0x7f090082
+			public const int lb_browse_header_fading_length = 2131296386;
 			
-			// aapt resource value: 0x7f0a0083
-			public const int lb_browse_header_height = 2131361923;
+			// aapt resource value: 0x7f090083
+			public const int lb_browse_header_height = 2131296387;
 			
-			// aapt resource value: 0x7f0a0084
-			public const int lb_browse_header_padding_end = 2131361924;
+			// aapt resource value: 0x7f090084
+			public const int lb_browse_header_padding_end = 2131296388;
 			
-			// aapt resource value: 0x7f0a0085
-			public const int lb_browse_header_select_duration = 2131361925;
+			// aapt resource value: 0x7f090085
+			public const int lb_browse_header_select_duration = 2131296389;
 			
-			// aapt resource value: 0x7f0a0086
-			public const int lb_browse_header_select_scale = 2131361926;
+			// aapt resource value: 0x7f090086
+			public const int lb_browse_header_select_scale = 2131296390;
 			
-			// aapt resource value: 0x7f0a0087
-			public const int lb_browse_header_text_size = 2131361927;
+			// aapt resource value: 0x7f090087
+			public const int lb_browse_header_text_size = 2131296391;
 			
-			// aapt resource value: 0x7f0a0088
-			public const int lb_browse_headers_vertical_spacing = 2131361928;
+			// aapt resource value: 0x7f090088
+			public const int lb_browse_headers_vertical_spacing = 2131296392;
 			
-			// aapt resource value: 0x7f0a0089
-			public const int lb_browse_headers_width = 2131361929;
+			// aapt resource value: 0x7f090089
+			public const int lb_browse_headers_width = 2131296393;
 			
-			// aapt resource value: 0x7f0a008a
-			public const int lb_browse_headers_z = 2131361930;
+			// aapt resource value: 0x7f09008a
+			public const int lb_browse_headers_z = 2131296394;
 			
-			// aapt resource value: 0x7f0a008b
-			public const int lb_browse_item_horizontal_spacing = 2131361931;
+			// aapt resource value: 0x7f09008b
+			public const int lb_browse_item_horizontal_spacing = 2131296395;
 			
-			// aapt resource value: 0x7f0a008c
-			public const int lb_browse_item_vertical_spacing = 2131361932;
+			// aapt resource value: 0x7f09008c
+			public const int lb_browse_item_vertical_spacing = 2131296396;
 			
-			// aapt resource value: 0x7f0a008d
-			public const int lb_browse_padding_bottom = 2131361933;
+			// aapt resource value: 0x7f09008d
+			public const int lb_browse_padding_bottom = 2131296397;
 			
-			// aapt resource value: 0x7f0a008e
-			public const int lb_browse_padding_end = 2131361934;
+			// aapt resource value: 0x7f09008e
+			public const int lb_browse_padding_end = 2131296398;
 			
-			// aapt resource value: 0x7f0a008f
-			public const int lb_browse_padding_start = 2131361935;
+			// aapt resource value: 0x7f09008f
+			public const int lb_browse_padding_start = 2131296399;
 			
-			// aapt resource value: 0x7f0a0090
-			public const int lb_browse_padding_top = 2131361936;
+			// aapt resource value: 0x7f090090
+			public const int lb_browse_padding_top = 2131296400;
 			
-			// aapt resource value: 0x7f0a0091
-			public const int lb_browse_row_hovercard_description_font_size = 2131361937;
+			// aapt resource value: 0x7f090091
+			public const int lb_browse_row_hovercard_description_font_size = 2131296401;
 			
-			// aapt resource value: 0x7f0a0092
-			public const int lb_browse_row_hovercard_max_width = 2131361938;
+			// aapt resource value: 0x7f090092
+			public const int lb_browse_row_hovercard_max_width = 2131296402;
 			
-			// aapt resource value: 0x7f0a0093
-			public const int lb_browse_row_hovercard_title_font_size = 2131361939;
+			// aapt resource value: 0x7f090093
+			public const int lb_browse_row_hovercard_title_font_size = 2131296403;
 			
-			// aapt resource value: 0x7f0a0094
-			public const int lb_browse_rows_fading_edge = 2131361940;
+			// aapt resource value: 0x7f090094
+			public const int lb_browse_rows_fading_edge = 2131296404;
 			
-			// aapt resource value: 0x7f0a0095
-			public const int lb_browse_rows_margin_start = 2131361941;
+			// aapt resource value: 0x7f090095
+			public const int lb_browse_rows_margin_start = 2131296405;
 			
-			// aapt resource value: 0x7f0a0096
-			public const int lb_browse_rows_margin_top = 2131361942;
+			// aapt resource value: 0x7f090096
+			public const int lb_browse_rows_margin_top = 2131296406;
 			
-			// aapt resource value: 0x7f0a0097
-			public const int lb_browse_section_header_text_size = 2131361943;
+			// aapt resource value: 0x7f090097
+			public const int lb_browse_section_header_text_size = 2131296407;
 			
-			// aapt resource value: 0x7f0a0098
-			public const int lb_browse_selected_row_top_padding = 2131361944;
+			// aapt resource value: 0x7f090098
+			public const int lb_browse_selected_row_top_padding = 2131296408;
 			
-			// aapt resource value: 0x7f0a0099
-			public const int lb_browse_title_height = 2131361945;
+			// aapt resource value: 0x7f090099
+			public const int lb_browse_title_height = 2131296409;
 			
-			// aapt resource value: 0x7f0a009a
-			public const int lb_browse_title_icon_height = 2131361946;
+			// aapt resource value: 0x7f09009a
+			public const int lb_browse_title_icon_height = 2131296410;
 			
-			// aapt resource value: 0x7f0a009b
-			public const int lb_browse_title_icon_max_width = 2131361947;
+			// aapt resource value: 0x7f09009b
+			public const int lb_browse_title_icon_max_width = 2131296411;
 			
-			// aapt resource value: 0x7f0a009c
-			public const int lb_browse_title_text_size = 2131361948;
+			// aapt resource value: 0x7f09009c
+			public const int lb_browse_title_text_size = 2131296412;
 			
-			// aapt resource value: 0x7f0a009d
-			public const int lb_control_button_diameter = 2131361949;
+			// aapt resource value: 0x7f09009d
+			public const int lb_control_button_diameter = 2131296413;
 			
-			// aapt resource value: 0x7f0a009e
-			public const int lb_control_button_height = 2131361950;
+			// aapt resource value: 0x7f09009e
+			public const int lb_control_button_height = 2131296414;
 			
-			// aapt resource value: 0x7f0a009f
-			public const int lb_control_button_secondary_diameter = 2131361951;
+			// aapt resource value: 0x7f09009f
+			public const int lb_control_button_secondary_diameter = 2131296415;
 			
-			// aapt resource value: 0x7f0a00a0
-			public const int lb_control_button_secondary_height = 2131361952;
+			// aapt resource value: 0x7f0900a0
+			public const int lb_control_button_secondary_height = 2131296416;
 			
-			// aapt resource value: 0x7f0a00a1
-			public const int lb_control_button_text_size = 2131361953;
+			// aapt resource value: 0x7f0900a1
+			public const int lb_control_button_text_size = 2131296417;
 			
-			// aapt resource value: 0x7f0a00a2
-			public const int lb_control_icon_height = 2131361954;
+			// aapt resource value: 0x7f0900a2
+			public const int lb_control_icon_height = 2131296418;
 			
-			// aapt resource value: 0x7f0a00a3
-			public const int lb_control_icon_width = 2131361955;
+			// aapt resource value: 0x7f0900a3
+			public const int lb_control_icon_width = 2131296419;
 			
-			// aapt resource value: 0x7f0a00a4
-			public const int lb_details_cover_drawable_parallax_movement = 2131361956;
+			// aapt resource value: 0x7f0900a4
+			public const int lb_details_cover_drawable_parallax_movement = 2131296420;
 			
-			// aapt resource value: 0x7f0a00a5
-			public const int lb_details_description_body_line_spacing = 2131361957;
+			// aapt resource value: 0x7f0900a5
+			public const int lb_details_description_body_line_spacing = 2131296421;
 			
-			// aapt resource value: 0x7f0a00a6
-			public const int lb_details_description_body_text_size = 2131361958;
+			// aapt resource value: 0x7f0900a6
+			public const int lb_details_description_body_text_size = 2131296422;
 			
-			// aapt resource value: 0x7f0a00a7
-			public const int lb_details_description_subtitle_text_size = 2131361959;
+			// aapt resource value: 0x7f0900a7
+			public const int lb_details_description_subtitle_text_size = 2131296423;
 			
-			// aapt resource value: 0x7f0a00a8
-			public const int lb_details_description_title_baseline = 2131361960;
+			// aapt resource value: 0x7f0900a8
+			public const int lb_details_description_title_baseline = 2131296424;
 			
-			// aapt resource value: 0x7f0a00a9
-			public const int lb_details_description_title_line_spacing = 2131361961;
+			// aapt resource value: 0x7f0900a9
+			public const int lb_details_description_title_line_spacing = 2131296425;
 			
-			// aapt resource value: 0x7f0a00aa
-			public const int lb_details_description_title_padding_adjust_bottom = 2131361962;
+			// aapt resource value: 0x7f0900aa
+			public const int lb_details_description_title_padding_adjust_bottom = 2131296426;
 			
-			// aapt resource value: 0x7f0a00ab
-			public const int lb_details_description_title_padding_adjust_top = 2131361963;
+			// aapt resource value: 0x7f0900ab
+			public const int lb_details_description_title_padding_adjust_top = 2131296427;
 			
-			// aapt resource value: 0x7f0a00ac
-			public const int lb_details_description_title_resized_text_size = 2131361964;
+			// aapt resource value: 0x7f0900ac
+			public const int lb_details_description_title_resized_text_size = 2131296428;
 			
-			// aapt resource value: 0x7f0a00ad
-			public const int lb_details_description_title_text_size = 2131361965;
+			// aapt resource value: 0x7f0900ad
+			public const int lb_details_description_title_text_size = 2131296429;
 			
-			// aapt resource value: 0x7f0a00ae
-			public const int lb_details_description_under_subtitle_baseline_margin = 2131361966;
+			// aapt resource value: 0x7f0900ae
+			public const int lb_details_description_under_subtitle_baseline_margin = 2131296430;
 			
-			// aapt resource value: 0x7f0a00af
-			public const int lb_details_description_under_title_baseline_margin = 2131361967;
+			// aapt resource value: 0x7f0900af
+			public const int lb_details_description_under_title_baseline_margin = 2131296431;
 			
-			// aapt resource value: 0x7f0a00b0
-			public const int lb_details_overview_action_items_spacing = 2131361968;
+			// aapt resource value: 0x7f0900b0
+			public const int lb_details_overview_action_items_spacing = 2131296432;
 			
-			// aapt resource value: 0x7f0a00b1
-			public const int lb_details_overview_action_select_duration = 2131361969;
+			// aapt resource value: 0x7f0900b1
+			public const int lb_details_overview_action_select_duration = 2131296433;
 			
-			// aapt resource value: 0x7f0a00b2
-			public const int lb_details_overview_actions_fade_size = 2131361970;
+			// aapt resource value: 0x7f0900b2
+			public const int lb_details_overview_actions_fade_size = 2131296434;
 			
-			// aapt resource value: 0x7f0a00b3
-			public const int lb_details_overview_actions_height = 2131361971;
+			// aapt resource value: 0x7f0900b3
+			public const int lb_details_overview_actions_height = 2131296435;
 			
-			// aapt resource value: 0x7f0a00b4
-			public const int lb_details_overview_actions_padding_end = 2131361972;
+			// aapt resource value: 0x7f0900b4
+			public const int lb_details_overview_actions_padding_end = 2131296436;
 			
-			// aapt resource value: 0x7f0a00b5
-			public const int lb_details_overview_actions_padding_start = 2131361973;
+			// aapt resource value: 0x7f0900b5
+			public const int lb_details_overview_actions_padding_start = 2131296437;
 			
-			// aapt resource value: 0x7f0a00b6
-			public const int lb_details_overview_description_margin_bottom = 2131361974;
+			// aapt resource value: 0x7f0900b6
+			public const int lb_details_overview_description_margin_bottom = 2131296438;
 			
-			// aapt resource value: 0x7f0a00b7
-			public const int lb_details_overview_description_margin_end = 2131361975;
+			// aapt resource value: 0x7f0900b7
+			public const int lb_details_overview_description_margin_end = 2131296439;
 			
-			// aapt resource value: 0x7f0a00b8
-			public const int lb_details_overview_description_margin_start = 2131361976;
+			// aapt resource value: 0x7f0900b8
+			public const int lb_details_overview_description_margin_start = 2131296440;
 			
-			// aapt resource value: 0x7f0a00b9
-			public const int lb_details_overview_description_margin_top = 2131361977;
+			// aapt resource value: 0x7f0900b9
+			public const int lb_details_overview_description_margin_top = 2131296441;
 			
-			// aapt resource value: 0x7f0a00ba
-			public const int lb_details_overview_height_large = 2131361978;
+			// aapt resource value: 0x7f0900ba
+			public const int lb_details_overview_height_large = 2131296442;
 			
-			// aapt resource value: 0x7f0a00bb
-			public const int lb_details_overview_height_small = 2131361979;
+			// aapt resource value: 0x7f0900bb
+			public const int lb_details_overview_height_small = 2131296443;
 			
-			// aapt resource value: 0x7f0a00bc
-			public const int lb_details_overview_image_margin_horizontal = 2131361980;
+			// aapt resource value: 0x7f0900bc
+			public const int lb_details_overview_image_margin_horizontal = 2131296444;
 			
-			// aapt resource value: 0x7f0a00bd
-			public const int lb_details_overview_image_margin_vertical = 2131361981;
+			// aapt resource value: 0x7f0900bd
+			public const int lb_details_overview_image_margin_vertical = 2131296445;
 			
-			// aapt resource value: 0x7f0a00be
-			public const int lb_details_overview_margin_bottom = 2131361982;
+			// aapt resource value: 0x7f0900be
+			public const int lb_details_overview_margin_bottom = 2131296446;
 			
-			// aapt resource value: 0x7f0a00bf
-			public const int lb_details_overview_margin_end = 2131361983;
+			// aapt resource value: 0x7f0900bf
+			public const int lb_details_overview_margin_end = 2131296447;
 			
-			// aapt resource value: 0x7f0a00c0
-			public const int lb_details_overview_margin_start = 2131361984;
+			// aapt resource value: 0x7f0900c0
+			public const int lb_details_overview_margin_start = 2131296448;
 			
-			// aapt resource value: 0x7f0a00c1
-			public const int lb_details_overview_z = 2131361985;
+			// aapt resource value: 0x7f0900c1
+			public const int lb_details_overview_z = 2131296449;
 			
-			// aapt resource value: 0x7f0a00c2
-			public const int lb_details_rows_align_top = 2131361986;
+			// aapt resource value: 0x7f0900c2
+			public const int lb_details_rows_align_top = 2131296450;
 			
-			// aapt resource value: 0x7f0a00c3
-			public const int lb_details_v2_actions_height = 2131361987;
+			// aapt resource value: 0x7f0900c3
+			public const int lb_details_v2_actions_height = 2131296451;
 			
-			// aapt resource value: 0x7f0a00c4
-			public const int lb_details_v2_align_pos_for_actions = 2131361988;
+			// aapt resource value: 0x7f0900c4
+			public const int lb_details_v2_align_pos_for_actions = 2131296452;
 			
-			// aapt resource value: 0x7f0a00c5
-			public const int lb_details_v2_align_pos_for_description = 2131361989;
+			// aapt resource value: 0x7f0900c5
+			public const int lb_details_v2_align_pos_for_description = 2131296453;
 			
-			// aapt resource value: 0x7f0a00c6
-			public const int lb_details_v2_blank_height = 2131361990;
+			// aapt resource value: 0x7f0900c6
+			public const int lb_details_v2_blank_height = 2131296454;
 			
-			// aapt resource value: 0x7f0a00c7
-			public const int lb_details_v2_card_height = 2131361991;
+			// aapt resource value: 0x7f0900c7
+			public const int lb_details_v2_card_height = 2131296455;
 			
-			// aapt resource value: 0x7f0a00c8
-			public const int lb_details_v2_description_margin_end = 2131361992;
+			// aapt resource value: 0x7f0900c8
+			public const int lb_details_v2_description_margin_end = 2131296456;
 			
-			// aapt resource value: 0x7f0a00c9
-			public const int lb_details_v2_description_margin_start = 2131361993;
+			// aapt resource value: 0x7f0900c9
+			public const int lb_details_v2_description_margin_start = 2131296457;
 			
-			// aapt resource value: 0x7f0a00ca
-			public const int lb_details_v2_description_margin_top = 2131361994;
+			// aapt resource value: 0x7f0900ca
+			public const int lb_details_v2_description_margin_top = 2131296458;
 			
-			// aapt resource value: 0x7f0a00cb
-			public const int lb_details_v2_left = 2131361995;
+			// aapt resource value: 0x7f0900cb
+			public const int lb_details_v2_left = 2131296459;
 			
-			// aapt resource value: 0x7f0a00cc
-			public const int lb_details_v2_logo_margin_start = 2131361996;
+			// aapt resource value: 0x7f0900cc
+			public const int lb_details_v2_logo_margin_start = 2131296460;
 			
-			// aapt resource value: 0x7f0a00cd
-			public const int lb_details_v2_logo_max_height = 2131361997;
+			// aapt resource value: 0x7f0900cd
+			public const int lb_details_v2_logo_max_height = 2131296461;
 			
-			// aapt resource value: 0x7f0a00ce
-			public const int lb_details_v2_logo_max_width = 2131361998;
+			// aapt resource value: 0x7f0900ce
+			public const int lb_details_v2_logo_max_width = 2131296462;
 			
-			// aapt resource value: 0x7f0a00cf
-			public const int lb_error_image_max_height = 2131361999;
+			// aapt resource value: 0x7f0900cf
+			public const int lb_error_image_max_height = 2131296463;
 			
-			// aapt resource value: 0x7f0a00d0
-			public const int lb_error_message_max_width = 2131362000;
+			// aapt resource value: 0x7f0900d0
+			public const int lb_error_message_max_width = 2131296464;
 			
-			// aapt resource value: 0x7f0a00d1
-			public const int lb_error_message_text_size = 2131362001;
+			// aapt resource value: 0x7f0900d1
+			public const int lb_error_message_text_size = 2131296465;
 			
-			// aapt resource value: 0x7f0a00d2
-			public const int lb_error_under_image_baseline_margin = 2131362002;
+			// aapt resource value: 0x7f0900d2
+			public const int lb_error_under_image_baseline_margin = 2131296466;
 			
-			// aapt resource value: 0x7f0a00d3
-			public const int lb_error_under_message_baseline_margin = 2131362003;
+			// aapt resource value: 0x7f0900d3
+			public const int lb_error_under_message_baseline_margin = 2131296467;
 			
-			// aapt resource value: 0x7f0a00d4
-			public const int lb_guidedactions_elevation = 2131362004;
+			// aapt resource value: 0x7f0900d4
+			public const int lb_guidedactions_elevation = 2131296468;
 			
-			// aapt resource value: 0x7f0a00d5
-			public const int lb_guidedactions_item_bottom_padding = 2131362005;
+			// aapt resource value: 0x7f0900d5
+			public const int lb_guidedactions_item_bottom_padding = 2131296469;
 			
-			// aapt resource value: 0x7f0a00d6
-			public const int lb_guidedactions_item_checkmark_diameter = 2131362006;
+			// aapt resource value: 0x7f0900d6
+			public const int lb_guidedactions_item_checkmark_diameter = 2131296470;
 			
-			// aapt resource value: 0x7f0a00d7
-			public const int lb_guidedactions_item_delimiter_padding = 2131362007;
+			// aapt resource value: 0x7f0900d7
+			public const int lb_guidedactions_item_delimiter_padding = 2131296471;
 			
-			// aapt resource value: 0x7f0a00d8
-			public const int lb_guidedactions_item_description_font_size = 2131362008;
+			// aapt resource value: 0x7f0900d8
+			public const int lb_guidedactions_item_description_font_size = 2131296472;
 			
-			// aapt resource value: 0x7f0a00d9
-			public const int lb_guidedactions_item_end_padding = 2131362009;
+			// aapt resource value: 0x7f0900d9
+			public const int lb_guidedactions_item_end_padding = 2131296473;
 			
-			// aapt resource value: 0x7f0a00da
-			public const int lb_guidedactions_item_icon_height = 2131362010;
+			// aapt resource value: 0x7f0900da
+			public const int lb_guidedactions_item_icon_height = 2131296474;
 			
-			// aapt resource value: 0x7f0a00db
-			public const int lb_guidedactions_item_icon_width = 2131362011;
+			// aapt resource value: 0x7f0900db
+			public const int lb_guidedactions_item_icon_width = 2131296475;
 			
-			// aapt resource value: 0x7f0a00dc
-			public const int lb_guidedactions_item_space_between_title_and_description = 2131362012;
+			// aapt resource value: 0x7f0900dc
+			public const int lb_guidedactions_item_space_between_title_and_description = 2131296476;
 			
-			// aapt resource value: 0x7f0a00dd
-			public const int lb_guidedactions_item_start_padding = 2131362013;
+			// aapt resource value: 0x7f0900dd
+			public const int lb_guidedactions_item_start_padding = 2131296477;
 			
-			// aapt resource value: 0x7f0a00de
-			public const int lb_guidedactions_item_text_width = 2131362014;
+			// aapt resource value: 0x7f0900de
+			public const int lb_guidedactions_item_text_width = 2131296478;
 			
-			// aapt resource value: 0x7f0a00df
-			public const int lb_guidedactions_item_text_width_no_icon = 2131362015;
+			// aapt resource value: 0x7f0900df
+			public const int lb_guidedactions_item_text_width_no_icon = 2131296479;
 			
-			// aapt resource value: 0x7f0a00e0
-			public const int lb_guidedactions_item_title_font_size = 2131362016;
+			// aapt resource value: 0x7f0900e0
+			public const int lb_guidedactions_item_title_font_size = 2131296480;
 			
-			// aapt resource value: 0x7f0a00e1
-			public const int lb_guidedactions_item_top_padding = 2131362017;
+			// aapt resource value: 0x7f0900e1
+			public const int lb_guidedactions_item_top_padding = 2131296481;
 			
-			// aapt resource value: 0x7f0a00e2
-			public const int lb_guidedactions_list_padding_end = 2131362018;
+			// aapt resource value: 0x7f0900e2
+			public const int lb_guidedactions_list_padding_end = 2131296482;
 			
-			// aapt resource value: 0x7f0a00e3
-			public const int lb_guidedactions_list_padding_start = 2131362019;
+			// aapt resource value: 0x7f0900e3
+			public const int lb_guidedactions_list_padding_start = 2131296483;
 			
-			// aapt resource value: 0x7f0a00e4
-			public const int lb_guidedactions_list_vertical_spacing = 2131362020;
+			// aapt resource value: 0x7f0900e4
+			public const int lb_guidedactions_list_vertical_spacing = 2131296484;
 			
-			// aapt resource value: 0x7f0a00e5
-			public const int lb_guidedactions_section_shadow_width = 2131362021;
+			// aapt resource value: 0x7f0900e5
+			public const int lb_guidedactions_section_shadow_width = 2131296485;
 			
-			// aapt resource value: 0x7f0a00e6
-			public const int lb_guidedactions_sublist_bottom_margin = 2131362022;
+			// aapt resource value: 0x7f0900e6
+			public const int lb_guidedactions_sublist_bottom_margin = 2131296486;
 			
-			// aapt resource value: 0x7f0a00e7
-			public const int lb_guidedactions_sublist_padding_bottom = 2131362023;
+			// aapt resource value: 0x7f0900e7
+			public const int lb_guidedactions_sublist_padding_bottom = 2131296487;
 			
-			// aapt resource value: 0x7f0a00e8
-			public const int lb_guidedactions_sublist_padding_top = 2131362024;
+			// aapt resource value: 0x7f0900e8
+			public const int lb_guidedactions_sublist_padding_top = 2131296488;
 			
-			// aapt resource value: 0x7f0a00e9
-			public const int lb_guidedactions_vertical_padding = 2131362025;
+			// aapt resource value: 0x7f0900e9
+			public const int lb_guidedactions_vertical_padding = 2131296489;
 			
-			// aapt resource value: 0x7f0a00ea
-			public const int lb_guidedstep_slide_ime_distance = 2131362026;
+			// aapt resource value: 0x7f0900ea
+			public const int lb_guidedstep_slide_ime_distance = 2131296490;
 			
-			// aapt resource value: 0x7f0a00eb
-			public const int lb_list_row_height = 2131362027;
+			// aapt resource value: 0x7f0900eb
+			public const int lb_list_row_height = 2131296491;
 			
-			// aapt resource value: 0x7f0a00ec
-			public const int lb_material_shadow_details_z = 2131362028;
+			// aapt resource value: 0x7f0900ec
+			public const int lb_material_shadow_details_z = 2131296492;
 			
-			// aapt resource value: 0x7f0a00ed
-			public const int lb_material_shadow_focused_z = 2131362029;
+			// aapt resource value: 0x7f0900ed
+			public const int lb_material_shadow_focused_z = 2131296493;
 			
-			// aapt resource value: 0x7f0a00ee
-			public const int lb_material_shadow_normal_z = 2131362030;
+			// aapt resource value: 0x7f0900ee
+			public const int lb_material_shadow_normal_z = 2131296494;
 			
-			// aapt resource value: 0x7f0a00ef
-			public const int lb_onboarding_content_margin_bottom = 2131362031;
+			// aapt resource value: 0x7f0900ef
+			public const int lb_onboarding_content_margin_bottom = 2131296495;
 			
-			// aapt resource value: 0x7f0a00f0
-			public const int lb_onboarding_content_margin_top = 2131362032;
+			// aapt resource value: 0x7f0900f0
+			public const int lb_onboarding_content_margin_top = 2131296496;
 			
-			// aapt resource value: 0x7f0a00f1
-			public const int lb_onboarding_content_width = 2131362033;
+			// aapt resource value: 0x7f0900f1
+			public const int lb_onboarding_content_width = 2131296497;
 			
-			// aapt resource value: 0x7f0a00f2
-			public const int lb_onboarding_header_height = 2131362034;
+			// aapt resource value: 0x7f0900f2
+			public const int lb_onboarding_header_height = 2131296498;
 			
-			// aapt resource value: 0x7f0a00f3
-			public const int lb_onboarding_header_margin_top = 2131362035;
+			// aapt resource value: 0x7f0900f3
+			public const int lb_onboarding_header_margin_top = 2131296499;
 			
-			// aapt resource value: 0x7f0a00f4
-			public const int lb_onboarding_navigation_height = 2131362036;
+			// aapt resource value: 0x7f0900f4
+			public const int lb_onboarding_navigation_height = 2131296500;
 			
-			// aapt resource value: 0x7f0a00f5
-			public const int lb_onboarding_start_button_height = 2131362037;
+			// aapt resource value: 0x7f0900f5
+			public const int lb_onboarding_start_button_height = 2131296501;
 			
-			// aapt resource value: 0x7f0a00f6
-			public const int lb_onboarding_start_button_margin_bottom = 2131362038;
+			// aapt resource value: 0x7f0900f6
+			public const int lb_onboarding_start_button_margin_bottom = 2131296502;
 			
-			// aapt resource value: 0x7f0a006a
-			public const int lb_onboarding_start_button_translation_offset = 2131361898;
+			// aapt resource value: 0x7f09006a
+			public const int lb_onboarding_start_button_translation_offset = 2131296362;
 			
-			// aapt resource value: 0x7f0a00f7
-			public const int lb_page_indicator_arrow_gap = 2131362039;
+			// aapt resource value: 0x7f0900f7
+			public const int lb_page_indicator_arrow_gap = 2131296503;
 			
-			// aapt resource value: 0x7f0a00f8
-			public const int lb_page_indicator_arrow_radius = 2131362040;
+			// aapt resource value: 0x7f0900f8
+			public const int lb_page_indicator_arrow_radius = 2131296504;
 			
-			// aapt resource value: 0x7f0a00f9
-			public const int lb_page_indicator_arrow_shadow_offset = 2131362041;
+			// aapt resource value: 0x7f0900f9
+			public const int lb_page_indicator_arrow_shadow_offset = 2131296505;
 			
-			// aapt resource value: 0x7f0a00fa
-			public const int lb_page_indicator_arrow_shadow_radius = 2131362042;
+			// aapt resource value: 0x7f0900fa
+			public const int lb_page_indicator_arrow_shadow_radius = 2131296506;
 			
-			// aapt resource value: 0x7f0a00fb
-			public const int lb_page_indicator_dot_gap = 2131362043;
+			// aapt resource value: 0x7f0900fb
+			public const int lb_page_indicator_dot_gap = 2131296507;
 			
-			// aapt resource value: 0x7f0a00fc
-			public const int lb_page_indicator_dot_radius = 2131362044;
+			// aapt resource value: 0x7f0900fc
+			public const int lb_page_indicator_dot_radius = 2131296508;
 			
-			// aapt resource value: 0x7f0a00fd
-			public const int lb_playback_controls_card_height = 2131362045;
+			// aapt resource value: 0x7f0900fd
+			public const int lb_playback_controls_card_height = 2131296509;
 			
-			// aapt resource value: 0x7f0a00fe
-			public const int lb_playback_controls_child_margin_bigger = 2131362046;
+			// aapt resource value: 0x7f0900fe
+			public const int lb_playback_controls_child_margin_bigger = 2131296510;
 			
-			// aapt resource value: 0x7f0a00ff
-			public const int lb_playback_controls_child_margin_biggest = 2131362047;
+			// aapt resource value: 0x7f0900ff
+			public const int lb_playback_controls_child_margin_biggest = 2131296511;
 			
-			// aapt resource value: 0x7f0a0100
-			public const int lb_playback_controls_child_margin_default = 2131362048;
+			// aapt resource value: 0x7f090100
+			public const int lb_playback_controls_child_margin_default = 2131296512;
 			
-			// aapt resource value: 0x7f0a0101
-			public const int lb_playback_controls_margin_bottom = 2131362049;
+			// aapt resource value: 0x7f090101
+			public const int lb_playback_controls_margin_bottom = 2131296513;
 			
-			// aapt resource value: 0x7f0a0102
-			public const int lb_playback_controls_margin_end = 2131362050;
+			// aapt resource value: 0x7f090102
+			public const int lb_playback_controls_margin_end = 2131296514;
 			
-			// aapt resource value: 0x7f0a0103
-			public const int lb_playback_controls_margin_start = 2131362051;
+			// aapt resource value: 0x7f090103
+			public const int lb_playback_controls_margin_start = 2131296515;
 			
-			// aapt resource value: 0x7f0a0104
-			public const int lb_playback_controls_padding_bottom = 2131362052;
+			// aapt resource value: 0x7f090104
+			public const int lb_playback_controls_padding_bottom = 2131296516;
 			
-			// aapt resource value: 0x7f0a0105
-			public const int lb_playback_controls_time_text_size = 2131362053;
+			// aapt resource value: 0x7f090105
+			public const int lb_playback_controls_time_text_size = 2131296517;
 			
-			// aapt resource value: 0x7f0a0106
-			public const int lb_playback_controls_z = 2131362054;
+			// aapt resource value: 0x7f090106
+			public const int lb_playback_controls_z = 2131296518;
 			
-			// aapt resource value: 0x7f0a0107
-			public const int lb_playback_current_time_margin_start = 2131362055;
+			// aapt resource value: 0x7f090107
+			public const int lb_playback_current_time_margin_start = 2131296519;
 			
-			// aapt resource value: 0x7f0a0108
-			public const int lb_playback_description_margin_end = 2131362056;
+			// aapt resource value: 0x7f090108
+			public const int lb_playback_description_margin_end = 2131296520;
 			
-			// aapt resource value: 0x7f0a0109
-			public const int lb_playback_description_margin_start = 2131362057;
+			// aapt resource value: 0x7f090109
+			public const int lb_playback_description_margin_start = 2131296521;
 			
-			// aapt resource value: 0x7f0a010a
-			public const int lb_playback_description_margin_top = 2131362058;
+			// aapt resource value: 0x7f09010a
+			public const int lb_playback_description_margin_top = 2131296522;
 			
-			// aapt resource value: 0x7f0a010b
-			public const int lb_playback_major_fade_translate_y = 2131362059;
+			// aapt resource value: 0x7f09010b
+			public const int lb_playback_major_fade_translate_y = 2131296523;
 			
-			// aapt resource value: 0x7f0a010c
-			public const int lb_playback_media_item_radio_icon_size = 2131362060;
+			// aapt resource value: 0x7f09010c
+			public const int lb_playback_media_item_radio_icon_size = 2131296524;
 			
-			// aapt resource value: 0x7f0a010d
-			public const int lb_playback_media_radio_width_with_padding = 2131362061;
+			// aapt resource value: 0x7f09010d
+			public const int lb_playback_media_radio_width_with_padding = 2131296525;
 			
-			// aapt resource value: 0x7f0a010e
-			public const int lb_playback_media_row_details_selector_width = 2131362062;
+			// aapt resource value: 0x7f09010e
+			public const int lb_playback_media_row_details_selector_width = 2131296526;
 			
-			// aapt resource value: 0x7f0a010f
-			public const int lb_playback_media_row_horizontal_padding = 2131362063;
+			// aapt resource value: 0x7f09010f
+			public const int lb_playback_media_row_horizontal_padding = 2131296527;
 			
-			// aapt resource value: 0x7f0a0110
-			public const int lb_playback_media_row_radio_selector_width = 2131362064;
+			// aapt resource value: 0x7f090110
+			public const int lb_playback_media_row_radio_selector_width = 2131296528;
 			
-			// aapt resource value: 0x7f0a0111
-			public const int lb_playback_media_row_selector_round_rect_radius = 2131362065;
+			// aapt resource value: 0x7f090111
+			public const int lb_playback_media_row_selector_round_rect_radius = 2131296529;
 			
-			// aapt resource value: 0x7f0a0112
-			public const int lb_playback_media_row_separator_height = 2131362066;
+			// aapt resource value: 0x7f090112
+			public const int lb_playback_media_row_separator_height = 2131296530;
 			
-			// aapt resource value: 0x7f0a0113
-			public const int lb_playback_minor_fade_translate_y = 2131362067;
+			// aapt resource value: 0x7f090113
+			public const int lb_playback_minor_fade_translate_y = 2131296531;
 			
-			// aapt resource value: 0x7f0a0114
-			public const int lb_playback_now_playing_bar_height = 2131362068;
+			// aapt resource value: 0x7f090114
+			public const int lb_playback_now_playing_bar_height = 2131296532;
 			
-			// aapt resource value: 0x7f0a0115
-			public const int lb_playback_now_playing_bar_left_margin = 2131362069;
+			// aapt resource value: 0x7f090115
+			public const int lb_playback_now_playing_bar_left_margin = 2131296533;
 			
-			// aapt resource value: 0x7f0a0116
-			public const int lb_playback_now_playing_bar_margin = 2131362070;
+			// aapt resource value: 0x7f090116
+			public const int lb_playback_now_playing_bar_margin = 2131296534;
 			
-			// aapt resource value: 0x7f0a0117
-			public const int lb_playback_now_playing_bar_top_margin = 2131362071;
+			// aapt resource value: 0x7f090117
+			public const int lb_playback_now_playing_bar_top_margin = 2131296535;
 			
-			// aapt resource value: 0x7f0a0118
-			public const int lb_playback_now_playing_bar_width = 2131362072;
+			// aapt resource value: 0x7f090118
+			public const int lb_playback_now_playing_bar_width = 2131296536;
 			
-			// aapt resource value: 0x7f0a0119
-			public const int lb_playback_now_playing_view_size = 2131362073;
+			// aapt resource value: 0x7f090119
+			public const int lb_playback_now_playing_view_size = 2131296537;
 			
-			// aapt resource value: 0x7f0a011a
-			public const int lb_playback_other_rows_center_to_bottom = 2131362074;
+			// aapt resource value: 0x7f09011a
+			public const int lb_playback_other_rows_center_to_bottom = 2131296538;
 			
-			// aapt resource value: 0x7f0a011b
-			public const int lb_playback_play_icon_size = 2131362075;
+			// aapt resource value: 0x7f09011b
+			public const int lb_playback_play_icon_size = 2131296539;
 			
-			// aapt resource value: 0x7f0a011c
-			public const int lb_playback_time_padding_top = 2131362076;
+			// aapt resource value: 0x7f09011c
+			public const int lb_playback_time_padding_top = 2131296540;
 			
-			// aapt resource value: 0x7f0a011d
-			public const int lb_playback_total_time_margin_end = 2131362077;
+			// aapt resource value: 0x7f09011d
+			public const int lb_playback_total_time_margin_end = 2131296541;
 			
-			// aapt resource value: 0x7f0a011e
-			public const int lb_playback_transport_control_info_margin_bottom = 2131362078;
+			// aapt resource value: 0x7f09011e
+			public const int lb_playback_transport_control_info_margin_bottom = 2131296542;
 			
-			// aapt resource value: 0x7f0a011f
-			public const int lb_playback_transport_control_row_padding_bottom = 2131362079;
+			// aapt resource value: 0x7f09011f
+			public const int lb_playback_transport_control_row_padding_bottom = 2131296543;
 			
-			// aapt resource value: 0x7f0a0120
-			public const int lb_playback_transport_controlbar_margin_start = 2131362080;
+			// aapt resource value: 0x7f090120
+			public const int lb_playback_transport_controlbar_margin_start = 2131296544;
 			
-			// aapt resource value: 0x7f0a0121
-			public const int lb_playback_transport_hero_thumbs_height = 2131362081;
+			// aapt resource value: 0x7f090121
+			public const int lb_playback_transport_hero_thumbs_height = 2131296545;
 			
-			// aapt resource value: 0x7f0a0122
-			public const int lb_playback_transport_hero_thumbs_width = 2131362082;
+			// aapt resource value: 0x7f090122
+			public const int lb_playback_transport_hero_thumbs_width = 2131296546;
 			
-			// aapt resource value: 0x7f0a0123
-			public const int lb_playback_transport_image_height = 2131362083;
+			// aapt resource value: 0x7f090123
+			public const int lb_playback_transport_image_height = 2131296547;
 			
-			// aapt resource value: 0x7f0a0124
-			public const int lb_playback_transport_image_margin_end = 2131362084;
+			// aapt resource value: 0x7f090124
+			public const int lb_playback_transport_image_margin_end = 2131296548;
 			
-			// aapt resource value: 0x7f0a0125
-			public const int lb_playback_transport_progressbar_active_bar_height = 2131362085;
+			// aapt resource value: 0x7f090125
+			public const int lb_playback_transport_progressbar_active_bar_height = 2131296549;
 			
-			// aapt resource value: 0x7f0a0126
-			public const int lb_playback_transport_progressbar_active_radius = 2131362086;
+			// aapt resource value: 0x7f090126
+			public const int lb_playback_transport_progressbar_active_radius = 2131296550;
 			
-			// aapt resource value: 0x7f0a0127
-			public const int lb_playback_transport_progressbar_bar_height = 2131362087;
+			// aapt resource value: 0x7f090127
+			public const int lb_playback_transport_progressbar_bar_height = 2131296551;
 			
-			// aapt resource value: 0x7f0a0128
-			public const int lb_playback_transport_progressbar_height = 2131362088;
+			// aapt resource value: 0x7f090128
+			public const int lb_playback_transport_progressbar_height = 2131296552;
 			
-			// aapt resource value: 0x7f0a0129
-			public const int lb_playback_transport_thumbs_bottom_margin = 2131362089;
+			// aapt resource value: 0x7f090129
+			public const int lb_playback_transport_thumbs_bottom_margin = 2131296553;
 			
-			// aapt resource value: 0x7f0a012a
-			public const int lb_playback_transport_thumbs_height = 2131362090;
+			// aapt resource value: 0x7f09012a
+			public const int lb_playback_transport_thumbs_height = 2131296554;
 			
-			// aapt resource value: 0x7f0a012b
-			public const int lb_playback_transport_thumbs_margin = 2131362091;
+			// aapt resource value: 0x7f09012b
+			public const int lb_playback_transport_thumbs_margin = 2131296555;
 			
-			// aapt resource value: 0x7f0a012c
-			public const int lb_playback_transport_thumbs_width = 2131362092;
+			// aapt resource value: 0x7f09012c
+			public const int lb_playback_transport_thumbs_width = 2131296556;
 			
-			// aapt resource value: 0x7f0a012d
-			public const int lb_playback_transport_time_margin = 2131362093;
+			// aapt resource value: 0x7f09012d
+			public const int lb_playback_transport_time_margin = 2131296557;
 			
-			// aapt resource value: 0x7f0a012e
-			public const int lb_playback_transport_time_margin_top = 2131362094;
+			// aapt resource value: 0x7f09012e
+			public const int lb_playback_transport_time_margin_top = 2131296558;
 			
-			// aapt resource value: 0x7f0a012f
-			public const int lb_rounded_rect_corner_radius = 2131362095;
+			// aapt resource value: 0x7f09012f
+			public const int lb_rounded_rect_corner_radius = 2131296559;
 			
-			// aapt resource value: 0x7f0a0130
-			public const int lb_search_bar_edit_text_margin_start = 2131362096;
+			// aapt resource value: 0x7f090130
+			public const int lb_search_bar_edit_text_margin_start = 2131296560;
 			
-			// aapt resource value: 0x7f0a0131
-			public const int lb_search_bar_height = 2131362097;
+			// aapt resource value: 0x7f090131
+			public const int lb_search_bar_height = 2131296561;
 			
-			// aapt resource value: 0x7f0a0132
-			public const int lb_search_bar_hint_margin_start = 2131362098;
+			// aapt resource value: 0x7f090132
+			public const int lb_search_bar_hint_margin_start = 2131296562;
 			
-			// aapt resource value: 0x7f0a0133
-			public const int lb_search_bar_icon_height = 2131362099;
+			// aapt resource value: 0x7f090133
+			public const int lb_search_bar_icon_height = 2131296563;
 			
-			// aapt resource value: 0x7f0a0134
-			public const int lb_search_bar_icon_margin_start = 2131362100;
+			// aapt resource value: 0x7f090134
+			public const int lb_search_bar_icon_margin_start = 2131296564;
 			
-			// aapt resource value: 0x7f0a0135
-			public const int lb_search_bar_icon_width = 2131362101;
+			// aapt resource value: 0x7f090135
+			public const int lb_search_bar_icon_width = 2131296565;
 			
-			// aapt resource value: 0x7f0a0136
-			public const int lb_search_bar_inner_margin_bottom = 2131362102;
+			// aapt resource value: 0x7f090136
+			public const int lb_search_bar_inner_margin_bottom = 2131296566;
 			
-			// aapt resource value: 0x7f0a0137
-			public const int lb_search_bar_inner_margin_top = 2131362103;
+			// aapt resource value: 0x7f090137
+			public const int lb_search_bar_inner_margin_top = 2131296567;
 			
-			// aapt resource value: 0x7f0a0138
-			public const int lb_search_bar_items_height = 2131362104;
+			// aapt resource value: 0x7f090138
+			public const int lb_search_bar_items_height = 2131296568;
 			
-			// aapt resource value: 0x7f0a0139
-			public const int lb_search_bar_items_layout_margin_top = 2131362105;
+			// aapt resource value: 0x7f090139
+			public const int lb_search_bar_items_layout_margin_top = 2131296569;
 			
-			// aapt resource value: 0x7f0a013a
-			public const int lb_search_bar_items_margin_start = 2131362106;
+			// aapt resource value: 0x7f09013a
+			public const int lb_search_bar_items_margin_start = 2131296570;
 			
-			// aapt resource value: 0x7f0a013b
-			public const int lb_search_bar_items_width = 2131362107;
+			// aapt resource value: 0x7f09013b
+			public const int lb_search_bar_items_width = 2131296571;
 			
-			// aapt resource value: 0x7f0a013c
-			public const int lb_search_bar_padding_start = 2131362108;
+			// aapt resource value: 0x7f09013c
+			public const int lb_search_bar_padding_start = 2131296572;
 			
-			// aapt resource value: 0x7f0a013d
-			public const int lb_search_bar_padding_top = 2131362109;
+			// aapt resource value: 0x7f09013d
+			public const int lb_search_bar_padding_top = 2131296573;
 			
-			// aapt resource value: 0x7f0a013e
-			public const int lb_search_bar_speech_orb_margin_start = 2131362110;
+			// aapt resource value: 0x7f09013e
+			public const int lb_search_bar_speech_orb_margin_start = 2131296574;
 			
-			// aapt resource value: 0x7f0a013f
-			public const int lb_search_bar_speech_orb_size = 2131362111;
+			// aapt resource value: 0x7f09013f
+			public const int lb_search_bar_speech_orb_size = 2131296575;
 			
-			// aapt resource value: 0x7f0a0140
-			public const int lb_search_bar_text_size = 2131362112;
+			// aapt resource value: 0x7f090140
+			public const int lb_search_bar_text_size = 2131296576;
 			
-			// aapt resource value: 0x7f0a0141
-			public const int lb_search_bar_unfocused_text_size = 2131362113;
+			// aapt resource value: 0x7f090141
+			public const int lb_search_bar_unfocused_text_size = 2131296577;
 			
-			// aapt resource value: 0x7f0a0142
-			public const int lb_search_browse_row_padding_start = 2131362114;
+			// aapt resource value: 0x7f090142
+			public const int lb_search_browse_row_padding_start = 2131296578;
 			
-			// aapt resource value: 0x7f0a0143
-			public const int lb_search_browse_rows_align_top = 2131362115;
+			// aapt resource value: 0x7f090143
+			public const int lb_search_browse_rows_align_top = 2131296579;
 			
-			// aapt resource value: 0x7f0a0144
-			public const int lb_search_orb_focused_z = 2131362116;
+			// aapt resource value: 0x7f090144
+			public const int lb_search_orb_focused_z = 2131296580;
 			
-			// aapt resource value: 0x7f0a0145
-			public const int lb_search_orb_margin_bottom = 2131362117;
+			// aapt resource value: 0x7f090145
+			public const int lb_search_orb_margin_bottom = 2131296581;
 			
-			// aapt resource value: 0x7f0a0146
-			public const int lb_search_orb_margin_end = 2131362118;
+			// aapt resource value: 0x7f090146
+			public const int lb_search_orb_margin_end = 2131296582;
 			
-			// aapt resource value: 0x7f0a0147
-			public const int lb_search_orb_margin_start = 2131362119;
+			// aapt resource value: 0x7f090147
+			public const int lb_search_orb_margin_start = 2131296583;
 			
-			// aapt resource value: 0x7f0a0148
-			public const int lb_search_orb_margin_top = 2131362120;
+			// aapt resource value: 0x7f090148
+			public const int lb_search_orb_margin_top = 2131296584;
 			
-			// aapt resource value: 0x7f0a0149
-			public const int lb_search_orb_size = 2131362121;
+			// aapt resource value: 0x7f090149
+			public const int lb_search_orb_size = 2131296585;
 			
-			// aapt resource value: 0x7f0a014a
-			public const int lb_search_orb_unfocused_z = 2131362122;
+			// aapt resource value: 0x7f09014a
+			public const int lb_search_orb_unfocused_z = 2131296586;
 			
-			// aapt resource value: 0x7f0a014b
-			public const int lb_vertical_grid_padding_bottom = 2131362123;
+			// aapt resource value: 0x7f09014b
+			public const int lb_vertical_grid_padding_bottom = 2131296587;
 			
-			// aapt resource value: 0x7f0a0006
-			public const int mr_controller_volume_group_list_item_height = 2131361798;
+			// aapt resource value: 0x7f090006
+			public const int mr_controller_volume_group_list_item_height = 2131296262;
 			
-			// aapt resource value: 0x7f0a0007
-			public const int mr_controller_volume_group_list_item_icon_size = 2131361799;
+			// aapt resource value: 0x7f090007
+			public const int mr_controller_volume_group_list_item_icon_size = 2131296263;
 			
-			// aapt resource value: 0x7f0a0008
-			public const int mr_controller_volume_group_list_max_height = 2131361800;
+			// aapt resource value: 0x7f090008
+			public const int mr_controller_volume_group_list_max_height = 2131296264;
 			
-			// aapt resource value: 0x7f0a000b
-			public const int mr_controller_volume_group_list_padding_top = 2131361803;
+			// aapt resource value: 0x7f09000b
+			public const int mr_controller_volume_group_list_padding_top = 2131296267;
 			
-			// aapt resource value: 0x7f0a0009
-			public const int mr_dialog_fixed_width_major = 2131361801;
+			// aapt resource value: 0x7f090009
+			public const int mr_dialog_fixed_width_major = 2131296265;
 			
-			// aapt resource value: 0x7f0a000a
-			public const int mr_dialog_fixed_width_minor = 2131361802;
+			// aapt resource value: 0x7f09000a
+			public const int mr_dialog_fixed_width_minor = 2131296266;
 			
-			// aapt resource value: 0x7f0a017f
-			public const int notification_action_icon_size = 2131362175;
+			// aapt resource value: 0x7f09017f
+			public const int notification_action_icon_size = 2131296639;
 			
-			// aapt resource value: 0x7f0a0180
-			public const int notification_action_text_size = 2131362176;
+			// aapt resource value: 0x7f090180
+			public const int notification_action_text_size = 2131296640;
 			
-			// aapt resource value: 0x7f0a0181
-			public const int notification_big_circle_margin = 2131362177;
+			// aapt resource value: 0x7f090181
+			public const int notification_big_circle_margin = 2131296641;
 			
-			// aapt resource value: 0x7f0a0177
-			public const int notification_content_margin_start = 2131362167;
+			// aapt resource value: 0x7f090177
+			public const int notification_content_margin_start = 2131296631;
 			
-			// aapt resource value: 0x7f0a0182
-			public const int notification_large_icon_height = 2131362178;
+			// aapt resource value: 0x7f090182
+			public const int notification_large_icon_height = 2131296642;
 			
-			// aapt resource value: 0x7f0a0183
-			public const int notification_large_icon_width = 2131362179;
+			// aapt resource value: 0x7f090183
+			public const int notification_large_icon_width = 2131296643;
 			
-			// aapt resource value: 0x7f0a0178
-			public const int notification_main_column_padding_top = 2131362168;
+			// aapt resource value: 0x7f090178
+			public const int notification_main_column_padding_top = 2131296632;
 			
-			// aapt resource value: 0x7f0a0179
-			public const int notification_media_narrow_margin = 2131362169;
+			// aapt resource value: 0x7f090179
+			public const int notification_media_narrow_margin = 2131296633;
 			
-			// aapt resource value: 0x7f0a0184
-			public const int notification_right_icon_size = 2131362180;
+			// aapt resource value: 0x7f090184
+			public const int notification_right_icon_size = 2131296644;
 			
-			// aapt resource value: 0x7f0a0176
-			public const int notification_right_side_padding_top = 2131362166;
+			// aapt resource value: 0x7f090176
+			public const int notification_right_side_padding_top = 2131296630;
 			
-			// aapt resource value: 0x7f0a0185
-			public const int notification_small_icon_background_padding = 2131362181;
+			// aapt resource value: 0x7f090185
+			public const int notification_small_icon_background_padding = 2131296645;
 			
-			// aapt resource value: 0x7f0a0186
-			public const int notification_small_icon_size_as_large = 2131362182;
+			// aapt resource value: 0x7f090186
+			public const int notification_small_icon_size_as_large = 2131296646;
 			
-			// aapt resource value: 0x7f0a0187
-			public const int notification_subtext_size = 2131362183;
+			// aapt resource value: 0x7f090187
+			public const int notification_subtext_size = 2131296647;
 			
-			// aapt resource value: 0x7f0a0188
-			public const int notification_top_pad = 2131362184;
+			// aapt resource value: 0x7f090188
+			public const int notification_top_pad = 2131296648;
 			
-			// aapt resource value: 0x7f0a0189
-			public const int notification_top_pad_large_text = 2131362185;
+			// aapt resource value: 0x7f090189
+			public const int notification_top_pad_large_text = 2131296649;
 			
-			// aapt resource value: 0x7f0a014c
-			public const int picker_column_horizontal_padding = 2131362124;
+			// aapt resource value: 0x7f09014c
+			public const int picker_column_horizontal_padding = 2131296588;
 			
-			// aapt resource value: 0x7f0a014d
-			public const int picker_item_height = 2131362125;
+			// aapt resource value: 0x7f09014d
+			public const int picker_item_height = 2131296589;
 			
-			// aapt resource value: 0x7f0a014e
-			public const int picker_item_spacing = 2131362126;
+			// aapt resource value: 0x7f09014e
+			public const int picker_item_spacing = 2131296590;
 			
-			// aapt resource value: 0x7f0a014f
-			public const int picker_separator_horizontal_padding = 2131362127;
+			// aapt resource value: 0x7f09014f
+			public const int picker_separator_horizontal_padding = 2131296591;
 			
-			// aapt resource value: 0x7f0a0062
-			public const int tooltip_corner_radius = 2131361890;
+			// aapt resource value: 0x7f090062
+			public const int tooltip_corner_radius = 2131296354;
 			
-			// aapt resource value: 0x7f0a0063
-			public const int tooltip_horizontal_padding = 2131361891;
+			// aapt resource value: 0x7f090063
+			public const int tooltip_horizontal_padding = 2131296355;
 			
-			// aapt resource value: 0x7f0a0064
-			public const int tooltip_margin = 2131361892;
+			// aapt resource value: 0x7f090064
+			public const int tooltip_margin = 2131296356;
 			
-			// aapt resource value: 0x7f0a0065
-			public const int tooltip_precise_anchor_extra_offset = 2131361893;
+			// aapt resource value: 0x7f090065
+			public const int tooltip_precise_anchor_extra_offset = 2131296357;
 			
-			// aapt resource value: 0x7f0a0066
-			public const int tooltip_precise_anchor_threshold = 2131361894;
+			// aapt resource value: 0x7f090066
+			public const int tooltip_precise_anchor_threshold = 2131296358;
 			
-			// aapt resource value: 0x7f0a0067
-			public const int tooltip_vertical_padding = 2131361895;
+			// aapt resource value: 0x7f090067
+			public const int tooltip_vertical_padding = 2131296359;
 			
-			// aapt resource value: 0x7f0a0068
-			public const int tooltip_y_offset_non_touch = 2131361896;
+			// aapt resource value: 0x7f090068
+			public const int tooltip_y_offset_non_touch = 2131296360;
 			
-			// aapt resource value: 0x7f0a0069
-			public const int tooltip_y_offset_touch = 2131361897;
+			// aapt resource value: 0x7f090069
+			public const int tooltip_y_offset_touch = 2131296361;
 			
 			static Dimension()
 			{
@@ -5235,26 +3797,26 @@ namespace Facile.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
+			// aapt resource value: 0x7f02018f
+			public const int avd_hide_password_1 = 2130837903;
+			
+			// aapt resource value: 0x7f020190
+			public const int avd_hide_password_2 = 2130837904;
+			
 			// aapt resource value: 0x7f020191
-			public const int avd_hide_password_1 = 2130837905;
-			
-			// aapt resource value: 0x7f020192
-			public const int avd_hide_password_2 = 2130837906;
-			
-			// aapt resource value: 0x7f020193
-			public const int avd_hide_password_3 = 2130837907;
+			public const int avd_hide_password_3 = 2130837905;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
+			// aapt resource value: 0x7f020192
+			public const int avd_show_password_1 = 2130837906;
+			
+			// aapt resource value: 0x7f020193
+			public const int avd_show_password_2 = 2130837907;
+			
 			// aapt resource value: 0x7f020194
-			public const int avd_show_password_1 = 2130837908;
-			
-			// aapt resource value: 0x7f020195
-			public const int avd_show_password_2 = 2130837909;
-			
-			// aapt resource value: 0x7f020196
-			public const int avd_show_password_3 = 2130837910;
+			public const int avd_show_password_3 = 2130837908;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
@@ -5944,265 +4506,259 @@ namespace Facile.Droid
 			public const int icon = 2130837817;
 			
 			// aapt resource value: 0x7f02013a
-			public const int inputlayout_togglecollapseicon = 2130837818;
+			public const int lb_action_bg = 2130837818;
 			
 			// aapt resource value: 0x7f02013b
-			public const int inputlayout_togglevisibleicon = 2130837819;
+			public const int lb_action_bg_focused = 2130837819;
 			
 			// aapt resource value: 0x7f02013c
-			public const int lb_action_bg = 2130837820;
+			public const int lb_background = 2130837820;
 			
 			// aapt resource value: 0x7f02013d
-			public const int lb_action_bg_focused = 2130837821;
+			public const int lb_card_foreground = 2130837821;
 			
 			// aapt resource value: 0x7f02013e
-			public const int lb_background = 2130837822;
+			public const int lb_card_shadow_focused = 2130837822;
 			
 			// aapt resource value: 0x7f02013f
-			public const int lb_card_foreground = 2130837823;
+			public const int lb_card_shadow_normal = 2130837823;
 			
 			// aapt resource value: 0x7f020140
-			public const int lb_card_shadow_focused = 2130837824;
+			public const int lb_control_button_primary = 2130837824;
 			
 			// aapt resource value: 0x7f020141
-			public const int lb_card_shadow_normal = 2130837825;
+			public const int lb_control_button_secondary = 2130837825;
 			
 			// aapt resource value: 0x7f020142
-			public const int lb_control_button_primary = 2130837826;
+			public const int lb_headers_right_fading = 2130837826;
 			
 			// aapt resource value: 0x7f020143
-			public const int lb_control_button_secondary = 2130837827;
+			public const int lb_ic_actions_right_arrow = 2130837827;
 			
 			// aapt resource value: 0x7f020144
-			public const int lb_headers_right_fading = 2130837828;
+			public const int lb_ic_cc = 2130837828;
 			
 			// aapt resource value: 0x7f020145
-			public const int lb_ic_actions_right_arrow = 2130837829;
+			public const int lb_ic_fast_forward = 2130837829;
 			
 			// aapt resource value: 0x7f020146
-			public const int lb_ic_cc = 2130837830;
+			public const int lb_ic_fast_rewind = 2130837830;
 			
 			// aapt resource value: 0x7f020147
-			public const int lb_ic_fast_forward = 2130837831;
+			public const int lb_ic_guidedactions_item_chevron = 2130837831;
 			
 			// aapt resource value: 0x7f020148
-			public const int lb_ic_fast_rewind = 2130837832;
+			public const int lb_ic_hq = 2130837832;
 			
 			// aapt resource value: 0x7f020149
-			public const int lb_ic_guidedactions_item_chevron = 2130837833;
+			public const int lb_ic_in_app_search = 2130837833;
 			
 			// aapt resource value: 0x7f02014a
-			public const int lb_ic_hq = 2130837834;
+			public const int lb_ic_loop = 2130837834;
 			
 			// aapt resource value: 0x7f02014b
-			public const int lb_ic_in_app_search = 2130837835;
+			public const int lb_ic_loop_one = 2130837835;
 			
 			// aapt resource value: 0x7f02014c
-			public const int lb_ic_loop = 2130837836;
+			public const int lb_ic_more = 2130837836;
 			
 			// aapt resource value: 0x7f02014d
-			public const int lb_ic_loop_one = 2130837837;
+			public const int lb_ic_nav_arrow = 2130837837;
 			
 			// aapt resource value: 0x7f02014e
-			public const int lb_ic_more = 2130837838;
+			public const int lb_ic_pause = 2130837838;
 			
 			// aapt resource value: 0x7f02014f
-			public const int lb_ic_nav_arrow = 2130837839;
+			public const int lb_ic_pip = 2130837839;
 			
 			// aapt resource value: 0x7f020150
-			public const int lb_ic_pause = 2130837840;
+			public const int lb_ic_play = 2130837840;
 			
 			// aapt resource value: 0x7f020151
-			public const int lb_ic_pip = 2130837841;
+			public const int lb_ic_play_fit = 2130837841;
 			
 			// aapt resource value: 0x7f020152
-			public const int lb_ic_play = 2130837842;
+			public const int lb_ic_playback_loop = 2130837842;
 			
 			// aapt resource value: 0x7f020153
-			public const int lb_ic_play_fit = 2130837843;
+			public const int lb_ic_replay = 2130837843;
 			
 			// aapt resource value: 0x7f020154
-			public const int lb_ic_playback_loop = 2130837844;
+			public const int lb_ic_sad_cloud = 2130837844;
 			
 			// aapt resource value: 0x7f020155
-			public const int lb_ic_replay = 2130837845;
+			public const int lb_ic_search_mic = 2130837845;
 			
 			// aapt resource value: 0x7f020156
-			public const int lb_ic_sad_cloud = 2130837846;
+			public const int lb_ic_search_mic_out = 2130837846;
 			
 			// aapt resource value: 0x7f020157
-			public const int lb_ic_search_mic = 2130837847;
+			public const int lb_ic_shuffle = 2130837847;
 			
 			// aapt resource value: 0x7f020158
-			public const int lb_ic_search_mic_out = 2130837848;
+			public const int lb_ic_skip_next = 2130837848;
 			
 			// aapt resource value: 0x7f020159
-			public const int lb_ic_shuffle = 2130837849;
+			public const int lb_ic_skip_previous = 2130837849;
 			
 			// aapt resource value: 0x7f02015a
-			public const int lb_ic_skip_next = 2130837850;
+			public const int lb_ic_stop = 2130837850;
 			
 			// aapt resource value: 0x7f02015b
-			public const int lb_ic_skip_previous = 2130837851;
+			public const int lb_ic_thumb_down = 2130837851;
 			
 			// aapt resource value: 0x7f02015c
-			public const int lb_ic_stop = 2130837852;
+			public const int lb_ic_thumb_down_outline = 2130837852;
 			
 			// aapt resource value: 0x7f02015d
-			public const int lb_ic_thumb_down = 2130837853;
+			public const int lb_ic_thumb_up = 2130837853;
 			
 			// aapt resource value: 0x7f02015e
-			public const int lb_ic_thumb_down_outline = 2130837854;
+			public const int lb_ic_thumb_up_outline = 2130837854;
 			
 			// aapt resource value: 0x7f02015f
-			public const int lb_ic_thumb_up = 2130837855;
+			public const int lb_in_app_search_bg = 2130837855;
 			
 			// aapt resource value: 0x7f020160
-			public const int lb_ic_thumb_up_outline = 2130837856;
+			public const int lb_in_app_search_shadow_focused = 2130837856;
 			
 			// aapt resource value: 0x7f020161
-			public const int lb_in_app_search_bg = 2130837857;
+			public const int lb_in_app_search_shadow_normal = 2130837857;
 			
 			// aapt resource value: 0x7f020162
-			public const int lb_in_app_search_shadow_focused = 2130837858;
+			public const int lb_onboarding_start_button_background = 2130837858;
 			
 			// aapt resource value: 0x7f020163
-			public const int lb_in_app_search_shadow_normal = 2130837859;
+			public const int lb_playback_now_playing_bar = 2130837859;
 			
 			// aapt resource value: 0x7f020164
-			public const int lb_onboarding_start_button_background = 2130837860;
+			public const int lb_playback_progress_bar = 2130837860;
 			
 			// aapt resource value: 0x7f020165
-			public const int lb_playback_now_playing_bar = 2130837861;
+			public const int lb_search_orb = 2130837861;
 			
 			// aapt resource value: 0x7f020166
-			public const int lb_playback_progress_bar = 2130837862;
+			public const int lb_selectable_item_rounded_rect = 2130837862;
 			
 			// aapt resource value: 0x7f020167
-			public const int lb_search_orb = 2130837863;
+			public const int lb_speech_orb = 2130837863;
 			
 			// aapt resource value: 0x7f020168
-			public const int lb_selectable_item_rounded_rect = 2130837864;
+			public const int lb_text_dot_one = 2130837864;
 			
 			// aapt resource value: 0x7f020169
-			public const int lb_speech_orb = 2130837865;
+			public const int lb_text_dot_one_small = 2130837865;
 			
 			// aapt resource value: 0x7f02016a
-			public const int lb_text_dot_one = 2130837866;
+			public const int lb_text_dot_two = 2130837866;
 			
 			// aapt resource value: 0x7f02016b
-			public const int lb_text_dot_one_small = 2130837867;
+			public const int lb_text_dot_two_small = 2130837867;
 			
 			// aapt resource value: 0x7f02016c
-			public const int lb_text_dot_two = 2130837868;
+			public const int mr_button_connected_dark = 2130837868;
 			
 			// aapt resource value: 0x7f02016d
-			public const int lb_text_dot_two_small = 2130837869;
+			public const int mr_button_connected_light = 2130837869;
 			
 			// aapt resource value: 0x7f02016e
-			public const int mr_button_connected_dark = 2130837870;
+			public const int mr_button_connecting_dark = 2130837870;
 			
 			// aapt resource value: 0x7f02016f
-			public const int mr_button_connected_light = 2130837871;
+			public const int mr_button_connecting_light = 2130837871;
 			
 			// aapt resource value: 0x7f020170
-			public const int mr_button_connecting_dark = 2130837872;
+			public const int mr_button_dark = 2130837872;
 			
 			// aapt resource value: 0x7f020171
-			public const int mr_button_connecting_light = 2130837873;
+			public const int mr_button_light = 2130837873;
 			
 			// aapt resource value: 0x7f020172
-			public const int mr_button_dark = 2130837874;
+			public const int mr_dialog_close_dark = 2130837874;
 			
 			// aapt resource value: 0x7f020173
-			public const int mr_button_light = 2130837875;
+			public const int mr_dialog_close_light = 2130837875;
 			
 			// aapt resource value: 0x7f020174
-			public const int mr_dialog_close_dark = 2130837876;
+			public const int mr_dialog_material_background_dark = 2130837876;
 			
 			// aapt resource value: 0x7f020175
-			public const int mr_dialog_close_light = 2130837877;
+			public const int mr_dialog_material_background_light = 2130837877;
 			
 			// aapt resource value: 0x7f020176
-			public const int mr_dialog_material_background_dark = 2130837878;
+			public const int mr_group_collapse = 2130837878;
 			
 			// aapt resource value: 0x7f020177
-			public const int mr_dialog_material_background_light = 2130837879;
+			public const int mr_group_expand = 2130837879;
 			
 			// aapt resource value: 0x7f020178
-			public const int mr_group_collapse = 2130837880;
+			public const int mr_media_pause_dark = 2130837880;
 			
 			// aapt resource value: 0x7f020179
-			public const int mr_group_expand = 2130837881;
+			public const int mr_media_pause_light = 2130837881;
 			
 			// aapt resource value: 0x7f02017a
-			public const int mr_media_pause_dark = 2130837882;
+			public const int mr_media_play_dark = 2130837882;
 			
 			// aapt resource value: 0x7f02017b
-			public const int mr_media_pause_light = 2130837883;
+			public const int mr_media_play_light = 2130837883;
 			
 			// aapt resource value: 0x7f02017c
-			public const int mr_media_play_dark = 2130837884;
+			public const int mr_media_stop_dark = 2130837884;
 			
 			// aapt resource value: 0x7f02017d
-			public const int mr_media_play_light = 2130837885;
+			public const int mr_media_stop_light = 2130837885;
 			
 			// aapt resource value: 0x7f02017e
-			public const int mr_media_stop_dark = 2130837886;
+			public const int mr_vol_type_audiotrack_dark = 2130837886;
 			
 			// aapt resource value: 0x7f02017f
-			public const int mr_media_stop_light = 2130837887;
+			public const int mr_vol_type_audiotrack_light = 2130837887;
 			
 			// aapt resource value: 0x7f020180
-			public const int mr_vol_type_audiotrack_dark = 2130837888;
+			public const int navigation_empty_icon = 2130837888;
 			
 			// aapt resource value: 0x7f020181
-			public const int mr_vol_type_audiotrack_light = 2130837889;
+			public const int notification_action_background = 2130837889;
 			
 			// aapt resource value: 0x7f020182
-			public const int navigation_empty_icon = 2130837890;
+			public const int notification_bg = 2130837890;
 			
 			// aapt resource value: 0x7f020183
-			public const int notification_action_background = 2130837891;
+			public const int notification_bg_low = 2130837891;
 			
 			// aapt resource value: 0x7f020184
-			public const int notification_bg = 2130837892;
+			public const int notification_bg_low_normal = 2130837892;
 			
 			// aapt resource value: 0x7f020185
-			public const int notification_bg_low = 2130837893;
+			public const int notification_bg_low_pressed = 2130837893;
 			
 			// aapt resource value: 0x7f020186
-			public const int notification_bg_low_normal = 2130837894;
+			public const int notification_bg_normal = 2130837894;
 			
 			// aapt resource value: 0x7f020187
-			public const int notification_bg_low_pressed = 2130837895;
+			public const int notification_bg_normal_pressed = 2130837895;
 			
 			// aapt resource value: 0x7f020188
-			public const int notification_bg_normal = 2130837896;
-			
-			// aapt resource value: 0x7f020189
-			public const int notification_bg_normal_pressed = 2130837897;
-			
-			// aapt resource value: 0x7f02018a
-			public const int notification_icon_background = 2130837898;
-			
-			// aapt resource value: 0x7f02018f
-			public const int notification_template_icon_bg = 2130837903;
-			
-			// aapt resource value: 0x7f020190
-			public const int notification_template_icon_low_bg = 2130837904;
-			
-			// aapt resource value: 0x7f02018b
-			public const int notification_tile_bg = 2130837899;
-			
-			// aapt resource value: 0x7f02018c
-			public const int notify_panel_notification_icon_bg = 2130837900;
+			public const int notification_icon_background = 2130837896;
 			
 			// aapt resource value: 0x7f02018d
-			public const int tooltip_frame_dark = 2130837901;
+			public const int notification_template_icon_bg = 2130837901;
 			
 			// aapt resource value: 0x7f02018e
-			public const int tooltip_frame_light = 2130837902;
+			public const int notification_template_icon_low_bg = 2130837902;
+			
+			// aapt resource value: 0x7f020189
+			public const int notification_tile_bg = 2130837897;
+			
+			// aapt resource value: 0x7f02018a
+			public const int notify_panel_notification_icon_bg = 2130837898;
+			
+			// aapt resource value: 0x7f02018b
+			public const int tooltip_frame_dark = 2130837899;
+			
+			// aapt resource value: 0x7f02018c
+			public const int tooltip_frame_light = 2130837900;
 			
 			static Drawable()
 			{
@@ -6260,1193 +4816,1124 @@ namespace Facile.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0b0045
-			public const int ALT = 2131427397;
+			// aapt resource value: 0x7f0a0045
+			public const int ALT = 2131361861;
 			
-			// aapt resource value: 0x7f0b0046
-			public const int CTRL = 2131427398;
+			// aapt resource value: 0x7f0a0046
+			public const int CTRL = 2131361862;
 			
-			// aapt resource value: 0x7f0b005b
-			public const int Content = 2131427419;
+			// aapt resource value: 0x7f0a005b
+			public const int Content = 2131361883;
 			
-			// aapt resource value: 0x7f0b0082
-			public const int Default = 2131427458;
+			// aapt resource value: 0x7f0a0047
+			public const int FUNCTION = 2131361863;
 			
-			// aapt resource value: 0x7f0b0047
-			public const int FUNCTION = 2131427399;
+			// aapt resource value: 0x7f0a005c
+			public const int IconOnLeft = 2131361884;
 			
-			// aapt resource value: 0x7f0b005c
-			public const int IconOnLeft = 2131427420;
+			// aapt resource value: 0x7f0a005d
+			public const int IconOnRight = 2131361885;
 			
-			// aapt resource value: 0x7f0b005d
-			public const int IconOnRight = 2131427421;
+			// aapt resource value: 0x7f0a005e
+			public const int ImageOnly = 2131361886;
 			
-			// aapt resource value: 0x7f0b005e
-			public const int ImageOnly = 2131427422;
+			// aapt resource value: 0x7f0a0048
+			public const int META = 2131361864;
 			
-			// aapt resource value: 0x7f0b0083
-			public const int Linear = 2131427459;
+			// aapt resource value: 0x7f0a0049
+			public const int SHIFT = 2131361865;
 			
-			// aapt resource value: 0x7f0b0048
-			public const int META = 2131427400;
+			// aapt resource value: 0x7f0a004a
+			public const int SYM = 2131361866;
 			
-			// aapt resource value: 0x7f0b0049
-			public const int SHIFT = 2131427401;
+			// aapt resource value: 0x7f0a005f
+			public const int Title = 2131361887;
 			
-			// aapt resource value: 0x7f0b004a
-			public const int SYM = 2131427402;
+			// aapt resource value: 0x7f0a0160
+			public const int action0 = 2131362144;
 			
-			// aapt resource value: 0x7f0b005f
-			public const int Title = 2131427423;
+			// aapt resource value: 0x7f0a0131
+			public const int actionIcon = 2131362097;
 			
-			// aapt resource value: 0x7f0b0177
-			public const int action0 = 2131427703;
+			// aapt resource value: 0x7f0a009e
+			public const int action_bar = 2131361950;
 			
-			// aapt resource value: 0x7f0b0148
-			public const int actionIcon = 2131427656;
+			// aapt resource value: 0x7f0a0001
+			public const int action_bar_activity_content = 2131361793;
 			
-			// aapt resource value: 0x7f0b00b5
-			public const int action_bar = 2131427509;
+			// aapt resource value: 0x7f0a009d
+			public const int action_bar_container = 2131361949;
 			
-			// aapt resource value: 0x7f0b0001
-			public const int action_bar_activity_content = 2131427329;
+			// aapt resource value: 0x7f0a0099
+			public const int action_bar_root = 2131361945;
 			
-			// aapt resource value: 0x7f0b00b4
-			public const int action_bar_container = 2131427508;
+			// aapt resource value: 0x7f0a0002
+			public const int action_bar_spinner = 2131361794;
 			
-			// aapt resource value: 0x7f0b00b0
-			public const int action_bar_root = 2131427504;
+			// aapt resource value: 0x7f0a007d
+			public const int action_bar_subtitle = 2131361917;
 			
-			// aapt resource value: 0x7f0b0002
-			public const int action_bar_spinner = 2131427330;
+			// aapt resource value: 0x7f0a007c
+			public const int action_bar_title = 2131361916;
 			
-			// aapt resource value: 0x7f0b0094
-			public const int action_bar_subtitle = 2131427476;
+			// aapt resource value: 0x7f0a015d
+			public const int action_container = 2131362141;
 			
-			// aapt resource value: 0x7f0b0093
-			public const int action_bar_title = 2131427475;
+			// aapt resource value: 0x7f0a009f
+			public const int action_context_bar = 2131361951;
 			
-			// aapt resource value: 0x7f0b0174
-			public const int action_container = 2131427700;
+			// aapt resource value: 0x7f0a0164
+			public const int action_divider = 2131362148;
 			
-			// aapt resource value: 0x7f0b00b6
-			public const int action_context_bar = 2131427510;
+			// aapt resource value: 0x7f0a00f5
+			public const int action_fragment = 2131362037;
 			
-			// aapt resource value: 0x7f0b017b
-			public const int action_divider = 2131427707;
+			// aapt resource value: 0x7f0a00f4
+			public const int action_fragment_background = 2131362036;
 			
-			// aapt resource value: 0x7f0b010c
-			public const int action_fragment = 2131427596;
+			// aapt resource value: 0x7f0a00f3
+			public const int action_fragment_root = 2131362035;
 			
-			// aapt resource value: 0x7f0b010b
-			public const int action_fragment_background = 2131427595;
+			// aapt resource value: 0x7f0a015e
+			public const int action_image = 2131362142;
 			
-			// aapt resource value: 0x7f0b010a
-			public const int action_fragment_root = 2131427594;
+			// aapt resource value: 0x7f0a0003
+			public const int action_menu_divider = 2131361795;
 			
-			// aapt resource value: 0x7f0b0175
-			public const int action_image = 2131427701;
+			// aapt resource value: 0x7f0a0004
+			public const int action_menu_presenter = 2131361796;
 			
-			// aapt resource value: 0x7f0b0003
-			public const int action_menu_divider = 2131427331;
+			// aapt resource value: 0x7f0a009b
+			public const int action_mode_bar = 2131361947;
 			
-			// aapt resource value: 0x7f0b0004
-			public const int action_menu_presenter = 2131427332;
+			// aapt resource value: 0x7f0a009a
+			public const int action_mode_bar_stub = 2131361946;
 			
-			// aapt resource value: 0x7f0b00b2
-			public const int action_mode_bar = 2131427506;
+			// aapt resource value: 0x7f0a007e
+			public const int action_mode_close_button = 2131361918;
 			
-			// aapt resource value: 0x7f0b00b1
-			public const int action_mode_bar_stub = 2131427505;
+			// aapt resource value: 0x7f0a015f
+			public const int action_text = 2131362143;
 			
-			// aapt resource value: 0x7f0b0095
-			public const int action_mode_close_button = 2131427477;
+			// aapt resource value: 0x7f0a016c
+			public const int actions = 2131362156;
 			
-			// aapt resource value: 0x7f0b0176
-			public const int action_text = 2131427702;
+			// aapt resource value: 0x7f0a0056
+			public const int activated = 2131361878;
 			
-			// aapt resource value: 0x7f0b0183
-			public const int actions = 2131427715;
+			// aapt resource value: 0x7f0a007f
+			public const int activity_chooser_view_content = 2131361919;
 			
-			// aapt resource value: 0x7f0b0056
-			public const int activated = 2131427414;
+			// aapt resource value: 0x7f0a003a
+			public const int add = 2131361850;
 			
-			// aapt resource value: 0x7f0b0096
-			public const int activity_chooser_view_content = 2131427478;
+			// aapt resource value: 0x7f0a0092
+			public const int alertTitle = 2131361938;
 			
-			// aapt resource value: 0x7f0b003a
-			public const int add = 2131427386;
+			// aapt resource value: 0x7f0a0074
+			public const int all = 2131361908;
 			
-			// aapt resource value: 0x7f0b00a9
-			public const int alertTitle = 2131427497;
+			// aapt resource value: 0x7f0a004b
+			public const int always = 2131361867;
 			
-			// aapt resource value: 0x7f0b0074
-			public const int all = 2131427444;
+			// aapt resource value: 0x7f0a0078
+			public const int async = 2131361912;
 			
-			// aapt resource value: 0x7f0b004b
-			public const int always = 2131427403;
+			// aapt resource value: 0x7f0a0069
+			public const int auto = 2131361897;
 			
-			// aapt resource value: 0x7f0b0078
-			public const int async = 2131427448;
+			// aapt resource value: 0x7f0a0129
+			public const int background = 2131362089;
 			
-			// aapt resource value: 0x7f0b0069
-			public const int auto = 2131427433;
+			// aapt resource value: 0x7f0a0106
+			public const int background_container = 2131362054;
 			
-			// aapt resource value: 0x7f0b0140
-			public const int background = 2131427648;
+			// aapt resource value: 0x7f0a0174
+			public const int background_imagein = 2131362164;
 			
-			// aapt resource value: 0x7f0b011d
-			public const int background_container = 2131427613;
+			// aapt resource value: 0x7f0a0173
+			public const int background_imageout = 2131362163;
 			
-			// aapt resource value: 0x7f0b018b
-			public const int background_imagein = 2131427723;
+			// aapt resource value: 0x7f0a0120
+			public const int bar1 = 2131362080;
 			
-			// aapt resource value: 0x7f0b018a
-			public const int background_imageout = 2131427722;
+			// aapt resource value: 0x7f0a0121
+			public const int bar2 = 2131362081;
 			
-			// aapt resource value: 0x7f0b0084
-			public const int ball = 2131427460;
+			// aapt resource value: 0x7f0a0122
+			public const int bar3 = 2131362082;
 			
-			// aapt resource value: 0x7f0b0137
-			public const int bar1 = 2131427639;
+			// aapt resource value: 0x7f0a0042
+			public const int beginning = 2131361858;
 			
-			// aapt resource value: 0x7f0b0138
-			public const int bar2 = 2131427640;
+			// aapt resource value: 0x7f0a0079
+			public const int blocking = 2131361913;
 			
-			// aapt resource value: 0x7f0b0139
-			public const int bar3 = 2131427641;
+			// aapt resource value: 0x7f0a0050
+			public const int bottom = 2131361872;
 			
-			// aapt resource value: 0x7f0b0085
-			public const int battery = 2131427461;
+			// aapt resource value: 0x7f0a011c
+			public const int bottom_spacer = 2131362076;
 			
-			// aapt resource value: 0x7f0b0042
-			public const int beginning = 2131427394;
+			// aapt resource value: 0x7f0a00be
+			public const int browse_container_dock = 2131361982;
 			
-			// aapt resource value: 0x7f0b0079
-			public const int blocking = 2131427449;
+			// aapt resource value: 0x7f0a00bc
+			public const int browse_dummy = 2131361980;
 			
-			// aapt resource value: 0x7f0b0050
-			public const int bottom = 2131427408;
+			// aapt resource value: 0x7f0a00bd
+			public const int browse_frame = 2131361981;
 			
-			// aapt resource value: 0x7f0b0133
-			public const int bottom_spacer = 2131427635;
+			// aapt resource value: 0x7f0a013f
+			public const int browse_grid = 2131362111;
 			
-			// aapt resource value: 0x7f0b0086
-			public const int box = 2131427462;
+			// aapt resource value: 0x7f0a0141
+			public const int browse_grid_dock = 2131362113;
 			
-			// aapt resource value: 0x7f0b00d5
-			public const int browse_container_dock = 2131427541;
+			// aapt resource value: 0x7f0a00f7
+			public const int browse_headers = 2131362039;
 			
-			// aapt resource value: 0x7f0b00d3
-			public const int browse_dummy = 2131427539;
+			// aapt resource value: 0x7f0a00c0
+			public const int browse_headers_dock = 2131361984;
 			
-			// aapt resource value: 0x7f0b00d4
-			public const int browse_frame = 2131427540;
+			// aapt resource value: 0x7f0a00f6
+			public const int browse_headers_root = 2131362038;
 			
-			// aapt resource value: 0x7f0b0156
-			public const int browse_grid = 2131427670;
+			// aapt resource value: 0x7f0a00c1
+			public const int browse_title_group = 2131361985;
 			
-			// aapt resource value: 0x7f0b0158
-			public const int browse_grid_dock = 2131427672;
+			// aapt resource value: 0x7f0a00c3
+			public const int button = 2131361987;
 			
-			// aapt resource value: 0x7f0b010e
-			public const int browse_headers = 2131427598;
+			// aapt resource value: 0x7f0a0085
+			public const int buttonPanel = 2131361925;
 			
-			// aapt resource value: 0x7f0b00d7
-			public const int browse_headers_dock = 2131427543;
+			// aapt resource value: 0x7f0a010c
+			public const int button_start = 2131362060;
 			
-			// aapt resource value: 0x7f0b010d
-			public const int browse_headers_root = 2131427597;
+			// aapt resource value: 0x7f0a0161
+			public const int cancel_action = 2131362145;
 			
-			// aapt resource value: 0x7f0b00d8
-			public const int browse_title_group = 2131427544;
+			// aapt resource value: 0x7f0a006a
+			public const int center = 2131361898;
 			
-			// aapt resource value: 0x7f0b00da
-			public const int button = 2131427546;
+			// aapt resource value: 0x7f0a006b
+			public const int center_horizontal = 2131361899;
 			
-			// aapt resource value: 0x7f0b009c
-			public const int buttonPanel = 2131427484;
+			// aapt resource value: 0x7f0a006c
+			public const int center_vertical = 2131361900;
 			
-			// aapt resource value: 0x7f0b0123
-			public const int button_start = 2131427619;
+			// aapt resource value: 0x7f0a0095
+			public const int checkbox = 2131361941;
 			
-			// aapt resource value: 0x7f0b0178
-			public const int cancel_action = 2131427704;
+			// aapt resource value: 0x7f0a0169
+			public const int chronometer = 2131362153;
 			
-			// aapt resource value: 0x7f0b006a
-			public const int center = 2131427434;
+			// aapt resource value: 0x7f0a0070
+			public const int clip_horizontal = 2131361904;
 			
-			// aapt resource value: 0x7f0b006b
-			public const int center_horizontal = 2131427435;
+			// aapt resource value: 0x7f0a0071
+			public const int clip_vertical = 2131361905;
 			
-			// aapt resource value: 0x7f0b006c
-			public const int center_vertical = 2131427436;
+			// aapt resource value: 0x7f0a004c
+			public const int collapseActionView = 2131361868;
 			
-			// aapt resource value: 0x7f0b00ac
-			public const int checkbox = 2131427500;
+			// aapt resource value: 0x7f0a0110
+			public const int column = 2131362064;
 			
-			// aapt resource value: 0x7f0b0180
-			public const int chronometer = 2131427712;
+			// aapt resource value: 0x7f0a00af
+			public const int container = 2131361967;
 			
-			// aapt resource value: 0x7f0b0070
-			public const int clip_horizontal = 2131427440;
+			// aapt resource value: 0x7f0a0132
+			public const int container_list = 2131362098;
 			
-			// aapt resource value: 0x7f0b0071
-			public const int clip_vertical = 2131427441;
+			// aapt resource value: 0x7f0a0088
+			public const int contentPanel = 2131361928;
 			
-			// aapt resource value: 0x7f0b004c
-			public const int collapseActionView = 2131427404;
+			// aapt resource value: 0x7f0a0109
+			public const int content_container = 2131362057;
 			
-			// aapt resource value: 0x7f0b0127
-			public const int column = 2131427623;
+			// aapt resource value: 0x7f0a00f2
+			public const int content_fragment = 2131362034;
 			
-			// aapt resource value: 0x7f0b007e
-			public const int compute = 2131427454;
+			// aapt resource value: 0x7f0a00f1
+			public const int content_frame = 2131362033;
 			
-			// aapt resource value: 0x7f0b00c6
-			public const int container = 2131427526;
+			// aapt resource value: 0x7f0a00fc
+			public const int content_text = 2131362044;
 			
-			// aapt resource value: 0x7f0b0149
-			public const int container_list = 2131427657;
+			// aapt resource value: 0x7f0a00c2
+			public const int control_bar = 2131361986;
 			
-			// aapt resource value: 0x7f0b009f
-			public const int contentPanel = 2131427487;
+			// aapt resource value: 0x7f0a0117
+			public const int controls_card = 2131362071;
 			
-			// aapt resource value: 0x7f0b0120
-			public const int content_container = 2131427616;
+			// aapt resource value: 0x7f0a0118
+			public const int controls_card_right_panel = 2131362072;
 			
-			// aapt resource value: 0x7f0b0109
-			public const int content_fragment = 2131427593;
+			// aapt resource value: 0x7f0a0113
+			public const int controls_container = 2131362067;
 			
-			// aapt resource value: 0x7f0b0108
-			public const int content_frame = 2131427592;
+			// aapt resource value: 0x7f0a011a
+			public const int controls_dock = 2131362074;
 			
-			// aapt resource value: 0x7f0b0113
-			public const int content_text = 2131427603;
+			// aapt resource value: 0x7f0a00b0
+			public const int coordinator = 2131361968;
 			
-			// aapt resource value: 0x7f0b00d9
-			public const int control_bar = 2131427545;
+			// aapt resource value: 0x7f0a0115
+			public const int current_time = 2131362069;
 			
-			// aapt resource value: 0x7f0b012e
-			public const int controls_card = 2131427630;
+			// aapt resource value: 0x7f0a008f
+			public const int custom = 2131361935;
 			
-			// aapt resource value: 0x7f0b012f
-			public const int controls_card_right_panel = 2131427631;
+			// aapt resource value: 0x7f0a008e
+			public const int customPanel = 2131361934;
 			
-			// aapt resource value: 0x7f0b012a
-			public const int controls_container = 2131427626;
+			// aapt resource value: 0x7f0a009c
+			public const int decor_content_parent = 2131361948;
 			
-			// aapt resource value: 0x7f0b0131
-			public const int controls_dock = 2131427633;
+			// aapt resource value: 0x7f0a0082
+			public const int default_activity_button = 2131361922;
 			
-			// aapt resource value: 0x7f0b00c7
-			public const int coordinator = 2131427527;
+			// aapt resource value: 0x7f0a0100
+			public const int description = 2131362048;
 			
-			// aapt resource value: 0x7f0b012c
-			public const int current_time = 2131427628;
+			// aapt resource value: 0x7f0a0119
+			public const int description_dock = 2131362073;
 			
-			// aapt resource value: 0x7f0b00a6
-			public const int custom = 2131427494;
+			// aapt resource value: 0x7f0a00b2
+			public const int design_bottom_sheet = 2131361970;
 			
-			// aapt resource value: 0x7f0b00a5
-			public const int customPanel = 2131427493;
+			// aapt resource value: 0x7f0a00b9
+			public const int design_menu_item_action_area = 2131361977;
 			
-			// aapt resource value: 0x7f0b007c
-			public const int decimalMode = 2131427452;
+			// aapt resource value: 0x7f0a00b8
+			public const int design_menu_item_action_area_stub = 2131361976;
 			
-			// aapt resource value: 0x7f0b00b3
-			public const int decor_content_parent = 2131427507;
+			// aapt resource value: 0x7f0a00b7
+			public const int design_menu_item_text = 2131361975;
 			
-			// aapt resource value: 0x7f0b0099
-			public const int default_activity_button = 2131427481;
+			// aapt resource value: 0x7f0a00b6
+			public const int design_navigation_view = 2131361974;
 			
-			// aapt resource value: 0x7f0b0117
-			public const int description = 2131427607;
+			// aapt resource value: 0x7f0a00ca
+			public const int details_background_view = 2131361994;
 			
-			// aapt resource value: 0x7f0b0130
-			public const int description_dock = 2131427632;
+			// aapt resource value: 0x7f0a00cb
+			public const int details_fragment_root = 2131361995;
 			
-			// aapt resource value: 0x7f0b00c9
-			public const int design_bottom_sheet = 2131427529;
+			// aapt resource value: 0x7f0a00cd
+			public const int details_frame = 2131361997;
 			
-			// aapt resource value: 0x7f0b00d0
-			public const int design_menu_item_action_area = 2131427536;
+			// aapt resource value: 0x7f0a00ce
+			public const int details_overview = 2131361998;
 			
-			// aapt resource value: 0x7f0b00cf
-			public const int design_menu_item_action_area_stub = 2131427535;
+			// aapt resource value: 0x7f0a00d2
+			public const int details_overview_actions = 2131362002;
 			
-			// aapt resource value: 0x7f0b00ce
-			public const int design_menu_item_text = 2131427534;
+			// aapt resource value: 0x7f0a00d7
+			public const int details_overview_actions_background = 2131362007;
 			
-			// aapt resource value: 0x7f0b00cd
-			public const int design_navigation_view = 2131427533;
+			// aapt resource value: 0x7f0a00d1
+			public const int details_overview_description = 2131362001;
 			
-			// aapt resource value: 0x7f0b00e1
-			public const int details_background_view = 2131427553;
+			// aapt resource value: 0x7f0a00cf
+			public const int details_overview_image = 2131361999;
 			
-			// aapt resource value: 0x7f0b00e2
-			public const int details_fragment_root = 2131427554;
+			// aapt resource value: 0x7f0a00d0
+			public const int details_overview_right_panel = 2131362000;
 			
-			// aapt resource value: 0x7f0b00e4
-			public const int details_frame = 2131427556;
+			// aapt resource value: 0x7f0a00d6
+			public const int details_root = 2131362006;
 			
-			// aapt resource value: 0x7f0b00e5
-			public const int details_overview = 2131427557;
+			// aapt resource value: 0x7f0a00cc
+			public const int details_rows_dock = 2131361996;
 			
-			// aapt resource value: 0x7f0b00e9
-			public const int details_overview_actions = 2131427561;
+			// aapt resource value: 0x7f0a0033
+			public const int disableHome = 2131361843;
 			
-			// aapt resource value: 0x7f0b00ee
-			public const int details_overview_actions_background = 2131427566;
+			// aapt resource value: 0x7f0a00c8
+			public const int dummy = 2131361992;
 			
-			// aapt resource value: 0x7f0b00e8
-			public const int details_overview_description = 2131427560;
+			// aapt resource value: 0x7f0a00a0
+			public const int edit_query = 2131361952;
 			
-			// aapt resource value: 0x7f0b00e6
-			public const int details_overview_image = 2131427558;
+			// aapt resource value: 0x7f0a0043
+			public const int end = 2131361859;
 			
-			// aapt resource value: 0x7f0b00e7
-			public const int details_overview_right_panel = 2131427559;
+			// aapt resource value: 0x7f0a016e
+			public const int end_padder = 2131362158;
 			
-			// aapt resource value: 0x7f0b00ed
-			public const int details_root = 2131427565;
+			// aapt resource value: 0x7f0a0064
+			public const int enterAlways = 2131361892;
 			
-			// aapt resource value: 0x7f0b00e3
-			public const int details_rows_dock = 2131427555;
+			// aapt resource value: 0x7f0a0065
+			public const int enterAlwaysCollapsed = 2131361893;
 			
-			// aapt resource value: 0x7f0b0033
-			public const int disableHome = 2131427379;
+			// aapt resource value: 0x7f0a00d4
+			public const int error_frame = 2131362004;
 			
-			// aapt resource value: 0x7f0b0087
-			public const int doubleCircle = 2131427463;
+			// aapt resource value: 0x7f0a0066
+			public const int exitUntilCollapsed = 2131361894;
 			
-			// aapt resource value: 0x7f0b007d
-			public const int doubleMode = 2131427453;
+			// aapt resource value: 0x7f0a0080
+			public const int expand_activities_button = 2131361920;
 			
-			// aapt resource value: 0x7f0b00df
-			public const int dummy = 2131427551;
+			// aapt resource value: 0x7f0a0094
+			public const int expanded_menu = 2131361940;
 			
-			// aapt resource value: 0x7f0b0088
-			public const int ecg = 2131427464;
+			// aapt resource value: 0x7f0a0058
+			public const int extra = 2131361880;
 			
-			// aapt resource value: 0x7f0b00b7
-			public const int edit_query = 2131427511;
+			// aapt resource value: 0x7f0a00fb
+			public const int extra_badge = 2131362043;
 			
-			// aapt resource value: 0x7f0b0043
-			public const int end = 2131427395;
+			// aapt resource value: 0x7f0a00f8
+			public const int fade_out_edge = 2131362040;
 			
-			// aapt resource value: 0x7f0b0185
-			public const int end_padder = 2131427717;
+			// aapt resource value: 0x7f0a0072
+			public const int fill = 2131361906;
 			
-			// aapt resource value: 0x7f0b0064
-			public const int enterAlways = 2131427428;
+			// aapt resource value: 0x7f0a0073
+			public const int fill_horizontal = 2131361907;
 			
-			// aapt resource value: 0x7f0b0065
-			public const int enterAlwaysCollapsed = 2131427429;
+			// aapt resource value: 0x7f0a006d
+			public const int fill_vertical = 2131361901;
 			
-			// aapt resource value: 0x7f0b00eb
-			public const int error_frame = 2131427563;
+			// aapt resource value: 0x7f0a0076
+			public const int @fixed = 2131361910;
 			
-			// aapt resource value: 0x7f0b0066
-			public const int exitUntilCollapsed = 2131427430;
+			// aapt resource value: 0x7f0a010d
+			public const int foreground_container = 2131362061;
 			
-			// aapt resource value: 0x7f0b0097
-			public const int expand_activities_button = 2131427479;
+			// aapt resource value: 0x7f0a007a
+			public const int forever = 2131361914;
 			
-			// aapt resource value: 0x7f0b00ab
-			public const int expanded_menu = 2131427499;
+			// aapt resource value: 0x7f0a001d
+			public const int ghost_view = 2131361821;
 			
-			// aapt resource value: 0x7f0b0058
-			public const int extra = 2131427416;
+			// aapt resource value: 0x7f0a0140
+			public const int grid_frame = 2131362112;
 			
-			// aapt resource value: 0x7f0b0112
-			public const int extra_badge = 2131427602;
+			// aapt resource value: 0x7f0a00da
+			public const int guidance_breadcrumb = 2131362010;
 			
-			// aapt resource value: 0x7f0b010f
-			public const int fade_out_edge = 2131427599;
+			// aapt resource value: 0x7f0a00d8
+			public const int guidance_container = 2131362008;
 			
-			// aapt resource value: 0x7f0b0072
-			public const int fill = 2131427442;
+			// aapt resource value: 0x7f0a00dc
+			public const int guidance_description = 2131362012;
 			
-			// aapt resource value: 0x7f0b0073
-			public const int fill_horizontal = 2131427443;
+			// aapt resource value: 0x7f0a00d9
+			public const int guidance_icon = 2131362009;
 			
-			// aapt resource value: 0x7f0b006d
-			public const int fill_vertical = 2131427437;
+			// aapt resource value: 0x7f0a00db
+			public const int guidance_title = 2131362011;
 			
-			// aapt resource value: 0x7f0b0076
-			public const int @fixed = 2131427446;
+			// aapt resource value: 0x7f0a00e5
+			public const int guidedactions_activator_item = 2131362021;
 			
-			// aapt resource value: 0x7f0b0124
-			public const int foreground_container = 2131427620;
+			// aapt resource value: 0x7f0a00df
+			public const int guidedactions_content = 2131362015;
 			
-			// aapt resource value: 0x7f0b007a
-			public const int forever = 2131427450;
+			// aapt resource value: 0x7f0a00ec
+			public const int guidedactions_content2 = 2131362028;
 			
-			// aapt resource value: 0x7f0b0089
-			public const int gearBox = 2131427465;
+			// aapt resource value: 0x7f0a00e6
+			public const int guidedactions_item_checkmark = 2131362022;
 			
-			// aapt resource value: 0x7f0b001d
-			public const int ghost_view = 2131427357;
+			// aapt resource value: 0x7f0a00e9
+			public const int guidedactions_item_chevron = 2131362025;
 			
-			// aapt resource value: 0x7f0b008a
-			public const int globe = 2131427466;
+			// aapt resource value: 0x7f0a00e7
+			public const int guidedactions_item_content = 2131362023;
 			
-			// aapt resource value: 0x7f0b0157
-			public const int grid_frame = 2131427671;
+			// aapt resource value: 0x7f0a00e8
+			public const int guidedactions_item_description = 2131362024;
 			
-			// aapt resource value: 0x7f0b00f1
-			public const int guidance_breadcrumb = 2131427569;
+			// aapt resource value: 0x7f0a00e3
+			public const int guidedactions_item_icon = 2131362019;
 			
-			// aapt resource value: 0x7f0b00ef
-			public const int guidance_container = 2131427567;
+			// aapt resource value: 0x7f0a00e4
+			public const int guidedactions_item_title = 2131362020;
 			
-			// aapt resource value: 0x7f0b00f3
-			public const int guidance_description = 2131427571;
+			// aapt resource value: 0x7f0a00e0
+			public const int guidedactions_list = 2131362016;
 			
-			// aapt resource value: 0x7f0b00f0
-			public const int guidance_icon = 2131427568;
+			// aapt resource value: 0x7f0a00ed
+			public const int guidedactions_list2 = 2131362029;
 			
-			// aapt resource value: 0x7f0b00f2
-			public const int guidance_title = 2131427570;
+			// aapt resource value: 0x7f0a00de
+			public const int guidedactions_list_background = 2131362014;
 			
-			// aapt resource value: 0x7f0b00fc
-			public const int guidedactions_activator_item = 2131427580;
+			// aapt resource value: 0x7f0a00eb
+			public const int guidedactions_list_background2 = 2131362027;
 			
-			// aapt resource value: 0x7f0b00f6
-			public const int guidedactions_content = 2131427574;
+			// aapt resource value: 0x7f0a00dd
+			public const int guidedactions_root = 2131362013;
 			
-			// aapt resource value: 0x7f0b0103
-			public const int guidedactions_content2 = 2131427587;
+			// aapt resource value: 0x7f0a00ea
+			public const int guidedactions_root2 = 2131362026;
 			
-			// aapt resource value: 0x7f0b00fd
-			public const int guidedactions_item_checkmark = 2131427581;
+			// aapt resource value: 0x7f0a00e2
+			public const int guidedactions_sub_list = 2131362018;
 			
-			// aapt resource value: 0x7f0b0100
-			public const int guidedactions_item_chevron = 2131427584;
+			// aapt resource value: 0x7f0a00e1
+			public const int guidedactions_sub_list_background = 2131362017;
 			
-			// aapt resource value: 0x7f0b00fe
-			public const int guidedactions_item_content = 2131427582;
+			// aapt resource value: 0x7f0a00ee
+			public const int guidedstep_background = 2131362030;
 			
-			// aapt resource value: 0x7f0b00ff
-			public const int guidedactions_item_description = 2131427583;
+			// aapt resource value: 0x7f0a00f0
+			public const int guidedstep_background_view_root = 2131362032;
 			
-			// aapt resource value: 0x7f0b00fa
-			public const int guidedactions_item_icon = 2131427578;
+			// aapt resource value: 0x7f0a00ef
+			public const int guidedstep_root = 2131362031;
 			
-			// aapt resource value: 0x7f0b00fb
-			public const int guidedactions_item_title = 2131427579;
+			// aapt resource value: 0x7f0a0005
+			public const int home = 2131361797;
 			
-			// aapt resource value: 0x7f0b00f7
-			public const int guidedactions_list = 2131427575;
+			// aapt resource value: 0x7f0a0034
+			public const int homeAsUp = 2131361844;
 			
-			// aapt resource value: 0x7f0b0104
-			public const int guidedactions_list2 = 2131427588;
+			// aapt resource value: 0x7f0a00ff
+			public const int hovercard_panel = 2131362047;
 			
-			// aapt resource value: 0x7f0b00f5
-			public const int guidedactions_list_background = 2131427573;
+			// aapt resource value: 0x7f0a0084
+			public const int icon = 2131361924;
 			
-			// aapt resource value: 0x7f0b0102
-			public const int guidedactions_list_background2 = 2131427586;
+			// aapt resource value: 0x7f0a016d
+			public const int icon_group = 2131362157;
 			
-			// aapt resource value: 0x7f0b00f4
-			public const int guidedactions_root = 2131427572;
+			// aapt resource value: 0x7f0a004d
+			public const int ifRoom = 2131361869;
 			
-			// aapt resource value: 0x7f0b0101
-			public const int guidedactions_root2 = 2131427585;
+			// aapt resource value: 0x7f0a0081
+			public const int image = 2131361921;
 			
-			// aapt resource value: 0x7f0b00f9
-			public const int guidedactions_sub_list = 2131427577;
+			// aapt resource value: 0x7f0a0059
+			public const int info = 2131361881;
 			
-			// aapt resource value: 0x7f0b00f8
-			public const int guidedactions_sub_list_background = 2131427576;
+			// aapt resource value: 0x7f0a0052
+			public const int infoOver = 2131361874;
 			
-			// aapt resource value: 0x7f0b0105
-			public const int guidedstep_background = 2131427589;
+			// aapt resource value: 0x7f0a0053
+			public const int infoUnder = 2131361875;
 			
-			// aapt resource value: 0x7f0b0107
-			public const int guidedstep_background_view_root = 2131427591;
+			// aapt resource value: 0x7f0a0054
+			public const int infoUnderWithExtra = 2131361876;
 			
-			// aapt resource value: 0x7f0b0106
-			public const int guidedstep_root = 2131427590;
+			// aapt resource value: 0x7f0a00fa
+			public const int info_field = 2131362042;
 			
-			// aapt resource value: 0x7f0b0005
-			public const int home = 2131427333;
+			// aapt resource value: 0x7f0a0101
+			public const int initial = 2131362049;
 			
-			// aapt resource value: 0x7f0b0034
-			public const int homeAsUp = 2131427380;
+			// aapt resource value: 0x7f0a007b
+			public const int italic = 2131361915;
 			
-			// aapt resource value: 0x7f0b008b
-			public const int horizontalPulsingBox = 2131427467;
+			// aapt resource value: 0x7f0a0000
+			public const int item_touch_helper_previous_elevation = 2131361792;
 			
-			// aapt resource value: 0x7f0b0116
-			public const int hovercard_panel = 2131427606;
+			// aapt resource value: 0x7f0a00c4
+			public const int label = 2131361988;
 			
-			// aapt resource value: 0x7f0b009b
-			public const int icon = 2131427483;
+			// aapt resource value: 0x7f0a00ae
+			public const int largeLabel = 2131361966;
 			
-			// aapt resource value: 0x7f0b0184
-			public const int icon_group = 2131427716;
+			// aapt resource value: 0x7f0a00bb
+			public const int lb_action_button = 2131361979;
 			
-			// aapt resource value: 0x7f0b004d
-			public const int ifRoom = 2131427405;
+			// aapt resource value: 0x7f0a000a
+			public const int lb_control_closed_captioning = 2131361802;
 			
-			// aapt resource value: 0x7f0b0098
-			public const int image = 2131427480;
+			// aapt resource value: 0x7f0a000b
+			public const int lb_control_fast_forward = 2131361803;
 			
-			// aapt resource value: 0x7f0b0059
-			public const int info = 2131427417;
+			// aapt resource value: 0x7f0a000c
+			public const int lb_control_fast_rewind = 2131361804;
 			
-			// aapt resource value: 0x7f0b0052
-			public const int infoOver = 2131427410;
+			// aapt resource value: 0x7f0a000d
+			public const int lb_control_high_quality = 2131361805;
 			
-			// aapt resource value: 0x7f0b0053
-			public const int infoUnder = 2131427411;
+			// aapt resource value: 0x7f0a000e
+			public const int lb_control_more_actions = 2131361806;
 			
-			// aapt resource value: 0x7f0b0054
-			public const int infoUnderWithExtra = 2131427412;
+			// aapt resource value: 0x7f0a000f
+			public const int lb_control_picture_in_picture = 2131361807;
 			
-			// aapt resource value: 0x7f0b0111
-			public const int info_field = 2131427601;
+			// aapt resource value: 0x7f0a0010
+			public const int lb_control_play_pause = 2131361808;
 			
-			// aapt resource value: 0x7f0b0118
-			public const int initial = 2131427608;
+			// aapt resource value: 0x7f0a0011
+			public const int lb_control_repeat = 2131361809;
 			
-			// aapt resource value: 0x7f0b007b
-			public const int italic = 2131427451;
+			// aapt resource value: 0x7f0a0012
+			public const int lb_control_shuffle = 2131361810;
 			
-			// aapt resource value: 0x7f0b0000
-			public const int item_touch_helper_previous_elevation = 2131427328;
+			// aapt resource value: 0x7f0a0013
+			public const int lb_control_skip_next = 2131361811;
 			
-			// aapt resource value: 0x7f0b00db
-			public const int label = 2131427547;
+			// aapt resource value: 0x7f0a0014
+			public const int lb_control_skip_previous = 2131361812;
 			
-			// aapt resource value: 0x7f0b00c5
-			public const int largeLabel = 2131427525;
+			// aapt resource value: 0x7f0a0015
+			public const int lb_control_thumbs_down = 2131361813;
 			
-			// aapt resource value: 0x7f0b00d2
-			public const int lb_action_button = 2131427538;
+			// aapt resource value: 0x7f0a0016
+			public const int lb_control_thumbs_up = 2131361814;
 			
-			// aapt resource value: 0x7f0b000a
-			public const int lb_control_closed_captioning = 2131427338;
+			// aapt resource value: 0x7f0a00c7
+			public const int lb_details_description_body = 2131361991;
 			
-			// aapt resource value: 0x7f0b000b
-			public const int lb_control_fast_forward = 2131427339;
+			// aapt resource value: 0x7f0a00c6
+			public const int lb_details_description_subtitle = 2131361990;
 			
-			// aapt resource value: 0x7f0b000c
-			public const int lb_control_fast_rewind = 2131427340;
+			// aapt resource value: 0x7f0a00c5
+			public const int lb_details_description_title = 2131361989;
 			
-			// aapt resource value: 0x7f0b000d
-			public const int lb_control_high_quality = 2131427341;
+			// aapt resource value: 0x7f0a0017
+			public const int lb_focus_animator = 2131361815;
 			
-			// aapt resource value: 0x7f0b000e
-			public const int lb_control_more_actions = 2131427342;
+			// aapt resource value: 0x7f0a0018
+			public const int lb_guidedstep_background = 2131361816;
 			
-			// aapt resource value: 0x7f0b000f
-			public const int lb_control_picture_in_picture = 2131427343;
+			// aapt resource value: 0x7f0a0019
+			public const int lb_parallax_source = 2131361817;
 			
-			// aapt resource value: 0x7f0b0010
-			public const int lb_control_play_pause = 2131427344;
+			// aapt resource value: 0x7f0a0138
+			public const int lb_results_frame = 2131362104;
 			
-			// aapt resource value: 0x7f0b0011
-			public const int lb_control_repeat = 2131427345;
+			// aapt resource value: 0x7f0a0126
+			public const int lb_row_container_header_dock = 2131362086;
 			
-			// aapt resource value: 0x7f0b0012
-			public const int lb_control_shuffle = 2131427346;
+			// aapt resource value: 0x7f0a0139
+			public const int lb_search_bar = 2131362105;
 			
-			// aapt resource value: 0x7f0b0013
-			public const int lb_control_skip_next = 2131427347;
+			// aapt resource value: 0x7f0a0135
+			public const int lb_search_bar_badge = 2131362101;
 			
-			// aapt resource value: 0x7f0b0014
-			public const int lb_control_skip_previous = 2131427348;
+			// aapt resource value: 0x7f0a0134
+			public const int lb_search_bar_items = 2131362100;
 			
-			// aapt resource value: 0x7f0b0015
-			public const int lb_control_thumbs_down = 2131427349;
+			// aapt resource value: 0x7f0a0133
+			public const int lb_search_bar_speech_orb = 2131362099;
 			
-			// aapt resource value: 0x7f0b0016
-			public const int lb_control_thumbs_up = 2131427350;
+			// aapt resource value: 0x7f0a0137
+			public const int lb_search_frame = 2131362103;
 			
-			// aapt resource value: 0x7f0b00de
-			public const int lb_details_description_body = 2131427550;
+			// aapt resource value: 0x7f0a0136
+			public const int lb_search_text_editor = 2131362102;
 			
-			// aapt resource value: 0x7f0b00dd
-			public const int lb_details_description_subtitle = 2131427549;
+			// aapt resource value: 0x7f0a013c
+			public const int lb_shadow_focused = 2131362108;
 			
-			// aapt resource value: 0x7f0b00dc
-			public const int lb_details_description_title = 2131427548;
+			// aapt resource value: 0x7f0a001a
+			public const int lb_shadow_impl = 2131361818;
 			
-			// aapt resource value: 0x7f0b0017
-			public const int lb_focus_animator = 2131427351;
+			// aapt resource value: 0x7f0a013b
+			public const int lb_shadow_normal = 2131362107;
 			
-			// aapt resource value: 0x7f0b0018
-			public const int lb_guidedstep_background = 2131427352;
+			// aapt resource value: 0x7f0a001b
+			public const int lb_slide_transition_value = 2131361819;
 			
-			// aapt resource value: 0x7f0b0019
-			public const int lb_parallax_source = 2131427353;
+			// aapt resource value: 0x7f0a0061
+			public const int left = 2131361889;
 			
-			// aapt resource value: 0x7f0b014f
-			public const int lb_results_frame = 2131427663;
+			// aapt resource value: 0x7f0a002a
+			public const int line1 = 2131361834;
 			
-			// aapt resource value: 0x7f0b013d
-			public const int lb_row_container_header_dock = 2131427645;
+			// aapt resource value: 0x7f0a002b
+			public const int line3 = 2131361835;
 			
-			// aapt resource value: 0x7f0b0150
-			public const int lb_search_bar = 2131427664;
+			// aapt resource value: 0x7f0a0030
+			public const int listMode = 2131361840;
 			
-			// aapt resource value: 0x7f0b014c
-			public const int lb_search_bar_badge = 2131427660;
+			// aapt resource value: 0x7f0a0083
+			public const int list_item = 2131361923;
 			
-			// aapt resource value: 0x7f0b014b
-			public const int lb_search_bar_items = 2131427659;
+			// aapt resource value: 0x7f0a010e
+			public const int logo = 2131362062;
 			
-			// aapt resource value: 0x7f0b014a
-			public const int lb_search_bar_speech_orb = 2131427658;
+			// aapt resource value: 0x7f0a005a
+			public const int main = 2131361882;
 			
-			// aapt resource value: 0x7f0b014e
-			public const int lb_search_frame = 2131427662;
+			// aapt resource value: 0x7f0a0055
+			public const int mainOnly = 2131361877;
 			
-			// aapt resource value: 0x7f0b014d
-			public const int lb_search_text_editor = 2131427661;
+			// aapt resource value: 0x7f0a0107
+			public const int main_icon = 2131362055;
 			
-			// aapt resource value: 0x7f0b0153
-			public const int lb_shadow_focused = 2131427667;
+			// aapt resource value: 0x7f0a00f9
+			public const int main_image = 2131362041;
 			
-			// aapt resource value: 0x7f0b001a
-			public const int lb_shadow_impl = 2131427354;
+			// aapt resource value: 0x7f0a0172
+			public const int masked = 2131362162;
 			
-			// aapt resource value: 0x7f0b0152
-			public const int lb_shadow_normal = 2131427666;
+			// aapt resource value: 0x7f0a0060
+			public const int maxLines = 2131361888;
 			
-			// aapt resource value: 0x7f0b001b
-			public const int lb_slide_transition_value = 2131427355;
+			// aapt resource value: 0x7f0a0130
+			public const int mediaItemActionsContainer = 2131362096;
 			
-			// aapt resource value: 0x7f0b0061
-			public const int left = 2131427425;
+			// aapt resource value: 0x7f0a012c
+			public const int mediaItemDetails = 2131362092;
 			
-			// aapt resource value: 0x7f0b002a
-			public const int line1 = 2131427370;
+			// aapt resource value: 0x7f0a012f
+			public const int mediaItemDuration = 2131362095;
 			
-			// aapt resource value: 0x7f0b002b
-			public const int line3 = 2131427371;
+			// aapt resource value: 0x7f0a012e
+			public const int mediaItemName = 2131362094;
 			
-			// aapt resource value: 0x7f0b0030
-			public const int listMode = 2131427376;
+			// aapt resource value: 0x7f0a012d
+			public const int mediaItemNumberViewFlipper = 2131362093;
 			
-			// aapt resource value: 0x7f0b009a
-			public const int list_item = 2131427482;
+			// aapt resource value: 0x7f0a012b
+			public const int mediaItemRow = 2131362091;
 			
-			// aapt resource value: 0x7f0b0125
-			public const int logo = 2131427621;
+			// aapt resource value: 0x7f0a0104
+			public const int mediaListHeader = 2131362052;
 			
-			// aapt resource value: 0x7f0b005a
-			public const int main = 2131427418;
+			// aapt resource value: 0x7f0a012a
+			public const int mediaRowSelector = 2131362090;
 			
-			// aapt resource value: 0x7f0b0055
-			public const int mainOnly = 2131427413;
+			// aapt resource value: 0x7f0a0128
+			public const int mediaRowSeparator = 2131362088;
 			
-			// aapt resource value: 0x7f0b011e
-			public const int main_icon = 2131427614;
+			// aapt resource value: 0x7f0a0163
+			public const int media_actions = 2131362147;
 			
-			// aapt resource value: 0x7f0b0110
-			public const int main_image = 2131427600;
+			// aapt resource value: 0x7f0a00d5
+			public const int message = 2131362005;
 			
-			// aapt resource value: 0x7f0b0189
-			public const int masked = 2131427721;
+			// aapt resource value: 0x7f0a0044
+			public const int middle = 2131361860;
 			
-			// aapt resource value: 0x7f0b0060
-			public const int maxLines = 2131427424;
+			// aapt resource value: 0x7f0a0075
+			public const int mini = 2131361909;
 			
-			// aapt resource value: 0x7f0b0147
-			public const int mediaItemActionsContainer = 2131427655;
+			// aapt resource value: 0x7f0a0114
+			public const int more_actions_dock = 2131362068;
 			
-			// aapt resource value: 0x7f0b0143
-			public const int mediaItemDetails = 2131427651;
+			// aapt resource value: 0x7f0a014f
+			public const int mr_art = 2131362127;
 			
-			// aapt resource value: 0x7f0b0146
-			public const int mediaItemDuration = 2131427654;
+			// aapt resource value: 0x7f0a0144
+			public const int mr_chooser_list = 2131362116;
 			
-			// aapt resource value: 0x7f0b0145
-			public const int mediaItemName = 2131427653;
+			// aapt resource value: 0x7f0a0147
+			public const int mr_chooser_route_desc = 2131362119;
 			
-			// aapt resource value: 0x7f0b0144
-			public const int mediaItemNumberViewFlipper = 2131427652;
+			// aapt resource value: 0x7f0a0145
+			public const int mr_chooser_route_icon = 2131362117;
 			
-			// aapt resource value: 0x7f0b0142
-			public const int mediaItemRow = 2131427650;
+			// aapt resource value: 0x7f0a0146
+			public const int mr_chooser_route_name = 2131362118;
 			
-			// aapt resource value: 0x7f0b011b
-			public const int mediaListHeader = 2131427611;
+			// aapt resource value: 0x7f0a0143
+			public const int mr_chooser_title = 2131362115;
 			
-			// aapt resource value: 0x7f0b0141
-			public const int mediaRowSelector = 2131427649;
+			// aapt resource value: 0x7f0a014c
+			public const int mr_close = 2131362124;
 			
-			// aapt resource value: 0x7f0b013f
-			public const int mediaRowSeparator = 2131427647;
+			// aapt resource value: 0x7f0a0152
+			public const int mr_control_divider = 2131362130;
 			
-			// aapt resource value: 0x7f0b017a
-			public const int media_actions = 2131427706;
+			// aapt resource value: 0x7f0a0158
+			public const int mr_control_playback_ctrl = 2131362136;
 			
-			// aapt resource value: 0x7f0b00ec
-			public const int message = 2131427564;
+			// aapt resource value: 0x7f0a015b
+			public const int mr_control_subtitle = 2131362139;
 			
-			// aapt resource value: 0x7f0b0044
-			public const int middle = 2131427396;
+			// aapt resource value: 0x7f0a015a
+			public const int mr_control_title = 2131362138;
 			
-			// aapt resource value: 0x7f0b0075
-			public const int mini = 2131427445;
+			// aapt resource value: 0x7f0a0159
+			public const int mr_control_title_container = 2131362137;
 			
-			// aapt resource value: 0x7f0b012b
-			public const int more_actions_dock = 2131427627;
+			// aapt resource value: 0x7f0a014d
+			public const int mr_custom_control = 2131362125;
 			
-			// aapt resource value: 0x7f0b008c
-			public const int movieTimer = 2131427468;
+			// aapt resource value: 0x7f0a014e
+			public const int mr_default_control = 2131362126;
 			
-			// aapt resource value: 0x7f0b0166
-			public const int mr_art = 2131427686;
+			// aapt resource value: 0x7f0a0149
+			public const int mr_dialog_area = 2131362121;
 			
-			// aapt resource value: 0x7f0b015b
-			public const int mr_chooser_list = 2131427675;
+			// aapt resource value: 0x7f0a0148
+			public const int mr_expandable_area = 2131362120;
 			
-			// aapt resource value: 0x7f0b015e
-			public const int mr_chooser_route_desc = 2131427678;
+			// aapt resource value: 0x7f0a015c
+			public const int mr_group_expand_collapse = 2131362140;
 			
-			// aapt resource value: 0x7f0b015c
-			public const int mr_chooser_route_icon = 2131427676;
+			// aapt resource value: 0x7f0a0150
+			public const int mr_media_main_control = 2131362128;
 			
-			// aapt resource value: 0x7f0b015d
-			public const int mr_chooser_route_name = 2131427677;
+			// aapt resource value: 0x7f0a014b
+			public const int mr_name = 2131362123;
 			
-			// aapt resource value: 0x7f0b015a
-			public const int mr_chooser_title = 2131427674;
+			// aapt resource value: 0x7f0a0151
+			public const int mr_playback_control = 2131362129;
 			
-			// aapt resource value: 0x7f0b0163
-			public const int mr_close = 2131427683;
+			// aapt resource value: 0x7f0a014a
+			public const int mr_title_bar = 2131362122;
 			
-			// aapt resource value: 0x7f0b0169
-			public const int mr_control_divider = 2131427689;
+			// aapt resource value: 0x7f0a0153
+			public const int mr_volume_control = 2131362131;
 			
-			// aapt resource value: 0x7f0b016f
-			public const int mr_control_playback_ctrl = 2131427695;
+			// aapt resource value: 0x7f0a0154
+			public const int mr_volume_group_list = 2131362132;
 			
-			// aapt resource value: 0x7f0b0172
-			public const int mr_control_subtitle = 2131427698;
+			// aapt resource value: 0x7f0a0156
+			public const int mr_volume_item_icon = 2131362134;
 			
-			// aapt resource value: 0x7f0b0171
-			public const int mr_control_title = 2131427697;
+			// aapt resource value: 0x7f0a0157
+			public const int mr_volume_slider = 2131362135;
 			
-			// aapt resource value: 0x7f0b0170
-			public const int mr_control_title_container = 2131427696;
+			// aapt resource value: 0x7f0a003b
+			public const int multiply = 2131361851;
 			
-			// aapt resource value: 0x7f0b0164
-			public const int mr_custom_control = 2131427684;
+			// aapt resource value: 0x7f0a00b5
+			public const int navigation_header_container = 2131361973;
 			
-			// aapt resource value: 0x7f0b0165
-			public const int mr_default_control = 2131427685;
+			// aapt resource value: 0x7f0a010a
+			public const int navigator_container = 2131362058;
 			
-			// aapt resource value: 0x7f0b0160
-			public const int mr_dialog_area = 2131427680;
+			// aapt resource value: 0x7f0a004e
+			public const int never = 2131361870;
 			
-			// aapt resource value: 0x7f0b015f
-			public const int mr_expandable_area = 2131427679;
+			// aapt resource value: 0x7f0a0035
+			public const int none = 2131361845;
 			
-			// aapt resource value: 0x7f0b0173
-			public const int mr_group_expand_collapse = 2131427699;
+			// aapt resource value: 0x7f0a0031
+			public const int normal = 2131361841;
 			
-			// aapt resource value: 0x7f0b0167
-			public const int mr_media_main_control = 2131427687;
+			// aapt resource value: 0x7f0a016b
+			public const int notification_background = 2131362155;
 			
-			// aapt resource value: 0x7f0b0162
-			public const int mr_name = 2131427682;
+			// aapt resource value: 0x7f0a0166
+			public const int notification_main_column = 2131362150;
 			
-			// aapt resource value: 0x7f0b0168
-			public const int mr_playback_control = 2131427688;
+			// aapt resource value: 0x7f0a0165
+			public const int notification_main_column_container = 2131362149;
 			
-			// aapt resource value: 0x7f0b0161
-			public const int mr_title_bar = 2131427681;
+			// aapt resource value: 0x7f0a0105
+			public const int onboarding_fragment_root = 2131362053;
 			
-			// aapt resource value: 0x7f0b016a
-			public const int mr_volume_control = 2131427690;
+			// aapt resource value: 0x7f0a0108
+			public const int page_container = 2131362056;
 			
-			// aapt resource value: 0x7f0b016b
-			public const int mr_volume_group_list = 2131427691;
+			// aapt resource value: 0x7f0a010b
+			public const int page_indicator = 2131362059;
 			
-			// aapt resource value: 0x7f0b016d
-			public const int mr_volume_item_icon = 2131427693;
+			// aapt resource value: 0x7f0a006e
+			public const int parallax = 2131361902;
 			
-			// aapt resource value: 0x7f0b016e
-			public const int mr_volume_slider = 2131427694;
+			// aapt resource value: 0x7f0a0087
+			public const int parentPanel = 2131361927;
 			
-			// aapt resource value: 0x7f0b003b
-			public const int multiply = 2131427387;
+			// aapt resource value: 0x7f0a001e
+			public const int parent_matrix = 2131361822;
 			
-			// aapt resource value: 0x7f0b00cc
-			public const int navigation_header_container = 2131427532;
+			// aapt resource value: 0x7f0a0102
+			public const int paused = 2131362050;
 			
-			// aapt resource value: 0x7f0b0121
-			public const int navigator_container = 2131427617;
+			// aapt resource value: 0x7f0a010f
+			public const int picker = 2131362063;
 			
-			// aapt resource value: 0x7f0b004e
-			public const int never = 2131427406;
+			// aapt resource value: 0x7f0a006f
+			public const int pin = 2131361903;
 			
-			// aapt resource value: 0x7f0b0035
-			public const int none = 2131427381;
+			// aapt resource value: 0x7f0a011f
+			public const int playback_controls_dock = 2131362079;
 			
-			// aapt resource value: 0x7f0b0031
-			public const int normal = 2131427377;
+			// aapt resource value: 0x7f0a011e
+			public const int playback_fragment_background = 2131362078;
 			
-			// aapt resource value: 0x7f0b0182
-			public const int notification_background = 2131427714;
+			// aapt resource value: 0x7f0a011d
+			public const int playback_fragment_root = 2131362077;
 			
-			// aapt resource value: 0x7f0b017d
-			public const int notification_main_column = 2131427709;
+			// aapt resource value: 0x7f0a0112
+			public const int playback_progress = 2131362066;
 			
-			// aapt resource value: 0x7f0b017c
-			public const int notification_main_column_container = 2131427708;
+			// aapt resource value: 0x7f0a0103
+			public const int playing = 2131362051;
 			
-			// aapt resource value: 0x7f0b0080
-			public const int onKeyFocus = 2131427456;
+			// aapt resource value: 0x7f0a0006
+			public const int progress_circular = 2131361798;
 			
-			// aapt resource value: 0x7f0b0081
-			public const int onLostFocus = 2131427457;
+			// aapt resource value: 0x7f0a0007
+			public const int progress_horizontal = 2131361799;
 			
-			// aapt resource value: 0x7f0b011c
-			public const int onboarding_fragment_root = 2131427612;
+			// aapt resource value: 0x7f0a0097
+			public const int radio = 2131361943;
 			
-			// aapt resource value: 0x7f0b011f
-			public const int page_container = 2131427615;
+			// aapt resource value: 0x7f0a0062
+			public const int right = 2131361890;
 			
-			// aapt resource value: 0x7f0b0122
-			public const int page_indicator = 2131427618;
+			// aapt resource value: 0x7f0a016a
+			public const int right_icon = 2131362154;
 			
-			// aapt resource value: 0x7f0b006e
-			public const int parallax = 2131427438;
+			// aapt resource value: 0x7f0a0167
+			public const int right_side = 2131362151;
 			
-			// aapt resource value: 0x7f0b009e
-			public const int parentPanel = 2131427486;
+			// aapt resource value: 0x7f0a00fe
+			public const int row_content = 2131362046;
 			
-			// aapt resource value: 0x7f0b001e
-			public const int parent_matrix = 2131427358;
+			// aapt resource value: 0x7f0a00d3
+			public const int row_header = 2131362003;
 			
-			// aapt resource value: 0x7f0b0119
-			public const int paused = 2131427609;
+			// aapt resource value: 0x7f0a0127
+			public const int row_header_description = 2131362087;
 			
-			// aapt resource value: 0x7f0b0126
-			public const int picker = 2131427622;
+			// aapt resource value: 0x7f0a001f
+			public const int save_image_matrix = 2131361823;
 			
-			// aapt resource value: 0x7f0b006f
-			public const int pin = 2131427439;
+			// aapt resource value: 0x7f0a0020
+			public const int save_non_transition_alpha = 2131361824;
 			
-			// aapt resource value: 0x7f0b0136
-			public const int playback_controls_dock = 2131427638;
+			// aapt resource value: 0x7f0a0021
+			public const int save_scale_type = 2131361825;
 			
-			// aapt resource value: 0x7f0b0135
-			public const int playback_fragment_background = 2131427637;
+			// aapt resource value: 0x7f0a00bf
+			public const int scale_frame = 2131361983;
 			
-			// aapt resource value: 0x7f0b0134
-			public const int playback_fragment_root = 2131427636;
+			// aapt resource value: 0x7f0a003c
+			public const int screen = 2131361852;
 			
-			// aapt resource value: 0x7f0b0129
-			public const int playback_progress = 2131427625;
+			// aapt resource value: 0x7f0a0067
+			public const int scroll = 2131361895;
 			
-			// aapt resource value: 0x7f0b011a
-			public const int playing = 2131427610;
+			// aapt resource value: 0x7f0a008d
+			public const int scrollIndicatorDown = 2131361933;
 			
-			// aapt resource value: 0x7f0b008d
-			public const int print = 2131427469;
+			// aapt resource value: 0x7f0a0089
+			public const int scrollIndicatorUp = 2131361929;
 			
-			// aapt resource value: 0x7f0b0006
-			public const int progress_circular = 2131427334;
+			// aapt resource value: 0x7f0a008a
+			public const int scrollView = 2131361930;
 			
-			// aapt resource value: 0x7f0b0007
-			public const int progress_horizontal = 2131427335;
+			// aapt resource value: 0x7f0a0077
+			public const int scrollable = 2131361911;
 			
-			// aapt resource value: 0x7f0b00ae
-			public const int radio = 2131427502;
+			// aapt resource value: 0x7f0a00a2
+			public const int search_badge = 2131361954;
 			
-			// aapt resource value: 0x7f0b008e
-			public const int rectangle = 2131427470;
+			// aapt resource value: 0x7f0a00a1
+			public const int search_bar = 2131361953;
 			
-			// aapt resource value: 0x7f0b0062
-			public const int right = 2131427426;
+			// aapt resource value: 0x7f0a00a3
+			public const int search_button = 2131361955;
 			
-			// aapt resource value: 0x7f0b0181
-			public const int right_icon = 2131427713;
+			// aapt resource value: 0x7f0a00a8
+			public const int search_close_btn = 2131361960;
 			
-			// aapt resource value: 0x7f0b017e
-			public const int right_side = 2131427710;
+			// aapt resource value: 0x7f0a00a4
+			public const int search_edit_frame = 2131361956;
 			
-			// aapt resource value: 0x7f0b008f
-			public const int rollingBall = 2131427471;
+			// aapt resource value: 0x7f0a00aa
+			public const int search_go_btn = 2131361962;
 			
-			// aapt resource value: 0x7f0b0115
-			public const int row_content = 2131427605;
+			// aapt resource value: 0x7f0a00a5
+			public const int search_mag_icon = 2131361957;
 			
-			// aapt resource value: 0x7f0b00ea
-			public const int row_header = 2131427562;
+			// aapt resource value: 0x7f0a013a
+			public const int search_orb = 2131362106;
 			
-			// aapt resource value: 0x7f0b013e
-			public const int row_header_description = 2131427646;
+			// aapt resource value: 0x7f0a00a6
+			public const int search_plate = 2131361958;
 			
-			// aapt resource value: 0x7f0b001f
-			public const int save_image_matrix = 2131427359;
+			// aapt resource value: 0x7f0a00a7
+			public const int search_src_text = 2131361959;
 			
-			// aapt resource value: 0x7f0b0020
-			public const int save_non_transition_alpha = 2131427360;
+			// aapt resource value: 0x7f0a00ab
+			public const int search_voice_btn = 2131361963;
 			
-			// aapt resource value: 0x7f0b0021
-			public const int save_scale_type = 2131427361;
+			// aapt resource value: 0x7f0a011b
+			public const int secondary_controls_dock = 2131362075;
 			
-			// aapt resource value: 0x7f0b00d6
-			public const int scale_frame = 2131427542;
+			// aapt resource value: 0x7f0a00ac
+			public const int select_dialog_listview = 2131361964;
 			
-			// aapt resource value: 0x7f0b003c
-			public const int screen = 2131427388;
+			// aapt resource value: 0x7f0a0057
+			public const int selected = 2131361879;
 			
-			// aapt resource value: 0x7f0b0067
-			public const int scroll = 2131427431;
+			// aapt resource value: 0x7f0a0125
+			public const int separate_time = 2131362085;
 			
-			// aapt resource value: 0x7f0b00a4
-			public const int scrollIndicatorDown = 2131427492;
+			// aapt resource value: 0x7f0a0111
+			public const int separator = 2131362065;
 			
-			// aapt resource value: 0x7f0b00a0
-			public const int scrollIndicatorUp = 2131427488;
+			// aapt resource value: 0x7f0a0096
+			public const int shortcut = 2131361942;
 			
-			// aapt resource value: 0x7f0b00a1
-			public const int scrollView = 2131427489;
+			// aapt resource value: 0x7f0a0036
+			public const int showCustom = 2131361846;
 			
-			// aapt resource value: 0x7f0b0077
-			public const int scrollable = 2131427447;
+			// aapt resource value: 0x7f0a0037
+			public const int showHome = 2131361847;
 			
-			// aapt resource value: 0x7f0b00b9
-			public const int search_badge = 2131427513;
+			// aapt resource value: 0x7f0a0038
+			public const int showTitle = 2131361848;
 			
-			// aapt resource value: 0x7f0b00b8
-			public const int search_bar = 2131427512;
+			// aapt resource value: 0x7f0a016f
+			public const int sliding_tabs = 2131362159;
 			
-			// aapt resource value: 0x7f0b00ba
-			public const int search_button = 2131427514;
+			// aapt resource value: 0x7f0a00ad
+			public const int smallLabel = 2131361965;
 			
-			// aapt resource value: 0x7f0b00bf
-			public const int search_close_btn = 2131427519;
+			// aapt resource value: 0x7f0a00b4
+			public const int snackbar_action = 2131361972;
 			
-			// aapt resource value: 0x7f0b00bb
-			public const int search_edit_frame = 2131427515;
+			// aapt resource value: 0x7f0a00b3
+			public const int snackbar_text = 2131361971;
 			
-			// aapt resource value: 0x7f0b00c1
-			public const int search_go_btn = 2131427521;
+			// aapt resource value: 0x7f0a0068
+			public const int snap = 2131361896;
 			
-			// aapt resource value: 0x7f0b00bc
-			public const int search_mag_icon = 2131427516;
+			// aapt resource value: 0x7f0a0086
+			public const int spacer = 2131361926;
 			
-			// aapt resource value: 0x7f0b0151
-			public const int search_orb = 2131427665;
+			// aapt resource value: 0x7f0a0008
+			public const int split_action_bar = 2131361800;
 			
-			// aapt resource value: 0x7f0b00bd
-			public const int search_plate = 2131427517;
+			// aapt resource value: 0x7f0a003d
+			public const int src_atop = 2131361853;
 			
-			// aapt resource value: 0x7f0b00be
-			public const int search_src_text = 2131427518;
+			// aapt resource value: 0x7f0a003e
+			public const int src_in = 2131361854;
 			
-			// aapt resource value: 0x7f0b00c2
-			public const int search_voice_btn = 2131427522;
+			// aapt resource value: 0x7f0a003f
+			public const int src_over = 2131361855;
 			
-			// aapt resource value: 0x7f0b0132
-			public const int secondary_controls_dock = 2131427634;
+			// aapt resource value: 0x7f0a0063
+			public const int start = 2131361891;
 			
-			// aapt resource value: 0x7f0b00c3
-			public const int select_dialog_listview = 2131427523;
+			// aapt resource value: 0x7f0a0162
+			public const int status_bar_latest_event_content = 2131362146;
 			
-			// aapt resource value: 0x7f0b0057
-			public const int selected = 2131427415;
+			// aapt resource value: 0x7f0a0098
+			public const int submenuarrow = 2131361944;
 			
-			// aapt resource value: 0x7f0b013c
-			public const int separate_time = 2131427644;
+			// aapt resource value: 0x7f0a00a9
+			public const int submit_area = 2131361961;
 			
-			// aapt resource value: 0x7f0b0128
-			public const int separator = 2131427624;
+			// aapt resource value: 0x7f0a0032
+			public const int tabMode = 2131361842;
 			
-			// aapt resource value: 0x7f0b00ad
-			public const int shortcut = 2131427501;
+			// aapt resource value: 0x7f0a002c
+			public const int tag_transition_group = 2131361836;
 			
-			// aapt resource value: 0x7f0b0036
-			public const int showCustom = 2131427382;
+			// aapt resource value: 0x7f0a002d
+			public const int text = 2131361837;
 			
-			// aapt resource value: 0x7f0b0037
-			public const int showHome = 2131427383;
+			// aapt resource value: 0x7f0a002e
+			public const int text2 = 2131361838;
 			
-			// aapt resource value: 0x7f0b0038
-			public const int showTitle = 2131427384;
+			// aapt resource value: 0x7f0a008c
+			public const int textSpacerNoButtons = 2131361932;
 			
-			// aapt resource value: 0x7f0b0090
-			public const int singleCircle = 2131427472;
+			// aapt resource value: 0x7f0a008b
+			public const int textSpacerNoTitle = 2131361931;
 			
-			// aapt resource value: 0x7f0b0091
-			public const int slicedCircle = 2131427473;
+			// aapt resource value: 0x7f0a00ba
+			public const int text_input_password_toggle = 2131361978;
 			
-			// aapt resource value: 0x7f0b0186
-			public const int sliding_tabs = 2131427718;
+			// aapt resource value: 0x7f0a0027
+			public const int textinput_counter = 2131361831;
 			
-			// aapt resource value: 0x7f0b00c4
-			public const int smallLabel = 2131427524;
+			// aapt resource value: 0x7f0a0028
+			public const int textinput_error = 2131361832;
 			
-			// aapt resource value: 0x7f0b00cb
-			public const int snackbar_action = 2131427531;
+			// aapt resource value: 0x7f0a0123
+			public const int thumbs_row = 2131362083;
 			
-			// aapt resource value: 0x7f0b00ca
-			public const int snackbar_text = 2131427530;
+			// aapt resource value: 0x7f0a0168
+			public const int time = 2131362152;
 			
-			// aapt resource value: 0x7f0b0068
-			public const int snap = 2131427432;
+			// aapt resource value: 0x7f0a002f
+			public const int title = 2131361839;
 			
-			// aapt resource value: 0x7f0b009d
-			public const int spacer = 2131427485;
+			// aapt resource value: 0x7f0a0093
+			public const int titleDividerNoCustom = 2131361939;
 			
-			// aapt resource value: 0x7f0b0008
-			public const int split_action_bar = 2131427336;
+			// aapt resource value: 0x7f0a013d
+			public const int title_badge = 2131362109;
 			
-			// aapt resource value: 0x7f0b003d
-			public const int src_atop = 2131427389;
+			// aapt resource value: 0x7f0a013e
+			public const int title_orb = 2131362110;
 			
-			// aapt resource value: 0x7f0b003e
-			public const int src_in = 2131427390;
+			// aapt resource value: 0x7f0a0091
+			public const int title_template = 2131361937;
 			
-			// aapt resource value: 0x7f0b003f
-			public const int src_over = 2131427391;
+			// aapt resource value: 0x7f0a00fd
+			public const int title_text = 2131362045;
 			
-			// aapt resource value: 0x7f0b0063
-			public const int start = 2131427427;
+			// aapt resource value: 0x7f0a0170
+			public const int toolbar = 2131362160;
 			
-			// aapt resource value: 0x7f0b0179
-			public const int status_bar_latest_event_content = 2131427705;
+			// aapt resource value: 0x7f0a0051
+			public const int top = 2131361873;
 			
-			// aapt resource value: 0x7f0b00af
-			public const int submenuarrow = 2131427503;
+			// aapt resource value: 0x7f0a0090
+			public const int topPanel = 2131361936;
 			
-			// aapt resource value: 0x7f0b00c0
-			public const int submit_area = 2131427520;
+			// aapt resource value: 0x7f0a0116
+			public const int total_time = 2131362070;
 			
-			// aapt resource value: 0x7f0b0032
-			public const int tabMode = 2131427378;
+			// aapt resource value: 0x7f0a00b1
+			public const int touch_outside = 2131361969;
 			
-			// aapt resource value: 0x7f0b002c
-			public const int tag_transition_group = 2131427372;
+			// aapt resource value: 0x7f0a001c
+			public const int transitionPosition = 2131361820;
 			
-			// aapt resource value: 0x7f0b002d
-			public const int text = 2131427373;
+			// aapt resource value: 0x7f0a0022
+			public const int transition_current_scene = 2131361826;
 			
-			// aapt resource value: 0x7f0b002e
-			public const int text2 = 2131427374;
+			// aapt resource value: 0x7f0a0023
+			public const int transition_layout_save = 2131361827;
 			
-			// aapt resource value: 0x7f0b00a3
-			public const int textSpacerNoButtons = 2131427491;
+			// aapt resource value: 0x7f0a0024
+			public const int transition_position = 2131361828;
 			
-			// aapt resource value: 0x7f0b00a2
-			public const int textSpacerNoTitle = 2131427490;
+			// aapt resource value: 0x7f0a0025
+			public const int transition_scene_layoutid_cache = 2131361829;
 			
-			// aapt resource value: 0x7f0b00d1
-			public const int text_input_password_toggle = 2131427537;
+			// aapt resource value: 0x7f0a0026
+			public const int transition_transform = 2131361830;
 			
-			// aapt resource value: 0x7f0b0027
-			public const int textinput_counter = 2131427367;
+			// aapt resource value: 0x7f0a0124
+			public const int transport_row = 2131362084;
 			
-			// aapt resource value: 0x7f0b0028
-			public const int textinput_error = 2131427368;
+			// aapt resource value: 0x7f0a0040
+			public const int uniform = 2131361856;
 			
-			// aapt resource value: 0x7f0b013a
-			public const int thumbs_row = 2131427642;
+			// aapt resource value: 0x7f0a0009
+			public const int up = 2131361801;
 			
-			// aapt resource value: 0x7f0b017f
-			public const int time = 2131427711;
+			// aapt resource value: 0x7f0a0039
+			public const int useLogo = 2131361849;
 			
-			// aapt resource value: 0x7f0b002f
-			public const int title = 2131427375;
+			// aapt resource value: 0x7f0a0142
+			public const int video_surface = 2131362114;
 			
-			// aapt resource value: 0x7f0b00aa
-			public const int titleDividerNoCustom = 2131427498;
+			// aapt resource value: 0x7f0a00c9
+			public const int video_surface_container = 2131361993;
 			
-			// aapt resource value: 0x7f0b0154
-			public const int title_badge = 2131427668;
+			// aapt resource value: 0x7f0a0029
+			public const int view_offset_helper = 2131361833;
 			
-			// aapt resource value: 0x7f0b0155
-			public const int title_orb = 2131427669;
+			// aapt resource value: 0x7f0a0171
+			public const int visible = 2131362161;
 			
-			// aapt resource value: 0x7f0b00a8
-			public const int title_template = 2131427496;
+			// aapt resource value: 0x7f0a0155
+			public const int volume_item_container = 2131362133;
 			
-			// aapt resource value: 0x7f0b0114
-			public const int title_text = 2131427604;
+			// aapt resource value: 0x7f0a004f
+			public const int withText = 2131361871;
 			
-			// aapt resource value: 0x7f0b0187
-			public const int toolbar = 2131427719;
-			
-			// aapt resource value: 0x7f0b0051
-			public const int top = 2131427409;
-			
-			// aapt resource value: 0x7f0b00a7
-			public const int topPanel = 2131427495;
-			
-			// aapt resource value: 0x7f0b012d
-			public const int total_time = 2131427629;
-			
-			// aapt resource value: 0x7f0b00c8
-			public const int touch_outside = 2131427528;
-			
-			// aapt resource value: 0x7f0b001c
-			public const int transitionPosition = 2131427356;
-			
-			// aapt resource value: 0x7f0b0022
-			public const int transition_current_scene = 2131427362;
-			
-			// aapt resource value: 0x7f0b0023
-			public const int transition_layout_save = 2131427363;
-			
-			// aapt resource value: 0x7f0b0024
-			public const int transition_position = 2131427364;
-			
-			// aapt resource value: 0x7f0b0025
-			public const int transition_scene_layoutid_cache = 2131427365;
-			
-			// aapt resource value: 0x7f0b0026
-			public const int transition_transform = 2131427366;
-			
-			// aapt resource value: 0x7f0b013b
-			public const int transport_row = 2131427643;
-			
-			// aapt resource value: 0x7f0b0040
-			public const int uniform = 2131427392;
-			
-			// aapt resource value: 0x7f0b0009
-			public const int up = 2131427337;
-			
-			// aapt resource value: 0x7f0b0039
-			public const int useLogo = 2131427385;
-			
-			// aapt resource value: 0x7f0b007f
-			public const int value = 2131427455;
-			
-			// aapt resource value: 0x7f0b0159
-			public const int video_surface = 2131427673;
-			
-			// aapt resource value: 0x7f0b00e0
-			public const int video_surface_container = 2131427552;
-			
-			// aapt resource value: 0x7f0b0029
-			public const int view_offset_helper = 2131427369;
-			
-			// aapt resource value: 0x7f0b0188
-			public const int visible = 2131427720;
-			
-			// aapt resource value: 0x7f0b016c
-			public const int volume_item_container = 2131427692;
-			
-			// aapt resource value: 0x7f0b004f
-			public const int withText = 2131427407;
-			
-			// aapt resource value: 0x7f0b0041
-			public const int wrap_content = 2131427393;
-			
-			// aapt resource value: 0x7f0b0092
-			public const int zoomingTarget = 2131427474;
+			// aapt resource value: 0x7f0a0041
+			public const int wrap_content = 2131361857;
 			
 			static Id()
 			{
@@ -8059,362 +6546,362 @@ namespace Facile.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f090001
-			public const int ApplicationName = 2131296257;
+			// aapt resource value: 0x7f0b0070
+			public const int ApplicationName = 2131427440;
 			
-			// aapt resource value: 0x7f090000
-			public const int Hello = 2131296256;
+			// aapt resource value: 0x7f0b006f
+			public const int Hello = 2131427439;
 			
-			// aapt resource value: 0x7f090072
-			public const int Load_More = 2131296370;
+			// aapt resource value: 0x7f0b0071
+			public const int Load_More = 2131427441;
 			
-			// aapt resource value: 0x7f090017
-			public const int abc_action_bar_home_description = 2131296279;
+			// aapt resource value: 0x7f0b0015
+			public const int abc_action_bar_home_description = 2131427349;
 			
-			// aapt resource value: 0x7f090018
-			public const int abc_action_bar_up_description = 2131296280;
+			// aapt resource value: 0x7f0b0016
+			public const int abc_action_bar_up_description = 2131427350;
 			
-			// aapt resource value: 0x7f090019
-			public const int abc_action_menu_overflow_description = 2131296281;
+			// aapt resource value: 0x7f0b0017
+			public const int abc_action_menu_overflow_description = 2131427351;
 			
-			// aapt resource value: 0x7f09001a
-			public const int abc_action_mode_done = 2131296282;
+			// aapt resource value: 0x7f0b0018
+			public const int abc_action_mode_done = 2131427352;
 			
-			// aapt resource value: 0x7f09001b
-			public const int abc_activity_chooser_view_see_all = 2131296283;
+			// aapt resource value: 0x7f0b0019
+			public const int abc_activity_chooser_view_see_all = 2131427353;
 			
-			// aapt resource value: 0x7f09001c
-			public const int abc_activitychooserview_choose_application = 2131296284;
+			// aapt resource value: 0x7f0b001a
+			public const int abc_activitychooserview_choose_application = 2131427354;
 			
-			// aapt resource value: 0x7f09001d
-			public const int abc_capital_off = 2131296285;
+			// aapt resource value: 0x7f0b001b
+			public const int abc_capital_off = 2131427355;
 			
-			// aapt resource value: 0x7f09001e
-			public const int abc_capital_on = 2131296286;
+			// aapt resource value: 0x7f0b001c
+			public const int abc_capital_on = 2131427356;
 			
-			// aapt resource value: 0x7f090029
-			public const int abc_font_family_body_1_material = 2131296297;
+			// aapt resource value: 0x7f0b0027
+			public const int abc_font_family_body_1_material = 2131427367;
 			
-			// aapt resource value: 0x7f09002a
-			public const int abc_font_family_body_2_material = 2131296298;
+			// aapt resource value: 0x7f0b0028
+			public const int abc_font_family_body_2_material = 2131427368;
 			
-			// aapt resource value: 0x7f09002b
-			public const int abc_font_family_button_material = 2131296299;
+			// aapt resource value: 0x7f0b0029
+			public const int abc_font_family_button_material = 2131427369;
 			
-			// aapt resource value: 0x7f09002c
-			public const int abc_font_family_caption_material = 2131296300;
+			// aapt resource value: 0x7f0b002a
+			public const int abc_font_family_caption_material = 2131427370;
 			
-			// aapt resource value: 0x7f09002d
-			public const int abc_font_family_display_1_material = 2131296301;
+			// aapt resource value: 0x7f0b002b
+			public const int abc_font_family_display_1_material = 2131427371;
 			
-			// aapt resource value: 0x7f09002e
-			public const int abc_font_family_display_2_material = 2131296302;
+			// aapt resource value: 0x7f0b002c
+			public const int abc_font_family_display_2_material = 2131427372;
 			
-			// aapt resource value: 0x7f09002f
-			public const int abc_font_family_display_3_material = 2131296303;
+			// aapt resource value: 0x7f0b002d
+			public const int abc_font_family_display_3_material = 2131427373;
 			
-			// aapt resource value: 0x7f090030
-			public const int abc_font_family_display_4_material = 2131296304;
+			// aapt resource value: 0x7f0b002e
+			public const int abc_font_family_display_4_material = 2131427374;
 			
-			// aapt resource value: 0x7f090031
-			public const int abc_font_family_headline_material = 2131296305;
+			// aapt resource value: 0x7f0b002f
+			public const int abc_font_family_headline_material = 2131427375;
 			
-			// aapt resource value: 0x7f090032
-			public const int abc_font_family_menu_material = 2131296306;
+			// aapt resource value: 0x7f0b0030
+			public const int abc_font_family_menu_material = 2131427376;
 			
-			// aapt resource value: 0x7f090033
-			public const int abc_font_family_subhead_material = 2131296307;
+			// aapt resource value: 0x7f0b0031
+			public const int abc_font_family_subhead_material = 2131427377;
 			
-			// aapt resource value: 0x7f090034
-			public const int abc_font_family_title_material = 2131296308;
+			// aapt resource value: 0x7f0b0032
+			public const int abc_font_family_title_material = 2131427378;
 			
-			// aapt resource value: 0x7f09001f
-			public const int abc_search_hint = 2131296287;
+			// aapt resource value: 0x7f0b001d
+			public const int abc_search_hint = 2131427357;
 			
-			// aapt resource value: 0x7f090020
-			public const int abc_searchview_description_clear = 2131296288;
+			// aapt resource value: 0x7f0b001e
+			public const int abc_searchview_description_clear = 2131427358;
 			
-			// aapt resource value: 0x7f090021
-			public const int abc_searchview_description_query = 2131296289;
+			// aapt resource value: 0x7f0b001f
+			public const int abc_searchview_description_query = 2131427359;
 			
-			// aapt resource value: 0x7f090022
-			public const int abc_searchview_description_search = 2131296290;
+			// aapt resource value: 0x7f0b0020
+			public const int abc_searchview_description_search = 2131427360;
 			
-			// aapt resource value: 0x7f090023
-			public const int abc_searchview_description_submit = 2131296291;
+			// aapt resource value: 0x7f0b0021
+			public const int abc_searchview_description_submit = 2131427361;
 			
-			// aapt resource value: 0x7f090024
-			public const int abc_searchview_description_voice = 2131296292;
+			// aapt resource value: 0x7f0b0022
+			public const int abc_searchview_description_voice = 2131427362;
 			
-			// aapt resource value: 0x7f090025
-			public const int abc_shareactionprovider_share_with = 2131296293;
+			// aapt resource value: 0x7f0b0023
+			public const int abc_shareactionprovider_share_with = 2131427363;
 			
-			// aapt resource value: 0x7f090026
-			public const int abc_shareactionprovider_share_with_application = 2131296294;
+			// aapt resource value: 0x7f0b0024
+			public const int abc_shareactionprovider_share_with_application = 2131427364;
 			
-			// aapt resource value: 0x7f090027
-			public const int abc_toolbar_collapse_description = 2131296295;
+			// aapt resource value: 0x7f0b0025
+			public const int abc_toolbar_collapse_description = 2131427365;
 			
-			// aapt resource value: 0x7f090068
-			public const int appbar_scrolling_view_behavior = 2131296360;
+			// aapt resource value: 0x7f0b0066
+			public const int appbar_scrolling_view_behavior = 2131427430;
 			
-			// aapt resource value: 0x7f090069
-			public const int bottom_sheet_behavior = 2131296361;
+			// aapt resource value: 0x7f0b0067
+			public const int bottom_sheet_behavior = 2131427431;
 			
-			// aapt resource value: 0x7f090074
-			public const int cancel_drop = 2131296372;
+			// aapt resource value: 0x7f0b0074
+			public const int cancel_drop = 2131427444;
 			
-			// aapt resource value: 0x7f09006a
-			public const int character_counter_pattern = 2131296362;
+			// aapt resource value: 0x7f0b0068
+			public const int character_counter_pattern = 2131427432;
 			
-			// aapt resource value: 0x7f090075
-			public const int drop_above = 2131296373;
+			// aapt resource value: 0x7f0b0075
+			public const int drop_above = 2131427445;
 			
-			// aapt resource value: 0x7f090076
-			public const int drop_below = 2131296374;
+			// aapt resource value: 0x7f0b0076
+			public const int drop_below = 2131427446;
 			
-			// aapt resource value: 0x7f090035
-			public const int lb_control_display_fast_forward_multiplier = 2131296309;
+			// aapt resource value: 0x7f0b0033
+			public const int lb_control_display_fast_forward_multiplier = 2131427379;
 			
-			// aapt resource value: 0x7f090036
-			public const int lb_control_display_rewind_multiplier = 2131296310;
+			// aapt resource value: 0x7f0b0034
+			public const int lb_control_display_rewind_multiplier = 2131427380;
 			
-			// aapt resource value: 0x7f090037
-			public const int lb_guidedaction_continue_title = 2131296311;
+			// aapt resource value: 0x7f0b0035
+			public const int lb_guidedaction_continue_title = 2131427381;
 			
-			// aapt resource value: 0x7f090038
-			public const int lb_guidedaction_finish_title = 2131296312;
+			// aapt resource value: 0x7f0b0036
+			public const int lb_guidedaction_finish_title = 2131427382;
 			
-			// aapt resource value: 0x7f09005c
-			public const int lb_guidedactions_item_disabled_chevron_alpha = 2131296348;
+			// aapt resource value: 0x7f0b005a
+			public const int lb_guidedactions_item_disabled_chevron_alpha = 2131427418;
 			
-			// aapt resource value: 0x7f09005d
-			public const int lb_guidedactions_item_disabled_description_text_alpha = 2131296349;
+			// aapt resource value: 0x7f0b005b
+			public const int lb_guidedactions_item_disabled_description_text_alpha = 2131427419;
 			
-			// aapt resource value: 0x7f09005e
-			public const int lb_guidedactions_item_disabled_text_alpha = 2131296350;
+			// aapt resource value: 0x7f0b005c
+			public const int lb_guidedactions_item_disabled_text_alpha = 2131427420;
 			
-			// aapt resource value: 0x7f09005f
-			public const int lb_guidedactions_item_enabled_chevron_alpha = 2131296351;
+			// aapt resource value: 0x7f0b005d
+			public const int lb_guidedactions_item_enabled_chevron_alpha = 2131427421;
 			
-			// aapt resource value: 0x7f090060
-			public const int lb_guidedactions_item_unselected_description_text_alpha = 2131296352;
+			// aapt resource value: 0x7f0b005e
+			public const int lb_guidedactions_item_unselected_description_text_alpha = 2131427422;
 			
-			// aapt resource value: 0x7f090061
-			public const int lb_guidedactions_item_unselected_text_alpha = 2131296353;
+			// aapt resource value: 0x7f0b005f
+			public const int lb_guidedactions_item_unselected_text_alpha = 2131427423;
 			
-			// aapt resource value: 0x7f090062
-			public const int lb_guidedactions_width_weight = 2131296354;
+			// aapt resource value: 0x7f0b0060
+			public const int lb_guidedactions_width_weight = 2131427424;
 			
-			// aapt resource value: 0x7f090063
-			public const int lb_guidedactions_width_weight_two_panels = 2131296355;
+			// aapt resource value: 0x7f0b0061
+			public const int lb_guidedactions_width_weight_two_panels = 2131427425;
 			
-			// aapt resource value: 0x7f090064
-			public const int lb_guidedbuttonactions_width_weight = 2131296356;
+			// aapt resource value: 0x7f0b0062
+			public const int lb_guidedbuttonactions_width_weight = 2131427426;
 			
-			// aapt resource value: 0x7f090065
-			public const int lb_guidedstep_height_weight = 2131296357;
+			// aapt resource value: 0x7f0b0063
+			public const int lb_guidedstep_height_weight = 2131427427;
 			
-			// aapt resource value: 0x7f090066
-			public const int lb_guidedstep_height_weight_translucent = 2131296358;
+			// aapt resource value: 0x7f0b0064
+			public const int lb_guidedstep_height_weight_translucent = 2131427428;
 			
-			// aapt resource value: 0x7f090067
-			public const int lb_guidedstep_keyline = 2131296359;
+			// aapt resource value: 0x7f0b0065
+			public const int lb_guidedstep_keyline = 2131427429;
 			
-			// aapt resource value: 0x7f090039
-			public const int lb_media_player_error = 2131296313;
+			// aapt resource value: 0x7f0b0037
+			public const int lb_media_player_error = 2131427383;
 			
-			// aapt resource value: 0x7f09003a
-			public const int lb_navigation_menu_contentDescription = 2131296314;
+			// aapt resource value: 0x7f0b0038
+			public const int lb_navigation_menu_contentDescription = 2131427384;
 			
-			// aapt resource value: 0x7f09003b
-			public const int lb_onboarding_accessibility_next = 2131296315;
+			// aapt resource value: 0x7f0b0039
+			public const int lb_onboarding_accessibility_next = 2131427385;
 			
-			// aapt resource value: 0x7f09003c
-			public const int lb_onboarding_get_started = 2131296316;
+			// aapt resource value: 0x7f0b003a
+			public const int lb_onboarding_get_started = 2131427386;
 			
-			// aapt resource value: 0x7f09003d
-			public const int lb_playback_controls_closed_captioning_disable = 2131296317;
+			// aapt resource value: 0x7f0b003b
+			public const int lb_playback_controls_closed_captioning_disable = 2131427387;
 			
-			// aapt resource value: 0x7f09003e
-			public const int lb_playback_controls_closed_captioning_enable = 2131296318;
+			// aapt resource value: 0x7f0b003c
+			public const int lb_playback_controls_closed_captioning_enable = 2131427388;
 			
-			// aapt resource value: 0x7f09003f
-			public const int lb_playback_controls_fast_forward = 2131296319;
+			// aapt resource value: 0x7f0b003d
+			public const int lb_playback_controls_fast_forward = 2131427389;
 			
-			// aapt resource value: 0x7f090040
-			public const int lb_playback_controls_fast_forward_multiplier = 2131296320;
+			// aapt resource value: 0x7f0b003e
+			public const int lb_playback_controls_fast_forward_multiplier = 2131427390;
 			
-			// aapt resource value: 0x7f090041
-			public const int lb_playback_controls_hidden = 2131296321;
+			// aapt resource value: 0x7f0b003f
+			public const int lb_playback_controls_hidden = 2131427391;
 			
-			// aapt resource value: 0x7f090042
-			public const int lb_playback_controls_high_quality_disable = 2131296322;
+			// aapt resource value: 0x7f0b0040
+			public const int lb_playback_controls_high_quality_disable = 2131427392;
 			
-			// aapt resource value: 0x7f090043
-			public const int lb_playback_controls_high_quality_enable = 2131296323;
+			// aapt resource value: 0x7f0b0041
+			public const int lb_playback_controls_high_quality_enable = 2131427393;
 			
-			// aapt resource value: 0x7f090044
-			public const int lb_playback_controls_more_actions = 2131296324;
+			// aapt resource value: 0x7f0b0042
+			public const int lb_playback_controls_more_actions = 2131427394;
 			
-			// aapt resource value: 0x7f090045
-			public const int lb_playback_controls_pause = 2131296325;
+			// aapt resource value: 0x7f0b0043
+			public const int lb_playback_controls_pause = 2131427395;
 			
-			// aapt resource value: 0x7f090046
-			public const int lb_playback_controls_picture_in_picture = 2131296326;
+			// aapt resource value: 0x7f0b0044
+			public const int lb_playback_controls_picture_in_picture = 2131427396;
 			
-			// aapt resource value: 0x7f090047
-			public const int lb_playback_controls_play = 2131296327;
+			// aapt resource value: 0x7f0b0045
+			public const int lb_playback_controls_play = 2131427397;
 			
-			// aapt resource value: 0x7f090048
-			public const int lb_playback_controls_repeat_all = 2131296328;
+			// aapt resource value: 0x7f0b0046
+			public const int lb_playback_controls_repeat_all = 2131427398;
 			
-			// aapt resource value: 0x7f090049
-			public const int lb_playback_controls_repeat_none = 2131296329;
+			// aapt resource value: 0x7f0b0047
+			public const int lb_playback_controls_repeat_none = 2131427399;
 			
-			// aapt resource value: 0x7f09004a
-			public const int lb_playback_controls_repeat_one = 2131296330;
+			// aapt resource value: 0x7f0b0048
+			public const int lb_playback_controls_repeat_one = 2131427400;
 			
-			// aapt resource value: 0x7f09004b
-			public const int lb_playback_controls_rewind = 2131296331;
+			// aapt resource value: 0x7f0b0049
+			public const int lb_playback_controls_rewind = 2131427401;
 			
-			// aapt resource value: 0x7f09004c
-			public const int lb_playback_controls_rewind_multiplier = 2131296332;
+			// aapt resource value: 0x7f0b004a
+			public const int lb_playback_controls_rewind_multiplier = 2131427402;
 			
-			// aapt resource value: 0x7f09004d
-			public const int lb_playback_controls_shown = 2131296333;
+			// aapt resource value: 0x7f0b004b
+			public const int lb_playback_controls_shown = 2131427403;
 			
-			// aapt resource value: 0x7f09004e
-			public const int lb_playback_controls_shuffle_disable = 2131296334;
+			// aapt resource value: 0x7f0b004c
+			public const int lb_playback_controls_shuffle_disable = 2131427404;
 			
-			// aapt resource value: 0x7f09004f
-			public const int lb_playback_controls_shuffle_enable = 2131296335;
+			// aapt resource value: 0x7f0b004d
+			public const int lb_playback_controls_shuffle_enable = 2131427405;
 			
-			// aapt resource value: 0x7f090050
-			public const int lb_playback_controls_skip_next = 2131296336;
+			// aapt resource value: 0x7f0b004e
+			public const int lb_playback_controls_skip_next = 2131427406;
 			
-			// aapt resource value: 0x7f090051
-			public const int lb_playback_controls_skip_previous = 2131296337;
+			// aapt resource value: 0x7f0b004f
+			public const int lb_playback_controls_skip_previous = 2131427407;
 			
-			// aapt resource value: 0x7f090052
-			public const int lb_playback_controls_thumb_down = 2131296338;
+			// aapt resource value: 0x7f0b0050
+			public const int lb_playback_controls_thumb_down = 2131427408;
 			
-			// aapt resource value: 0x7f090053
-			public const int lb_playback_controls_thumb_down_outline = 2131296339;
+			// aapt resource value: 0x7f0b0051
+			public const int lb_playback_controls_thumb_down_outline = 2131427409;
 			
-			// aapt resource value: 0x7f090054
-			public const int lb_playback_controls_thumb_up = 2131296340;
+			// aapt resource value: 0x7f0b0052
+			public const int lb_playback_controls_thumb_up = 2131427410;
 			
-			// aapt resource value: 0x7f090055
-			public const int lb_playback_controls_thumb_up_outline = 2131296341;
+			// aapt resource value: 0x7f0b0053
+			public const int lb_playback_controls_thumb_up_outline = 2131427411;
 			
-			// aapt resource value: 0x7f090056
-			public const int lb_playback_time_separator = 2131296342;
+			// aapt resource value: 0x7f0b0054
+			public const int lb_playback_time_separator = 2131427412;
 			
-			// aapt resource value: 0x7f090057
-			public const int lb_search_bar_hint = 2131296343;
+			// aapt resource value: 0x7f0b0055
+			public const int lb_search_bar_hint = 2131427413;
 			
-			// aapt resource value: 0x7f090058
-			public const int lb_search_bar_hint_speech = 2131296344;
+			// aapt resource value: 0x7f0b0056
+			public const int lb_search_bar_hint_speech = 2131427414;
 			
-			// aapt resource value: 0x7f090059
-			public const int lb_search_bar_hint_with_title = 2131296345;
+			// aapt resource value: 0x7f0b0057
+			public const int lb_search_bar_hint_with_title = 2131427415;
 			
-			// aapt resource value: 0x7f09005a
-			public const int lb_search_bar_hint_with_title_speech = 2131296346;
+			// aapt resource value: 0x7f0b0058
+			public const int lb_search_bar_hint_with_title_speech = 2131427416;
 			
-			// aapt resource value: 0x7f090071
-			public const int library_name = 2131296369;
+			// aapt resource value: 0x7f0b0072
+			public const int library_name = 2131427442;
 			
-			// aapt resource value: 0x7f090073
-			public const int load_more_items = 2131296371;
+			// aapt resource value: 0x7f0b0073
+			public const int load_more_items = 2131427443;
 			
-			// aapt resource value: 0x7f090002
-			public const int mr_button_content_description = 2131296258;
+			// aapt resource value: 0x7f0b0000
+			public const int mr_button_content_description = 2131427328;
 			
-			// aapt resource value: 0x7f090003
-			public const int mr_cast_button_connected = 2131296259;
+			// aapt resource value: 0x7f0b0001
+			public const int mr_cast_button_connected = 2131427329;
 			
-			// aapt resource value: 0x7f090004
-			public const int mr_cast_button_connecting = 2131296260;
+			// aapt resource value: 0x7f0b0002
+			public const int mr_cast_button_connecting = 2131427330;
 			
-			// aapt resource value: 0x7f090005
-			public const int mr_cast_button_disconnected = 2131296261;
+			// aapt resource value: 0x7f0b0003
+			public const int mr_cast_button_disconnected = 2131427331;
 			
-			// aapt resource value: 0x7f090006
-			public const int mr_chooser_searching = 2131296262;
+			// aapt resource value: 0x7f0b0004
+			public const int mr_chooser_searching = 2131427332;
 			
-			// aapt resource value: 0x7f090007
-			public const int mr_chooser_title = 2131296263;
+			// aapt resource value: 0x7f0b0005
+			public const int mr_chooser_title = 2131427333;
 			
-			// aapt resource value: 0x7f090008
-			public const int mr_controller_album_art = 2131296264;
+			// aapt resource value: 0x7f0b0006
+			public const int mr_controller_album_art = 2131427334;
 			
-			// aapt resource value: 0x7f090009
-			public const int mr_controller_casting_screen = 2131296265;
+			// aapt resource value: 0x7f0b0007
+			public const int mr_controller_casting_screen = 2131427335;
 			
-			// aapt resource value: 0x7f09000a
-			public const int mr_controller_close_description = 2131296266;
+			// aapt resource value: 0x7f0b0008
+			public const int mr_controller_close_description = 2131427336;
 			
-			// aapt resource value: 0x7f09000b
-			public const int mr_controller_collapse_group = 2131296267;
+			// aapt resource value: 0x7f0b0009
+			public const int mr_controller_collapse_group = 2131427337;
 			
-			// aapt resource value: 0x7f09000c
-			public const int mr_controller_disconnect = 2131296268;
+			// aapt resource value: 0x7f0b000a
+			public const int mr_controller_disconnect = 2131427338;
 			
-			// aapt resource value: 0x7f09000d
-			public const int mr_controller_expand_group = 2131296269;
+			// aapt resource value: 0x7f0b000b
+			public const int mr_controller_expand_group = 2131427339;
 			
-			// aapt resource value: 0x7f09000e
-			public const int mr_controller_no_info_available = 2131296270;
+			// aapt resource value: 0x7f0b000c
+			public const int mr_controller_no_info_available = 2131427340;
 			
-			// aapt resource value: 0x7f09000f
-			public const int mr_controller_no_media_selected = 2131296271;
+			// aapt resource value: 0x7f0b000d
+			public const int mr_controller_no_media_selected = 2131427341;
 			
-			// aapt resource value: 0x7f090010
-			public const int mr_controller_pause = 2131296272;
+			// aapt resource value: 0x7f0b000e
+			public const int mr_controller_pause = 2131427342;
 			
-			// aapt resource value: 0x7f090011
-			public const int mr_controller_play = 2131296273;
+			// aapt resource value: 0x7f0b000f
+			public const int mr_controller_play = 2131427343;
 			
-			// aapt resource value: 0x7f090012
-			public const int mr_controller_stop = 2131296274;
+			// aapt resource value: 0x7f0b0010
+			public const int mr_controller_stop = 2131427344;
 			
-			// aapt resource value: 0x7f090013
-			public const int mr_controller_stop_casting = 2131296275;
+			// aapt resource value: 0x7f0b0011
+			public const int mr_controller_stop_casting = 2131427345;
 			
-			// aapt resource value: 0x7f090014
-			public const int mr_controller_volume_slider = 2131296276;
+			// aapt resource value: 0x7f0b0012
+			public const int mr_controller_volume_slider = 2131427346;
 			
-			// aapt resource value: 0x7f090015
-			public const int mr_system_route_name = 2131296277;
+			// aapt resource value: 0x7f0b0013
+			public const int mr_system_route_name = 2131427347;
 			
-			// aapt resource value: 0x7f090016
-			public const int mr_user_route_category_name = 2131296278;
+			// aapt resource value: 0x7f0b0014
+			public const int mr_user_route_category_name = 2131427348;
 			
-			// aapt resource value: 0x7f09005b
-			public const int orb_search_action = 2131296347;
+			// aapt resource value: 0x7f0b0059
+			public const int orb_search_action = 2131427417;
 			
-			// aapt resource value: 0x7f09006b
-			public const int password_toggle_content_description = 2131296363;
+			// aapt resource value: 0x7f0b0069
+			public const int password_toggle_content_description = 2131427433;
 			
-			// aapt resource value: 0x7f09006c
-			public const int path_password_eye = 2131296364;
+			// aapt resource value: 0x7f0b006a
+			public const int path_password_eye = 2131427434;
 			
-			// aapt resource value: 0x7f09006d
-			public const int path_password_eye_mask_strike_through = 2131296365;
+			// aapt resource value: 0x7f0b006b
+			public const int path_password_eye_mask_strike_through = 2131427435;
 			
-			// aapt resource value: 0x7f09006e
-			public const int path_password_eye_mask_visible = 2131296366;
+			// aapt resource value: 0x7f0b006c
+			public const int path_password_eye_mask_visible = 2131427436;
 			
-			// aapt resource value: 0x7f09006f
-			public const int path_password_strike_through = 2131296367;
+			// aapt resource value: 0x7f0b006d
+			public const int path_password_strike_through = 2131427437;
 			
-			// aapt resource value: 0x7f090028
-			public const int search_menu_title = 2131296296;
+			// aapt resource value: 0x7f0b0026
+			public const int search_menu_title = 2131427366;
 			
-			// aapt resource value: 0x7f090070
-			public const int status_bar_notification_info_overflow = 2131296368;
+			// aapt resource value: 0x7f0b006e
+			public const int status_bar_notification_info_overflow = 2131427438;
 			
 			static String()
 			{
@@ -12233,156 +10720,6 @@ namespace Facile.Droid
 			
 			// aapt resource value: 12
 			public const int SearchView_voiceIcon = 12;
-			
-			public static int[] SfBusyIndicator = new int[] {
-					2130772547,
-					2130772548,
-					2130772549,
-					2130772550,
-					2130772551,
-					2130772552,
-					2130772553,
-					2130772554,
-					2130772555};
-			
-			// aapt resource value: 0
-			public const int SfBusyIndicator_busyIndicatorAnimationTypes = 0;
-			
-			// aapt resource value: 8
-			public const int SfBusyIndicator_busyIndicatorIsBusy = 8;
-			
-			// aapt resource value: 6
-			public const int SfBusyIndicator_busyIndicatorSecondaryColor = 6;
-			
-			// aapt resource value: 1
-			public const int SfBusyIndicator_busyIndicatorTextColor = 1;
-			
-			// aapt resource value: 5
-			public const int SfBusyIndicator_busyIndicatorTextSize = 5;
-			
-			// aapt resource value: 4
-			public const int SfBusyIndicator_busyIndicatorTitle = 4;
-			
-			// aapt resource value: 7
-			public const int SfBusyIndicator_busyIndicatorTitlePlacement = 7;
-			
-			// aapt resource value: 2
-			public const int SfBusyIndicator_busyIndicatorViewBoxHeight = 2;
-			
-			// aapt resource value: 3
-			public const int SfBusyIndicator_busyIndicatorViewBoxWidth = 3;
-			
-			public static int[] SfCarousel = new int[] {
-					2130772534,
-					2130772535,
-					2130772536,
-					2130772537,
-					2130772538,
-					2130772539,
-					2130772540,
-					2130772541,
-					2130772542,
-					2130772543,
-					2130772544,
-					2130772545,
-					2130772546};
-			
-			// aapt resource value: 12
-			public const int SfCarousel_carouselAllowLoadMore = 12;
-			
-			// aapt resource value: 9
-			public const int SfCarousel_carouselDuration = 9;
-			
-			// aapt resource value: 1
-			public const int SfCarousel_carouselEnableVirtualization = 1;
-			
-			// aapt resource value: 5
-			public const int SfCarousel_carouselItemHeight = 5;
-			
-			// aapt resource value: 2
-			public const int SfCarousel_carouselItemSpacing = 2;
-			
-			// aapt resource value: 6
-			public const int SfCarousel_carouselItemWidth = 6;
-			
-			// aapt resource value: 11
-			public const int SfCarousel_carouselLoadMoreItemsCount = 11;
-			
-			// aapt resource value: 3
-			public const int SfCarousel_carouselOffset = 3;
-			
-			// aapt resource value: 7
-			public const int SfCarousel_carouselRotationAngle = 7;
-			
-			// aapt resource value: 10
-			public const int SfCarousel_carouselScaleOffset = 10;
-			
-			// aapt resource value: 4
-			public const int SfCarousel_carouselSelectedIndex = 4;
-			
-			// aapt resource value: 8
-			public const int SfCarousel_carouselSelectedItemOffset = 8;
-			
-			// aapt resource value: 0
-			public const int SfCarousel_carouselViewMode = 0;
-			
-			public static int[] SfNumericTextBox = new int[] {
-					2130772520,
-					2130772521,
-					2130772522,
-					2130772523,
-					2130772524,
-					2130772525,
-					2130772526,
-					2130772527,
-					2130772528,
-					2130772529,
-					2130772530,
-					2130772531,
-					2130772532,
-					2130772533};
-			
-			// aapt resource value: 9
-			public const int SfNumericTextBox_allowNull = 9;
-			
-			// aapt resource value: 10
-			public const int SfNumericTextBox_borderColor = 10;
-			
-			// aapt resource value: 12
-			public const int SfNumericTextBox_culture = 12;
-			
-			// aapt resource value: 3
-			public const int SfNumericTextBox_enableGroupSeparator = 3;
-			
-			// aapt resource value: 8
-			public const int SfNumericTextBox_fontSize = 8;
-			
-			// aapt resource value: 6
-			public const int SfNumericTextBox_maximumDecimalDigits = 6;
-			
-			// aapt resource value: 4
-			public const int SfNumericTextBox_numberFormat = 4;
-			
-			// aapt resource value: 13
-			public const int SfNumericTextBox_numericTextBoxValue = 13;
-			
-			// aapt resource value: 0
-			public const int SfNumericTextBox_parsingMode = 0;
-			
-			// aapt resource value: 1
-			public const int SfNumericTextBox_percentDisplayMode = 1;
-			
-			// aapt resource value: 7
-			public const int SfNumericTextBox_selectAllOnFocus = 7;
-			
-			// aapt resource value: 2
-			public const int SfNumericTextBox_valueChangeMode = 2;
-			
-			// aapt resource value: 5
-			public const int SfNumericTextBox_watermark = 5;
-			
-			// aapt resource value: 11
-			public const int SfNumericTextBox_watermarkColor = 11;
 			
 			public static int[] SnackbarLayout = new int[] {
 					16843039,

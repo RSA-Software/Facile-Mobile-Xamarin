@@ -70,6 +70,14 @@ namespace Facile
 			dataGrid.TableSummaryRows.Add(summaryRow1);
 			dataGrid.LiveDataUpdateMode = LiveDataUpdateMode.AllowSummaryUpdate;
 
+			/*
+			dataGrid.AllowEditing = true;
+			GridNumericColumn column = new GridNumericColumn();
+			column.MappingName = "Incasso";
+			column.AllowEditing = true;
+			dataGrid.EditTapAction = TapAction.OnTap;
+			*/
+
 			_cli_changed = false;
 			_dst_changed = false;
 		}

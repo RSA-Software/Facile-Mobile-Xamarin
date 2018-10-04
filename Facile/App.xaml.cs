@@ -22,7 +22,12 @@ namespace Facile
         {
 			printer = null;
 			facile_db_impo = null;
-			Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mjg3MTVAMzEzNjJlMzMyZTMwWjJMQ1RRTlFXNkdnaWpzS0l6MGcyTFlWQzhJSnZvK01mNyt0Y2hiTzZzVT0=");
+
+			// 16.2.x.x
+			Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzUyQDMxMzYyZTMyMmUzMEZpOGZMSHMvU3hFMU5Dazc2QVNJYjlPdWhMWlZOSHhFRjFLZ1RNbE55RTg9");
+
+			// 16.3.x.x
+			//Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mjg3MTVAMzEzNjJlMzMyZTMwWjJMQ1RRTlFXNkdnaWpzS0l6MGcyTFlWQzhJSnZvK01mNyt0Y2hiTzZzVT0=");
 
 			InitializeComponent();
 			MainPage = new NavigationPage(new FacilePage());
