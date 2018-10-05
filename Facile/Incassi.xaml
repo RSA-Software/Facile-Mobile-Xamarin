@@ -31,13 +31,15 @@
 
 				<!--  Griglia con Scadenze	-->
 				<syncfusion:SfDataGrid x:Name="dataGrid" AllowResizingColumn="true" HorizontalOptions="FillAndExpand"  AutoGenerateColumns="False" ColumnSizer="LastColumnFill" 
-									   AllowEditing="false"  
-									   GridLongPressed="OnGridLongPressed"
-									   EditTapAction="OnTap"
-									   CurrentCellBeginEdit="OnCurrentCellBeginEdit"
-									   CurrentCellEndEdit="OnCurrentCellEndEdit"
-									   QueryCellStyle="Handle_QueryCellStyle"
-									   >
+									   	SelectionMode="Multiple"   
+                   						NavigationMode="Cell"   
+                   					   	AllowEditing="True"
+									   	GridLongPressed="OnGridLongPressed"
+									   	EditTapAction="OnTap"
+									   	CurrentCellBeginEdit="OnCurrentCellBeginEdit"
+									   	CurrentCellEndEdit="OnCurrentCellEndEdit"
+									   	QueryCellStyle="Handle_QueryCellStyle"
+									   	>
 
 					
 	            	<syncfusion:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
