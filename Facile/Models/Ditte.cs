@@ -607,6 +607,37 @@ namespace Facile.Models
 		public bool dit_web_sta { get; set; }
 		public bool dit_isam_browsing { get; set; }
 		public int dit_geri_exp_counter { get; set; }
-		public bool calc_prezzi_per_qta { get; set; }
+		public bool dit_calc_prezzi_per_qta { get; set; }
+
+		public string dit_reg_ano { get; set; }
+		public int dit_ano_mod { get; set; }
+		public string dit_pec { get; set; }
+		public int dit_tik_mod { get; set; }
+		public int dit_con_anomalie { get; set; }
+		public string dit_digithub_server { get; set; }
+
+#if (RSAOFFICE)
+		public string dit_digithub_pwd { get; set; }
+#endif
+		public int dit_digithub_port { get; set; }
+		public bool dit_digithub_log { get; set; }
+		public bool dit_digithub_tls { get; set; }
+		public bool dit_digithub_passive { get; set; }
+
+#if (RSAOFFICE)
+		public int dit_digithub_offline_credit { get; set; }
+		public int dit_digithub_offline_used { get; set; }
+#endif
+		public double dit_aliquota_enasarco_0 { get; set; }
+		public double dit_aliquota_enasarco_1 { get; set; }
+		public double dit_aliquota_enasarco_2 { get; set; }
+		public double dit_aliquota_enasarco_3 { get; set; }
+		public double dit_massimale_enasarco_0 { get; set; }
+		public double dit_massimale_enasarco_1 { get; set; }
+		public double dit_massimale_enasarco_2 { get; set; }
+		public double dit_massimale_enasarco_3 { get; set; }
+		public double dit_totale_enasarco { get; set; }
+		public string dit_unused { get; set; }
+
 	}
 }

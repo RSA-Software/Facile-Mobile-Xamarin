@@ -26,5 +26,7 @@ namespace Facile.Models
 		public DateTime? iva_last_update { get; set; }
 		public float iva_ritenuta_perc { get; set; }
 		public string iva_user { get; set; }
-		public int iva_escludi_iva { get; set; }	}
+		public int iva_escludi_iva { get; set; }
+		public bool iva_enasarco { get; set; }
+	}
 }

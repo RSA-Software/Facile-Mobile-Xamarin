@@ -95,6 +95,8 @@ namespace Facile
 			m_imposta.Value = _parent.doc.fat_tot_iva;
 			m_totale.Value = _parent.doc.fat_tot_fattura;
 			m_acconto.Value = _parent.doc.fat_anticipo;
+			if (_parent.doc.fat_d_consegna.HasValue)
+				m_d_consegna.Date = _parent.doc.fat_d_consegna.Value;
 			change_event = true;
 		}
 
@@ -176,6 +178,15 @@ namespace Facile
 			try
 			{
 				_parent.doc.fat_anticipo = m_acconto.Value == null ? 0 : Convert.ToDouble(m_acconto.Value);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
+
+			try
+			{
+				_parent.doc.fat_d_consegna = m_d_consegna.Date;
 			}
 			catch (Exception ex)
 			{

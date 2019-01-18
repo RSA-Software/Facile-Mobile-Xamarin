@@ -824,9 +824,9 @@ namespace Facile.Extension
 			//
 			// Riporto automatico bollo per fatture con ritenuta acconto
 			//
-			if (fat.fat_tot_netto > FattureExtensions.LIMITE_BOLLO)
+			if (fat.fat_tot_esente > FattureExtensions.LIMITE_BOLLO)
 			{
-				double val = fat.fat_tot_netto - FattureExtensions.LIMITE_BOLLO;
+				double val = fat.fat_tot_esente - FattureExtensions.LIMITE_BOLLO;
 				if (val.TestIfZero((int)DecPlaces.TOT_DECIMAL_PLACES) != true) fat.fat_bolli_eff += app.facile_db_impo.dit_bolli;
 			}
 			// Fine
@@ -862,7 +862,7 @@ namespace Facile.Extension
 
 			fat.fat_tot_fattura += fat.fat_tot_non_docum + fat.fat_tot_iva + fat.fat_art15 + fat.fat_bolli_eff + fat.fat_cassa;
 			fat.fat_tot_fattura -= fat.fat_omaggi;
-			fat.fat_tot_pagare = fat.fat_tot_fattura - fat.fat_abbuoni - fat.fat_anticipo - fat.fat_ritenuta_acconto;
+			fat.fat_tot_pagare = fat.fat_tot_fattura - fat.fat_abbuoni - fat.fat_anticipo - fat.fat_ritenuta_acconto - fat.fat_totale_enasarco;
 			if (fat.fat_split_payment == true) fat.fat_tot_pagare -= fat.fat_tot_iva;
 			fat.fat_tot_sconto += (float)(fat.fat_tot_merce - fat.fat_tot_netto);
 
@@ -908,60 +908,63 @@ namespace Facile.Extension
 			// Rimuoviamo le aliquote Iva non Utilizzate e
 			// 
 			// 
-			if (fat.fat_cod_iva_0 != 0)
+			if (fat.fat_tipo != (short)DocTipo.TIPO_FAT && fat.fat_tipo != (short)DocTipo.TIPO_ACC)
 			{
-				var test = fat.fat_ripartizione_0.TestIfZero(2);
-				if (fat.fat_imponibile_0.TestIfZero(2) != true) test = false;
-				if (fat.fat_importo_0.TestIfZero(2) != true) test = false;
-				if (fat.fat_importo_iva_0.TestIfZero(2) != true) test = false;
-				if (test)
+				if (fat.fat_cod_iva_0 != 0)
 				{
-					fat.fat_cod_iva_0 = 0;
-					fat.fat_aliquota_0 = 0.0;
-					fat.fat_tipo_iva_0 = 0;
-					fat.fat_desc_iva_0 = String.Empty;
+					var test = fat.fat_ripartizione_0.TestIfZero(2);
+					if (fat.fat_imponibile_0.TestIfZero(2) != true) test = false;
+					if (fat.fat_importo_0.TestIfZero(2) != true) test = false;
+					if (fat.fat_importo_iva_0.TestIfZero(2) != true) test = false;
+					if (test)
+					{
+						fat.fat_cod_iva_0 = 0;
+						fat.fat_aliquota_0 = 0.0;
+						fat.fat_tipo_iva_0 = 0;
+						fat.fat_desc_iva_0 = String.Empty;
+					}
 				}
-			}
-			if (fat.fat_cod_iva_1 != 0)
-			{
-				var test = fat.fat_ripartizione_1.TestIfZero(2);
-				if (fat.fat_imponibile_1.TestIfZero(2) != true) test = false;
-				if (fat.fat_importo_1.TestIfZero(2) != true) test = false;
-				if (fat.fat_importo_iva_1.TestIfZero(2) != true) test = false;
-				if (test)
+				if (fat.fat_cod_iva_1 != 0)
 				{
-					fat.fat_cod_iva_1 = 0;
-					fat.fat_aliquota_1 = 0.0;
-					fat.fat_tipo_iva_1 = 0;
-					fat.fat_desc_iva_1 = String.Empty;
+					var test = fat.fat_ripartizione_1.TestIfZero(2);
+					if (fat.fat_imponibile_1.TestIfZero(2) != true) test = false;
+					if (fat.fat_importo_1.TestIfZero(2) != true) test = false;
+					if (fat.fat_importo_iva_1.TestIfZero(2) != true) test = false;
+					if (test)
+					{
+						fat.fat_cod_iva_1 = 0;
+						fat.fat_aliquota_1 = 0.0;
+						fat.fat_tipo_iva_1 = 0;
+						fat.fat_desc_iva_1 = String.Empty;
+					}
 				}
-			}
-			if (fat.fat_cod_iva_2 != 0)
-			{
-				var test = fat.fat_ripartizione_2.TestIfZero(2);
-				if (fat.fat_imponibile_2.TestIfZero(2) != true) test = false;
-				if (fat.fat_importo_2.TestIfZero(2) != true) test = false;
-				if (fat.fat_importo_iva_2.TestIfZero(2) != true) test = false;
-				if (test)
+				if (fat.fat_cod_iva_2 != 0)
 				{
-					fat.fat_cod_iva_2 = 0;
-					fat.fat_aliquota_2 = 0.0;
-					fat.fat_tipo_iva_2 = 0;
-					fat.fat_desc_iva_2 = String.Empty;
+					var test = fat.fat_ripartizione_2.TestIfZero(2);
+					if (fat.fat_imponibile_2.TestIfZero(2) != true) test = false;
+					if (fat.fat_importo_2.TestIfZero(2) != true) test = false;
+					if (fat.fat_importo_iva_2.TestIfZero(2) != true) test = false;
+					if (test)
+					{
+						fat.fat_cod_iva_2 = 0;
+						fat.fat_aliquota_2 = 0.0;
+						fat.fat_tipo_iva_2 = 0;
+						fat.fat_desc_iva_2 = String.Empty;
+					}
 				}
-			}
-			if (fat.fat_cod_iva_3 != 0)
-			{
-				var test = fat.fat_ripartizione_3.TestIfZero(2);
-				if (fat.fat_imponibile_3.TestIfZero(2) != true) test = false;
-				if (fat.fat_importo_3.TestIfZero(2) != true) test = false;
-				if (fat.fat_importo_iva_3.TestIfZero(2) != true) test = false;
-				if (test)
+				if (fat.fat_cod_iva_3 != 0)
 				{
-					fat.fat_cod_iva_3 = 0;
-					fat.fat_aliquota_3 = 0.0;
-					fat.fat_tipo_iva_3 = 0;
-					fat.fat_desc_iva_3 = String.Empty;
+					var test = fat.fat_ripartizione_3.TestIfZero(2);
+					if (fat.fat_imponibile_3.TestIfZero(2) != true) test = false;
+					if (fat.fat_importo_3.TestIfZero(2) != true) test = false;
+					if (fat.fat_importo_iva_3.TestIfZero(2) != true) test = false;
+					if (test)
+					{
+						fat.fat_cod_iva_3 = 0;
+						fat.fat_aliquota_3 = 0.0;
+						fat.fat_tipo_iva_3 = 0;
+						fat.fat_desc_iva_3 = String.Empty;
+					}
 				}
 			}
 
@@ -1094,6 +1097,8 @@ namespace Facile.Extension
 			fat.fat_importo_rit_0 = 0.0;
 			fat.fat_desc_iva_0 = "";
 			fat.des_imponibile_ivato_0 = 0.0;
+			fat.fat_aliquota_enasarco_0 = 0.0;
+			fat.fat_importo_enasarco_0 = 0.0;
 
 			fat.fat_cod_iva_1 = 0;
 			fat.fat_ripartizione_1 = 0.0;
@@ -1109,6 +1114,8 @@ namespace Facile.Extension
 			fat.fat_importo_rit_1 = 0.0;
 			fat.fat_desc_iva_1 = "";
 			fat.des_imponibile_ivato_1 = 0.0;
+			fat.fat_aliquota_enasarco_1 = 0.0;
+			fat.fat_importo_enasarco_1 = 0.0;
 
 			fat.fat_cod_iva_2 = 0;
 			fat.fat_ripartizione_2 = 0.0;
@@ -1124,6 +1131,8 @@ namespace Facile.Extension
 			fat.fat_importo_rit_2 = 0.0;
 			fat.fat_desc_iva_2 = "";
 			fat.des_imponibile_ivato_2 = 0.0;
+			fat.fat_aliquota_enasarco_2 = 0.0;
+			fat.fat_importo_enasarco_2 = 0.0;
 
 			fat.fat_cod_iva_3 = 0;
 			fat.fat_ripartizione_3 = 0.0;
@@ -1139,6 +1148,8 @@ namespace Facile.Extension
 			fat.fat_importo_rit_3 = 0.0;
 			fat.fat_desc_iva_3 = "";
 			fat.des_imponibile_ivato_3 = 0.0;
+			fat.fat_aliquota_enasarco_3 = 0.0;
+			fat.fat_importo_enasarco_3 = 0.0;
 
 			fat.fat_righe = 0;
 			fat.fat_tot_merce = 0.0;
@@ -1168,6 +1179,7 @@ namespace Facile.Extension
 			fat.fat_tot_accise = 0.0;
 			fat.fat_tot_contrassegni = 0.0;
 			fat.fat_dep_origine = 0;
+			fat.fat_totale_enasarco = 0.0;
 
 			if (fat.fat_recalc_colli == 1) fat.fat_colli = 0;
 			if (fat.fat_recalc_peso == 1) fat.fat_peso = 0.0;
@@ -1714,6 +1726,30 @@ namespace Facile.Extension
 				}
 				// Fine Gestione Ritenuta Acconto e cassa previdenziale professionisti
 
+
+				// Codice Aggiunto il 17/01/2019 per il calcolo del contributo enasarco
+				if (iva.iva_enasarco)
+				{
+					fat.fat_aliquota_enasarco_0 = 0.0;
+					var dit = new Ditte();
+					try
+					{
+						dit = await dbcon.GetAsync<Ditte>(((App)Application.Current).facile_db_impo.dit_codice);
+					}
+					catch
+					{
+						throw new RsaException(RsaException.NotFoundMsg, RsaException.NotFoundErr);
+					}
+					if (dit.dit_totale_enasarco < dit.dit_massimale_enasarco_0) fat.fat_aliquota_enasarco_0 = dit.dit_aliquota_enasarco_0;
+					else if (dit.dit_totale_enasarco < dit.dit_massimale_enasarco_1) fat.fat_aliquota_enasarco_0 = dit.dit_aliquota_enasarco_1;
+					else if (dit.dit_totale_enasarco < dit.dit_massimale_enasarco_2) fat.fat_aliquota_enasarco_0 = dit.dit_aliquota_enasarco_2;
+					else if (dit.dit_totale_enasarco < dit.dit_massimale_enasarco_3) fat.fat_aliquota_enasarco_0 = dit.dit_aliquota_enasarco_3;
+
+					fat.fat_importo_enasarco_0 += Math.Round((fat.fat_imponibile_0 * (fat.fat_aliquota_enasarco_0 / 100.0)), (int)NumericExtensions.DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_totale_enasarco += Math.Round((fat.fat_imponibile_0 * (fat.fat_aliquota_enasarco_0 / 100.0)), (int)NumericExtensions.DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+				}
+				// Fine calcolo contributo enasarco
+
 				// 
 				// Codice Aggiunto 16/12/2003 Gestione Omaggi 
 				//
@@ -1789,6 +1825,29 @@ namespace Facile.Extension
 					fat.fat_ripartizione_1 += Math.Round(fat.fat_imponibile_1 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 				}
 				// Fine Gestione Ritenuta Acconto e cassa previdenziale professionisti
+
+				// Codice Aggiunto il 17/01/2019 per il calcolo del contributo enasarco
+				if (iva.iva_enasarco)
+				{
+					fat.fat_aliquota_enasarco_1 = 0.0;
+					var dit = new Ditte();
+					try
+					{
+						dit = await dbcon.GetAsync<Ditte>(((App)Application.Current).facile_db_impo.dit_codice);
+					}
+					catch
+					{
+						throw new RsaException(RsaException.NotFoundMsg, RsaException.NotFoundErr);
+					}
+					if (dit.dit_totale_enasarco < dit.dit_massimale_enasarco_1) fat.fat_aliquota_enasarco_1 = dit.dit_aliquota_enasarco_0;
+					else if (dit.dit_totale_enasarco < dit.dit_massimale_enasarco_1) fat.fat_aliquota_enasarco_1 = dit.dit_aliquota_enasarco_1;
+					else if (dit.dit_totale_enasarco < dit.dit_massimale_enasarco_2) fat.fat_aliquota_enasarco_1 = dit.dit_aliquota_enasarco_2;
+					else if (dit.dit_totale_enasarco < dit.dit_massimale_enasarco_3) fat.fat_aliquota_enasarco_1 = dit.dit_aliquota_enasarco_3;
+
+					fat.fat_importo_enasarco_1 += Math.Round((fat.fat_imponibile_1 * (fat.fat_aliquota_enasarco_1 / 100.0)), (int)NumericExtensions.DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_totale_enasarco += Math.Round((fat.fat_imponibile_1 * (fat.fat_aliquota_enasarco_1 / 100.0)), (int)NumericExtensions.DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+				}
+				// Fine calcolo contributo enasarco
 
 				// 
 				// Codice Aggiunto 16/12/2003 Gestione Omaggi 
@@ -1867,6 +1926,29 @@ namespace Facile.Extension
 				}
 				// Fine Gestione Ritenuta Acconto e cassa previdenziale professionisti
 
+				// Codice Aggiunto il 17/01/2019 per il calcolo del contributo enasarco
+				if (iva.iva_enasarco)
+				{
+					fat.fat_aliquota_enasarco_2 = 0.0;
+					var dit = new Ditte();
+					try
+					{
+						dit = await dbcon.GetAsync<Ditte>(((App)Application.Current).facile_db_impo.dit_codice);
+					}
+					catch
+					{
+						throw new RsaException(RsaException.NotFoundMsg, RsaException.NotFoundErr);
+					}
+					if (dit.dit_totale_enasarco < dit.dit_massimale_enasarco_1) fat.fat_aliquota_enasarco_2 = dit.dit_aliquota_enasarco_0;
+					else if (dit.dit_totale_enasarco < dit.dit_massimale_enasarco_1) fat.fat_aliquota_enasarco_2 = dit.dit_aliquota_enasarco_1;
+					else if (dit.dit_totale_enasarco < dit.dit_massimale_enasarco_2) fat.fat_aliquota_enasarco_2 = dit.dit_aliquota_enasarco_2;
+					else if (dit.dit_totale_enasarco < dit.dit_massimale_enasarco_3) fat.fat_aliquota_enasarco_2 = dit.dit_aliquota_enasarco_3;
+
+					fat.fat_importo_enasarco_2 += Math.Round((fat.fat_imponibile_2 * (fat.fat_aliquota_enasarco_2 / 100.0)), (int)NumericExtensions.DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_totale_enasarco += Math.Round((fat.fat_imponibile_2 * (fat.fat_aliquota_enasarco_2 / 100.0)), (int)NumericExtensions.DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+				}
+				// Fine calcolo contributo enasarco
+
 				// 
 				// Codice Aggiunto 16/12/2003 Gestione Omaggi 
 				//
@@ -1942,6 +2024,29 @@ namespace Facile.Extension
 					fat.fat_ripartizione_3 += Math.Round(fat.fat_imponibile_3 * (iva.iva_cassa / 100.0), (int)DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
 				}
 				// Fine Gestione Ritenuta Acconto e cassa previdenziale professionisti
+
+				// Codice Aggiunto il 17/01/2019 per il calcolo del contributo enasarco
+				if (iva.iva_enasarco)
+				{
+					fat.fat_aliquota_enasarco_3 = 0.0;
+					var dit = new Ditte();
+					try
+					{
+						dit = await dbcon.GetAsync<Ditte>(((App)Application.Current).facile_db_impo.dit_codice);
+					}
+					catch
+					{
+						throw new RsaException(RsaException.NotFoundMsg, RsaException.NotFoundErr);
+					}
+					if (dit.dit_totale_enasarco < dit.dit_massimale_enasarco_1) fat.fat_aliquota_enasarco_3 = dit.dit_aliquota_enasarco_0;
+					else if (dit.dit_totale_enasarco < dit.dit_massimale_enasarco_1) fat.fat_aliquota_enasarco_3 = dit.dit_aliquota_enasarco_1;
+					else if (dit.dit_totale_enasarco < dit.dit_massimale_enasarco_2) fat.fat_aliquota_enasarco_3 = dit.dit_aliquota_enasarco_2;
+					else if (dit.dit_totale_enasarco < dit.dit_massimale_enasarco_3) fat.fat_aliquota_enasarco_3 = dit.dit_aliquota_enasarco_3;
+
+					fat.fat_importo_enasarco_3 += Math.Round((fat.fat_imponibile_3 * (fat.fat_aliquota_enasarco_3 / 100.0)), (int)NumericExtensions.DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+					fat.fat_totale_enasarco += Math.Round((fat.fat_imponibile_3 * (fat.fat_aliquota_enasarco_3 / 100.0)), (int)NumericExtensions.DecPlaces.TOT_DECIMAL_PLACES, MidpointRounding.AwayFromZero);
+				}
+				// Fine calcolo contributo enasarco
 
 				// 
 				// Codice Aggiunto 16/12/2003 Gestione Omaggi 

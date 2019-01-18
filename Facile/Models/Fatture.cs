@@ -222,10 +222,10 @@ namespace Facile.Models
   		public int fat_recalc_spese { get; set; }
   		public int fat_recalc_bolli { get; set; }
   		public int fat_trasf { get; set; }
-  		public string fat_prot_ord { get; set; }
+  		public string fat_prot_ord_free { get; set; }
   		public int fat_rel_des { get; set; }
   		public short fat_tipo_ven { get; set; }
-  		public string fat_prot_from { get; set; }
+  		public string fat_prot_from_free { get; set; }
   		public int fat_cns { get; set; }
   		public int fat_vuo_cod_0 { get; set; }
   		public int fat_vuo_cod_1 { get; set; }
@@ -394,6 +394,19 @@ namespace Facile.Models
   		public double fat_tot_prov_cpr { get; set; }
   		public double fat_tot_qevasa { get; set; }
 		public short fat_stato_anomalia { get; set; }
+
+		public string fat_prot_ord { get; set; }
+		public string fat_prot_from { get; set; }
+		public int fat_num_fe { get; set; }
+		public double fat_aliquota_enasarco_0 { get; set; }
+		public double fat_aliquota_enasarco_1 { get; set; }
+		public double fat_aliquota_enasarco_2 { get; set; }
+		public double fat_aliquota_enasarco_3 { get; set; }
+		public double fat_importo_enasarco_0 { get; set; }
+		public double fat_importo_enasarco_1 { get; set; }
+		public double fat_importo_enasarco_2 { get; set; }
+		public double fat_importo_enasarco_3 { get; set; }
+		public double fat_totale_enasarco { get; set; }
 		public string fat_unused { get; set; }
 
 		// Viene impostata a true per i nuovi documenti che sono editabili fino all'invio
