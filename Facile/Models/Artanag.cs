@@ -234,9 +234,12 @@ namespace Facile.Models
 		public DateTime? ana_ult_ord_for { get; set; }
 
 		[Ignore]
-		public string ana_img_path { get; set;}
+		public string ana_img_path { get; set; }
 
 		[Ignore]
 		public string ana_desc { get; set; }
+
+		[Ignore]
+		public double ana_esistenza { get; set; }
 	}
 }

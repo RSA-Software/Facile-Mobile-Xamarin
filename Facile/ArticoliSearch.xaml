@@ -35,9 +35,12 @@
 									</ic:CircleImage.HeightRequest>
 								</ic:CircleImage>
 
-							<StackLayout>
+							<StackLayout HorizontalOptions="FillAndExpand">
 	                        	<Label Text="{Binding ana_desc}" FontAttributes="Bold" HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap"/>
-	                        	<Label Text="{Binding ana_codice}" TextColor="Gray"/>
+								<StackLayout Orientation="Horizontal">
+									<Label Text="{Binding ana_codice}" TextColor="Gray"/>
+									<Label Text="{Binding ana_esistenza , StringFormat='{0:N}'}" TextColor="Gray" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End"/>
+								</StackLayout>
 	                    	</StackLayout>
 						</StackLayout>
 					</Frame>
@@ -63,9 +66,12 @@
 									</ic:CircleImage.HeightRequest>
 								</ic:CircleImage>
 
-							<StackLayout>
+							<StackLayout HorizontalOptions="FillAndExpand">
 	                        	<Label Text="{Binding ana_desc}" FontAttributes="Bold" HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap"/>
-	                        	<Label Text="{Binding ana_codice}" TextColor="White"/>
+								<StackLayout Orientation="Horizontal">
+									<Label Text="{Binding ana_codice}" TextColor="White"/>
+									<Label Text="{Binding ana_esistenza}" TextColor="White" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" BackgroundColor="Red"/>
+								</StackLayout>
 	                    	</StackLayout>
 						</StackLayout>
 					</Frame>

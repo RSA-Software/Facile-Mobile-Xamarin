@@ -30,7 +30,7 @@ namespace Facile
 
 			recTotal_ = 0;
 			recLoaded_ = 0;
-			recToLoad_ = 50;
+			recToLoad_ = 10;
 			query_ = "SELECT * FROM artanag ORDER BY ana_desc1";
 
 			listView.LoadMoreOption = Syncfusion.ListView.XForms.LoadMoreOption.Auto;
@@ -56,6 +56,7 @@ namespace Facile
 					ana.ana_desc = ana.ana_desc1 + " " + ana.ana_desc2;
 					ana.ana_desc = ana.ana_desc.Trim();
 					ana.ana_img_path = await GetImagePath(ana.ana_codice);
+					ana.ana_esistenza = await dbcon_.ExecuteScalarAsync<double>("SELECT IFNULL(SUM(aco_esist_attuale),0) FROM artcount WHERE aco_codice = ?", ana.ana_codice);
 				}
 				listView.ItemsSource = new ObservableCollection<Artanag>(anaList);
 			}
@@ -85,6 +86,7 @@ namespace Facile
 				ana.ana_desc = ana.ana_desc1 + " " + ana.ana_desc2;
 				ana.ana_desc = ana.ana_desc.Trim();
 				ana.ana_img_path = await GetImagePath(ana.ana_codice);
+				ana.ana_esistenza = await dbcon_.ExecuteScalarAsync<double>("SELECT IFNULL(SUM(aco_esist_attuale),0) FROM artcount WHERE aco_codice = ?", ana.ana_codice);
 				collection.Add(ana);
 			}
 			recLoaded_ = collection.Count;
@@ -113,6 +115,7 @@ namespace Facile
 				ana.ana_desc = ana.ana_desc1 + " " + ana.ana_desc2;
 				ana.ana_desc = ana.ana_desc.Trim();
 				ana.ana_img_path = await GetImagePath(ana.ana_codice);
+				ana.ana_esistenza = await dbcon_.ExecuteScalarAsync<double>("SELECT IFNULL(SUM(aco_esist_attuale),0) FROM artcount WHERE aco_codice = ?", ana.ana_codice);
 			}
 			recLoaded_ = anaList.Count;
 			listView.ItemsSource = new ObservableCollection<Artanag>(anaList);

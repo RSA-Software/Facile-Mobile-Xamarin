@@ -288,6 +288,7 @@
       <DependentUpon>IncassiModifica.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Images.cs" />
+    <Compile Include="Models\ArtCounter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MarkupExtensions\" />
@@ -359,37 +360,37 @@
       <HintPath>..\packages\Xamarin.Forms.3.4.0.1009999\lib\netstandard1.0\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Core.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.Core.16.4.0.47\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.Core.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.Core.16.4.0.48\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.Core.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.DataSource.Portable">
-      <HintPath>..\packages\Syncfusion.Xamarin.DataSource.16.4.0.47\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.DataSource.Portable.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.DataSource.16.4.0.48\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.DataSource.Portable.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.GridCommon.Portable">
-      <HintPath>..\packages\Syncfusion.Xamarin.GridCommon.16.4.0.47\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.GridCommon.Portable.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.GridCommon.16.4.0.48\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.GridCommon.Portable.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfBusyIndicator.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.4.0.47\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfBusyIndicator.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfBusyIndicator.16.4.0.48\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfBusyIndicator.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfCarousel.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.4.0.47\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfCarousel.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfCarousel.16.4.0.48\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfCarousel.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfNumericTextBox.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.4.0.47\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.16.4.0.48\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Data.Portable">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.4.0.47\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.Data.Portable.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.4.0.48\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.Data.Portable.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfDataGrid.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.4.0.47\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfDataGrid.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfDataGrid.16.4.0.48\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfDataGrid.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfListView.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.16.4.0.47\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfListView.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.16.4.0.48\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfListView.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfMaskedEdit.XForms">
-      <HintPath>..\packages\Syncfusion.Xamarin.SfMaskedEdit.16.4.0.47\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfMaskedEdit.XForms.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Xamarin.SfMaskedEdit.16.4.0.48\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.SfMaskedEdit.XForms.dll</HintPath>
     </Reference>
     <Reference Include="LinkOS.Plugin.Abstractions">
       <HintPath>..\packages\LinkOS_Xamarin_SDK.1.1.75\lib\LinkOS.Plugin.Abstractions.dll</HintPath>
@@ -398,7 +399,7 @@
       <HintPath>..\packages\LinkOS_Xamarin_SDK.1.1.75\lib\LinkOS.Plugin.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Licensing">
-      <HintPath>..\packages\Syncfusion.Licensing.16.4.0.47\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.Licensing.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Licensing.16.4.0.48\lib\portable-win+net45+wp80+win81+wpa81\Syncfusion.Licensing.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

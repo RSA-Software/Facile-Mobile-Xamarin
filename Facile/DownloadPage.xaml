@@ -64,6 +64,7 @@
 						<RowDefinition Height="38" />
 						<RowDefinition Height="38" />
 						<RowDefinition Height="38" />
+						<RowDefinition Height="38" />
 		            </Grid.RowDefinitions>
 
 		            <Grid.ColumnDefinitions>
@@ -284,7 +285,14 @@
 		            <Image Grid.Row="29" Grid.Column="3" Source="" x:Name="m_des_json"/>
 		            <Image Grid.Row="29" Grid.Column="4" Source="" x:Name="m_des_load"/>
 					<Label Grid.Row="29" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_des_rec"/>
-
+							
+		           	<Label Grid.Row="30" Grid.Column="0"  Text="Contatori" FontAttributes="Bold" TextColor="White" x:Name="m_aco"/>
+		            <Image Grid.Row="30" Grid.Column="1" Source="ic_cloud_white.png" x:Name="m_aco_download"/>
+		            <Image Grid.Row="30" Grid.Column="2" Source="" x:Name="m_aco_unzip"/>
+		            <Image Grid.Row="30" Grid.Column="3" Source="" x:Name="m_aco_json"/>
+		            <Image Grid.Row="30" Grid.Column="4" Source="" x:Name="m_aco_load"/>
+					<Label Grid.Row="30" Grid.Column="5" Text="" FontAttributes="Bold" HorizontalTextAlignment="End" x:Name="m_aco_rec"/>
+		
 		        </Grid>
 		    </StackLayout>
 			<busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="Globe" Title="Attendere..." IsBusy="false" AbsoluteLayout.LayoutBounds="0.5,0.5,250,250" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="Red"/>

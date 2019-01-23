@@ -105,6 +105,7 @@ namespace Facile
 			await dbcon.CreateTableAsync<ScaPagHead>();
 			await dbcon.CreateTableAsync<ScaPagRow>();
 			await dbcon.CreateTableAsync<Images>();
+			await dbcon.CreateTableAsync<ArtCounter>();
 
 			if (await dbcon.Table<LocalImpo>().CountAsync() == 0)
 			{

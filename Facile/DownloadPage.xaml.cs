@@ -224,6 +224,7 @@ namespace Facile
 				await ImportTableAsync<Trasporti>("trasport", m_tra_download, m_tra_unzip, m_tra_json, m_tra_load, m_tra, m_tra_rec);
 				await ImportTableAsync<Agganci>("agganci1", m_agg_download, m_agg_unzip, m_agg_json, m_agg_load, m_agg, m_agg_rec);
 				await ImportTableAsync<Descrizioni>("descriz1", m_des_download, m_des_unzip, m_des_json, m_des_load, m_des, m_des_rec);
+				await ImportTableAsync<ArtCounter>("artcount", m_aco_download, m_aco_unzip, m_aco_json, m_aco_load, m_aco, m_aco_rec);
 
 				busyIndicator.Title = "Ripristino Backup...";
 
@@ -409,7 +410,7 @@ namespace Facile
 			m_desc.Text = "Downloading " + tblName.ToLower() + ".zip";
 			var ftp = DependencyService.Get<IFtpWebRequest>();
 			string result = await ftp.DownloadFile(lim.user, password, remotePath, localZip);
-			if (result.StartsWith("221", StringComparison.CurrentCulture))
+			if (result.StartsWith("2", StringComparison.CurrentCulture))
 			{
 				m_down.Source = "ic_file_download_black.png";
 				m_desc.Text = "Unzip " + tblName.ToLower() + ".zip";
