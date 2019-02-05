@@ -238,6 +238,12 @@ namespace Facile
 				else
 					_parent.doc.fat_listino = _cli.cli_listino;
 				_parent.doc.fat_pag = _cli.cli_pag;
+				if (_parent.doc.fat_tipo != (short)DocTipo.TIPO_FAT && _parent.doc.fat_tipo != (short)DocTipo.TIPO_ORD && _parent.doc.fat_tipo != (short)DocTipo.TIPO_PRE && _parent.doc.fat_tipo != (short)DocTipo.TIPO_BUO)
+					_parent.doc.fat_rag = _cli.cli_ragg;
+				_parent.doc.fat_spese = _cli.cli_spese;
+				_parent.doc.fat_bolli = _cli.cli_bolli;
+				_parent.doc.fat_iva_cli = _cli.cli_iva;
+				_parent.doc.fat_ban = _cli.cli_ban;
 				if (_dst != null)
 				{
 					if (_dst.dst_cli_for != _cli.cli_codice)
@@ -293,6 +299,12 @@ namespace Facile
 					else
 						_parent.doc.fat_listino = _cli.cli_listino;
 					_parent.doc.fat_pag = _cli.cli_pag;
+					if (_parent.doc.fat_tipo != (short)DocTipo.TIPO_FAT && _parent.doc.fat_tipo != (short)DocTipo.TIPO_ORD && _parent.doc.fat_tipo != (short)DocTipo.TIPO_PRE && _parent.doc.fat_tipo != (short)DocTipo.TIPO_BUO) 
+						_parent.doc.fat_rag = _cli.cli_ragg;
+					_parent.doc.fat_spese = _cli.cli_spese;
+					_parent.doc.fat_bolli = _cli.cli_bolli;
+					_parent.doc.fat_iva_cli = _cli.cli_iva;
+					_parent.doc.fat_ban = _cli.cli_ban;
 				}
 				catch (System.Exception ex)
 				{

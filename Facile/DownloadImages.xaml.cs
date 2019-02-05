@@ -175,12 +175,12 @@ namespace Facile
 						{
 							m_desc.Text = string.Format("Scarico {0} di {1} - {2}", idx, files.Count, file.Name);
 							var result = await ftp.DownloadFile(lim.user, password, remoteFile, localFile);
-							if (!result.StartsWith("221", StringComparison.CurrentCulture))
+							if (!result.StartsWith("2", StringComparison.CurrentCulture))
 							{
 								for (int retry = 0; retry < 5; retry++)
 								{
 									result = await ftp.DownloadFile(lim.user, password, remoteFile, localFile);
-									if (result.StartsWith("221", StringComparison.CurrentCulture))
+									if (result.StartsWith("2", StringComparison.CurrentCulture))
 									{
 										break;
 									}

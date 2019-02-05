@@ -293,7 +293,7 @@ namespace Facile
 			var ftp = DependencyService.Get<IFtpWebRequest>();
 			string result = await ftp.UploadFile(remoteServer, localJson, lim.user, password, remotePath);
 			busyIndicator.IsBusy = false;
-			if (result.StartsWith("221", StringComparison.CurrentCulture))
+			if (result.StartsWith("2", StringComparison.CurrentCulture))
 			{
 				m_doc_upload.Source = "ic_cloud_black.png";
 				m_rig_upload.Source = "ic_cloud_black.png";
