@@ -97,9 +97,9 @@ namespace Facile.Models
 		public int dit_mag_vendite { get; set; }
 		public int dit_mag_acquisti { get; set; }
 		public int dit_mag_resi { get; set; }
-		public string dit_reg_fat { get; set; }
-		public string dit_reg_ddt { get; set; }
-		public string dit_reg_bol { get; set; }
+		public string dit_reg_fat_free { get; set; }
+		public string dit_reg_ddt_free { get; set; }
+		public string dit_reg_bol_free { get; set; }
 		public int dit_con_effetti { get; set; }
 		public int dit_con_inc { get; set; }
 		public int dit_denso { get; set; }
@@ -108,7 +108,7 @@ namespace Facile.Models
 		public double dit_gior_avere { get; set; }
 		public int dit_buo_mod { get; set; }
 		public int dit_buo_int { get; set; }
-		public string dit_reg_buo { get; set; }
+		public string dit_reg_buo_free { get; set; }
 		public string dit_port_barcode { get; set; }
 		public string dit_port_modem { get; set; }
 		public string dit_port_cassa { get; set; }
@@ -119,7 +119,7 @@ namespace Facile.Models
 		public int dit_conferma { get; set; }
 		public int dit_acc_mod { get; set; }
 		public int dit_acc_int { get; set; }
-		public string dit_reg_acc { get; set; }
+		public string dit_reg_acc_free { get; set; }
 		public int dit_listino { get; set; }
 		public int dit_scocar { get; set; }
 		public int dit_scoart { get; set; }
@@ -140,10 +140,10 @@ namespace Facile.Models
 		public int dit_con_ricevute { get; set; }
 		public int dit_qta_zero { get; set; }
 		public int dit_sot_ricavi { get; set; }
-		public string dit_reg_ric { get; set; }
-		public string dit_reg_ord { get; set; }
-		public string dit_reg_pre { get; set; }
-		public string dit_reg_ofo { get; set; }
+		public string dit_reg_ric_free { get; set; }
+		public string dit_reg_ord_free { get; set; }
+		public string dit_reg_pre_free { get; set; }
+		public string dit_reg_ofo_free { get; set; }
 		public int dit_ric_mod { get; set; }
 		public int dit_ord_mod { get; set; }
 		public int dit_pre_mod { get; set; }
@@ -163,7 +163,7 @@ namespace Facile.Models
 		public int dit_dos_ofo { get; set; }
 		public int dit_dos_pre { get; set; }
 		public int dit_dos_auf { get; set; }
-		public string dit_reg_auf { get; set; }
+		public string dit_reg_auf_free { get; set; }
 		public int dit_auf_mod { get; set; }
 		public string dit_drive_cpy { get; set; }
 		public int dit_mag_let { get; set; }
@@ -312,7 +312,7 @@ namespace Facile.Models
 		public int dit_bollini_min { get; set; }
 		public double dit_interessi_mora { get; set; }
 		public bool dit_filtradep { get; set; }
-		public string dit_reg_sco { get; set; }
+		public string dit_reg_sco_free { get; set; }
 		public int dit_cli_start { get; set; }
 		public int dit_cli_stop { get; set; }
 		public int dit_for_start { get; set; }
@@ -327,7 +327,7 @@ namespace Facile.Models
 		public int dit_mag_ini { get; set; }
 		public bool dit_usa_lotti { get; set; }
 		public bool dit_usa_coefmol { get; set; }
-		public string dit_reg_car { get; set; }
+		public string dit_reg_car_free { get; set; }
 		public bool dit_blocca_prezzi { get; set; }
 		public int dit_reparto_cassa { get; set; }
 		public bool dit_cod_seriale { get; set; }
@@ -341,7 +341,7 @@ namespace Facile.Models
 		public int dit_sot_anticipi { get; set; }
 		public bool dit_autocont { get; set; }
 		public bool dit_mov_fpf { get; set; }
-		public string dit_reg_fpf { get; set; }
+		public string dit_reg_fpf_free { get; set; }
 		public string dit_ftp_pwd { get; set; }
 		public string dit_ftp_user { get; set; }
 		public string dit_cognome { get; set; }
@@ -392,7 +392,7 @@ namespace Facile.Models
 		public bool dit_nocalc_sostituzioni { get; set; }
 		public double dit_fido { get; set; }
 		public bool dit_un_info_riv_used { get; set; }
-		public string dit_reg_oro { get; set; }
+		public string dit_reg_oro_free { get; set; }
 		public bool dit_calc_colli { get; set; }
 		public bool dit_automaticprice { get; set; }
 		public bool dit_esporta { get; set; }
@@ -556,11 +556,11 @@ namespace Facile.Models
 		public string dit_tipo_cassa_prev { get; set; }
 		public bool dit_skip_rif_ord_cli { get; set; }
 		public bool dit_no_rep_e_mar_ven_doc { get; set; }
-		public string dit_reg_fat_pa { get; set; }
+		public string dit_reg_fat_pa_free { get; set; }
 		public int dit_cac_fat_pa { get; set; }
 		public int dit_cod_cli_fat_pa { get; set; }
 		public string dit_nota_split_payment { get; set; }
-		public string dit_reg_cre_pa { get; set; }
+		public string dit_reg_cre_pa_free { get; set; }
 		public int dit_cac_cre_pa { get; set; }
 		public bool dit_ditta_individuale { get; set; }
 		public bool dit_provvigione_scontrini { get; set; }
@@ -609,7 +609,7 @@ namespace Facile.Models
 		public int dit_geri_exp_counter { get; set; }
 		public bool dit_calc_prezzi_per_qta { get; set; }
 
-		public string dit_reg_ano { get; set; }
+		public string dit_reg_ano_free { get; set; }
 		public int dit_ano_mod { get; set; }
 		public string dit_pec { get; set; }
 		public int dit_tik_mod { get; set; }
@@ -637,6 +637,42 @@ namespace Facile.Models
 		public double dit_massimale_enasarco_2 { get; set; }
 		public double dit_massimale_enasarco_3 { get; set; }
 		public double dit_totale_enasarco { get; set; }
+		public double dit_aliquota_enasarco_pre_0 { get; set; }
+		public double dit_aliquota_enasarco_pre_1 { get; set; }
+		public double dit_aliquota_enasarco_pre_2 { get; set; }
+		public double dit_aliquota_enasarco_pre_3 { get; set; }
+		public double dit_massimale_enasarco_pre_0 { get; set; }
+		public double dit_massimale_enasarco_pre_1 { get; set; }
+		public double dit_massimale_enasarco_pre_2 { get; set; }
+		public double dit_massimale_enasarco_pre_3 { get; set; }
+		public double dit_totale_enasarco_pre { get; set; }
+		public string dit_cod_distributore_carb { get; set; }
+		public string dit_piva_marchio_carb { get; set; }
+		public int dit_digithub_xmltopdf_end { get; set; }
+		public int dit_digithub_conversion { get; set; }
+		public string dit_reg_prt { get; set; }
+		public string dit_reg_sco { get; set; }
+		public bool dit_smtp_auto_notify { get; set; }
+		public string dit_reg_car { get; set; }
+		public string dit_reg_fat { get; set; }
+		public string dit_reg_ddt { get; set; }
+		public string dit_reg_bol { get; set; }
+		public string dit_reg_buo { get; set; }
+		public string dit_reg_acc { get; set; }
+		public string dit_reg_ric { get; set; }
+		public string dit_reg_ord { get; set; }
+		public string dit_reg_pre { get; set; }
+		public string dit_reg_ofo { get; set; }
+		public string dit_reg_auf { get; set; }
+		public string dit_reg_fpf { get; set; }
+		public string dit_reg_oro { get; set; }
+		public string dit_reg_fat_pa { get; set; }
+		public string dit_reg_cre_pa { get; set; }
+		public string dit_reg_ano { get; set; }
+		public int dit_dep_cedi { get; set; }
+		public string dit_cod_destinatario { get; set; }
+		public string dit_download_fat_attive { get; set; }
+		public string dit_download_fat_passive { get; set; }
 		public string dit_unused { get; set; }
 
 	}

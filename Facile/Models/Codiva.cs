@@ -28,5 +28,6 @@ namespace Facile.Models
 		public string iva_user { get; set; }
 		public int iva_escludi_iva { get; set; }
 		public bool iva_enasarco { get; set; }
+		public bool iva_anno_enasarco_pre { get; set; }
 	}
 }

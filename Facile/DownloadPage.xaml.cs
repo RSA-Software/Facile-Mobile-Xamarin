@@ -343,6 +343,19 @@ namespace Facile
 						app.facile_db_impo = null;
 					else
 						app.facile_db_impo = ditlist[0];
+
+					//
+					// Conversione Campi documenti
+					//
+					await dbcon_.ExecuteAsync($"UPDATE fatture2 SET fat_registro = fat_registro_free WHERE TRIM(fat_registro) = '' AND TRIM(fat_registro_free) != ''");
+					await dbcon_.ExecuteAsync($"UPDATE fatture2 SET fat_registro_free = '' WHERE TRIM(fat_registro_free) != ''");
+				
+					//
+					// Eliminazione documenti con data esterna all'esercizio corrente
+					//
+
+
+				
 				}
 				catch (Exception e)
 				{

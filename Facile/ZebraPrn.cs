@@ -145,7 +145,7 @@ namespace Facile
 
 			row += 3 * 8;
 			col = 1;
-			num = string.Format("{0:#,#}/{1}", RsaUtils.GetShowedNumDoc(doc.fat_n_doc), RsaUtils.GetRegistro(doc.fat_n_doc));
+			num = string.Format("{0:#,#}/{1}", RsaUtils.GetShowedNumDoc(doc.fat_n_doc), RsaUtils.GetRegistroFromStoredNumDoc(doc.fat_n_doc));
 			str = str + $"^FO{col},{row}" + "^A0,N,23,23" + $"^FB{14 * 8},1,0,R,0^FD{num}^FS";
 
 			col = 16 * 8;

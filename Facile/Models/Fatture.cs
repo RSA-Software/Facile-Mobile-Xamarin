@@ -79,7 +79,7 @@ namespace Facile.Models
   		public int fat_rag { get; set; }
   		public double fat_sconto { get; set; }
   		public int fat_sez { get; set; }
-  		public string fat_registro { get; set; }
+  		public string fat_registro_free { get; set; }
   		public int fat_listino { get; set; }
   		public int fat_coef_mol { get; set; }
   		public int fat_colli { get; set; }
@@ -407,7 +407,11 @@ namespace Facile.Models
 		public double fat_importo_enasarco_2 { get; set; }
 		public double fat_importo_enasarco_3 { get; set; }
 		public double fat_totale_enasarco { get; set; }
+		public bool fat_anno_enasarco_pre { get; set; }
+		public string fat_registro { get; set; }
+		public double fat_bolli_corpo { get; set; }
 		public string fat_unused { get; set; }
+
 
 		// Viene impostata a true per i nuovi documenti che sono editabili fino all'invio
 		public bool fat_editable { get; set; }

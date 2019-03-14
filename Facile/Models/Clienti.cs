@@ -131,6 +131,12 @@ namespace Facile.Models
 		public float cli_pr3 { get; set; }
 		public float cli_pr4 { get; set; }
 		public bool cli_esc_cerved_payline { get; set; }
+		public string cli_cod_destinatario { get; set; }
+		public int cli_crediti_pa_offline { get; set; }
+		public int cli_crediti_pa_omaggio_num { get; set; }
+		public int cli_crediti_pa_omaggio_data { get; set; }
+		public int cli_xmltopdf_end { get; set; }
+		public int cli_xmltopdf_conversion { get; set; }
 
 		[Ignore]
 		public string cli_full_address { get; set; }

@@ -110,6 +110,9 @@ namespace Facile.Models
   		public short rig_from_tipo { get; set; }
   		public int rig_from_n_doc { get; set; }
   		public DateTime? rig_from_d_doc { get; set; }
-
+		public int rig_cms { get; set; }
+		public int rig_cco { get; set; }
+		public int rig_box { get; set; }
+		public int rig_bolli { get; set; }
 	}
 }

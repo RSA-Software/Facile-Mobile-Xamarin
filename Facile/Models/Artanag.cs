@@ -232,6 +232,8 @@ namespace Facile.Models
 		public DateTime? ana_d_prima_ven { get; set; }
 		public DateTime? ana_ult_ord_cli { get; set; }
 		public DateTime? ana_ult_ord_for { get; set; }
+		public bool ana_no_eti_print { get; set; }
+		public bool ana_bolli { get; set; }
 
 		[Ignore]
 		public string ana_img_path { get; set; }

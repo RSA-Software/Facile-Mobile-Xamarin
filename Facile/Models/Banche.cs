@@ -28,6 +28,6 @@ namespace Facile.Models
 		public string ban_swift { get; set; }
 		public string ban_user { get; set; }
 		public DateTime ban_last_update { get; set; }
-
+		public int ban_sot { get; set; }
 	}
 }

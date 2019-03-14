@@ -24,6 +24,9 @@ namespace Facile.Models
 		public DateTime dep_last_send_sez2 { get; set; }
 		public DateTime dep_last_send_sez3 { get; set; }
 		public DateTime dep_last_send_sez4 { get; set; }
+		public string dep_registro_free { get; set; }
+		public bool dep_noweb_query { get; set; }
+		public int dep_forn { get; set; }
 		public string dep_registro { get; set; }
 	}
 }

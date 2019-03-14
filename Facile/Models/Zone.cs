@@ -13,5 +13,6 @@ namespace Facile.Models
 
         public string zon_user { get; set; }
         public DateTime zon_last_update { get; set; }
-    }
+		public bool deleted { get; set; }
+	}
 }

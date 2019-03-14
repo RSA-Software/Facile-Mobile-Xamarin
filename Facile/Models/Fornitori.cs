@@ -65,7 +65,7 @@ namespace Facile.Models
 		public string for_rifto { get; set; }
 		public string for_email { get; set; }
 		public int for_zon { get; set; }
-		public string for_registro { get; set; }
+		public string for_registro_free { get; set; }
 		public int for_esporta { get; set; }
 		public int for_escludi_iva { get; set; }
 		public int for_agz { get; set; }
@@ -80,5 +80,22 @@ namespace Facile.Models
 		public int for_ord_fraz { get; set; }
 		public string for_pec { get; set; }
 		public string for_naz_doc { get; set; }
+		public short for_tab_nat { get; set; }
+		public int for_cod_nat { get; set; }
+		public short for_tab_att { get; set; }
+		public int for_cod_att { get; set; }
+		public int for_cac { get; set; }
+		public string for_prov_uri { get; set; }
+		public string for_numero_rea { get; set; }
+		public double for_capitale_sociale { get; set; }
+		public short for_socio_unico { get; set; }
+		public short for_stato_liquidazione { get; set; }
+		public string for_code_master { get; set; }
+		public string for_code_artfor { get; set; }
+		public string for_code_barcode { get; set; }
+		public short for_regime_fiscale { get; set; }
+		public bool for_non_iscritta_rea { get; set; }
+		public string for_natura { get; set; }
+		public string for_registro { get; set; }
 	}
 }
