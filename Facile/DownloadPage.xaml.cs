@@ -37,6 +37,15 @@ namespace Facile
 			base.OnAppearing();
 			if (first)
 			{
+				var app = (App)Application.Current;
+				if (app.facile_db_impo != null)
+				{
+					if (DateTime.Now.Year != app.facile_db_impo.dit_anno)
+					{
+						var resp = await DisplayAlert("Facile", "L' anno di esercizio impostato è diverso dall' anno corrente.\nPrima di scaricare i dati si consiglia l'invio di tutti i documenti emessi per evitarne la perdita.\n\nVuoi proseguire?", "Si", "No");
+						if (!resp) await Navigation.PopModalAsync();
+					}
+				}
 				var response = await DisplayAlert("Facile", "La ricezione dati potrebbe richiede una connessione internet e potrebbero essere necessari diversi minuti.\n\nVuoi proseguire?", "Si", "No");
 				if (response)
 					await Download();
@@ -349,13 +358,31 @@ namespace Facile
 					//
 					await dbcon_.ExecuteAsync($"UPDATE fatture2 SET fat_registro = fat_registro_free WHERE TRIM(fat_registro) = '' AND TRIM(fat_registro_free) != ''");
 					await dbcon_.ExecuteAsync($"UPDATE fatture2 SET fat_registro_free = '' WHERE TRIM(fat_registro_free) != ''");
-				
+
 					//
 					// Eliminazione documenti con data esterna all'esercizio corrente
 					//
-
-
-				
+					if (app.facile_db_impo != null)
+					{
+						try
+						{
+							DateTime d1 = new DateTime(app.facile_db_impo.dit_anno, 1, 1);
+							DateTime d2 = new DateTime(app.facile_db_impo.dit_anno, 12, 31);
+							var doclist = await dbcon_.QueryAsync<Fatture>($"SELECT * FROM fatture2 WHERE fat_d_doc NOT BETWEEN {d1.Ticks} AND {d2.Ticks}");
+							if (doclist != null)
+							{
+								foreach (var doc in doclist)
+								{
+									await dbcon_.ExecuteAsync($"DELETE FROM fatrow2 WHERE rig_tipo = {doc.fat_tipo} AND rig_n_doc = {doc.fat_n_doc}");
+								}
+								await dbcon_.ExecuteAsync($"DELETE FROM fatture2 WHERE WHERE fat_d_doc NOT BETWEEN {d1.Ticks} AND {d2.Ticks}");
+							}
+						}
+						catch (Exception e)
+						{
+							Debug.WriteLine(e.Message);
+						}
+					}
 				}
 				catch (Exception e)
 				{

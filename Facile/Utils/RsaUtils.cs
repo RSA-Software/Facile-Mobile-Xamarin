@@ -7,7 +7,7 @@ namespace Facile.Utils
 	{
 		private static readonly int _gap_registro = 70000000;
 		private static readonly int _gap_interno = 2500000;
-		private static readonly int _max_reg_data = 702;
+		public static readonly int max_reg_data = 702;
 
 		public static bool IsRegistroValid(string reg)
 		{
@@ -46,7 +46,7 @@ namespace Facile.Utils
 
 		public static int GetStoredNumDoc(int num, int reg)
 		{
-			if (reg < 0 || reg >= _max_reg_data) throw new ArgumentException("Registro non valido");
+			if (reg < 0 || reg >= max_reg_data) throw new ArgumentException("Registro non valido");
 			var numero = 0;
 			if (reg < 26)
 			{
@@ -65,11 +65,11 @@ namespace Facile.Utils
 		public static string GetRegistroFromStoredNumDoc(int num)
 		{
 			var reg = new StringBuilder();
-			reg.Append('A' + (num / _gap_registro));
+			reg.Append((char)('A' + (num / _gap_registro)));
 			num = num % _gap_registro;
 			if (num >= _gap_interno)
 			{
-				reg.Append('A' + (num / _gap_interno) - 1);
+				reg.Append((char)('A' + (num / _gap_interno) - 1));
 			}
 			var str = reg.ToString();
 			return (str);
@@ -77,14 +77,14 @@ namespace Facile.Utils
 
 		public static string GetRegistroFromOrdinal(int ordinal)
 		{
-			if (ordinal < 0 || ordinal >= _max_reg_data) throw new ArgumentException("Registro non valido");
+			if (ordinal < 0 || ordinal >= max_reg_data) throw new ArgumentException("Registro non valido");
 			var reg = new StringBuilder();
 			var num = GetFirstRegNumber(ordinal);
-			reg.Append('A' + (num / _gap_registro));
+			reg.Append((char)('A' + (num / _gap_registro)));
 			num = num % _gap_registro;
 			if (num >= _gap_interno)
 			{
-				reg.Append('A' + (num / _gap_interno) - 1);
+				reg.Append((char)('A' + (num / _gap_interno) - 1));
 			}
 			var str = reg.ToString();
 			return (str);
@@ -132,7 +132,7 @@ namespace Facile.Utils
 
 		public static int GetFirstRegNumber(int reg_ordinal)
 		{
-			if (reg_ordinal < 0 || reg_ordinal >= _max_reg_data) throw new ArgumentException("Registro non valido");
+			if (reg_ordinal < 0 || reg_ordinal >= max_reg_data) throw new ArgumentException("Registro non valido");
 			var num = 0;
 			if (reg_ordinal < 26)
 			{
@@ -155,7 +155,7 @@ namespace Facile.Utils
 
 		public static int GetLastRegNumber(int reg_ordinal)
 		{
-			if (reg_ordinal < 0 || reg_ordinal > _max_reg_data) throw new ArgumentException("Registro non valido");
+			if (reg_ordinal < 0 || reg_ordinal > max_reg_data) throw new ArgumentException("Registro non valido");
 			return (GetFirstRegNumber(reg_ordinal) + _gap_interno - 1);
 		}
 

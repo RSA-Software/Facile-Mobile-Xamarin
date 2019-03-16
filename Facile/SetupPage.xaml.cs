@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.IO;
-using System.Text;
-using System.Threading.Tasks;
 using Facile.Interfaces;
 using Facile.Models;
-using LinkOS.Plugin;
 using LinkOS.Plugin.Abstractions;
-using Newtonsoft.Json;
-using PCLStorage;
 using SQLite;
 using Xamarin.Forms;
+using Facile.Utils;
 
 namespace Facile
 {
@@ -37,32 +30,10 @@ namespace Facile
 			m_server_picker.Items.Add("Facile - 02");
 			m_server_picker.Items.Add("Facile - 03");
 
-			m_reg_picker.Items.Add("A");
-			m_reg_picker.Items.Add("B");
-			m_reg_picker.Items.Add("C");
-			m_reg_picker.Items.Add("D");
-			m_reg_picker.Items.Add("E");
-			m_reg_picker.Items.Add("F");
-			m_reg_picker.Items.Add("G");
-			m_reg_picker.Items.Add("H");
-			m_reg_picker.Items.Add("I");
-			m_reg_picker.Items.Add("J");
-			m_reg_picker.Items.Add("K");
-			m_reg_picker.Items.Add("L");
-			m_reg_picker.Items.Add("M");
-			m_reg_picker.Items.Add("N");
-			m_reg_picker.Items.Add("O");
-			m_reg_picker.Items.Add("P");
-			m_reg_picker.Items.Add("Q");
-			m_reg_picker.Items.Add("R");
-			m_reg_picker.Items.Add("S");
-			m_reg_picker.Items.Add("T");
-			m_reg_picker.Items.Add("U");
-			m_reg_picker.Items.Add("V");
-			m_reg_picker.Items.Add("W");
-			m_reg_picker.Items.Add("X");
-			m_reg_picker.Items.Add("Y");
-			m_reg_picker.Items.Add("Z");
+			for (var idx = 0; idx < RsaUtils.max_reg_data; idx++)
+			{
+				m_reg_picker.Items.Add(RsaUtils.GetRegistroFromOrdinal(idx));
+			}
 
 			m_copy_picker.Items.Add("A RICHIESTA");
 			m_copy_picker.Items.Add("AUTOMATICA");
