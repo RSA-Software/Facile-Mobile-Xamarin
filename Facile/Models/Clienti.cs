@@ -134,8 +134,8 @@ namespace Facile.Models
 		public string cli_cod_destinatario { get; set; }
 		public int cli_crediti_pa_offline { get; set; }
 		public int cli_crediti_pa_omaggio_num { get; set; }
-		public int cli_crediti_pa_omaggio_data { get; set; }
-		public int cli_xmltopdf_end { get; set; }
+		public DateTime? cli_crediti_pa_omaggio_data { get; set; }
+		public DateTime? cli_xmltopdf_end { get; set; }
 		public int cli_xmltopdf_conversion { get; set; }
 
 		[Ignore]
