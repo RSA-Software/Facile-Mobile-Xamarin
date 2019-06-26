@@ -114,5 +114,10 @@ namespace Facile.Models
 		public int rig_cco { get; set; }
 		public int rig_box { get; set; }
 		public int rig_bolli { get; set; }
+		public double chk_qta_car { get; set; }
+		public double chk_qta_fat { get; set; }
+		public double chk_val_car { get; set; }
+		public double chk_val_fat { get; set; }
+
 	}
 }

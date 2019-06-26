@@ -136,6 +136,11 @@ namespace Facile
 		{
 			if (first_)
 			{
+
+
+
+
+
 				await LoadImage();
 				first_ = false;
 			}

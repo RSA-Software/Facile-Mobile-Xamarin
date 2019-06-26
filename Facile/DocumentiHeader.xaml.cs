@@ -48,6 +48,7 @@ namespace Facile
 
 			SetProtection();
 		}
+
 		protected override async void OnAppearing()
 		{
 			if (_first)

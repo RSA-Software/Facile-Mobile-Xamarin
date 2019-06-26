@@ -19,17 +19,17 @@ namespace Facile
 		private int recLoaded_;
 		private int recToLoad_;
 		private string query_;
+		private bool first_;
 
 		public ClientiSearch()
 		{
-			InitializeComponent();
-			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
-
+			first_ = true;
 			recTotal_ = 0;
 			recLoaded_ = 0;
 			recToLoad_ = 50;
 			query_ = "SELECT * FROM clienti1 ORDER BY cli_desc";
-
+			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
+			InitializeComponent();
 			listView.LoadMoreOption = Syncfusion.ListView.XForms.LoadMoreOption.Auto;
 			listView.LoadMoreCommandParameter = listView;
 			listView.LoadMoreCommand = new Command<object>(LoadMoreItems, CanLoadMoreItems);
@@ -38,29 +38,32 @@ namespace Facile
 			{
 				searchBar.HeightRequest = 42;
 			}
-
 		}
 
 		protected override async void OnAppearing()
 		{
-			string sql = query_ + " LIMIT " + recToLoad_.ToString();
-			recTotal_ = await dbcon_.Table<Clienti>().CountAsync();
-			var cliList = await dbcon_.QueryAsync<Clienti>(sql);
-
-			foreach (var cli in cliList)
+			if (first_)
 			{
-				cli.cli_full_address = cli.cli_cap + " " + cli.cli_citta;
-				if (!string.IsNullOrWhiteSpace(cli.cli_prov))
-				{
-					cli.cli_full_address +=  " (";
-					cli.cli_full_address += cli.cli_prov;
-					cli.cli_full_address += ")";
-				}
-				cli.cli_full_address = cli.cli_full_address.Trim();
-			}
+				first_ = false;
+				string sql = query_ + " LIMIT " + recToLoad_.ToString();
+				recTotal_ = await dbcon_.Table<Clienti>().CountAsync();
+				var cliList = await dbcon_.QueryAsync<Clienti>(sql);
 
-			recLoaded_ = cliList.Count;
-			listView.ItemsSource = new ObservableCollection<Clienti>(cliList);
+				foreach (var cli in cliList)
+				{
+					cli.cli_full_address = cli.cli_cap + " " + cli.cli_citta;
+					if (!string.IsNullOrWhiteSpace(cli.cli_prov))
+					{
+						cli.cli_full_address += " (";
+						cli.cli_full_address += cli.cli_prov;
+						cli.cli_full_address += ")";
+					}
+					cli.cli_full_address = cli.cli_full_address.Trim();
+				}
+
+				recLoaded_ = cliList.Count;
+				listView.ItemsSource = new ObservableCollection<Clienti>(cliList);
+			}
 			base.OnAppearing();
 		}
 

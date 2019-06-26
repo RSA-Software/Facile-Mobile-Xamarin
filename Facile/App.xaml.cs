@@ -29,8 +29,8 @@ namespace Facile
 			// 16.3.x.x
 			//Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mjg3MTVAMzEzNjJlMzMyZTMwWjJMQ1RRTlFXNkdnaWpzS0l6MGcyTFlWQzhJSnZvK01mNyt0Y2hiTzZzVT0=");
 
-			// 16.4.x.x.
-			Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NjI2MTVAMzEzNjJlMzQyZTMwYVBMVTR1U08rNUQrTXl4L0JDeTIxRkVIenQ4S3ZMdWVTK1Jrc0pDQ2xPOD0=");
+
+			Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("ODMyODJAMzEzNzJlMzEyZTMwbDZVa21Wck1teGl4bGxOaDFMRUU5RzQwUDY3SUgrMFllZkh0bTJ1bjBtYz0=");
 
 			InitializeComponent();
 			MainPage = new NavigationPage(new FacilePage());

@@ -12,9 +12,10 @@ namespace Facile
 	{
 		private bool first_appearing_;
 
-		void OnClickedClienti(object sender, System.EventArgs e)
+		async void OnClickedClienti(object sender, System.EventArgs e)
 		{
-			Navigation.PushAsync(new ClientiSearch());
+			await Navigation.PushAsync(new ClientiSearch());
+			//await Navigation.PushAsync(new ClientiBr());
 		}
 
 
