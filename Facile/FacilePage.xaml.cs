@@ -5,6 +5,7 @@ using SQLite;
 using System;
 using static Facile.Extension.FattureExtensions;
 using System.Diagnostics;
+using Facile.Articoli;
 
 namespace Facile
 {
@@ -14,8 +15,9 @@ namespace Facile
 
 		async void OnClickedClienti(object sender, System.EventArgs e)
 		{
-			await Navigation.PushAsync(new ClientiSearch());
+			//await Navigation.PushAsync(new ClientiSearch());
 			//await Navigation.PushAsync(new ClientiBr());
+			await Navigation.PushAsync(new MarchiFilter(false));
 		}
 
 
@@ -78,6 +80,7 @@ namespace Facile
 				//DependencyService.Get<ISQLiteDb>().RemoveDB();
 				var dbcon = DependencyService.Get<ISQLiteDb>().GetConnection();
 
+				await dbcon.CreateTableAsync<FiltersDb>();
 				await dbcon.CreateTableAsync<Ditte>();
 				await dbcon.CreateTableAsync<Zone>();
 				await dbcon.CreateTableAsync<Cateco>();

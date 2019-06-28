@@ -30,6 +30,15 @@ namespace Facile.Extension
 			}
 			return true;
 		}
-
+		
+		public static string FirstCharToUpper(this string str)
+		{
+			switch (str)
+			{
+				case null: throw new ArgumentNullException(nameof(str));
+				case "": throw new ArgumentException($"{nameof(str)} cannot be empty", nameof(str));
+				default: return str.Substring(0, 1).ToUpper() + str.Substring(1); 
+			}
+		}
 	}
 }

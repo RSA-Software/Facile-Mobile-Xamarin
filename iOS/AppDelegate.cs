@@ -10,6 +10,8 @@ using Syncfusion.ListView.XForms.iOS;
 using Syncfusion.SfBusyIndicator.XForms.iOS;
 using Syncfusion.XForms.iOS.MaskedEdit;
 using Syncfusion.SfCarousel.XForms.iOS;
+using Syncfusion.XForms.iOS.Border;
+using Syncfusion.XForms.iOS.Buttons;
 
 namespace Facile.iOS
 {
@@ -26,7 +28,8 @@ namespace Facile.iOS
 			SfDataGridRenderer.Init();
 			SfListViewRenderer.Init();
 			SfMaskedEditRenderer.Init();
-
+			SfBorderRenderer.Init();
+			SfButtonRenderer.Init();
 
 			new SfBusyIndicatorRenderer();
 			new SfCarouselRenderer();
