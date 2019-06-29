@@ -521,6 +521,14 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_search_white_24.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_search_white_24.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_search_white_24.png" />
+    <AndroidResource Include="Resources\drawable\outline_check_circle_black_48.png" />
+    <AndroidResource Include="Resources\drawable\outline_lens_black_48.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\outline_check_circle_black_48.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\outline_lens_black_48.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\outline_check_circle_black_48.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\outline_lens_black_48.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\outline_check_circle_black_48.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\outline_lens_black_48.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />

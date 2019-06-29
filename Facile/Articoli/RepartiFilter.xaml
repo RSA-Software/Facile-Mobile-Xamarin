@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Seleziona Reparti"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Facile.Converters;assembly=Facile"
+    xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+    xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+    xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    x:Class="Facile.Articoli.RepartiFilter">
+   
+    <AbsoluteLayout>
+        <StackLayout Padding="0,0,0,5" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+            
+            <!-- Navigazione -->
+            <StackLayout Orientation="Horizontal" BackgroundColor="#009EDA" HeightRequest="50" x:Name="m_navigation">
+                <buttons:SfButton BackgroundColor="Transparent" ImageSource="baseline_arrow_back_white_48.png" ShowIcon="true" Clicked="OnLeftArrowClicked"/>
+                <Label Text="Seleziona Reparti" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" FontSize="Medium" TextColor="White"/>
+            </StackLayout>
+            
+            <SearchBar x:Name="searchBar" Placeholder="Cerca" TextChanged="OnTextChanged" IsVisible="true" Unfocused="OnUnfocusedSearchBar"/>
+            <syncfusion:SfListView x:Name="listView" AutoFitMode="Height" SelectionMode="Multiple" Padding="0,0,0,0" VerticalOptions="FillAndExpand" SelectionChanged="Handle_SelectionChanged">
+                <syncfusion:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame x:Name="frame" CornerRadius="2" BackgroundColor="{Binding .,Converter={local:IndexToColorConverter},ConverterParameter={x:Reference Name=listView}}" Padding="5">
+                            <StackLayout Orientation="Horizontal" BackgroundColor="{Binding .,Converter={local:IndexToColorConverter},ConverterParameter={x:Reference Name=listView}}"> 
+                                <StackLayout>
+                                    <Label Text="{Binding rep_desc}" FontAttributes="Bold" HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap"/>
+                                    <Label Text="{Binding rep_codice}" TextColor="Gray"/>
+                                </StackLayout>
+                                <Image Source="outline_lens_black_48.png" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </syncfusion:SfListView.ItemTemplate>
+
+                <syncfusion:SfListView.SelectedItemTemplate>
+                    <DataTemplate>
+                        <Frame x:Name="frame" CornerRadius="2" BackgroundColor="#4fc3f7" Padding="5">
+                            <StackLayout Orientation="Horizontal" BackgroundColor="#4fc3f7"> 
+                                <StackLayout>
+                                    <Label Text="{Binding rep_desc}" FontAttributes="Bold" HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap"/>
+                                    <Label Text="{Binding rep_codice}" TextColor="Gray"/>
+                                </StackLayout>
+                                <Image Source="outline_check_circle_black_48.png" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                 </syncfusion:SfListView.SelectedItemTemplate> 
+            </syncfusion:SfListView>
+        </StackLayout>
+        <busyindicator:SfBusyIndicator x:Name="busyIndicator" AnimationType="RollingBall" Title="Attendere..." IsBusy="true" AbsoluteLayout.LayoutBounds="0.5,0.5,150,150" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="#2196F3"/>
+    </AbsoluteLayout>
+    
+</ContentPage>

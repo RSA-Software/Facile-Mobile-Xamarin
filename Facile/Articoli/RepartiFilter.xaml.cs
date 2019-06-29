@@ -12,7 +12,7 @@ using Xamarin.Forms.Xaml;
 namespace Facile.Articoli
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MarchiFilter : ContentPage
+	public partial class RepartiFilter : ContentPage
 	{
 		private int recTotal_;
 		private int recLoaded_;
@@ -25,7 +25,7 @@ namespace Facile.Articoli
 		private readonly SQLiteAsyncConnection dbcon_;
 		private readonly bool modal_;
 
-		public MarchiFilter(bool modal)
+		public RepartiFilter(bool modal)
 		{
 			first_ = true;
 			recTotal_ = 0;
@@ -33,11 +33,11 @@ namespace Facile.Articoli
 			recToLoad_ = 50;
 			last_search_ = "";
 			api_url = "";
-						
-			query_ = "SELECT * FROM marchi ORDER BY mar_desc";
+
+			query_ = "SELECT * FROM reparti ORDER BY rep_desc";
 			filList_ = new List<FiltersDb>();
 			dbcon_ = DependencyService.Get<ISQLiteDb>().GetConnection();
-			modal_= modal;
+			modal_ = modal;
 
 			InitializeComponent();
 			m_navigation.IsEnabled = modal;
@@ -52,7 +52,7 @@ namespace Facile.Articoli
 			{
 				searchBar.HeightRequest = 42;
 			}
-			
+
 		}
 
 		protected override async void OnAppearing()
@@ -64,32 +64,32 @@ namespace Facile.Articoli
 
 				try
 				{
-					string sql = $"SELECT * FROM FiltersDb WHERE fil_tipo = {(short)FiltersType.MARCHIO} ORDER BY fil_codice";
+					string sql = $"SELECT * FROM FiltersDb WHERE fil_tipo = {(short)FiltersType.REPARTO} ORDER BY fil_codice";
 					filList_ = await dbcon_.QueryAsync<FiltersDb>(sql);
-					recTotal_ = await dbcon_.Table<Marchi>().CountAsync();
+					recTotal_ = await dbcon_.Table<Reparti>().CountAsync();
 					sql = query_ + " LIMIT " + recToLoad_.ToString();
-					var marList = await dbcon_.QueryAsync<Marchi>(sql);
-					recLoaded_ = marList.Count;
-					foreach (var mar in marList)
+					var repList = await dbcon_.QueryAsync<Reparti>(sql);
+					recLoaded_ = repList.Count;
+					foreach (var rep in repList)
 					{
-						mar.mar_desc = mar.mar_desc.ProperCase();
+						rep.rep_desc = rep.rep_desc.ProperCase();
 					}
 					listView.SelectedItems.Clear();
-					listView.ItemsSource = new ObservableCollection<Marchi>(marList);
+					listView.ItemsSource = new ObservableCollection<Reparti>(repList);
 					if ((filList_ != null) && (filList_.Count > 0))
 					{
 						foreach (var fil in filList_)
 						{
-							for (var idx = 0; idx < marList.Count; idx++)
+							for (var idx = 0; idx < repList.Count; idx++)
 							{
-								if (marList[idx].mar_codice == fil.fil_codice)
+								if (repList[idx].rep_codice == fil.fil_codice)
 								{
-									listView.SelectedItems.Add(marList[idx]);
+									listView.SelectedItems.Add(repList[idx]);
 									break;
 								}
 							}
 						}
-					}					
+					}
 					busyIndicator.IsBusy = false;
 				}
 				catch (Exception ex)
@@ -119,19 +119,19 @@ namespace Facile.Articoli
 
 			try
 			{
-				var collection = (ObservableCollection<Marchi>)listView.ItemsSource;
+				var collection = (ObservableCollection<Reparti>)listView.ItemsSource;
 				string sql = query_ + " LIMIT " + recToLoad_.ToString() + " OFFSET " + recLoaded_.ToString();
-				var marList = await dbcon_.QueryAsync<Marchi>(sql);
-				recLoaded_ += marList.Count;
-				foreach (Marchi mar in marList)
+				var repList = await dbcon_.QueryAsync<Reparti>(sql);
+				recLoaded_ += repList.Count;
+				foreach (var rep in repList)
 				{
-					mar.mar_desc = mar.mar_desc.ProperCase();
-					collection.Add(mar);
+					rep.rep_desc = rep.rep_desc.ProperCase();
+					collection.Add(rep);
 					foreach (var fil in filList_)
 					{
-						if (mar.mar_codice == fil.fil_codice)
+						if (rep.rep_codice == fil.fil_codice)
 						{
-							listView.SelectedItems.Add(mar);
+							listView.SelectedItems.Add(rep);
 							break;
 						}
 					}
@@ -166,39 +166,39 @@ namespace Facile.Articoli
 				{
 					if (String.IsNullOrWhiteSpace(search))
 					{
-						query_ = "SELECT * FROM marchi ORDER BY mar_desc";
-						recTotal_ = await dbcon_.Table<Marchi>().CountAsync();
+						query_ = "SELECT * FROM reparti ORDER BY rep_desc";
+						recTotal_ = await dbcon_.Table<Reparti>().CountAsync();
 					}
 					else
 					{
-						query_ = $"SELECT * FROM marchi WHERE mar_desc LIKE({search.Trim().ToUpper().SqlQuote(true)}) ORDER BY mar_desc";
-						recTotal_ = await dbcon_.ExecuteScalarAsync<int>($"SELECT COUNT(*) FROM marchi WHERE mar_desc LIKE({search.Trim().ToUpper().SqlQuote(true)})");
+						query_ = $"SELECT * FROM reparti WHERE rep_desc LIKE({search.Trim().ToUpper().SqlQuote(true)}) ORDER BY rep_desc";
+						recTotal_ = await dbcon_.ExecuteScalarAsync<int>($"SELECT COUNT(*) FROM reparti WHERE rep_desc LIKE({search.Trim().ToUpper().SqlQuote(true)})");
 					}
 					string sql = query_ + " LIMIT " + recToLoad_.ToString();
-					var marList = await dbcon_.QueryAsync<Marchi>(sql);
-					recLoaded_ = marList.Count;
-					foreach (var mar in marList)
+					var repList = await dbcon_.QueryAsync<Reparti>(sql);
+					recLoaded_ = repList.Count;
+					foreach (var rep in repList)
 					{
-						mar.mar_desc = mar.mar_desc.ProperCase();
+						rep.rep_desc = rep.rep_desc.ProperCase();
 					}
-					listView.ItemsSource = new ObservableCollection<Marchi>(marList);
-					foreach (var mar in marList)
+					listView.ItemsSource = new ObservableCollection<Reparti>(repList);
+					foreach (var rep in repList)
 					{
 						if ((filList_ != null) && (filList_.Count > 0))
 						{
 							foreach (var fil in filList_)
 							{
-								for (var idx = 0; idx < marList.Count; idx++)
+								for (var idx = 0; idx < repList.Count; idx++)
 								{
-									if (marList[idx].mar_codice == fil.fil_codice)
+									if (repList[idx].rep_codice == fil.fil_codice)
 									{
-										listView.SelectedItems.Add(marList[idx]);
+										listView.SelectedItems.Add(repList[idx]);
 										break;
 									}
 								}
 							}
 						}
-					}					
+					}
 					listView.IsBusy = false;
 					busyIndicator.IsBusy = false;
 				}
@@ -227,17 +227,17 @@ namespace Facile.Articoli
 		}
 
 		async void Handle_SelectionChanged(object sender, Syncfusion.ListView.XForms.ItemSelectionChangedEventArgs e)
-		{			
+		{
 			if ((e.AddedItems != null) && (e.AddedItems.Count > 0))
 			{
 				foreach (var item in e.AddedItems)
 				{
-					var mar = (Marchi)item;
+					var rep = (Reparti)item;
 					var fil = new FiltersDb();
 
-					
-					fil.fil_tipo = (short)FiltersType.MARCHIO;
-					fil.fil_codice = mar.mar_codice;
+
+					fil.fil_tipo = (short)FiltersType.REPARTO;
+					fil.fil_codice = rep.rep_codice;
 					fil.fil_desc = fil.fil_desc.ProperCase();
 					try
 					{
@@ -256,8 +256,8 @@ namespace Facile.Articoli
 				{
 					try
 					{
-						var mar = (Marchi)item;
-						var sql = $"DELETE FROM FiltersDb WHERE fil_tipo = {(short)FiltersType.MARCHIO} AND fil_codice = {mar.mar_codice}";
+						var rep = (Reparti)item;
+						var sql = $"DELETE FROM FiltersDb WHERE fil_tipo = {(short)FiltersType.REPARTO} AND fil_codice = {rep.rep_codice}";
 						await dbcon_.ExecuteAsync(sql);
 					}
 					catch (Exception ex)
@@ -276,6 +276,6 @@ namespace Facile.Articoli
 				await Navigation.PopAsync();
 		}
 
-		public SfListView MarList { get { return listView; } }
+		public SfListView RepList { get { return listView; } }
 	}
 }

@@ -143,6 +143,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Articoli\StagioniFilter.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Articoli\RepartiFilter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Articoli\CatMercFilter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Articoli\FornitoriFilter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -297,6 +313,18 @@
       <DependentUpon>MarchiFilter.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\FiltersDb.cs" />
+    <Compile Include="Articoli\StagioniFilter.xaml.cs">
+      <DependentUpon>StagioniFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Articoli\RepartiFilter.xaml.cs">
+      <DependentUpon>RepartiFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Articoli\CatMercFilter.xaml.cs">
+      <DependentUpon>CatMercFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Articoli\FornitoriFilter.xaml.cs">
+      <DependentUpon>FornitoriFilter.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MarkupExtensions\" />

@@ -15,12 +15,15 @@ namespace Facile
 
 		async void OnClickedClienti(object sender, System.EventArgs e)
 		{
-			//await Navigation.PushAsync(new ClientiSearch());
-			//await Navigation.PushAsync(new ClientiBr());
-			await Navigation.PushAsync(new MarchiFilter(false));
+			await Navigation.PushAsync(new ClientiSearch());
+
+			//await Navigation.PushAsync(new MarchiFilter(false));
+			//await Navigation.PushAsync(new StagioniFilter(false));
+			//await Navigation.PushAsync(new RepartiFilter(false));
+			//await Navigation.PushAsync(new CatMercFilter(false));
+			//await Navigation.PushAsync(new FornitoriFilter(false));
 		}
-
-
+		
 		async void OnClickedOrdini(object sender, System.EventArgs e)
 		{
 			await Navigation.PushAsync(new FatturePage(DocTipo.TIPO_ORD));
