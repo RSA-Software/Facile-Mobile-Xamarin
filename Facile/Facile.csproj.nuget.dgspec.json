@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/filippocapizzi/Projects/Facile-Mobile-Xamarin/Facile/Facile.csproj": {}
+  },
+  "projects": {
+    "/Users/filippocapizzi/Projects/Facile-Mobile-Xamarin/Facile/Facile.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/filippocapizzi/Projects/Facile-Mobile-Xamarin/Facile/Facile.csproj",
+        "projectName": "Facile",
+        "projectPath": "/Users/filippocapizzi/Projects/Facile-Mobile-Xamarin/Facile/Facile.csproj",
+        "projectJsonPath": "/Users/filippocapizzi/Projects/Facile-Mobile-Xamarin/Facile/project.json",
+        "packagesPath": "/Users/filippocapizzi/.nuget/packages/",
+        "projectStyle": "ProjectJson",
+        "configFilePaths": [
+          "/Users/filippocapizzi/.config/NuGet/NuGet.Config"
+        ],
+        "sources": {
+          "http://nuget.syncfusion.com/nuget_xamarin/nuget/getsyncfusionpackages/xamarin": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        }
+      },
+      "dependencies": {
+        "Microsoft.NETCore.Platforms": "[3.0.0, )",
+        "Microsoft.NETCore.Targets": "[3.0.0, )",
+        "Newtonsoft.Json": "[12.0.2, )",
+        "PCLStorage": "[1.0.2, )",
+        "SQLitePCLRaw.bundle_green": "[2.0.1, )",
+        "SQLitePCLRaw.core": "[1.1.14, )",
+        "SharpZipLib.Portable": "[0.86.0.3, )",
+        "Syncfusion.Licensing": "[17.2.0.51, )",
+        "Syncfusion.Xamarin.Buttons": "[17.2.0.51, )",
+        "Syncfusion.Xamarin.Core": "[17.2.0.51, )",
+        "Syncfusion.Xamarin.DataSource": "[17.2.0.51, )",
+        "Syncfusion.Xamarin.GridCommon": "[17.2.0.51, )",
+        "Syncfusion.Xamarin.SfBusyIndicator": "[17.2.0.51, )",
+        "Syncfusion.Xamarin.SfCarousel": "[17.2.0.51, )",
+        "Syncfusion.Xamarin.SfComboBox": "[17.2.0.51, )",
+        "Syncfusion.Xamarin.SfDataGrid": "[17.2.0.51, )",
+        "Syncfusion.Xamarin.SfListView": "[17.2.0.51, )",
+        "Syncfusion.Xamarin.SfMaskedEdit": "[17.2.0.51, )",
+        "Syncfusion.Xamarin.SfNumericTextBox": "[17.2.0.51, )",
+        "System.Collections": "[4.3.0, )",
+        "System.Collections.Concurrent": "[4.3.0, )",
+        "System.Diagnostics.Debug": "[4.3.0, )",
+        "System.Diagnostics.Tools": "[4.3.0, )",
+        "System.Diagnostics.Tracing": "[4.3.0, )",
+        "System.Globalization": "[4.3.0, )",
+        "System.IO": "[4.3.0, )",
+        "System.IO.Compression": "[4.3.0, )",
+        "System.Linq": "[4.3.0, )",
+        "System.Linq.Expressions": "[4.3.0, )",
+        "System.Net.Http": "[4.3.4, )",
+        "System.Net.Primitives": "[4.3.1, )",
+        "System.Numerics.Vectors": "[4.5.0, )",
+        "System.ObjectModel": "[4.3.0, )",
+        "System.Reflection": "[4.3.0, )",
+        "System.Reflection.Extensions": "[4.3.0, )",
+        "System.Reflection.Primitives": "[4.3.0, )",
+        "System.Resources.ResourceManager": "[4.3.0, )",
+        "System.Runtime": "[4.3.1, )",
+        "System.Runtime.Extensions": "[4.3.1, )",
+        "System.Runtime.InteropServices": "[4.3.0, )",
+        "System.Runtime.InteropServices.RuntimeInformation": "[4.3.0, )",
+        "System.Runtime.Numerics": "[4.3.0, )",
+        "System.Text.Encoding": "[4.3.0, )",
+        "System.Text.Encoding.Extensions": "[4.3.0, )",
+        "System.Text.RegularExpressions": "[4.3.1, )",
+        "System.Threading": "[4.3.0, )",
+        "System.Threading.Tasks": "[4.3.0, )",
+        "System.ValueTuple": "[4.5.0, )",
+        "System.Xml.ReaderWriter": "[4.3.1, )",
+        "System.Xml.XDocument": "[4.3.0, )",
+        "Xam.Plugins.Forms.ImageCircle": "[3.0.0.5, )",
+        "Xamarin.Essentials": "[1.3.0, )",
+        "Xamarin.Forms": "[4.2.0.778463, )",
+        "runtime.native.System": "[4.3.1, )",
+        "sqlite-net-pcl": "[1.6.292, )"
+      },
+      "frameworks": {
+        "portable45-net45+win8+wpa81": {}
+      }
+    }
+  }
+}
